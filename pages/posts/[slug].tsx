@@ -49,6 +49,7 @@ const PostPage = ({ post, html }: Props) => {
           content={`https://mikecann.blog` + getPostRootCoverImagePath(post)}
           key="og-image"
         />
+        {post.meta.canonical ? <link rel="canonical" href={post.meta.canonical} /> : null}
       </Head>
 
       <TopNavbar />

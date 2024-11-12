@@ -1,13 +1,13 @@
 ---
 coverImage: ./header.jpg
-date: '2024-11-06T07:31:40.000Z'
-status: draft
+date: '2024-11-12T07:31:40.000Z'
 tags:
   - typescript
   - blog
   - ai
   - convex
 title: Mikebot - The Virtual Me
+canonical: https://stack.convex.dev/building-a-second-brain-how-i-created-mike-ai-chat-bot-with-convex
 ---
 
 You know what's better than one Mike Cann? That's right, infinity Mike Canns.
