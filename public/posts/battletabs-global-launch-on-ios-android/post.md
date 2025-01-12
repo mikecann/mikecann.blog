@@ -8,6 +8,7 @@ tags:
   - android
   - mobile
 title: BattleTabs Global Launch on iOS and Android!
+openAIMikesBlogFileId: file-EnmBDtBDbfXgTDMd2khv1d
 ---
 
 So the big day is finally here! The moment we have been working on since we decided to bring our little [Chrome extension / Web game](https://battletabs.com/) to mobile some 2 years ago.

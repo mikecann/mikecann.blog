@@ -4,7 +4,8 @@ date: '2025-01-12T07:31:40.000Z'
 tags:
   - ai
   - thought
-title: "The Missing Piece of AGI: Why Self-Doubt Matters?"
+title: 'The Missing Piece of AGI: Why Self-Doubt Matters?'
+openAIMikesBlogFileId: file-V7QjLFDyFsC5N1f3phdK6r
 ---
 
 I, along with every other coder on the planet right now, am starting to heavily leverage agentic coding tools in our day-to-day work. Whether it's standalone tools like [bolt.new](http://bolt.new), [v0](https://v0.dev/), [Lovable](https://lovable.dev/), or those built directly into our IDEs like [Cursor](https://www.cursor.com/), [Windsurf](https://codeium.com/windsurf) and [Copilot](https://github.com/features/copilot), they are rapidly becoming indispensable.
