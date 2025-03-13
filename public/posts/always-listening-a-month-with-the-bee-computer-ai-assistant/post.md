@@ -6,7 +6,7 @@ tags:
   - wearables
   - personal
   - tech
-title: "Always Listening: A Month with the Bee Computer AI Assistant"
+title: "Always Listening: A Month with the Bee Pioneer AI Wearable"
 ---
 
 So I've been thinking about something super exciting lately - I reckon we're not far off from everyone walking around with their own AI buddies that are always listening. 
