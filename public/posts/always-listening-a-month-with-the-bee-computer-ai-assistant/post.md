@@ -161,7 +161,7 @@ Makes it pretty useless for bigger meetings or group hangouts where people aren'
 
 ### Trust Issues
 
-First time I fired up the app, it wanted access to EVERYTHING - my calendar, contacts, emails, personal notes, probably my first born son (I don't even have kids!). Look, I get that an AI assistant needs data to be helpful, but slow down there mate - we just met!
+First time I fired up the app, it wanted access to EVERYTHING - my calendar, contacts, emails, personal notes, probably my first born son. Look, I get that an AI assistant needs data to be helpful, but slow down there mate - we just met!
 
 It's like giving someone the keys to your digital life before they've even bought you dinner. Sure, their privacy policy looks good on paper, but they're the new kid on the block - I need time to build trust!
 
