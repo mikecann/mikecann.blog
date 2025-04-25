@@ -19,7 +19,7 @@
     "checkLinks": "bun run blc http://localhost:3000 -ro --exclude https://www.linkedin.com/in/mikecann",
     "compress:all:lossless": "optimizt --lossless ./public",
     "compress:one:lossless": "optimizt --lossless ./public/posts/battletabs-enters-soft-launch",
-    "compress:one:webp": "optimizt --webp ./public/posts/mikebot"
+    "compress:one:webp": "optimizt --webp ./public/posts/homework-is-dumb"
   },
   "dependencies": {
     "@artsy/fresnel": "^6.1.0",
