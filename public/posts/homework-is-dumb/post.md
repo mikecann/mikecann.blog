@@ -78,7 +78,7 @@ Now, this isn't about catching kids out - it's about spotting who needs help bef
 
 Since the AI gets to know each student's usual style of learning, it can tell the difference between someone who's genuinely finding things tough and someone who's just not trying - which means teachers can give the right kind of support to the right kids.
 
-After all this is what teachers want to be doing, they don't want to be spending ages grading reports or trying to spot where a student has or has not been chea
+After all this is what teachers want to be doing, they don't want to be spending ages grading reports or trying to spot where a student has or has not been cheating.
 
 # Privacy and Security
 
