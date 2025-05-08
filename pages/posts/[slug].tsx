@@ -145,13 +145,15 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
 
                     return (
                       <span className="image-wrapper">
-                        <Image
-                          src={safeSrc}
-                          alt={alt ?? ""}
-                          width={width == null ? size.width : Number(width)}
-                          height={height == null ? size.height : Number(height)}
-                          style={{ maxWidth: "100%", height: "auto" }}
-                        />
+                        <a href={safeSrc} target="_blank" rel="noopener noreferrer">
+                          <Image
+                            src={safeSrc}
+                            alt={alt ?? ""}
+                            width={width == null ? size.width : Number(width)}
+                            height={height == null ? size.height : Number(height)}
+                            style={{ maxWidth: "100%", height: "auto" }}
+                          />
+                        </a>
                       </span>
                     );
                   },

@@ -31,7 +31,7 @@ So I created a blank scene and set that as the only scene the in game, built aga
 
 It was then that I tried to do something strange. Im not sure why but I noticed this but there is now a new compiler option in Unity:
 
-[![upload_2_6_2015_at_07_44_52](https://www.mikecann.blog/wp-content/uploads/2015/06/upload_2_6_2015_at_07_44_52.png)](https://www.mikecann.blog/wp-content/uploads/2015/06/upload_2_6_2015_at_07_44_52.png)
+![upload_2_6_2015_at_07_44_52](https://www.mikecann.blog/wp-content/uploads/2015/06/upload_2_6_2015_at_07_44_52.png)
 
 The IL2CPP is the new Unity compiler. Im still not sure why but I decided to switch this to IL2CPP instead of mono and try to build again. Low and hold I got a different error, one with much more information about where the error was happening:
 

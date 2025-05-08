@@ -25,7 +25,7 @@ To set the stage, checkout this demo of an already existing system from [Interac
 
 Their system tracks the ball and players using infrared sensors and cameras placed in both the tin (bottom front of the court) and in a box on the ceiling. The box on the ceiling also contains the projector which is used to update the display on the back wall in realtime.
 
-[![](./interactiveSQUASH-Court.jpg)](./interactiveSQUASH-Court.jpg)
+![](./interactiveSQUASH-Court.jpg)
 
 Its a very cool system and is the gold standard for the kind of system we would like to build. There are however a few small issues:
 
@@ -55,11 +55,11 @@ Before we can talk about solutions I want to make it clear what the requirements
 
 For those that are not familiar with the sport here is some basic info to help illustrate some of issues.
 
-[![](./acourt.jpg)](./acourt.jpg)
+![](./acourt.jpg)
 
 A standard squash court is 9.75m in length and 6.4m in width. They can sometimes have one or more walls made of glass so you can see inside. In our case we have just the back-wall made of glass (see the above image for an example).
 
-[![](./ball.jpg)](./ball.jpg)
+![](./ball.jpg)
 
 A standard squash ball is about 4cm in diameter and can travel EXTREMELY fast. Here is a video of one being hit at 281km/h:
 
@@ -87,7 +87,7 @@ The above video uses a program called [Kinovea](https://www.kinovea.org/) to ret
 
 [This paper](https://repository.tudelft.nl/islandora/object/uuid:758d345d-ecdf-478e-a534-a23300dbe877/datastream/OBJ/download) entitled "Detection and Tracking of a Fast-Moving Object in Squash using a Low-Cost Approach" outlines in great detail the problems and techniques involved with tracking a squash ball using cameras.
 
-[![](./cv-paper.png)](./cv-paper.png)
+![](./cv-paper.png)
 
 Their approach however has a number caveats and critically is unable to run in realtime.
 
@@ -106,13 +106,13 @@ If I had spare cash I would love to try out one or two of the [OptiTrack](https:
 
 Another potential solution is via audio "triangulation". Using 2 or more microphones placed at suitable distances apart it should be possible to detect the sound induced by the impact of the ball on the back wall.
 
-[![](./audio-triangulation.png)](./audio-triangulation.png)
+![](./audio-triangulation.png)
 
 The benefit of this approach over computer vision is that it can handle very high impact velocities as the sample rate is generally much higher. This means we should be able to analyze the details of the sound produced in greater detail even when traveling at a high speed.
 
 The paper "[Audio-based performance evaluation of squash players](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5868801/)" uses this precise method.
 
-[![](./audio-based-performance.png)](./audio-based-performance.png)
+![](./audio-based-performance.png)
 
 The authors of this paper use 6 microphones spread around the court to triangulate audio events in 3D. This allows them to detect not just wall impacts but ball-racket, player-floor and other impacts.
 
@@ -132,7 +132,7 @@ There are some significant issues with this solution however:
 
 This solution is the one favoured by my friend. If you are able to place a lidar on the floor at the base of the court and point it upwards in 180 arc then you might be able to use that to detect a ball that passes through the beam before it strikes the wall.
 
-[![](./lidar.png)](./lidar.png)
+![](./lidar.png)
 
 Given you know the mirror position of the spinning laser and the distance from the beam source you can calculate where the ball is.
 
@@ -154,7 +154,7 @@ Supposing one of the above solutions is able to accurately detect an impact poin
 
 Squash courts tend to be quite bright places this makes projecting an image on a back wall a difficult thing to do as it requires an exceedingly high-lumen projector. Even the Interactive SQUASH projector which is undoubtedly very expensive doesnt seem to produce a particularly bright image:
 
-[![](./brightness.png)](./brightness.png)
+![](./brightness.png)
 
 This problem is compounded by the fact that we want the system to be portable and thus not require it to be mounted from the ceiling, this means putting it on a stand outside the court. This unfortunately means that we are going to end up with silhouettes as a player occludes the projector.
 

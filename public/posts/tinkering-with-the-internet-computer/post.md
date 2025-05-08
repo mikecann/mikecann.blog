@@ -34,11 +34,11 @@ Unfortunately the IC's SDK currently only runs on Linux or Mac so to get it to w
 
 Once setup I was able to install the SDK and create my first project using their command line.
 
-[![](./ic-terminal1.png)](./ic-terminal1.png)
+![](./ic-terminal1.png)
 
 I followed their [quick start guide](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html) and soon had my first little application running.
 
-[![](./hello-world.png)](./hello-world.png)
+![](./hello-world.png)
 
 As you can see from the image above, your application is split into two parts; the "src/my_app_assets" is the frontend and is your typical Webpack produced Single Page Application and the backend "src/my_app" which is the interesting part in the form of the Motoko actor.
 

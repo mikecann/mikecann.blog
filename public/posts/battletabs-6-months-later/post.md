@@ -14,11 +14,11 @@ It's been 6 months since [I last wrote about BattleTabs](/posts/battletabs-ships
 
 .. We had [just released](/posts/battletabs-ships-and-fleets-update) the ships and fleets update which was by far our biggest update to that point. For the first time we introduced the concept of ships that have abilities and are grouped into fleets. This fundamentally changed the game from what was essentially just Battleships into its own unique experience.
 
-[![](./select-a-fleet.png)](./select-a-fleet.png)
+![](./select-a-fleet.png)
 
 In the same update we added a proper tutorial and gave a UI a much needed overhaul.
 
-[![](./new-sidebar.png)](./new-sidebar.png)
+![](./new-sidebar.png)
 
 # Whats New
 
@@ -35,29 +35,29 @@ Some of the biggest new features include:
 - Private proposals so you can send invites to each other via links
 - A bunch of new fleets and ships
 
-[![](./fleets-list.jpg)](./fleets-list.jpg)
+![](./fleets-list.jpg)
 
 # Some Numbers
 
 Players seem to enjoy the regular updates and improvements. The number of matches created per week has steadily increased to the point where almost 70,000 matches are created per week:
 
-[![](./matches-created.png)](./matches-created.png)
+![](./matches-created.png)
 
 Thats over 300,000 turns taken per day!
 
-[![](./turns-taken.png)](./turns-taken.png)
+![](./turns-taken.png)
 
 # Discord
 
 We also launched a [Discord Server](https://discord.com/invite/kvJKXsu) in the last 6 months which has seen surprising growth to over 8,000 members.
 
-[![](./discord-memberships.png)](./discord-memberships.png)
+![](./discord-memberships.png)
 
 At any one time we have hundreds of members online chatting away in the various channels. Its awesome to see such a fantastic community grow around our little game.
 
 Brandon, my co-founder, has been busy running community tournaments which have proved incredibly popular garnering far more sign-ups than there is space for.
 
-[![](./tourny.png)](./tourny.png)
+![](./tourny.png)
 
 # Under The Hood
 
@@ -85,7 +85,7 @@ We do give up some nice MST features such as time travel debugging, undo-redo an
 
 ## Monorepo
 
-[![](./monorepo.png)](./monorepo.png)
+![](./monorepo.png)
 
 We changed the way we code to move from a multi-repo approach to a single monorepo approach. This was done to simplify dependency management between the various parts of the system and simplify the versioning story.
 

@@ -126,7 +126,7 @@ We solved the problem of local execution of untrusted code some time ago with Vi
 
 Why cant we use something like [Firecracker VMs as Fly.io does](https://fly.io/docs/reference/architecture/#microvms), that way you can execute docker instances with them without any problems. They also support snapshots similar to docker so you could imagine some interesting replay and rewind UI / UX scenarios this would empower. Im thinking something like [Cypress](https://www.cypress.io/) but for CI scripts.
 
-[![](./cypress.png)](./cypress.png)
+![](./cypress.png)
 
 Another bonus of writing CI scripts in a general purpose language like Typescript we could easily unit test them, bringing another level of confidence that complex scripts work and will continue to work.
 

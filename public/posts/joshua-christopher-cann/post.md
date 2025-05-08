@@ -18,7 +18,7 @@ He was born yesterday at King Edwards hospital in Perth Western Australia. It wa
 
 The mother and my girlfriend Kelsie was incredible throughout it all and despite having some pretty bad nausea from the cocktail of drugs she was able to feed him and make it through the day just fine, I couldn't be more proud of her.
 
-[![](./kelsie-me-baby.png)](./kelsie-me-baby.png)
+![](./kelsie-me-baby.png)
 
 They will be hospital for 3-5 days while she recovers from the major surgery, then finally home to start our family life together, I cant wait :)
 

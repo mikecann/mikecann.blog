@@ -20,7 +20,7 @@ Note: This is a condensed version of the pictures I took with some added narrati
 
 <!-- more -->
 
-[![screenshot_01](/wp-content/uploads/2013/12/screenshot_011.png)](/wp-content/uploads/2013/12/screenshot_011.png)
+![screenshot_01](/wp-content/uploads/2013/12/screenshot_011.png)
 
 After chilling out at the ranch in Mercedes for a few days we were ready for the next spectacle. So what could be more spectacular than the Iguazu falls.
 

@@ -33,7 +33,7 @@ By the way, this isnt mentioned anywhere. You have to go spelunking through thei
 
 BTW this also applies to Apps. You can no longer create custom apps so[ I am not able to pair](https://docs.woosports.com/docs/supported-devices) my [Woo](https://woosports.com/) kitesurfing jump-tracker with my Versa 4 like you can on [Garmin devices](https://apps.garmin.com/en-US/apps/53d9c500-614e-4e3a-88b6-9f65bc6a144a)..
 
-[![](./fore.jpg)](./fore.jpg)
+![](./fore.jpg)
 
 # Automatic Exercise Mode Is Terrible
 
@@ -69,7 +69,7 @@ I know technologically it's possible as every Garmin watch has an always-on disp
 
 # Annoying Notifications
 
-[![](./notifications.png)](./notifications.png)
+![](./notifications.png)
 
 I couldn't find any good footage of this issue and for some reason my Versa has decided to stop sending me notifications at all (again) so just take my word for it, getting notifications on this device are super annoying.
 

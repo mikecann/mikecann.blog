@@ -19,15 +19,15 @@ About a week ago Tumblr decided to change its security model which meant that my
 
 Now with version 5 users must authenticate with my backend:
 
-[![screenshot_003](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_003.png)](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_003.png)
+![screenshot_003](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_003.png)
 
 Then they can add one or more tumblr accounts to the PTT account:
 
-[![screenshot_001](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_001.png)](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_001.png)
+![screenshot_001](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_001.png)
 
 Which then seamlessly integrates into the app:
 
-[![screenshot_010](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_010.png)](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_010.png)
+![screenshot_010](https://www.mikecann.blog/wp-content/uploads/2014/08/screenshot_010.png)
 
 The backend authenticates the tumblr accounts and stores the oauth access keys so that it can make calls to tumblr on the user's behalf in the future. Its a much simpler system than I had previously, and it allows for multiple tumblr accounts which has been requested many times in the past.
 

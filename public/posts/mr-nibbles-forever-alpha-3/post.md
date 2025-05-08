@@ -30,7 +30,7 @@ I have a bit more work do do on this before its done but I hope it will help tea
 
 Because this chunk acts as a tutorial it needs to go near the start of the level so the second major bit of work this week was to create a "scriptable sequence" that lets me dictate the type of chunk that needs to spawn:
 
-[![2015-02-02_10-12-39](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-12-39.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-12-39.png)
+![2015-02-02_10-12-39](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-12-39.png)
 
 Previously the chunks were randomly selected based on the difficulty which was based on the distance the player had travelled through the game. Now that its scripted its much more controllable but hopefully still leaves a lot of room for the randomness that makes the game replayable.
 

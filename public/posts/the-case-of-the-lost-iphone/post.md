@@ -22,7 +22,7 @@ I was contacted to give an interview by Dariya Salmin of ABC's South West Radio 
 
 A few weekends ago it was an unusually hot spring day here in Western Australia and we were on a weekend break at the seaside town of Busselton. As it was so warm I decided to head down the beach for an early-season swim under the famous Jetty.
 
-[![](./The Sheds of the Jetty Afar.jpg)](./The Sheds of the Jetty Afar.jpg)
+![](./The Sheds of the Jetty Afar.jpg)
 
 I had a fantastic swim, there wasn't anyone else down there and the water was full of fish hiding under the jetty.
 
@@ -30,7 +30,7 @@ I had a fantastic swim, there wasn't anyone else down there and the water was fu
 
 So there I was happily swimming along when I noticed something sticking out of the sand. I swam over and to my surprise it was an iPhone..
 
-[![](./discovery.png)](./discovery.png)
+![](./discovery.png)
 (An artists impression of the discovery)
 
 Now this actually wasnt the first time I had found a phone under the Jetty. I had previously found one further down towards the end of the jetty that had obviously been there for some time and was heavily corroded.
@@ -39,7 +39,7 @@ This one looked pretty new however so I surfaced and looked up at the jetty to s
 
 It wasnt until I returned to the beach that I took a closer look at it and to my surprise it was still on but incredibly glitchy, the screen wasnt really comprehensible.
 
-[![](./the-phone.png)](./the-phone.png)
+![](./the-phone.png)
 (this was taken some time much later and looked far worse than this at the time)
 
 Fearing the damage I was doing to its internals with it on I decided to quickly turn it off.
@@ -54,7 +54,7 @@ After a \$40 inspection the phone repair shop declared it "buggered" (or a word 
 
 A week or two later I found it in my drawer and thought to myself why not just try plugging it in one more time, not expecting anything I attached the cable and returned to work. About 5 minutes later to my great surprise I saw the screen light up and turn on!
 
-[![](./lock-screen.jpg)](./lock-screen.jpg)
+![](./lock-screen.jpg)
 (faces blurred for privacy)
 
 The screen was on but unfortunately it appeared as if the touch part of the display had been corroded and no longer functioned. Fortunately it was an iPhone 8 and so had a physical home button. Pressing the button revealed a very cute picture of a couple and child, I bet they had tons of more pictures on there that unless they had a backup, they would dearly want back, I had to find a way to return it.
@@ -63,13 +63,13 @@ The screen was on but unfortunately it appeared as if the touch part of the disp
 
 I thought I would try doing a reverse image search for the picture of the couple to see if I could find them that way.
 
-[![](./love.png)](./love.png)
+![](./love.png)
 
 Nope, but if you ever wandered what love looks like, this is it apparently!
 
 So it looked like they had either cancelled their contract or the sim card was broken. I knew that if I could get it connected to the internet somehow then they may have set a lost message via iTunes.
 
-[![](./lost.jpg)](./lost.jpg)
+![](./lost.jpg)
 
 So I took another trip out to the mobile phone repair shop and see if there was anything I could do. They took it apart again and found that replacing the screen would make it touch again, so that was an option.
 
@@ -77,7 +77,7 @@ The other thing I could do was put my sim in it an see if that worked. If it did
 
 So I did just just. After a few minutes it connected to Optus and then to my surprise a bunch of notifications turned up on the phone and they weren't obscured!
 
-[![](./notifications.jpg)](./notifications.jpg)
+![](./notifications.jpg)
 
 So I now had an instagram, ebay and fb messenger notification to go on. I thought that the FB message might be my best bet so I quickly searched for all the people with the the name mentioned in the message asking them if one of their friends had lost an iPhone.
 
@@ -85,11 +85,11 @@ I then thought hang on no, that instagram message was replying to a comment left
 
 I quickly looked them up on instagram.
 
-[![](./insta.png)](./insta.png)
+![](./insta.png)
 
 Huzzah! I had found the person! But the account is private, where do I go from here? There is no way to contact them.
 
-[![](./insta-no-message.png)](./insta-no-message.png)
+![](./insta-no-message.png)
 
 Then I remembered that Instagram in their infinite wisdom only allows a small subset of functionality on their website, so I fired up Instagram on my iphone and looked the person up and yep sure enough I could send them a private message.
 

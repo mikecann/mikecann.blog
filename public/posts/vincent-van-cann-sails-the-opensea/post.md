@@ -19,15 +19,15 @@ Vincent van Cann is an up and coming artist that has been seen posting under the
 
 His style is mostly "circle doodles" in abstract form:
 
-[![](./600x400.jpg)](./600x400.jpg)
+![](./600x400.jpg)
 
-[![](./wall-circles.jpg)](./wall-circles.jpg)
+![](./wall-circles.jpg)
 
 They are painstakingly created over about 8-12 hours using just sharpies:
 
-[![](./sharpies.jpg)](./sharpies.jpg)
+![](./sharpies.jpg)
 
-[![](./123.jpg)](./123.jpg)
+![](./123.jpg)
 
 He finds it very therapeutic and often finds himself entering an almost trance like state while arting. Perhaps his incredible talent is being siphoned into his brain from an artist deity in an alternate dimension?
 
@@ -37,7 +37,7 @@ NTFs have set the art work on fire over the past 12 months so if there was ever 
 
 [OpenSea](https://opensea.io/) is currently the largest marketplace for NFTs and there are (as far im aware) two ways to get your NFT listed on there. 1. you create a smart contract, upload the artwork and metadata to IPFS then you link your contract to a collection on OpenSea. Or 2. you mint directly on OpenSea using their mega-contract.
 
-[![](./create-on-opensea.png)](./create-on-opensea.png)
+![](./create-on-opensea.png)
 
 As Vincent van Cann "isn't good with computers and things" he decided to keep it simple and mint directly on OpenSea. Maybe in the future he will get some help from the technical whiz-kid Mike Cann and create his own contract.
 
@@ -51,7 +51,7 @@ That got him thinking.. If he wanted international recognition for what is surel
 
 Because websites are hard he just Googled it and what do you know, Google told him to use Google Domains to buy https://www.vincentvancann.xyz/ (Mike told him xyz is where all the cool crypto websites live) and Google told him that he could build a website for free with Google Sites too so he did just that:
 
-[![](./google-sites.jpg)](./google-sites.jpg)
+![](./google-sites.jpg)
 
 Its not a particularly flexible website builder but it was quick and free and it got the job done.
 
@@ -65,17 +65,17 @@ There were multiple steps he had to go through. Multiple things that needed sign
 
 Each step along the way he was forced to perform "captchas". He would have thought that verification like this would have only needed once, not tens of times (literally).
 
-[![](./captcha.png)](./captcha.png)
+![](./captcha.png)
 
 Often OpenSea would error for no apparent reason.
 
-[![](./error.png)](./error.png)
+![](./error.png)
 
 Usually refreshing the page fixed the error but it was very confusing for him. He also found that OpenSea to be quite slow, often stalling thus requiring a page reload to get it going again.
 
 Finally after hours, he was able to create his first collection called "[Circles Series](https://opensea.io/collection/circles-series)" and mint his first 5 NFTs
 
-[![](./circles-series.jpg)](./circles-series.jpg)
+![](./circles-series.jpg)
 
 Vincent felt that 5 is enough for now. ~If~ When there is a great demand for more of his epic art then more will be added (at a higher price of course).
 

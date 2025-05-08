@@ -18,7 +18,7 @@ I have got to be honest, I have never heard of [Web Dev Cody](https://www.youtub
 
 # Competition Categories & Ideation
 
-[![](./categories.png)](./categories.png)
+![](./categories.png)
 
 The competition was themed around Collaboration and AI so I racked my brain for a bit before coming up with an idea.
 

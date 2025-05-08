@@ -23,13 +23,13 @@ Unlike other events I have participated in this was a one-day event so time was 
 
 There was \$4k worth of prizes on offer to help motivate people to attend which is pretty generous for a one-day event.
 
-[![](./welcome.jpg)](./welcome.jpg)
+![](./welcome.jpg)
 
 # The Day
 
 I teamed up with two other guys that I met right at the start of the event. Jeremy is a semi-retired engineer, programmer and general all-round technical knowledge-base. Tim is a computer science graduate, ex-management consultant and energy-industry expert.
 
-[![](./tim_jer.jpg)](./tim_jer.jpg)
+![](./tim_jer.jpg)
 
 With that combination of expert knowledge and experience I felt like we had a good chance.
 
@@ -37,7 +37,7 @@ So after officially forming our team and coming up with a name (Power Rangers), 
 
 The theme of Energy Hack was energy in small business so all three challenges revolved around that:
 
-[![](./challenges.png)](./challenges.png)
+![](./challenges.png)
 
 I hadnt looked at the challenges before I arrived but Jeremy had and had even come up with an idea to solve Challenge 3 that he was keen to pursue.
 
@@ -49,7 +49,7 @@ Using my past hackathon experience I decided early on that it was probably best 
 
 Instead we spent the bulk of the time trying to come up with the most clear way of conveying our idea and why we felt it was important.
 
-[![](./preso.jpg)](./preso.jpg)
+![](./preso.jpg)
 
 The result was a well rehersed slide deck that I was pretty happy with. If you are interested then you can find the slides here: [https://docs.google.com/presentation/d/1sLRtkFDUtK7kfE4MyXLUb2mVWYi47mWn1qUgw_7E_s4/edit?usp=sharing](https://docs.google.com/presentation/d/1sLRtkFDUtK7kfE4MyXLUb2mVWYi47mWn1qUgw_7E_s4/edit?usp=sharing).
 
@@ -57,7 +57,7 @@ So 5pm rolled around and it was time for all 8 teams to present.
 
 I decided not to present this time. Tim is a far better orator than me and he did a great job giving the 3 minute presentation. Jeremy and I went up to join him for the two minutes of questions.
 
-[![](./watching-pres.jpg)](./watching-pres.jpg)
+![](./watching-pres.jpg)
 
 # Results
 

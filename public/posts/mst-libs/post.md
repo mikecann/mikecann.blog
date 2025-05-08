@@ -35,7 +35,7 @@ Im really happy with the state of the library and I think the concepts could be 
 
 # MST Log
 
-[![](./mst-log-screenshot01.png)](./mst-log-screenshot01.png)
+![](./mst-log-screenshot01.png)
 
 A console logging middleware for MobX State Tree
 

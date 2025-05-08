@@ -17,6 +17,6 @@ I had a long chat with my new friend [Ebor Jan Folkertsma](https://www.folkertsm
 
 So onto the progress. Well as I said not a whole lot of visible progress has been made, I have mostly been re-organising the core of the project again to best suit my needs. I have however been adding more functionality allowing the user to place objects on the level in preparation for setting triggers and the like later down the road.
 
-[![](https://www.mikecann.blog/Work/TDProject/engine05.jpg)](https://www.mikecann.blog/Work/TDProject/engine05.jpg)
+![](https://www.mikecann.blog/Work/TDProject/engine05.jpg)
 
 Next step in the project is picking so that the new objects on the map can be selected and have their properties modified and triggers added and the such :)

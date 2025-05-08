@@ -29,7 +29,7 @@ The game has grown considerably over the past 12 months and as a result the dema
 
 We follow a pragmatic development strategy for the game, meaning that we only spend the time working on improving the infrastructure if its necessary. This meant that for 9 months we weren't really worried about server scaling or performance. We knew the issue was there in the background but whenever we needed more capacity we just bumped up the server size in Heroku:
 
-[![](./heroku-dyno-sizes.png)](./heroku-dyno-sizes.png)
+![](./heroku-dyno-sizes.png)
 
 Well unfortunately the day game when we were up to the largest size dyno and we were starting to see some issues again, it was time to do something about it.
 
@@ -41,7 +41,7 @@ The time had come to go from a horizontal scale strategy to a vertical one.
 
 We had been putting this off because horizontally scaling a websocket server isn't trivial. Fortunately we didn't have that much local-state and we were using [Socket.io](https://socket.io/) which has some good plugins to help with scaling. I wont detail everything we did here, feel free to contact me if you want details.
 
-[![](./socketio.jpg)](./socketio.jpg)
+![](./socketio.jpg)
 
 # Memory Issues
 
@@ -51,7 +51,7 @@ The problem is, we seemed to still be using far more memory than we should have 
 
 After days of experiments and searching I decided to look a little closer at what socket-io was doing, thats when I came across this Github issue: https://github.com/socketio/socket.io/issues/3477
 
-[![](./mem-leak.png)](./mem-leak.png)
+![](./mem-leak.png)
 
 Others on the issue had done the hard work for me and instead of a memory leak they suggest memory fragmentation was the root cause of the problem.
 
@@ -71,7 +71,7 @@ Sounds like its exactly what we need, but how do I get node to use that? As with
 
 And the effect?
 
-[![](./half-mem.png)](./half-mem.png)
+![](./half-mem.png)
 
 Wow! It halved our memory usage! Incredible!
 

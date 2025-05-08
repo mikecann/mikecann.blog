@@ -40,19 +40,19 @@ Curiously Chrome (and thus Android) does not have this problem so I, as a Window
 
 We don't have a definitive solution for the problem, I suspect the issue is still there but we have tried our best to minimize it by removing most usages of CSS animations (on iOS) and changing the League Page over to a much simpler design as it was the culprit of many crashes.
 
-[![](./new-league-page.png)](./new-league-page.png)
+![](./new-league-page.png)
 
 # Apple Feature
 
 A few weeks back we excitedly received an email from Apple informing us that we may be featured on the App Store.
 
-[![](./app-feature.png)](./app-feature.png)
+![](./app-feature.png)
 
 We submitted all the media information required so fingers crossed we do. Apple declined to comment on likelihood or timelines so we will see. If we do get a feature then it should hopefully be a big boost to game traffic. In preparation we have scaled up our servers just in case, I don't want another repeat of the [Discord Activities global launch](https://mikecann.blog/posts/battletabs-global-launch-on-discord-activities) ;)
 
 *EDIT*: [We were indeed featured in the US](https://www.linkedin.com/feed/update/urn:li:activity:7258089646545334273/)!
 
-[![](./were-featured.jpeg)](./were-featured.jpeg)
+![](./were-featured.jpeg)
 
 # Conclusion
 

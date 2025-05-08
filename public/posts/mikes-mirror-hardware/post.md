@@ -32,7 +32,7 @@ So first thing I did when trying to work out how to build this thing was to look
 
 I recorded some of the best ones I liked in a [Trello Board](https://trello.com/b/dYbx0Zc0/smart-mirror):
 
-[![](./trello-board.png)](./trello-board.png)
+![](./trello-board.png)
 
 # Requirements
 
@@ -40,7 +40,7 @@ After doing the research I realised there were way too many different options so
 
 1. It must be able to fit in the little alcove near my front door:
 
-[![](./alcove.jpg)](./alcove.jpg)
+![](./alcove.jpg)
 
 2. Ideally it will blend in with the other wooden furniture in the apartment.
 3. Its a rental apartment so we cant put holes in the wall, so it must be light enough to be able to be supported by stick-on hooks.
@@ -55,7 +55,7 @@ One of the most obvious and well known options for this is the Raspberry Pi. Thr
 
 In the end I decided to buy not one but two computers.
 
-[![](./both-computers.jpg)](./both-computers.jpg)
+![](./both-computers.jpg)
 
 Firstly the Pine Rock64:
 
@@ -65,7 +65,7 @@ This is a cheap ARM powered board the size of a credit card that according to re
 
 I also decided to buy an Up Core:
 
-[![](./up-core.png)](./up-core.png)
+![](./up-core.png)
 
 The Up Core is about 4 times as expensive at the Rock64 but is even more powerful and significantly, it runs on an Intel x86 CPU instead of an ARM CPU. This is important because I knew from past experience that there may be issues trying to get things to work on ARM powered devices.
 
@@ -84,13 +84,13 @@ I looked at quite a few different cameras on Aliexpress.com. I had a lot of unkn
 
 In the end, due to my uncertainties and the fact that they were all relatively cheap, I decided to pick up three different cameras:
 
-[![](./cam1.jpg)](./cam1.jpg)
+![](./cam1.jpg)
 ([Zbravo 720p endoscope](https://www.aliexpress.com/item/HD-720P-6LEDs-5-5MM-USB-Endoscope-Borescope-Snake-Inspection-Pipe-Tube-Video-Mini-Camera-IP67/32747992958.html?spm=a2g0s.9042311.0.0.1ee84c4dtkgQAk))
 
-[![](./cam2.jpg)](./cam2.jpg)
+![](./cam2.jpg)
 ([Diske 720p pinhole camera](https://www.aliexpress.com/item/HD-Micro-USB-Camera-1-0MP-USB-CCTV-Camera-720P-USB-Module-With-Cables-USB-Board/32825411576.html?spm=a2g0s.9042311.0.0.1ee84c4dtkgQAk))
 
-[![](./cam3.jpg)](./cam3.jpg)
+![](./cam3.jpg)
 ([Kayeton 1080p camera](https://www.aliexpress.com/item/2MP-Full-HD-1080P-Webcam-OV3660-UVC-Plug-Play-Android-Linux-Windows-Mac-USB-Camera-Module/32815156322.html?spm=a2g0s.9042311.0.0.1ee84c4dtkgQAk))
 
 I ended up using the third camera in the end mainly due to the superior picture quality over the others.
@@ -101,7 +101,7 @@ One thing to note for next time is that all 3 of the cameras had no trouble runn
 
 As with the camera I wasnt sure about microphones. I ended up picking up this cheap one from ebay:
 
-[![](./mic1.jpg)](./mic1.jpg)
+![](./mic1.jpg)
 ([usb mic](hhttps://www.ebay.com.au/itm/Mini-Wired-USB-3-5-Capacitance-Studio-Microphone-SF-555B-Black-for-Computer-TO/262945101741?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2060353.m2749.l2649))
 
 It does the job but I think ill have to invest in something a little more sensitive (and expensive) soon so I can use the voice controls from a further distance.
@@ -110,7 +110,7 @@ It does the job but I think ill have to invest in something a little more sensit
 
 I decided early on that I wanted the display to reach all the way to the edge of the mirror. During my research I noticed that some people mounted a smaller display behind a large mirror thus giving the illusion of a large screen:
 
-[![](./submount.jpg)](./submount.jpg)
+![](./submount.jpg)
 (img showing monitor mounted in only a small part of the frame)
 
 I was concerned that this might be noticeable under some lighting conditions. I also wanted to be able to show things in each corner of the mirror. So for me I needed to have a single large display that covered the entire mirror.
@@ -121,17 +121,17 @@ I had a choice to make around whether I wanted to use a PC computer monitor or a
 
 Another factor that made me decide on a PC monitor instead of a TV was the resolution. I was concerned that because you would stand relatively close to the mirror you might notice a lower resolution (720-1080p) TV.
 
-[![](./tvpixel.jpg)](./tvpixel.jpg)
+![](./tvpixel.jpg)
 
 So for those reasons I finally decided on a PC monitor. After some searching on Gumtree for 32" inch (about as big as they affordable get) displays I decided that it didnt cost that much more to buy one new. That way I could get exactly what I wanted whereas I was constantly compromising on Gumtree.
 
 So the one I picked up in the end was an Acer 31.5" Monitor ER320HQ from Office Works:
 
-[![](./thedisplay.jpg)](./thedisplay.jpg)
+![](./thedisplay.jpg)
 
 Its got everything I need, a bright 100,000,000:1 contrast display with Full HD (1920 x 1080) resolution and critically only weighed 4kg once I had taken it apart.
 
-[![](./thedisplaytakenapart.jpg)](./thedisplaytakenapart.jpg)
+![](./thedisplaytakenapart.jpg)
 
 # The Glass
 
@@ -141,7 +141,7 @@ It functions in much the same way a pair of mirrored sunglasses work. Its reflec
 
 This means that when a pixel in the display is white then it will shine through and be visible, otherwise you eye will just assume there is nothing there and see the reflection instead.
 
-[![](./two-way-diagram.jpg)](./two-way-diagram.jpg)
+![](./two-way-diagram.jpg)
 (source [twowaymirrors.com](http://twowaymirrors.com/))
 
 Just like the display I had a lot of different potential options for the glass.
@@ -154,13 +154,13 @@ I decided against number 3) because I had seen examples of it where it had warpe
 
 So option 1) it was. I ended up phoning around a whole bunch of glass suppliers and recording their prices and availability on Trello:
 
-[![](./trello-glass-card.png)](./trello-glass-card.png)
+![](./trello-glass-card.png)
 
 In the end I chose the cheapest supplier... I should have known that something was up when they quoted me half the price of all the others...
 
 About a week later I got a call saying that the glass was ready for me to come pick up, so I excitedly hopped in the car and drove the 30 minutes to pick it up. It was wrapped up so I didnt get to check it out until I got home:
 
-[![](./first-glass.jpg)](./first-glass.jpg)
+![](./first-glass.jpg)
 
 At first I was impressed, then I turned it over and realised that it was mirrored on BOTH SIDES. Doh! I gave them a call and explained to them that when I asked for a "two way mirrored glass" I didnt mean it was mirrored on both sides... They tried to argue with me for a while, I even quoted the definition of "two way mirror" to them:
 
@@ -171,7 +171,7 @@ In the end they relented and decided to give me a refund. Sigh.
 
 So now I was onto the next cheapest supplier. I placed an order and a week later I went to collect it. I got it home and unpacked it to discover it looked great:
 
-[![](./second-glass.jpg)](./second-glass.jpg)
+![](./second-glass.jpg)
 
 Except for that engraved logo at the bottom of the mirror.. FFS! I cant have that on a mirror that is supposed to have a display shining through!
 
@@ -185,7 +185,7 @@ Now I had the display and the glass I can finally start the part that was concer
 
 I was concerned because I had very little experience with woodworking and had virtually no tools. So after watching a few more videos of people making wooden mirror frames I thought I had a basic idea of how I was going to put it together.
 
-[![](./frame-in-two-parts.jpg)](./frame-in-two-parts.jpg)
+![](./frame-in-two-parts.jpg)
 (yes I diagrammed it out in Unity)
 
 It was basically going to be constructed in two parts which were then to be glued together. According to the videos I had watched, wood glue was apparently really strong and up to the task of keeping it all together.
@@ -194,25 +194,25 @@ So off to Bunnings I went and picked up bunch of tools and wood and got to work 
 
 First I cut 4 bits of wood for the box part of the frame:
 
-[![](./cutting-wood-to-size.jpg)](./cutting-wood-to-size.jpg)
+![](./cutting-wood-to-size.jpg)
 
 I joined them together with some nails and glue.
 
 Then I cut some more pieces for the front part of the frame and started to glue them to the box:
 
-[![](./gluing-wood.jpg)](./gluing-wood.jpg)
+![](./gluing-wood.jpg)
 
 Things were going well, at this point I was feeling like a bit of a Swanson.
 
-[![](./swanson.jpg)](./swanson.jpg)
+![](./swanson.jpg)
 
 .. I knew things were going too well... I just noticed this:
 
-[![](./big-overlap-problem.jpg)](./big-overlap-problem.jpg)
+![](./big-overlap-problem.jpg)
 
 That's quite an overlap. Unfortunately I didnt have any more spare wood so I decided that it was something that I could fix with sandpaper... lots of sandpaper:
 
-[![](./rounded-corner-no-overlap.jpg)](./rounded-corner-no-overlap.jpg)
+![](./rounded-corner-no-overlap.jpg)
 
 Hey presto! Its fixed :) Its a little thinner on one side but you cant really notice it unless you are looking for it.
 
@@ -220,23 +220,23 @@ One other problem was my poor job at sawing the 45 degree angles for the front o
 
 It was at that point that Kelsie's dad introduced me to the wonders of wood putty:
 
-[![](./wood-putty-crack.jpg)](./wood-putty-crack.jpg)
+![](./wood-putty-crack.jpg)
 
 Huzzah! Problem sovled, just a little more sandpaper and you couldnt tell my rookie mistake was made.
 
 Next up I needed to cut out holes for the speakers for the frame.
 
-[![](./drill-speakers.jpg)](./drill-speakers.jpg)
+![](./drill-speakers.jpg)
 
 To be honest, the speakers are on of the main reasons for the mirrors thickness. I think if I was to do it again I might rethink where I place the speakers so that I can try to make the mirror a little thinner.
 
-[![](./speakers-inserted2.jpg)](./speakers-inserted2.jpg)
+![](./speakers-inserted2.jpg)
 
 So now the frame is done its on to staining it roughly the same colour as the rest of the furniture in the apartment.
 
-[![](./about-to-stain.jpg)](./about-to-stain.jpg)
+![](./about-to-stain.jpg)
 
-[![](./fully-stained.jpg)](./fully-stained.jpg)
+![](./fully-stained.jpg)
 
 Hey its starting to look quite good, now I just have to worry about assembling it all and attaching it to the wall.
 
@@ -246,11 +246,11 @@ Now I had all the parts I started to assemble them together.
 
 First I laid down the glass mirror side down, then placed the display ontop of it:
 
-[![](./glass-and-display-in-frame.jpg)](./glass-and-display-in-frame.jpg)
+![](./glass-and-display-in-frame.jpg)
 
 I then attached the speakers and the display control board using double sided padded tape. Then wired it all up.
 
-[![](./display-controller-attached.jpg)](./display-controller-attached.jpg)
+![](./display-controller-attached.jpg)
 
 If you look closely in the above picture you can see that I use angled brackets to hold the display in place and stop it from moving around when I put it on the wall. These are screwed into the wood in a way which meant it would be tricky to remove.
 
@@ -258,7 +258,7 @@ I also screwed in two hooks which I then fastened a piece of yellow string betwe
 
 I then grabbed a HDMI cable and attached the Up Core to it and powered it on..
 
-[![](./upside-down-display.jpg)](./upside-down-display.jpg)
+![](./upside-down-display.jpg)
 
 It works! But its upsidown.. Whoops! Now that I had screwed everything in, it wasnt really going to be feasible to unscrew it and turn it around. I didnt want to risk splitting the wood.
 
@@ -272,15 +272,15 @@ Because its a rental we werent allowed to put nails or screws in the wall so I h
 
 I whipped out the scales. The whole thing weighed 10.5 kgs which meant I would need 4 of the strongest adhesive hooks I could find at Bunnings:
 
-[![](./wall-hooks.jpg)](./wall-hooks.jpg)
+![](./wall-hooks.jpg)
 
 After a bit of help from Kelsie we finally managed to get it up on the wall and it held!
 
-[![](./it-on-the-wall.jpg)](./it-on-the-wall.jpg)
+![](./it-on-the-wall.jpg)
 
 We decided it was probably a good idea to leave it there over night to make sure that it was going to hold before doing anything else.
 
-[![](./not-confident.jpg)](./not-confident.jpg)
+![](./not-confident.jpg)
 
 Needless to say we werent sure it was going to work.
 
@@ -290,19 +290,19 @@ Phew! It survived the night and that means we are on the home stretch, just a co
 
 I attached the Up Core board to the back using some more padded double sided tape to prevent shorts.
 
-[![](./assembly.jpg)](./assembly.jpg)
+![](./assembly.jpg)
 
 I then put it back on the wall and noticed that the wires looked kind of messy:
 
-[![](./messy-wires.jpg)](./messy-wires.jpg)
+![](./messy-wires.jpg)
 
 So I picked up some cable tidies from ebay
 
-[![](./organised-cables.jpg)](./organised-cables.jpg)
+![](./organised-cables.jpg)
 
 Then I added the camera and microphone to the top of it (I wish I had come up with a better place for these):
 
-[![](./microphone-camera.jpg)](./microphone-camera.jpg)
+![](./microphone-camera.jpg)
 
 Ahh much better, looking good! Now I just have to make the software work. As a professional software developer that should be easy.. right?
 

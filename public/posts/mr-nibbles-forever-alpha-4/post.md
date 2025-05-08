@@ -24,7 +24,7 @@ I have managed to the "Wheel of Fortune" in and the "Dressing Room". They aren't
 
 You can win a variety of prizes:
 
-[![2015-02-09_09-44-45](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-44-45.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-44-45.png)
+![2015-02-09_09-44-45](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-44-45.png)
 
 At the moment there are two types of prizes "Powerups" and "Outfits". Powerups may be things like an extra life or a free respin of the wheel or slow-mo. Outfits will change the appearance of Mr Nibbles as you play the game. I intend for there to be quite a few to choose from:
 

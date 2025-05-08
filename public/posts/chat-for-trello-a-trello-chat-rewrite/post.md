@@ -27,7 +27,7 @@ As with my [Tasks for Trello rewrite](http://mikecann.blog/tasks-for-trello/task
 
 I borrowed many of the components and functionality from Tasks for Trello so the browser-action and settings page looks good and is clear and easy to understand:
 
-[![](./2018-08-19_10-55-21.png)](./2018-08-19_10-55-21.png)
+![](./2018-08-19_10-55-21.png)
 
 # Why change the Name?
 
@@ -51,7 +51,7 @@ https://github.com/mikecann/chat-for-trello
 
 To help justify continued work on the extension I have provided a "Premium Membership" section in the settings.
 
-[![](./2018-08-19_11-01-27.png)](./2018-08-19_11-01-27.png)
+![](./2018-08-19_11-01-27.png)
 
 From there users can choose to become a "Premium" member for \$2 per month. That entitles them to all the premium features of which there is currently only one (Desktop notifications) but I will be adding more in the future.
 
@@ -61,7 +61,7 @@ When they sign up they get premium membership features free for 30 days and can 
 
 So I decided this time around to use Trello itself as the hub for the project.
 
-[![](./chrome_2018-08-19_10-58-39.png)](./chrome_2018-08-19_10-58-39.png)
+![](./chrome_2018-08-19_10-58-39.png)
 
 People can leave comments, suggestions and error reports on that board which I will receive notifications for then update the board. Its a quick and simple way of managing the project.
 

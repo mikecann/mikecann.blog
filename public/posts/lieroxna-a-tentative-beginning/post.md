@@ -17,4 +17,4 @@ So far im just playing around with getting the core of the engine up and running
 
 Anyways, as I said its just a beginning for now. So far I have a level rendered with a terrain map, an explosion map (renders explosions to the texture each frame if any occurred) and a collision map which allows objects to collide. With the left mouse button you can blow holes in the terrain which in turn updates the collision map allowing the worm to move around more of the level.
 
-[![](https://www.mikecann.blog/Images/LieroXNA/lieroxna01.jpg)](https://www.mikecann.blog/Images/LieroXNA/lieroxna01.jpg)
+![](https://www.mikecann.blog/Images/LieroXNA/lieroxna01.jpg)

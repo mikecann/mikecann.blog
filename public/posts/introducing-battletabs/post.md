@@ -43,55 +43,55 @@ You start the game by going to the Chrome Webstore and installing an extension: 
 
 Once installed the extension will replace your current new-tab page. The first time you open it you will immediately be asked to start placing your ships for your first match:
 
-[![](./first-match.png)](./first-match.png)
+![](./first-match.png)
 
 You can drag and rotate the ships to whatever you think are good positions or you can randomize the positions for quick action.
 
 Once ready you give yourself a name and avatar (clicking the avatar changes it):
 
-[![](./create-user.png)](./create-user.png)
+![](./create-user.png)
 
 And then you are straight into the action:
 
-[![](./waiting-for-opponent.png)](./waiting-for-opponent.png)
+![](./waiting-for-opponent.png)
 
 If theres another player that is waiting for an opponent too you will instantly be matched up against them.
 
 You can then start taking turns trying to sink each others ships.
 
-[![](./taking-turns.png)](./taking-turns.png)
+![](./taking-turns.png)
 
 Because the game is designed for quick bursts of gameplay you can close the window at any time and the game will continue to periodically check in the background for turns from your opponent. It will let you know via a notification if they took a turn.
 
 You can start a new match at any time, but you can only have 5 active matches at any one time.
 
-[![](./new-match.png)](./new-match.png)
+![](./new-match.png)
 
 You have one day to take your turn otherwise you forfeit your turn. If you forfeit your turn three times in a row you automatically loose the match.
 
 Scoring is pretty simple for now with a point ranking based on the number of games you have won or lost, but we plan on improving that later (see Future Plans).
 
-[![](./simple-scoring.png)](./simple-scoring.png)
+![](./simple-scoring.png)
 
 # Development
 
 Development was quite an involved process as it often is with games. We first had to decide how we wanted to present the game, should it be 3D, topdown, isometric or something more exotic?
 
-[![](./playing areas.png)](./playing areas.png)
+![](./playing areas.png)
 
 We ended up with a simple isometric layout. We felt like it gave us the right combination of aesthetic and simplicity on art requirements as you can simply horizontal flip the sprite to make it look like its going in a different direction.
 
 Once we had the general layout down we moved on to how do we present the ships. The talented Alan knocked out a bunch of different options for us to choose from:
 
-[![](./theme1.png)](./theme1.png)
+![](./theme1.png)
 
-[![](./theme2.png)](./theme2.png)
+![](./theme2.png)
 
-[![](./theme3.png)](./theme3.png)
+![](./theme3.png)
 
-[![](./theme4.png)](./theme4.png)
+![](./theme4.png)
 
-[![](./theme5.png)](./theme5.png)
+![](./theme5.png)
 
 We decided that the Vikings theme would be best for the first release but we liked the idea some of the others so much we thought about future upgrades where the player can choose from different "themes" they can play with.
 
@@ -107,13 +107,13 @@ Talking about isometric we had some issues with the length of the ships and isom
 
 The issue is that isometric doesnt work too well when you have long sprites. After much discussion and experimentation (and fighting with Phaser) we decided on a solution that split the sprites up so they could be depth sorted individually
 
-[![](./depth-sorting-masks.png)](./depth-sorting-masks.png)
+![](./depth-sorting-masks.png)
 
 This finally solved the issue.
 
 One other thing we fiddled around with for a while was how to indicate the various states that cells could be in.
 
-[![](./blocks.png)](./blocks.png)
+![](./blocks.png)
 
 For example when you click a cell to make a guess, it first enters the "guessing" state to indicate that its waiting for a response from the server. It then transitions to either a "hit" or "miss" state depending on if there is a ship there or not. Then finally there is a the "destroyed" state to make it clear that you have destroyed a ship at that cell so you dont need to explore any more.
 
@@ -123,7 +123,7 @@ So its obviously very early days for the project and to be honest we are really 
 
 If people are interested in the game then we have a bunch of future plans for things we want to work on to improve the game.
 
-[![](./trello.png)](./trello.png)
+![](./trello.png)
 
 Our public [Trello Board](https://trello.com/b/EoQS8Hq2/battle-tabs) lists a bunch of the things we have planned. This lets people see what we want to work on next and they can vote on their favorite's or add a comment to suggest something thats not on the list.
 

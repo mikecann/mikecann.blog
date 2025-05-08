@@ -14,11 +14,11 @@ openAIMikesBlogFileId: file-WSjkudpT5XM9V9DcaWXyCx
 
 You know what's better than one Mike Cann? That's right, infinity Mike Canns.
 
-[![](./infinity-monkeys.png)](./infinity-monkeys.png)
+![](./infinity-monkeys.png)
 
 That's why I built Mike Bot, a virtual chatbot with my knowledge, experience and personality embedded right into this blog.
 
-[![](./how-to-start-mikebot.png)](./how-to-start-mikebot.png)
+![](./how-to-start-mikebot.png)
 
 Now I know what you're thinking: "This is the most incredible thing to ever happen on the internet, how was this magical feat achieved?". Well, let me tell you...
 
@@ -38,19 +38,19 @@ Being the lazy programmer that I am, I decided for now to go with option 1 and s
 
 I would glue it all together and create the realtime feeling using my favorite tool for almost any job: [Convex](https://www.convex.dev/).
 
-[![](./convex-hammer.png)](./convex-hammer.png)
+![](./convex-hammer.png)
 
 # OpenAI Assistants
 
 First step was to fire up the [OpenAI dashboard](https://platform.openai.com/assistants/) and create the Assistant.
 
-[![](./assistant-setup.png)](./assistant-setup.png)
+![](./assistant-setup.png)
 
 The prompt took a bit of iteration to get right, but I'll talk more about that below.
 
 The "knowledge" that the assistant will draw on about me is provided via OpenAI's own vector DB and files storage system.
 
-[![](./vector-store.png)](./vector-store.png)
+![](./vector-store.png)
 
 Convex does have its own [VectorDB](https://docs.convex.dev/search/vector-search) and [File Storage](https://docs.convex.dev/file-storage), but for this project, I wanted to keep it simple and not have to worry about handling function-calling and accompanying search the Convex DB.
 
@@ -58,11 +58,11 @@ Convex does have its own [VectorDB](https://docs.convex.dev/search/vector-search
 
 Next up was how the user was going to interact with Mikebot. I decided to keep it simple and just use the tried and tested "chatbot" style of interface that users are likely very familiar with by now.
 
-[![](./mikebot-widget.png)](./mikebot-widget.png)
+![](./mikebot-widget.png)
 
 I added a little bit of flair that lets you expand the window up to a large format for those more "intimate" sort of chats.
 
-[![](./mikebot-expanded.png)](./mikebot-expanded.png)
+![](./mikebot-expanded.png)
 
 # Convex Glue
 
@@ -104,7 +104,7 @@ Uploading the posts and other context to the VectorDB via the OpenAI Dashboard w
 
 One thing to note here is that it's important [that I name](https://github.com/mikecann/mikecann.blog/blob/main/scripts/openai/uploadPostsToStorage.ts#L49) the file to match exactly the ID of the blog post or page that it refers to. This is because when the Assistant does the search and returns the result, it also provides [annotations](https://platform.openai.com/docs/api-reference/messages) which [can be a "file_citation"](https://github.com/mikecann/mikecann.blog/blob/main/convex/openai/assistants.ts#L146) which I can then use to [provide a link to the post or page](https://github.com/mikecann/mikecann.blog/blob/main/components/mikebot/MessageContent.tsx#L26).
 
-[![](./link-to-post.png)](./link-to-post.png)
+![](./link-to-post.png)
 
 # Conclusion
 

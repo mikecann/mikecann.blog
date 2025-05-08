@@ -21,31 +21,31 @@ Quite simply its a Chrome Extension and website that allows a user to quickly an
 > I wanted a better way to go about the process. A simple tool that would allow me to save someone into my “book of interesting people”, no matter which site I find them on. I wanted it to be easy with image/description automatically filled out. I wanted it to allow me to save reference images. And I wanted it to have a simple way for me to organise and search those I’ve bookmarked later on.
 > And so he contacted me to help him build out such a tool and [Markd](https://markd.co) was born:
 
-[![chrome_2016-09-15_08-36-51](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_08-36-51.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_08-36-51.png)
+![chrome_2016-09-15_08-36-51](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_08-36-51.png)
 
 ## The Extension
 
 The tool comes in two parts. Firstly there is a [Chrome Extension](https://chrome.google.com/webstore/detail/markd/beaalofkiocejchbpaocbbjhobmambpp):
 
-[![chrome_2016-09-15_09-03-37](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-03-37.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-03-37.png)
+![chrome_2016-09-15_09-03-37](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-03-37.png)
 
 Once installed (and logged in) you can visit any site then just hit the little Markd icon on the browser toolbar:
 
-[![chrome_2016-09-15_09-05-27](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-05-27.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-05-27.png)
+![chrome_2016-09-15_09-05-27](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-05-27.png)
 
 This opens a window which auto populates from the page you are on:
 
-[![chrome_2016-09-15_09-08-47](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-08-47.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-08-47.png)
+![chrome_2016-09-15_09-08-47](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-08-47.png)
 
 Currently the auto-population only works for a number of the most popular sites sites, namely: "Twitter, Linkedin, Behance, Facebook, Dribble, DeviantArt, Github and ProductHunt", but if it isnt on that list (or even if it is) you can easily edit any part of the Mark before it is saved. Images are scraped from the page and presented in a handy dialog:
 
-[![2016-09-15_09-33-32](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-15_09-33-32.gif)](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-15_09-33-32.gif)
+![2016-09-15_09-33-32](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-15_09-33-32.gif)
 
 ## The Website
 
 Once saved you can view and edit your saved marks on Markd.co:
 
-[![chrome_2016-09-15_09-37-52](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-37-52.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-37-52.png)
+![chrome_2016-09-15_09-37-52](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_09-37-52.png)
 
 ## The Tech
 

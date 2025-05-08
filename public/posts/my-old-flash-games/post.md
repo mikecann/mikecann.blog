@@ -27,13 +27,13 @@ The problem is because Flash is now [effectively dead](https://blog.adobe.com/en
 
 Fortunately others have lamented this sorry state of affairs by collecting a huge archive of old flash content and making it available to play once again in an easy to use package.
 
-[![](./flashpoint-ss.png)](./flashpoint-ss.png)
+![](./flashpoint-ss.png)
 
 Simply [download the app](https://bluemaxima.org/flashpoint/downloads/) (either the 650mb installer or the MASSIVE 600GB full archive) and then search any game you want to play and click to run it, that simple!
 
 Its awesome to see some of my games on there available to play again just a single click away.
 
-[![](./flash2.png)](./flash2.png)
+![](./flash2.png)
 
 If you are interested I made a playlist:
 

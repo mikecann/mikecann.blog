@@ -24,8 +24,8 @@ For this one I decided on a type of game that I have been wanting to make for a 
 
 So here is "A Cunning Plan":
 
-[![screenshot_16](/wp-content/uploads/2013/04/screenshot_16-300x224.png)](/wp-content/uploads/2013/04/screenshot_16-300x224.png) [![screenshot_13](/wp-content/uploads/2013/04/screenshot_13-300x222.png)](/wp-content/uploads/2013/04/screenshot_13-300x222.png)
-[![screenshot_14](/wp-content/uploads/2013/04/screenshot_14-300x220.png)](/wp-content/uploads/2013/04/screenshot_14-300x220.png) [![screenshot_15](/wp-content/uploads/2013/04/screenshot_15-300x225.png)](/wp-content/uploads/2013/04/screenshot_15-300x225.png)
+![screenshot_16](/wp-content/uploads/2013/04/screenshot_16-300x224.png) ![screenshot_13](/wp-content/uploads/2013/04/screenshot_13-300x222.png)
+![screenshot_14](/wp-content/uploads/2013/04/screenshot_14-300x220.png) ![screenshot_15](/wp-content/uploads/2013/04/screenshot_15-300x225.png)
 
 You can play the game here:
 

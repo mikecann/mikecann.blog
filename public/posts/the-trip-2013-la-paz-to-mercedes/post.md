@@ -16,7 +16,7 @@ openAIMikesBlogFileId: file-ARYcsguhHtfbZOscvpx3DUum
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album Trip 2013 - La Paz to Mercedes. Each picture can be clicked to see a larger version and comment / like.**
 
-[![screenshot_01](/wp-content/uploads/2013/12/screenshot_01.png)](/wp-content/uploads/2013/12/screenshot_01.png)
+![screenshot_01](/wp-content/uploads/2013/12/screenshot_01.png)
 
 We left our tour group in La Paz and continued on our own for the next week, time was tight as we had to be in Buenos Aires in just a few days to meet final tour group. I knew that no trip to South America is complete without a visit to the salt flats of Uyuni, Bolivia so we crowbared in a 3 day excursion into our schedule.
 

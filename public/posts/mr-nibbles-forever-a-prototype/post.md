@@ -36,7 +36,7 @@ As for making the the game endless, I needed a way to proceduralally generate Mr
 
 Chunks must have an entrance and at least one exit tho they can have multiple exits which makes for some interesting player choices:
 
-[![2015-01-16_14-35-50](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-35-50.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-35-50.png)
+![2015-01-16_14-35-50](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-35-50.png)
 
 For now there are 26 chunks in the game and they are randomly picked as the player moves through the world. The idea is to grade these chunks by difficulty and the longer the level goes on for the harder the chunks spawned are.
 

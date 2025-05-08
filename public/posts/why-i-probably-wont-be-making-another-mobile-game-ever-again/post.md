@@ -18,15 +18,15 @@ The idea for Credit Redeemer was simple; allow users to convert unused Google Pl
 I thought as there were 3 other competitors on the market that did the same thing; [Rebatr](https://www.dropbox.com/s/b5u1085d1cfzcl9/chrome_2016-03-16_08-25-29.png?dl=0), [Payback](https://www.dropbox.com/s/5metv3e2ty7ory9/chrome_2016-03-16_08-24-24.png?dl=0) and [Cashify](https://www.dropbox.com/s/jt7orkoge3nou5l/chrome_2016-03-16_08-26-32.png?dl=0) then Credit Redeemer would be fine. I was a little worried about the terms of service but I assumed as they had been on there for years already then must be fine.
 
 3 days after launch I received this email from Google:
-[![chrome_2016-04-14_11-53-26](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-53-26.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-53-26.png)
+![chrome_2016-04-14_11-53-26](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-53-26.png)
 
 Needless to say I was shocked, worried, upset and annoyed. Not only was Credit Redeemer taken down but my entire Google Play Developer account terminated including Mr Nibbles, Mr Nibbles Forever and Ectoplasm.
 
-[![chrome_2016-04-14_11-55-24](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-55-24.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-55-24.png)
+![chrome_2016-04-14_11-55-24](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-55-24.png)
 
 I of course immediately appealed stating that I wasn't aware of any previous violations and asking for more information. Surely it must be some sort of mistake? 3 days later I get the following:
 
-[![chrome_2016-04-14_11-57-49](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-57-49.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-57-49.png)
+![chrome_2016-04-14_11-57-49](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_11-57-49.png)
 
 Wow okay so now I am really worried. It seems like it's a robotic reply, even if "Bruce" is a real person he certainly hasn't read what I said in the appeal and hasn't offered any more information or reason for the lack of extra information.
 
@@ -36,13 +36,13 @@ I didnt action on the error as it was for Ectoplasm, a hackathon project, plus I
 
 I emailed "Bruce" back again and received:
 
-[![chrome_2016-04-14_12-03-48](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-03-48.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-03-48.png)
+![chrome_2016-04-14_12-03-48](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-03-48.png)
 
 So thats that as far as Google is concerned. They offer no other way to appeal or state your case.
 
 I decided not to give up just yet. I contacted a couple of friends I knew who worked at Google. One said they couldn't get any more info other than the public appeals page and other did get a little further and received the following:
 
-[![chrome_2016-04-14_12-15-37](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-15-37.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-15-37.png)
+![chrome_2016-04-14_12-15-37](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-15-37.png)
 
 Wow, so finally I can confirm that it was indeed Credit Redeemer that was a cause of the ban. Money laundering does indeed sound serious but I wasn't aware that the app was money laundering else I wouldn't have even started it.
 
@@ -50,7 +50,7 @@ I know ignorance is no defence when it comes to the law but I assumed that as th
 
 It seems really seems unfair that I got a total account ban without a warning, I think my reply sums it up:
 
-[![chrome_2016-04-14_12-17-23](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-17-23.png)](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-17-23.png)
+![chrome_2016-04-14_12-17-23](https://www.mikecann.blog/wp-content/uploads/2016/04/chrome_2016-04-14_12-17-23.png)
 
 It has been almost 2 weeks, I have had no reply.
 

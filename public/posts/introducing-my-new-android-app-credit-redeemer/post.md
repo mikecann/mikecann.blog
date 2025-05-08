@@ -19,19 +19,19 @@ A few weeks ago a colleague in the office (TheBroth) mentioned an idea for an ap
 
 The idea is simple. It lets you convert unused Google Play credit into cash.
 
-[![1](https://www.mikecann.blog/wp-content/uploads/2016/03/1.png)](https://www.mikecann.blog/wp-content/uploads/2016/03/1.png)
+![1](https://www.mikecann.blog/wp-content/uploads/2016/03/1.png)
 
 It does it by allow the user to pick from a number of In-App-Purchases
 
-[![2](https://www.mikecann.blog/wp-content/uploads/2016/03/2.png)](https://www.mikecann.blog/wp-content/uploads/2016/03/2.png)
+![2](https://www.mikecann.blog/wp-content/uploads/2016/03/2.png)
 
 They then supply their Paypal email address
 
-[![3](https://www.mikecann.blog/wp-content/uploads/2016/03/3.png)](https://www.mikecann.blog/wp-content/uploads/2016/03/3.png)
+![3](https://www.mikecann.blog/wp-content/uploads/2016/03/3.png)
 
 I then simply send them some money via Paypal. Simples.
 
-[![6](https://www.mikecann.blog/wp-content/uploads/2016/03/6.png)](https://www.mikecann.blog/wp-content/uploads/2016/03/6.png)
+![6](https://www.mikecann.blog/wp-content/uploads/2016/03/6.png)
 
 Im making 10% on each transaction with 30% going to Google and 5% to Paypal therefore the user gets 55% of their credit redeemed. Its not perfect but its better than nothing.
 

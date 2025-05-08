@@ -49,7 +49,7 @@ So in the end I decided to go with something that was related and instead use th
 
 The site is still very much under development but at least I now have a good landing page for Mr Nibbles, Ectoplasm and Mr Nibbles Forever:
 
-[![2015-07-03_07-43-27](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-43-27.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-43-27.png)
+![2015-07-03_07-43-27](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-43-27.png)
 
 So although last week was supposed to just be design, I decided to go the full-hog and implement too, which means that I have one more week free for development.
 
@@ -61,7 +61,7 @@ Speaking of development, this week we [supposed to be a bug-fixing and polish pa
 
 Its true that I did indeed fix some minor bugs...
 
-[![2015-07-03_07-46-39](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-46-39.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-46-39.png)
+![2015-07-03_07-46-39](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-46-39.png)
 
 ... this week was mostly dedicated to improving the high scores system in the game.
 

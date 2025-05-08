@@ -16,11 +16,11 @@ This month we completed probably the single largest change in the history of our
 
 Ever since the very earliest version of [BattleTabs](https://battletabs.io) the game has been rendered using a 2D canvas (PhaserJS & PixiJS).
 
-[![](./old-game1.jpg)](./old-game1.jpg)
+![](./old-game1.jpg)
 
 This has been a surprise to some as they assumed the game was 3D but in actuality the art was authored in 3D then simply rendered out to 2D sprite sheets.
 
-[![](./spritesheet.png)](./spritesheet.png)
+![](./spritesheet.png)
 
 This looked great and worked just fine at first but then we started to add more and more ships and started to run into issue with our process. I have previously [discussed this in detail here](https://mikecann.blog/posts/introducing-battletabs) but the short version is "isometric is hard".
 
@@ -34,19 +34,19 @@ For example, we would liked to have done 4-way rotations, but that would have me
 
 There was a bigger looming issue on the horizon however; our port to Mobile. With mobile we knew that the smaller screen size was going to be a big problem for the game as there simply wasnt going to be enough space to fit both boards on screen in portrait or landscape.
 
-[![](./mobile1.png)](./mobile1.png)
+![](./mobile1.png)
 
 We could have done some clever scaling and blurring to give the illusion of depth:
 
-[![](./battle-screen.png)](./battle-screen.png)
+![](./battle-screen.png)
 
 This however would limit our future plans for improving the scenery aesthetics and features:
 
-[![](./scene-mock.jpg)](./scene-mock.jpg)
+![](./scene-mock.jpg)
 
 What we needed really was a way to rotate and move the camera in 3D space so we could shift the players perspective around the world.
 
-[![](./perspective.png)](./perspective.png)
+![](./perspective.png)
 
 # Going 3D
 
@@ -54,7 +54,7 @@ So for these reasons (and others) we decided to bite the bullet and rewrite the 
 
 We did some preliminary investigations into various game engines:
 
-[![](./editor-research.png)](./editor-research.png)
+![](./editor-research.png)
 
 We really liked the look of Godot and Unity. We have lots of experience with Unity as as team but worried that its Web output file size would have been too large for users to download.
 

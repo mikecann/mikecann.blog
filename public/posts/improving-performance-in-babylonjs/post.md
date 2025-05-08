@@ -20,17 +20,17 @@ First thing's first. When attempting any sort of performance optimization pass i
 
 Fortunately BabylonJS has some pretty good metrics built into the engine that you can checkout in the inspector:
 
-[![](./babylon-inspector-stats.png)](./babylon-inspector-stats.png)
+![](./babylon-inspector-stats.png)
 
 It unfortunately doesnt show me those numbers as a percentage of frametime and it also takes up quite a bit of the screen. So I decided to make a little stats counter in the top left that shows me the critical numbers and their percentage of the total frame.
 
-[![](./my-stats-counter.png)](./my-stats-counter.png)
+![](./my-stats-counter.png)
 
 With this in place I was able to start to narrow down what I think I can spend some time looking to a little more deeply.
 
 One other quick tool I like to use is Chrome's CPU throttling feature:
 
-[![](./chrome-cpu-throttle.png)](./chrome-cpu-throttle.png)
+![](./chrome-cpu-throttle.png)
 
 I develop the game on a powerful desktop PC which is likely more powerful than many of our users' devices. So using the CPU throttle it lets me simulate what its like for them a little more closely.
 
@@ -52,7 +52,7 @@ BattleTabs doesn't really have many meshes and most of them are on screen most o
 
 I decided to [raise this issue on the BabylonJS forums](https://forum.babylonjs.com/t/why-is-mesh-selection-time-so-high-and-how-to-reduce-it/47069).
 
-[![](./forum-post.png)](./forum-post.png)
+![](./forum-post.png)
 
 After a bit more experimentation I added a "FREEZE" button to my stats which called the `scene.freezeActiveMeshes` which was also mentioned in the Babylon performance docs. This had a dramatic effect on the Mesh Selection time, effectively removing it.
 
@@ -98,7 +98,7 @@ So in total I saw about a 70-100% performance improvement once I set my CPU thro
 
 When I quizzed Evengi_Popov one of Babylons core-contributors he agreed:
 
-[![](./jedi.png)](./jedi.png)
+![](./jedi.png)
 
 So who knows, perhaps we will see some of this stuff built into the engine in the future.
 

@@ -120,7 +120,7 @@ Over the years the code had grown and evolved. It had in fact grown to the point
 
 So I did some googling and decided to invest in [Michael Feather's book Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) and [Uncle Bob's Clean Code videos](https://cleancoders.com/videos).
 
-[![51H6SHy6g2L._SX374_BO1,204,203,200_](https://www.mikecann.blog/wp-content/uploads/2016/07/51H6SHy6g2L._SX374_BO1204203200_.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/07/51H6SHy6g2L._SX374_BO1204203200_.jpg)
+![51H6SHy6g2L._SX374_BO1,204,203,200_](https://www.mikecann.blog/wp-content/uploads/2016/07/51H6SHy6g2L._SX374_BO1204203200_.jpg)
 
 Both Michael Feathers and Uncle Bob both based most of their discussions around automated testing. Infact Michael Feathers defined legacy code as any code that doesn't have test coverage. I had heard about Unit Testing and knew that it was something I should be doing but never actually tried it.
 

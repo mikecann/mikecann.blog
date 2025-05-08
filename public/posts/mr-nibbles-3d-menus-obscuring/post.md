@@ -11,7 +11,7 @@ While experimenting around with rotating in more than just one axis I ran into a
 
 <!-- more -->
 
-[![screenshot_002](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_0021.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_0021.png)
+![screenshot_002](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_0021.png)
 
 The solution to this problem was to shoot a ray (well, several rays) from the player to the camera, if they collide with anything then its obscuring and thus I fade it out. When its no longer obscuring I fade it back in again. It works pretty well as a solution though I will need to see how it actually works out when I build more levels.
 

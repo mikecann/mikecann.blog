@@ -22,30 +22,30 @@ Trello isn't strictly a project management tool per se rather its more of a flex
 
 Projects are split into "Boards":
 
-[![screenshot_021 Sep. 21 13.48](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_021-Sep.-21-13.48.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_021-Sep.-21-13.48.png)
+![screenshot_021 Sep. 21 13.48](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_021-Sep.-21-13.48.png)
 
 Within a board you have a number of "Lists" which in turn contain "Cards"
 
-[![screenshot_022 Sep. 21 13.49](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_022-Sep.-21-13.49.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_022-Sep.-21-13.49.png)
+![screenshot_022 Sep. 21 13.49](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_022-Sep.-21-13.49.png)
 
 Cards and easily be created, removed and dragged between lists:
 
-[![drag-drop-trello](https://www.mikecann.blog/wp-content/uploads/2014/09/drag-drop-trello.gif)](https://www.mikecann.blog/wp-content/uploads/2014/09/drag-drop-trello.gif)
+![drag-drop-trello](https://www.mikecann.blog/wp-content/uploads/2014/09/drag-drop-trello.gif)
 
 The way I use it is to have each list represent a milestone or category and each card represents a single task. When a task is completed it is simply dragged to the "Done" list:
 
-[![screenshot_024 Sep. 21 14.20](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_024-Sep.-21-14.20.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_024-Sep.-21-14.20.png)
+![screenshot_024 Sep. 21 14.20](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_024-Sep.-21-14.20.png)
 
 Priority is indicated by the order in the list, the higher the card the higher priority. The person responsible for that task is indicated by who is the "member":
 
-[![screenshot_025 Sep. 21 14.22](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_025-Sep.-21-14.22.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_025-Sep.-21-14.22.png)
+![screenshot_025 Sep. 21 14.22](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_025-Sep.-21-14.22.png)
 
 A task using labels I can indicate some important info about a particular task such as it is blocked for example:
 
-[![screenshot_026 Sep. 21 14.23](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_026-Sep.-21-14.23.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_026-Sep.-21-14.23.png)
+![screenshot_026 Sep. 21 14.23](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_026-Sep.-21-14.23.png)
 
 Clicking a single card lets you bring up its details which lets you attach files for that task, add a description, checklist, comments and much more:
 
-[![screenshot_028 Sep. 21 14.24](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_028-Sep.-21-14.24.png)](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_028-Sep.-21-14.24.png)
+![screenshot_028 Sep. 21 14.24](https://www.mikecann.blog/wp-content/uploads/2014/09/screenshot_028-Sep.-21-14.24.png)
 
 For me its a really flexible, simple cost effective and (oddly enough) fun way to manage a small indie project.

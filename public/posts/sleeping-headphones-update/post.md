@@ -24,7 +24,7 @@ Up to that point I wasnt 100% happy with any of the options on the market and de
 
 # Pillow Speaker
 
-[![](./pillow-speaker.jpg)](./pillow-speaker.jpg)
+![](./pillow-speaker.jpg)
 
 So one experiment I have tried since the last post is to buy a [Portable 3.5mm Pillow Speaker](https://www.ebay.com/itm/Portable-3-5mm-Pillow-Speaker-for-iPod-MP3-MP4-CD-Phone-Universal-White-Speaker-/253812585068) you can find lots of variants of it for sale on ebay.
 
@@ -40,7 +40,7 @@ I think this idea could potentially work if the speaker was soft and thin enough
 
 # BedPhones Wireless
 
-[![](./woman-sleep.jpg)](./woman-sleep.jpg)
+![](./woman-sleep.jpg)
 
 In the last post I mentioned that I had ordered the brand new [Dubslabs BedPhones Wireless headphones](https://www.dubslabs.com/products/bedphones-wireless-sleep-headphones-the-worlds-smallest-on-ear-headphones.html) and was hopeful that they were finally going to be the solution to my problem.
 

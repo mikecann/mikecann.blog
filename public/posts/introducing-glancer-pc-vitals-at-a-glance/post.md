@@ -19,11 +19,11 @@ This post has been over 6 years in the making but im glad I can finally write it
 
 Way back in [March of 2010](https://www.mikecann.blog/myprojects/windows-7-taskbar-monitor/) I wrote about a new tool I had developed with the snappy name "Windows 7 Taskbar Monitor". It was a little tool that used Windows' Performance Counter to show you what the current CPU, Memory and Network usage is:
 
-[![taskbar-monitor-sceenshot01](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-sceenshot01.gif)](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-sceenshot01.gif)
+![taskbar-monitor-sceenshot01](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-sceenshot01.gif)
 
 The cunning thing however is that I piggybacked on the new (at the time) "progress" value that you could get which would give you a nice visual indication of the current value for each monitor:
 
-[![taskbar-monitor-screenshot02](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-screenshot02.gif)](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-screenshot02.gif)
+![taskbar-monitor-screenshot02](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-screenshot02.gif)
 
 To my surprise this little tool has more than justified its effort to create. I have used it every day for the past 6 years and has been an invaluable tool in working out "what the hell is my computer doing?" sort of problems.
 

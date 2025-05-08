@@ -88,7 +88,7 @@ So probably off and on again I have been working on for the last 3 months or so.
 - Im impressed with the performance of the Up Core. For the price and size this little thing performs really well and is x86 so runs just about anything you want.
 - Im alo impressed with the monitor, it was really light and when I took it all apart the display controls still worked and fit nicely underneath.
 
-[![](./bottom-controls.jpg)](./bottom-controls.jpg)
+![](./bottom-controls.jpg)
 
 - Building everything on React and Electron was a good choice. It was quick to iterate and there are tons of prebuilt libraries out there thanks to NPM.
 
@@ -97,11 +97,11 @@ So probably off and on again I have been working on for the last 3 months or so.
 - I had to order the two way glass three times (more on this in the [hardware](/projects/mikes-mirror-hardware/) post)
 - Light from the window behind the mirror causes issues with the face detection sometimes. As a attempt at a solution I bought a desk lamp to try to illuminate your face a little more:
 
-[![](./mirror-with-desklight.jpg)](./mirror-with-desklight.jpg)
+![](./mirror-with-desklight.jpg)
 
 - I put the screen in upside down so that on-screen display settings for the monitor are upside down, whoops!
 
-[![](./upsidown-ocd.jpg)](./upsidown-ocd.jpg)
+![](./upsidown-ocd.jpg)
 
 - Im really not a woodworker and so didnt do as good as job as I would have liked there (more on this in the hardware post).
 - Racked up an expensive Google Bill because I was recording voice for 500 minutes when I wasn't aware it was running, whoops!
@@ -112,7 +112,7 @@ It was a fun and challenging project. I would definitely recommend it if you are
 
 If I was to do it again I think I might so for something that didn't require a bunch of woodwork like this frameless design from Max Braun:
 
-[![](./frameless-mirror.png)](./frameless-mirror.png)
+![](./frameless-mirror.png)
 
 There's plenty more things I want to add and improve to the mirror. I suspect this will be a project ill keep adding to over time and maybe some time in the future I will do a follow-up post, so subscribe to keep up to date :)
 

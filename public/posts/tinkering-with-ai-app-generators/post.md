@@ -16,7 +16,7 @@ As is [rapidly becoming a trend](https://mikecann.blog/posts/tinkering-with-spac
 
 There are a lot of these text-to-app startups around at the moment. One of the most famous is [Devin from Cognition.ai](https://www.cognition.ai/introducing-devin). That one is not available yet, but I wanted to explore another one that has been getting some buzz lately: [Lazy.ai](https://www.getlazy.ai/).
 
-[![](./tagline.png)](./tagline.png)
+![](./tagline.png)
 
 Its tagline is "Idea to software 10X faster." Let's see how it does.
 
@@ -26,11 +26,11 @@ As I am [a massive Convex.dev fan](https://mikecann.blog/posts/im-now-a-convex-d
 
 Something I had wanted to experiment with for a while was some sort of visualization for Convex database schemas so you can see the relationship between tables and types. I was imagining some sort of class diagram:
 
-[![](./classdiagram.png)](./classdiagram.png)
+![](./classdiagram.png)
 
 Or even better, a program that can generate the diagram dynamically such as [TSDiagram](https://tsdiagram.com/).
 
-[![](./tsdiagram.png)](./tsdiagram.png)
+![](./tsdiagram.png)
 
 # LazyAI Conversation
 
@@ -40,7 +40,7 @@ So, with that, I entered the following prompt into LazyAI:
 
 It came back with a helpful plan of attack.
 
-[![](./lazy1.png)](./lazy1.png)
+![](./lazy1.png)
 
 I felt like maybe I was being a bit tough on it, so I gave it a bit more info:
 
@@ -98,21 +98,21 @@ const schema = defineSchema({
 
 The response it came back with was:
 
-[![](./lazy2.png)](./lazy2.png)
+![](./lazy2.png)
 
 I felt like that was actually a reasonable plan and told it to go ahead.
 
 Now, the way the app works is that it's split into three parts: Test, Code, and Env Secrets.
 
-[![](./lazyparts.png)](./lazyparts.png)
+![](./lazyparts.png)
 
 So in theory, I should be able to test the output it generates. Well, this is where things unfortunately start to go off the rails a bit because to test (even your first project), you need to sign up for a pro membership.
 
-[![](./lazypro.png)](./lazypro.png)
+![](./lazypro.png)
 
 Which I would have been happy to do if I felt like the tool was going to give me some value, but the pricing scared me off.
 
-[![](./lazypricing.png)](./lazypricing.png)
+![](./lazypricing.png)
 
 $39.89 per month just to see if the code works and then usage costs on top of that?! No chance I was going to pay that just to check it out.
 
@@ -120,13 +120,13 @@ So after a little bit more back and forth with the AI, I decided to take a look 
 
 Well, unfortunately, I was to be disappointed again.
 
-[![](./lazyerrors.png)](./lazyerrors.png)
+![](./lazyerrors.png)
 
 There was no chance this code would compile or even run. There are TypeScript type errors all over the place and the imports wouldn't work from the wrong packages, etc.
 
 I tried to give it the benefit of the doubt though and fixed the compile errors and import errors and tried to run it. Sure enough, no dice.
 
-[![](./lazyrunerror.png)](./lazyrunerror.png)
+![](./lazyrunerror.png)
 
 # LazyAI Conclusion
 
@@ -138,17 +138,17 @@ Fortunately, there are a lot of these "AI Project Generation" projects out there
 
 https://www.pythagora.ai/
 
-[![](./pythagora.png)](./pythagora.png)
+![](./pythagora.png)
 
 This one touts itself as a "dev tool that builds apps from scratch by talking to you." Sounds great, let's give it a shot.
 
 This one works a little differently. It is a VSCode extension that you need to install [from the store](https://marketplace.visualstudio.com/items?itemName=PythagoraTechnologies.gpt-pilot-vs-code&ssr=false#review-details). So I headed over there and immediately was discouraged to see that it was only 3 stars out of 5. I was not off to a good start.
 
-[![](./pyreviews.png)](./pyreviews.png)
+![](./pyreviews.png)
 
 After a bit of a confusing setup (you have to first install another tool, gpt-pilot apparently) I had it working.
 
-[![](./pyworking.png)](./pyworking.png)
+![](./pyworking.png)
 
 (just a side note, having an AI running on my local system from an unknown developer with full access makes me kind of nervous.)
 
@@ -214,7 +214,7 @@ const schema = defineSchema({
 
 Then followed a plan that the AI came up with and interestingly, it asks me before it runs commands:
 
-[![](./pycommands.png)](./pycommands.png)
+![](./pycommands.png)
 
 Ughh, it seems like it gets stuck quite easily though when something isn't installed that it needs:
 
@@ -228,15 +228,15 @@ It seemed to continue just fine, then began installing a bunch of Node packages 
 
 It stops every now and then to check with you to make sure everything is looking good, which is nice.
 
-[![](./pyreview.png)](./pyreview.png)
+![](./pyreview.png)
 
 It started to generate some TypeScript. It looked like there were some errors, but I was starting to feel confident that it might be able to debug its way out of it. Then I hit:
 
-[![](./pyfreetrialover.png)](./pyfreetrialover.png)
+![](./pyfreetrialover.png)
 
 Fortunately, their pricing is much more reasonable than LazyAI and even lets you use your own OpenAI keys!
 
-[![](./pyapikey.png)](./pyapikey.png)
+![](./pyapikey.png)
 
 I was keen to see where this went, so I decided to spend $10 (and tip the developer) to find out.
 

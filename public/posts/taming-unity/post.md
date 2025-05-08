@@ -12,7 +12,7 @@ oldUrl: /c/taming-unity
 openAIMikesBlogFileId: file-WeNWwEfR9A0QQMyeHMursrsg
 ---
 
-[![logo](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)
+![logo](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)
 
 For the last couple of months I have been working on a few different things including many new releases of [Post To Tumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en). Most of my time however has been spent working on an unnamed (as of yet) game in Unity.
 

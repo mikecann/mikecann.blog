@@ -24,13 +24,13 @@ I discovered that they [have the same fee](https://www.braintreepayments.com/bra
 
 So I decided to make the jump and switch PTT over to Braintree.
 
-[![2016-09-26_11-35-43](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-26_11-35-43.gif)](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-26_11-35-43.gif)
+![2016-09-26_11-35-43](https://www.mikecann.blog/wp-content/uploads/2016/09/2016-09-26_11-35-43.gif)
 
 Donations are all handled on my HTTPS heroku page. Credit card info never touches my server and is all handled via the Braintree iFrame and thus I am never liable for any financial risk nor an I at any point breaking Googles Developer Policies.
 
 Speaking of that. As soon as I published the update with the new Braintree payments integrated I received this lovely email from Google:
 
-[![chrome_2016-09-23_12-42-04](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-23_12-42-04.png)](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-23_12-42-04.png)
+![chrome_2016-09-23_12-42-04](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-23_12-42-04.png)
 
 Obviously I am rather wary of these sorts of generic take-down emails from Google thanks to my [Google Play ban](https://www.mikecann.blog/misc/why-i-probably-wont-be-making-another-mobile-game-ever-again/). After emailing them back asking for clarification as to exactly which rule I was breaking I received an email 2 days later that stated that they had reviewed my extension and were going to reinstate it. No explanation as to why it was taken down in the first place...
 

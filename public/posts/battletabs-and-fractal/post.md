@@ -21,7 +21,7 @@ I have [posted quite a few times in the past](https://mikecann.blog/tags/battlet
 
 # Whats Changed
 
-[![](./update-notes.jpg)](./update-notes.jpg)
+![](./update-notes.jpg)
 
 Since November last year there have been over 40 updates to the game. Some of the major ones include:
 
@@ -56,11 +56,11 @@ From our [community page](https://battletabs.com/battletabs-cards) on the topic:
 
 > Outside of their intrinsic value in looking amazing cards will also provide unique benefits in BattleTabs and other experiences we have in production. For example, you may craft a special cosmetic item or a ship skin in BattleTabs using a combination of cards, then display or trade the crafted treasure inside your own 3D sandbox! Watch as the newly crafted item comes alive with special animations and behaviours.
 
-[![](./storyboard_c.png)](./storyboard_c.png)
+![](./storyboard_c.png)
 
 > Additionally, BattleTabs Cards can be freely built-upon without any intervention or restrictions from us. Say you have a fantastic idea for a new game, you can team up with your friends, use the exact same "shared card database" that we use!
 
-[![](./storyboard_a.png)](./storyboard_a.png)
+![](./storyboard_a.png)
 
 > You could host tournaments with these cards, perhaps charging players a Common card to enter the tournament and setting Rare cards as a reward for the winners.
 
@@ -74,11 +74,11 @@ Our first card is going to be special. Rather than simply selling or giving them
 
 So every day that the tournament runs (2 weeks), the top 20 players that participate will earn a silver token:
 
-[![](./silver-token.png)](./silver-token.png)
+![](./silver-token.png)
 
 The silver token along with the golden token which we awarded to a selection of of most loyal players will grant free minting rights to the Seed Card.
 
-[![](./gold-token.png)](./gold-token.png)
+![](./gold-token.png)
 
 The tournament starts tomorrow, monday the 15th of August. Head over to [https://www.fractal.is/battletabs/tournaments](https://www.fractal.is/battletabs/tournaments) for all the details!
 

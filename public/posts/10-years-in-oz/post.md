@@ -23,7 +23,7 @@ I remember being in a sort of shock for several days when I first arrived. I had
 
 I remember in the first week seeing a scorpion scuttle across the living room floor and being assured that I had nothing to worry about.
 
-[![](./scorpion.jpg)](./scorpion.jpg)
+![](./scorpion.jpg)
 
 I remember being stunned that there were beautiful parrots and cockatoos just flying around all the time and no one batting an eye lid at it.
 
@@ -43,7 +43,7 @@ A year or so after I moved, Kelsie joined me and we began renting a place in the
 
 I was living the dream, my daily commute involved a quick stroll past the zoo and the sounds of the howler monkeys, through a park down to the ferry. A short ferry across the water where dolphins often could be seen in the water, then another walk through a park before I arrived at the office. It really was a great life.
 
-[![](./sp.jpg)](./sp.jpg)
+![](./sp.jpg)
 
 But before long the old traveling itch started again and I wanted to explore a bit more before I became too comfortable, so thats why in 2017 Kelsie and I..
 
@@ -51,15 +51,15 @@ But before long the old traveling itch started again and I wanted to explore a b
 
 Kelsie and I loved the idea of exploring more of the vast country so we went out and bought a car and a camper and [set off for 5 months](https://mikecann.blog/posts/and-off-we-go).
 
-[![](./camper.jpg)](./camper.jpg)
+![](./camper.jpg)
 
 We went to so many places, had so many adventures it would be impossible to recount them here. My laptop still bears the scars from my cleptomania obsession of collecting stickers from each major place we visited.
 
-[![](./laptop.jpg)](./laptop.jpg)
+![](./laptop.jpg)
 
 Before we left I had purchased a brand new (at the time) consumer drone called the DJI Mavic Pro. This was so early that most places didnt have any rules or policies around drones so I took full advantage of that capturing thousands of incredible photos and videos which I attempted to sell over at: https://aboveunder.com.au/
 
-[![](./aboveunder.jpg)](./aboveunder.jpg)
+![](./aboveunder.jpg)
 
 Before long tho it was time to return back to Perth and real life but that was okay because by this point I had..
 
@@ -75,7 +75,7 @@ One of the friends I made along the way caused me to..
 
 I technically had actually tried Kiteboarding already while I as on my South American trip but it wasnt until my (at the time) neighbor Stan convinced me to pick it up again in Australia.
 
-[![](./kiting.jpg)](./kiting.jpg)
+![](./kiting.jpg)
 
 Im so glad he did as I have had an awesome time kiting around, making the most of the vast west australian coastline and prodigious and consistent wind.
 
@@ -87,7 +87,7 @@ With myself settling into Aussie life it was just about time that I..
 
 In January of 2020 [I officially became](https://mikecann.blog/posts/a-personal-update) a citizen of Australia!
 
-[![](./citizenship.jpg)](./citizenship.jpg)
+![](./citizenship.jpg)
 
 It was a long windy 6-year road of different visas and constant worry but I finally made it.
 
@@ -101,13 +101,13 @@ I have always been entrepreneurial so when my co-founder Brandon raised the poss
 
 That has been an incredibly difficult but rewarding adventure that is still ongoing with [Gangbusters](https://mikecann.blog/posts/bandai-namco-invests-in-gangbusters) as we work on brining our premier title BattleTabs to mobile.
 
-[![](./battletabs.png)](./battletabs.png)
+![](./battletabs.png)
 
 If running your own business was not hard enough I also recently...
 
 ## 8. Became a Father
 
-[![](./joshie.png)](./joshie.png)
+![](./joshie.png)
 
 Among all the milestones I've reached, becoming a father was by far the most transformational. The birth of my son, Joshie, introduced a profound shift in my world view, priorities, and daily routines.
 
@@ -119,7 +119,7 @@ It often goes hand in hand but it was around this time that I also..
 
 ## 9. Got Married
 
-[![](./wedding.jpg)](./wedding.jpg)
+![](./wedding.jpg)
 
 Kelsie and I had shared countless adventures, faced life's ups and downs, and grown together in ways neither of us could have imagined when we first met.
 

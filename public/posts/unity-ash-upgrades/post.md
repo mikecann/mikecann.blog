@@ -107,11 +107,11 @@ These tests are all well and good but 10 million iterations of GetComponents in 
 
 To test this I set up another scene that creates and updates 5,000 asteroids on the screen.
 
-[![upout](https://www.mikecann.blog/wp-content/uploads/2014/12/upout.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/12/upout.jpg)
+![upout](https://www.mikecann.blog/wp-content/uploads/2014/12/upout.jpg)
 
 I time how long they create then I count how many frames I get in 10 seconds of updating them. Each asteroid has a 2D rigid body and a very simple controller script that wraps the Asteroids position on the screen:
 
-[![2014-12-10_10-15-54](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-15-54.png)](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-15-54.png)
+![2014-12-10_10-15-54](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-15-54.png)
 
 ```
 public class AsteroidController : MonoBehaviour
@@ -150,7 +150,7 @@ This was the base test and it took about 440ms to create 5000 asteroids and proc
 
 Now I had my base I decided to setup the same scenario but using Unity-Ash to drive the updates. So now the Asteroid looks like this:
 
-[![2014-12-10_10-19-42](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-19-42.png)](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-19-42.png)
+![2014-12-10_10-19-42](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-19-42.png)
 
 Notice that there is no controller for the Asteroid, now all the update logic happens in a system:
 
@@ -211,13 +211,13 @@ This time it took 595ms to create the Asteroids and we processed 33 frames over 
 
 So immediately you can see there is a large performance hit in using Ash-Unity over regular Unity (8.3FPS compared to 3.3FPS). To confirm that it was the extra overhead of checking for new components on each asteroid rather than the internal updating mechanism of the Systems in Ash I decided to turn off checking for component updates..
 
-[![2014-12-10_10-40-02](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-40-02.png)](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-40-02.png)
+![2014-12-10_10-40-02](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-40-02.png)
 
 Sure enough the frame rate went back up (in fact higher!) than the Unity update rate of 8.3FPS to 8.6FPS.
 
 So with this in mind I decided to add an option to the Entity component that lets you choose how often it checks for new components:
 
-[![2014-12-10_10-42-02](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-42-02.png)](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-42-02.png)
+![2014-12-10_10-42-02](https://www.mikecann.blog/wp-content/uploads/2014/12/2014-12-10_10-42-02.png)
 
 The reasoning is that its actually quite rare that you change the components after the initial creation of the object (at least that's what I found) and thus by reducing the number of times the Entity component checks for updates we should be able to increase the performance.
 

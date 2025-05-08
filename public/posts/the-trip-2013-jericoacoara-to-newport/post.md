@@ -15,7 +15,7 @@ openAIMikesBlogFileId: file-HJdATZBttOPisAQgO0mNcDtR
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Jericoacoara to Newport](https://www.facebook.com/media/set/?set=a.10152177819916031.1073741862.593661030&type=1&l=aa502a700c). Each picture can be clicked to see a larger version and comment / like.**
 
-[![screenshot_01](/wp-content/uploads/2014/01/screenshot_011.png)](/wp-content/uploads/2014/01/screenshot_011.png)
+![screenshot_01](/wp-content/uploads/2014/01/screenshot_011.png)
 
 Sadly we had to leave Jericoacoara in the north of Brazil where we had spent the last 6 days but all was not lost at the next destination for us is arguably one of the best cities in South America, Rio de Janeiro.
 

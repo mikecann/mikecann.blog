@@ -28,7 +28,7 @@ The above is a demo of it in action, should give you an indication of what its a
 
 Once installed you can simply visit any LinkedIn Connection page and you will see a sidebar open on the right hand side of the screen.
 
-[![](./ss0.png)](./ss0.png)
+![](./ss0.png)
 
 You can add tags and notes to that Connection. If you want to hide the sidebar you just have to click the logo on the sidebar tab.
 
@@ -42,11 +42,11 @@ Well we didnt know but instead of building a bunch of complex controls we decide
 
 To enable syncing to a Google Sheet you must enable Premium Membership in the extension options.
 
-[![](./ss1.png)](./ss1.png)
+![](./ss1.png)
 
 Once enabled the user can then connect to Google and create a sheet to sync to.
 
-[![](./ss3.png)](./ss3.png)
+![](./ss3.png)
 
 Then thats it. From now on any new notes or tags will automatically be added to the Google Sheet. The user can then do with the data whatever they like.
 

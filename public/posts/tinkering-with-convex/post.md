@@ -70,7 +70,7 @@ export const send = mutation({
 
 Then 7 seconds later Convex has checked and built the function and generated an API for me to call it
 
-[![](./convex-build.png)](./convex-build.png)
+![](./convex-build.png)
 
 ```tsx
 export const NewMessageModal: React.FC<Props> = ({ isOpen, onClose }) => {
@@ -181,7 +181,7 @@ One issue that always frustrated me with the rigid table structure of relational
 
 For example in my demo app "ThreadX" a user can add new lists of messages.
 
-[![](./new-list-simple.png)](./new-list-simple.png)
+![](./new-list-simple.png)
 
 Okay, so if you were designing a schema for a DB how would you structure this?
 
@@ -193,7 +193,7 @@ Management comes to you and wants to allow the user to create different "kinds" 
 
 This is pretty simple to do in the UI, we just add a radio button that lets us select what "kind" of list we want to make.
 
-[![](./search-list.png)](./search-list.png)
+![](./search-list.png)
 
 This is really easy to model in Typescript simply as a union:
 
@@ -284,7 +284,7 @@ Because Convex also supports "optional" types as well as unions in its database 
 
 As you have already seen from my examples above, writing an API on the server that your client can talk to is as simple as simply exporting the return of `query` or `mutation`.
 
-[![](./api.png)](./api.png)
+![](./api.png)
 
 Convex automatically generates the 'API' for you so things stay nice and typesafe at compile time.
 
@@ -397,7 +397,7 @@ It appears that Convex are very aware of this problem however and have previousl
 
 Unfortunately right now there isnt a lot of docs on to best test a Convex system. They linked to a couple of blogs posts [when I asked about it](https://discord.com/channels/1019350475847499849/1133997021053857993/1133997021053857993) but I would love to have seen some dedicated docs on this topic.
 
-[![](./testing-docs.png)](./testing-docs.png)
+![](./testing-docs.png)
 
 ## No aggregate queries such as 'count'
 

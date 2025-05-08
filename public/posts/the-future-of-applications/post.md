@@ -39,7 +39,7 @@ As its most familiar to most people lets start with the UI.
 
 A UI is a User Interface. It is the thing that you interact with to use an app or program. Almost every app has one, think excel or discord:
 
-[![](./excel.png)](./excel.png)
+![](./excel.png)
 
 The only real examples I can think of that don't are things like CLIs (Command Line Interfaces), but even then its arguable if a CLI even if its just text based.
 
@@ -79,7 +79,7 @@ For example take a look at Microsoft's recent [release of Security Copilot](http
 
 The UI for Security Copilot is simply a chat prompt. The has a conversation using natural language to get the information they need.
 
-[![](./security-copilot.png)](./security-copilot.png)
+![](./security-copilot.png)
 
 The requested information is returned and decorated using Microsoft's own user interface controls and styling.
 
@@ -95,11 +95,11 @@ Sure there are going to be occasions where you just want to get the experience t
 
 We [at Gangbusters](https://www.gangbusters.io/) use the excellent tool [Metabase](https://www.metabase.com/) to query and visualize our data.
 
-[![](./metabase1.png)](./metabase1.png)
+![](./metabase1.png)
 
 Its a fantastic tool with a great interface for "asking questions" of your data and then visualizing the results.
 
-[![](./mb-questions.png)](./mb-questions.png)
+![](./mb-questions.png)
 
 But it could be better, what if you could just use natural language to ask those questions and instead of simply showing a predefined pie chart or graph, instead it could tailor the UI to whatever best suits the data. It could provide buttons and controls to allow you to manipulate the data.
 
@@ -121,7 +121,7 @@ In the age of generated UIs I think this will change. APIs no longer need to be 
 
 Perhaps the API will simply be a text prompt. You will in natural language simply ask for the data and then an AI that lives in your application will understand that, convert it into an SQL statement and then return the data to the UI.
 
-[![](./sql.png)](./sql.png)
+![](./sql.png)
 
 We can add "system" prompts to our AI to ensure that it doesnt return any private data or allow it to manipulate data in any undesirable ways.
 
@@ -143,7 +143,7 @@ In this world you no longer know how your data is stored as the AI has organized
 
 But we can take this a step further. What if your data isn't structured at all? This is a future suggested [by @DYtweetshere in January](https://twitter.com/DYtweetshere/status/1617471632909676544?s=20).
 
-[![](./backend.jpg)](./backend.jpg)
+![](./backend.jpg)
 
 Instead the the AI "backend" simply "remembers" all the previous prompts ever given and is able to infer structure and meaning from that data as new prompts come in.
 

@@ -52,7 +52,7 @@ Another issue was the large Docker image size, around 15 GB, causing problems on
 
 To reduce the Docker image size, I learned (thanks, ChatGPT!) that each "RUN" command creates a new layer. By rearranging and combining "RUN" commands, I reduced the image size from 15 GB to 5 GB.
 
-[![](./dockerimagesize.webp)](./dockerimagesize.webp)
+![](./dockerimagesize.webp)
 
 This experience taught me that I probably need to learn a bit more about Docker fundamentals.
 
@@ -60,7 +60,7 @@ This experience taught me that I probably need to learn a bit more about Docker 
 
 Another side quest was experimenting with "the new hotness" in web UI design.
 
-[![](./shadcnui.webp)](./shadcnui.webp)
+![](./shadcnui.webp)
 
 [Shadcn/ui](https://ui.shadcn.com/) is popular right now. The idea is to copy and paste component code directly into your project and modify it, creating your own component library.
 
@@ -72,7 +72,7 @@ I’m just not sold on Tailwind. I dislike its stringly typed nature and the nee
 
 Shadcn/ui was also disappointing. While the copy-paste nature is quick, the components lacked features I expected from a UI library. Modifying components that often looked like this is just simply confusing:
 
-[![](./tailwind.png)](./tailwind.png)
+![](./tailwind.png)
 
 # Issues and Future Work
 

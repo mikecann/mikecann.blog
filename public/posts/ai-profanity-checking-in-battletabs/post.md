@@ -19,11 +19,11 @@ Since I first wrote about it in the context of Game Development back [in Novembe
 
 Since the first version of the game (3+ years ago) we allowed users to name their player. This, we feel, gives a better sense of ownership and attachment to the game.
 
-[![](./signup.png)](./signup.png)
+![](./signup.png)
 
 A year or so after launch [we introduced the "Custom Fleets" feature](https://mikecann.blog/posts/battletabs-ships-and-fleets-update). As part of this feature we also allowed the user to name their fleet.
 
-[![](./fleet-name.png)](./fleet-name.png)
+![](./fleet-name.png)
 
 Again we feel this creates a stronger feel of attachment to the game and their choices within it.
 
@@ -31,7 +31,7 @@ Both of these features however opened up an annoying issue for us: profanity.
 
 We started to get reports of players being offended by the names of other players.
 
-[![](./early.png)](./early.png)
+![](./early.png)
 
 This was an issue as lots of children played BattleTabs so we felt like we had to do something about it.
 
@@ -39,7 +39,7 @@ This was an issue as lots of children played BattleTabs so we felt like we had t
 
 So.. we started to implement a "naughty words" list.. which grew.. and grew and grew..
 
-[![](./list.png)](./list.png)
+![](./list.png)
 
 No matter how many words or phrases we put on this list, users always seemed to find ways to be offensive.
 
@@ -51,11 +51,11 @@ So after many months of this we decided to enlist some help.
 
 We implemented a "Report Player" button on the player profile page.
 
-[![](./report.png)](./report.png)
+![](./report.png)
 
 This then sent a "Report" to a special channel in discord that only us and our Community Moderators could see.
 
-[![](./reports.png)](./reports.png)
+![](./reports.png)
 
 We then added special discord commands to our bot that allowed our moderators to rename the player and then potentially ban then from renaming themselves again (repeat offenders).
 
@@ -73,7 +73,7 @@ So we decided to do some quick experimentation and see if AI could detect profan
 
 We created a sample spreadsheet of a sample of profanities and non-profanities and hooked up ChatGPT plugin to Google Sheets and tried out a few prompts.
 
-[![](./sheet.png)](./sheet.png)
+![](./sheet.png)
 
 It definitely _seemed_ to work. Enough that it was worth going ahead and implementing it in the code.
 
@@ -103,13 +103,13 @@ We have quite a long prompt, this was based on recommendations from [awesome cha
 
 We also added the `the phrase is: '${phrase}'`, instead of simply providing the phrase because for some reason the AI would still get confused and try to respond to the phrase rather than the system message:
 
-[![](./whoops.png)](./whoops.png)
+![](./whoops.png)
 
 For example in the above you can see that if the player provides their name as "yes" then the AI responds with "Great, let's begin. What is the first word or phrase you would like me to check?" instead of the expected "not profane".
 
 Its not perfect and we are still refining it but it generally works really well and has caught thousands and thousands of profane player names and fleet names.
 
-[![](./results.png)](./results.png)
+![](./results.png)
 
 # Conclusion
 

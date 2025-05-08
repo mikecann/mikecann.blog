@@ -24,7 +24,7 @@ Generative Pre-trained Transformer 3 (GPT-3) GPT3 is a MASSIVE (175 billion para
 
 Seriously, if you haven't seen some of the things this AI can do stop reading this now and head over to https://beta.openai.com/examples and check them out, its pretty mind blowing.
 
-[![](./examples1.png)](./examples1.png)
+![](./examples1.png)
 
 The power and possibilities of this tech are endless..
 
@@ -46,13 +46,13 @@ Then I decided to set it a little challenge. One of the examples is called "TL;D
 
 So given this post from my blog: [Introducing BattleTabs](https://mikecann.blog/posts/introducing-battletabs), I wonder what kind of tl;dr it will give me..
 
-[![](./tldr1.png)](./tldr1.png)
+![](./tldr1.png)
 
 Ah that doesn't look right. Perhaps its struggling because I gave it Markdown rather than raw text?
 
 I decided to remove all the Markdown markup and run it again..
 
-[![](./tldr2.png)](./tldr2.png)
+![](./tldr2.png)
 
 Awesome! It now works and gives me a really nice summary :)
 
@@ -84,7 +84,7 @@ As "[Introducing BattleTabs](https://mikecann.blog/posts/introducing-battletabs)
 
 Lets see what GPT-3 comes up with:
 
-[![](./keywords1.png)](./keywords1.png)
+![](./keywords1.png)
 
 Wow! Impressive, sure its not quite as good as my manually crafted tags but still it worked really well.
 
@@ -208,7 +208,7 @@ Why does the result of that original experiment on the "Introducing BattleTabs" 
 
 I decided to run a quick text, take the Supreme Commander post and manually put it into the OpenAI Playground and see what I get:
 
-[![](./supcom1.png)](./supcom1.png)
+![](./supcom1.png)
 
 Well thats not perfect, I would expect it to mention something about wallpaper or perhaps creation, Photoshop or something but at least its not repeating and seems to be more relevant to the game.
 

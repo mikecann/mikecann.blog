@@ -36,9 +36,9 @@ Many parts of the game were changed in particular the UI has undergone a massive
 
 That last part is worth underscoring. BattleTabs works in both Landscape (on the web or tablets) and Portrait (on mobile). This was no small task but I think we have pulled it off and im pretty proud of it.
 
-[![](./layout_1.png)](./layout_1.png)
+![](./layout_1.png)
 
-[![](./layout_2.png)](./layout_2.png)
+![](./layout_2.png)
 
 Its also worth noting that, as often get asked this, the game is entirely Typescript using React for the UI and BabylonJS for the 3D rendering. I don't think there are too many games out there that have taken this path not sure if that is a good thing or not but it certainly sets us apart.
 

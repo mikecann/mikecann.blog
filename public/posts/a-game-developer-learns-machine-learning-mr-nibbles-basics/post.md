@@ -107,7 +107,7 @@ Now for the hard part. How do I represent the level? I cant really pass in the c
 
 Each level is constructed as tiles, so everything sits on a uniform grid. So I should only need to pass in the centre point of each tile in the level along with its type and hopefully that should be enough for the agent from.
 
-[![](./tile-xy-pos.jpg)](./tile-xy-pos.jpg)
+![](./tile-xy-pos.jpg)
 
 The next issue is; how do I deal with different level sizes? [This GitHub issue](https://github.com/Unity-Technologies/ml-agents/issues/139) mentions that the state size needs to be fixed (I believe this is to do with the way TensorFlow works under the hood).
 
@@ -115,7 +115,7 @@ This restriction is going to make things a little tricky because our levels are 
 
 For now my "just get it working" solution is just to make sure the levels are quite small then grab all the tiles in a certain bounds. If the tile is empty I set its type to "0" if its a solid tile its "1" and if its a spider its "2".
 
-[![](./tile-types-rendered.jpg)](./tile-types-rendered.jpg)
+![](./tile-types-rendered.jpg)
 
 When the level changes I grab the tiles from the tilemaps:
 
@@ -227,7 +227,7 @@ Im not sure if these are the correct values, I played around with a few differen
 
 The brain is setup like so:
 
-[![](./brain-setup.png)](./brain-setup.png)
+![](./brain-setup.png)
 
 We have defined the number of states: tiles (x,y,type) + agent state (x,y,isOnGround) + exit point (x,y) = 1505
 
@@ -269,7 +269,7 @@ normalize = False
 
 I kicked off training and fired up TensorBoard. After a few different attempts I felt like I had something that was training so I let it run for an hour or so:
 
-[![](./tensorboard.png)](./tensorboard.png)
+![](./tensorboard.png)
 
 It looks okay, we can see that the cumulative reward increases sharply and levels off and the episode length decreases as the agent learns to play the level.
 

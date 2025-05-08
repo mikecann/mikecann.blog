@@ -63,7 +63,7 @@ type User = {
 
 We now get a compile error on the server because you cannot assign a string to our potentially missing email address.
 
-[![](./ss1.png)](./ss1.png)
+![](./ss1.png)
 
 Our WelcomeMessage component on the client however will quite happily render an undefined as an empty string resulting in a bug in our UI. We luckily catch this before it goes to production however and a quick patch later and we are okay again:
 
@@ -165,11 +165,11 @@ So note above the type of `kind` property on those two objects is different. Its
 
 Now when we union the two users together in our `User` the type of the union of "kind" becomes "authenticated-user" OR "anonymous-user".
 
-[![](./ss2.png)](./ss2.png)
+![](./ss2.png)
 
 With this we now have a way to determine the correct type of user because if the `user` object has a kind of `"authenticated-user"` then it MUST has an email and if its an `"anonymous-user"` then it MUST NOT have one:
 
-[![](./ss3.png)](./ss3.png)
+![](./ss3.png)
 
 This "type narrowing" of the `user` is really cool but we can go a little further.
 
@@ -210,7 +210,7 @@ else user; // but what is the type of user here?
 
 So now we have handled every kind of user that we are going to get but the question is, what is the type of the user object that is left over from this?
 
-[![](./ss4.png)](./ss4.png)
+![](./ss4.png)
 
 A `never` type is a special type in Typescript and has some special abilities but one of the perhaps counter-intuitive abilities it has is that it can be used as a regular type so we can write a function like this that takes a never type:
 
@@ -231,7 +231,7 @@ else exhaustiveCheck(user); // we expect that the user should be "never"
 
 This means if we forget to handle a kind of user in our if-else then we will get a compile error:
 
-[![](./ss5.png)](./ss5.png)
+![](./ss5.png)
 
 By the way the same also works for switch statements too!
 

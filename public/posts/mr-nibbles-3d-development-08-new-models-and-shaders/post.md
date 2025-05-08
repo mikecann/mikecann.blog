@@ -23,6 +23,6 @@ Note this is just a first pass of the models so the animation quality should imp
 
 The pipes are a first pass too but im hoping to emulate plastic hamster tubes such as:
 
-[![21021_gallery](https://www.mikecann.blog/wp-content/uploads/2014/08/21021_gallery.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/21021_gallery.jpg)
+![21021_gallery](https://www.mikecann.blog/wp-content/uploads/2014/08/21021_gallery.jpg)
 
 I've still got quite a bit more work to do on the shaders but I think we are getting there, let me know what you think!

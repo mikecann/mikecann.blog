@@ -16,7 +16,7 @@ That love of the water and exhilaration from underwater adventures has carried t
 
 In 2013 during my [trip around South America](https://mikecann.blog/posts/the-trip-2013-tyrona-to-bucaramanga) I was fortunate enough to stumble across a poster for the sport / discipline of "Freediving".
 
-[![](https://mikecann.blog/wp-content/uploads/2013/09/photo-222.jpg)](https://mikecann.blog/wp-content/uploads/2013/09/photo-222.jpg)
+![](https://mikecann.blog/wp-content/uploads/2013/09/photo-222.jpg)
 
 I hadn't really encountered it before but I decided to give it a shot and I loved it! I trained for 3 days with [Carlos Correa](https://www.instagram.com/clubdelphinus/?hl=en) who showed me how to safely hit deeper depths and longer holds.
 

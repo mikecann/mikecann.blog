@@ -78,13 +78,13 @@ So I take the stage, I have 1 minute to explain my idea, I have practiced it a c
 >
 > Thankyou.
 
-[![](./whatIwant.png)](./whatIwant.png)
+![](./whatIwant.png)
 
 # Team formation
 
 With the pitch over I couldnt relax just yet. Now I had write a poster to attract others to join my team.
 
-[![](./theposter.jpg)](./theposter.jpg)
+![](./theposter.jpg)
 
 I tried to convey the basic business model in as simple a way as possible.
 
@@ -92,9 +92,9 @@ Well it seemed to work as I managed to gain 3 other members of the team. Ro, a f
 
 So we had one developer (me), one designer to make pretty pictures and two business people with domain experience. IMO this is the perfect team!
 
-[![](./ro.jpg)](./ro.jpg)
-[![](./andrew.jpg)](./andrew.jpg)
-[![](./alexis.jpg)](./alexis.jpg)
+![](./ro.jpg)
+![](./andrew.jpg)
+![](./alexis.jpg)
 
 # Planning
 
@@ -106,7 +106,7 @@ One thing that surprised me during this phase was that I had to re-pitch the ide
 
 I like to use Trello for organizing a project during hackathons. Well I actually like using Trello for organizing just about any project but I particularly like it for hackathons because its really easy to get started, everyone can collaborate images, files, videos, whatever at the same time and most importantly its free!
 
-[![](./trelloscreeny.png)](./trelloscreeny.png)
+![](./trelloscreeny.png)
 
 # Saturday
 
@@ -133,7 +133,7 @@ In the end settled on "Syndi.me", its not perfect as it could be spelt in a few 
 
 # Syndi.me website
 
-[![](./syndiwebsitescreeny.png)](./syndiwebsitescreeny.png)
+![](./syndiwebsitescreeny.png)
 
 By the end of Saturday evening we had finished the website: https://syndi.me and posted it to a number of blogger facebook groups and sub-reddits so hopefully over the course of the next day or so we will get a little bit of feedback to see if people are interested.
 
@@ -183,7 +183,7 @@ As I mentioned above I was really very impressed by the pitches this time. There
 
 I wasnt expecting to win anything considering the mess I had almost made of the pitch but to my great surprise when Chloie stood up and announced that the runner up prize went to Syndi.me I was totally taken aback. Wow we had come second! (well technically third as there was a join first prize this year)
 
-[![](./tshirt.jpg)](./tshirt.jpg)
+![](./tshirt.jpg)
 
 We went up on stage to applause, was given a back of goodies, shook hands with the judges then took our seats with massive smiles on our faces.
 

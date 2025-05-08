@@ -28,7 +28,7 @@ This is a series of multiple parts, if you liked this post then checkout the oth
 
 # The History
 
-[![](/wp-content/uploads/2007/09/Guess.jpg)](/wp-content/uploads/2007/09/Guess.jpg)
+![](/wp-content/uploads/2007/09/Guess.jpg)
 
 Before you think about where you want to go next sometimes it helps to think about where you have come from.
 
@@ -74,7 +74,7 @@ Im going to call this series of blog posts <strong>"A Game Developer Learns Mach
 
 # The Series Goal
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/05/MrNibblesForever_Gif_5.gif)](https://www.mikecann.blog/wp-content/uploads/2016/05/MrNibblesForever_Gif_5.gif)
+![](https://www.mikecann.blog/wp-content/uploads/2016/05/MrNibblesForever_Gif_5.gif)
 
 The goal for the series is I want to be able to write an AI that is able to play my game [Mr Nibbles Forever](http://epicshrimp.com/app/mrnibblesforever/) better than any other human player.
 

@@ -29,7 +29,7 @@ However, we justified the time investment because marketing is an area where non
 
 Speaking of which, we are taking [BattleTabs to the Perth Pixel Expo](https://www.pixelexpo.org.au/game-devs) this year, where we have a double-wide booth.
 
-[![](./expo.png)](./expo.png)
+![](./expo.png)
 
 I'm looking forward to showcasing the game in person to a larger audience, running tournaments, and giving out stickers and t-shirts!
 

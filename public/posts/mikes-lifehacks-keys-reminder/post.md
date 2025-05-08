@@ -26,19 +26,19 @@ Taking just the task of remember my lunch to work in the morning for example;
 
 I have tried writing on my hand:
 
-[![](./handnote.jpg)](./handnote.jpg)
+![](./handnote.jpg)
 
 But that assumes that I look at my hand before I head to work in the morning.
 
 I have tried writing a note on the fridge too:
 
-[![](./fridgenote.jpg)](./fridgenote.jpg)
+![](./fridgenote.jpg)
 
 But again that assumes that I look at the fridge before I leave for work.
 
 I have tried setting alarms and alerts on my phone:
 
-[![](./reminder.png)](./reminder.png)
+![](./reminder.png)
 
 But that assumes that I set the alarm for the correct time, and that I check my phone before leaving the house.
 
@@ -46,7 +46,7 @@ But that assumes that I set the alarm for the correct time, and that I check my 
 
 One day my [girlfriend Kelsie](https://www.abetterme.com.au/) came up with a simple but ingenious solution:
 
-[![](./keysonfridge.jpg)](./keysonfridge.jpg)
+![](./keysonfridge.jpg)
 
 Because I need the keys to lock the house before I leave in the morning I will always remember to take my keys.
 

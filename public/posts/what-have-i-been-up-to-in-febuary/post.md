@@ -29,7 +29,7 @@ When I returned to Australia in early Feb I ditched the snow for the heat of the
 
 So I have been out a number of times, whenever the wind will allow basically. Its been awesome, I cant believe I haven't been doing it sooner. As one fellow POM put it the other day; "Not kite surfing in WA its like going to Chamoix and not skiing"
 
-[![](./kiting.jpg)](./kiting.jpg)
+![](./kiting.jpg)
 
 To round off my favorite Australian past times, this month I have also been doing a fair bit of snorkeling / free diving around Perth and Busselton. I put tohether this short movie of one of my Busso dives:
 

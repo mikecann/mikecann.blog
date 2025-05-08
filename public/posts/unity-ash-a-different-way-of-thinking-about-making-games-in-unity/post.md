@@ -31,7 +31,7 @@ Checkout the Unity-Ash src: [https://github.com/mikecann/Unity-Ash](https://gith
 
 Unity is an Entity / Component game engine. This means that instead of having classes for object types such as Spaceship, Asteroid or Player which may extend some other classes you have Entities (Unity calls these GameObject's) which contain components that do the work.
 
-[![2015-10-30_09-48-45](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_09-48-45.png)](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_09-48-45.png)
+![2015-10-30_09-48-45](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_09-48-45.png)
 
 This is a much better structure for game design as it favours composition over inheritance which prevents the common pitfall of the "[God Object](https://en.wikipedia.org/wiki/God_object)" when developing a game. By separating the concerns into differnt components you can reuse functionality by attaching components to Entities / GameObjects rather than extending a base class and overriding required functionality.
 
@@ -333,7 +333,7 @@ There is one more piece I haven't mentioned yet. How is the Engine informed when
 
 All GameObjects that should be picked up by the Ash Engine require that an "Entity" component be added to the GameObject:
 
-[![2015-10-30_11-57-09](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_11-57-09.png)](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_11-57-09.png)
+![2015-10-30_11-57-09](https://www.mikecann.blog/wp-content/uploads/2015/10/2015-10-30_11-57-09.png)
 
 The "Entity" represents an Entity in Ash but in Unity is actually a MonoBehaviour. It tells the Engine when the GameObject it is created and destroyed. One difference from my previous work on Ash is that if you want to add or remove components from a GameObject at runtime you should do it via the Entity directly so that it can inform the Engine:
 

@@ -19,49 +19,49 @@ Its been a while since I wrote about my Chrome extension Trello Tasks but thats 
 
 Well its pretty much exactly the same as Trello Tasks in functionality, so ill copy the description [from that post](/posts/trello-tasks-a-new-chrome-extension/):
 
-[![](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)
+![](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)
 
 The TLDR; of Trello Tasks is: it augments Trello by turning Cards into “completable” tasks.
 
 One of the most common ways to use Trello is in the "ToDo" style. In this style you have three lists, ToDo, Doing and Done:
 
-[![2015-11-25_08-28-57](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-28-57.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-28-57.png)
+![2015-11-25_08-28-57](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-28-57.png)
 
 In this style, when you start work on something, you move it from the "ToDo" List to "Doing" List then when its complete you move it to "Done" List.
 
 This is all well and good but what if you use a different system of organisation such as arranging the items by category:
 
-[![2015-11-25_08-31-45](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-31-45.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-31-45.png)
+![2015-11-25_08-31-45](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-31-45.png)
 
 Now if you want to indicate that you have read a book or watched a movie you would have to either drag it into the "Done" list (and loose the categorisation) or create a "Done" list for each category. One other option is to "Archive" the card but doing this removes it from the list altogether.
 
-[![2015-11-25_08-36-50](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-36-50.gif)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-36-50.gif)
+![2015-11-25_08-36-50](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-36-50.gif)
 
 So I decided to try and solve this very particular but annoying problem. My solution is to add a checkbox to each card. Now cards can be marked "complete" and "uncomplete" by simply checking the checkbox.
 
-[![2015-11-25_08-41-18](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-41-18.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-41-18.png)
+![2015-11-25_08-41-18](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-41-18.png)
 
 The extension works by piggybacking on Trello's comments system. So each time you complete or uncomplete a task the extension adds a comment to the card.
 
-[![2015-11-25_08-43-25](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-43-25.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-43-25.png)
+![2015-11-25_08-43-25](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-43-25.png)
 
 This means that in a multi-user board you can tell who completed or uncompleted a task and syncing "just works":
 
-[![2015-11-25_08-47-32](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-47-32.gif)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-47-32.gif)
+![2015-11-25_08-47-32](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-47-32.gif)
 
 # Whats different?
 
 Well apart from 99% of the source code being different I changed the browser action to be clearer:
 
-[![](./browser-action.png)](./browser-action.png)
+![](./browser-action.png)
 
 I also upgraded the options significantly in anticipation of adding a bunch more settings in here:
 
-[![](./general-options.png)](./general-options.png)
+![](./general-options.png)
 
 I also gave the logging section an overhaul so you can see whats being logged and crucially download the log to send to me for analysis:
 
-[![](./logging-options.png)](./logging-options.png)
+![](./logging-options.png)
 
 Under the covers everything is syncing to the chrome cloud store so it should work across browsers without any private servers or privacy issues to me.
 
@@ -89,7 +89,7 @@ Anyway you can check it out here: [https://github.com/mikecann/tasks-for-trello]
 
 So I decided this time around to use Trello itself as the hub for the project.
 
-[![](./support-ss.png)](./support-ss.png)
+![](./support-ss.png)
 
 People can leave comments, suggestions and error reports on that board which I will receive notifications for then update the board. Its a quick and simple way of managing the project.
 

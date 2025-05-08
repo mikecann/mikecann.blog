@@ -37,7 +37,7 @@ So when I heard about [Cloudflare's Durable Objects](https://developers.cloudfla
 
 Because a single server / Durable Object can only support a limited number of connections was I needed was a way to automatically "fan-out" incoming connections to "children" automatically so that each server managed only a few thousand connections while still able to communicate with the others in the Group.
 
-[![](./fan-out.png)](./fan-out.png)
+![](./fan-out.png)
 
 Fortunately thats when I stumbled across [Cloudflare's Durable Object Groups](https://github.com/cloudflare/dog) (DOG). This is an experimental project that does just that. It takes incoming connections and fans them out to multiple "Replicas", scaling up or down the number of replicas as a needed.
 
@@ -67,7 +67,7 @@ If this works as advertised then it could indeed make some DB access operations 
 
 I first heard about [SolidJS](https://www.solidjs.com/) a number of years ago and remember being impressed at its tiny file size and its [supposedly awesome performance](https://levelup.gitconnected.com/a-solid-realworld-demo-comparison-8c3363448fd8).
 
-[![](./solidjs.png)](./solidjs.png)
+![](./solidjs.png)
 
 At the time however I as perfectly comfortable with React and felt like its performance was just fine on my machine. Having worked on [BattleTabs](https://battletabs.com/), a large React app, for some time now I am feeling the pain of slow updates and large initial page load. Many of our users run on low-performance devices and thus experience this pain even more.
 
@@ -101,7 +101,7 @@ Its a very interesting technology and I want to give it a try soon!
 
 # Joshie
 
-[![](./joshie.jpg)](./joshie.jpg)
+![](./joshie.jpg)
 
 Finally this one isnt a tech project at all but still something that I hold dear to my heart. This little man is growing up so fast and I am incredibly conscious about not letting these precious moments pass me by while I have my head stuck too deep into one of my projects.
 

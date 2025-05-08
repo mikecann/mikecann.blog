@@ -20,7 +20,7 @@ For some time now I have done all my build-scripting on Javascript / Typescript 
 
 For example checkout one of my other projects:
 
-[![](./packagejson-scripts.png)](./packagejson-scripts.png)
+![](./packagejson-scripts.png)
 
 And this is just a fairly simple example that doesnt include multiple-packages in one solution.
 
@@ -28,7 +28,7 @@ Because all the scripts are contained in json you are very restricted with what 
 
 # The Solution
 
-[![](./nps-ss1.png)](./nps-ss1.png)
+![](./nps-ss1.png)
 
 Enter Node Package Scripts (NPS). It takes all those scripts out of package.json and puts them into javascript but still leaves it declarative, like json, so its easy to understand whats going on. For example here are the scripts for the [Markd2 extension](/markd/portfolio/markd-2-total-re-write-using-react-mobx-state-tree-and-parse-server/):
 
@@ -128,7 +128,7 @@ So how do you run those commands? Well for example say you want to run the tests
 
 You can get information on the your available commands with `npm start help`
 
-[![](./nps-help.png)](./nps-help.png)
+![](./nps-help.png)
 
 You can annotate those commands with some helpful text such as:
 
@@ -152,7 +152,7 @@ module.exports = {
 
 will result in:
 
-[![](./nps-help-description.png)](./nps-help-description.png)
+![](./nps-help-description.png)
 
 Sweet!
 
@@ -160,7 +160,7 @@ The only missing bit of the puzzle was what happens when you are working in a mu
 
 Just as a reminder the folder structure for the project looks like:
 
-[![](./dir-structure.png)](./dir-structure.png)
+![](./dir-structure.png)
 
 Ideally what I want to be able to do is from the top level directory type `npm start extension.build.staging` which will then run the `build.staging` command within the context of the "extension" package.
 
@@ -168,11 +168,11 @@ Unfortunately NPS didnt have this ability out of the box so I decided to have a 
 
 So after a little bit of back-and-forth (this was the most strict OSS project I had ever committed too, but thats a good thing) I was able to get my feature merged in and I was even added as a contributor of the project:
 
-[![](./me-contributor.png)](./me-contributor.png)
+![](./me-contributor.png)
 
 So now with my addition you can include other NPS scripts within yours and thus achieve what I wanted:
 
-[![](./imported-nps.png)](./imported-nps.png)
+![](./imported-nps.png)
 
 # Conclusion
 

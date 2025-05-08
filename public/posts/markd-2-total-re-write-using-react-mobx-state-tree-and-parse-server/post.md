@@ -135,7 +135,7 @@ I know Parse very well having used it before on many projects. With Parse you ge
 
 One of the other benefits of using Parse is you get a pre-built dashboard on your database which I find incredibly helpful:
 
-[![](./dashboard-ss.png)](./dashboard-ss.png)
+![](./dashboard-ss.png)
 
 Sure, you could say that editing databases manually is a bad idea but during development it can be quite the godsend.
 
@@ -180,7 +180,7 @@ Unfortunately I suffered from this yet again, spending weeks just trying to get 
 
 One solution that has evolved over the yeas is [lerna](https://lernajs.io/). Lerna attempts to manage the dependencies between packages automatically. The idea is that you structure your projects inside the solution directory such as:
 
-[![](./lerna-structure.png)](./lerna-structure.png)
+![](./lerna-structure.png)
 
 Lerna then manages the dependencies between the packages by using symlinks (`npm link`). This makes me shudder every time. I cant believe this is 2017 and we are using symlinks for dependency management 😢
 

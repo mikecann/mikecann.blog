@@ -83,7 +83,7 @@ private DeathThroesSystem \_system;
 
 I wrote a little helper that adds an entity to the engine with the necessary components. In the future we could use reflection to looup the types on the Nodeless system, but for now its enough to satisfy the test:
 
-[![2015-11-02_17-28-19](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-02_17-28-19.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-02_17-28-19.png)
+![2015-11-02_17-28-19](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-02_17-28-19.png)
 
 Next we want to check that after update the countdown is decremented.
 

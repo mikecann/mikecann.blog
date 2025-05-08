@@ -51,13 +51,13 @@ The meeting went well, people enjoyed playing the game. It gave me a few ideas f
 
 Oh that reminds me, we also have a new icon for the game designed by Woody:
 
-[![icon1024](https://www.mikecann.blog/wp-content/uploads/2015/08/icon1024.png)](https://www.mikecann.blog/wp-content/uploads/2015/08/icon1024.png)
+![icon1024](https://www.mikecann.blog/wp-content/uploads/2015/08/icon1024.png)
 
 It looks great in my opinion, he did a stellar job there.
 
 We also have a new company logo for Epic Shrimp:
 
-[![epic shrimp logo](https://www.mikecann.blog/wp-content/uploads/2015/08/epic-shrimp-logo.png)](https://www.mikecann.blog/wp-content/uploads/2015/08/epic-shrimp-logo.png)
+![epic shrimp logo](https://www.mikecann.blog/wp-content/uploads/2015/08/epic-shrimp-logo.png)
 
 This one is by my friend and ex-colleague Alan Mac, great work there Alan, even if you did manage to sneak in your little trademark in there (points to anyone who notices).
 

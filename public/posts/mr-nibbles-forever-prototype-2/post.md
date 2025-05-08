@@ -17,7 +17,7 @@ I had a few people play the first Prototype last week and the overwhelming respo
 
 I achieved the difficulty change by ranking each chunk by difficulty then selecting an appropriate one randomly as the player moves along.
 
-[![2015-01-24_17-26-15](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-24_17-26-15.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-24_17-26-15.png)
+![2015-01-24_17-26-15](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-24_17-26-15.png)
 
 As can be seen in the video there are now 3 themes that the player progresses through as they go along. This mirrors the 3 stages that can be found in the original game:
 
@@ -31,11 +31,11 @@ Because the game now features three distinct themes I needed to upgrade my chunk
 
 Building tilesets is now a breeze thanks to custom inspectors and other editor tools.
 
-[![2015-01-26_07-52-03](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-52-03.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-52-03.png)
+![2015-01-26_07-52-03](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-52-03.png)
 
 I have a long list of features building up on [Trello](https://trello.com/b/Ic11WQzF/mr-nibbles-forever):
 
-[![2015-01-26_07-46-23](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-46-23.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-46-23.png)
+![2015-01-26_07-46-23](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-26_07-46-23.png)
 
 But this week I hope to have most of the chunks complete and have started or finished work on the meta-game. What is the meta-game? Well find out next week ;)
 

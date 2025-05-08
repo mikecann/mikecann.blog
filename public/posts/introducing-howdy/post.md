@@ -28,7 +28,7 @@ Howdy is a service for sending short personalized video messages to one another.
 
 One of the key concepts for the service was that the messages should be personal and so shouldn't be pre-recorded, that is they must be recorded on the spot and must be short (no more than 1 minute in length).
 
-[![](./record-60.png)](./record-60.png)
+![](./record-60.png)
 
 We were unsure if the idea was good enough to spend the time on development so we decided to run some ad tests. This is a process that Brandon knows a great deal about more than me but the general-jist is that you spend a small amount of money on ads that point to a targeted landing page. You then analyse the resulting analytics to determine if the pitch is good and which target market might respond the best.
 
@@ -40,13 +40,13 @@ Although we tested the idea with ads we knew that we didn't want to spend too lo
 
 So I chose my preferred weapons of choice at the moment for rapid iteration; a Typescript-React frontend hosted on Netlify with Postgres-Node backend hosted on Heroku.
 
-[![](./heroku.png)](./heroku.png)
+![](./heroku.png)
 
 Development was swift and within a week or so I had a working prototype up on our "staging" server where we could send messages to each other.
 
 We decided that for this product we wanted to have payments in from the beginning. We chose Stripe as our payments platform and it took me a week or so to get that implemented into the app with tiered subscription levels. I hadn't used Stripe before so it took me longer than I would have liked but its a really nice API and platform so I think we will definitely use it again for other projects.
 
-[![](./sub.png)](./sub.png)
+![](./sub.png)
 
 We spent another week or two polishing, adding some extra features and making sure everything worked on mobile.
 
@@ -54,7 +54,7 @@ One of the trickiest hurdles was (and usually is these days) the lagging support
 
 Unfortunately WebRTC isnt supported on Safari yet so as a workaround we implemented a input-file-picker for video on iOS. This works okay and doesnt allow users to select a pre-recorded video from their camera-roll thankfully but it would be nice if we had a unified video recording system.
 
-[![](./ios.png)](./ios.png)
+![](./ios.png)
 
 # Conclusion
 

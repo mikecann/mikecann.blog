@@ -24,7 +24,7 @@ If you follow my [public Trello development board](https://trello.com/b/Ic11WQzF
 
 In total there is something like 70 hours worth of my time that has gone into this release:
 
-[![2015-06-18_15-21-12](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-21-12.png)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-21-12.png)
+![2015-06-18_15-21-12](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-21-12.png)
 
 Although 70 hours doesnt sound like all that much I think that this release contains more changes than any other. As hinted in the last release and other posts, I now have an artist on the project, [Woody Stables](https://twitter.com/woodystables) who has helped totally transform the in-game backgrounds, the outfits, the effects and many other aspects of the game:
 

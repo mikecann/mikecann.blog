@@ -34,7 +34,7 @@ Some people were in teams already, some people worked together for a day job but
 
 After a few short speeches the participants were invited to stand up and pitch their idea. All in all there were about 20 pitches. Some sounded interesting, some sounded really wacky such as one team wanted to use the data to become evil-masterminds. One team even suggested that they were going to correlate the prizes against the data and see which prizes were the best to go for then work out and idea from there.
 
-[![CI_Fh1FUAAAv7yd.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Fh1FUAAAv7yd.jpg-large.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Fh1FUAAAv7yd.jpg-large.jpg)
+![CI_Fh1FUAAAv7yd.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Fh1FUAAAv7yd.jpg-large.jpg)
 
 After the pitches were over, we given 5 stickers to stick posters that had been hastily assembled by the pitchers. I think that the idea of this was to gauge the popularity of the project but im not sure exactly how that affected things in the end.
 
@@ -82,13 +82,13 @@ Nevertheless our presentation went okay, nothing too major went wrong (apart fro
 
 After all the presentations, the judges disappeared for 45 minutes while they deliberated, enough time to grab a beer, then the awards started.
 
-[![CJJboKPUkAE8Wnm.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CJJboKPUkAE8Wnm.jpg-large.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/CJJboKPUkAE8Wnm.jpg-large.jpg)
+![CJJboKPUkAE8Wnm.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CJJboKPUkAE8Wnm.jpg-large.jpg)
 
 There were \$35,000 up for grabs in prizes over several different categories. You were supposed to elect which prizes you were going for on your project page, some teams chose to select most if not all of the prizes. [We went for 16 of the prizes](https://hackerspace.govhack.org/content/should-i-drive).
 
 In the end we ended up winning 2 of them including the single largest prize: [Main Roads Keep WA Moving Prize](https://hackerspace.govhack.org/prize_entries/main-roads-keep-wa-moving-prize) of $2,500\. In total we won $3,000 between us which was great, not the best but not the worst.
 
-[![2015-07-06_19-07-28](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-06_19-07-28.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-06_19-07-28.jpg)
+![2015-07-06_19-07-28](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-06_19-07-28.jpg)
 
 For me tho, it wasn't about the prizes (in fact I didn't even know there was any cash prizes when I entered), it was more about getting out there and meeting other like-minded people who wanted to work together and build something new and cool and perhaps learn a thing or two about the WA data along the way.
 

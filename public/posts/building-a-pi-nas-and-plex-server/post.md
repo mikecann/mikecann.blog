@@ -32,11 +32,11 @@ After a bunch of research and experimentation (which I will not bore you with) I
 
 [A video](https://www.youtube.com/watch?v=FYkdPyCt5FU) by the rather nerdy but very helpful [Techno Dad Life](https://www.youtube.com/channel/UCX2Vhc0LIzSS9aMzhGFZ7PA) got me going with UnionFS which merges disks together so they appear as one large file system and SnapRAID which gives me a simple way to provide redundancy to the NAS.
 
-[![](./filesystems.png)](./filesystems.png)
+![](./filesystems.png)
 
-[![](./unionfs.png)](./unionfs.png)
+![](./unionfs.png)
 
-[![](./snapraid.png)](./snapraid.png)
+![](./snapraid.png)
 
 The final step was to install Plex. I read a bunch of guides to installing it using OMV but they all seemed overly complicated involving Docker or other things. I found that [simply installing it natively using SSH](https://pimylifeup.com/raspberry-pi-plex-server/) worked just great.
 
@@ -50,7 +50,7 @@ Its like software but harder.
 
 Well I had the Pi.. so thats a good start. I also had two 2tb Toshiba Canivo drives that were sat around from my adventures around Australia a few years back.
 
-[![](./2tb-toshiba.jpg)](./2tb-toshiba.jpg)
+![](./2tb-toshiba.jpg)
 
 The Pi has 4 USB ports on it so I thought I could just hook up these two drives, job done. Oh no, that would be far too easy.. It turns out that the Pi, unlike a normal desktop PC, cannot deliver the full power required by a USB when multiple devices are plugged in. The result is one or both of the drives making a horrible clicking sound as it dies of power-starvation.
 
@@ -60,29 +60,29 @@ It turns out however, powered USB hubs are rather expensive at the moment for so
 
 I'll spare you the evening spent digging through various shopping sites looking for deals and instead show you what I ended up with:
 
-[![](./usbhub.jpg)](./usbhub.jpg)
+![](./usbhub.jpg)
 https://www.amazon.com.au/gp/product/B08222CYSS
 
 This badboy cost only $19.99 and has been great. While I was there I also picked up this for $36:
 
-[![](./usbdock.jpg)](./usbdock.jpg)
+![](./usbdock.jpg)
 https://www.amazon.com.au/dp/B07C9RSZFM
 
 And a couple of these for $15 each:
 
-[![](./usbadaptor.jpg)](./usbadaptor.jpg)
+![](./usbadaptor.jpg)
 https://www.amazon.com.au/gp/product/B011M8YACM/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1
 
 I now had a way to get my 2 x portable drives, 2 x 2.5" drives and 2 x 3.5" drives all to work in the Pi.
 
 I just needed a container for them all. I don't have a 3D printer to make one but thats okay because my Targét game is pretty strong, so I snagged this beaut for $8
 
-[![](./container.jpg)](./container.jpg)
+![](./container.jpg)
 https://www.target.com.au/p/rattan-plastic-storage-basket/60093127
 
 It was just a matter of then zip-tying it all together in some semblance of order.
 
-[![](./pic1.jpg)](./pic1.jpg) [![](./pic2.jpg)](./pic2.jpg) [![](./pic3.jpg)](./pic3.jpg) [![](./pic4.jpg)](./pic4.jpg)
+![](./pic1.jpg) ![](./pic2.jpg) ![](./pic3.jpg) ![](./pic4.jpg)
 
 It actually came out pretty nice and neat, pop the lid on and then shove it in the corner and forget about it, exactly what a NAS should be.
 
@@ -97,6 +97,6 @@ So how did I do against my goals?
 - **Low cost**, the total I calculated (excluding the drives) was $174 AUD which is quite a bit more that I would have liked but its still far cheaper than a [Drobo](https://www.drobo.com/), even a second hand one.
 - **Low Power**, yep it only uses 10w, about 0.25 kWh per day at 30 Aussie cents per kWh that works out to be about $27 per year which is acceptable and much less than what it would be if I left my PC on all the time.
 
-[![](./power.PNG)](./power.PNG)
+![](./power.PNG)
 
 So all in all im happy with how it all went tho there are probably better ways of doing everything, please let me know in the comments if you have done something similar or have ideas for improvements!

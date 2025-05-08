@@ -21,11 +21,11 @@ For ages now there has been a large missing feature in the game one so obvious i
 
 Sure we have had a rudimentary sort of progression via preset fleet unlocks but this was rather crude and players tend to whip through that part of the game:
 
-[![](./preset-fleet-unlocks.png)](./preset-fleet-unlocks.png)
+![](./preset-fleet-unlocks.png)
 
 The new update however brings a whole new dimension to progression in the game. Players now earn XP for various actions during a battle which contributes to their season level.
 
-[![](./game-over-modal.png)](./game-over-modal.png)
+![](./game-over-modal.png)
 
 # Season
 
@@ -33,17 +33,17 @@ Seasons are a feature common to Free-2-Play games and exist as a mechanism to ke
 
 The XP earned contributes to their season level:
 
-[![](./progress-scroller-1.png)](./progress-scroller-1.png)
+![](./progress-scroller-1.png)
 
 Each level the player can claim various rewards:
 
-[![](./reward1.png)](./reward1.png)
+![](./reward1.png)
 
 There a lots of different kinds of rewards: Avatar Cosmetics, Custom Emotes, Ship Blueprints, Gold, Gems etc
 
 There are 60 levels and two "tiers" of rewards. Theres the free tier, that anyone can claim rewards from, then there is the premium "Battle Pass" tier:
 
-[![](./bp-modal.png)](./bp-modal.png)
+![](./bp-modal.png)
 
 The Battle Pass costs 2000 gold to unlock (1000 with Battle Club, our subscription product) and gives the player 2x XP rewards and substantially better rewards. Battle Pass also resets at the end of each season.
 
@@ -51,7 +51,7 @@ The player can grind enough gold during the free tier to unlock the Battle Pass 
 
 # Shop
 
-[![](./shop1.png)](./shop1.png)
+![](./shop1.png)
 
 Another common Free-2-Play mechanic that this update brings is In App Purchases (IAP) via the Shop. The player can spend fiat on in game currency in the form of Gold and Gems.
 
@@ -63,7 +63,7 @@ Ships are the core game play feature for the game and can be thought of as cards
 
 This update brings the concept of "Ship Blueprints" to game.
 
-[![](./blueprint-states.jpg)](./blueprint-states.jpg)
+![](./blueprint-states.jpg)
 
 The player can "discover" blueprints during the season then rent the ship for a few days for some gold. Once rented the ship can be used in a fleet. If it expires it can no longer be used and will have to be rented again. If the player get tired of renting a ship they can alternatively buy it outright with some gems. Once bought / owned they will never have to rent it again.
 
@@ -82,7 +82,7 @@ The key is; once the season is over this content will no longer be unlockable. T
 
 # Gangbusters
 
-[![](./logo_full.png)](./logo_full.png)
+![](./logo_full.png)
 
 This update brings a name-change for the company.
 

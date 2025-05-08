@@ -24,17 +24,17 @@ In the above video I also demonstrate another thing I worked on, shadows. Unfort
 
 Its surprisingly simple, I just cast a ray in the direction of gravity from Mr Nibbles until it collides with a tile, when that happens I place a "shadow" sprite:
 
-[![screenshot_011](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_011.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_011.png)
+![screenshot_011](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_011.png)
 
 The further the distance from ray to collision the lower the alpha transparency value to indicate a fainter shadow. Its surprising how much more realism this instantly adds to the game.
 
 This method does however have its problems. Such as when Mr Nibbles overhangs a cliff:
 
-[![screenshot_012](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_012.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_012.png)
+![screenshot_012](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_012.png)
 
 You can see the problem in the screenshot above, Mr Nibble's shadow should wrap around the tile rather than hang in the air. One solution to this which I experimented with is to use projectors. Projectors are like light sources but in reverse, they cast shadows onto the scene. By placing one so that it followed Mr Nibbles and pointed in the direction of gravity you could create the effect of a shadow:
 
-[![screenshot_013](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_013.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_013.png)
+![screenshot_013](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_013.png)
 
 You can see that the shadow no longer overhangs the tile as it is cast directly when rendering rather than being a separate game object. Unfortunately it turns out that for this to work you cannot cast onto Transparent textures, and as all the tiles in Mr Nibbles must support transparency so that they can fade out when Mr Nibbles obscures them this technique could work.
 

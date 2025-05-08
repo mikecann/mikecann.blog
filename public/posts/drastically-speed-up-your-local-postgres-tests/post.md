@@ -25,11 +25,11 @@ For our game [BattleTabs](http://battletabs.com/) run a custom sockets based API
 
 The issue is that the tests were taking quite a while to run:
 
-[![](./before.png)](./before.png)
+![](./before.png)
 
 I narrowed the issue down to where most of the time was being spent:
 
-[![](./trunc-before.png)](./trunc-before.png)
+![](./trunc-before.png)
 
 We must truncate the database before each test runs so that there is no state from the previous test that can affect the results. The problem is that this truncate seems to be taking an inordinate amount of time.
 
@@ -39,7 +39,7 @@ After some googling I came across [this post](https://dev.to/thejessleigh/speed-
 
 So I set `fsync=false` in my postgres config and restarted my docker container and..
 
-[![](./trunc-after.png)](./trunc-after.png)
+![](./trunc-after.png)
 
 Wow! Thats a 15x speedup! Incredible.
 

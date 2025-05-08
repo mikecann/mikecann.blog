@@ -102,7 +102,7 @@ Unlike MagicMirror<sup>2</sup> my widgets are much much simpler to develop as th
 
 [Checkout some of the widgets in the repo](https://github.com/mikecann/mikes-mirror/tree/master/src/widgets) for examples of how simple and intuitive they are to develop.
 
-[![](./general-ss.jpg)](./general-ss.jpg)
+![](./general-ss.jpg)
 
 A couple of examples of plugins are:
 
@@ -124,7 +124,7 @@ The facial_recognition library in turn relies upon Dlib which means that its a b
 
 For now im using a modified version of [facerec_from_webcam_faster.py](https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py) example that comes with the library. I modified it to read from a directory of faces rather than hardcoding them. I also modified it to report results as JSON to stdout which then is read by the main process in the Electron app.
 
-[![](./webcam-active.png)](./webcam-active.png)
+![](./webcam-active.png)
 
 Currently the facial recognition only trains on a single example of peoples faces. This means that its not as accurate as it could be particularly under different lighting conditions.
 
@@ -140,7 +140,7 @@ Like the Facial Recognition, Sonus runs in a separate process that is spawned by
 
 Snowboy continually listens in a background for a given hotword (mine is "smart mirror"). If it detects the hotword then Sonus starts streaming the recording to the Google Speech-toText API which analyses it and returns partial a partial match as you speak and then the final match once you have finished speaking.
 
-[![](./voice-commands.png)](./voice-commands.png)
+![](./voice-commands.png)
 
 This combined local-only Snowboy plus cloud based recognition power of Google means that I am able to keep costs and processing requirements down for the mirror.
 
@@ -213,7 +213,7 @@ Some random things I would love to add:
 - Breaking news reports when something major happens in the world
 - .. anything else I can dream up!
 
-[![](./cute-cat-ss.jpg)](./cute-cat-ss.jpg)
+![](./cute-cat-ss.jpg)
 
 # Conclusion
 

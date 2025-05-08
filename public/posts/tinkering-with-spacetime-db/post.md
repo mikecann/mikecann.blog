@@ -23,7 +23,7 @@ It grabbed my attention earlier this year as it was focused on game development 
 
 The basic concept is illustrated in this rather rambling (and a little confusing) blog post: https://spacetimedb.com/blog/databases-and-data-oriented-design
 
-[![](./spacetime-blog-post.png)](./spacetime-blog-post.png)
+![](./spacetime-blog-post.png)
 
 In summary they are aiming to create a realtime database that is a bit like ECS, but as (they argue) ECS can be thought of as a subset of a more traditional relational model, SpacetimeDB can be thought more of as a relational database.
 
@@ -53,13 +53,13 @@ You can develop the server-side component of your application in one of two lang
 
 After copy-pasting the code (no ready-to-go example project unfortunately) from the [C# Quickstart](https://spacetimedb.com/docs/modules/c-sharp/quickstart) and running the `publish` command that pushes the built code to the locally running Spacetime platform I was greeted with the following error:
 
-[![](./publish-error.png)](./publish-error.png)
+![](./publish-error.png)
 
 Unfortunately I couldnt work out what this meant so I headed over to [their discord](https://discord.gg/SpacetimeDB) and posted about my issue. After a bit of back and forth of not fixing it it was suggested that I wait a few days for someone to look at it.
 
 Sure enough a few days later they had [issued a patch](https://discord.com/channels/1037340874172014652/1134597033613869207/1183780061686546493) and the publish command now worked.
 
-[![](./patched.png)](./patched.png)
+![](./patched.png)
 
 Okay so now with the C# project in theory published I attempted to test it using their CLI:
 
@@ -69,7 +69,7 @@ spacetime call spacetime-sandbox send_message '["Hello, World!"]'
 
 Unfortunately I now got a different error.
 
-[![](./http-error.png)](./http-error.png)
+![](./http-error.png)
 
 I decided to move on, hopefully this was just a CLI issue I thought.
 
@@ -85,7 +85,7 @@ The code required a lot of massaging but I think I had it all right, compiler is
 
 I was now greeted with a new set of runtime errors in the console:
 
-[![](./ts-errors.png)](./ts-errors.png)
+![](./ts-errors.png)
 
 Sigh. I suspect this might be something to do with the HTTP issue that I saw above.
 
@@ -99,11 +99,11 @@ In fairness when I reported this to discord user "⚙ 3Blave" very quickly updat
 
 So now you have to login to the spacetime testnet by calling `spacetime identity set-email <your-identity> <your-email>` but this command needs your `identity` which you get from `spacetime identity list` which again errors with:
 
-[![](./identity.png)](./identity.png)
+![](./identity.png)
 
 When I try to manually get my identity from the spacetime website (https://spacetimedb.com/login) I am greeted by a box that asks for my login email but nowhere to "signup" which is really strange. And when I attempt to put in my email I get another error.
 
-[![](./signup.png)](./signup.png)
+![](./signup.png)
 
 Quite frankly I was out of patience at this point and decided to end the tinkering here.
 
@@ -125,7 +125,7 @@ Without any docs on this im not sure exactly how this would work in a real game 
 
 I could find no mention of how DB migrations are supposed to work in their docs (despite their AI docs search assuring me there are 12 references)
 
-[![](./search.png)](./search.png)
+![](./search.png)
 
 This to me is one of the MAJOR benefits of the way convex works you can very easily migrate your database by [changing the schema definition](https://docs.convex.dev/database/schemas) which then validates every single document in the the DB. This is a far more flexible way of structuring your tables than traditional relational databases but still ensuring the strong relational structure and type-safety enforced by your schema.
 

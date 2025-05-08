@@ -51,13 +51,13 @@ Sweet! Exactly what I was looking for. A clear and concise next step with some g
 
 I created a new Github Repo for this post: https://github.com/mikecann/MrNibblesML then downloaded the latest ml-agents source code from Unity's github: https://github.com/Unity-Technologies/ml-agents/releases (version 0.2 beta at the time of writing).
 
-[![](./ml-agents-src.png)](./ml-agents-src.png)
+![](./ml-agents-src.png)
 
 I then stripped out the examples projects and other things that I didn't need.
 
 Then I downloaded and imported the TensorFlowSharp library project from https://s3.amazonaws.com/unity-agents/0.2/TFSharpPlugin.unitypackage.
 
-[![](./importing-tf-sharp.png)](./importing-tf-sharp.png)
+![](./importing-tf-sharp.png)
 
 Now I now have a clean base to build my experiments on top of.
 
@@ -69,7 +69,7 @@ After watching the excellent video from Unity 3D College it got me thinking how 
 
 So I created a new scene like so:
 
-[![](./the-scene-setup.png)](./the-scene-setup.png)
+![](./the-scene-setup.png)
 
 Mr Nibbles (the agent) must try to get to the nibble, he can only move left or right and if he touches a spider he dies. When he "wins" by touching the nibble or "looses" by touching the spider the scene resets and the nibble is placed at a new random location between the two spiders.
 
@@ -95,7 +95,7 @@ namespace MrNibbles1D
 
 The Academy isnt used for this example so stays empty, but we may use it in future projects.
 
-[![](./the-academy.png)](./the-academy.png)
+![](./the-academy.png)
 
 I changed the `Width` and `Height` properties in the `Training Configuration` section because I like to see what's going on during training tho this could perhaps hurt training performance (something to tinker with later).
 
@@ -103,13 +103,13 @@ I changed the `Width` and `Height` properties in the `Training Configuration` se
 
 The "Brain" is the object that communicates with the the Academy and is the.. umm.. brains of your scene.
 
-[![](./basic-brain.png)](./basic-brain.png)
+![](./basic-brain.png)
 
 For now I have just left the default settings, but will be coming back to this soon.
 
 # The Nibble
 
-[![](./nibble.png)](./nibble.png)
+![](./nibble.png)
 
 The nibble is the target that Mr Nibbles is going to be trying to collect.
 
@@ -134,15 +134,15 @@ namespace MrNibbles1D
 
 When collected the agent restarts and at the same time we re-spawn the nibble at a random position between two points.
 
-[![](./nibble-spawning.png)](./nibble-spawning.png)
+![](./nibble-spawning.png)
 
 # Spider
 
-[![](./spider.png)](./spider.png)
+![](./spider.png)
 
 The spiders are the things that can kill Mr Nibbles so he should avoid them. For this simple example however they just represent the boundry for the world, and thus if the agent "touches" them by leaving the boundary that counts as a death to Mr Nibbles.
 
-[![](./the-spiders.png)](./the-spiders.png)
+![](./the-spiders.png)
 
 # The Agent
 
@@ -284,7 +284,7 @@ namespace MrNibbles1D
 
 Here we pass in the spider's positions which represent the maximum and minimum bounds for our agent.
 
-[![](./the-boundries.png)](./the-boundries.png)
+![](./the-boundries.png)
 
 So each tick `OutOfBounds()` is checked and if true we set the reward to `reward = -1` and `done = true`.
 
@@ -396,13 +396,13 @@ namespace MrNibbles1D
 }
 ```
 
-[![](./the-hud.png)](./the-hud.png)
+![](./the-hud.png)
 
 # Playmode
 
 We are finally ready to enter playmode and test out our scene prior to training. First we need to make sure the `Brain` type is set to `Player` and we have mapped the "Player Actions".
 
-[![](./brain-player.png)](./brain-player.png)
+![](./brain-player.png)
 
 Now lets press play and we can use the arrow keys on our keyboard to control Mr Nibbles
 
@@ -453,7 +453,7 @@ Okay so far so good, we have a working scene that is controllable by a human, no
 
 First we set the brain to "External" mode, this means that the agent will no longer be controlled by the player and will instead be controlled by an external source (python).
 
-[![](./external-brain.png)](./external-brain.png)
+![](./external-brain.png)
 
 Now we just need to build our scene exe (also known as environment) and save it to the `/python/` directory.
 
@@ -470,7 +470,7 @@ jupyter notebook
 
 And open the PPO.ipynb notebook.
 
-[![](./ppo-notebook.png)](./ppo-notebook.png)
+![](./ppo-notebook.png)
 
 Now lets change the Hyperparameters (such a cool term):
 
@@ -510,7 +510,7 @@ Note that I have set `run_path` to be `"mrnibbles1d/run1"` because we are probab
 
 Okay cool, lets give this a shot then. Pressing shift enter on each of the cells in the notebook we start the training process, the environment window opens up and straight away we can see that the agent is training:
 
-[![](./env-window.png)](./env-window.png)
+![](./env-window.png)
 
 To get a better picture of whats going on inside the agent, lets fire-up tensorboard:
 
@@ -518,7 +518,7 @@ To get a better picture of whats going on inside the agent, lets fire-up tensorb
 tensorboard --logdir=summaries
 ```
 
-[![](./tensorboard1.png)](./tensorboard1.png)
+![](./tensorboard1.png)
 
 Since last post in this series I have come to understand a little more about these graphs:
 
@@ -530,7 +530,7 @@ Since last post in this series I have come to understand a little more about the
 
 After a few hundred k steps I stop the training, however it probably could have been stopped around 60k steps once it has found its optimum solution.
 
-[![](./exporting-model.png)](./exporting-model.png)
+![](./exporting-model.png)
 
 I export the trained model to a `.bytes` file ready to be imported into the game.
 
@@ -538,7 +538,7 @@ I export the trained model to a `.bytes` file ready to be imported into the game
 
 I copy the model from `/python/models/mrnibbles1d/mrnibbles1d.bytes` to `/unity/MrNibbles1D/` then set the brain to `Internal` and the model on "Graph Model".
 
-[![](./setting-imported-model.png)](./setting-imported-model.png)
+![](./setting-imported-model.png)
 
 Now we should be able to just press play and see how well our trained model does:
 
@@ -600,7 +600,7 @@ And run it again.
 
 Tensorboard looks a little different this time:
 
-[![](./tensorboard-run2.png)](./tensorboard-run2.png)
+![](./tensorboard-run2.png)
 
 Run2 is in blue, we can see that the cumulative_reward this time starts off a lot lower before ramping up to the same level after about 120k steps. This is to be expected as we are making things a little more difficult for the agent by rewarding it heavily against changing direction.
 

@@ -22,7 +22,7 @@ As you could probably guess if you had looked at my past few years worth of post
 
 I was really nervous about giving the talk even though it was only short and only to a small (~150 people) local meetup.
 
-[![](./us.jpg)](./us.jpg)
+![](./us.jpg)
 
 Despite doing it all as a live-coding with audience participation I think it went okay tho im not sure how many people followed along as it it was quite dense.
 

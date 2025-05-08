@@ -16,7 +16,7 @@ Regrettably, interest was lacking, partly because many local developers were unf
 
 This brings me to the crux of my post. Attempting to cancel my subscription on Meetup.com I was presented with this screen:
 
-[![](./dark-meetup.png)](./dark-meetup.png)
+![](./dark-meetup.png)
 
 So you can see the problem, I am forced to talk to one of their sales team before I am able to cancel the subscription.
 

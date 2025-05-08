@@ -16,19 +16,19 @@ Its been a while since I have posted about [Post To Tumblr](https://chrome.googl
 
 The latest update (v6.16) added an excellent community suggested feature "Templated Variables".
 
-[![chrome_2016-06-26_15-11-24](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-11-24.png)](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-11-24.png)
+![chrome_2016-06-26_15-11-24](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-11-24.png)
 
 Templated variables is accessible from the one-click options and allows users to specify special keywords which get replaced when Post To Tumblr is run:
 
-[![chrome_2016-06-26_15-15-13](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
+![chrome_2016-06-26_15-15-13](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
 
-[![chrome_2016-06-26_15-16-46](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-16-46.png)](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-16-46.png)
+![chrome_2016-06-26_15-16-46](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-16-46.png)
 
 This allows users to customize things with much greater freedom than was possible before.
 
 I also added the ability to paste in your clipboard which was another user-requested feature:
 
-[![chrome_2016-06-26_15-18-27](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-18-27.png)](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-18-27.png)
+![chrome_2016-06-26_15-18-27](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-18-27.png)
 
 As of version 6.17 this variable is hidden behind an "optional permission" as it was causing a quite scary permissions dialog when people initially installed or updated the extension which several users were kind enough to contact me about.
 

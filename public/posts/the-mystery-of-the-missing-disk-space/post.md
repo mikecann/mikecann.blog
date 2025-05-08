@@ -10,7 +10,7 @@ oldUrl: /misc/the-mystery-of-the-missing-disk-space
 openAIMikesBlogFileId: file-ryZ3r9960H2NuHGIxJWnc82R
 ---
 
-[![screenshot_06](/wp-content/uploads/2014/02/screenshot_06.png)](/wp-content/uploads/2014/02/screenshot_06.png)
+![screenshot_06](/wp-content/uploads/2014/02/screenshot_06.png)
 
 For ages now I have been plagued with missing disk space. No matter how much space I freed up it always seemed to disappear but finally I have managed to solve it!
 
@@ -18,17 +18,17 @@ For ages now I have been plagued with missing disk space. No matter how much spa
 
 I have 120gig SSD drive which should be enough for me to run Windows and a few key apps no problem however it seemed to fill up all the time without me installing anything.
 
-[![screenshot_02](/wp-content/uploads/2014/02/screenshot_02.png)](/wp-content/uploads/2014/02/screenshot_02.png)
+![screenshot_02](/wp-content/uploads/2014/02/screenshot_02.png)
 
 This lack of space was having a big problem on my machine, I couldn't open more than a couple of programs at once, things were crashing oddly.
 
-[![photoshop-scratch-disk-is-full](/wp-content/uploads/2014/02/photoshop-scratch-disk-is-full.jpg)](/wp-content/uploads/2014/02/photoshop-scratch-disk-is-full.jpg)
+![photoshop-scratch-disk-is-full](/wp-content/uploads/2014/02/photoshop-scratch-disk-is-full.jpg)
 
 I tried everything to make more space, deleting the few apps I had installed on the drive, running disk cleanup, even disabling the hibernation and pagefile systems (really not a good idea). Still to no avail.
 
 Thats when I noticed something odd was going on. I only have 8 root folders on the drive:
 
-[![screenshot_07](/wp-content/uploads/2014/02/screenshot_07.png)](/wp-content/uploads/2014/02/screenshot_07.png)
+![screenshot_07](/wp-content/uploads/2014/02/screenshot_07.png)
 
 So I right-clicked and inspected the properties of each:
 
@@ -44,11 +44,11 @@ In desperation I downloaded another app called SpaceSniffer which was supposed t
 
 Whats this? 64.8 gig being taken up in my c:windowstemp directory? Specifically a load of 2meg MSI\*\*\*\*.LOG files! Here is my missing space! I opened the temp folder and sure enough here was the culprit
 
-[![screenshot_04](/wp-content/uploads/2014/02/screenshot_04.png)](/wp-content/uploads/2014/02/screenshot_04.png)
+![screenshot_04](/wp-content/uploads/2014/02/screenshot_04.png)
 
 But what on earth are these things? Opening one reveals:
 
-[![screenshot_05](/wp-content/uploads/2014/02/screenshot_05.png)](/wp-content/uploads/2014/02/screenshot_05.png)
+![screenshot_05](/wp-content/uploads/2014/02/screenshot_05.png)
 
 Hmm they looks like .NET log files, strange. I have no idea what is producing them and Googling has no clear answer. It seems safe to delete them and I have done so, so for now that solves my problem. If they come back ill have a deeper look into what is producing them.
 

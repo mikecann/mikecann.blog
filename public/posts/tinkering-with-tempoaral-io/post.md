@@ -41,17 +41,17 @@ My goal with any "tinkering" I do is to understand the technology enough to form
 
 I started with [the docs](https://docs.temporal.io/), which are quite thorough. Setting up the environment included installing the Temporal CLI and running their local service, which even comes with a nice WebUI to display your Workflows:
 
-[![](./webui.png)](./webui.png)
+![](./webui.png)
 
 After reading through the initial pages of the docs, I summarized the key structure and terms with this diagram:
 
-[![](./diagram.png)](./diagram.png)
+![](./diagram.png)
 
 Clients start Workflows, which can contain several Activities. Workflows enter a Task Queue from which Workers pull and execute tasks. If activities fail, they can be retried an infinite (configurable) number of times.
 
 Every "[Action](https://docs.temporal.io/cloud/pricing#action)" the system takes (starting a workflow, running an activity, signals, queries, etc.) is an event recorded within the system, which is then recorded against your workflow so you can view exactly what happened and when:
 
-[![](./events.png)](./events.png)
+![](./events.png)
 
 ## Event Sourcing
 
@@ -90,7 +90,7 @@ I've run out of time for this tinkering session, but next time I'd like to build
 
 Temporal uses a per-Action-based pricing model:
 
-[![](./actionpricing.png)](./actionpricing.png)
+![](./actionpricing.png)
 
 One million "actions" costs $25. This seems quite expensive since everything results in an action. For comparison, [Convex](https://www.convex.dev/pricing) charges $25 per month for 25 million function calls, and [Cloudflare](https://developers.cloudflare.com/workers/platform/pricing/) charges $0.3 per 1 million function calls.
 

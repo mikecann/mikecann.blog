@@ -44,7 +44,7 @@ So now the player has one purpose to play the game, earn nibbles so they can get
 
 I struggled for hours last week to come up with a way to do this. I really liked the way "Jet Pack Joyride" has missions which encourage you to go back and keep playing so you can complete a mission:
 
-[![Jetpack_Joyride_missions_thumb](https://www.mikecann.blog/wp-content/uploads/2015/02/Jetpack_Joyride_missions_thumb.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/Jetpack_Joyride_missions_thumb.png)
+![Jetpack_Joyride_missions_thumb](https://www.mikecann.blog/wp-content/uploads/2015/02/Jetpack_Joyride_missions_thumb.png)
 
 I thought about this however and struggled to think of a way to make that work with Mr Nibble's simple mechanics, it was just too complex. After a while I had a brainwave, why don't I just set the player a "challenge" which is similar to a mission but I could change the rules somehow. This way I could keep the player coming back and challenge them to go further without over-complicating things.
 

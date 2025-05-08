@@ -25,7 +25,7 @@ These chunks are individual scenes. I did it this way because Unity doesn't supp
 
 Unity's scene loading system is very slow and causes the game to pause and stutter if you try to do it at run time. As a result I put a "build" button into the editor which runs through a small script which loads all the chunks into a specially built "Release" scene:
 
-[![2015-07-12_15-31-15](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-31-15.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-31-15.png)
+![2015-07-12_15-31-15](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-31-15.png)
 
 So now all the chunks are available in one single scene at startup removing the scene loading issue while the game is running. This is great but it does now mean that the initial load of the game is gigantic as it has to load 80 chunks with thousands of game objects at startup. The result is the game takes a minute to load.
 
@@ -43,13 +43,13 @@ In addition to that performance work, I also had a little more time to work thro
 
 A few people had suggested to me that it would be good to add a "remove ads" option to the game as many people would be happy to remove the ads for a small fee. Well it wasnt a huge amount of work to do it so I put it in.
 
-[![2015-07-12_15-50-59](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-50-59.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-50-59.png)
+![2015-07-12_15-50-59](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-50-59.png)
 
-[![2015-07-12_15-51-30](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-51-30.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-51-30.png)
+![2015-07-12_15-51-30](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-51-30.png)
 
 So now, you no longer need to watch an ad when you want to start or restart a challenge:
 
-[![2015-07-12_15-53-33](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-53-33.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-53-33.png)
+![2015-07-12_15-53-33](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-12_15-53-33.png)
 
 Well that's it for this week. The plan for next week is to plan the game trailer and to experiment with full-screen post process effects again which will hopefully add a whole lot more to the individual visual aspect of each outfit.
 

@@ -121,7 +121,7 @@ Debug.Log("Logging in..");
 
 The function "OnMainThread" is a helper extension I wrote to deal with the threading issue. If we were to remove that function then when we try to login Unity would throw an error something like:
 
-[![2014-11-11_08-07-43](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-07-43.png)](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-07-43.png)
+![2014-11-11_08-07-43](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-07-43.png)
 
 This is because below the covers Parse is making web calls on a separate thread and when it returns the result is passed back to us without returning to be main thread and pretty much everything in Unity needs to happen on the main thread so when we try to access a variable that lives on the main thread Unity crashes.
 

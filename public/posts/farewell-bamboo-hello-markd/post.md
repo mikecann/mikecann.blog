@@ -45,4 +45,4 @@ If you want to checkout what Markd is all about you can head to the website: htt
 
 I also just want to say a massive thanks to the Bamboo crew, as mentioned above it was an absolute joy, im sorry it had to be cut short but im sure you guys will do just fine without me :)
 
-[![](./bamboo-crew.jpg)](./bamboo-crew.jpg)
+![](./bamboo-crew.jpg)

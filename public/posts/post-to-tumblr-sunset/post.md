@@ -18,15 +18,15 @@ Well all good things must come to an end and Post To Tumblr has had 14 excellent
 
 The concept was simple. Allow people to quickly post content to Tumblr by simply right clicking on it.
 
-[![](https://mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)](https://mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)
+![](https://mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)
 
 Since that humble beginning I slowly started adding more and more features such as [post preformatting](https://mikecann.blog/posts/post-to-tumblr-version-0-4) and [custom context menus](https://mikecann.blog/posts/post-to-tumblr-v6-16-templated-variables).
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
+![](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
 
 Over time the extension grew in popularity, reaching a peak of about 50,000 weekly users:
 
-[![](./50k.png)](./50k.png)
+![](./50k.png)
 
 Since then however Tumblr's popularity started to decline and so too did my interest in the project. I did however continue to support the project with small updates and bug fixes.
 
@@ -44,16 +44,16 @@ So unfortunately we made the decision that it was time to turn off the PTT serve
 
 I published one final update to the extension which added the following message:
 
-[![](./announcement.jpg)](./announcement.jpg)
+![](./announcement.jpg)
 
 # Re: Sunset
 
 Since posting the above announcement in the extension I have received a heap of lovely feedback from users of the extension both by email and on the [dedicated SubReddit](https://www.reddit.com/r/post_to_tumblr/).
 
-[![](./feedback.png)](./feedback.png)
+![](./feedback.png)
 
 Its messages like these that let me know that all the effort that I put into the extension over the years has been worth it. People have found real value from a product that started out as a simple experiment :)
 
-[![](./email1.png)](./email1.png)
+![](./email1.png)
 
-[![](./email2.png)](./email2.png)
+![](./email2.png)

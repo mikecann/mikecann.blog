@@ -15,31 +15,31 @@ Well I didn't have time to do any of those things while I was away so put it off
 
 Unfortunately my time isnt free now that I am working freelance and so I need to justify the time spent working on the extension. So I need a way to monetize the app. There are quite a few ways to do it and I couldn't decide which to go for so I surveyed my users.
 
-[![screenshot_0116](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0116.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0116.png)
+![screenshot_0116](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0116.png)
 
 The results were interesting:
 
-[![screenshot_0220](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0220.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0220.png)
+![screenshot_0220](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0220.png)
 
 If you take the results on face value it looks as if people didnt mind ad injection but I suspect that they misunderstood the meaning of what ad injection was and thought I just meant adverts. I decided that ad injection was a little too evil for me and decided to go with making the donation more prominent.
 
 To do this I rewrote the entire app using Typescript with KnockoutJS and then make the donations front and center. When a user opens the window they are presented with a popup that informs them about all the new features and improvements and gives them an opportunity to donate:
 
-[![screenshot_0117](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0117.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0117.png)
+![screenshot_0117](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0117.png)
 
 From there they are taken to the donate tab of the options that lets them quickly and easily donate.
 
-[![screenshot_0222](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0222.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0222.png)
+![screenshot_0222](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_0222.png)
 
 I decided to set the minimum donation amount to \$3 which is about the price of a cup of tea in Starbucks.
 
 As an incentive I have locked certain features such as the advanced 1-click process and a suggestion submission feature:
 
-[![screenshot_045](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_045.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_045.png)
+![screenshot_045](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_045.png)
 
 I also have promised new features coming soon which donors will have access to:
 
-[![screenshot_056](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_056.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_056.png)
+![screenshot_056](https://www.mikecann.blog/wp-content/uploads/2014/03/screenshot_056.png)
 
 On the whole people have responded well to the changes however there have unfortunately been some negative reviews from people on the chrome web store.
 

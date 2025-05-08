@@ -21,7 +21,7 @@ Well i'm now 8 weeks into development of Mr Nibbles Forever and I can safely say
 
 In this release:
 
-[![this-week](https://www.mikecann.blog/wp-content/uploads/2015/03/this-week.png)](https://www.mikecann.blog/wp-content/uploads/2015/03/this-week.png)
+![this-week](https://www.mikecann.blog/wp-content/uploads/2015/03/this-week.png)
 
 Thats all from my [Trello board](https://trello.com/b/Ic11WQzF/mr-nibbles-forever) for the project, the numbers are the amount of time I spent on each one (red is time taken, blue is estimate)
 

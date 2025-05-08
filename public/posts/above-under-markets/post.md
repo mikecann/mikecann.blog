@@ -21,7 +21,7 @@ My daily commute to work is one of the reasons I love living where I do. I walk 
 
 Each time I walk down that beautiful tree-lined street I though to myself; this would be a great place to have a market, and lo and behold I was walking down here the other week and saw that indeed they had just started to run markets here!
 
-[![](./mends-street.jpg)](./mends-street.jpg)
+![](./mends-street.jpg)
 
 Its a beautiful area, theres lots of foot traffic from the shops, cafes and the zoo so I thought to myself, why dont I have a go at running a market stall?
 
@@ -37,7 +37,7 @@ Although I had seen photography stalls at markets before (although I am the only
 
 So I spent a busy week rushing around buying a table, gazebo and a few picture stands and easals, not to mention ordering \$500+ worth of prints in various sizes and types as examples. There was some doubt if I would manage to get it all together in time but I just about managed it.
 
-[![](./the-stall.jpg)](./the-stall.jpg)
+![](./the-stall.jpg)
 
 # Lessons
 
@@ -51,7 +51,7 @@ So my pitch has changed from focusing on the products available to promoting whi
 
 One other thing I learnt was that some people didnt understand how I had made the images. Infact several people asked if they were paintings. So I decided to put my drone out on the table infront so people can see how I actually took the images.
 
-[![](./stall-with-drone.jpg)](./stall-with-drone.jpg)
+![](./stall-with-drone.jpg)
 
 However this has now led to people asking if my drone was for sale. Sigh!
 
@@ -61,6 +61,6 @@ Its all just an experiment at this stage. Im enjoying learning retail and sales 
 
 So if you are in the market for some high quality Australian drone photography come down to the Mends Street Markets in South Perth, ill be here each Sunday for the next few weeks at least!
 
-[![](./dancin.jpg)](./dancin.jpg)
+![](./dancin.jpg)
 
-[![](./cookie-shots.jpg)](./cookie-shots.jpg)
+![](./cookie-shots.jpg)

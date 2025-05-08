@@ -11,7 +11,7 @@ As this is a level based puzzle game one of the big requirements for the project
 
 <!-- more -->
 
-[![lev](https://www.mikecann.blog/wp-content/uploads/2014/07/lev.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/lev.png)
+![lev](https://www.mikecann.blog/wp-content/uploads/2014/07/lev.png)
 
 Representing the levels as a bitmap image meant that Photoshop became my level editor which allowed me to very quickly make changes and test the levels as I made them.
 

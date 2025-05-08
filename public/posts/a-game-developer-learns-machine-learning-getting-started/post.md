@@ -56,7 +56,7 @@ So with my system now setup I return back to the [Balance Ball](https://github.c
 
 The next step is to open Jupyter Notebook which is a popular tool with ML community for training models.
 
-[![](./jupyter-basics.png)](./jupyter-basics.png)
+![](./jupyter-basics.png)
 
 Its actually a pretty aweomse tool. Its sort of like a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) mixed with word document.
 
@@ -68,21 +68,21 @@ Next up is the "Testing Python API" section of the docs.
 
 In Unity the balance ball scene is compiled into an exe, this is whats known as the "environment".
 
-[![](./showing-exe.png)](./showing-exe.png)
+![](./showing-exe.png)
 
 Python in the notebook talks to the "brain" in the environment. Its a sort of native bridge between the machine learning API in Python and your "game" / "environment".
 
-[![](./bridge.png)](./bridge.png)
+![](./bridge.png)
 
 When the training session is started from python, the environment exe is executed which opens as a separate window on your computer. This surprised me as I was expecting it to be hidden background process of some sort.
 
 The environment window that opens up is tiny, presumably so your GFX card doesn't have to waste cycles on rendering and can instead focus on ML.
 
-[![](./env-window.png)](./env-window.png)
+![](./env-window.png)
 
 The "brain" in the environment is able to receive commands which are called "actions". When an action runs, it changes the "state" of the environment which is returned back to Python. That process of `State > Action > New State` is repeated over and over again (along with some other magic) and out pops our agent.
 
-[![](./learn-loop.png)](./learn-loop.png)
+![](./learn-loop.png)
 
 # Training the Model
 
@@ -90,13 +90,13 @@ Now we know our bridge from Pythong to Unity works okay we can move onto actuall
 
 Folling the "Training with PPO" section of the docs we open "TensorBoard" which gives us stats on the the training process as it runs.
 
-[![](./tensorboard1.png)](./tensorboard1.png)
+![](./tensorboard1.png)
 
 Im not really sure what all those stats mean but thats okay at this stage, we are just tinkering!
 
 The main thing is my model is busy training itself as evidenced by the changing graphs and my pegged CPU 😜
 
-[![](./pegged-cpu.png)](./pegged-cpu.png)
+![](./pegged-cpu.png)
 
 # Testing the Model
 
@@ -104,13 +104,13 @@ Once the "cumulative_reward" is above 75 the model is ready to rock. So I stop t
 
 Theres one last step before we can run the model in Unity, we must add support for TensorFlow directly in Unity in the form of the TensorFlowSharp library.
 
-[![](./tf-sharp.png)](./tf-sharp.png)
+![](./tf-sharp.png)
 
 TensorFlowSharp requires the experimental .Net 4.6 support in Unity. Thats something to note because as my goal is to eventually get this working on Mr Nibbles Forever which is built on the old .Net 3.5
 
 With the library installed we copy over the generated model into the game and huzzah! It works!
 
-[![](./it-works.png)](./it-works.png)
+![](./it-works.png)
 
 # Adding some Dynamics
 

@@ -21,7 +21,7 @@ Mixcloud is a great service to find dj mixes from a wide variety of people. I ha
 
 It seems however that Mixcloud doesnt put too much effort into their playlist and playback experience however. When you just want to listen to all the mixes from a particular artist, Mixcloud seems to take it upon itself to do something totally different such as playing mixes from totally different artists.
 
-[![](./chrome_2018-09-16_16-18-37.png)](./chrome_2018-09-16_16-18-37.png)
+![](./chrome_2018-09-16_16-18-37.png)
 
 The "next" playlist down the bottom is totally abysmal. Theres very few options particularly for common things you would want to do such a clearing all upcoming mixes or finding mixes similar to the one playing, sorting or even shuffle.
 

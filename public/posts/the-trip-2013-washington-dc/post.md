@@ -11,7 +11,7 @@ oldUrl: /2013-trip/the-trip-2013-washington-dc
 openAIMikesBlogFileId: file-EZZLG6YQYSvDr4BEd6Cdt1PR
 ---
 
-[![screenshot_02](/wp-content/uploads/2013/05/screenshot_02.png)](/wp-content/uploads/2013/05/screenshot_02.png)
+![screenshot_02](/wp-content/uploads/2013/05/screenshot_02.png)
 
 So my trip has finally started! I have not had anywhere near as much free time thus far as I thought I would have before I left. A great thing as there is no chance of me getting bored, it does however mean that I haven't had time to write the frequent blog posts I had promised.
 

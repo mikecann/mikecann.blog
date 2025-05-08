@@ -38,17 +38,17 @@ I was getting more and more frustrated and nervous about this because I had no i
 
 Eventually I opened a support ticket with Heroku and they told me to try to use the `heroku pg:diagnose` tool, so I did and I got the following:
 
-[![](./diagnose.png)](./diagnose.png)
+![](./diagnose.png)
 
 Notice that one item in yellow there "Disk Burst".
 
 What is disk burst I ask myself? I didnt see anything on Heroku's [pricing page](https://elements.heroku.com/addons/heroku-postgresql#pricing) about IO limits
 
-[![](./pricing.png)](./pricing.png)
+![](./pricing.png)
 
 So I ask the Heroku Support and well..
 
-[![](./support.png)](./support.png)
+![](./support.png)
 
 Okay so Heroku has "hidden" IO limits that I was totally unaware of before and we are hitting this on certain tables and it is silently throttling us with no errors or warning or anything.
 
@@ -64,13 +64,13 @@ The [pricing](https://fly.io/docs/postgres/) is just insane we can quite literal
 
 The price is definitely nice but thats not the main reason we moved, the main one was to get away from the hidden limits and poor metrics. Thankfully Fly.io really excels in this regard providing not only a basic metrics dashboard but a MUCH more complete Grafana dashboard.
 
-[![](./basic.png)](./basic.png)
+![](./basic.png)
 
-[![](./grafana.png)](./grafana.png)
+![](./grafana.png)
 
 Through that I can get a really clear view on how much memory, CPU, and importantly, IO the DB is using.
 
-[![](./io.png)](./io.png)
+![](./io.png)
 
 You can even setup alerts to let you know if things go out of whack.
 
