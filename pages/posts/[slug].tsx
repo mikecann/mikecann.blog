@@ -244,6 +244,16 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                       </code>
                     );
                   },
+                  a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+                    const { href, children, ...rest } = props;
+                    const safeHref =
+                      typeof href === "string" ? getRelativePathForPost(post.slug, href) : "";
+                    return (
+                      <a href={safeHref} {...rest}>
+                        {children}
+                      </a>
+                    );
+                  },
                 }}
                 remarkPlugins={[gfm]}
               />
