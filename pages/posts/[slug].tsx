@@ -21,10 +21,16 @@ import { Post, getAllPublishablePosts, getPostBySlug } from "../../scripts/posts
 import { generateSlug, slugFromChildren } from "../../components/utils/slug";
 import { HeadingLink } from "../../components/HeadingLink";
 import { getAllPosts } from "../../scripts/posts/index";
+import imageSize from "image-size";
+import path from "path";
+import fs from "fs";
+
+type ImageSizes = Record<string, { width: number; height: number }>;
 
 type Props = {
   post: Post;
   html: string;
+  imageSizes: ImageSizes;
 };
 
 const postContainerClass = style(
@@ -33,7 +39,7 @@ const postContainerClass = style(
   media({ minWidth: 501 }, { padding: 40 }),
 );
 
-const PostPage = ({ post, html }: Props) => {
+const PostPage = ({ post, html, imageSizes }: Props) => {
   const { meta, slug } = post;
   const { title, date } = meta;
 
@@ -128,6 +134,8 @@ const PostPage = ({ post, html }: Props) => {
                     const { src, alt, width, height } = props;
                     const safeSrc =
                       typeof src === "string" ? getRelativePathForPost(post.slug, src) : "";
+                    // Try to get size from props, else from imageSizes map
+                    const size = safeSrc && imageSizes[safeSrc];
                     if (width && height) {
                       return (
                         <span className="image-wrapper">
@@ -136,6 +144,18 @@ const PostPage = ({ post, html }: Props) => {
                             alt={alt ?? ""}
                             width={Number(width)}
                             height={Number(height)}
+                            style={{ maxWidth: "100%", height: "auto" }}
+                          />
+                        </span>
+                      );
+                    } else if (size) {
+                      return (
+                        <span className="image-wrapper">
+                          <Image
+                            src={safeSrc}
+                            alt={alt ?? ""}
+                            width={size.width}
+                            height={size.height}
                             style={{ maxWidth: "100%", height: "auto" }}
                           />
                         </span>
@@ -161,62 +181,67 @@ const PostPage = ({ post, html }: Props) => {
                       </span>
                     );
                   },
-                  h1: ({ ...props }) => {
+                  h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h1
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                        <HeadingLink slug={slug} />
+                        {props.children}
                       </h1>
                     );
                   },
-                  h2: ({ ...props }) => {
+                  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h2
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                        <HeadingLink slug={slug} />
+                        {props.children}
                       </h2>
                     );
                   },
-                  h3: ({ ...props }) => {
+                  h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h3
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                        <HeadingLink slug={slug} />
+                        {props.children}
                       </h3>
                     );
                   },
-                  h4: ({ ...props }) => {
+                  h4: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h4
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                        <HeadingLink slug={slug} />
+                        {props.children}
                       </h4>
                     );
                   },
-                  h5: ({ ...props }) => {
+                  h5: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h5
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                        <HeadingLink slug={slug} />
+                        {props.children}
                       </h5>
                     );
                   },
-                  code: ({ node, inline = false, className, children, ...props }: any) => {
+                  code: ({ inline, className, children, ...props }: any) => {
                     const match = /language-(\w+)/.exec(className || "");
                     const { ref, ...rest } = props;
                     return !inline && match ? (
@@ -304,10 +329,33 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const slug = ensure(query.slug) + "";
   const post = getPostBySlug(slug);
 
+  // Find all image references in the markdown
+  const imageRegex = /!\[[^\]]*\]\(([^)]+)\)/g;
+  const matches = Array.from(post.content.matchAll(imageRegex));
+  const imageSizes: ImageSizes = {};
+  const postDir = path.join(process.cwd(), "public/posts", slug);
+
+  for (const match of matches) {
+    let imgSrc = match[1];
+    // Remove any title after the src (e.g. ![alt](src "title"))
+    if (imgSrc.includes(" ")) imgSrc = imgSrc.split(" ")[0];
+    // Use the same logic as getRelativePathForPost
+    const relSrc = imgSrc.startsWith("./") ? `/posts/${slug}/${imgSrc.replace("./", "")}` : imgSrc;
+    // Only process local images
+    if (relSrc.startsWith("/posts/")) {
+      const absPath = path.join(process.cwd(), "public", relSrc);
+      if (fs.existsSync(absPath)) {
+        const { width, height } = imageSize(fs.readFileSync(absPath));
+        if (width && height) imageSizes[relSrc] = { width, height };
+      }
+    }
+  }
+
   return {
     props: {
       post,
       html: post.content,
+      imageSizes,
     },
   };
 };
