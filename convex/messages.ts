@@ -1,6 +1,6 @@
 import { v } from "convex/values";
-import { mutationWithUser, queryWithUser } from "./functions";
-import { getThreadForUser, scheduleThreadUpdatedNotification } from "./threads";
+import { mutationWithUser } from "./functions";
+import { _getThreadForUser, _scheduleThreadUpdatedNotification } from "./threads";
 import { internalMutation, query } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { annotationSchema, messageStatusSchema } from "./schema";
@@ -11,7 +11,10 @@ export const listMessagesForUserThread = query({
     threadId: v.id("threads"),
   },
   handler: async (ctx, args) => {
-    const thread = await getThreadForUser(ctx, { userId: args.userId, threadId: args.threadId });
+    const thread = await _getThreadForUser(ctx.db, {
+      userId: args.userId,
+      threadId: args.threadId,
+    });
     return await ctx.db
       .query("messages")
       .withIndex("by_threadId", (q) => q.eq("threadId", thread._id))
@@ -31,7 +34,10 @@ export const sendMessageToThreadFromUser = mutationWithUser({
     // We first should check if there is an existing message that is not finished
     // and if so we should not proceed
 
-    const thread = await getThreadForUser(ctx, { userId: ctx.user._id, threadId: args.threadId });
+    const thread = await _getThreadForUser(ctx.db, {
+      userId: ctx.user._id,
+      threadId: args.threadId,
+    });
 
     // Insert my message
     await ctx.db.insert("messages", {
@@ -60,7 +66,7 @@ export const sendMessageToThreadFromUser = mutationWithUser({
         threadId: thread._id,
         userId: ctx.user._id,
         currentUrl: args.currentUrl,
-      }
+      },
     );
 
     // Update the message with the scheduled function id
@@ -74,7 +80,7 @@ export const sendMessageToThreadFromUser = mutationWithUser({
     });
 
     // Let me know via email that someone has been chatting
-    await scheduleThreadUpdatedNotification(ctx, { threadId: thread._id });
+    await _scheduleThreadUpdatedNotification(ctx, { threadId: thread._id });
   },
 });
 

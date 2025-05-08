@@ -1,23 +1,46 @@
 import { ConvexError, v } from "convex/values";
-import { internalMutation, internalQuery, mutation, query } from "./_generated/server";
+import {
+  DatabaseReader,
+  DatabaseWriter,
+  internalMutation,
+  internalQuery,
+  mutation,
+  MutationCtx,
+  query,
+} from "./_generated/server";
 import { ensureFP } from "../essentials/misc/ensure";
 import { hoursInMs } from "../essentials/misc/time";
 import { internal } from "./_generated/api";
+import { Id } from "./_generated/dataModel";
+
+export const _findThreadForUser = async (
+  db: DatabaseReader,
+  args: { threadId: Id<"threads">; userId: Id<"users"> },
+) => {
+  const thread = await db.get(args.threadId);
+  if (!thread) return null;
+
+  if (thread.owningUserId !== args.userId)
+    throw new ConvexError(`Thread ${args.threadId} does not belong to user ${args.userId}`);
+
+  return thread;
+};
+
+export const _getThreadForUser = async (
+  db: DatabaseReader,
+  args: { threadId: Id<"threads">; userId: Id<"users"> },
+) => {
+  const thread = await _findThreadForUser(db, args);
+  if (!thread) throw new ConvexError(`Thread ${args.threadId} not found`);
+  return thread;
+};
 
 export const findThreadForUser = query({
   args: {
     threadId: v.id("threads"),
     userId: v.id("users"),
   },
-  handler: async (ctx, args) => {
-    const thread = await ctx.db.get(args.threadId);
-    if (!thread) return null;
-
-    if (thread.owningUserId !== args.userId)
-      throw new ConvexError(`Thread ${args.threadId} does not belong to user ${args.userId}`);
-
-    return thread;
-  },
+  handler: async (ctx, args) => _findThreadForUser(ctx.db, args),
 });
 
 export const getThreadForUser = query({
@@ -26,7 +49,7 @@ export const getThreadForUser = query({
     userId: v.id("users"),
   },
   handler: async (ctx, args) => {
-    return findThreadForUser(ctx, args).then(ensureFP(`Thread ${args.threadId} not found`));
+    return _getThreadForUser(ctx.db, args);
   },
 });
 
@@ -81,23 +104,28 @@ export const updateThreadTokensUsed = internalMutation({
   },
 });
 
-export const scheduleThreadUpdatedNotification = internalMutation({
-  args: {
-    threadId: v.id("threads"),
-  },
-  handler: async (ctx, args) => {
-    const thread = await ctx.db.get(args.threadId);
-    if (!thread) throw new ConvexError(`Thread ${args.threadId} not found`);
+export const _scheduleThreadUpdatedNotification = async (
+  ctx: MutationCtx,
+  args: { threadId: Id<"threads"> },
+) => {
+  const thread = await ctx.db.get(args.threadId);
+  if (!thread) throw new ConvexError(`Thread ${args.threadId} not found`);
 
-    if (thread.threadUpdatedNoticationFunctionId)
-      await ctx.scheduler.cancel(thread.threadUpdatedNoticationFunctionId);
+  if (thread.threadUpdatedNoticationFunctionId)
+    await ctx.scheduler.cancel(thread.threadUpdatedNoticationFunctionId);
 
-    await ctx.db.patch(args.threadId, {
-      threadUpdatedNoticationFunctionId: await ctx.scheduler.runAfter(
-        hoursInMs(3),
-        internal.resend.resend.sendThreadUpdatedNotification,
-        { threadId: args.threadId }
-      ),
-    });
-  },
-});
+  await ctx.db.patch(args.threadId, {
+    threadUpdatedNoticationFunctionId: await ctx.scheduler.runAfter(
+      hoursInMs(3),
+      internal.resend.resend.sendThreadUpdatedNotification,
+      { threadId: args.threadId },
+    ),
+  });
+};
+
+// export const scheduleThreadUpdatedNotification = internalMutation({
+//   args: {
+//     threadId: v.id("threads"),
+//   },
+//   handler: async (ctx, args) => _scheduleThreadUpdatedNotification(ctx, args),
+// });
