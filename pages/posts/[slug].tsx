@@ -30,7 +30,7 @@ type Props = {
 const postContainerClass = style(
   {},
   media({ minWidth: 0, maxWidth: 500 }, { padding: 10 }),
-  media({ minWidth: 501 }, { padding: 40 })
+  media({ minWidth: 501 }, { padding: 40 }),
 );
 
 const PostPage = ({ post, html }: Props) => {
