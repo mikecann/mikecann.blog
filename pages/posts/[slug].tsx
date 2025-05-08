@@ -132,51 +132,25 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                 components={{
                   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
                     const { src, alt, width, height } = props;
+
                     const safeSrc =
                       typeof src === "string" ? getRelativePathForPost(post.slug, src) : "";
-                    // Try to get size from props, else from imageSizes map
+
                     const size = safeSrc && imageSizes[safeSrc];
-                    if (width && height) {
-                      return (
-                        <span className="image-wrapper">
-                          <Image
-                            src={safeSrc}
-                            alt={alt ?? ""}
-                            width={Number(width)}
-                            height={Number(height)}
-                            style={{ maxWidth: "100%", height: "auto" }}
-                          />
-                        </span>
+
+                    if (!size)
+                      throw new Error(
+                        `Image size for src '${safeSrc}' not found in precomputed imageSizes array and not provided in markdown. All images must have explicit size.`,
                       );
-                    } else if (size) {
-                      return (
-                        <span className="image-wrapper">
-                          <Image
-                            src={safeSrc}
-                            alt={alt ?? ""}
-                            width={size.width}
-                            height={size.height}
-                            style={{ maxWidth: "100%", height: "auto" }}
-                          />
-                        </span>
-                      );
-                    }
+
                     return (
-                      <span
-                        className="image-wrapper"
-                        style={{
-                          position: "relative",
-                          display: "block",
-                          width: "100%",
-                          minHeight: 200,
-                        }}
-                      >
+                      <span className="image-wrapper">
                         <Image
                           src={safeSrc}
                           alt={alt ?? ""}
-                          fill
-                          sizes="100vw"
-                          style={{ objectFit: "contain" }}
+                          width={width == null ? size.width : Number(width)}
+                          height={height == null ? size.height : Number(height)}
+                          style={{ maxWidth: "100%", height: "auto" }}
                         />
                       </span>
                     );
