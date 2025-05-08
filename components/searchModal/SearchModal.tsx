@@ -3,7 +3,7 @@ import * as React from "react";
 import { Modal } from "../Modal";
 import { useWindowSize } from "../../utils/useWindowSize";
 import { CloseButton } from "../CloseButton";
-import { getAlgoliaIndex } from "../../utils/algolia";
+import { getAlgoliaClient, getAlgoliaIndexName } from "../../utils/algolia";
 import { SearchResult } from "./SearchResult";
 import { match } from "ramda";
 import { AlgoliaHit } from "../../scripts/algolia/types";
@@ -20,11 +20,16 @@ export const SearchModal: React.FC<Props> = ({ onClose }) => {
   const { innerHeight, innerWidth } = useWindowSize();
 
   React.useEffect(() => {
-    getAlgoliaIndex()
-      .search(term)
+    const client = getAlgoliaClient();
+    const indexName = getAlgoliaIndexName();
+    client
+      .searchSingleIndex({
+        indexName,
+        searchParams: { query: term },
+      })
       .then((resp) => {
         console.log("algolia response", resp);
-        setResults(resp.hits as any);
+        setResults(resp.hits as unknown as AlgoliaHit[]);
       });
   }, [term]);
 

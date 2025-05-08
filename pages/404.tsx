@@ -1,6 +1,6 @@
 import { ResponsiveSidebarLayouts } from "../components/layout/ResponsiveSidebarLayouts";
 import * as React from "react";
-import { getAlgoliaIndex } from "../utils/algolia";
+import { getAlgoliaClient, getAlgoliaIndexName } from "../utils/algolia";
 import { SearchResult } from "../components/searchModal/SearchResult";
 import { SearchModal } from "../components/searchModal/SearchModal";
 import Head from "next/head";
@@ -24,15 +24,23 @@ const NotFoundPage = ({}: Props) => {
     if (!term) return;
     setLoading(true);
     console.log(`Searching for '${term}'..`);
-    getAlgoliaIndex()
-      .search(term)
+    const client = getAlgoliaClient();
+    const indexName = getAlgoliaIndexName();
+    client
+      .searchSingleIndex({
+        indexName,
+        searchParams: { query: term },
+      })
       .then((resp) => {
         setLoading(false);
         console.log(`Results loaded`, resp);
         if (resp.hits.length != 0) setResults(resp.hits as any);
         else
-          getAlgoliaIndex()
-            .search("")
+          client
+            .searchSingleIndex({
+              indexName,
+              searchParams: { query: "" },
+            })
             .then((resp) => setResults(resp.hits as any));
       })
       .catch((e) => {

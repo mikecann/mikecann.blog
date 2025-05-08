@@ -120,17 +120,42 @@ const PostPage = ({ post, html }: Props) => {
               />
             </Horizontal>
             <ReactMarkdown
-              className="markdown-content"
               children={html}
               rehypePlugins={[rehypeRaw]}
               components={{
-                img: (props) => {
+                img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
+                  const { src, alt, width, height } = props;
+                  const safeSrc = typeof src === "string" ? src : "";
+                  if (width && height) {
+                    return (
+                      <span className="image-wrapper">
+                        <Image
+                          src={safeSrc}
+                          alt={alt ?? ""}
+                          width={Number(width)}
+                          height={Number(height)}
+                          style={{ maxWidth: "100%", height: "auto" }}
+                        />
+                      </span>
+                    );
+                  }
                   return (
-                    <span className="image-wrapper">
-                      {/* <a href={props.src}> */}
-                      <img {...props} />
-                      {/* </a> */}
-                      {/* <span className="image-alt">{props.alt}</span> */}
+                    <span
+                      className="image-wrapper"
+                      style={{
+                        position: "relative",
+                        display: "block",
+                        width: "100%",
+                        minHeight: 200,
+                      }}
+                    >
+                      <Image
+                        src={safeSrc}
+                        alt={alt ?? ""}
+                        fill
+                        sizes="100vw"
+                        style={{ objectFit: "contain" }}
+                      />
                     </span>
                   );
                 },
@@ -189,11 +214,12 @@ const PostPage = ({ post, html }: Props) => {
                     </h5>
                   );
                 },
-                code: ({ node, inline, className, children, ...props }) => {
+                code: ({ node, inline = false, className, children, ...props }: any) => {
                   const match = /language-(\w+)/.exec(className || "");
+                  const { ref, ...rest } = props;
                   return !inline && match ? (
                     <SyntaxHighlighter
-                      {...props}
+                      {...rest}
                       customStyle={{ fontSize: "0.8em", borderRadius: 6 }}
                       children={String(children).replace(/\n$/, "")}
                       style={darcula}
@@ -202,7 +228,7 @@ const PostPage = ({ post, html }: Props) => {
                     />
                   ) : (
                     <code
-                      {...props}
+                      {...rest}
                       className={className}
                       style={{
                         padding: "0.2em 0.4em",
@@ -219,8 +245,6 @@ const PostPage = ({ post, html }: Props) => {
                 },
               }}
               remarkPlugins={[gfm]}
-              transformImageUri={(src) => getRelativePathForPost(post.slug, src)}
-              transformLinkUri={(href) => getRelativePathForPost(post.slug, href)}
             />
 
             <div
