@@ -5,6 +5,7 @@ tags:
   - ai
   - thought
 title: This Is How We Create Skynet
+openAIMikesBlogFileId: vsfb_548255639f8a4230ad3ec6c980ac8f60
 ---
 
 This is a bit of a "what-if" post that I've been pondering for a while. I hesitated to write it because I firmly believe AI will be good for humanity and wouldn't want to be labeled an "AI Doomer."
