@@ -52,7 +52,9 @@ export const getPostBySlug = (slug: PostSlug): PostWithContent => {
 
   const meta = producePostMeta(data as any);
 
-  const coverSize = imageSize(getPostCoverImageAbsolutePath(postDir, meta.coverImage));
+  const coverImagePath = getPostCoverImageAbsolutePath(postDir, meta.coverImage);
+  const coverImageBuffer = fs.readFileSync(coverImagePath);
+  const coverSize = imageSize(new Uint8Array(coverImageBuffer));
 
   return {
     absPostPath,
@@ -76,7 +78,7 @@ export const getAllPublishablePosts = () => {
   let posts = getAllPosts();
   if (process.env.NODE_ENV == "production")
     posts = posts.filter(
-      (post) => post.meta.status == "published" || post.meta.status == undefined
+      (post) => post.meta.status == "published" || post.meta.status == undefined,
     );
   return posts;
 };

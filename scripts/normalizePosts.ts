@@ -76,7 +76,9 @@ const normalizeMetadata = async () => {
     }
 
     try {
-      imageSize(getPostCoverImageAbsolutePath(postDir, coverImage));
+      const imagePath = getPostCoverImageAbsolutePath(postDir, coverImage);
+      const imageBuffer = fs.readFileSync(imagePath);
+      imageSize(new Uint8Array(imageBuffer));
     } catch (e) {
       console.log(`corrupt image, replacing with fallback`);
       coverImage = fallbackImage;
