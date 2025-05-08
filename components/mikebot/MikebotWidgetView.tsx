@@ -11,9 +11,8 @@ import { Id } from "../../convex/_generated/dataModel";
 import { useEffect } from "react";
 import { MessagesList } from "./MessagesList";
 import { useQueryWithStatus } from "./helpers";
-import { FaRegWindowMinimize, FaSpinner } from "react-icons/fa";
 import { AiOutlineClear } from "react-icons/ai";
-import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { mirage } from "ldrs";
 import { LuMaximize2, LuMinimize2 } from "react-icons/lu";
 import { useState } from "react";
@@ -70,20 +69,20 @@ const overlayStyle = style({
   pointerEvents: "initial",
 });
 
-const currentThreadIdStorageKey = "mikebot_current_thread_id";
+const currentThreadIdStorageKey = "mikebot2_current_thread_id";
 
 export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [currentThreadId, setCurrentThreadId] = React.useState<Id<"threads"> | null>(
+  const [currentThreadId, setCurrentThreadId] = React.useState<string | null>(
     () => localStorage[currentThreadIdStorageKey],
   );
   const me = useMe();
 
-  const createThread = useMutation(api.threads.createThreadForUser);
+  const createThread = useMutation(api.mikebot.mutations.createThreadForUser);
 
   const threadQuery = useQueryWithStatus(
-    api.threads.findThreadForUser,
+    api.mikebot.queries.findThreadForUser,
     currentThreadId && me ? { threadId: currentThreadId, userId: me._id } : "skip",
   );
 
@@ -193,7 +192,7 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
             )}
           </Horizontal>
         </div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -216,14 +215,11 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
               horizontalAlign="center"
               verticalAlign="center"
             >
-              {/* l-mirage is a web component registered by ldrs. TypeScript does not recognize it, so we suppress the error. */}
-              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-              {/* @ts-ignore */}
               <l-mirage size={80} color="#a0a0a0" />
             </Horizontal>
           )}
-        </div>
-        <MessageEntryBox userId={me?._id} threadId={threadQuery.data?._id} />
+        </div> */}
+        {/* <MessageEntryBox userId={me?._id} threadId={threadQuery.data?._id} /> */}
       </div>
     </>
   );
