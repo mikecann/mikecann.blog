@@ -138,10 +138,23 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
 
                     const size = safeSrc && imageSizes[safeSrc];
 
-                    if (!size)
-                      throw new Error(
-                        `Image size for src '${safeSrc}' not found in precomputed imageSizes array and not provided in markdown. All images must have explicit size.`,
+                    if (!size) {
+                      return (
+                        <span
+                          className="image-wrapper"
+                          style={{
+                            display: "block",
+                            background: "#eee",
+                            padding: 20,
+                            borderRadius: 4,
+                          }}
+                        >
+                          <div style={{ textAlign: "center", color: "#888", fontSize: "0.9em" }}>
+                            Image not found: {safeSrc}
+                          </div>
+                        </span>
                       );
+                    }
 
                     return (
                       <span className="image-wrapper">
