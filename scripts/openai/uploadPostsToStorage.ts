@@ -16,13 +16,13 @@ async function bootstrap() {
   const openAIKey = process.env.OPEN_AI_API_KEY;
   if (!openAIKey)
     throw new Error(
-      `Missing env OPEN_AI_API_KEY, have you defined a .env file in the root of the project?`
+      `Missing env OPEN_AI_API_KEY, have you defined a .env file in the root of the project?`,
     );
 
   const vectorStoreId = process.env.OPENAI_POSTS_VECTOR_STORE_ID;
   if (!vectorStoreId)
     throw new Error(
-      `Missing env OPENAI_POSTS_VECTOR_STORE_ID, have you defined a .env file in the root of the project?`
+      `Missing env OPENAI_POSTS_VECTOR_STORE_ID, have you defined a .env file in the root of the project?`,
     );
 
   // Initialize OpenAI client
@@ -54,10 +54,9 @@ async function bootstrap() {
     console.log(`uploading..`, tempFileName);
 
     // Upload file to OpenAI vector store
-    const result = await openai.beta.vectorStores.files.uploadAndPoll(
-      vectorStoreId,
-      createReadStream(tempFileName)
-    );
+    const result = await openai.vectorStores.fileBatches.uploadAndPoll(vectorStoreId, {
+      files: [createReadStream(tempFileName)],
+    });
 
     if (result.status == "completed") {
       console.log(`Upload completed, Adding id '${result.id}' back into the post`);
@@ -67,7 +66,7 @@ async function bootstrap() {
         matter.stringify(post.content, {
           ...post.meta,
           openAIMikesBlogFileId: result.id,
-        })
+        }),
       );
     } else console.log(`Error uploading post`, result);
 

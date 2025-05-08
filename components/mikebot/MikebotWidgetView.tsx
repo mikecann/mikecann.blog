@@ -76,7 +76,7 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [currentThreadId, setCurrentThreadId] = React.useState<Id<"threads"> | null>(
-    () => localStorage[currentThreadIdStorageKey]
+    () => localStorage[currentThreadIdStorageKey],
   );
   const me = useMe();
 
@@ -84,7 +84,7 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
 
   const threadQuery = useQueryWithStatus(
     api.threads.findThreadForUser,
-    currentThreadId && me ? { threadId: currentThreadId, userId: me._id } : "skip"
+    currentThreadId && me ? { threadId: currentThreadId, userId: me._id } : "skip",
   );
 
   useEffect(() => {
@@ -216,6 +216,9 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
               horizontalAlign="center"
               verticalAlign="center"
             >
+              {/* l-mirage is a web component registered by ldrs. TypeScript does not recognize it, so we suppress the error. */}
+              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+              {/* @ts-ignore */}
               <l-mirage size={80} color="#a0a0a0" />
             </Horizontal>
           )}

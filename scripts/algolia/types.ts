@@ -1,4 +1,4 @@
-export interface AlgoliaHit {
+export interface AlgoliaHit extends Record<string, unknown> {
   excerpt: string;
   title: string;
   coverImage: string;

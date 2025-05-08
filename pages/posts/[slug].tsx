@@ -125,7 +125,8 @@ const PostPage = ({ post, html }: Props) => {
               components={{
                 img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
                   const { src, alt, width, height } = props;
-                  const safeSrc = typeof src === "string" ? src : "";
+                  const safeSrc =
+                    typeof src === "string" ? getRelativePathForPost(post.slug, src) : "";
                   if (width && height) {
                     return (
                       <span className="image-wrapper">

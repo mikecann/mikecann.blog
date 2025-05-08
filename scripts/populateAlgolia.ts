@@ -1,4 +1,4 @@
-import algoliasearch from "algoliasearch";
+import { algoliasearch } from "algoliasearch";
 import { config } from "../config/config";
 import { AlgoliaHit } from "./algolia/types";
 import { getAllPublishablePosts } from "./posts";
@@ -9,9 +9,9 @@ async function bootstrap() {
   if (!ALGOLIA_ADMIN_KEY) throw new Error(`missing algolia key!`);
 
   const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY);
-  const index = client.initIndex("next-mikecann");
+  const indexName = "next-mikecann";
 
-  await index.clearObjects();
+  await client.clearObjects({ indexName });
 
   const toAdd: AlgoliaHit[] = getAllPublishablePosts().map((e) => ({
     excerpt: e.content.substr(0, 5000),
@@ -25,7 +25,7 @@ async function bootstrap() {
   console.log(`adding ${toAdd.length} posts`);
 
   //console.log("indexing posts in algolia..");
-  await index.saveObjects(toAdd);
+  await client.saveObjects({ indexName, objects: toAdd });
 }
 
 bootstrap()

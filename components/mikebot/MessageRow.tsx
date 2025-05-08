@@ -60,6 +60,9 @@ export const MessageRow: React.FC<Props> = ({ message }) => {
               {message.status.kind == "finished" ||
               message.status.kind == "message_completion_errored" ? null : (
                 <div style={{ position: "absolute", bottom: "10px", right: "10px" }}>
+                  {/* l-bouncy is a web component registered by ldrs. TypeScript does not recognize it, so we suppress the error. */}
+                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                  {/* @ts-ignore */}
                   <l-bouncy size={20} color="#46b862" />
                 </div>
               )}

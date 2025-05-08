@@ -25,7 +25,7 @@ const About = ({ content }: Props) => (
       }}
     >
       <h1>About</h1>
-      <ReactMarkdown className="markdown-content" children={content} />
+      <ReactMarkdown children={content} />
     </Vertical>
   </ResponsiveSidebarLayouts>
 );
