@@ -119,134 +119,136 @@ const PostPage = ({ post, html }: Props) => {
                 style={{ height: 10, marginTop: 20, borderTop: `1px solid #ddd`, width: `10%` }}
               />
             </Horizontal>
-            <ReactMarkdown
-              children={html}
-              rehypePlugins={[rehypeRaw]}
-              components={{
-                img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
-                  const { src, alt, width, height } = props;
-                  const safeSrc =
-                    typeof src === "string" ? getRelativePathForPost(post.slug, src) : "";
-                  if (width && height) {
+            <div className="markdown-content">
+              <ReactMarkdown
+                children={html}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
+                    const { src, alt, width, height } = props;
+                    const safeSrc =
+                      typeof src === "string" ? getRelativePathForPost(post.slug, src) : "";
+                    if (width && height) {
+                      return (
+                        <span className="image-wrapper">
+                          <Image
+                            src={safeSrc}
+                            alt={alt ?? ""}
+                            width={Number(width)}
+                            height={Number(height)}
+                            style={{ maxWidth: "100%", height: "auto" }}
+                          />
+                        </span>
+                      );
+                    }
                     return (
-                      <span className="image-wrapper">
+                      <span
+                        className="image-wrapper"
+                        style={{
+                          position: "relative",
+                          display: "block",
+                          width: "100%",
+                          minHeight: 200,
+                        }}
+                      >
                         <Image
                           src={safeSrc}
                           alt={alt ?? ""}
-                          width={Number(width)}
-                          height={Number(height)}
-                          style={{ maxWidth: "100%", height: "auto" }}
+                          fill
+                          sizes="100vw"
+                          style={{ objectFit: "contain" }}
                         />
                       </span>
                     );
-                  }
-                  return (
-                    <span
-                      className="image-wrapper"
-                      style={{
-                        position: "relative",
-                        display: "block",
-                        width: "100%",
-                        minHeight: 200,
-                      }}
-                    >
-                      <Image
-                        src={safeSrc}
-                        alt={alt ?? ""}
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
+                  },
+                  h1: ({ ...props }) => {
+                    const slug = slugFromChildren(props.children);
+                    return (
+                      <h1
+                        id={slug}
+                        style={{ position: "relative", display: "flex", alignItems: "center" }}
+                      >
+                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                      </h1>
+                    );
+                  },
+                  h2: ({ ...props }) => {
+                    const slug = slugFromChildren(props.children);
+                    return (
+                      <h2
+                        id={slug}
+                        style={{ position: "relative", display: "flex", alignItems: "center" }}
+                      >
+                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                      </h2>
+                    );
+                  },
+                  h3: ({ ...props }) => {
+                    const slug = slugFromChildren(props.children);
+                    return (
+                      <h3
+                        id={slug}
+                        style={{ position: "relative", display: "flex", alignItems: "center" }}
+                      >
+                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                      </h3>
+                    );
+                  },
+                  h4: ({ ...props }) => {
+                    const slug = slugFromChildren(props.children);
+                    return (
+                      <h4
+                        id={slug}
+                        style={{ position: "relative", display: "flex", alignItems: "center" }}
+                      >
+                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                      </h4>
+                    );
+                  },
+                  h5: ({ ...props }) => {
+                    const slug = slugFromChildren(props.children);
+                    return (
+                      <h5
+                        id={slug}
+                        style={{ position: "relative", display: "flex", alignItems: "center" }}
+                      >
+                        <HeadingLink href={`#${slug}`} {...(props as any)} />
+                      </h5>
+                    );
+                  },
+                  code: ({ node, inline = false, className, children, ...props }: any) => {
+                    const match = /language-(\w+)/.exec(className || "");
+                    const { ref, ...rest } = props;
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        {...rest}
+                        customStyle={{ fontSize: "0.8em", borderRadius: 6 }}
+                        children={String(children).replace(/\n$/, "")}
+                        style={darcula}
+                        language={match[1]}
+                        PreTag="div"
                       />
-                    </span>
-                  );
-                },
-                h1: ({ ...props }) => {
-                  const slug = slugFromChildren(props.children);
-                  return (
-                    <h1
-                      id={slug}
-                      style={{ position: "relative", display: "flex", alignItems: "center" }}
-                    >
-                      <HeadingLink href={`#${slug}`} {...(props as any)} />
-                    </h1>
-                  );
-                },
-                h2: ({ ...props }) => {
-                  const slug = slugFromChildren(props.children);
-                  return (
-                    <h2
-                      id={slug}
-                      style={{ position: "relative", display: "flex", alignItems: "center" }}
-                    >
-                      <HeadingLink href={`#${slug}`} {...(props as any)} />
-                    </h2>
-                  );
-                },
-                h3: ({ ...props }) => {
-                  const slug = slugFromChildren(props.children);
-                  return (
-                    <h3
-                      id={slug}
-                      style={{ position: "relative", display: "flex", alignItems: "center" }}
-                    >
-                      <HeadingLink href={`#${slug}`} {...(props as any)} />
-                    </h3>
-                  );
-                },
-                h4: ({ ...props }) => {
-                  const slug = slugFromChildren(props.children);
-                  return (
-                    <h4
-                      id={slug}
-                      style={{ position: "relative", display: "flex", alignItems: "center" }}
-                    >
-                      <HeadingLink href={`#${slug}`} {...(props as any)} />
-                    </h4>
-                  );
-                },
-                h5: ({ ...props }) => {
-                  const slug = slugFromChildren(props.children);
-                  return (
-                    <h5
-                      id={slug}
-                      style={{ position: "relative", display: "flex", alignItems: "center" }}
-                    >
-                      <HeadingLink href={`#${slug}`} {...(props as any)} />
-                    </h5>
-                  );
-                },
-                code: ({ node, inline = false, className, children, ...props }: any) => {
-                  const match = /language-(\w+)/.exec(className || "");
-                  const { ref, ...rest } = props;
-                  return !inline && match ? (
-                    <SyntaxHighlighter
-                      {...rest}
-                      customStyle={{ fontSize: "0.8em", borderRadius: 6 }}
-                      children={String(children).replace(/\n$/, "")}
-                      style={darcula}
-                      language={match[1]}
-                      PreTag="div"
-                    />
-                  ) : (
-                    <code
-                      {...rest}
-                      className={className}
-                      style={{
-                        padding: "0.2em 0.4em",
-                        margin: "0",
-                        fontSize: "85%",
-                        backgroundColor: "rgb(161, 161, 161)",
-                        borderRadius: 6,
-                        color: "white",
-                      }}
-                    >
-                      {children}
-                    </code>
-                  );
-                },
-              }}
-              remarkPlugins={[gfm]}
-            />
+                    ) : (
+                      <code
+                        {...rest}
+                        className={className}
+                        style={{
+                          padding: "0.2em 0.4em",
+                          margin: "0",
+                          fontSize: "85%",
+                          backgroundColor: "rgb(161, 161, 161)",
+                          borderRadius: 6,
+                          color: "white",
+                        }}
+                      >
+                        {children}
+                      </code>
+                    );
+                  },
+                }}
+                remarkPlugins={[gfm]}
+              />
+            </div>
 
             <div
               style={{
