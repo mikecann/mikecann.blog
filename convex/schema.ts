@@ -65,15 +65,13 @@ export const blogPostSchema = v.object({
   slug: v.string(),
   title: v.string(),
   hash: v.string(),
-  createdAt: v.number(),
-  updatedAt: v.number(),
 });
 
 export const blogPostChunkSchema = v.object({
   postId: v.id("blogPosts"),
   chunkIndex: v.number(),
   content: v.string(),
-  createdAt: v.number(),
+  embedding: v.array(v.float64()),
 });
 
 export default defineSchema({
@@ -83,5 +81,13 @@ export default defineSchema({
   messages: defineTable(messageSchema).index("by_threadId", ["threadId"]),
   threads: defineTable(threadSchema).index("by_owningUserId", ["owningUserId"]),
   blogPosts: defineTable(blogPostSchema).index("by_slug", ["slug"]),
-  blogPostChunks: defineTable(blogPostChunkSchema).index("by_postId", ["postId"]),
+  blogPostChunks: defineTable(blogPostChunkSchema)
+    .index("by_postId", ["postId"])
+    .vectorIndex("by_embedding", {
+      vectorField: "embedding",
+      dimensions: 1536,
+    })
+    .searchIndex("search_body", {
+      searchField: "content",
+    }),
 });

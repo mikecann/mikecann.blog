@@ -6,14 +6,13 @@ import { api } from "../convex/_generated/api";
 import { ConvexHttpClient } from "convex/browser";
 import crypto from "crypto";
 import { Id } from "../convex/_generated/dataModel";
+import { ensure } from "../essentials/misc/ensure";
 
-const NEXT_PUBLIC_CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
-if (!NEXT_PUBLIC_CONVEX_URL)
-  throw new Error(
-    `Missing env NEXT_PUBLIC_CONVEX_URL, have you defined a .env file in the root of the project?`,
-  );
+const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_ADMIN_TOKEN");
 
-const client = new ConvexHttpClient(NEXT_PUBLIC_CONVEX_URL);
+const client = new ConvexHttpClient(
+  ensure(process.env.NEXT_PUBLIC_CONVEX_URL, "Missing env NEXT_PUBLIC_CONVEX_URL"),
+);
 
 function chunkContent(content: string, maxLen = 1500): string[] {
   const paragraphs = content.split(/\n\n+/);
@@ -44,7 +43,7 @@ async function main() {
     const hash = hashContent(content);
 
     // Get blog post by slug
-    const existing = await client.query(api.mikebot.queries.getBlogPostBySlug, { slug });
+    const existing = await client.query(api.blogPosts.queries.getBlogPostBySlug, { slug, token });
 
     const uploadChunks = async (postId: Id<"blogPosts">) => {
       // Chunk and upload
@@ -52,12 +51,13 @@ async function main() {
       console.log(`Post '${slug}' split into ${chunks.length} chunks, uploading...`);
       for (let i = 0; i < chunks.length; i++) {
         const chunk = chunks[i];
-        const res = await client.mutation(api.blogPosts.mutations.insertBlogPostChunk, {
+        await client.action(api.blogPosts.actions.generateEmbeddingAndCreateChunk, {
           postId,
           chunkIndex: i,
           content: chunk,
+          token,
         });
-        console.log(`  Uploaded chunk ${i + 1}/${chunks.length} (id: ${res.id})`);
+        console.log(`  Uploaded chunk ${i + 1}/${chunks.length}`);
       }
     };
 
@@ -66,6 +66,7 @@ async function main() {
         slug,
         title,
         hash,
+        token,
       });
       console.log(`Created new blog post '${slug}' (id: ${post._id})`);
       await uploadChunks(post._id);
@@ -79,6 +80,7 @@ async function main() {
 
     const delRes = await client.mutation(api.blogPosts.mutations.deleteChunksForPost, {
       postId: existing._id,
+      token,
     });
     if (delRes.deleted > 0) console.log(`Deleted ${delRes.deleted} old chunks for post '${slug}'`);
     await uploadChunks(existing._id);
