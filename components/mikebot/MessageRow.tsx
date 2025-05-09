@@ -1,7 +1,7 @@
 import { Grid, Horizontal, Vertical } from "../../components/utils/gls";
 import * as React from "react";
 import { Doc } from "../../convex/_generated/dataModel";
-import { MessageContent } from "./MessageContent";
+import { MessageContent } from "./content/MessageContent";
 import { bouncy } from "ldrs";
 import { HorizontalSpacer } from "gls";
 import { Message } from "@convex-dev/agent/validators";
@@ -14,8 +14,6 @@ interface Props {
 bouncy.register();
 
 export const MessageRow: React.FC<Props> = ({ message }) => {
-
-
   if (!message.message) return "Message missing!";
   if (message.message.role == "assistant")
     return (

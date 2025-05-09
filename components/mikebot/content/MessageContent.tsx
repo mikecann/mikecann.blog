@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Doc } from "../../convex/_generated/dataModel";
+import { Doc } from "../../../convex/_generated/dataModel";
 import Markdown from "react-markdown";
 import { style } from "typestyle";
-import { Annotation } from "../../convex/schema";
-import { iife } from "../../essentials/misc/misc";
+import { Annotation } from "../../../convex/schema";
+import { iife } from "../../../essentials/misc/misc";
 import { MessageDoc } from "@convex-dev/agent";
+import { ToolMessageContent } from "./ToolMessageContent";
 
 interface Props {
   message: MessageDoc;
@@ -44,6 +45,10 @@ export const MessageContent: React.FC<Props> = ({ message }) => {
   //   () => replaceAnnotationsWithLinks(message.message?.content ?? "", message.message?.annotations),
   //   [message.message?.content, message.message?.annotations]
   // );
+
+  if (!message.message) return null;
+
+  if (message.message.role == "tool") return <ToolMessageContent message={message} />;
 
   const processedText = iife(() => {
     const content = message.message?.content;
