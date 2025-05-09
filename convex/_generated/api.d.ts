@@ -10,6 +10,7 @@
 
 import type * as functions from "../functions.js";
 import type * as messages from "../messages.js";
+import type * as mikebot_actions from "../mikebot/actions.js";
 import type * as mikebot_lib from "../mikebot/lib.js";
 import type * as mikebot_mutations from "../mikebot/mutations.js";
 import type * as mikebot_queries from "../mikebot/queries.js";
@@ -36,6 +37,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   functions: typeof functions;
   messages: typeof messages;
+  "mikebot/actions": typeof mikebot_actions;
   "mikebot/lib": typeof mikebot_lib;
   "mikebot/mutations": typeof mikebot_mutations;
   "mikebot/queries": typeof mikebot_queries;

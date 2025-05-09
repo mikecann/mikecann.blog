@@ -4,15 +4,20 @@ import { Doc } from "../../convex/_generated/dataModel";
 import { MessageContent } from "./MessageContent";
 import { bouncy } from "ldrs";
 import { HorizontalSpacer } from "gls";
+import { Message } from "@convex-dev/agent/validators";
+import { MessageDoc } from "@convex-dev/agent";
 
 interface Props {
-  message: Doc<"messages">;
+  message: MessageDoc;
 }
 
 bouncy.register();
 
 export const MessageRow: React.FC<Props> = ({ message }) => {
-  if (message.speaker == "assistant")
+
+
+  if (!message.message) return "Message missing!";
+  if (message.message.role == "assistant")
     return (
       <div>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -57,8 +62,7 @@ export const MessageRow: React.FC<Props> = ({ message }) => {
               }}
             >
               <MessageContent message={message} />
-              {message.status.kind == "finished" ||
-              message.status.kind == "message_completion_errored" ? null : (
+              {message.status == "pending" && (
                 <div style={{ position: "absolute", bottom: "10px", right: "10px" }}>
                   {/* l-bouncy is a web component registered by ldrs. TypeScript does not recognize it, so we suppress the error. */}
                   {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}

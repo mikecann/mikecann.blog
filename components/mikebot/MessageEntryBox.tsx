@@ -1,17 +1,14 @@
 import { Grid, Vertical, Horizontal, Stretch } from "../../components/utils/gls";
 import * as React from "react";
-import { format } from "date-fns";
-import Link from "next/link";
 import { style } from "typestyle";
-import { useMutation } from "convex/react";
+import { useAction, useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { useSessionMutation } from "convex-helpers/react/sessions";
 import { Id } from "../../convex/_generated/dataModel";
 import { IoSendOutline } from "react-icons/io5";
 
 interface Props {
   userId: Id<"users"> | null | undefined;
-  threadId: Id<"threads"> | null | undefined;
+  threadId: string | null | undefined;
 }
 
 const textAreaStyle = style({
@@ -31,7 +28,7 @@ const textAreaStyle = style({
 
 export const MessageEntryBox: React.FC<Props> = ({ userId, threadId }) => {
   const [message, setMessage] = React.useState("");
-  const createMessage = useMutation(api.messages.sendMessageToThreadFromUser);
+  const createMessage = useAction(api.mikebot.actions.sendMessageToThreadFromUser);
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = () => {

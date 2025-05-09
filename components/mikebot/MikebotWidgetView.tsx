@@ -192,7 +192,7 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
             )}
           </Horizontal>
         </div>
-        {/* <div
+        <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -215,11 +215,12 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize }) => {
               horizontalAlign="center"
               verticalAlign="center"
             >
+              {/* @ts-ignore */}
               <l-mirage size={80} color="#a0a0a0" />
             </Horizontal>
           )}
-        </div> */}
-        {/* <MessageEntryBox userId={me?._id} threadId={threadQuery.data?._id} /> */}
+        </div>
+        <MessageEntryBox userId={me?._id} threadId={threadQuery.data?._id} />
       </div>
     </>
   );

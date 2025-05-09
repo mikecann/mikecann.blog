@@ -3,9 +3,11 @@ import { Doc } from "../../convex/_generated/dataModel";
 import Markdown from "react-markdown";
 import { style } from "typestyle";
 import { Annotation } from "../../convex/schema";
+import { iife } from "../../essentials/misc/misc";
+import { MessageDoc } from "@convex-dev/agent";
 
 interface Props {
-  message: Doc<"messages">;
+  message: MessageDoc;
 }
 
 const contentStyle = style({
@@ -38,10 +40,23 @@ const replaceAnnotationsWithLinks = (text: string, annotations: Annotation[] | u
 };
 
 export const MessageContent: React.FC<Props> = ({ message }) => {
-  const processedText = React.useMemo(
-    () => replaceAnnotationsWithLinks(message.text, message.annotations),
-    [message.text, message.annotations]
-  );
+  // const processedText = React.useMemo(
+  //   () => replaceAnnotationsWithLinks(message.message?.content ?? "", message.message?.annotations),
+  //   [message.message?.content, message.message?.annotations]
+  // );
+
+  const processedText = iife(() => {
+    const content = message.message?.content;
+    
+    if (!content) return "";
+    if (typeof content === "string") return content;
+    return content
+      .map((el) => {
+        if (el.type === "text") return el.text;       
+        return "unknown content type";
+      })
+      .join(",");
+  });
 
   return (
     <div className={contentStyle}>
