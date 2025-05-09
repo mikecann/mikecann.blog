@@ -8,6 +8,8 @@
  * @module
  */
 
+import type * as blogPosts_mutations from "../blogPosts/mutations.js";
+import type * as blogPosts_queries from "../blogPosts/queries.js";
 import type * as functions from "../functions.js";
 import type * as messages from "../messages.js";
 import type * as mikebot_actions from "../mikebot/actions.js";
@@ -35,6 +37,8 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "blogPosts/mutations": typeof blogPosts_mutations;
+  "blogPosts/queries": typeof blogPosts_queries;
   functions: typeof functions;
   messages: typeof messages;
   "mikebot/actions": typeof mikebot_actions;

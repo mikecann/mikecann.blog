@@ -4,12 +4,12 @@ import { Agent, ThreadDoc } from "@convex-dev/agent";
 import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
 
-const searchBlogPosts = async (ctx: QueryCtx, args: { query: string }) => {
-  const blogPosts = await ctx.runQuery(components.blog.searchBlogPosts, {
-    query: args.query,
-  });
-  return blogPosts;
-};
+// const searchBlogPosts = async (ctx: QueryCtx, args: { query: string }) => {
+//   const blogPosts = await ctx.runQuery(components.blog.searchBlogPosts, {
+//     query: args.query,
+//   });
+//   return blogPosts;
+// };
 
 export const createMikebotAgent = () => {
   const mikebotAgent = new Agent(components.agent, {
@@ -32,7 +32,7 @@ If you perform a retrieval and it returns multiple possible answers to the quest
 
 If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
     tools: {
-      searchBlogPosts: () => searchBlogPosts(ctx, args),
+      //searchBlogPosts: () => searchBlogPosts(ctx, args),
     },
   });
   return mikebotAgent;

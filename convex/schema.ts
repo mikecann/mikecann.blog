@@ -19,7 +19,7 @@ export const annotationSchema = v.union(
     openAIFileId: v.string(),
     text: v.string(),
     pageId: pageIdSchema,
-  })
+  }),
 );
 
 export type Annotation = typeof annotationSchema.type;
@@ -40,7 +40,7 @@ export const messageStatusSchema = v.union(
     at: v.number(),
     error: v.string(),
   }),
-  v.object({ kind: v.literal("finished") })
+  v.object({ kind: v.literal("finished") }),
 );
 
 export const threadSchema = v.object({
@@ -61,10 +61,27 @@ export const messageSchema = v.object({
   status: messageStatusSchema,
 });
 
+export const blogPostSchema = v.object({
+  slug: v.string(),
+  title: v.string(),
+  hash: v.string(),
+  createdAt: v.number(),
+  updatedAt: v.number(),
+});
+
+export const blogPostChunkSchema = v.object({
+  postId: v.id("blogPosts"),
+  chunkIndex: v.number(),
+  content: v.string(),
+  createdAt: v.number(),
+});
+
 export default defineSchema({
   users: defineTable({
     kind: v.literal("anonymous"),
   }),
   messages: defineTable(messageSchema).index("by_threadId", ["threadId"]),
   threads: defineTable(threadSchema).index("by_owningUserId", ["owningUserId"]),
+  blogPosts: defineTable(blogPostSchema).index("by_slug", ["slug"]),
+  blogPostChunks: defineTable(blogPostChunkSchema).index("by_postId", ["postId"]),
 });
