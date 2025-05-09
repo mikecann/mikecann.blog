@@ -47,13 +47,13 @@ export const MessageContent: React.FC<Props> = ({ message }) => {
 
   const processedText = iife(() => {
     const content = message.message?.content;
-    
+
     if (!content) return "";
     if (typeof content === "string") return content;
     return content
       .map((el) => {
-        if (el.type === "text") return el.text;       
-        return "unknown content type";
+        if (el.type === "text") return el.text;
+        return `unknown content type ${el.type}`;
       })
       .join(",");
   });

@@ -1,15 +1,22 @@
-import { components } from "../_generated/api";
+import { components, internal } from "../_generated/api";
 import { openai } from "@ai-sdk/openai";
-import { Agent, ThreadDoc } from "@convex-dev/agent";
+import { Agent, createTool, ThreadDoc, ToolCtx } from "@convex-dev/agent";
 import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
+import { z } from "zod";
 
-// const searchBlogPosts = async (ctx: QueryCtx, args: { query: string }) => {
-//   const blogPosts = await ctx.runQuery(components.blog.searchBlogPosts, {
-//     query: args.query,
-//   });
-//   return blogPosts;
-// };
+const searchBlogPosts = createTool({
+  description: "Search the blog posts for the given query",
+  args: z.object({
+    query: z.string(),
+  }),
+  handler: async (ctx, args) => {
+    const blogPosts: any = await ctx.runQuery(internal.blogPosts.internal.queries.textSearchBlogPosts, {
+      query: args.query,
+    });
+    return blogPosts;
+  },
+});
 
 export const createMikebotAgent = () => {
   const mikebotAgent = new Agent(components.agent, {
@@ -32,7 +39,7 @@ If you perform a retrieval and it returns multiple possible answers to the quest
 
 If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
     tools: {
-      //searchBlogPosts: () => searchBlogPosts(ctx, args),
+      searchBlogPosts,
     },
   });
   return mikebotAgent;

@@ -87,7 +87,5 @@ export default defineSchema({
       vectorField: "embedding",
       dimensions: 1536,
     })
-    .searchIndex("search_body", {
-      searchField: "content",
-    }),
+    .searchIndex("search_content", { searchField: "content" }),
 });
