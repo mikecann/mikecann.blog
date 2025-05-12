@@ -3,14 +3,33 @@ import { Horizontal } from "../../utils/gls";
 import { BubbleMessageContent } from "./BubbleMessageContent";
 import { HorizontalSpacer } from "gls";
 import { MessageDoc } from "@convex-dev/agent";
+import { ToolMessage } from "./ToolMessage";
 
 interface Props {
   message: MessageDoc;
 }
 
+const fadedStyle: React.CSSProperties = {
+  color: "#888",
+  fontSize: "0.97em",
+  display: "flex",
+  alignItems: "center",
+  gap: 6,
+  fontStyle: "italic",
+  opacity: 0.7,
+  margin: "6px 0",
+};
+
 export const AssistantMessage: React.FC<Props> = ({ message }) => {
   if (!message.message) return null;
   if (message.message.role != "assistant") return null;
+
+  // Don't show tool calls, they will be handled by the ToolMessage component
+  if (
+    typeof message.message.content == "object" &&
+    message.message.content.some((el) => el.type == "tool-call")
+  )
+    return null;
 
   return (
     <div>

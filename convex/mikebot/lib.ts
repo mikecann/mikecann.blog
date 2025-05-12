@@ -11,9 +11,12 @@ const searchBlogPosts = createTool({
     query: z.string(),
   }),
   handler: async (ctx, args) => {
-    const blogPosts: any = await ctx.runQuery(internal.blogPosts.internal.queries.textSearchBlogPosts, {
-      query: args.query,
-    });
+    const blogPosts: any = await ctx.runQuery(
+      internal.blogPosts.internal.queries.textSearchBlogPosts,
+      {
+        query: args.query,
+      },
+    );
     return blogPosts;
   },
 });
@@ -41,6 +44,7 @@ If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
     tools: {
       searchBlogPosts,
     },
+    maxSteps: 10,
   });
   return mikebotAgent;
 };

@@ -35,7 +35,7 @@ function hashContent(content: string): string {
 }
 
 async function main() {
-  const posts = getAllPublishablePosts().slice(0, 1);
+  const posts = getAllPublishablePosts().slice(0, 10);
   console.log(`Uploading ${posts.length} posts...`);
   for (const post of posts) {
     const { slug, content, meta } = post;
