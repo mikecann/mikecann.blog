@@ -6,6 +6,7 @@ import { bouncy } from "ldrs";
 import { HorizontalSpacer } from "gls";
 import { Message } from "@convex-dev/agent/validators";
 import { MessageDoc } from "@convex-dev/agent";
+import { ToolMessageContent } from "./content/ToolMessageContent";
 
 interface Props {
   message: MessageDoc;
@@ -15,6 +16,7 @@ bouncy.register();
 
 export const MessageRow: React.FC<Props> = ({ message }) => {
   if (!message.message) return "Message missing!";
+  
   if (message.message.role == "assistant")
     return (
       <div>
@@ -72,6 +74,13 @@ export const MessageRow: React.FC<Props> = ({ message }) => {
           </div>
         </div>
         <HorizontalSpacer />
+      </div>
+    );
+
+  if (message.message.role == "tool")
+    return (
+      <div style={{ display: "flex", justifyContent: "center", margin: "10px 0" }}>
+        <ToolMessageContent message={message} />
       </div>
     );
 

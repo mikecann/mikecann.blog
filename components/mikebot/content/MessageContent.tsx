@@ -48,7 +48,7 @@ export const MessageContent: React.FC<Props> = ({ message }) => {
 
   if (!message.message) return null;
 
-  if (message.message.role == "tool") return <ToolMessageContent message={message} />;
+  //console.log("message", message);
 
   const processedText = iife(() => {
     const content = message.message?.content;
@@ -58,6 +58,7 @@ export const MessageContent: React.FC<Props> = ({ message }) => {
     return content
       .map((el) => {
         if (el.type === "text") return el.text;
+        console.log(`Unknown content type ${el.type}`, { el, content });
         return `unknown content type ${el.type}`;
       })
       .join(",");
