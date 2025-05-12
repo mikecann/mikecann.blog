@@ -64,3 +64,37 @@ export const getBlogPostChunksByIds = internalQuery({
     return results.filter(isNotNullOrUndefined);
   },
 });
+
+export const getBlogPostChunksByTitle = internalQuery({
+  args: {
+    query: v.string(),
+  },
+  handler: async (ctx, args): Promise<BlogPostMatch[]> => {
+    // Use the search index for title
+    const matchingPosts = await ctx.db
+      .query("blogPosts")
+      .withSearchIndex("search_title", (q) => q.search("title", args.query))
+      .take(10);
+
+    const results = await Promise.all(
+      matchingPosts.map(async (post) => {
+        const chunk = await ctx.db
+          .query("blogPostChunks")
+          .withIndex("by_postId", (q) => q.eq("postId", post._id))
+          .order("asc")
+          .first();
+        if (!chunk) return null;
+        return {
+          blogPost: {
+            title: post.title,
+            slug: post.slug,
+            url: `https://www.mikecann.blog/posts/${post.slug}`,
+          },
+          chunkContent: chunk.content,
+        };
+      }),
+    );
+
+    return results.filter(isNotNullOrUndefined);
+  },
+});

@@ -80,7 +80,9 @@ export default defineSchema({
   }),
   messages: defineTable(messageSchema).index("by_threadId", ["threadId"]),
   threads: defineTable(threadSchema).index("by_owningUserId", ["owningUserId"]),
-  blogPosts: defineTable(blogPostSchema).index("by_slug", ["slug"]),
+  blogPosts: defineTable(blogPostSchema)
+    .index("by_slug", ["slug"])
+    .searchIndex("search_title", { searchField: "title" }),
   blogPostChunks: defineTable(blogPostChunkSchema)
     .index("by_postId", ["postId"])
     .vectorIndex("by_embedding", {
