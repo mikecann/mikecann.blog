@@ -5,21 +5,25 @@ import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
 import { z } from "zod";
 
-const searchBlogPosts = createTool({
-  description: "Search the blog posts for the given query",
-  args: z.object({
-    query: z.string(),
+export const mikebotTools = {
+  searchBlogPosts: createTool({
+    description: "Search the blog posts for the given query",
+    args: z.object({
+      query: z.string(),
+    }),
+    handler: async (ctx, args) => {
+      const blogPosts: any = await ctx.runQuery(
+        internal.blogPosts.internal.queries.textSearchBlogPosts,
+        {
+          query: args.query,
+        },
+      );
+      return blogPosts;
+    },
   }),
-  handler: async (ctx, args) => {
-    const blogPosts: any = await ctx.runQuery(
-      internal.blogPosts.internal.queries.textSearchBlogPosts,
-      {
-        query: args.query,
-      },
-    );
-    return blogPosts;
-  },
-});
+};
+
+
 
 export const createMikebotAgent = () => {
   const mikebotAgent = new Agent(components.agent, {
@@ -41,9 +45,7 @@ If asked a brief question you should give a similarly brief answer but invite mo
 If you perform a retrieval and it returns multiple possible answers to the question then list the different answers, DONT go into detail about a single one if there are multiple possibilities.
 
 If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
-    tools: {
-      searchBlogPosts,
-    },
+    tools: mikebotTools,
     maxSteps: 10,
   });
   return mikebotAgent;

@@ -4,6 +4,7 @@ import { BubbleMessageContent } from "./BubbleMessageContent";
 import { HorizontalSpacer } from "gls";
 import { MessageDoc } from "@convex-dev/agent";
 import { ToolMessage } from "./ToolMessage";
+import { iife } from "../../../essentials/misc/misc";
 
 interface Props {
   message: MessageDoc;
@@ -28,8 +29,35 @@ export const AssistantMessage: React.FC<Props> = ({ message }) => {
   if (
     typeof message.message.content == "object" &&
     message.message.content.some((el) => el.type == "tool-call")
-  )
-    return null;
+  ) {
+    const content = message.message.content.find((el) => el.type == "tool-call");
+    if (!content) return null;
+    return (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={fadedStyle}>
+          <span role="img" aria-label="tool" style={{ opacity: 0.5 }}>
+            🛠️
+          </span>
+          {iife(() => {
+            if (content.toolName == "searchBlogPosts" && "query" in content.args) {
+              console.log("searchBlogPosts", content);
+              return (
+                <>
+                  Mikebot searched for{" "}
+                  <span style={{ fontWeight: 500 }}>"{content.args.query}"</span>
+                </>
+              );
+            }
+            return (
+              <>
+                Mikebot used <span style={{ fontWeight: 500 }}>{content.toolName}</span>
+              </>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>

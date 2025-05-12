@@ -1,6 +1,6 @@
 import * as React from "react";
 import { MessageDoc } from "@convex-dev/agent";
-import { exhaustiveCheck } from "../../../essentials/misc/misc";
+import { exhaustiveCheck, iife } from "../../../essentials/misc/misc";
 
 interface Props {
   message: MessageDoc;
@@ -29,7 +29,13 @@ export const ToolMessage: React.FC<Props> = ({ message }) => {
               <span role="img" aria-label="tool" style={{ opacity: 0.5 }}>
                 🛠️
               </span>
-              Mikebot used <span style={{ fontWeight: 500 }}>{content.toolName}</span>
+              {iife(() => {
+                return (
+                  <>
+                    Mikebot used <span style={{ fontWeight: 500 }}>{content.toolName}</span>
+                  </>
+                );
+              })}
             </div>
           );
         }

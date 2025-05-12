@@ -23,7 +23,7 @@ export const MessageRow: React.FC<Props> = ({ message }) => {
 
   if (message.message.role == "assistant") return <AssistantMessage message={message} />;
 
-  if (message.message.role == "tool") return <ToolMessage message={message} />;
+  if (message.message.role == "tool") return null; // <ToolMessage message={message} />;
 
   if (message.message.role == "user") return <UserMessage message={message} />;
 
