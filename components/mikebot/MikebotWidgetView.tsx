@@ -2,7 +2,7 @@
 import { Grid, Horizontal } from "../../components/utils/gls";
 import * as React from "react";
 import { style } from "typestyle";
-import { MessageRow } from "./MessageRow";
+import { MessageRow } from "./messages/MessageRow";
 import { MessageEntryBox } from "./MessageEntryBox";
 import { useMe } from "./MikebotMeProvider";
 import { useMutation, useQuery } from "convex/react";

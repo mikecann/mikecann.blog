@@ -5,7 +5,7 @@ import { style } from "typestyle";
 import { Annotation } from "../../../convex/schema";
 import { iife } from "../../../essentials/misc/misc";
 import { MessageDoc } from "@convex-dev/agent";
-import { ToolMessageContent } from "./ToolMessageContent";
+import { ToolMessage } from "./ToolMessage";
 
 interface Props {
   message: MessageDoc;
@@ -40,7 +40,7 @@ const replaceAnnotationsWithLinks = (text: string, annotations: Annotation[] | u
   return result;
 };
 
-export const MessageContent: React.FC<Props> = ({ message }) => {
+export const BubbleMessageContent: React.FC<Props> = ({ message }) => {
   // const processedText = React.useMemo(
   //   () => replaceAnnotationsWithLinks(message.message?.content ?? "", message.message?.annotations),
   //   [message.message?.content, message.message?.annotations]

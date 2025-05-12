@@ -17,11 +17,11 @@ const fadedStyle: React.CSSProperties = {
   margin: "6px 0",
 };
 
-export const ToolMessageContent: React.FC<Props> = ({ message }) => {
+export const ToolMessage: React.FC<Props> = ({ message }) => {
   if (message.message?.role != "tool") return null;
 
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       {message.message.content.map((content, idx) => {
         if (content.type === "tool-result") {
           return (

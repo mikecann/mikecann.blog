@@ -3,7 +3,7 @@ import * as React from "react";
 import { Id } from "../../convex/_generated/dataModel";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { MessageRow } from "./MessageRow";
+import { MessageRow } from "./messages/MessageRow";
 import { style } from "typestyle";
 
 interface Props {
@@ -98,8 +98,6 @@ export const MessagesList: React.FC<Props> = ({ threadId, userId, isMaximized })
     >
       {messages?.page
         .map((threadMessage) => {
-     
-          
           return <MessageRow key={threadMessage._id} message={threadMessage} />;
         })
         .filter((m) => m != null)}
