@@ -4,6 +4,7 @@ import { Agent, createTool, ThreadDoc, ToolCtx } from "@convex-dev/agent";
 import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
 import { z } from "zod";
+import { BlogPostMatch } from "../blogPosts/internal/queries";
 
 export const mikebotTools = {
   searchBlogPosts: createTool({
@@ -12,8 +13,8 @@ export const mikebotTools = {
       query: z.string(),
     }),
     handler: async (ctx, args) => {
-      const blogPosts: any = await ctx.runQuery(
-        internal.blogPosts.internal.queries.textSearchBlogPosts,
+      const blogPosts: BlogPostMatch[] = await ctx.runAction(
+        internal.blogPosts.internal.actions.textAndVectorSearchBlogPosts,
         {
           query: args.query,
         },
@@ -23,12 +24,10 @@ export const mikebotTools = {
   }),
 };
 
-
-
 export const createMikebotAgent = () => {
   const mikebotAgent = new Agent(components.agent, {
     name: "Mikebot",
-    chat: openai.chat("gpt-4o-mini"),
+    chat: openai.chat("gpt-4o"),
     textEmbedding: openai.embedding("text-embedding-3-small"),
     instructions: `You are Mikebot a helpful assistant embedded on the blog of Michael Cann.
     
@@ -37,6 +36,8 @@ Your role is to help the user with their questions about Michael Cann a software
 You have access to multiple tools that will let you retrieve every blog post written by Michael which contains all the information you need. 
 
 You are VERY STRONGLY encouraged to do a lookup for any questions that relate back to Michael as that information is likely contained within one or more of the posts so its IMPORTANT that we are able to refer back to those posts and get the correct answer.
+
+If you do searchBlogPosts then please inspect the blog post chunks that are returned and do an assessment if you think they are contained or not. Please be pretty certain, its more important to be correct here rather than link to a post that doesn't contain the answer. DO NOT include the blog posts in your response, if they are not relevant, just omi them, dont tell me that they are not relevant.
 
 Respond in a casual, humorous yet knowledgeable tone. Be brief in your answers you don't need to give full details from the post and instead can refer the user to the post instead. 
 

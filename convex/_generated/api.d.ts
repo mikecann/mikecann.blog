@@ -9,6 +9,7 @@
  */
 
 import type * as blogPosts_actions from "../blogPosts/actions.js";
+import type * as blogPosts_internal_actions from "../blogPosts/internal/actions.js";
 import type * as blogPosts_internal_mutations from "../blogPosts/internal/mutations.js";
 import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.js";
 import type * as blogPosts_lib from "../blogPosts/lib.js";
@@ -42,6 +43,7 @@ import type {
  */
 declare const fullApi: ApiFromModules<{
   "blogPosts/actions": typeof blogPosts_actions;
+  "blogPosts/internal/actions": typeof blogPosts_internal_actions;
   "blogPosts/internal/mutations": typeof blogPosts_internal_mutations;
   "blogPosts/internal/queries": typeof blogPosts_internal_queries;
   "blogPosts/lib": typeof blogPosts_lib;
