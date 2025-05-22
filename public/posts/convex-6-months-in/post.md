@@ -99,4 +99,4 @@ As for Convex, how have they found things working with me so far away? Im not su
 
 I am still regularly pinching myself that I am lucky enough to work for a company I had admired from afar for so long. Being able to work on the cutting edge of the tech that has driven me my whole career is a dream come true.
 
-So although being a video content creator does'nt come naturally to me im going to give it my all and try to continue to improve not only my content production but try to do whatever I can to make Convex succeed.
+So although being a video content creator doesn't come naturally to me im going to give it my all and try to continue to improve not only my content production but try to do whatever I can to make Convex succeed.
