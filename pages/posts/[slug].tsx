@@ -170,67 +170,62 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                       </span>
                     );
                   },
-                  h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
+                  h1: ({ ...props }) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h1
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink slug={slug} />
-                        {props.children}
+                        <HeadingLink slug={slug} {...(props as any)} />
                       </h1>
                     );
                   },
-                  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
+                  h2: ({ ...props }) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h2
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink slug={slug} />
-                        {props.children}
+                        <HeadingLink slug={slug} {...(props as any)} />
                       </h2>
                     );
                   },
-                  h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
+                  h3: ({ ...props }) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h3
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink slug={slug} />
-                        {props.children}
+                        <HeadingLink slug={slug} {...(props as any)} />
                       </h3>
                     );
                   },
-                  h4: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
+                  h4: ({ ...props }) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h4
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink slug={slug} />
-                        {props.children}
+                        <HeadingLink slug={slug} {...(props as any)} />
                       </h4>
                     );
                   },
-                  h5: (props: React.HTMLAttributes<HTMLHeadingElement>) => {
+                  h5: ({ ...props }) => {
                     const slug = slugFromChildren(props.children);
                     return (
                       <h5
                         id={slug}
                         style={{ position: "relative", display: "flex", alignItems: "center" }}
                       >
-                        <HeadingLink slug={slug} />
-                        {props.children}
+                        <HeadingLink slug={slug} {...(props as any)} />
                       </h5>
                     );
                   },
-                  code: ({ inline, className, children, ...props }: any) => {
+                  code: ({ node, inline = false, className, children, ...props }: any) => {
                     const match = /language-(\w+)/.exec(className || "");
                     const { ref, ...rest } = props;
                     return !inline && match ? (
