@@ -65,7 +65,7 @@ I keep trying to compare myself to other content creators like [Theo Browne](htt
 
 Theo's ability to pump out content while also working fulltime is just phenomenal. I am in true admiration how is able to confidently talk and explain something while continuing to keep it entertaining and do it at such a pace that he is able to do a video per day.
 
-I am currently aiming to do 2 videos per week. My videos are quite varied but they generally involve some sort of research, script writing, coding, filming then editing process.
+I am currently aiming to do 2+ videos per week. My videos are quite varied but they generally involve some sort of research, script writing, coding, filming then editing process.
 
 I generally find the research and coding process fun and comfortable. I should do really as it what I have done for most of my career.
 
