@@ -55,6 +55,8 @@ Thus far I have created 17 long-form videos and 11 short-form videos and 5 stack
 
 If you are interested heres a link to where im tracking it all: https://mikeysee.notion.site/Mikes-Completed-Convex-Content-1fafd70ecfa080c7814bf5239168530c?pvs=4
 
+I should also just note here that I have also been doing a few other non-content related things such as some documentation work, some coding fixing or upgrading existing features and some customer / community support. But in the main I have been making content.
+
 # Things im discovering about myself
 
 So far this position had pushed me way out of my comfort zone. For 6 years while I was working at Gangbusters I was in my happy place just sat in front of a keyboard smashing out the code barely talking or interacting with anyone.
@@ -93,7 +95,7 @@ As for the work itself: I get it that certain positions, particularly in games c
 
 But my role right now seems to be working just fine with me in isolation. Im often able to work on a video without lots of contact from the rest of the team. Sure there are moments where I am working on a video about a Convex feature thats not fully finished so there is a bit of back and forth required but generally hopping on a quick Zoom call is all it takes to unblock me.
 
-As for Convex, how have they found things working with me so far away? 
+As for Convex, how have they found things working with me so far away?
 
 Im not sure, I guess you would have to know then for sure but I think its been okay. It is likely frustrating for them having to schedule meetings late in their day just so they can catch me in the short window im online in my early morning but I think in the most part its worked out okay.
 
