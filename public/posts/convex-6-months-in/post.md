@@ -10,7 +10,7 @@ title: Convex 6 Months In
 
 [It's been 6 months](/posts/hello-convex) since I joined Convex as a Developer Experience Engineer, so I thought it was time to share what I've been up to and how things are going.
 
-**# What Is Convex Again?**
+# What Is Convex Again?
 
 Quick reminder: Convex is a developer-focused database and cloud compute platform. Think Firebase, Supabase, AWS, that kind of thing.
 
@@ -20,7 +20,7 @@ When Gangbusters [unfortunately ran out of funding](/posts/hello-convex#whats-ha
 
 After a few rounds of interviews, they brought me on as a trial... and well, I haven't been fired yet, so I think I'm doing okay :)
 
-**# What have I been doing?**
+# What have I been doing?
 
 When I joined, I knew roughly what the role entailed: creating content to attract new developers and help others understand and thrive with Convex.
 
@@ -57,7 +57,7 @@ If you're interested, here's where I'm tracking it all: [https://mikeysee.notion
 
 I should mention that I've also been doing some non-content work: documentation, fixing and upgrading features, and customer/community support. But content creation has been my main focus.
 
-**# Things I'm discovering about myself**
+# Things I'm discovering about myself
 
 This position has pushed me way out of my comfort zone. For 6 years at Gangbusters, I was in my happy place, just sitting at my keyboard, coding away, barely talking to anyone.
 
@@ -79,7 +79,7 @@ While I don't mind scripting and reading, there's a knack to making it sound nat
 
 Ad-libbing videos leaves me feeling stressed and pressured, worried that I'm not saying what I meant to say, or that I'm rambling, or not sounding confident enough. This is definitely an area for improvement. Maybe more public speaking would help me gain confidence speaking without a script?
 
-**# How's the remote thing going?**
+# How's the remote thing going?
 
 Well, there are two parts to that question: how's it going for me, and how's it going for Convex?
 
@@ -99,7 +99,7 @@ As for Convex's perspective on working with someone so far away?
 
 I'm not sure, you'd have to ask them, but I think it's been okay. It's probably frustrating having to schedule late-day meetings to catch me during my early morning window, but overall it seems to be working out.
 
-**# Conclusion**
+# Conclusion
 
 I still pinch myself that I get to work for a company I admired from afar for so long. Working at the cutting edge of technology that has driven my whole career is a dream come true.
 
