@@ -89,11 +89,13 @@ I do try hard to be as social as I can outside of work. Its an effort, I have to
 
 Having said that however I don't miss lots of other things such as the commute and other inefficiencies and distractions you get when you are forced to be on site.
 
-As for the work itself I get it that certain positions, particularly in games companies, benefit from being in person. When I was at Playdemic there were lots of times that ideas came about just because I happened to be walking past someones desk and saw what they were working on and had a discussion.
+As for the work itself: I get it that certain positions, particularly in games companies, benefit from being in person. When I was at Playdemic there were lots of times that ideas came about just because I happened to be walking past someones desk and saw what they were working on and had a discussion.
 
-But my role right now seems to be working just fine with me in isolation. Im often able to just work on a video without lots of contact from the rest of the team. Sure there are moments where I am working on something thats not fully finished so there is a bit of back and forth required but hopping on a quick Zoom call is usually all it takes to unblock me.
+But my role right now seems to be working just fine with me in isolation. Im often able to work on a video without lots of contact from the rest of the team. Sure there are moments where I am working on a video about a Convex feature thats not fully finished so there is a bit of back and forth required but generally hopping on a quick Zoom call is all it takes to unblock me.
 
-As for Convex, how have they found things working with me so far away? Im not sure entirely its hard for me to know exactly but I think its been okay. It is likely frustrating for them having to schedule meetings late in their day just so they can catch me in the short window im online in my early morning but I think in the most part its worked out okay.
+As for Convex, how have they found things working with me so far away? 
+
+Im not sure, I guess you would have to know then for sure but I think its been okay. It is likely frustrating for them having to schedule meetings late in their day just so they can catch me in the short window im online in my early morning but I think in the most part its worked out okay.
 
 # Conclusion
 
