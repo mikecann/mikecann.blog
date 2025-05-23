@@ -85,7 +85,7 @@ For me its fine. I'm used to working remote. I've been doing it for the best par
 
 There are times I kind of wish that I was closer just for the bonding and comradery aspect. It was one thing that I used to love while working at Playdemic back in the UK. Its just that human-to-human contact that is a touch lacking over a Zoom call.
 
-I do try hard to be as social as I can outside of work. Its an effort, I have to really work at it but I feed an anxiety and a hole in my life if I don't. Im not sure if that makes me an extrovert or an introvert 🤷 all I know if I need it.
+I do try hard to be as social as I can outside of work. Its an effort, I have to really work at it but I feed an anxiety and a hole in my life if I don't. Im not sure if that makes me an extrovert or an introvert 🤷 all I know is, I need it.
 
 Having said that however I don't miss lots of other things such as the commute and other inefficiencies and distractions you get when you are forced to be on site.
 
