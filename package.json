@@ -9,7 +9,7 @@
     "dev": "concurrently --names \"next,convex\" --prefix-colors \"cyan,magenta\" \"bun run dev:next\" \"bun run dev:convex\"",
     "dev:next": "next dev",
     "dev:convex": "convex dev",
-    "build-and-deploy": "bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && next build",
+    "build-and-deploy": "bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && bun run uploadsPostsToConvex && next build",
     "start": "next start",
     "dev:ts": "tsc --noEmit -w",
     "generateRSS": "bun run ./scripts/generateRSS.ts",
