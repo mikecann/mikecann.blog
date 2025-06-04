@@ -39,7 +39,9 @@ function chunkContent(content: string, maxLen = 1500): string[] {
 }
 
 function hashContent(content: string): string {
-  return crypto.createHash("sha256").update(content).digest("hex");
+  // Normalize line endings to ensure consistent hashes across different OS
+  const normalizedContent = content.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  return crypto.createHash("sha256").update(normalizedContent).digest("hex");
 }
 
 async function main() {
@@ -113,6 +115,15 @@ async function main() {
     });
     if (delRes.deleted > 0) console.log(`Deleted ${delRes.deleted} old chunks for post '${slug}'`);
     await uploadChunks(existing._id);
+
+    // Update the post with new hash and title
+    await client.mutation(api.blogPosts.mutations.patchBlogPost, {
+      postId: existing._id,
+      title,
+      hash,
+      token,
+    });
+    console.log(`Updated blog post '${slug}' with new hash`);
   }
   console.log("Done.");
   process.exit(0);
