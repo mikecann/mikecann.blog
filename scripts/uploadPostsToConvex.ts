@@ -44,14 +44,36 @@ function hashContent(content: string): string {
 
 async function main() {
   const posts = getAllPublishablePosts(); //..slice(0, 10);
-  console.log(`Uploading ${posts.length} posts...`);
-  for (const post of posts) {
+  console.log(`Found ${posts.length} posts...`);
+
+  // First, batch check which posts need processing
+  console.log("Checking which posts need processing...");
+  const postChecks = posts.map((post) => ({
+    slug: post.slug,
+    hash: hashContent(post.content),
+  }));
+
+  const checkResults = await client.query(api.blogPosts.queries.checkBlogPostsNeedProcessing, {
+    posts: postChecks,
+    token,
+  });
+
+  // Filter to only posts that need processing
+  const postsToProcess = posts.filter((post) => {
+    const checkResult = checkResults.find((r) => r.slug === post.slug);
+    return checkResult?.needsProcessing;
+  });
+
+  const skippedCount = posts.length - postsToProcess.length;
+  console.log(
+    `${postsToProcess.length} posts need processing, ${skippedCount} posts are up to date`,
+  );
+
+  // Now process only the posts that need it
+  for (const post of postsToProcess) {
     const { slug, content, meta } = post;
     const title = meta.title;
     const hash = hashContent(content);
-
-    // Get blog post by slug
-    const existing = await client.query(api.blogPosts.queries.getBlogPostBySlug, { slug, token });
 
     const uploadChunks = async (postId: Id<"blogPosts">) => {
       // Chunk and upload
@@ -69,6 +91,9 @@ async function main() {
       }
     };
 
+    // Check if this post exists (we already know from batch check, but need the actual post object)
+    const existing = await client.query(api.blogPosts.queries.getBlogPostBySlug, { slug, token });
+
     if (!existing) {
       const post = await client.mutation(api.blogPosts.mutations.createBlogPost, {
         slug,
@@ -81,11 +106,7 @@ async function main() {
       continue;
     }
 
-    if (existing.hash === hash) {
-      console.log(`Post '${slug}' unchanged, skipping chunks.`);
-      continue;
-    }
-
+    // If we get here, the post exists but hash doesn't match
     const delRes = await client.mutation(api.blogPosts.mutations.deleteChunksForPost, {
       postId: existing._id,
       token,
