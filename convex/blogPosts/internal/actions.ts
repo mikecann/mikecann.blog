@@ -73,9 +73,6 @@ export const textAndVectorSearchBlogPosts = internalAction({
     });
     scores.sort((a, b) => b.score - a.score);
 
-    // Log scores for debugging
-    console.log("textAndVectorSearchBlogPosts scores:", scores);
-
     // Build merged results in the same format as textResults
     const keyToItem = (itemList: BlogPostMatch[]) => {
       const map = new Map<string, BlogPostMatch>();
@@ -92,17 +89,23 @@ export const textAndVectorSearchBlogPosts = internalAction({
       score,
     }));
 
-    // console.log(
-    //   "search results",
-    //   merged
-    //     .map((o) => ({ slug: o.post?.blogPost.slug, score: o.score }))
-    //     .sort((a, b) => a.score - b.score),
-    // );
+    const excludeScoreThreshold = 0.015;
+
+    console.log(
+      `For query "${args.query}"`,
+      merged
+        .map((o) => ({
+          slug: o.post?.blogPost.slug,
+          score: o.score,
+          isExcluded: o.score < excludeScoreThreshold,
+        }))
+        .sort((a, b) => a.score - b.score),
+    );
 
     // Lets not show results that are below a certain threshold
     return merged
       .map((o) => {
-        if (o.score < 0.2) return null;
+        if (o.score < excludeScoreThreshold) return null;
         return o.post;
       })
       .filter(isNotNullOrUndefined);
