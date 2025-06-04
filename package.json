@@ -13,7 +13,7 @@
     "start": "next start",
     "dev:ts": "tsc --noEmit -w",
     "generateRSS": "bun run ./scripts/generateRSS.ts",
-    "uploadsPostsToConvexProduction": "bun run ./scripts/uploadPostsToConvex.ts --production",
+    "uploadsPostsToConvex": "bun run ./scripts/uploadPostsToConvex.ts",
     "populateAlgolia": "bun run ./scripts/populateAlgolia.ts",
     "checkLinks": "bun run blc http://localhost:3000 -ro --exclude https://www.linkedin.com/in/mikecann",
     "compress:all:lossless": "optimizt --lossless ./public",
