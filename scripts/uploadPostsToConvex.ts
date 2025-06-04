@@ -10,8 +10,16 @@ import { ensure } from "../essentials/misc/ensure";
 
 const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_ADMIN_TOKEN");
 
+const isProd = Bun.argv[2] == "--production";
+
+const convexURL = isProd
+  ? process.env.NEXT_PUBLIC_CONVEX_URL_PROD
+  : process.env.NEXT_PUBLIC_CONVEX_URL;
+
+console.log("Uploading blog posts to", isProd ? "production" : "development");
+
 const client = new ConvexHttpClient(
-  ensure(process.env.NEXT_PUBLIC_CONVEX_URL, "Missing env NEXT_PUBLIC_CONVEX_URL"),
+  ensure(convexURL, `Missing env NEXT_PUBLIC_CONVEX_URL${isProd ? "_PROD" : ""}`),
 );
 
 function chunkContent(content: string, maxLen = 1500): string[] {

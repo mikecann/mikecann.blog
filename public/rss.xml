@@ -4,8 +4,96 @@
         <description><![CDATA[Blog - Mike Cann]]></description>
         <link>https://mikecann.blog</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 08 Aug 2024 06:28:06 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 04 Jun 2025 02:15:24 GMT</lastBuildDate>
         <atom:link href="https://mikecann.blog/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Convex 6 Months In]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/convex-6-months-in</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/convex-6-months-in</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Thu, 22 May 2025 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Homework is Dumb]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/homework-is-dumb</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/homework-is-dumb</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Fri, 25 Apr 2025 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Always Listening: A Month with the Bee Pioneer AI Wearable]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/always-listening-a-month-with-the-bee-computer-ai-assistant</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/always-listening-a-month-with-the-bee-computer-ai-assistant</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Thu, 13 Mar 2025 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[This Is How We Create Skynet]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/this-is-how-we-create-skynet</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/this-is-how-we-create-skynet</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Wed, 19 Feb 2025 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Missing Piece of AGI: Why Self-Doubt Matters?]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/the-missing-piece-of-AGI-why-self-doubt-matters</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/the-missing-piece-of-AGI-why-self-doubt-matters</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Sun, 12 Jan 2025 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hello Convex]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/hello-convex</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/hello-convex</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Mon, 02 Dec 2024 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mikebot - The Virtual Me]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/mikebot-the-virtual-me</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/mikebot-the-virtual-me</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Tue, 12 Nov 2024 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BattleTabs Global Launch on iOS and Android!]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/battletabs-global-launch-on-ios-android</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/battletabs-global-launch-on-ios-android</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Tue, 05 Nov 2024 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tinkering With Replit Agents]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/tinkering-with-replit-agents</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/tinkering-with-replit-agents</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Fri, 04 Oct 2024 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BattleTabs Global Launch on Discord Activities]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/battletabs-global-launch-on-discord-activities</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/battletabs-global-launch-on-discord-activities</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Tue, 17 Sep 2024 07:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Introducing StashIt]]></title>
+            <description><![CDATA[...]]></description>
+            <link>https://mikecann.blog/posts/introducing-stashit</link>
+            <guid isPermaLink="false">https://mikecann.blog/posts/introducing-stashit</guid>
+            <dc:creator><![CDATA[Mike Cann]]></dc:creator>
+            <pubDate>Sun, 11 Aug 2024 07:31:40 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Whisper Farm - Parallel Transcription]]></title>
             <description><![CDATA[...]]></description>
@@ -1879,7 +1967,7 @@ Post To Tumblr is an extension for the Chrome Browser. It started off as a simpl
         <item>
             <title><![CDATA[Taming Unity]]></title>
             <description><![CDATA[
-[![logo](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)
+![logo](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)
 
 For the last couple of months I have been working on a few different things including many new releases of [Post To Tumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en). Most of my time however has been spent working on an unnamed (as of yet) game in Unity.
 
@@ -1916,7 +2004,7 @@ While I was travelling I have had a great many people contact me about my popula
         <item>
             <title><![CDATA[New Hosting, New Theme!]]></title>
             <description><![CDATA[
-[![hero](https://www.mikecann.blog/wp-content/uploads/2014/03/hero.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/hero.png)
+![hero](https://www.mikecann.blog/wp-content/uploads/2014/03/hero.png)
 
 In what appears to be an almost annual event I have decided to move hosting of my blog yet again! Im moving away from the £35 per month hosting of 1&amp;1 because although I like the freedom of having my own box that I can remote into i’m just finding it too expensive for me to justify having it. There are so many Platform as a Service (PaaS) options out there that provide high quality hosting cheaply I thought I would switch over....]]></description>
             <link>https://mikecann.blog/posts/new-hosting-new-theme</link>
@@ -1927,7 +2015,7 @@ In what appears to be an almost annual event I have decided to move hosting of m
         <item>
             <title><![CDATA[The Mystery of the Missing Disk Space]]></title>
             <description><![CDATA[
-[![screenshot_06](/wp-content/uploads/2014/02/screenshot_06.png)](/wp-content/uploads/2014/02/screenshot_06.png)
+![screenshot_06](/wp-content/uploads/2014/02/screenshot_06.png)
 
 For ages now I have been plagued with missing disk space. No matter how much space I freed up it always seemed to disappear but finally I have managed to solve it!
 
@@ -1965,7 +2053,7 @@ Well thats it. Im back now from a trip of a lifetime. I had such an incredible t
             <description><![CDATA[
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Jericoacoara to Newport](https://www.facebook.com/media/set/?set=a.10152177819916031.1073741862.593661030&type=1&l=aa502a700c). Each picture can be clicked to see a larger version and comment / like.**
 
-[![screenshot_01](/wp-content/uploads/2014/01/screenshot_011.png)](/wp-content/uploads/2014/01/screenshot_011.png)
+![screenshot_01](/wp-content/uploads/2014/01/screenshot_011.png)
 
 Sadly we had to leave Jericoacoara in the north of Brazil where we had spent the last 6 days but all was not lost at the next destination for us is arguably one of the best cities in South America, Rio de Janeiro.
 
@@ -1980,7 +2068,7 @@ Sadly we had to leave Jericoacoara in the north of Brazil where we had spent the
             <description><![CDATA[
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Itacare to Jericoacoara](https://www.facebook.com/media/set/?set=a.10152149614891031.1073741861.593661030&type=1&l=5726e155d9). Each picture can be clicked to see a larger version and comment / like.**
 
-[![screenshot_01](/wp-content/uploads/2014/01/screenshot_01.png)](/wp-content/uploads/2014/01/screenshot_01.png)
+![screenshot_01](/wp-content/uploads/2014/01/screenshot_01.png)
 
 Continuing my explorations of northern Brazil with Kelsie we travel from Itacare on bus then boat to the busy tourist destination of Morro do Sao Paulo.
 
@@ -2006,7 +2094,7 @@ Note: This is a condensed version of the pictures I took with some added narrati
             <description><![CDATA[
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album Trip 2013 - La Paz to Mercedes. Each picture can be clicked to see a larger version and comment / like.**
 
-[![screenshot_01](/wp-content/uploads/2013/12/screenshot_01.png)](/wp-content/uploads/2013/12/screenshot_01.png)
+![screenshot_01](/wp-content/uploads/2013/12/screenshot_01.png)
 
 We left our tour group in La Paz and continued on our own for the next week, time was tight as we had to be in Buenos Aires in just a few days to meet final tour group. I knew that no trip to South America is complete without a visit to the salt flats of Uyuni, Bolivia so we crowbared in a 3 day excursion into our schedule.
 
@@ -2330,7 +2418,7 @@ _Note: This is a condensed version of the pictures I took with some added narrat
         <item>
             <title><![CDATA[The Trip 2013 - Washington DC]]></title>
             <description><![CDATA[
-[![screenshot_02](/wp-content/uploads/2013/05/screenshot_02.png)](/wp-content/uploads/2013/05/screenshot_02.png)
+![screenshot_02](/wp-content/uploads/2013/05/screenshot_02.png)
 
 So my trip has finally started! I have not had anywhere near as much free time thus far as I thought I would have before I left. A great thing as there is no chance of me getting bored, it does however mean that I haven't had time to write the frequent blog posts I had promised.
 
@@ -5880,7 +5968,7 @@ Just some [more photos](https://picasaweb.google.com/mike.cann) of my latest com
         <item>
             <title><![CDATA[Picking and Bounding Boxes]]></title>
             <description><![CDATA[
-[![](https://www.mikecann.blog/Work/TDProject/engine06.png)](https://www.mikecann.blog/Work/TDProject/engine06.png)
+![](https://www.mikecann.blog/Work/TDProject/engine06.png)
 
 Got the next essential small step of the project in today, picking, that is selecting an object that exists within a 3D world from a mouse click in the 2D world. Found some really good resources for this including the [Hazy Mind](https://www.thehazymind.com/archives/2005/10/tutorial_9_picking_objects_fro.htm) site again and a new one I discovered by accident by [Charles Humphrey](https://randomchaosuk.blogspot.com/2007/05/engine-design-ray-picking.html). I had a little trouble at first with working out how to calculate a bounding box, but yet again the XNA community came to my rescue. Thanks to [Andy and his blog ](https://andyq.no-ip.com/blog/?p=16)I now have a custom content pipeline that generates a bounding box for my mesh automatically.
 
@@ -6091,7 +6179,7 @@ My good friend Jason sent me this today, and i just had to share it, madness!
         <item>
             <title><![CDATA[Killer space penguins!]]></title>
             <description><![CDATA[
-[![](https://www.mikecann.blog/Images/Others/spacepenguin.png)](https://www.mikecann.blog/Images/Others/spacepenguin.png)
+![](https://www.mikecann.blog/Images/Others/spacepenguin.png)
 
 Just to follow on from the previous post and to make it make a little more sense, here is a screenshot of the demo XNA space game i made in a day to show off my new particle engine SDK.
 
