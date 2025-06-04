@@ -24,7 +24,7 @@ export const DesktopSidebar: React.FC<Props> = ({}) => {
     <>
       <Background>
         <div
-          onClick={() => onOpenMikebot.dispatch()}
+          onClick={() => onOpenMikebot.dispatch("")}
           style={{
             cursor: "pointer",
             position: "relative",

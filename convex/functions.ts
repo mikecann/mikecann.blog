@@ -1,5 +1,5 @@
-import { customMutation, customQuery } from "convex-helpers/server/customFunctions";
-import { mutation, query } from "./_generated/server";
+import { customAction, customMutation, customQuery } from "convex-helpers/server/customFunctions";
+import { action, mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import { ensureFP } from "../essentials/misc/ensure";
 
@@ -22,3 +22,5 @@ export const mutationWithUser = customMutation(mutation, {
     return { ctx: { ...ctx, user }, args: {} };
   },
 });
+
+

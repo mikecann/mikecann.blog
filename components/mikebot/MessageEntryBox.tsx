@@ -1,17 +1,20 @@
 import { Grid, Vertical, Horizontal, Stretch } from "../../components/utils/gls";
 import * as React from "react";
-import { format } from "date-fns";
-import Link from "next/link";
 import { style } from "typestyle";
-import { useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import { useSessionMutation } from "convex-helpers/react/sessions";
-import { Id } from "../../convex/_generated/dataModel";
 import { IoSendOutline } from "react-icons/io5";
+import { Id } from "../../convex/_generated/dataModel";
+import { useMutation, insertAtTop } from "convex/react";
+import { api } from "../../convex/_generated/api";
+import { optimisticallySendMessage } from "@convex-dev/agent/react";
+import { createUserMessageJSON } from "./helpers";
+import { MessageDoc } from "../../node_modules/@convex-dev/agent/src/client";
+import { OptimisticLocalStore } from "convex/browser";
+import { ThreadQuery } from "../../node_modules/@convex-dev/agent/src/react/types";
 
 interface Props {
   userId: Id<"users"> | null | undefined;
-  threadId: Id<"threads"> | null | undefined;
+  threadId: string | null | undefined;
+  defaultMessage?: string | null;
 }
 
 const textAreaStyle = style({
@@ -29,19 +32,34 @@ const textAreaStyle = style({
   outline: "none", // Add this line to remove the outline when focused
 });
 
-export const MessageEntryBox: React.FC<Props> = ({ userId, threadId }) => {
-  const [message, setMessage] = React.useState("");
-  const createMessage = useMutation(api.messages.sendMessageToThreadFromUser);
+export const MessageEntryBox: React.FC<Props> = ({ userId, threadId, defaultMessage }) => {
+  const [message, setMessage] = React.useState(defaultMessage || "");
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
+  const sendMessage = useMutation(
+    api.mikebot.mutations.sendMessageToThreadFromUser,
+  ).withOptimisticUpdate((store, args) => {
+    optimisticallySendMessage(api.mikebot.queries.listMessagesForUserThread)(store, {
+      threadId: args.threadId,
+      prompt: args.message,
+    });
+    // optimisticallySendAssistantMessage(api.mikebot.queries.listMessagesForUserThread)(store, {
+    //   threadId: args.threadId,
+    // });
+  });
+
+  React.useEffect(() => {
+    if (!defaultMessage) return;
+    setMessage(defaultMessage);
+  }, [defaultMessage]);
+
   const handleSubmit = () => {
-    if (!userId || !threadId) return;
-    createMessage({
-      message,
-      userId,
+    if (!userId || !threadId || !message) return;
+    sendMessage({
+      message: createUserMessageJSON({ message, currentUrl: window.location.href }),
       threadId,
-      currentUrl: window.location.href,
-    }).catch(console.error);
+      userId,
+    });
     setMessage("");
   };
 
@@ -93,3 +111,42 @@ export const MessageEntryBox: React.FC<Props> = ({ userId, threadId }) => {
     </Horizontal>
   );
 };
+
+// export function optimisticallySendAssistantMessage(
+//   query: ThreadQuery<unknown, MessageDoc>,
+// ): (store: OptimisticLocalStore, args: { threadId: string }) => void {
+//   return (store, args) => {
+//     const queries = store.getAllQueries(query);
+//     let maxOrder = 0;
+//     let maxStepOrder = 0;
+//     for (const q of queries) {
+//       if (q.args?.threadId !== args.threadId) continue;
+//       if (q.args.streamArgs) continue;
+//       for (const m of q.value?.page ?? []) {
+//         maxOrder = Math.max(maxOrder, m.order);
+//         maxStepOrder = Math.max(maxStepOrder, m.stepOrder);
+//       }
+//     }
+//     const order = maxOrder + 1;
+//     const stepOrder = 0;
+//     insertAtTop({
+//       paginatedQuery: query,
+//       argsToMatch: { threadId: args.threadId, streamArgs: undefined },
+//       item: {
+//         _creationTime: Date.now(),
+//         _id: crypto.randomUUID(),
+//         order,
+//         stepOrder,
+//         status: "pending",
+//         threadId: args.threadId,
+//         tool: false,
+//         message: {
+//           role: "assistant",
+//           content: "",
+//         },
+//         text: "",
+//       },
+//       localQueryStore: store,
+//     });
+//   };
+// }

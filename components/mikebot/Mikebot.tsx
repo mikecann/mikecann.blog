@@ -3,7 +3,6 @@ import * as React from "react";
 import { MikebotWidgetView } from "./MikebotWidgetView";
 import { MikebotConvexProvider } from "./MikebotConvexProvider";
 import { MikebotMeProvider } from "./MikebotMeProvider";
-import { iife } from "../../essentials/misc/misc";
 import { MikebotMinimizedView } from "./MikebotMinimizedView";
 import { onOpenMikebot } from "./signals";
 
@@ -13,8 +12,15 @@ type View = "minimized" | "widget";
 
 const Mikebot: React.FC<Props> = ({}) => {
   const [view, setView] = React.useState<View>("minimized");
+  const [initialMessage, setInitialMessage] = React.useState<string | null>(null);
 
-  React.useEffect(() => onOpenMikebot.add(() => setView("widget")), []);
+  React.useEffect(() => {
+    return onOpenMikebot.add((message) => {
+      console.log("onOpenMikebot", message);
+      setInitialMessage(message);
+      setView("widget");
+    });
+  }, [setInitialMessage]);
 
   if (view == "minimized") return <MikebotMinimizedView onOpen={() => setView("widget")} />;
 
@@ -22,7 +28,10 @@ const Mikebot: React.FC<Props> = ({}) => {
     return (
       <MikebotConvexProvider>
         <MikebotMeProvider>
-          <MikebotWidgetView onMinimize={() => setView("minimized")} />;
+          <MikebotWidgetView
+            onMinimize={() => setView("minimized")}
+            initialMessage={initialMessage}
+          />
         </MikebotMeProvider>
       </MikebotConvexProvider>
     );

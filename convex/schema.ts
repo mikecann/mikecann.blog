@@ -19,7 +19,7 @@ export const annotationSchema = v.union(
     openAIFileId: v.string(),
     text: v.string(),
     pageId: pageIdSchema,
-  })
+  }),
 );
 
 export type Annotation = typeof annotationSchema.type;
@@ -40,7 +40,7 @@ export const messageStatusSchema = v.union(
     at: v.number(),
     error: v.string(),
   }),
-  v.object({ kind: v.literal("finished") })
+  v.object({ kind: v.literal("finished") }),
 );
 
 export const threadSchema = v.object({
@@ -61,10 +61,35 @@ export const messageSchema = v.object({
   status: messageStatusSchema,
 });
 
+export const blogPostSchema = v.object({
+  slug: v.string(),
+  title: v.string(),
+  hash: v.string(),
+});
+
+export const blogPostChunkSchema = v.object({
+  postId: v.id("blogPosts"),
+  chunkIndex: v.number(),
+  content: v.string(),
+  embedding: v.array(v.float64()),
+});
+
 export default defineSchema({
   users: defineTable({
     kind: v.literal("anonymous"),
   }),
-  messages: defineTable(messageSchema).index("by_threadId", ["threadId"]),
-  threads: defineTable(threadSchema).index("by_owningUserId", ["owningUserId"]),
+  pendingThreadUpdateNotifications: defineTable({
+    scheduledFunctionId: v.id("_scheduled_functions"),
+    threadId: v.string(),
+  }).index("by_threadId", ["threadId"]),
+  blogPosts: defineTable(blogPostSchema)
+    .index("by_slug", ["slug"])
+    .searchIndex("search_title", { searchField: "title" }),
+  blogPostChunks: defineTable(blogPostChunkSchema)
+    .index("by_postId", ["postId"])
+    .vectorIndex("by_embedding", {
+      vectorField: "embedding",
+      dimensions: 1536,
+    })
+    .searchIndex("search_content", { searchField: "content" }),
 });

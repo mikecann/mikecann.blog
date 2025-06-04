@@ -1,11 +1,28 @@
 import { makeUseQueryWithStatus } from "convex-helpers/react";
-import { useQueries, useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { useQueries } from "convex/react";
 
 export const useQueryWithStatus = makeUseQueryWithStatus(useQueries);
 
-export const useOptimisticSendMessage = () => {
-  return useMutation(api.messages.sendMessageToThreadFromUser).withOptimisticUpdate(
-    (localStore, args) => {}
+export type UserMessageJSON = {
+  context: {
+    currentUrl: string;
+  };
+  message: string;
+};
+
+export const createUserMessageJSON = (args: { message: string; currentUrl: string }): string => {
+  return JSON.stringify(
+    {
+      context: {
+        currentUrl: args.currentUrl,
+      },
+      message: args.message,
+    },
+    null,
+    2,
   );
+};
+
+export const parseUserMessageJSON = (message: string): UserMessageJSON => {
+  return JSON.parse(message);
 };

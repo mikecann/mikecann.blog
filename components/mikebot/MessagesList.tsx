@@ -3,13 +3,14 @@ import * as React from "react";
 import { Id } from "../../convex/_generated/dataModel";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { MessageRow } from "./MessageRow";
+import { MessageRow } from "./messages/MessageRow";
 import { style } from "typestyle";
+import { useThreadMessages } from "@convex-dev/agent/react";
+import { LoadMoreMessages } from "./messages/LoadMoreMessages";
 
 interface Props {
-  threadId: Id<"threads">;
+  threadId: string;
   userId: Id<"users">;
-  isMaximized: boolean;
 }
 
 const listStyles = style({
@@ -19,6 +20,8 @@ const listStyles = style({
   scrollbarWidth: "thin",
   scrollbarColor: "rgba(0,0,0,0.2) transparent",
   paddingTop: "10px",
+  scrollBehavior: "smooth",
+  scrollSnapType: "y proximity",
   $nest: {
     "&::-webkit-scrollbar": {
       width: "8px",
@@ -44,62 +47,36 @@ const listStyles = style({
   },
 });
 
-export const MessagesList: React.FC<Props> = ({ threadId, userId, isMaximized }) => {
-  const messages = useQuery(api.messages.listMessagesForUserThread, {
-    threadId,
-    userId,
-  });
+const snapEndStyle = style({
+  scrollSnapAlign: "end",
+});
 
-  const messagesEndRef = React.useRef<HTMLDivElement>(null);
-  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
-  const [isFirstLoad, setIsFirstLoad] = React.useState(true);
-  const [shouldScrollToBottom, setShouldScrollToBottom] = React.useState(true);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  React.useEffect(() => scrollToBottom(), [isMaximized]);
+export const MessagesList: React.FC<Props> = ({ threadId, userId }) => {
+  const messages = useThreadMessages(
+    api.mikebot.queries.listMessagesForUserThread,
+    { threadId, userId },
+    { initialNumItems: 10, stream: true },
+  );
 
   React.useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-
-    const handleScroll = () => {
-      const isScrolledToBottom =
-        Math.abs(
-          scrollContainer.scrollHeight - scrollContainer.scrollTop - scrollContainer.clientHeight
-        ) < 1;
-      setShouldScrollToBottom(isScrolledToBottom);
-    };
-
-    scrollContainer.addEventListener("scroll", handleScroll);
-    return () => scrollContainer.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  React.useEffect(() => {
-    if (!messages) return;
-
-    if (isFirstLoad) {
-      scrollToBottom();
-      setIsFirstLoad(false);
-    } else if (shouldScrollToBottom) {
-      scrollToBottom();
-    }
-  }, [messages, isFirstLoad, shouldScrollToBottom]);
+    console.log(`MESSAGES`, messages.status, messages.results);
+  }, [messages.results]);
 
   return (
     <Vertical
       spacing="10px"
       width="100%"
       className={listStyles}
-      ref={scrollContainerRef}
       style={{ position: "relative", paddingRight: "0px", paddingLeft: "8px" }}
     >
-      {messages?.map((message) => (
-        <MessageRow key={message._id} message={message} />
+      {/* <LoadMoreMessages
+        status={messages.status}
+        loadMore={messages.loadMore}
+      /> */}
+      {messages.results.map((m) => (
+        <MessageRow key={m._id} message={m} />
       ))}
-      <div ref={messagesEndRef} />
+      <div className={snapEndStyle} />
     </Vertical>
   );
 };

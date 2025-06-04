@@ -28,7 +28,7 @@ export const MobileSidebar: React.FC<Props> = ({}) => {
     <>
       <Background style={{ width: 60 }}>
         <div
-          onClick={() => onOpenMikebot.dispatch()}
+          onClick={() => onOpenMikebot.dispatch("")}
           style={{
             cursor: "pointer",
             position: "relative",

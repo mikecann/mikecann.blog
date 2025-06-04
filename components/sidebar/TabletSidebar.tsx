@@ -7,7 +7,6 @@ import { SearchModal } from "../searchModal/SearchModal";
 import { useState } from "react";
 import { Background } from "./Background";
 import { SocialIcons } from "./SocialIcons";
-import Link from "next/link";
 import { PiTreasureChestDuotone } from "react-icons/pi";
 import { onOpenMikebot } from "../mikebot/signals";
 import { floatAnimation } from "../animations";
@@ -24,7 +23,7 @@ export const TabletSidebar: React.FC<Props> = ({}) => {
     <>
       <Background style={{ width: 200 }}>
         <div
-          onClick={() => onOpenMikebot.dispatch()}
+          onClick={() => onOpenMikebot.dispatch("")}
           style={{
             cursor: "pointer",
             position: "relative",
