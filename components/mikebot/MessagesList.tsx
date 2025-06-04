@@ -69,10 +69,7 @@ export const MessagesList: React.FC<Props> = ({ threadId, userId }) => {
       className={listStyles}
       style={{ position: "relative", paddingRight: "0px", paddingLeft: "8px" }}
     >
-      {/* <LoadMoreMessages
-        status={messages.status}
-        loadMore={messages.loadMore}
-      /> */}
+      {/* <LoadMoreMessages status={messages.status} loadMore={messages.loadMore} /> */}
       {messages.results.map((m) => (
         <MessageRow key={m._id} message={m} />
       ))}
