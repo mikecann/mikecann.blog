@@ -17,14 +17,14 @@
     "populateAlgolia": "bun run ./scripts/populateAlgolia.ts",
     "checkLinks": "bun run blc http://localhost:3000 -ro --exclude https://www.linkedin.com/in/mikecann",
     "compress:all:lossless": "optimizt --lossless ./public",
-    "compress:one:lossless": "optimizt --lossless ./public/posts/battletabs-enters-soft-launch",
-    "compress:one:webp": "optimizt --webp ./public/posts/homework-is-dumb",
+    "compress:one:lossless": "optimizt --lossless ./public/posts/google-photos-picker-sync",
+    "compress:one:webp": "optimizt --webp ./public/posts/google-photos-picker-sync",
     "test": "vitest"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.3.22",
     "@artsy/fresnel": "^8.1.0",
-    "@convex-dev/agent": "^0.1.5-alpha.3",
+    "@convex-dev/agent": "^0.1.6-alpha.0",
     "@convex-dev/agent-playground": "^0.0.12",
     "@funboxteam/optimizt": "^5.0.2",
     "@types/isomorphic-fetch": "^0.0.39",

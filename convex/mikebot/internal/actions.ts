@@ -22,7 +22,8 @@ export const streamStory = internalAction({
       { promptMessageId },
       {
         saveStreamDeltas: {
-          chunking: "line",
+          chunking: "word",
+          throttleMs: 250,
         },
       },
     );

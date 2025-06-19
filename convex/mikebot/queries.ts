@@ -41,8 +41,7 @@ export const listMessagesForUserThread = query({
     // Grab the messages from the thread based on the current page
     const paginated = await mikebot.listMessages(ctx, {
       threadId: args.threadId,
-      paginationOpts: args.paginationOpts,
-      
+      paginationOpts: args.paginationOpts,      
     });
 
     // I dont want to send the tool results to the client
