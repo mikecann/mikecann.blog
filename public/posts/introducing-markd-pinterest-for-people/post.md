@@ -59,7 +59,7 @@ Its a framework for web app development from Rob Eisenberg, the same dude that w
 
 Much like Angular its a template-based framework like Angular e.g.
 
-[code lang="html"]
+```html
 <template>
 
 <h1>\${heading}</h1>
@@ -69,7 +69,7 @@ Much like Angular its a template-based framework like Angular e.g.
 <button type="submit">Add Todo</button>
 </form>
 </template>
-[/code]
+```
 
 You then write a backing "Component" class which implements the "addTodo()" function and provides the "heading" variable etc.
 

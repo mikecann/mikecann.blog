@@ -19,25 +19,25 @@ As mentioned in my [previous post](https://www.mikecann.blog/games/taming-unity/
 
 The Parse Unity library is okay, not as fully fleshed as some of the other languages they support but good enough for what I needed apart from one critical point, the lack of type-safety in the queries such as:
 
-[code language="csharp"]
+```csharp
 new ParseQuery<Armor>().WhereLessThanOrEqualTo("cost", 13);
-[/code]
+```
 
 This annoyed me so much that I decided to write some extension methods that take advantage of Lambda functions to provide the type-safety. The above now becomes:
 
-[code language="csharp"]
+```csharp
 new ParseQuery<Armor>().WhereLessThanOrEqualTo(a => a.Cost, 13);
-[/code]
+```
 
 The library can also handle chains such as
 
-[code language="csharp"]
+```csharp
 new ParseQuery<Player>().Include(p => p.Stats.Heath.Remaining); // becomes "stats.health.remaining"
-[/code]
+```
 
 The library also handles interfaces by introducing a new attribute "ParseFieldType".
 
-[code language="csharp"][parseclassname("father")]
+```csharp[parseclassname("father")]
 public class Father : ParseObject, IFather
 {
 [ParseFieldName("daughter")][parsefieldtype(typeof(child))]
@@ -45,11 +45,11 @@ public IChild Daughter { get; set; }
 }
 
 new ParseQuery<Father>().Include(f => f.Daughter.Name); // becomes "daughter.name" and works because ParseFieldType redirects the chain to Child rather than IChild
-[/code]
+```
 
 It can even handle lists
 
-[code language="csharp"][parseclassname("father")]
+```csharp[parseclassname("father")]
 public class Father : ParseObject, IFather
 {
 [ParseFieldName("children")][parsefieldtype(typeof(child))]
@@ -57,6 +57,6 @@ public List<IChild> Children { get; set; }
 }
 
 new ParseQuery<Father>().Include(f => f.Children[0].Name); // becomes "children.name"
-[/code]
+```
 
 To get started go grab the .dll from my Github project for the library: [https://github.com/mikecann/Unity-Parse-Helpers](https://github.com/mikecann/Unity-Parse-Helpers)

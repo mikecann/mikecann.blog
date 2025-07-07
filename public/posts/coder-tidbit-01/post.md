@@ -13,10 +13,10 @@ Keep coming across things like this at work that make me stop and think for a wh
 
 Heres one i came accross today that was causing a strange error in the game:
 
-[code lang="java"]
+```java
 boolean a = true;
 if(a){ System.out.println("HERE1"); } { System.out.println("HERE2"); }
-[/code]
+```
 
 Which one is printed? HERE1 or HERE2 or both?
 

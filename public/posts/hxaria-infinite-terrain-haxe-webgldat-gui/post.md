@@ -21,9 +21,9 @@ Following on from the last post, I have now made it so that each particle can ha
 
 The way it works is that the entire world is recorded in a 2x2 array Tilemap. This 2x2 array holds a single Tile object for every single tile in the world:
 
-[code lang="actionscript3" lines="normal"]
+```actionscript3
 
-<pre>class Tile
+class Tile
 {
 public var x : Int;
 public var y : Int;
@@ -31,7 +31,7 @@ public var type : Int;
 
     public function new(x:Int, y:Int, type:Int) { this.x = x; this.y = y; this.type = type; }
 
-}</pre>
+}
 
 [/code ]
 
@@ -47,9 +47,9 @@ The tile type is then passed to the shader in attribute buffers per point sprite
 
 The shader then performs the neccessary calculations to work out what the UV coordinate in the texture. The Vertex Shader:
 
-[code lang="glsl" lines="normal"]
+```glsl
 
-<pre>uniform float amplitude;
+uniform float amplitude;
 uniform float tileSize;
 uniform float texTilesWide;
 uniform float texTilesHigh;
@@ -73,7 +73,7 @@ vColor = customColor;
     gl_PointSize = size;
     gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
-}</pre>
+}
 
 [/code ]
 
@@ -81,9 +81,9 @@ vColor = customColor;
 
 And the Fragment Shader:
 
-[code lang="glsl" lines="normal"]
+```glsl
 
-<pre>uniform vec3 color;
+uniform vec3 color;
 uniform sampler2D texture;
 uniform float invTexTilesWide;
 uniform float invTexTilesHigh;
@@ -97,9 +97,9 @@ vec2 uv = vec2( gl_PointCoord.x*invTexTilesWide + invTexTilesWide*vTilePos.x, gl
 
     gl_FragColor = texture2D( texture, uv );
 
-}</pre>
+}
 
-[/code]
+```
 
 So it works in a way very much like a raster engine. You only have to render as many particles as the screen can contain.
 
@@ -115,7 +115,7 @@ The UI may look familiar to people that have seen any experiments anyone who has
 
 To get dat.GUI to work with haxe, I used the awesome [Extern feature of HaXe](https://www.google.co.uk/url?sa=t&rct=j&q=haxe%20externs&source=web&cd=1&ved=0CBwQFjAA&url=http%3A%2F%2Fhaxe.org%2Fdoc%2Fjs%2Fexterns&ei=Gu_QTvK8IYP4sgbo15TzDA&usg=AFQjCNEQvrXVfGjjQNO-yHhZ6HRTKlcmYw). This means that all I have to do is provide a stub interface to dat.GUI rather than a full implementation in haXe. This is great as it allows me to rapidly begin to use the library but also have the type safety of HaXe. It didnt take long to stub out the bits of the library I needed in an extern:
 
-[code lang="actionscript3" lines="normal"][/code]
+```actionscript3```
 
 package dat;
 
@@ -143,7 +143,7 @@ extern class GUI
 
 Then I used it like:
 
-[code lang="actionscript3"][/code]
+```actionscript3```
 
 package ;
 import dat.GUI;

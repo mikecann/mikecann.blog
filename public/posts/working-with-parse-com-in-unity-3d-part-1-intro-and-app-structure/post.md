@@ -41,7 +41,7 @@ In comparison to the competition its much cheaper, Microsoft's Azure based Mobil
 
 Parse.com features a simple way to store..
 
-[code lang="csharp"]
+```csharp
 var shield = new Armor
 {
 DisplayName = "Wooden Shield",
@@ -50,22 +50,22 @@ Rupees = 50
 };
 
 shield.SaveAsync();
-[/code]
+```
 
 .. and retrieve data:
 
-[code lang="csharp"]
+```csharp
 var query = new ParseQuery<Armor>()
 .WhereLessThanOrEqualTo("rupees", ((Player)ParseUser.CurrentUser).Rupees);
 query.FindAsync().ContinueWith(t =>
 {
 IEnumerable<Armor> result = t.Result;
 });
-[/code]
+```
 
 You can also have routines run on the server written using Javascript:
 
-[code lang="javascript"]
+```javascript
 Parse.Cloud.define("averageStars", function(request, response) {
 var query = new Parse.Query("Review");
 query.equalTo("movie", request.params.movie);
@@ -82,7 +82,7 @@ response.error("movie lookup failed");
 }
 });
 });
-[/code]
+```
 
 I wont go into the API any more here but their docs are pretty good and will explain things much better than me: [https://www.parse.com/docs/unity_guide](https://www.parse.com/docs/unity_guide)
 
@@ -118,7 +118,7 @@ This is the Unity project, you can structure this how you like but I have provid
 
 The common project contains code that is common to the frontend and backend. This is usually just models that represent the database, in this case its just a simple class GameUser:
 
-[code lang="csharp"][parseclassname("_user")]
+```csharp[parseclassname("_user")]
 public class GameUser : ParseUser
 {  
  [ParseFieldName("playerName")]
@@ -131,7 +131,7 @@ set { SetProperty<string>(value, "PlayerName"); }
     public bool IsPlayerNameSet { get { return !String.IsNullOrEmpty(PlayerName); } }
 
 }
-[/code]
+```
 
 Every time you build the common project the DLL that gets created is automatically copied into the game thanks to the build task:
 

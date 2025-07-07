@@ -21,7 +21,7 @@ This way of coding served me well. It took me all the way to University at which
 
 For a simple (contrived) example, suppose I have a "Player" object that wanted to let the "PlayerManger" object know when the player had died. I would do something like the following:
 
-[code lang="java"]
+```java
 public class Player
 {
 public PlayerManager manager;
@@ -34,13 +34,13 @@ public PlayerManager manager;
     }
 
 }
-[/code]
+```
 
 The "manager" variable would be set from the outside by whoever created the Player. It looks simple but I found as I had more objects and managers I was getting horribly bogged down as I had to keep hold of references to PlayerManager in parts of the code which werent even remotely related. It was causing my code to become complex and hard to manage.
 
 Thats when I had my first Code Epiphany, I discovered the Singleton. I no longer needed to pass my unrelated objects around, I could just access them directly within the player:
 
-[code lang="java"]
+```java
 public class Player
 {
 ...
@@ -51,13 +51,13 @@ public class Player
     }
 
 }
-[/code]
+```
 
 This was an incredible revelation to me as it opened my eyes to how important good architecture is as your program gets larger.
 
 As the years went by however I started to notice issues with my Singleton based architecture. Although it was okay for quick projects that weren't meant to last very long I noticed that as a program got bigger and bigger Singletons were becoming more and more of an issue. For example I found that I couldn't easily swap out the PlayerManager for a different sort of PlayerManager without breaking a whole bunch of code, for example I couldn't do the following:
 
-[code lang="java"]
+```java
 public class Player
 {
 ...
@@ -68,7 +68,7 @@ public class Player
     }
 
 }
-[/code]
+```
 
 Singletons I also found were making my code very rigid. I was finding it hard to abstract parts of my code out into separate reusable libraries that I could use in future projects. With Singleton references all over the place it was becoming a bit of a spaghetti nightmare.
 
@@ -78,7 +78,7 @@ Robotlegs was (and still is) a great MVCS framework. It creates clear separation
 
 Automatic Dependency Injection (DI) was my second Coding Epiphany, it did away with my hard-coded Singletons and replaced them with neat little "Inject" tags. First you would define your dependency tree such as:
 
-[code lang="java"]
+```java
 public class Context
 {
 private void setup()
@@ -86,11 +86,11 @@ private void setup()
 injector.mapSingleton(IPlayerManger, PlayerManager);
 }
 }
-[/code]
+```
 
 You could then just write your Player like:
 
-[code lang="java"]
+```java
 public class Player
 {
 [Inject]
@@ -102,13 +102,13 @@ public IPlayerManger playerManager;
     }
 
 }
-[/code]
+```
 
 Then when you create a player using the injector, the IPlayerManager instance will be filled with a PlayerManager instance.
 
-[code lang="java"]
+```java
 injector.createInstance(Player);
-[/code]
+```
 
 This was a revelation to me as it now meant I could create better isolation between may various classes. Player doesn't care where PlayerManager comes from and it doesn't even care what the implementation of it is, it just wants to have the OnPlayerDie() method.
 
@@ -132,7 +132,7 @@ This to me was my third Code Epiphany. By keeping my classes small with minimal 
 
 Going back to my contrived example. I would now structure my Player like:
 
-[code lang="java"]
+```java
 public class Player
 {
 private IPlayerManger \_playerManager;
@@ -148,13 +148,13 @@ private IPlayerManger \_playerManager;
     }
 
 }
-[/code]
+```
 
 I have removed the need for the [Inject] tag as now all my dependencies are just passed in the constructor.
 
 I could then easily test like:
 
-[code lang="java"]
+```java
 public class PlayerTests
 {
 [Test]
@@ -166,7 +166,7 @@ player.Die();
 Assert.IsTrue(mock.OnPlayerDieWasCalled();
 }
 }
-[/code]
+```
 
 Unit Testing has forced me to write better, simpler to read code purely by the fact it would be hard to test if it wasn't the case. As Martin Fowler says:
 

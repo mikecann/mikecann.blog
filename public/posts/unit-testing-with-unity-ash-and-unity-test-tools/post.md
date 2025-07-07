@@ -17,7 +17,7 @@ So I promised in my [last post](https://www.mikecann.blog/programming/unity-ash-
 
 I have added some tests to the [Unity Asteroids](https://github.com/mikecann/UnityAshteroids) example game. Lets take a look at one of the simpler systems as an example, the DeathThroesSystem:
 
-[code lang="csharp"]
+```csharp
 public class DeathThroesSystem : NodelessSystem<DeathThroes, Entity, Audio>
 {
 public DeathThroesSystem()
@@ -39,13 +39,13 @@ public DeathThroesSystem()
     }
 
 }
-[/code]
+```
 
 We can see its a really simple system that does a couple of things.
 
 First we want to test that when a node is added to the system we play a sound effect. Using Unity-Test tools you can quickly whip up a test case:
 
-[code lang="csharp"][testfixture]
+```csharp[testfixture]
 public class DeathThroesSystemTests : UnityUnitTest
 {
 private IEngine \_engine;
@@ -79,7 +79,7 @@ private DeathThroesSystem \_system;
     }
 
 }
-[/code]
+```
 
 I wrote a little helper that adds an entity to the engine with the necessary components. In the future we could use reflection to looup the types on the Nodeless system, but for now its enough to satisfy the test:
 
@@ -87,7 +87,7 @@ I wrote a little helper that adds an entity to the engine with the necessary com
 
 Next we want to check that after update the countdown is decremented.
 
-[code lang="csharp"][test]
+```csharp[test]
 public void AfterUpdate_CountdownDecremented()
 {
 var e = AddEntityToEngine();
@@ -99,11 +99,11 @@ var e = AddEntityToEngine();
     Assert.AreEqual(before - 1.5f, e.GetComponent<DeathThroes>().countdown, 0.01f);
 
 }
-[/code]
+```
 
 Easy, now we want to check that when the countdown is less than or equal to zero, the entity is destroyed:
 
-[code lang="csharp"][test]
+```csharp[test]
 public void AfterCountdownTimerEnds_EntityDestroyed()
 {
 var e = AddEntityToEngine();
@@ -115,7 +115,7 @@ var e = AddEntityToEngine();
     Assert.IsTrue(e.GetComponent<Entity>().IsDestroyed);
 
 }
-[/code]
+```
 
 Sweet and thats it! Sure we could add a few more tests for some of the corner cases but as an example I think it serves its purpose.
 

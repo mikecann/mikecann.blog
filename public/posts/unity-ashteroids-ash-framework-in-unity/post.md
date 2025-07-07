@@ -54,7 +54,7 @@ Then load them the usual Unity way using Resources.Load().
 
 Systems are just pure code and added to the Engine as usual:
 
-[code lang="csharp"]
+```csharp
 public class Asteroids : AshGame
 {
 private EntityCreator creator;
@@ -84,7 +84,7 @@ private GameConfig config;
     }
 
 }  
-[/code]
+```
 
 The changes to the Asteroids code in general are minimal. I use Unity's components wherever possible, so things like Position and Movement become Transform and Rigidbody2D. Rendering is taken care of by Unity so I didn't need any RenderingSystem or Display component.
 

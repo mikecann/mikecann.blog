@@ -26,7 +26,7 @@ The main issues were dependency hell and Managers. Unity seems to recommend "Man
 
 The method I was using was in the Awake() I would use GameObject.FindObjectOfType(); then cache the result and use it. Fair enough but this still means I have a dependency in this component on the Manager. It also makes Unit Testing very hard because there is no way to pass in a mock Manager. A stopgap solution was to use constructors to pass in the manager:
 
-[code lang="csharp"]
+```csharp
 private MyManager \_manager;
 public MyClass(MyManager <span class="hiddenGrammarError" pre="">manager)
 {
@@ -37,7 +37,7 @@ void Awake()
 {
 if(\_manager==null) \_manager = GameObject.FindObjectOfType();
 }
-[/code]
+```
 
 Still we have the dependency there however and my code was starting to get more and more complex. Plus Unity doesn't really like you instantiating MonoBehaviours using constructors so I would continually get warnings in my tests. Far from ideal, so I decided to go looking for an alternative.
 

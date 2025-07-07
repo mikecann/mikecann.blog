@@ -39,7 +39,7 @@ In the sample project I have just one service, the UserService, which is respons
 
 Lets take a look at the Login method in the UserService class:
 
-[code lang="csharp"]
+```csharp
 public Task<GameUser> Login(string email, string password)
 {
 Debug.Log("Logging in..");
@@ -49,7 +49,7 @@ Debug.Log("Logging in..");
     	.Then(t => Task.FromResult((GameUser)t.Result));
 
 }
-[/code]
+```
 
 We can see that it takes in an email and password then logs in for us and returns a Task<GameUser>.
 
@@ -59,7 +59,7 @@ Unity runs on an old version of C# it doesn't have any concept of Tasks baked in
 
 Tasks allow us to provide a callback method that will be called when the Task returns, which allows the game to continue on running while we wait for the server to respond. For example, this is how we call Login:
 
-[code lang="csharp"]
+```csharp
 private void Login()
 {
 isLoading = true;
@@ -78,13 +78,13 @@ private void OnLoggedIn(GameUser user)
 isLoading = false;  
  menus.States.SetState("Logged In State");
 }
-[/code]
+```
 
 The Then function after login is being called on the Task<GameUser> and is the first of my helper libraries that I have included in the sample project which imports my [Unity Parse Helpers](https://github.com/mikecann/Unity-Parse-Helpers) library.
 
 In that library I have included a number of extension methods for Task that allow you to chain functions together for example from the SignupState:
 
-[code lang="csharp"]
+```csharp
 private void Signup()
 {
 isLoading = true;
@@ -99,7 +99,7 @@ isLoading = true;
     	.Then(OnLoggedIn, OnError);
 
 }
-[/code]
+```
 
 This makes chaining asynchronous logic together in Unity a breeze and you don't ever have to deal with the headache of using yeild!
 
@@ -107,7 +107,7 @@ This makes chaining asynchronous logic together in Unity a breeze and you don't 
 
 The first major headache I came across when using Parse in Unity is to do with threading. Note from my earlier example of Login in UserService:
 
-[code lang="csharp"]
+```csharp
 public Task<GameUser> Login(string email, string password)
 {
 Debug.Log("Logging in..");
@@ -117,7 +117,7 @@ Debug.Log("Logging in..");
     	.Then(t => Task.FromResult((GameUser)t.Result));
 
 }
-[/code]
+```
 
 The function "OnMainThread" is a helper extension I wrote to deal with the threading issue. If we were to remove that function then when we try to login Unity would throw an error something like:
 
@@ -129,7 +129,7 @@ There are a few ways around this issue, Parse documents that you can [use corout
 
 A Loomer basically just takes a function and waits until the game is running on the main thread before executing the function. So behind the scenes my "OnMainThread" extension function is calling the loomer which ensures that any Tasks that follow it will execute on the main thread:
 
-[code lang="csharp"]
+```csharp
 public static Task<T> OnMainThread<T>(this Task<T> task)
 {
 var tcs = new TaskCompletionSource<T>();
@@ -149,7 +149,7 @@ var loom = Loom.Instance;
     return tcs.Task;
 
 }
-[/code]
+```
 
 So whenever you call Parse functions in your services just make sure you call "OnMainThread()" and you should be good to go!
 

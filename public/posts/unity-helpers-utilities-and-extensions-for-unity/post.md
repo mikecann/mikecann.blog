@@ -18,7 +18,7 @@ During the development of my up and coming game I have encountered some snags wh
 
 One such annoyance is the inability to use interfaces in GetComponent() and GetComponents(), so I wrote some extension methods to help with that:
 
-[code lang="csharp"]
+```csharp
 using UnityHelpers;
 
 var obj = new GameObject();
@@ -32,11 +32,11 @@ obj.Get<IMyComponent>(); // Returns the first component that implements the inte
 
 obj.GetAll<MyComponent>(); // Gets all the components
 obj.GetAll<IMyComponent>(); // Gets all the components that implement the interface
-[/code]
+```
 
 Another utility is for adding children to GameObjects:
 
-[code lang="csharp"]
+```csharp
 using UnityHelpers;
 
 var obj = new GameObject();
@@ -46,7 +46,7 @@ obj.AddChild("Mike"); // Creates a new GameObject named "Mike" and adds it as a 
 var player = obj.AddChild<Player>("Dave"); // Creates a new GameObject named "Dave" and adds the component "Player" returning it
 
 obj.AddChild(typeof(Player), typeof(Friendly), typeof(AI)); // Creates a new GameObject and adds a number of components
-[/code]
+```
 
 There are many other utils and extensions, and more to come.
 

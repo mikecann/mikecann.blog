@@ -52,7 +52,7 @@ It works well, particularly when combined with my (not yet finished) Typescript 
 
 For example, the code that is run before a User is saved looks like:
 
-[code lang="AS3"]
+```AS3
 // Force this TS file to become a module
 export var x = 2;
 
@@ -70,7 +70,7 @@ Parse.Cloud.beforeSave("\_User", (request, response) => {
     response.success();
 
 });
-[/code]
+```
 
 ## Testing
 
@@ -80,7 +80,7 @@ I like to use NUnit with the Parse .NET SDK for the testing because it lets us u
 
 To get started just create a Test class in your Typescript project (surprisingly Typescript projects work well C# within them in Visual Studio) and start testing:
 
-[code lang="csharp"]
+```csharp
 namespace ParseUnitySampleBackend.Tests
 {
 [TestFixture]
@@ -107,7 +107,7 @@ ParseUser.LogOut();
 
     ...
 
-[/code]
+```
 
 I included some simple helpers that I like to use for testing which setup Parse before each test.
 

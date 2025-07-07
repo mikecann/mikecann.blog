@@ -22,11 +22,11 @@ As anyone that has done unit testing will know, mocking is a big part of unit te
 
 The issue, as documented on their issue tracker [here](https://github.com/CodeCatalyst/promise-as3/issues/27), is that when you try to use a Promise as return of a function call then it results in strange errors:
 
-[code lang="csharp"]
+```csharp
 D:\libs\adobe\flex\sdk\4.6\bin\adl.exe -profile extendedDesktop D:\testApp\out\test\desktop_flexunit-descriptor.xml D:\testApp\out\test\desktop
 Player connected; session starting.
 [Fault] exception, information=VerifyError: Error #1053: Illegal override of TestInterface600C55060B003CF6CD88EB5CFE69DFE741318F03 in mockolate.generated.TestInterface600C55060B003CF6CD88EB5CFE69DFE741318F03
-[/code]
+```
 
 The same goes for if you try to use Promises in interfaces.
 

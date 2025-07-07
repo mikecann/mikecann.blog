@@ -44,7 +44,7 @@ So what did I learn in the process?
 
 Is mostly awesome. I really love the easy to read fluent interface it lets you construct, I mean just take a look at how beautiful and expressive this is:
 
-[code lang="csharp"]
+```csharp
 public static Entity CreatePlayer(this Pool pool, bool controllable)
 {
 return pool.CreateEntity()
@@ -57,7 +57,7 @@ return pool.CreateEntity()
 .AddForce(new List<Vector2>(), 0)
 .AddResource("Prefabs/Spaceship");
 }
-[/code]
+```
 
 My only complaint is that the code generation can sometime be annoying to work with because it requires that the app is in a compilable state to run. You can quite easily get into catch 22 situation where you need a component to make a System compile but to make the component you need to generate code, which requires that the app compiles.
 
@@ -91,14 +91,14 @@ Im not exactly sure why but sometimes adding IEnsureComponent to a system fixes 
 
 - Reactive systems are one of the best things about Entitias but 99% of the time you end up writing something like:
 
-[code lang="csharp"]
+```csharp
 public void Execute(List<Entity> entities)
 {
 foreach (var entity in entities)
 {
 }
 }
-[/code]
+```
 
 It would be nice if that list was looped for you so Execute just supplied a single Entity.
 
@@ -106,12 +106,12 @@ It would be nice if that list was looped for you so Execute just supplied a sing
 
 - Some of the callbacks in Entitias start with a lowercased letter such "trigger" "ensureComponents", this is strangely inconsistent with Unity and C# in general.
 
-[code lang="csharp"]
+```csharp
 public TriggerOnEvent trigger
 {
 get { return Matcher.AllOf(Matcher.Force, Matcher.Rigidbody).OnEntityAdded(); }
 }
-[/code]
+```
 
 ## Conclusion
 

@@ -40,7 +40,7 @@ My other solution other than renaming one of the document classes was to supply 
 
 It doesnt use URLStream and a proxy.swf, rather it embeds SWFB directly in SWFA. For purposes of example it doesnt matter and still exhibits the same behaviour.
 
-[code lang="actionscript"]
+```actionscript
 package
 {
 import flash.display.Loader;
@@ -64,7 +64,7 @@ addChild(l);
 }
 }
 }
-[/code]
+```
 
 You can download this project here: [https://www.mikecann.blog/flash/SWFA.zip
 ](https://www.mikecann.blog/flash/SWFA.zip)

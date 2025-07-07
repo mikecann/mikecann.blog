@@ -13,7 +13,7 @@ As mentioned in my [last post](https://www.mikecann.blog/personal-project/parse-
 
 [Tasks](https://www.parse.com/docs/unity_guide#tasks) are very much like JS promises (except they are type-safe) and return when the operation has completed. For example:
 
-[code lang="csharp"]
+```csharp
 obj.SaveAsync().ContinueWith(task =>
 {
 if (task.IsCanceled)
@@ -29,11 +29,11 @@ else
 // the object was saved successfully.
 }
 });
-[/code]
+```
 
 You can chain tasks together like so:
 
-[code lang="csharp"]
+```csharp
 var query = new ParseQuery<ParseObject>("Student")
 .OrderByDescending("gpa");
 
@@ -61,18 +61,18 @@ return student.SaveAsync();
 {
 // Everything is done!
 });
-[/code]
+```
 
 The problem is that if you want to catch errors you must manually check the task return for errors inside each handler. This seemed wasteful to me as all I wanted was a global error handler for that particular task chain, such as can be achieved with [Javascript Promises](https://www.parse.com/docs/js_guide#promises-errors).
 
 Fortunately someone else also had noticed this problem and [solved it](https://www.rizalalmashoor.com/blog/exception-handling-wrappers-for-taskcontinuewith/):
 
-[code lang="csharp"]
+```csharp
 Task.Factory.StartNew(StartBusyIndicator)
 .Then(task => GetWebResponseAsync(url))
 .Then(task => Console.WriteLine(task.Result.Headers))
 .Finally(ExceptionHandler, StopBusyIndicator);
-[/code]
+```
 
 The only problem is that when I tried to implement his C# library Unity started throwing the dreaded Internal Compiler Error:
 
@@ -82,7 +82,7 @@ The only problem is that when I tried to implement his C# library Unity started 
 
 It took me a while to work out what was going on. I managed to simplify the entire problem down to this simple example:
 
-[code lang="csharp"]
+```csharp
 public static class TaskHelpers
 {
 public static void Then<TIn>(this Task<TIn> task, Action<Task<TIn>> next)
@@ -92,13 +92,13 @@ task.ContinueWith(t =>
 });  
  }
 }
-[/code]
+```
 
 I posted about this on the [Unity forum](https://forum.unity3d.com/threads/242919-Internal-compiler-error) on Parse's Forum and even on Parse's bug tracking system but no one was interested, Parse even told me its not a Parse issue.
 
 It took me quite a while to work out what was going on, but I eventually worked out that if I separated the handler from the Continue With call it would work:
 
-[code lang="csharp"]
+```csharp
 public static class TaskHelpers
 {
 public static void Continue<TIn>(this Task<TIn> task, Action<Task<TIn>> next)
@@ -107,6 +107,6 @@ Action<Task> a = t => { };
 task.ContinueWith(a);  
  }
 }
-[/code]
+```
 
 Huzzah! It compiles. So I guess this is a lesson learnt. With the Unity Mono compiler, if you are getting Internal Compiler errors then perhaps try separating out the lambdas into variables.

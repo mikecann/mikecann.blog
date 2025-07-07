@@ -43,7 +43,7 @@ Although Ash is an Entity / Component architecture, it differs quite fundamental
 
 In Unity components typically extend MonoBehaviour and contain the variables and logic for that specific functionality. For example a simple Unity component may look something like:
 
-[code lang="csharp"]
+```csharp
 public class Bullet : MonoBehaviour
 {
 public float maxAge = 3;
@@ -63,13 +63,13 @@ public float maxAge = 3;
     }
 
 }
-[/code]
+```
 
 Imagine that Bullet is a projectile fired from the player spaceship. We can see that the bullet ages over time and when it is equal or greater than the max age then it is removed from the game.
 
 The Ash way of doing things is to separate the component data from its logic. So it may now look something like:
 
-[code lang="csharp"]
+```csharp
 public class Bullet : MonoBehaviour
 {
 public float maxAge = 3;
@@ -107,7 +107,7 @@ private INodeList<BulletNode> \_nodes;
     }
 
 }
-[/code]
+```
 
 Here we can see that the Bullet's data is now separate from the logic which modifies that data. In Ash components should simple data, they can contain some methods but they should be limited to operating on the state of that instance, they certainty aren't allowed to have any dependencies on other components.
 
@@ -117,7 +117,7 @@ What this means is that whenever an Entity (GameObject) is added or removed from
 
 If that all looks a little too verbose for you, one of the improvements I made in this rewrite of Unity-Ash was to provide a short-hand way of writing Systems in the form of the "NodelessSystem", so now the above example could look like:
 
-[code lang="csharp"]
+```csharp
 public class Bullet : MonoBehaviour
 {
 public float maxAge = 3;
@@ -139,7 +139,7 @@ public BulletAgeSystem()
     }
 
 }
-[/code]
+```
 
 Now you may be thinking that's all well and good but it doesn't really improve things, you are just splitting the Monobehaviour up and adding more classes to the the game, which is true, but there are several benefits to working this way. One of those benefits becomes evident when you think about dependencies between components.
 
@@ -147,7 +147,7 @@ Suppose that we want to handle what happens when the player spaceship collides w
 
 How would we go about this in Unity? Well one solution may look something like the following:
 
-[code lang="csharp"]
+```csharp
 public class Player : MonoBehaviour
 {
 private PlayerManager manager;
@@ -191,13 +191,13 @@ var asteroids = FindObjectsOfType<Asteroid>();
     }
 
 }
-[/code]
+```
 
 Sure there are a few ways this could potentially be done but the point im trying to highlight is the way dependencies are handled in a typical Unity game. Usually we have managers which look after some part of the game and then we use FindObjectsOfType or Tags to get access to the entities in the system.
 
 The ash way of doing it may looks something like:
 
-[code lang="csharp"]
+```csharp
 public class Player : MonoBehaviour
 {
 }
@@ -279,7 +279,7 @@ private INodeList<AsteroidNode> \_asteroids;
     }
 
 }
-[/code]
+```
 
 Here we can see we have made the Collisions component generic so that it can be used by Asteroids, Bullets or whatever else requires collisions. Then we have a system that is specific to Player Collisions.
 
@@ -295,7 +295,7 @@ Well this is another way that Ash differs from the typical Unity Game. Usually i
 
 In Ash you have a single entry point. So for example you may have something like:
 
-[code lang="csharp"]
+```csharp
 public class GameBoostrapper : MonoBehaviour
 {
 private EntityCreator creator;
@@ -323,7 +323,7 @@ private Engine engine;
     }
 
 }  
-[/code]
+```
 
 The Engine is the main control object for Ash. It holds a list of Systems which are updated each tick of the game.
 
@@ -337,7 +337,7 @@ All GameObjects that should be picked up by the Ash Engine require that an "Enti
 
 The "Entity" represents an Entity in Ash but in Unity is actually a MonoBehaviour. It tells the Engine when the GameObject it is created and destroyed. One difference from my previous work on Ash is that if you want to add or remove components from a GameObject at runtime you should do it via the Entity directly so that it can inform the Engine:
 
-[code lang="csharp"]
+```csharp
 public interface IEntity
 {
 ...
@@ -345,7 +345,7 @@ T Add<T>() where T : Component;
 void Remove(Component component);
 ...
 }
-[/code]
+```
 
 This change was required to get around all the [performance problems related to checking for component changes each frame](https://www.mikecann.blog/programming/unity-ash-upgrades/).
 
