@@ -1,29 +1,45 @@
-import { action, internalAction } from "../_generated/server";
 import { v } from "convex/values";
-import { embed } from "ai";
-import { openai } from "@ai-sdk/openai";
 import { internal } from "../_generated/api";
-import { validateBlogPostAdminToken, adminAction } from "./lib";
+import { adminAction, preprocessContent, rag, RAG_NAMESPACE } from "./lib";
 
-export const generateEmbeddingAndCreateChunk = adminAction({
+export const upsert = adminAction({
   args: {
-    postId: v.id("blogPosts"),
-    chunkIndex: v.number(),
     content: v.string(),
+    slug: v.string(),
+    title: v.string(),
+    hash: v.string(),
   },
   handler: async (ctx, args) => {
-    // Generate embedding
-    const { embedding } = await embed({
-      model: openai.embedding("text-embedding-3-small"),
-      value: args.content,
+    // Preprocess content before sending to RAG
+    const cleanContent = preprocessContent(args.content);
+
+    const { entryId } = await rag.add(ctx, {
+      namespace: RAG_NAMESPACE,
+      text: cleanContent,
+      key: args.slug,
+      title: args.title,
+      contentHash: args.hash,
     });
 
-    // Update chunk with embedding
-    await ctx.runMutation(internal.blogPosts.internal.mutations.insertBlogPostChunk, {
-      postId: args.postId,
-      chunkIndex: args.chunkIndex,
-      content: args.content,
-      embedding,
+    const post = await ctx.runQuery(internal.blogPosts.internal.queries.findBlogPostBySlug, {
+      slug: args.slug,
+    });
+
+    if (post) {
+      if (post.ragEntryId != entryId)
+        await ctx.runMutation(internal.blogPosts.internal.mutations.updateBlogPost, {
+          postId: post._id,
+          ragEntryId: entryId,
+        });
+
+      return;
+    }
+
+    await ctx.runMutation(internal.blogPosts.internal.mutations.createBlogPost, {
+      slug: args.slug,
+      title: args.title,
+      hash: args.hash,
+      ragEntryId: entryId,
     });
   },
 });

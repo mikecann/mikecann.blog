@@ -65,13 +65,7 @@ export const blogPostSchema = v.object({
   slug: v.string(),
   title: v.string(),
   hash: v.string(),
-});
-
-export const blogPostChunkSchema = v.object({
-  postId: v.id("blogPosts"),
-  chunkIndex: v.number(),
-  content: v.string(),
-  embedding: v.array(v.float64()),
+  ragEntryId: v.optional(v.string()),
 });
 
 export default defineSchema({
@@ -85,11 +79,4 @@ export default defineSchema({
   blogPosts: defineTable(blogPostSchema)
     .index("by_slug", ["slug"])
     .searchIndex("search_title", { searchField: "title" }),
-  blogPostChunks: defineTable(blogPostChunkSchema)
-    .index("by_postId", ["postId"])
-    .vectorIndex("by_embedding", {
-      vectorField: "embedding",
-      dimensions: 1536,
-    })
-    .searchIndex("search_content", { searchField: "content" }),
 });

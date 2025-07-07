@@ -1,17 +1,11 @@
 import { v } from "convex/values";
-import { adminQuery } from "./lib";
+import { adminQuery, rag } from "./lib";
+import { EntryId } from "../../node_modules/@convex-dev/rag/src/client/index";
+import { isNotNullOrUndefined } from "../../essentials/misc/filter";
 
-export const getBlogPostBySlug = adminQuery({
-  args: { slug: v.string() },
-  handler: async (ctx, { slug }) => {
-    return await ctx.db
-      .query("blogPosts")
-      .withIndex("by_slug", (q) => q.eq("slug", slug))
-      .first();
-  },
-});
+export type SlugId = string;
 
-export const checkBlogPostsNeedProcessing = adminQuery({
+export const listPostsThatNeedProcessing = adminQuery({
   args: {
     posts: v.array(
       v.object({
@@ -20,7 +14,7 @@ export const checkBlogPostsNeedProcessing = adminQuery({
       }),
     ),
   },
-  handler: async (ctx, { posts }) => {
+  handler: async (ctx, { posts }): Promise<SlugId[]> => {
     const results = await Promise.all(
       posts.map(async ({ slug, hash }) => {
         const existing = await ctx.db
@@ -28,15 +22,23 @@ export const checkBlogPostsNeedProcessing = adminQuery({
           .withIndex("by_slug", (q) => q.eq("slug", slug))
           .first();
 
-        // Return slug if post doesn't exist or hash doesn't match
-        if (!existing || existing.hash !== hash) {
-          return { slug, needsProcessing: true, exists: !!existing };
-        }
+        if (!existing) return slug;
 
-        return { slug, needsProcessing: false, exists: true };
+        if (!existing.ragEntryId) return slug;
+
+        const entry = await rag.getEntry(ctx, {
+          entryId: existing.ragEntryId as EntryId,
+        });
+
+        if (!entry) return slug;
+
+        if (entry.contentHash !== hash) return slug;
+
+        return null;
       }),
     );
 
-    return results;
+    const out = results.filter(isNotNullOrUndefined);
+    return out;
   },
 });

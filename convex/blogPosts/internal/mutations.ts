@@ -1,20 +1,32 @@
 import { v } from "convex/values";
 import { internalMutation } from "../../_generated/server";
+import { ensureFP } from "../../../essentials/misc/ensure";
 
-export const insertBlogPostChunk = internalMutation({
+export const createBlogPost = internalMutation({
+  args: {
+    slug: v.string(),
+    title: v.string(),
+    hash: v.string(),
+    ragEntryId: v.string(),
+  },
+  handler: async (ctx, { slug, title, hash, ragEntryId }) => {
+    const id = await ctx.db.insert("blogPosts", {
+      slug,
+      title,
+      hash,
+      ragEntryId,
+    });
+
+    return await ctx.db.get(id).then(ensureFP("Blog post not found"));
+  },
+});
+
+export const updateBlogPost = internalMutation({
   args: {
     postId: v.id("blogPosts"),
-    chunkIndex: v.number(),
-    content: v.string(),
-    embedding: v.array(v.float64()),
+    ragEntryId: v.string(),
   },
-  handler: async (ctx, { postId, chunkIndex, content, embedding }) => {
-    const id = await ctx.db.insert("blogPostChunks", {
-      postId,
-      chunkIndex,
-      content,
-      embedding,
-    });
-    return { id };
+  handler: async (ctx, { postId, ragEntryId }) => {
+    await ctx.db.patch(postId, { ragEntryId });
   },
 });

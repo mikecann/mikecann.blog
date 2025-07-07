@@ -1,8 +1,5 @@
 import { v } from "convex/values";
 import { internalQuery, query, QueryCtx } from "../../_generated/server";
-import { ensureFP } from "../../../essentials/misc/ensure";
-import { Doc } from "../../_generated/dataModel";
-import { isNotNullOrUndefined } from "../../../essentials/misc/filter";
 
 export interface BlogPostMatch {
   blogPost: {
@@ -11,90 +8,15 @@ export interface BlogPostMatch {
     url: string;
   };
   chunkContent: string;
+  relevanceScore: number;
 }
 
-// Helper to convert a chunk and its post to BlogPostMatch
-async function chunkToBlogPostMatch(
-  ctx: QueryCtx,
-  chunk: Doc<"blogPostChunks">,
-): Promise<BlogPostMatch> {
-  const post = await ctx.db
-    .get(chunk.postId)
-    .then(ensureFP(`Blog post not found with id ${chunk.postId}`));
-
-  return {
-    blogPost: {
-      title: post.title,
-      slug: post.slug,
-      url: `https://www.mikecann.blog/posts/${post.slug}`,
-    },
-    chunkContent: chunk.content,
-  };
-}
-
-export const textSearchBlogPosts = internalQuery({
-  args: {
-    query: v.string(),
-  },
-  handler: async (ctx, args): Promise<BlogPostMatch[]> => {
-    const chunks = await ctx.db
-      .query("blogPostChunks")
-      .withSearchIndex("search_content", (q) => q.search("content", args.query))
-      .take(10);
-
-    console.log(`text search for '${args.query}' turned up these chunks: `, chunks);
-
-    const matches = await Promise.all(chunks.map((chunk) => chunkToBlogPostMatch(ctx, chunk)));
-    return matches;
-  },
-});
-
-export const getBlogPostChunksByIds = internalQuery({
-  args: {
-    ids: v.array(v.id("blogPostChunks")),
-  },
-  handler: async (ctx, args): Promise<BlogPostMatch[]> => {
-    const results = await Promise.all(
-      args.ids.map(async (id) => {
-        const chunk = await ctx.db.get(id);
-        if (!chunk) return null;
-        return chunkToBlogPostMatch(ctx, chunk);
-      }),
-    );
-    return results.filter(isNotNullOrUndefined);
-  },
-});
-
-export const getBlogPostChunksByTitle = internalQuery({
-  args: {
-    query: v.string(),
-  },
-  handler: async (ctx, args): Promise<BlogPostMatch[]> => {
-    // Use the search index for title
-    const matchingPosts = await ctx.db
+export const findBlogPostBySlug = internalQuery({
+  args: { slug: v.string() },
+  handler: async (ctx, { slug }) => {
+    return await ctx.db
       .query("blogPosts")
-      .withSearchIndex("search_title", (q) => q.search("title", args.query))
-      .take(10);
-
-    const results = await Promise.all(
-      matchingPosts.map(async (post) => {
-        const chunk = await ctx.db
-          .query("blogPostChunks")
-          .withIndex("by_postId", (q) => q.eq("postId", post._id))
-          .order("asc")
-          .first();
-        if (!chunk) return null;
-        return {
-          blogPost: {
-            title: post.title,
-            slug: post.slug,
-            url: `https://www.mikecann.blog/posts/${post.slug}`,
-          },
-          chunkContent: chunk.content,
-        };
-      }),
-    );
-
-    return results.filter(isNotNullOrUndefined);
+      .withIndex("by_slug", (q) => q.eq("slug", slug))
+      .first();
   },
 });

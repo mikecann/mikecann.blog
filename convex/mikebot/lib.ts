@@ -4,9 +4,9 @@ import { Agent, createTool, MessageDoc, ThreadDoc } from "@convex-dev/agent";
 import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
 import { z } from "zod";
-import { BlogPostMatch } from "../blogPosts/internal/queries";
 import { aboutMikeMarkdown } from "./constants";
 import { isNotNullOrUndefined } from "../../essentials/misc/filter";
+import { BlogPostMatch } from "../blogPosts/internal/queries";
 
 export const mikebotTools = {
   searchBlogPosts: createTool({
@@ -14,15 +14,10 @@ export const mikebotTools = {
     args: z.object({
       query: z.string(),
     }),
-    handler: async (ctx, args): Promise<BlogPostMatch[]> => {
-      const blogPosts = await ctx.runAction(
-        internal.blogPosts.internal.actions.textAndVectorSearchBlogPosts,
-        {
-          query: args.query,
-        },
-      );
-      return blogPosts;
-    },
+    handler: async (ctx, args): Promise<BlogPostMatch[]> =>
+      ctx.runAction(internal.blogPosts.internal.actions.ragSearchBlogPosts, {
+        query: args.query,
+      }),
   }),
   getMikeAboutPage: createTool({
     description:
