@@ -1,16 +1,16 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-12-16T19:10:12.000Z'
+date: "2010-12-16T19:10:12.000Z"
 tags:
   - java
   - particles
   - pretty
-title: 'Particles, Yey!'
+title: "Particles, Yey!"
 oldUrl: /fun-amp-videos/particles-yey
 openAIMikesBlogFileId: file-8Se4DvZab0ojODQc9iIBFVn3
 ---
 
-[![](/wp-content/uploads/2010/12/Shot_0031.png "Shot_003")](/wp-content/uploads/2010/12/Shot_0031.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0031.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0031.png)
 
 Just thought I would share this little thing I was introduced to by a friend.
 

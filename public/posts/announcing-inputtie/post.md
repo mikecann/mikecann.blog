@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/announcing-inputtie/cover.jpg
-date: '2010-09-09T17:58:03.000Z'
+date: "2010-09-09T17:58:03.000Z"
 tags:
   - air
   - clipboard
@@ -39,13 +39,13 @@ I had originally intended to talk about the myriad of attempts, blind alleys, di
 
 So without any further ado I present a screenshot of Inputtie, so you can get an idea of whats going on:
 
-[![](/wp-content/uploads/2010/09/ScreenHunter_04-Sep.-08-19.07.jpg "ScreenHunter_04 Sep. 08 19.07")](/wp-content/uploads/2010/09/ScreenHunter_04-Sep.-08-19.07.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_04-Sep.-08-19.07.jpg "ScreenHunter_04 Sep. 08 19.07")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_04-Sep.-08-19.07.jpg)
 
 It's an Adobe AIR 2 application so it means it will look and work the same across all supported operating systems (Mac, Windows, Linux). AIR also makes it super easy to install and update so for most users it should be a very simple matter to get it up and running.
 
 The way it works is simple. When opened it automatically detects other devices on your network that have Inputtie running. You then make a connection between your two devices by simply dragging and dropping an arrow from one device to another:
 
-[![](/wp-content/uploads/2010/09/ScreenHunter_05-Sep.-08-19.13.jpg "ScreenHunter_05 Sep. 08 19.13")](/wp-content/uploads/2010/09/ScreenHunter_05-Sep.-08-19.13.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_05-Sep.-08-19.13.jpg "ScreenHunter_05 Sep. 08 19.13")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_05-Sep.-08-19.13.jpg)
 
 Do the same on the other device and your computers are now connected, its that simple! Now when you move your mouse across to the side of the screen (side dependant on which arrow you picked) it will magically appear on the screen of the other device, splendid!
 
@@ -55,7 +55,7 @@ You can even also copy and paste text from one device to the other. This is grea
 
 If you want to fire up a game or something  that inputtie may interfere with you can simply and easily toggle it to disabled:
 
-[![](/wp-content/uploads/2010/09/ScreenHunter_08-Sep.-08-19.31.jpg "ScreenHunter_08 Sep. 08 19.31")](/wp-content/uploads/2010/09/ScreenHunter_08-Sep.-08-19.31.jpg)[![](/wp-content/uploads/2010/09/ScreenHunter_09-Sep.-08-19.31.jpg "ScreenHunter_09 Sep. 08 19.31")](/wp-content/uploads/2010/09/ScreenHunter_09-Sep.-08-19.31.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_08-Sep.-08-19.31.jpg "ScreenHunter_08 Sep. 08 19.31")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_08-Sep.-08-19.31.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_09-Sep.-08-19.31.jpg "ScreenHunter_09 Sep. 08 19.31")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_09-Sep.-08-19.31.jpg)
 
 ## Website
 
@@ -63,7 +63,7 @@ Early into the project I teamed up with my partner in crime and jack-of-all-trad
 
 Despite my constant badgering and mind-changing Oli has done a [fantastic job on the website](https://www.inputtie.com), it looks simply great!
 
-[![](/wp-content/uploads/2010/09/ScreenHunter_10-Sep.-08-19.46.jpg "ScreenHunter_10 Sep. 08 19.46")](/wp-content/uploads/2010/09/ScreenHunter_10-Sep.-08-19.46.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_10-Sep.-08-19.46.jpg "ScreenHunter_10 Sep. 08 19.46")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_10-Sep.-08-19.46.jpg)
 
 He even found time to do an awsome video that shows off the best features of Inputtie:
 

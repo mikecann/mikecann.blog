@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-15T11:10:18.000Z'
+date: "2010-08-15T11:10:18.000Z"
 tags:
   - 2d
   - community
@@ -15,7 +15,7 @@ oldUrl: /c/shader-based-2d-shadowing
 openAIMikesBlogFileId: file-bP6n3ttyuMdz3oCbCNgfwfm8
 ---
 
-[![](/wp-content/uploads/2010/08/11_scene.png "11_scene")](/wp-content/uploads/2010/08/11_scene.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png "11_scene")](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png)
 
 Those who know me know I used to do [quite abit of development](/posts/?s=xna) in c# using Microsoft's XNA platform.
 

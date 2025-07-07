@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-21T18:34:52.000Z'
+date: "2010-08-21T18:34:52.000Z"
 tags:
   - bloom
   - flash
@@ -14,7 +14,7 @@ oldUrl: /48-hours-later/ludum-dare-hour-17
 openAIMikesBlogFileId: file-MBuudnUvNEb4scx3IW6bg9rB
 ---
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg "ScreenHunter_01 Aug. 21 19.31")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg "ScreenHunter_01 Aug. 21 19.31")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg)
 
 Okay its been about 6 hours since my last update, and I have been working pretty much solid apart from an hour lunchbreak when I went for a wander into town.
 

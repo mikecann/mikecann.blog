@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-06-12T18:13:14.000Z'
+date: "2011-06-12T18:13:14.000Z"
 tags:
   - chrome
   - extension
@@ -9,12 +9,12 @@ tags:
   - plugin
   - three.js
   - webgl
-title: 'Chrome Crawler, HaXe, Three.js, WebGL and 2D Sprites'
+title: "Chrome Crawler, HaXe, Three.js, WebGL and 2D Sprites"
 oldUrl: /chrome-crawler/chrome-crawler-haxe-three-js-webgl-and-2d-sprites
 openAIMikesBlogFileId: file-UKFbzUkf5Kk9jm7i8paBCDI2
 ---
 
-[![](/wp-content/uploads/2011/06/banbanbnanbab.jpg "banbanbnanbab")](/wp-content/uploads/2011/06/banbanbnanbab.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/06/banbanbnanbab.jpg "banbanbnanbab")](https://www.mikecann.blog/wp-content/uploads/2011/06/banbanbnanbab.jpg)
 
 Had a little free time this weekend so thought I would scratch an itch that has been bugging me for a while.
 
@@ -24,7 +24,7 @@ I started the second version of my [Chrome Crawler](/posts/chrome-crawler-a-web-
 
 I managed to get the basics of the crawler working a few months back but through lack of time got no further. The second thing I wanted to work on after the basic crawling code was how to represent the crawled data. The current method is simply as a list:
 
-![](/wp-content/uploads/2010/12/Shot_002.png)
+![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_002.png)
 
 A while back however I recieved a mail from "**[MrJimmyCzech](https://www.youtube.com/user/MrJimmyCzech)**" who sent me a link to a video he had made using Chrome Crawler and Gephi:
 
@@ -36,7 +36,7 @@ So it got me thinking, can I replicate this directly in Chrome Crawler? To do th
 
 The first thing I tried was using the [HaXe version of the Raphael library](https://lib.haxe.org/p/raphaelExtern). The library is designed for graphing and uses the Canvas with SVG for rendering, so I thought it would be perfect for replicating Gephi. I tested it however and only managed about 300 circles moving and updating at 25FPS:
 
-[![](/wp-content/uploads/2011/06/outttt.jpg "outttt")](/wp-content/uploads/2011/06/outttt.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/06/outttt.jpg "outttt")](https://www.mikecann.blog/wp-content/uploads/2011/06/outttt.jpg)
 
 300 nodes just wasnt going to cut it, I needed more.
 
@@ -44,7 +44,7 @@ Enter the recent [HaXe externs](https://github.com/jgranick/three.js-completio
 
 After a little jiggery pokery with the [still very new externs](https://haxe.1354130.n2.nabble.com/Extern-classes-for-three-js-Javascript-3D-like-ro-me-td6447961.html) I managed to get something running:
 
-[![](/wp-content/uploads/2011/06/threjsjsjs.jpg "threjsjsjs")](/wp-content/uploads/2011/06/threjsjsjs.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/06/threjsjsjs.jpg "threjsjsjs")](https://www.mikecann.blog/wp-content/uploads/2011/06/threjsjsjs.jpg)
 
 Thats 2000 sprites running at 25fps which is less that I would have hoped for WebGL but still probably enough for ChromeCrawler. Im not too sure why the sprites are upside-down, nothing I can do seems to right them, perhaps someone can suggest the solution?
 

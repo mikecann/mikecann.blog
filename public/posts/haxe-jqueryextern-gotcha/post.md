@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-04-10T09:22:38.000Z'
+date: "2011-04-10T09:22:38.000Z"
 tags:
   - compile
   - gotcha
@@ -13,7 +13,7 @@ oldUrl: /haxe/haxe-jqueryextern-gotcha
 openAIMikesBlogFileId: file-yp8CWI4024zeh2NvqmL8Adsi
 ---
 
-[![](/wp-content/uploads/2011/04/ahxelogo.jpg "ahxelogo")](/wp-content/uploads/2011/04/ahxelogo.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ahxelogo.jpg "ahxelogo")](https://www.mikecann.blog/wp-content/uploads/2011/04/ahxelogo.jpg)
 
 As some of you may know, I have been getting into haXe reccently. For those of you dont know what haXe is, this is taken from [haxe.org](https://haxe.org):<!-- more -->
 
@@ -26,17 +26,17 @@ I have used HaXe in the past for various small projects, usually to take advanta
 
 Recently I have been exploring the various other targets offered by haXe, not just the flash one. Currently haXe supports the [following targets](https://haxe.org/doc/intro):
 
-> **[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) Javascript : **You can compile a haXe program to a single .js file. You can access the typed browser DOM APIs with autocompletion support, and all the dependencies will be resolved at compilation time.
+> **[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) Javascript : **You can compile a haXe program to a single .js file. You can access the typed browser DOM APIs with autocompletion support, and all the dependencies will be resolved at compilation time.
 >
-> **<strong>[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) **Flash :</strong> You can compile a haXe program to a .swf file. haXe is compatible with Flash Players 6 to 10, with either "old" Flash 8 API or newest AS3/Flash9+ API. haXe offers very good performance and language features to develop Flash content.
+> **<strong>[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) **Flash :</strong> You can compile a haXe program to a .swf file. haXe is compatible with Flash Players 6 to 10, with either "old" Flash 8 API or newest AS3/Flash9+ API. haXe offers very good performance and language features to develop Flash content.
 >
-> **<strong>[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) **NekoVM :</strong> You can compile a haXe program to NekoVM bytecode. This can be used for server-side programming such as dynamic webpages (using mod_neko for Apache) and also for command-line or desktop applications, since NekoVM can be embedded and extended with some other DLL.
+> **<strong>[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) **NekoVM :</strong> You can compile a haXe program to NekoVM bytecode. This can be used for server-side programming such as dynamic webpages (using mod_neko for Apache) and also for command-line or desktop applications, since NekoVM can be embedded and extended with some other DLL.
 >
-> **<strong>[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) **PHP :</strong> You can compile a haXe program to .php files. This will enable you to use a high level strictly-typed language such as haXe while keeping full compatibility with your existing server platform and libraries.
+> **<strong>[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) **PHP :</strong> You can compile a haXe program to .php files. This will enable you to use a high level strictly-typed language such as haXe while keeping full compatibility with your existing server platform and libraries.
 >
-> **<strong>[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) **C++ :</strong> You can now generate C++ code from your haXe source code, with the required Makefiles. This is very useful for creating native applications, for instance in iPhone development.
+> **<strong>[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) **C++ :</strong> You can now generate C++ code from your haXe source code, with the required Makefiles. This is very useful for creating native applications, for instance in iPhone development.
 >
-> **<strong>[![](/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](/wp-content/uploads/2011/04/ul_spot2.gif) **C# and Java</strong> targets are coming soon! (from @cwaneck)
+> **<strong>[![](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif "ul_spot2")](https://www.mikecann.blog/wp-content/uploads/2011/04/ul_spot2.gif) **C# and Java</strong> targets are coming soon! (from @cwaneck)
 > The target that has taken my interest recently has been Javascript.
 
 Having recently worked in Javascript on my Chrome extensions [PostToTumblr](/posts/posttotumblrs-1628th-user-celebration/) and [ChromeCrawler](/posts/chrome-crawler-v0-4-background-crawling-more/) I have gained a better understanding of how JS works and how to code in it. Despite this however I still cant get over what I consider some "very nasty" things in the language. Lack of type safety, nested anonymous functions and lack of proper classes just have my stomach all in knots thinking about them.

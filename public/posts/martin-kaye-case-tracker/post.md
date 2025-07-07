@@ -1,13 +1,13 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2006-07-27T19:30:57.000Z'
+date: "2006-07-27T19:30:57.000Z"
 tags: []
 title: Martin-Kaye Case Tracker
 oldUrl: /actionscript/martin-kaye-case-tracker
 openAIMikesBlogFileId: file-JfbMvowYY9LkgvBFSvCLqdUV
 ---
 
-![](/wp-content/uploads/Image/ecase.gif)
+![](https://www.mikecann.blog/wp-content/uploads/Image/ecase.gif)
 This is my first commercial Rich Internet App written in flash. It was written for the legal firm Martin-Kaye as a front end for thier extensive database.
 
 <!-- more -->

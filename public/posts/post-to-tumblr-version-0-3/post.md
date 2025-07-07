@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-10-31T11:04:26.000Z'
+date: "2010-10-31T11:04:26.000Z"
 tags:
   - browser
   - chrome
@@ -17,7 +17,7 @@ oldUrl: /post-to-tumbr/post-to-tumblr-version-0-3
 openAIMikesBlogFileId: file-idNxzXvqSrCoDymGBnejjJ2e
 ---
 
-[![](/wp-content/uploads/2010/10/Shot_004.png "Shot_004")](/wp-content/uploads/2010/10/Shot_004.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png)
 
 Just made a quick little update to my chrome extension "Post To Tumblr".
 

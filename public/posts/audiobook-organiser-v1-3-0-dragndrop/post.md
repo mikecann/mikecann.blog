@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-01-12T00:07:04.000Z'
+date: "2010-01-12T00:07:04.000Z"
 tags:
   - actionscript
   - audiobook
@@ -15,7 +15,7 @@ oldUrl: /actionscript/audiobook-organiser-v1-3-0-dragndrop
 openAIMikesBlogFileId: file-qb3Tew7CVC4FLshebXvUMzg2
 ---
 
-[![](/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg "ScreenHunter_04-Jan.-11-22.36")](/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg "ScreenHunter_04-Jan.-11-22.36")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg)
 
 Well I was just doing some audio book organising and realised that it would be great if I could drag and drop a folder straight from my AIR into iTunes ready for upload to my iPhone.
 

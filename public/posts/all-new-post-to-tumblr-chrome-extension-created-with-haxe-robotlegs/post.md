@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-09-11T19:29:45.000Z'
+date: "2012-09-11T19:29:45.000Z"
 tags:
   - chrome
   - extension
@@ -12,7 +12,7 @@ oldUrl: /haxe/all-new-post-to-tumblr-chrome-extension-created-with-haxe-robotleg
 openAIMikesBlogFileId: file-f3PeHBjz8fP1jQlN7kiLuz9W
 ---
 
-[![](/wp-content/uploads/2012/09/newhead.jpg "newhead")](/wp-content/uploads/2012/09/newhead.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/newhead.jpg "newhead")](https://www.mikecann.blog/wp-content/uploads/2012/09/newhead.jpg)
 
 I have been working off and on for a while on an update to my [popular Chrome Extension 'Post To Tumblr'](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah) and seeing as Tumblr have[ just changed thier API](https://developers.tumblr.com/post/28557510444/welcome-to-the-official-tumblr-developers-blog) I thought it was time to accelerate its development and release it, finally.
 
@@ -20,19 +20,19 @@ I have been working off and on for a while on an update to my [popular Chrome Ex
 
 First some screenshots to give you an idea of what it does:
 
-[![](/wp-content/uploads/2012/09/postss01.jpg "postss01")](/wp-content/uploads/2012/09/postss01.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/postss01.jpg "postss01")](https://www.mikecann.blog/wp-content/uploads/2012/09/postss01.jpg)
 
 You can right-click any thing on a page and "Post To Tumblr".
 
-[![](/wp-content/uploads/2012/09/postss02.jpg "postss02")](/wp-content/uploads/2012/09/postss02.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/postss02.jpg "postss02")](https://www.mikecann.blog/wp-content/uploads/2012/09/postss02.jpg)
 
 A new tab opens where you can format it how you like.
 
-[![](/wp-content/uploads/2012/09/postss03.jpg "postss03")](/wp-content/uploads/2012/09/postss03.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/postss03.jpg "postss03")](https://www.mikecann.blog/wp-content/uploads/2012/09/postss03.jpg)
 
 You can change the post type very easily.
 
-[![](/wp-content/uploads/2012/09/postss04.jpg "postss04")](/wp-content/uploads/2012/09/postss04.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/postss04.jpg "postss04")](https://www.mikecann.blog/wp-content/uploads/2012/09/postss04.jpg)
 
 When done you just "Create Post"
 

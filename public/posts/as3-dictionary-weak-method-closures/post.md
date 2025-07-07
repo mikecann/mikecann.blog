@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-16T19:44:06.000Z'
+date: "2010-08-16T19:44:06.000Z"
 tags:
   - as3
   - as3signals
@@ -9,7 +9,7 @@ tags:
   - dictionary
   - puremvc
   - robotlegs
-title: 'AS3, Dictionary & Weak Method Closures'
+title: "AS3, Dictionary & Weak Method Closures"
 oldUrl: /actionscript/as3-dictionary-weak-method-closures
 openAIMikesBlogFileId: file-n84eGXffT3JTwTXrylMZyr3b
 ---
@@ -187,7 +187,7 @@ What actually happens is you get nothing. No trace out, despite the fact that th
 
 So whats happening here? If you break into the debugger at the point that the listener is added then you get the following:
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-14.03.jpg "ScreenHunter_01 Aug. 16 14.03")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-14.03.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-14.03.jpg "ScreenHunter_01 Aug. 16 14.03")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-14.03.jpg)
 
 You can see that the type "MethodClosure" is added as the key to the dictionary rather than Function which is passed in. MethodClosure is a special native Flash Type that you dont have access to. It exists to resolve the issues we used to have in AS2 where passing a function of a class to a listener would cause the listener to go out of scope and other nasties. From the [Adobe docs](https://www.adobe.com/devnet/actionscript/articles/actionscript3_overview.html):
 

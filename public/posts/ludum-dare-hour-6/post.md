@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-21T08:42:53.000Z'
+date: "2010-08-21T08:42:53.000Z"
 tags:
   - 48hours
   - development
@@ -18,7 +18,7 @@ Progress update. I had a small sleep between 5 and 7 as I was getting pretty sle
 
 Desprite this im making progress:
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-09.38.jpg "ScreenHunter_02 Aug. 21 09.38")](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-09.38.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-09.38.jpg "ScreenHunter_02 Aug. 21 09.38")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-09.38.jpg)
 
 It doesnt look like much yet, I have mostly been laying the foundations for later development :)
 

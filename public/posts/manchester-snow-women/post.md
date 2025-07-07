@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-01-05T15:07:37.000Z'
+date: "2010-01-05T15:07:37.000Z"
 tags:
   - personal
   - photos
@@ -18,14 +18,14 @@ Well, this is just incredible, I dont think in my lifetime I have EVER seen so m
 
 This picture from a work colleague illustrates just quite how much fell over night:
 
-[![21036_236129416905_687371905_3626340_5253921_n](/wp-content/uploads/2010/01/21036_236129416905_687371905_3626340_5253921_n.jpg "21036_236129416905_687371905_3626340_5253921_n")](/wp-content/uploads/2010/01/21036_236129416905_687371905_3626340_5253921_n.jpg)
+[![21036_236129416905_687371905_3626340_5253921_n](https://www.mikecann.blog/wp-content/uploads/2010/01/21036_236129416905_687371905_3626340_5253921_n.jpg "21036_236129416905_687371905_3626340_5253921_n")](https://www.mikecann.blog/wp-content/uploads/2010/01/21036_236129416905_687371905_3626340_5253921_n.jpg)
 
 Also the snow is totally perfect for building snow women!
 
-[![photo (1)](/wp-content/uploads/2010/01/photo-1.jpg "photo (1)")](/wp-content/uploads/2010/01/photo-1.jpg)
+[![photo (1)](https://www.mikecann.blog/wp-content/uploads/2010/01/photo-1.jpg "photo (1)")](https://www.mikecann.blog/wp-content/uploads/2010/01/photo-1.jpg)
 
 And its STILL snowing! I just took this one out the office window:
 
-[![photo (2)](/wp-content/uploads/2010/01/photo-2.jpg "photo (2)")](/wp-content/uploads/2010/01/photo-2.jpg)
+[![photo (2)](https://www.mikecann.blog/wp-content/uploads/2010/01/photo-2.jpg "photo (2)")](https://www.mikecann.blog/wp-content/uploads/2010/01/photo-2.jpg)
 
 Its incredible, snow just seems to bring out some really primal aspect out in me, so excited :D

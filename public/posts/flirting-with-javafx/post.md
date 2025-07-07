@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-12-13T21:38:03.000Z'
+date: "2009-12-13T21:38:03.000Z"
 tags:
   - inputtie
   - java fx
@@ -27,7 +27,7 @@ After having worked for years with Flash / Flex I had grown used to the ease of 
 
 I ended up writing and rewriting my view using different libraries like [G](https://geosoft.no/graphics/):
 
-[![ScreenHunter_03 Dec. 13 20.05](/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-13-20.05.jpg "ScreenHunter_03 Dec. 13 20.05")](/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-13-20.05.jpg)
+[![ScreenHunter_03 Dec. 13 20.05](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-13-20.05.jpg "ScreenHunter_03 Dec. 13 20.05")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-13-20.05.jpg)
 
 I found them all to be unwieldy and too inflexible for what I had in-mind. It all just seemed so archaic and old-hat.
 
@@ -37,7 +37,7 @@ As I was at the end of my line with Java I thought, hell why not give it a littl
 
 For those who havent heard f JavaFX; taken from Wikipeda:
 
-> <address>[![javafx_logo_color_1](https://www.mikecann.blog/wp-content/uploads/2009/12/javafx_logo_color_1-300x150.jpg "javafx_logo_color_1")](/wp-content/uploads/2009/12/javafx_logo_color_1.jpg)JavaFX is a software platform for creating and delivering rich Internet applications that can run across a wide variety of connected devices. The current release (JavaFX 1.2, June 2009) enables building applications for desktop, browser and mobile phones. </address> <address> </address> <address>
+> <address>[![javafx_logo_color_1](https://www.mikecann.blog/wp-content/uploads/2009/12/javafx_logo_color_1-300x150.jpg "javafx_logo_color_1")](https://www.mikecann.blog/wp-content/uploads/2009/12/javafx_logo_color_1.jpg)JavaFX is a software platform for creating and delivering rich Internet applications that can run across a wide variety of connected devices. The current release (JavaFX 1.2, June 2009) enables building applications for desktop, browser and mobile phones. </address> <address> </address> <address>
 >
 > </address><address>TV set-top boxes, gaming consoles, Blu-ray players and other platforms are planned.JavaFX is fully integrated with the Java Runtime Environment (JRE) – JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running Java ME.</address>
 > What this means is that you can (with a little jiggery pokery) use JavaFX with normal Java. This is great as I had already written a whole load of code in Java which I didn't want to get rid of.
@@ -65,7 +65,7 @@ scene: Scene {
 
 This is your standard "Hello World" (but with a British twist):
 
-[![ScreenHunter_06 Dec. 13 20.32](/wp-content/uploads/2009/12/ScreenHunter_06-Dec.-13-20.32.jpg "ScreenHunter_06 Dec. 13 20.32")](/wp-content/uploads/2009/12/ScreenHunter_06-Dec.-13-20.32.jpg)
+[![ScreenHunter_06 Dec. 13 20.32](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_06-Dec.-13-20.32.jpg "ScreenHunter_06 Dec. 13 20.32")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_06-Dec.-13-20.32.jpg)
 
 The simplicity of rendering things to the screen was just what I was looking for as the for this project, it was a double bonus that the language is powerful.
 

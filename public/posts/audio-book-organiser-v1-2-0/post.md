@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-01-09T19:37:42.000Z'
+date: "2010-01-09T19:37:42.000Z"
 tags:
   - actionscript
   - audiobook
@@ -16,7 +16,7 @@ oldUrl: /actionscript/audio-book-organiser-v1-2-0
 openAIMikesBlogFileId: file-8itQm1Eogj7os8o7iAXDQAKi
 ---
 
-[![ScreenHunter_01 Jan. 09 18.34](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg "ScreenHunter_01 Jan. 09 18.34")](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg)
+[![ScreenHunter_01 Jan. 09 18.34](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg "ScreenHunter_01 Jan. 09 18.34")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg)
 
 Just did a quick update to the audio book organiser. Added the ability to move the storage database file. This was so that I can put my storage file on Dropbox and it will then be backedup and synced between machines.
 

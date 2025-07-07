@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-04-24T16:14:04.000Z'
+date: "2010-04-24T16:14:04.000Z"
 tags:
   - audio
   - chill
@@ -12,7 +12,7 @@ oldUrl: /audio/artificial-harmonics-part-3
 openAIMikesBlogFileId: file-VOjB7sRIGG0aDDKf3TgBEfNe
 ---
 
-[![](/wp-content/uploads/2010/04/ArtificialHarmonics3.png "ArtificialHarmonics3")](/wp-content/uploads/2010/04/ArtificialHarmonics3.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/04/ArtificialHarmonics3.png "ArtificialHarmonics3")](https://www.mikecann.blog/wp-content/uploads/2010/04/ArtificialHarmonics3.png)
 
 Well its been a while since I have made a new mix, but I have been collecting tracks for it for a while. This one came together fairly quickly actually, about two days worth of composition and then a few variations until I was happy with it. I decided not to add any movie samples to this one to keep it nice and simple, got alot of other projects on at the moment! Im not even sure if people actually like those movie samples tho, let me know if you do!<!-- more -->
 

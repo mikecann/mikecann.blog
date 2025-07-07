@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-10-17T19:31:34.000Z'
+date: "2010-10-17T19:31:34.000Z"
 tags:
   - button
   - click
@@ -15,7 +15,7 @@ oldUrl: /inputtie/inputtie-version-0-1-5
 openAIMikesBlogFileId: file-xw5nSTKoK9I7tiWDH1GPm1p4
 ---
 
-[![](/wp-content/uploads/2010/10/Untitled-1.png "Untitled-1")](/wp-content/uploads/2010/10/Untitled-1.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Untitled-1.png "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2010/10/Untitled-1.png)
 
 Just a few small changes in this update:
 

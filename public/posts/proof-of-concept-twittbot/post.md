@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/proof-of-concept-twittbot/cover.jpg
-date: '2009-04-30T19:49:32.000Z'
+date: "2009-04-30T19:49:32.000Z"
 tags:
   - bot
   - c sharp
@@ -9,7 +9,7 @@ tags:
   - plugin
   - projects
   - twitter
-title: 'Proof of Concept: TwittBot'
+title: "Proof of Concept: TwittBot"
 oldUrl: /c/proof-of-concept-twittbot
 openAIMikesBlogFileId: file-raQD8xvByDejhUkOAeeODS7T
 ---
@@ -22,39 +22,39 @@ After a few evenings work however I decided that this project was going to take 
 
 You login using a twitter account:
 
-![1](/wp-content/uploads/2009/04/1.gif "1")
+![1](https://www.mikecann.blog/wp-content/uploads/2009/04/1.gif "1")
 
 <!--more-->Once logged in you are presented with the main interface, plugins are loaded automatically from the directory and displayed as tabs. The reason for doing them as plugins is to allow users to pick and choose what functionality they want their twittbot to have. Also it allows for easy upgrading to newer plugin versions.
 
-![2](/wp-content/uploads/2009/04/2.gif "2")
+![2](https://www.mikecann.blog/wp-content/uploads/2009/04/2.gif "2")
 
 Hangman was the primary idea for this project and is implemented as a simple plugin that consists of 3 simple commands:
 
-![3](/wp-content/uploads/2009/04/3.gif "3")
+![3](https://www.mikecann.blog/wp-content/uploads/2009/04/3.gif "3")
 
 I have built a simple polling timer for checking new messages from Twitter:
 
-![4](/wp-content/uploads/2009/04/4.gif "4")
+![4](https://www.mikecann.blog/wp-content/uploads/2009/04/4.gif "4")
 
 The interface uses docking panels provided by the[ .NET DockPanel Suite](https://sourceforge.net/projects/dockpanelsuite/). Docking is demonstrated below with the log window:
 
-![5](/wp-content/uploads/2009/04/5.gif "5")
+![5](https://www.mikecann.blog/wp-content/uploads/2009/04/5.gif "5")
 
 The next shot shows me sending a direct message to the "[twittgames](https://www.twitter.com/twittgames)" account from my "[mikeysee](https://www.twitter.com/mikeysee)" account:
 
-![6](/wp-content/uploads/2009/04/6.gif "6")
+![6](https://www.mikecann.blog/wp-content/uploads/2009/04/6.gif "6")
 
 After refreshing, the Hangman plugin then shows the active game states:
 
-![7](/wp-content/uploads/2009/04/7.gif "7")
+![7](https://www.mikecann.blog/wp-content/uploads/2009/04/7.gif "7")
 
 Then you play the game by making guesses:
 
-![8](/wp-content/uploads/2009/04/8.gif "8")A
+![8](https://www.mikecann.blog/wp-content/uploads/2009/04/8.gif "8")A
 
 And the plugin responds to your guesses:
 
-![9](/wp-content/uploads/2009/04/9.gif "9")
+![9](https://www.mikecann.blog/wp-content/uploads/2009/04/9.gif "9")
 
 It is far from complete but as a proof of concept I think it demonstrates the idea. There are many things that could be improved and/or worked upon, such as:
 

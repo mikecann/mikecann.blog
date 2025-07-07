@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-01-16T12:13:17.000Z'
+date: "2010-01-16T12:13:17.000Z"
 tags:
   - personal
   - rss
@@ -10,7 +10,7 @@ oldUrl: /photos-personal/google-reader
 openAIMikesBlogFileId: file-ltFadEM0OyWVo2GtW0kmsj3R
 ---
 
-[![](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-16-11.00.jpg "ScreenHunter_01 Jan. 16 11.00")](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-16-11.00.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-16-11.00.jpg "ScreenHunter_01 Jan. 16 11.00")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-16-11.00.jpg)
 
 Well I guess im a little late to the party but I have recently discovered the joy that is [Google Reader](https://www.google.co.uk/aclk?sa=l&ai=C7XwfvpxRS-XULZP60ATqqIm6BofH_nvb8djUBbzP7aIGCAAQASDHmPgFUIqcmLD7_____wFgu46wg9AKoAGhw_P8A8gBAaoEE0_Q_BkFj7a5ClxdtuxO7nGrSC0&sig=AGiWqtywpsEabeLnKLGvWAMBI-st8Ua1CQ&q=https://www.google.com/reader%3Futm_campaign%3Den%26utm_source%3Den-ha-ww-ww-bk%26utm_medium%3Dha%26utm_term%3Dgoogle%2520reader).
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-09-19T18:59:38.000Z'
+date: "2010-09-19T18:59:38.000Z"
 tags:
   - book
   - peter f hamilton
@@ -11,7 +11,7 @@ oldUrl: /books/the-evolutionary-void
 openAIMikesBlogFileId: file-lMotxsP94nmHXwMsF7P4c34y
 ---
 
-[![](/wp-content/uploads/2010/09/photo.jpg "photo")](/wp-content/uploads/2010/09/photo.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/09/photo.jpg "photo")](https://www.mikecann.blog/wp-content/uploads/2010/09/photo.jpg)
 
 Just thought I would post about my favourite author Peter F. Hamilton.
 

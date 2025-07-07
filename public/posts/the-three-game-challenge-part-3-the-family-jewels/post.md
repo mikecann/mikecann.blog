@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/the-three-game-challenge-part-3-the-family-jewels/cover.jpg
-date: '2013-04-25T11:03:10.000Z'
+date: "2013-04-25T11:03:10.000Z"
 tags:
   - ash
   - flash
@@ -24,9 +24,9 @@ I toyed around with a gem dropping mechanic but that didn't work so well, then
 
 I originally wanted a "mindless" match-three game like Montezuma, one where you play it as fast as you can without thinking too much about the moves. As I started developing the game play for this one however it seemed to fit a puzzle like game better so that's what I ended up with.
 
-[![screenshot_01](/wp-content/uploads/2013/04/screenshot_01-300x219.png)](/wp-content/uploads/2013/04/screenshot_01.png) [![screenshot_02](/wp-content/uploads/2013/04/screenshot_02-300x219.png)
+[![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_01-300x219.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_01.png) [![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_02-300x219.png)
 
-](/wp-content/uploads/2013/04/screenshot_02.png)[![screenshot_03](/wp-content/uploads/2013/04/screenshot_03-300x219.png)](/wp-content/uploads/2013/04/screenshot_03.png) [![screenshot_04](/wp-content/uploads/2013/04/screenshot_04-300x219.png)](/wp-content/uploads/2013/04/screenshot_04.png)
+](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_02.png)[![screenshot_03](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_03-300x219.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_03.png) [![screenshot_04](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_04-300x219.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_04.png)
 
 Anyways give it a go and let me know what you think:
 

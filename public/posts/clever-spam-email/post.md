@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-04-17T18:41:57.000Z'
+date: "2010-04-17T18:41:57.000Z"
 tags:
   - clever
   - email
@@ -18,7 +18,7 @@ Its not often that spam gets through my gmail spam filters but this one did, and
 
 <!-- more -->
 
-[![](/wp-content/uploads/2010/04/710shot.gif "710shot")](/wp-content/uploads/2010/04/710shot.gif)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/04/710shot.gif "710shot")](https://www.mikecann.blog/wp-content/uploads/2010/04/710shot.gif)
 
 Whats clever about it:
 

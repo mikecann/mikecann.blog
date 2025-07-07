@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-01-18T13:01:24.000Z'
+date: "2010-01-18T13:01:24.000Z"
 tags:
   - apple
   - hardware
@@ -12,7 +12,7 @@ oldUrl: /photos-personal/apple-aluminium-keyboard-windows-7
 openAIMikesBlogFileId: file-PggnzPGLA2cmLfkGz6nGEUu2
 ---
 
-[![](/wp-content/uploads/2010/01/CropperCapture1.jpg "CropperCapture[1]")](/wp-content/uploads/2010/01/CropperCapture1.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/01/CropperCapture1.jpg "CropperCapture[1]")](https://www.mikecann.blog/wp-content/uploads/2010/01/CropperCapture1.jpg)
 
 Just got my new computer at work. First thing I did was chuck out the stock keyboard and replace with my favourite mac aluminium keyboard.
 
@@ -26,7 +26,7 @@ For convenience I have taken the details on how to use the file directly from th
 
 **Download**
 
-Download the installation package [Apple_Pro_KBD_v2](/wp-content/uploads/2010/01/Apple_Pro_KBD_v2.zip) (250K)
+Download the installation package [Apple_Pro_KBD_v2](https://www.mikecann.blog/wp-content/uploads/2010/01/Apple_Pro_KBD_v2.zip) (250K)
 
 **System requirements**
 

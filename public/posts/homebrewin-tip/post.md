@@ -1,13 +1,13 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-01-28T13:08:14.000Z'
+date: "2012-01-28T13:08:14.000Z"
 tags: []
 title: Homebrewin' Tip
 oldUrl: /misc/homebrewin-tip
 openAIMikesBlogFileId: file-KAIPDXHv8y8vLSzuJZI0p0z2
 ---
 
-[![](/wp-content/uploads/2012/01/head.jpg "head")](/wp-content/uploads/2012/01/head.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/01/head.jpg "head")](https://www.mikecann.blog/wp-content/uploads/2012/01/head.jpg)
 
 This post is a little off the normal beaten track for my blog. I have been so super busy of late on a project that I havent really had any time for technical personal projects.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-07-30T07:21:05.000Z'
+date: "2012-07-30T07:21:05.000Z"
 tags:
   - challenge
   - game
@@ -12,7 +12,7 @@ oldUrl: /games/fourth-week-mobile-game-progress-update
 openAIMikesBlogFileId: file-zSFyqVTz6bLuS47rBxMBMmn1
 ---
 
-<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/wp-content/uploads/2012/07/Main10.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main10.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
+<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/Main10.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main10.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
 
 Another week, another progress update. As usual you can check out the progress above (use the arrow keys to move and jump).
 
@@ -26,7 +26,7 @@ I have also spent some time sourcing and putting in the rudiments of music and s
 
 I have also been working hard on trying to get as many levels in as I can. As mentioned previously the idea is to have 30 levels split over three 'stages' each stage will have its own theme and general style of levels. So far I have made the first 10 levels in:
 
-[![](/wp-content/uploads/2012/07/0_0.png "0_0")](/wp-content/uploads/2012/07/0_0.png)[![](/wp-content/uploads/2012/07/0_1.png "0_1")](/wp-content/uploads/2012/07/0_1.png)[![](/wp-content/uploads/2012/07/0_2.png "0_2")](/wp-content/uploads/2012/07/0_2.png)[![](/wp-content/uploads/2012/07/0_3.png "0_3")](/wp-content/uploads/2012/07/0_3.png)[![](/wp-content/uploads/2012/07/0_4.png "0_4")](/wp-content/uploads/2012/07/0_4.png)[![](/wp-content/uploads/2012/07/0_5.png "0_5")](/wp-content/uploads/2012/07/0_5.png)[![](/wp-content/uploads/2012/07/0_6.png "0_6")](/wp-content/uploads/2012/07/0_6.png)[![](/wp-content/uploads/2012/07/0_7.png "0_7")](/wp-content/uploads/2012/07/0_7.png)[![](/wp-content/uploads/2012/07/0_8.png "0_8")](/wp-content/uploads/2012/07/0_8.png)[![](/wp-content/uploads/2012/07/0_9.png "0_9")](/wp-content/uploads/2012/07/0_9.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_0.png "0_0")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_0.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_1.png "0_1")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_1.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_2.png "0_2")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_2.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_3.png "0_3")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_3.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_4.png "0_4")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_4.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_5.png "0_5")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_5.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_6.png "0_6")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_6.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_7.png "0_7")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_7.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_8.png "0_8")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_8.png)[![](https://www.mikecann.blog/wp-content/uploads/2012/07/0_9.png "0_9")](https://www.mikecann.blog/wp-content/uploads/2012/07/0_9.png)
 
 As [mentioned in my last update](/posts/3-weeks-of-progress-on-a-mobile-game/) I noticed that people were having trouble understanding how to play the game with the world rotating. To combat that I decided that the first few levels the world were going to be static, doing so should reduce some complexities with the control system. Well I have extended that "few levels" to now mean that the entirety of the first stage doesn't auto-rotate.
 

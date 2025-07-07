@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2014-01-21T15:13:33.000Z'
+date: "2014-01-21T15:13:33.000Z"
 tags:
   - summary
   - trip
@@ -9,7 +9,7 @@ oldUrl: /2013-trip/the-trip-2013-the-stats
 openAIMikesBlogFileId: file-GdayEnrWzwdc2hkbUnLONRr3
 ---
 
-[![screenshot_02](/wp-content/uploads/2014/01/screenshot_02.png)](https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E)
+[![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2014/01/screenshot_02.png)](https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E)
 
 **[ Click](https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E) the image above to browse the map interactively.**
 
@@ -34,23 +34,23 @@ Well thats it. Im back now from a trip of a lifetime. I had such an incredible t
 
 Well I have travelled a long way, 40,000km (give or take) which just so happens to be the [circumference of earth](https://www.google.co.uk/search?q=circumference+of+the+earth&oq=cir&aqs=chrome.1.69i57j69i59j69i65j69i59j0l2.1090j0j4&sourceid=chrome&espv=210&es_sm=93&ie=UTF-8). So in some ways you could say I have travelled around the world :P
 
-![](/wp-content/uploads/2013/07/photo3.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/07/photo3.jpg)
 
 I have ridden a great number of different forms of transport.
 
-![](/wp-content/uploads/2013/08/photo-691.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-691.jpg)
 
-![](/wp-content/uploads/2013/11/photo-781.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-781.jpg)
 
-![](/wp-content/uploads/2013/11/photo-32.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-32.jpg)
 
 Some of them safer than others
 
-![](/wp-content/uploads/2013/08/photo-94.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-94.jpg)
 
-![](/wp-content/uploads/2013/08/photo-414.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-414.jpg)
 
-![](/wp-content/uploads/2013/07/photo-572.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-572.jpg)
 
 I learnt that half the fun of a trip like this is in the journey. Sure 12.5 days spent on busses doesn't sound like fun but it actually gives you time to rest and to think, not to mention write pages and pages of diary entries..
 
@@ -63,15 +63,15 @@ I learnt that half the fun of a trip like this is in the journey. Sure 12.5 days
 
 The intention before I left was to keep a written diary so that I would have something other than photos to remember the trip by. Well it turned out to be harder than I had originally foreseen. I estimated that for every day of travel it would take me about an hour to record it in the diary. That means if I don't write for 5 days I have to find 5 hours the next day to fill it in.
 
-[![2014-01-21 13.59.06](/wp-content/uploads/2014/01/2014-01-21-13.59.06-1024x768.jpg)](/wp-content/uploads/2014/01/2014-01-21-13.59.06.jpg)
+[![2014-01-21 13.59.06](https://www.mikecann.blog/wp-content/uploads/2014/01/2014-01-21-13.59.06-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/01/2014-01-21-13.59.06.jpg)
 
 I used the diaries as a record of the places I went, the things I did the people I met. Although I didn't just use them as a log book, they are also a record of how I felt at the time and how I changed as a person through the trip be that for good or bad.
 
-![](/wp-content/uploads/2013/07/photo-623.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-623.jpg)
 
 It wasn't all bad though as it gave me time to reflect, take stock and realise what i'm doing and why i'm doing it. Some of the diaries also came with bonus stickers so being an 8 year old at heart I used them to decorate my laptop
 
-[![2014-01-21 14](/wp-content/uploads/2014/01/2014-01-21-14-1024x768.jpg)](/wp-content/uploads/2014/01/2014-01-21-14.jpg)
+[![2014-01-21 14](https://www.mikecann.blog/wp-content/uploads/2014/01/2014-01-21-14-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/01/2014-01-21-14.jpg)
 
 I kept up my blog throughout the trip too which served as a public record of my excursion. Infact I wrote 25 blog posts over the course of my time:
 
@@ -111,27 +111,27 @@ I kept up my blog throughout the trip too which served as a public record of my 
 
 I didn't hold back with the photos, I took A LOT. 11672 over 8.5 months is approximately one photo every half an hour. Im glad I did as I came away with some incredible visual memories from the trip
 
-![](/wp-content/uploads/2013/05/falls2.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/05/falls2.jpg)
 
-![](/wp-content/uploads/2013/12/photo-181.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/12/photo-181.jpg)
 
-![](/wp-content/uploads/2013/12/photo-34.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/12/photo-34.jpg)
 
 Infact I have so many good photos that its hard to pick out the standout ones
 
-![](/wp-content/uploads/2013/06/photo-46.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/06/photo-46.jpg)
 
-![](/wp-content/uploads/2013/07/photo-702.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-702.jpg)
 
-![](/wp-content/uploads/2013/07/photo-561.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-561.jpg)
 
 I think I will have to dedicate a whole nother post to this topic alone
 
-![](/wp-content/uploads/2013/10/photo-26.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/10/photo-26.jpg)
 
-![](/wp-content/uploads/2013/10/photo-45.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/10/photo-45.jpg)
 
-![](/wp-content/uploads/2013/11/photo-72.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-72.jpg)
 
 # 4\. Activities
 
@@ -159,9 +159,9 @@ I think I will have to dedicate a whole nother post to this topic alone
 
 I did as much as I can. Before I went out I told myself not to skimp on activities because who knew when I would get the chance to do them again.
 
-![](/wp-content/uploads/2013/08/photo-94.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-94.jpg)
 
-![](/wp-content/uploads/2013/09/photo-772.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/09/photo-772.jpg)
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/p3gaQBr1FAs" frameborder="0" allowfullscreen></iframe>
 
@@ -175,8 +175,8 @@ Yep it cost more than I was expecting (around 15k) but I stayed out there longer
 
 It was however a trip of a lifetime and as they say; you can't put a price on memories and so I wouldn't have done any of it any other way.
 
-[![1085042_10151781387216031_1156564013_o](/wp-content/uploads/2014/01/1085042_10151781387216031_1156564013_o-1024x915.jpg)](/wp-content/uploads/2014/01/1085042_10151781387216031_1156564013_o.jpg)
+[![1085042_10151781387216031_1156564013_o](https://www.mikecann.blog/wp-content/uploads/2014/01/1085042_10151781387216031_1156564013_o-1024x915.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/01/1085042_10151781387216031_1156564013_o.jpg)
 
 ** Handstands Popped: 18**
 
-![](/wp-content/uploads/2013/10/photo-851.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2013/10/photo-851.jpg)

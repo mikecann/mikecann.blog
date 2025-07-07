@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/audio-book-organiser-air-mate-flex-4/cover.jpg
-date: '2009-12-30T13:38:29.000Z'
+date: "2009-12-30T13:38:29.000Z"
 tags:
   - actionscript
   - audiobook
@@ -11,7 +11,7 @@ tags:
   - programming
   - projects
   - utility
-title: 'Audio Book Organiser (AIR, Mate, Flex 4)'
+title: "Audio Book Organiser (AIR, Mate, Flex 4)"
 oldUrl: /actionscript/audio-book-organiser-air-mate-flex-4
 openAIMikesBlogFileId: file-E2L9HwYAXIKEc4MOICM5AwS0
 ---
@@ -28,7 +28,7 @@ In addition I wanted to look at the various frameworks in use for Flex these day
 
 Finally we get to the point of this post. I have developed a simple Adobe AIR application that allows you to organise audio books. The basic idea is simple you give the application a selection of 'source' directories where your audiobooks belong then you can tick off whether you have listened to each one, and what rating you would give them.
 
-[![ScreenHunter_02 Dec. 30 12.32](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-30-12.32-300x262.jpg "ScreenHunter_02 Dec. 30 12.32")](/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-30-12.32.jpg)[![ScreenHunter_03 Dec. 30 12.32](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-30-12.32-300x261.jpg "ScreenHunter_03 Dec. 30 12.32")](/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-30-12.32.jpg)
+[![ScreenHunter_02 Dec. 30 12.32](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-30-12.32-300x262.jpg "ScreenHunter_02 Dec. 30 12.32")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-30-12.32.jpg)[![ScreenHunter_03 Dec. 30 12.32](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-30-12.32-300x261.jpg "ScreenHunter_03 Dec. 30 12.32")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_03-Dec.-30-12.32.jpg)
 
 The data is persisted to a file that is saved to your hard drive, so when you open the application up again next time it remembers which audio books you have listened to and what ratings you gave them.
 

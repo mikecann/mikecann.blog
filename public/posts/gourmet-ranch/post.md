@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/gourmet-ranch/cover.jpg
-date: '2010-08-04T11:57:48.000Z'
+date: "2010-08-04T11:57:48.000Z"
 tags:
   - facebook
   - flash
@@ -23,11 +23,11 @@ As the lead flash dev on the project its my responsibility to code all the engin
 
 Despite the challenges and the occasional heated moment during development I think the product we have produced is excellent and is superior to many of the similar games available on Facebook. The stats for the first month of the game are impressive as can be seen from the [data gleamed from AppData](https://appdata.com/apps/facebook/360375426140).
 
-![](/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-04-09.37.jpg "ScreenHunter_07 Aug. 04 09.37")
+![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-04-09.37.jpg "ScreenHunter_07 Aug. 04 09.37")
 
 The main challenge now is to continue the early growth we have seen and retain the existing users we have won. So that means players of the game should be looking forward to regular updates with new content and bug fixing :)
 
 Anyways if you wanna check it out head over to facebook --> [https://apps.facebook.com/gourmetranch/](https://apps.facebook.com/gourmetranch/)
 
-![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-04-09.27-300x260.jpg "ScreenHunter_01 Aug. 04 09.27")![](/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-04-09.31.jpg "ScreenHunter_03 Aug. 04 09.31")
-[![](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-04-09.30.jpg "ScreenHunter_02 Aug. 04 09.30")](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-04-09.30.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_05-Aug.-04-09.31.jpg "ScreenHunter_05 Aug. 04 09.31")](/wp-content/uploads/2010/08/ScreenHunter_05-Aug.-04-09.31.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-04-09.27-300x260.jpg "ScreenHunter_01 Aug. 04 09.27")![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-04-09.31.jpg "ScreenHunter_03 Aug. 04 09.31")
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-04-09.30.jpg "ScreenHunter_02 Aug. 04 09.30")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-04-09.30.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_05-Aug.-04-09.31.jpg "ScreenHunter_05 Aug. 04 09.31")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_05-Aug.-04-09.31.jpg)

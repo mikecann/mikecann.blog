@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-12-19T22:54:33.000Z'
+date: "2010-12-19T22:54:33.000Z"
 tags:
   - api
   - background
@@ -14,7 +14,7 @@ oldUrl: /chrome-crawler/chrome-crawler-v0-4-background-crawling-more
 openAIMikesBlogFileId: file-X6Y7cVLaVHEy8EW4HL8vuhNE
 ---
 
-[![](/wp-content/uploads/2010/12/Shot_0041.png "Shot_004")](/wp-content/uploads/2010/12/Shot_0041.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0041.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0041.png)
 
 I have been asked by several peeps now to add the ability to persist crawls when the pop-up window closes so I rolled out this update.
 

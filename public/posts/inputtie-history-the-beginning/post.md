@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-10-09T14:09:19.000Z'
+date: "2010-10-09T14:09:19.000Z"
 tags:
   - development
   - history
@@ -20,7 +20,7 @@ In this post im going to talk about the very beginning of the project and what I
 
 ## The Problem
 
-[caption id="attachment_1372" align="alignright" width="229" caption="Various Inputtie Attempts"]![Various Inputtie Attempts](/wp-content/uploads/2010/10/ScreenHunter_02-Oct.-09-13.46.jpg "Various Inputtie Attempts")](/wp-content/uploads/2010/10/ScreenHunter_02-Oct.-09-13.46.jpg)[/caption]
+[caption id="attachment_1372" align="alignright" width="229" caption="Various Inputtie Attempts"]![Various Inputtie Attempts](https://www.mikecann.blog/wp-content/uploads/2010/10/ScreenHunter_02-Oct.-09-13.46.jpg "Various Inputtie Attempts")](https://www.mikecann.blog/wp-content/uploads/2010/10/ScreenHunter_02-Oct.-09-13.46.jpg)[/caption]
 
 I have already talked about the problem [in my previous post](/posts/announcing-inputtie/) but ill recap.
 

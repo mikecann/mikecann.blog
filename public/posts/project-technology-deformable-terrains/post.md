@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2007-12-05T22:25:38.000Z'
+date: "2007-12-05T22:25:38.000Z"
 tags: []
 title: Project Technology (Deformable Terrains)
 oldUrl: /c/project-technology-deformable-terrains
@@ -15,21 +15,21 @@ The way the terrains work has changed a few times over the course of development
 
 Before i can explain how the terrain is deformed i must first talk about how the terrain is composed. There are currently three layers to the level, an indestuctable layer, a destructable layer and a background layer.
 
-![](/wp-content/uploads/2007/12/test02_destr.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/test02_destr.png)
 
 Destructable Layer
 
-![](/wp-content/uploads/2007/12/test02_indestr.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/test02_indestr.png)
 
 Indestructable Layer
 
 There is also a "destroyed mask" that is used to create areas at the start that have already been destroyed. This is mainly used so that you dont have to burrow for ages at the start to get to your opposition. Combined together you end up with the final result below.
 
-![](/wp-content/uploads/2007/12/tempmask01.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/tempmask01.png)
 
 Destroyed Mask
 
-![](/wp-content/uploads/2007/12/test03_final.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/test03_final.png)
 
 Final Result
 
@@ -43,15 +43,15 @@ When an explosion occurs a few things need to take place to make the terrain def
 
 Another 2048x2048 "explosion map" texture is used to handle the deformation of the GPU texture. A series of explosion masks have been created that represent each explosion size:
 
-![](/wp-content/uploads/2007/12/explosion32.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/explosion32.png)
 
 Exp32
 
-![](/wp-content/uploads/2007/12/explosion64.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/12/explosion64.png)
 
 Exp64
 
-           ![](/wp-content/uploads/2007/12/explosion128.png)
+           ![](https://www.mikecann.blog/wp-content/uploads/2007/12/explosion128.png)
 
 Exp128
 

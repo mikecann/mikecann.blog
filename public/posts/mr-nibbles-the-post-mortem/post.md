@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-09-08T14:22:05.000Z'
+date: "2012-09-08T14:22:05.000Z"
 tags:
   - android
   - debrief
@@ -14,7 +14,7 @@ oldUrl: /haxe/mr-nibbles-the-post-mortem
 openAIMikesBlogFileId: file-rzE2SvZnrev5pxYkl6q6iWAu
 ---
 
-[![](/wp-content/uploads/2012/09/header.jpg "header")](/wp-content/uploads/2012/09/header.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/header.jpg "header")](https://www.mikecann.blog/wp-content/uploads/2012/09/header.jpg)
 
 Well its been a couple of weeks since we launched on iOS and a few weeks since Android, so I have decided to write one more post on the Mr Nibbles project. A post mortem into what went right, what went not so right which should hopefully serve to solidify my learning from the process and perhaps help others who should embark on something similar.
 
@@ -26,13 +26,13 @@ Before I dive into that, first some statistics thus far..
 
 **Android**
 
-[![](/wp-content/uploads/2012/09/2012-09-02_1250.png "2012-09-02_1250")](/wp-content/uploads/2012/09/2012-09-02_1250.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/2012-09-02_1250.png "2012-09-02_1250")](https://www.mikecann.blog/wp-content/uploads/2012/09/2012-09-02_1250.png)
 
 We have had 2,867 User installs and 1,623 active device installs. Not bad :)
 
 **iOS**
 
-[![](/wp-content/uploads/2012/09/2012-09-02_1252.png "2012-09-02_1252")](/wp-content/uploads/2012/09/2012-09-02_1252.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/09/2012-09-02_1252.png "2012-09-02_1252")](https://www.mikecann.blog/wp-content/uploads/2012/09/2012-09-02_1252.png)
 
 3,789 iOS installs, making a grand total of 6,656 mobile installs, not bad :)
 
@@ -46,7 +46,7 @@ As for the time-overrun, there is no one main reason for it. Lots of small thing
 
 The hours we worked on the project were actually okay. Because this was a personal project and both of us have full time jobs at [Playdemic](https://www.playdemic.com/) we could only work on the game during our evenings and weekends. During week days we tended to start about 6-6:30pm then work until we were kicked out of the office by the security guard. 8:30-ish usually. Occasionally (mostly towards the end of the project) we stayed a little later to get stuff done before release.
 
-![](/wp-content/uploads/2012/09/testing.jpg "testing")
+![](https://www.mikecann.blog/wp-content/uploads/2012/09/testing.jpg "testing")
 
 This sort of schedule and working pattern suited us both. Being able to see who you are working with and talking face to face I think really adds to the experience and fun of making an indie game. Its definitely more exiting to run over and show the other person some cool new level on your iPad rather than try to describe it over MSN from your bedroom. Working like this obviously wouldn't have been possible if the management at Playdemic weren't so awesome by allowing us to use the office after normal office hours so definitely a massive thanks there.
 
@@ -62,7 +62,7 @@ I have been using [Haxe](https://haxe.org) for over a year now for various perso
 
 [NME](https://haxenme.org) is a library built ontop of Haxe. It provides a familiar flash api but is able to many platforms natively. Using exactly the same Haxe code base I was able to compile Mr Nibbles to Flash, iOS, Android, Blackberry, Windows and OSX thanks to NME. The library really is great for this sort of fast-turn-around game. Mr Nibbles certainty wouldn't have been possible without it (not in 5-weeks anyways).
 
-![](/wp-content/uploads/2012/09/testing2.jpg "testing2")The NME developers have put a lot of time into making the build and certification process as easy as possible for the various platforms. So with "nme setup android" from the command line for example you are able to download and setup the android SDKs and get your certs setup in the correct place for building. Its really great to see that sort of dedication to making the cross platform compilation process as smooth as possible.
+![](https://www.mikecann.blog/wp-content/uploads/2012/09/testing2.jpg "testing2")The NME developers have put a lot of time into making the build and certification process as easy as possible for the various platforms. So with "nme setup android" from the command line for example you are able to download and setup the android SDKs and get your certs setup in the correct place for building. Its really great to see that sort of dedication to making the cross platform compilation process as smooth as possible.
 
 The performance of NME is truly great. Thanks to its batched sprite rendering there are very few draw calls and expensive texture-switching. Mr Nibbles runs at solid frame rates on pretty much every smartphone you can think of from the Android G1to the Galaxy S III to the iPhone 3G to the iPad3\. After having worked with the[ nightmare that is J2ME mobile games](/posts/worms-2/) in the past, being able to run your game on so many devices without any code changes really is a pleasure.
 
@@ -78,7 +78,7 @@ There were are few frustrating moments towards the end of the project when I w
 
 ## Android
 
-Android was a lot easier to iterate and test because it could all be done from my desktop machine. In hindsight, and with the devices that only became available towards the end of the project, it would have been better if we had concentrated on the Android build first then ported to iOS later. Once we had some devices to test on however I was incredibly impressed with how easy it was to build and launch the game onto an Android device with NME. Literally just "nme test android" from the command line and it would compile and launch directly to the[![](/wp-content/uploads/2012/09/522085_10151008075505740_663326715_n-300x224.jpeg "522085_10151008075505740_663326715_n")](/wp-content/uploads/2012/09/522085_10151008075505740_663326715_n.jpeg) device, no faffing about.
+Android was a lot easier to iterate and test because it could all be done from my desktop machine. In hindsight, and with the devices that only became available towards the end of the project, it would have been better if we had concentrated on the Android build first then ported to iOS later. Once we had some devices to test on however I was incredibly impressed with how easy it was to build and launch the game onto an Android device with NME. Literally just "nme test android" from the command line and it would compile and launch directly to the[![](https://www.mikecann.blog/wp-content/uploads/2012/09/522085_10151008075505740_663326715_n-300x224.jpeg "522085_10151008075505740_663326715_n")](https://www.mikecann.blog/wp-content/uploads/2012/09/522085_10151008075505740_663326715_n.jpeg) device, no faffing about.
 
 Since launch there have been a few issues with audio crashing on Android. However I believe some people have been working on this so I may do a new build of Android in the near future and push an update of the game to the Google Play store.
 

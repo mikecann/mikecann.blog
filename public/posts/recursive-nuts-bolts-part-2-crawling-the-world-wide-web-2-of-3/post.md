@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-12-27T11:28:11.000Z'
+date: "2012-12-27T11:28:11.000Z"
 tags:
   - canvas2d
   - chrome
@@ -11,12 +11,12 @@ tags:
   - javascript
   - spider
   - typescript
-title: 'Recursive, Nuts & Bolts Part 2 - Crawling the World Wide Web (2 of 3)'
+title: "Recursive, Nuts & Bolts Part 2 - Crawling the World Wide Web (2 of 3)"
 oldUrl: /programming/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3
 openAIMikesBlogFileId: file-H2ylXIHCOlc2HyxoFlkqkSyN
 ---
 
-[![screenshot_05](/wp-content/uploads/2012/12/screenshot_05.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_05-5/)
+[![screenshot_05](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_05.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_05-5/)
 
 **This is part two of my three part series on the internals of Recursive, an extension for Google Chrome. In the [first post](/posts/?p=2287) I laid the groundwork for the contents of this and the next post. In this post i'm going to talk a little about what Recursive does internally once given  a URL.**
 
@@ -40,7 +40,7 @@ As briefly mentioned in the previous post the Crawling logic is separated from t
 
 The crawling code is split up into three main files the Graph, the Crawler and the Parser.
 
-[![screenshot_06](/wp-content/uploads/2012/12/screenshot_06.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_06-4/)
+[![screenshot_06](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_06.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_06-4/)
 
 The Graph is the central class that drives the crawling process. Only one of these exists for the application. It provides a number of functions for starting, stopping and pausing the crawling process. It also has a number of events (exposed through signals) that it uses to let listeners (the renderer) know when a particular event occurs.
 
@@ -86,11 +86,11 @@ I was worried that the sheer amount of html text that must be parsed by the rege
 
 One addition to the result parsing that was added in v.1.1 was the ability to define a custom file filter:
 
-[![Screenshot_002](/wp-content/uploads/2012/12/Screenshot_002.png)](/posts/recursive-v-1-1/attachment/screenshot_002/)
+[![Screenshot_002](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_002.png)](/posts/recursive-v-1-1/attachment/screenshot_002/)
 
 Enabling this adds a third regex call into the results parser. Any matches are added to the Crawler’s files as a special kind of file. When the user opens the files dialog all the matches are shown under a special category:
 
-[![Screenshot_003](/wp-content/uploads/2012/12/Screenshot_003.png)](/posts/recursive-v-1-1/attachment/screenshot_003/)
+[![Screenshot_003](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_003.png)](/posts/recursive-v-1-1/attachment/screenshot_003/)
 
 ### Improvements
 

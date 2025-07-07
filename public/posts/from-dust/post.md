@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-07-31T11:50:23.000Z'
+date: "2011-07-31T11:50:23.000Z"
 tags:
   - from dust
   - games
@@ -15,7 +15,7 @@ oldUrl: /fun-amp-videos/from-dust
 openAIMikesBlogFileId: file-Y0rVbwOfNoAuu7kZcqfwGD3b
 ---
 
-[![](/wp-content/uploads/2011/07/Gamescom-2010-From-Dust-First-Look-Preview.jpg "Gamescom-2010-From-Dust-First-Look-Preview")](/wp-content/uploads/2011/07/Gamescom-2010-From-Dust-First-Look-Preview.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/07/Gamescom-2010-From-Dust-First-Look-Preview.jpg "Gamescom-2010-From-Dust-First-Look-Preview")](https://www.mikecann.blog/wp-content/uploads/2011/07/Gamescom-2010-From-Dust-First-Look-Preview.jpg)
 
 Its not often these days that I post about games I have been playing, usually I leave that sort of stuff in the realms of [Twitter](https://twitter.com/mikeysee) or social networks.
 
@@ -33,7 +33,7 @@ When I watched that earlier in the week I was amazed but skeptical that everyth
 
 The water flows from the top of the mountains realistically, over time it erodes the landscape to form rivers. Water pressure builds up need harder rock causing bends in the river that threaten your villages. You have to think ahead about how to divert a river one way but making sure not to flood an area downstream. More often than not it takes several tries to get it right.
 
-[![](/wp-content/uploads/2011/07/from-dust-04ded84c9de5b1-300x168.jpg "from-dust-04ded84c9de5b1")](/wp-content/uploads/2011/07/from-dust-04ded84c9de5b1.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/07/from-dust-04ded84c9de5b1-300x168.jpg "from-dust-04ded84c9de5b1")](https://www.mikecann.blog/wp-content/uploads/2011/07/from-dust-04ded84c9de5b1.jpg)
 
 Lava is great. Several missions have volcanoes that you must be swift to tame else they can easily threaten your villages. The great this however is that there are many ways you can choose to solve a particular problem.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-10-31T18:50:22.000Z'
+date: "2010-10-31T18:50:22.000Z"
 tags:
   - caption
   - extension
@@ -12,7 +12,7 @@ oldUrl: /post-to-tumbr/post-to-tumblr-version-0-4
 openAIMikesBlogFileId: file-uljAl40H5Yx29OjShGMPXtMg
 ---
 
-[![](/wp-content/uploads/2010/10/Shot_0012.png "Shot_001")](/wp-content/uploads/2010/10/Shot_0012.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0012.png "Shot_001")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0012.png)
 
 Today is a small update day it seems.
 
@@ -22,7 +22,7 @@ I have updated my Post To Tumblr extension again. I was getting a couple of requ
 
 Once enabled rather than immediately posting the image it will popup a new tab allowing you to add a caption or whatever to your post:
 
-[![](/wp-content/uploads/2010/10/Shot_0022.png "Shot_002")](/wp-content/uploads/2010/10/Shot_0022.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0022.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0022.png)
 
 Its not perfect, I would have preferred the pre formatting window to open in a div popup on the current page instead of a whole new tab, but for now this solution is simple and it works.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-07-04T22:23:23.000Z'
+date: "2012-07-04T22:23:23.000Z"
 tags:
   - challenge
   - game
@@ -12,7 +12,7 @@ oldUrl: /games/3-days-into-the-3-week-challenge
 openAIMikesBlogFileId: file-aSFmYzpNXVs2It98SamAzSdh
 ---
 
-<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/wp-content/uploads/2012/07/Main.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
+<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/Main.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
 
 .. and we have progress! See above. Use the keyboard to control the 'player'.
 
@@ -20,13 +20,13 @@ The first thing you will noticed is that there is a world populated with solid b
 
 <!-- more -->
 
-[![](/wp-content/uploads/2012/07/world.png "world")](/wp-content/uploads/2012/07/world.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/07/world.png "world")](https://www.mikecann.blog/wp-content/uploads/2012/07/world.png)
 
 That's a 50x50 pixel image which represents a world 50x50 tiles wide. Each pixel in the image has a colour which corresponds to a tile type in the game. Black is a solid wall, red is the player spawn point and orange is a 'collectable'. As the game develops we will be adding more tile types and hence colours.
 
 At runtime all I do is load the level data image and loop through the pixels, grab the colour value and populate the world with the appropriate object. A problem I soon encountered however is that for some reason on different platforms Haxe reads the colour value different. This made things problematic so instead what I have done is make another 8x8 image as a "key":
 
-[![](/wp-content/uploads/2012/07/key.png "key")](/wp-content/uploads/2012/07/key.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/07/key.png "key")](https://www.mikecann.blog/wp-content/uploads/2012/07/key.png)
 
 Loading this key first I can then determine what colour the platform will be recognising a particular tile type as. So to generate the level the code looks like:
 
@@ -82,13 +82,13 @@ public static var TYPES : Hash<Class<Dynamic>>;
 
 Once I had the level populating I started getting the basics of the physics sorted. At first I thought it was going to be a nightmare as in the original version of the game it appeared as if the whole world rotated about the player ([see video for reminder](https://www.youtube.com/watch?v=r1gUc-WMhfI&feature=player_embedded)), I worried about how I was going to handle the complex physics of a grid at odd angles while continually rotating. After a while however I realised that what was actually going on was that the world was standing still and all that was happening was that the camera was rotating at same rate at which the gravity vectyor was changing, thus giving the illusion of a rotating world, eg:
 
-[![](/wp-content/uploads/2012/07/01.jpg "01")](/wp-content/uploads/2012/07/01.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/07/01.jpg "01")](https://www.mikecann.blog/wp-content/uploads/2012/07/01.jpg)
 
 Once I realised this fact it made my life a whole lot easier. Calculating the physics for the world should now just be a matter of solving a circle against a static grid without rotations. I decided to go with my own physics solution rather one of the existing solutions such as Box2D or Nape as I thought that it should be pretty simple to calculate and I knew from a previous project that using Box2D or Nape would have issues at the joins between tiles.
 
 The solution it turns out took a little longer than I thought but I eventually cracked it. The key was to use the Separating Axis Theorem with Voroni Regions, there is a [great tutorial](https://www.metanetsoftware.com/technique/tutorialA.html) on it over at magnet software, they have a handy SWF that demonstrates the concept really well:
 
-<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
+<object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
 
 As can be seen from above that all you need do is split the problem up into a grid, then in turn check each of the 8 neighbouring cells from the current cell. The north, east, south and west cells can be classed as one type and only need to have their relevant axis checked against the radius of the player wheres the corner cells need to be checked against the distance from the closest point. In code this looks something like:
 
@@ -178,7 +178,7 @@ Its not 100% perfect, there is some oddness when the player hits a corner but wi
 
 On the art side of the project Moh has been making good progress coming up with themes for the game. We have been playing around with the idea that the player is a Hamster lost in space, which I really like the idea of. To test this idea he made little mock-up, which looks great:
 
-[![](/wp-content/uploads/2012/07/concept_1.jpg "concept_1")](/wp-content/uploads/2012/07/concept_1.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/07/concept_1.jpg "concept_1")](https://www.mikecann.blog/wp-content/uploads/2012/07/concept_1.jpg)
 
 You may have noticed that currently the game is in Flash. That's because with NME you can target Flash as one of your outputs. This makes developing and testing the game alot easyier (a lot faster to compile and run). I have however been very aware of the problems I could cause myself if I developed the whole game solely in flash and only testing on mobile right at the end. Trying to track down an obscure problem in a fully written game would be a nightmare. So I have been making progress with getting the game to run on my iPhone 4.
 

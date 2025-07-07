@@ -1,13 +1,13 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2006-09-21T22:30:51.000Z'
+date: "2006-09-21T22:30:51.000Z"
 tags: []
 title: Old flash tutorial
 oldUrl: /flash/old-flash-tutorial
 openAIMikesBlogFileId: file-EOtEpPkNl7FK1zzhzjorfl0O
 ---
 
-![](/wp-content/uploads/Image/flashtutorialss.png)
+![](https://www.mikecann.blog/wp-content/uploads/Image/flashtutorialss.png)
 
 This is an old piece of flash from an age ago. Its kinda a 2-parter, the first part is a sig i made for the forums over at my [clans website](https://www.clan1.co.uk). The second part is a tutorial i did shortly after making the sig. I got a couple of requests of how i made such a thing so i decided to write a very basic flash tutorial. Remember this is quite old so the flash version is a little out of date.
 

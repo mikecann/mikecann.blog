@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-11-26T14:19:40.000Z'
+date: "2011-11-26T14:19:40.000Z"
 tags:
   - experiment
   - haxe
@@ -8,7 +8,7 @@ tags:
   - particles
   - terraria
   - tilemaps
-title: 'Hxaria, Infinite Terrain [HaXe, WebGL,dat.GUI]'
+title: "Hxaria, Infinite Terrain [HaXe, WebGL,dat.GUI]"
 oldUrl: /glsl/hxaria-infinite-terrain-haxe-webgldat-gui
 openAIMikesBlogFileId: file-iI647RpAtVCLLnL53uHRAA3I
 ---
@@ -21,7 +21,7 @@ Following on from the last post, I have now made it so that each particle can ha
 
 The way it works is that the entire world is recorded in a 2x2 array Tilemap. This 2x2 array holds a single Tile object for every single tile in the world:
 
-```actionscript3
+````actionscript3
 
 class Tile
 {
@@ -99,23 +99,23 @@ vec2 uv = vec2( gl_PointCoord.x*invTexTilesWide + invTexTilesWide*vTilePos.x, gl
 
 }
 
-```
+````
 
 So it works in a way very much like a raster engine. You only have to render as many particles as the screen can contain.
 
 If the screen area moves beyond the extent of the Tilemap then more tiles are randomly generated:
 
-[![](/wp-content/uploads/2011/11/22222.png "22222")](/wp-content/uploads/2011/11/22222.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/11/22222.png "22222")](https://www.mikecann.blog/wp-content/uploads/2011/11/22222.png)
 
 The new tiles are randomly selected from 4 different types, Dirt, Gold, Diamonds and Rock. I have added some controls to the demo that allow you to tweak these values to demonstrate the random tile generation:
 
-[![](/wp-content/uploads/2011/11/Shot_041.png "Shot_04")](/wp-content/uploads/2011/11/Shot_041.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png "Shot_04")](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png)
 
 The UI may look familiar to people that have seen any experiments anyone who has worked with Three.js before, its the very popular [dat.GUI](https://code.google.com/p/dat-gui/). Its a really simple library written in javascript for creating controls that can be used to tweak experiments, perfect for me!
 
 To get dat.GUI to work with haxe, I used the awesome [Extern feature of HaXe](https://www.google.co.uk/url?sa=t&rct=j&q=haxe%20externs&source=web&cd=1&ved=0CBwQFjAA&url=http%3A%2F%2Fhaxe.org%2Fdoc%2Fjs%2Fexterns&ei=Gu_QTvK8IYP4sgbo15TzDA&usg=AFQjCNEQvrXVfGjjQNO-yHhZ6HRTKlcmYw). This means that all I have to do is provide a stub interface to dat.GUI rather than a full implementation in haXe. This is great as it allows me to rapidly begin to use the library but also have the type safety of HaXe. It didnt take long to stub out the bits of the library I needed in an extern:
 
-```actionscript3```
+`actionscript3`
 
 package dat;
 
@@ -143,7 +143,7 @@ extern class GUI
 
 Then I used it like:
 
-```actionscript3```
+`actionscript3`
 
 package ;
 import dat.GUI;

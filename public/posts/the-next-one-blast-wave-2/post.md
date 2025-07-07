@@ -1,12 +1,12 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-05-28T13:35:13.000Z'
+date: "2009-05-28T13:35:13.000Z"
 tags:
   - blastwave
   - flash
   - game
   - projects
-title: 'The Next One: Blast Wave 2'
+title: "The Next One: Blast Wave 2"
 oldUrl: /blastwave-lost-at-sea/the-next-one-blast-wave-2
 openAIMikesBlogFileId: file-ZocLnSjQdD1MGApIF38L0qdy
 ---
@@ -17,13 +17,13 @@ We started by looking at various parts of the game and what we think let the gam
 
 <!-- more -->**Menus &amp; Interface**
 
-![dc6wvdg5_5167fcpcdt_b](/wp-content/uploads/2009/05/dc6wvdg5_5167fcpcdt_b.png "dc6wvdg5_5167fcpcdt_b")
+![dc6wvdg5_5167fcpcdt_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dc6wvdg5_5167fcpcdt_b.png "dc6wvdg5_5167fcpcdt_b")
 
 The title screen is one of the first impressions you get about a game. Looking at the current title screen you get a feeling that the project is a little amateurish and as Ade puts it, "very artificial studios". So what we want to do is make it look more professional.
 
 A good example of a professional looking title screen is from Richard over at [Photon Storm](https://www.photonstorm.com/) on his title [Kyobi](https://www.photonstorm.com/archives/378/kyobi-is-now-live-on-gamejacket):
 
-![dc6wvdg5_52fpbtbzg3_b](/wp-content/uploads/2009/05/dc6wvdg5_52fpbtbzg3_b.png "dc6wvdg5_52fpbtbzg3_b")
+![dc6wvdg5_52fpbtbzg3_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dc6wvdg5_52fpbtbzg3_b.png "dc6wvdg5_52fpbtbzg3_b")
 
 With title screen you get a nice large inviting graphic, it certainly portrays a professional image, it also allows space for a sponsor bottom right, which doesn't detract from the overall look of the screen.
 
@@ -31,19 +31,19 @@ With title screen you get a nice large inviting graphic, it certainly portrays a
 
 The level select screen in Blast Wave 1 again gives you an impression of an amateurish setup:
 
-![dc6wvdg5_49dv8zf6td_b](/wp-content/uploads/2009/05/dc6wvdg5_49dv8zf6td_b.png "dc6wvdg5_49dv8zf6td_b")
+![dc6wvdg5_49dv8zf6td_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dc6wvdg5_49dv8zf6td_b.png "dc6wvdg5_49dv8zf6td_b")
 
 Although it tells you how many levels there are per zone in the graph its not particularly obvious, so when you get in the game its not strikingly obvious why some "zones" last longer than others. Even though the "Fastest Alltime" is nice to be shown on there these days people prefer medals and achievements and things rather than just a straight "top score".
 
 The game [Thin Ice](https://www.nitrome.com/games/thinice/) has a good example of the more simplistic level select screen we are interested in using:
 
-![dcxwqvhf_5d8jvm2hg_b](/wp-content/uploads/2009/05/dcxwqvhf_5d8jvm2hg_b.jpg "dcxwqvhf_5d8jvm2hg_b")
+![dcxwqvhf_5d8jvm2hg_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dcxwqvhf_5d8jvm2hg_b.jpg "dcxwqvhf_5d8jvm2hg_b")
 
 **General Look &amp; Style**
 
 One of the most important things that needs to be improved on is the general look and style of the in-game graphics. See a typical scene from the original:
 
-![dc6wvdg5_54hpfv9hdd_b](/wp-content/uploads/2009/05/dc6wvdg5_54hpfv9hdd_b.png "dc6wvdg5_54hpfv9hdd_b")
+![dc6wvdg5_54hpfv9hdd_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dc6wvdg5_54hpfv9hdd_b.png "dc6wvdg5_54hpfv9hdd_b")
 
 There are many things wrong with this.
 
@@ -53,7 +53,7 @@ The sponsor logo although not massively intrusive, it is easily noticeable and s
 
 Using the[ Lost Garden](https://lostgarden.com/2009/03/dancs-miraculously-flexible-game.html) game prototyping image pack I knocked together something very quickly that I hoped would give a much better visual experience:
 
-![dc6wvdg5_57ctd82wgh_b](/wp-content/uploads/2009/05/dc6wvdg5_57ctd82wgh_b.png "dc6wvdg5_57ctd82wgh_b")
+![dc6wvdg5_57ctd82wgh_b](https://www.mikecann.blog/wp-content/uploads/2009/05/dc6wvdg5_57ctd82wgh_b.png "dc6wvdg5_57ctd82wgh_b")
 
 Here are some of my notes that i made in our "design doc" on this:
 
@@ -76,7 +76,7 @@ I feel its a good, short and to the point story. It also allows us to incorporat
 
 To this effect Oliver has made a little character as an example of one of the stranded people:
 
-![boy1](/wp-content/uploads/2009/05/boy1.png "boy1")
+![boy1](https://www.mikecann.blog/wp-content/uploads/2009/05/boy1.png "boy1")
 
 As you can see its very much along the lines of the art style of [Monkey Mines](https://www.artificialgames.co.uk/?p=61) which we thought worked rather well.
 

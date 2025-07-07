@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-01-17T20:35:13.000Z'
+date: "2011-01-17T20:35:13.000Z"
 tags:
   - acquisition
   - employment
@@ -11,7 +11,7 @@ oldUrl: /misc/playdemic-acquired-by-rockyou
 openAIMikesBlogFileId: file-QVbt9v8xQSGc88Lat062iOk1
 ---
 
-[![](/wp-content/uploads/2011/01/top.jpg "top")](/wp-content/uploads/2011/01/top.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/01/top.jpg "top")](https://www.mikecann.blog/wp-content/uploads/2011/01/top.jpg)
 
 Well as it has now hit the media I guess I can blog about it.
 

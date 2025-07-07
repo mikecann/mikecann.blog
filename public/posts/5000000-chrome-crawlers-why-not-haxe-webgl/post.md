@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-08-11T20:38:13.000Z'
+date: "2011-08-11T20:38:13.000Z"
 tags:
   - chrome
   - code
@@ -11,7 +11,7 @@ tags:
   - sprites
   - stateless
   - webgl
-title: '5,000,000 Chrome Crawlers? Why not [haXe & WebGL]'
+title: "5,000,000 Chrome Crawlers? Why not [haXe & WebGL]"
 oldUrl: /glsl/5000000-chrome-crawlers-why-not-haxe-webgl
 openAIMikesBlogFileId: file-E1tgkqq1qQR3Gl4OhANV0S7g
 ---
@@ -34,7 +34,7 @@ You can play with it here: [/projects/HTML5SpeedTests/HaXeWebGL/bin/](/projects
 
 The great thing about point sprites is that I only use one draw call per frame and the GPU is very good at rendering them. The only bottleneck really is the number of pixels you need to draw. With that in mind if you drop the size of the point sprite down to 1x1 you can render a very large (5million) points at interactive framerates (18fps):
 
-[![](/wp-content/uploads/2011/08/000000000000002.jpg "000000000000002")](/wp-content/uploads/2011/08/000000000000002.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/08/000000000000002.jpg "000000000000002")](https://www.mikecann.blog/wp-content/uploads/2011/08/000000000000002.jpg)
 
 I added a "dont use texture" option just out of interest to see how expensive the texture lookup in the fragment shader was, it didnt seem have much of an effect.
 
@@ -44,7 +44,7 @@ Firstly in [WebGL has a limit](https://github.com/mrdoob/three.js/issues/293) on
 
 Secondly, and this one is more important I cheated to get the numbers above. In my other experiments with haXe and WebGL I was using the CPU to update the positions of the crawlers each frame, having them bounce off the screen edges. In this point sprites demo however I have the points flowing out of a fountain, the simulation of which is entirely calculated on the GPU. The reason for this I talked about in a paper I wrote for a university project 4 years ago:
 
-[![](/wp-content/uploads/2011/08/Shot_07.png "Shot_07")](/wp-content/uploads/2011/08/Shot_07.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/08/Shot_07.png "Shot_07")](https://www.mikecann.blog/wp-content/uploads/2011/08/Shot_07.png)
 
 If I wasn't to perform the upates on the GPU but instead just use the CPU to update the crawlers that would mean the javascript (CPU) would need to update 5million crawlers each frame then re-upload the point sprite positions back to the GPU for rendering. This would obviously be a bad idea.
 

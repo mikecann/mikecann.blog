@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-01-27T18:23:48.000Z'
+date: "2009-01-27T18:23:48.000Z"
 tags: []
 title: Forget me not..
 oldUrl: /fun-amp-videos/forget-me-not
@@ -11,4 +11,4 @@ I have a terrible memory, often desprite setting alarms leaving notes for myself
 
 <!-- more -->
 
-![photo](/wp-content/uploads/2009/01/photo.jpg "photo")
+![photo](https://www.mikecann.blog/wp-content/uploads/2009/01/photo.jpg "photo")

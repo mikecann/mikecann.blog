@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-03-23T20:30:49.000Z'
+date: "2011-03-23T20:30:49.000Z"
 tags:
   - 3d
   - liero
@@ -10,7 +10,7 @@ oldUrl: /misc/liero3d-progress
 openAIMikesBlogFileId: file-UjoHqkUsdQxEp8WVpXYfF3Qe
 ---
 
-[![](/wp-content/uploads/2011/03/Untitled-1.jpg "Untitled-1")](/wp-content/uploads/2011/03/Untitled-1.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/03/Untitled-1.jpg "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2011/03/Untitled-1.jpg)
 
 Just thought I would report on a project my friend [Michael Lindholm](https://liero3d.blogspot.com/) has been working on for a while now. Its [Liero but in 3D](https://liero3d.blogspot.com/2011/03/ladys-and-gents.html)! As some of you may know I have dabbled with making a remake of Liero [several times in the past](/posts/lieroxna/).
 

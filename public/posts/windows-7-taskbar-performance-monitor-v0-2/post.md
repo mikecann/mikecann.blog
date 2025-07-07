@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-02-16T20:57:04.000Z'
+date: "2011-02-16T20:57:04.000Z"
 tags:
   - c sharp
   - monitor
@@ -13,7 +13,7 @@ oldUrl: /c/windows-7-taskbar-performance-monitor-v0-2
 openAIMikesBlogFileId: file-XTjBA2WScelBGfHM4MbM9nq1
 ---
 
-[![](/wp-content/uploads/2011/02/Shot_01.png "Shot_01")](/wp-content/uploads/2011/02/Shot_01.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/02/Shot_01.png "Shot_01")](https://www.mikecann.blog/wp-content/uploads/2011/02/Shot_01.png)
 
 Been a long time since I have updated this little project of mine. Yep, just checked, its [been almost a year ](/posts/windows-7-taskbar-monitor/)since.
 

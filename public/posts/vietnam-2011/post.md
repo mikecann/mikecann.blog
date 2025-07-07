@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-09-17T13:57:32.000Z'
+date: "2011-09-17T13:57:32.000Z"
 tags:
   - travel
   - trip
@@ -10,7 +10,7 @@ oldUrl: /travel/vietnam-2011
 openAIMikesBlogFileId: file-kMb0obXb7GAGIbLQ9DyDGzUw
 ---
 
-[![](/wp-content/uploads/2011/09/title.jpg "title")](/wp-content/uploads/2011/09/title.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/09/title.jpg "title")](https://www.mikecann.blog/wp-content/uploads/2011/09/title.jpg)
 
 So I got back from my two week backpack around Vietnam last week and its taken me a while to upload my holiday snaps. As there are some 300+ (thats after trimming down too) of them  I have decided to so a short writeup of the trip with some of the highlights.
 

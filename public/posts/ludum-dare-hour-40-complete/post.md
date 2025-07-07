@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-22T17:46:14.000Z'
+date: "2010-08-22T17:46:14.000Z"
 tags:
   - finished
   - flash
@@ -14,7 +14,7 @@ oldUrl: /48-hours-later/ludum-dare-hour-40-complete
 openAIMikesBlogFileId: file-WOScywGX6q5pRkZQzLvbFtAl
 ---
 
-[![](/wp-content/uploads/2010/08/title.png "title")](/wp-content/uploads/2010/08/title.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/title.png "title")](https://www.mikecann.blog/wp-content/uploads/2010/08/title.png)
 
 Okay well its not quite complete, the waves of enemies could do with some more work but I have my mum coming up from London to visit me in 30 mins so im gonna call it quits here.
 
@@ -26,8 +26,8 @@ Overall im pretty happy with my first Ludum Dare entry, im very tired right now 
 
 So onto the game. First some shots:
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-18.101-300x270.jpg "ScreenHunter_01 Aug. 22 18.10")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-18.101.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-22-18.10-300x269.jpg "ScreenHunter_02 Aug. 22 18.10")
-](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-22-18.10.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-22-18.111-300x273.jpg "ScreenHunter_03 Aug. 22 18.11")](/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-22-18.111.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_06-Aug.-22-18.111-300x271.jpg "ScreenHunter_06 Aug. 22 18.11")](/wp-content/uploads/2010/08/ScreenHunter_06-Aug.-22-18.111.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-18.101-300x270.jpg "ScreenHunter_01 Aug. 22 18.10")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-18.101.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-22-18.10-300x269.jpg "ScreenHunter_02 Aug. 22 18.10")
+](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-22-18.10.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-22-18.111-300x273.jpg "ScreenHunter_03 Aug. 22 18.11")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_03-Aug.-22-18.111.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_06-Aug.-22-18.111-300x271.jpg "ScreenHunter_06 Aug. 22 18.11")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_06-Aug.-22-18.111.jpg)
 
 Okay so if you have been following [waaaay back my original intention](/posts/ludum-dare-hour-1/) was to make a game with the same sort of art style as World of Goo but with the game mechanics of Boom Stick. I think I have stayed pretty true to that original idea.
 
@@ -39,8 +39,8 @@ So as a disclaimer: im sure the game has many bugs and things, I have run out of
 
 Anyways enough jibber jabber. A few more shots then the game is below:
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_09-Aug.-22-18.13-300x211.jpg "ScreenHunter_09 Aug. 22 18.13")](/wp-content/uploads/2010/08/ScreenHunter_09-Aug.-22-18.13.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_08-Aug.-22-18.13-300x296.jpg "ScreenHunter_08 Aug. 22 18.13")
-](/wp-content/uploads/2010/08/ScreenHunter_08-Aug.-22-18.13.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-22-18.12-300x266.jpg "ScreenHunter_07 Aug. 22 18.12")](/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-22-18.12.jpg)[![](/wp-content/uploads/2010/08/ScreenHunter_11-Aug.-22-18.39-300x244.jpg "ScreenHunter_11 Aug. 22 18.39")](/wp-content/uploads/2010/08/ScreenHunter_11-Aug.-22-18.39.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_09-Aug.-22-18.13-300x211.jpg "ScreenHunter_09 Aug. 22 18.13")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_09-Aug.-22-18.13.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_08-Aug.-22-18.13-300x296.jpg "ScreenHunter_08 Aug. 22 18.13")
+](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_08-Aug.-22-18.13.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-22-18.12-300x266.jpg "ScreenHunter_07 Aug. 22 18.12")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-22-18.12.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_11-Aug.-22-18.39-300x244.jpg "ScreenHunter_11 Aug. 22 18.39")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_11-Aug.-22-18.39.jpg)
 
 <a name="thegame"></a>
 

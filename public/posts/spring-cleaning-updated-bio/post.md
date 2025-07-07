@@ -1,13 +1,13 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-12-31T16:24:10.000Z'
+date: "2011-12-31T16:24:10.000Z"
 tags: []
 title: Spring Cleaning & Updated Bio
 oldUrl: /photos-personal/spring-cleaning-updated-bio
 openAIMikesBlogFileId: file-Gvm9bOPslaYtTfAzidNTfFNv
 ---
 
-![](/wp-content/uploads/2007/09/about01.png)
+![](https://www.mikecann.blog/wp-content/uploads/2007/09/about01.png)
 
 I have been meaning to do this for a while, but never gotten round to it. Well more precisely other projects have always been more interesting so I pursued those instead ;) This Christmas however I decided it was about time that I finally did it.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-04-08T21:17:10.000Z'
+date: "2010-04-08T21:17:10.000Z"
 tags:
   - actionscript
   - flash
@@ -17,7 +17,7 @@ oldUrl: /actionscript/funk-ioc-a-new-dependency-injection-framework
 openAIMikesBlogFileId: file-Zkt1c2xd1fOoESIr4gr00B9q
 ---
 
-[![](/wp-content/uploads/2010/04/ScreenHunter_01-Apr.-08-20.11.gif "ScreenHunter_01 Apr. 08 20.11")](/wp-content/uploads/2010/04/ScreenHunter_01-Apr.-08-20.11.gif)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/04/ScreenHunter_01-Apr.-08-20.11.gif "ScreenHunter_01 Apr. 08 20.11")](https://www.mikecann.blog/wp-content/uploads/2010/04/ScreenHunter_01-Apr.-08-20.11.gif)
 
 Twitter can be a funny beast, what makes it great can also make it poor. I use [Twhirl ](https://www.twhirl.org/)which keeps me updated any time one of the people I follow tweets about something, the only problem is that so many people tweet that if I dont happen to see it within about and hour or so of the Tweet, ill miss it. This time however I was lucky enough to catch a tweet by [@Joa](https://twitter.com/joa) about his new Inversion of Control and functional-programming-like library, [Funk AS3](https://code.google.com/p/funk-as3/).
 

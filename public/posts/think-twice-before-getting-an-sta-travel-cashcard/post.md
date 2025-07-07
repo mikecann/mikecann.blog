@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2013-09-27T00:22:33.000Z'
+date: "2013-09-27T00:22:33.000Z"
 tags:
   - cashcard fraud
   - problems
@@ -11,7 +11,7 @@ oldUrl: /travel/think-twice-before-getting-an-sta-travel-cashcard
 openAIMikesBlogFileId: file-UQqjb84nZPVClMTt63M7iseC
 ---
 
-![screenshot_01](/wp-content/uploads/2013/09/screenshot_012.png)
+![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/09/screenshot_012.png)
 
 Want to know how to loose 10% of your travel spends very fast? Get an STA Travel Cashcard.
 

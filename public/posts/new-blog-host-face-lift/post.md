@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-11-20T15:48:50.000Z'
+date: "2011-11-20T15:48:50.000Z"
 tags:
   - blog
   - hosting
@@ -11,7 +11,7 @@ oldUrl: /misc/new-blog-host-face-lift
 openAIMikesBlogFileId: file-XH6JkIvRYqwsU2ibyDxj8WLX
 ---
 
-[![](/wp-content/uploads/2011/11/mememe.jpg "mememe")](/wp-content/uploads/2011/11/mememe.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/11/mememe.jpg "mememe")](https://www.mikecann.blog/wp-content/uploads/2011/11/mememe.jpg)
 Just a quick post to say I have finally moved away from my old hosting on WebFusion and now im on the cheaper (and hopefully) more reliable hosting by [STRATO](https://www.strato-hosting.co.uk/).
 
 <!-- more -->

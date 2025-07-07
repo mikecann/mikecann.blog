@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-06T21:55:53.000Z'
+date: "2010-08-06T21:55:53.000Z"
 tags:
   - facebook
   - flash
@@ -11,7 +11,7 @@ oldUrl: /websites/a-few-site-changes
 openAIMikesBlogFileId: file-Fa8EJ6bW9Ef6SJ0ebDptldpL
 ---
 
-[![](/wp-content/uploads/2010/08/Untitled-1.jpg "Untitled-1")](/wp-content/uploads/2010/08/Untitled-1.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/Untitled-1.jpg "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2010/08/Untitled-1.jpg)
 
 As im not out tonight I thought I would do a little work on the site.<!-- more -->
 

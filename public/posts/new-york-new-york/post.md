@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-11-04T12:42:30.000Z'
+date: "2012-11-04T12:42:30.000Z"
 tags:
   - beauty
   - holiday
@@ -11,7 +11,7 @@ oldUrl: /photos-personal/new-york-new-york
 openAIMikesBlogFileId: file-wnV4s3qqluC8rqXKic2Ny4z9
 ---
 
-[![](/wp-content/uploads/2012/11/header.jpg "header")](/wp-content/uploads/2012/11/header.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg "header")](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg)
 
 Last week I took a trip to New York with my friend Becky. We had an awesome time exploring what the city has to offer.
 

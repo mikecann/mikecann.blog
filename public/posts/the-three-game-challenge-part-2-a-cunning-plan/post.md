@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/the-three-game-challenge-part-2-a-cunning-plan/cover.jpg
-date: '2013-04-12T16:40:16.000Z'
+date: "2013-04-12T16:40:16.000Z"
 tags:
   - ash
   - challenge
@@ -24,8 +24,8 @@ For this one I decided on a type of game that I have been wanting to make for a 
 
 So here is "A Cunning Plan":
 
-![screenshot_16](/wp-content/uploads/2013/04/screenshot_16-300x224.png) ![screenshot_13](/wp-content/uploads/2013/04/screenshot_13-300x222.png)
-![screenshot_14](/wp-content/uploads/2013/04/screenshot_14-300x220.png) ![screenshot_15](/wp-content/uploads/2013/04/screenshot_15-300x225.png)
+![screenshot_16](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_16-300x224.png) ![screenshot_13](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_13-300x222.png)
+![screenshot_14](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_14-300x220.png) ![screenshot_15](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_15-300x225.png)
 
 You can play the game here:
 

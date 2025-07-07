@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-09-03T19:34:07.000Z'
+date: "2009-09-03T19:34:07.000Z"
 tags:
   - dropbox
   - idea
@@ -18,13 +18,13 @@ So at first I started looking at backup tools, these seem to fall into two categ
 
 Now the situation is that on the Mac I have to run parallels for WindowsXP as FlashDevelop only runs in windows and the project files must be stored on the 'local windows disk' for the project to work properly in FlashDevelop. So the situation is I have three sepparate 'locations' where I need my files backed up from:
 
-[![2009-09-04_1013](/wp-content/uploads/2009/09/2009-09-04_10131.png "2009-09-04_1013")](/wp-content/uploads/2009/09/2009-09-04_10131.png)
+[![2009-09-04_1013](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_10131.png "2009-09-04_1013")](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_10131.png)
 
 At first I played around with a few locally backing up solutions that required the machines to be on the same network. The issues with most of these was the fact that they either created temporary 'sync files' that reside permanently in the folder you are backing up ([synctoy](https://www.microsoft.com/downloads/details.aspx?familyid=E0FC1154-C975-4814-9649-CCE41AF06EB7)).
 
 Other factors caused me to quickly look at the alternative method which is syncing your files with the 'cloud' which then means you can sync the cloud with all your devices.
 
-[![2009-09-04_1025](/wp-content/uploads/2009/09/2009-09-04_1025.png "2009-09-04_1025")](/wp-content/uploads/2009/09/2009-09-04_1025.png)
+[![2009-09-04_1025](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_1025.png "2009-09-04_1025")](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_1025.png)
 
 Now there are several differnt providers out there for doing this. Ill list them in the order I discovered then and then subsequently tested them.
 
@@ -32,7 +32,7 @@ Now there are several differnt providers out there for doing this. Ill list them
 
 **Edit: this is an old post for a more up to date review of SpiderOak check: [https://www.cloudwards.net/review/spideroak/](https://www.cloudwards.net/review/spideroak/)**
 
-[![logo](/wp-content/uploads/2009/09/logo.gif "logo")](https://spideroak.com/)
+[![logo](https://www.mikecann.blog/wp-content/uploads/2009/09/logo.gif "logo")](https://spideroak.com/)
 
 SpiderOak was the first one I came across and the one that initially peaked my interest. It appears to be the new kid on the block when it comes to file and folder syncing. These are some things I liked and disliked about it:
 
@@ -40,7 +40,7 @@ SpiderOak was the first one I came across and the one that initially peaked my i
 [![thumb_down](../wp-content/uploads/2009/09/thumb_down.png "thumb_down")](../wp-content/uploads/2009/09/thumb_down.png) Selecting files and folders to backup is hideously slow and results in many frustrated clicking (buggy interface).
 [![thumb_down](../wp-content/uploads/2009/09/thumb_down.png "thumb_down")](../wp-content/uploads/2009/09/thumb_down.png) Buggy uploading and syncing, sometimes you cant tell whats chewing your bandwidth or what is going on behind the scenes.
 
-[![logo](/wp-content/uploads/2009/09/logo.png "logo")](https://www.getdropbox.com/home#/)
+[![logo](https://www.mikecann.blog/wp-content/uploads/2009/09/logo.png "logo")](https://www.getdropbox.com/home#/)
 
 Ironically I read about Dropbox from the SpiderOak[ press release](https://spideroak.com/press), in which they boast themselves superior to their nearest competitor DropBox. DropBox seemed to me like a much more mature solution than SpiderOak.
 
@@ -59,7 +59,7 @@ Live Mesh is Microsofts offering to file and folder syncing problem. I actually 
 [![thumb_down](../wp-content/uploads/2009/09/thumb_down.png "thumb_down")](../wp-content/uploads/2009/09/thumb_down.png) [No delta-file sync](https://social.microsoft.com/Forums/en-US/LiveMesh/thread/e82757b7-8429-4234-9877-c4e598586e82). This is the killer for live mesh for me. All changes to a file, no matter how small, cause the entire file to be re-uploaded.
 [![thumb_down](../wp-content/uploads/2009/09/thumb_down.png "thumb_down")](../wp-content/uploads/2009/09/thumb_down.png) 5GB limit
 
-[![2009-09-04_1100](/wp-content/uploads/2009/09/2009-09-04_1100.png "2009-09-04_1100")](/wp-content/uploads/2009/09/2009-09-04_1100.png)
+[![2009-09-04_1100](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_1100.png "2009-09-04_1100")](https://www.mikecann.blog/wp-content/uploads/2009/09/2009-09-04_1100.png)
 
 SugarSync is the solution I am currently using although it isnt perfect it seems to fit the bill on most counts so far.
 
@@ -76,7 +76,7 @@ From my adventures I have learnt alot about the state of play in the syncing are
 
 My ideal syncing app would have the following features:
 
-[![add](/wp-content/uploads/2009/09/add.png "add")](/wp-content/uploads/2009/09/add.png) A structured pricing plan where you only pay for the space and/or bandwith used
+[![add](https://www.mikecann.blog/wp-content/uploads/2009/09/add.png "add")](https://www.mikecann.blog/wp-content/uploads/2009/09/add.png) A structured pricing plan where you only pay for the space and/or bandwith used
 [![add](../wp-content/uploads/2009/09/add.png "add")](../wp-content/uploads/2009/09/add.png) More control over when files are synced (simmilar to SpiderOak) where you can set how often files are updated to server. This is important as when coding your published file (be it an EXE or SWF or whatever) will change often and hence may need to be uploaded to the server very often and costing alot of bandwith.
 [![add](../wp-content/uploads/2009/09/add.png "add")](../wp-content/uploads/2009/09/add.png) A method of excluding certain files and folders or file types from syncing. SVN lets you do this, good for excluding those temp files that change alot.
 [![add](../wp-content/uploads/2009/09/add.png "add")](../wp-content/uploads/2009/09/add.png) A good delta-file-change upload system, see DropBox for an excellent[ example of how to do this right](https://serverfault.com/questions/52861/how-does-dropbox-version-upload-large-files). This method of delta-syncing means that you can potentially sync massive files almost instantly.

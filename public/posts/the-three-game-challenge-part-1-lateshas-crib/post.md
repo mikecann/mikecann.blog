@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/the-three-game-challenge-part-1-lateshas-crib/cover.jpg
-date: '2013-04-03T12:27:08.000Z'
+date: "2013-04-03T12:27:08.000Z"
 tags:
   - challenge
   - coding
@@ -19,9 +19,9 @@ Well I have just finished off the first of [my three prototype games challenge](
 
 For this one I started off with an idea that I wanted to make a time-based puzzle game. Well it didn't turn out that way, also somewhere along the way I discovered an [Ebonics Translator](https://joel.net/EBONICS/Translator) so I decided I would incorporate that for a giggle.
 
-[![screenshot_05](/wp-content/uploads/2013/04/screenshot_05-300x226.png)](/wp-content/uploads/2013/04/screenshot_05.png)[![screenshot_06](/wp-content/uploads/2013/04/screenshot_06-300x225.png)](/wp-content/uploads/2013/04/screenshot_06.png)
+[![screenshot_05](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_05-300x226.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_05.png)[![screenshot_06](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_06-300x225.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_06.png)
 
-[![screenshot_07](/wp-content/uploads/2013/04/screenshot_07-300x226.png)](/wp-content/uploads/2013/04/screenshot_07.png)[![screenshot_08](/wp-content/uploads/2013/04/screenshot_08-300x226.png)](/wp-content/uploads/2013/04/screenshot_08.png)
+[![screenshot_07](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_07-300x226.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_07.png)[![screenshot_08](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_08-300x226.png)](https://www.mikecann.blog/wp-content/uploads/2013/04/screenshot_08.png)
 
 Anyways see what you think:
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-05-14T14:55:01.000Z'
+date: "2011-05-14T14:55:01.000Z"
 tags:
   - chrome
   - crawler
@@ -11,7 +11,7 @@ oldUrl: /chrome-crawler/chrome-crawler-v0-5
 openAIMikesBlogFileId: file-apHSz38hNY0AFAjaRbnnpobE
 ---
 
-[![](/wp-content/uploads/2011/05/icon128.png "icon128")](/wp-content/uploads/2011/05/icon128.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/05/icon128.png "icon128")](https://www.mikecann.blog/wp-content/uploads/2011/05/icon128.png)
 
 Just a quick update to my Chrome Crawler extension for chrome this afternoon after I received an email from Vinit Agrawal who had spotted and fixed a bug in the code :)
 

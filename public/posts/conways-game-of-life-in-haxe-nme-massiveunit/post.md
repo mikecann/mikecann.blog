@@ -1,18 +1,18 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-10-09T17:13:29.000Z'
+date: "2011-10-09T17:13:29.000Z"
 tags:
   - flash
   - haxe
   - html5
   - nme
   - testing
-title: 'Conway''s Game of Life in haXe [NME & MassiveUnit]'
+title: "Conway's Game of Life in haXe [NME & MassiveUnit]"
 oldUrl: /haxe/conways-game-of-life-in-haxe-nme-massiveunit
 openAIMikesBlogFileId: file-NYCdXedQYMPyq5QPDRO2ZzfZ
 ---
 
-[![](/wp-content/uploads/2011/10/2011-10-09_1257.png "2011-10-09_1257")](/wp-content/uploads/2011/10/2011-10-09_1257.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-09_1257.png "2011-10-09_1257")](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-09_1257.png)
 
 The second day of [try{harder}](/posts/try-harder-my-haxe-slides-and-code/) was dedicated to a single topic; test driven development (TDD).
 
@@ -85,7 +85,7 @@ haxelib run munit test test.hxml
 
 When executed you get something that looks like the following:
 
-[![](/wp-content/uploads/2011/10/ScreenHunter_01-Oct.-09-13.54.jpg "ScreenHunter_01 Oct. 09 13.54")](/wp-content/uploads/2011/10/ScreenHunter_01-Oct.-09-13.54.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/10/ScreenHunter_01-Oct.-09-13.54.jpg "ScreenHunter_01 Oct. 09 13.54")](https://www.mikecann.blog/wp-content/uploads/2011/10/ScreenHunter_01-Oct.-09-13.54.jpg)
 
 Which presents a nice graphical representation of the tests run and which failed (if any).
 

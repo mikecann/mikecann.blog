@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-06-25T18:59:09.000Z'
+date: "2012-06-25T18:59:09.000Z"
 tags:
   - malaysia
   - personal
@@ -11,7 +11,7 @@ oldUrl: /photos-personal/malaysia-2012
 openAIMikesBlogFileId: file-w5q1Hig1nyuEM8rltqufzBv7
 ---
 
-[![](/wp-content/uploads/2012/06/screenshot_01.jpg "screenshot_01")](/wp-content/uploads/2012/06/screenshot_01.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg "screenshot_01")](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg)
 
 For the past two weeks I have been travelling about Malaysia seeing a very small chunk of what there is to see there.
 

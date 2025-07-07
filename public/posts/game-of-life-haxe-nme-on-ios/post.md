@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-10-13T19:22:42.000Z'
+date: "2011-10-13T19:22:42.000Z"
 tags: []
 title: Game of Life HaXe & NME on iOS
 oldUrl: /haxe/game-of-life-haxe-nme-on-ios
@@ -46,7 +46,7 @@ haxelib dev nme /Users/mikec/Documents/NME_3.1_Beta
 
 Now when I try to build for ios I get success!
 
-[![](/wp-content/uploads/2011/10/2011-10-12_1149.png "2011-10-12_1149")](/wp-content/uploads/2011/10/2011-10-12_1149.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-12_1149.png "2011-10-12_1149")](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-12_1149.png)
 
 From there is a simple matter of opening the generated xcode project, connecting my iphone and hitting run:
 

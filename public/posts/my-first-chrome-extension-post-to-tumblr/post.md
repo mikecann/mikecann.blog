@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-10-14T20:02:33.000Z'
+date: "2010-10-14T20:02:33.000Z"
 tags:
   - chrome
   - extension
@@ -16,7 +16,7 @@ oldUrl: /post-to-tumbr/my-first-chrome-extension-post-to-tumblr
 openAIMikesBlogFileId: file-MeKc09ikui54Z03fc7wPfkNp
 ---
 
-[![](/wp-content/uploads/2010/10/Shot_002.png "Shot_002")](/wp-content/uploads/2010/10/Shot_002.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)
 
 Woo! I have just published my first Chrome extension :)
 
@@ -70,7 +70,7 @@ Simples!
 
 Theres even an option page where you put in your Tumblr details:
 
-[![](/wp-content/uploads/2010/10/Shot_003.png "Shot_003")](/wp-content/uploads/2010/10/Shot_003.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_003.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_003.png)
 
 Oh, there is one issue.
 

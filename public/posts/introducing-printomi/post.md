@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/introducing-printomi/cover.jpg
-date: '2012-04-04T21:00:14.000Z'
+date: "2012-04-04T21:00:14.000Z"
 tags:
   - announce
   - api
@@ -25,41 +25,41 @@ The way it works is we provide the game owner with a tiny API that is used to in
 
 Once downloaded the printomi client is ready to be be used. In the case of [Gourmet Ranch](https://apps.facebook.com/gourmetranch) a themed button is shown to the player inviting them to click:
 
-[![](/wp-content/uploads/2012/04/btn-to-click.png "btn-to-click")](/wp-content/uploads/2012/04/btn-to-click.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/btn-to-click.png "btn-to-click")](https://www.mikecann.blog/wp-content/uploads/2012/04/btn-to-click.png)
 
 Once clicked (or activated by the JavaScript API) the main Printomi window opens:
 
-[![](/wp-content/uploads/2012/04/01.jpg "01")](/wp-content/uploads/2012/04/01.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/01.jpg "01")](https://www.mikecann.blog/wp-content/uploads/2012/04/01.jpg)
 
 The window has controls to zoom in and move the print about allowing the player to get the perfect angle of their world:
 
-[![](/wp-content/uploads/2012/04/02.jpg "02")](/wp-content/uploads/2012/04/02.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/02.jpg "02")](https://www.mikecann.blog/wp-content/uploads/2012/04/02.jpg)
 
 Once happy the player can then saves the print to the printomi servers. While the image is uploading the user can continue to play the game. Once the upload is complete the window is opened once more offering to show the player their print.
 
-[![](/wp-content/uploads/2012/04/03.jpg "03")](/wp-content/uploads/2012/04/03.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/03.jpg "03")](https://www.mikecann.blog/wp-content/uploads/2012/04/03.jpg)
 
 Printomi is tightly integrated with Facebook so that it's as easy as possible for new users to get started:
 
-[![](/wp-content/uploads/2012/04/04.jpg "04")](/wp-content/uploads/2012/04/04.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/04.jpg "04")](https://www.mikecann.blog/wp-content/uploads/2012/04/04.jpg)
 
 Once connected the new print is then available for viewing, sharing, liking, commenting, etc:
 
-[![](/wp-content/uploads/2012/04/05.jpg "05")](/wp-content/uploads/2012/04/05.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/05.jpg "05")](https://www.mikecann.blog/wp-content/uploads/2012/04/05.jpg)
 
 In addition the prints are organised into galleries so that users can browse the uploads of others:
 
-[![](/wp-content/uploads/2012/04/06.jpg "06")](/wp-content/uploads/2012/04/06.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/06.jpg "06")](https://www.mikecann.blog/wp-content/uploads/2012/04/06.jpg)
 
 If a user particularly likes one print then they can order it as a poster:
 
-[![](/wp-content/uploads/2012/04/07.jpg "07")](/wp-content/uploads/2012/04/07.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/07.jpg "07")](https://www.mikecann.blog/wp-content/uploads/2012/04/07.jpg)
 
 Currently we only offer posters to people living in the US however we plan on opening it up to other countries when we can.
 
 To print to such a large poster (24x18" @ 150DPI) and maintain the quality of the final product we must capture a large number of pixels. For example here is a comparison between what a user would see on printomi.com and what we store behind the scenes:
 
-[![](/wp-content/uploads/2012/04/08.jpg "08")](/wp-content/uploads/2012/04/08.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/08.jpg "08")](https://www.mikecann.blog/wp-content/uploads/2012/04/08.jpg)
 
 The technology that lets us capture these large images and store them in a compressed way (to conserve disk space and therefore cost) is quite complex and will have to wait for a later post.
 
@@ -67,7 +67,7 @@ Printomi is currently only available to a small subset of the [Gourmet Ranch](ht
 
 Printomi is a culmination of many many hours of hard work, late nights and stress. But its been worth it! I've had a blast throughout the whole process and am proud of the result. I have also learnt a whole bunch in the process. I have had to work with so many technologies to pull this off, to name a few: AS3, C++, C#, ASP.Net, MySQL, IIS, AWS. I have particularly enjoyed the C# work having largely abandoned the language since my [early work](/posts/windows-7-taskbar-performance-monitor-v0-2/) [with it.](/posts/killer-space-penguins/)
 
-[![](/wp-content/uploads/2012/04/fb1.jpg "fb")](https://www.facebook.com/printomi)[![](/wp-content/uploads/2012/04/tw.jpg "tw")](https://twitter.com/#!/printomi)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/04/fb1.jpg "fb")](https://www.facebook.com/printomi)[![](https://www.mikecann.blog/wp-content/uploads/2012/04/tw.jpg "tw")](https://twitter.com/#!/printomi)
 
 If you would like to support me or if you would like to keep up to date with the goings on with [Printomi](https://www.printomi.com/) then you can like us on [Facebook](https://www.facebook.com/printomi) or follow us on [Twitter](https://twitter.com/#!/printomi) :)
 

@@ -1,13 +1,13 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2006-05-27T22:32:40.000Z'
+date: "2006-05-27T22:32:40.000Z"
 tags: []
 title: Artificial Harmonics ( part 1 )
 oldUrl: /personal-mixes/artificial-harmonics-part-1
 openAIMikesBlogFileId: file-STF8xKdD4UJMIyUkQKWFYp9q
 ---
 
-**![](/wp-content/uploads/Image/PixelHouse.gif)**
+**![](https://www.mikecann.blog/wp-content/uploads/Image/PixelHouse.gif)**
 
 **Artist:** [Artificial](https://www.mikecann.blog/www.artificial-studios.co.uk) ** Genre:** downtempo / chillout
 

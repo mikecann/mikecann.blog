@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2013-04-11T11:11:53.000Z'
+date: "2013-04-11T11:11:53.000Z"
 tags:
   - argon
   - house
@@ -15,7 +15,7 @@ oldUrl: /audio/artificial-argon-isotope
 openAIMikesBlogFileId: file-PYqNBeNgiyvPUboggsiOUngG
 ---
 
-[![argon](/wp-content/uploads/2013/04/argon.png)](/audio/artificial-argon-isotope/attachment/argon/)
+[![argon](https://www.mikecann.blog/wp-content/uploads/2013/04/argon.png)](/audio/artificial-argon-isotope/attachment/argon/)
 
 I decided to take a little break from the coding and over the past few evenings I have put together a new mix.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2013-03-02T20:27:49.000Z'
+date: "2013-03-02T20:27:49.000Z"
 tags:
   - company
   - leaving
@@ -11,7 +11,7 @@ oldUrl: /photos-personal/goodbye-playdemic
 openAIMikesBlogFileId: file-BYBvnK77daoYz7SsN658geFa
 ---
 
-[![head](/wp-content/uploads/2013/03/head.png)](/posts/goodbye-playdemic/attachment/head-8/)
+[![head](https://www.mikecann.blog/wp-content/uploads/2013/03/head.png)](/posts/goodbye-playdemic/attachment/head-8/)
 
 Wow doesn't time fly.
 

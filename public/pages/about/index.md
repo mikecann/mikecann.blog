@@ -9,7 +9,7 @@ Michael Cann was born during the spring of 1985 in the town of Shrewsbury (Shrop
 
 At the age of 7 he wrote his first game in BASIC. A simple 'Guess my number' command line game was less than 100 lines of code but seeing his friends play the game for hours at a time was enough to give him the taste he needed to continue his interest.
 
-[![](/wp-content/uploads/2007/09/Guess.jpg "Guess")](/wp-content/uploads/2007/09/Guess.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2007/09/Guess.jpg "Guess")](https://www.mikecann.blog/wp-content/uploads/2007/09/Guess.jpg)
 _not actual screenshot of my game_
 
 At 13 he began experimenting with the rapidly developing World Wide Web by learning HTML. At this stage the pages were very simple, developed for his growing interest in online gaming. Soon his explorations took him into contact with Javascript which gave him the ability to bring his simple static pages alive. What had him excited about web development over his earlier experiments with BASIC was the potential to reach people all over the world, not just the people in his school.
@@ -20,7 +20,7 @@ Around this age he also began experimenting with audio production. He explored v
 
 He attended The Adams Grammar School in Newport Shropshire where he did well in his GCSE's and A' levels. His particular interests were Maths and Physics. His exam results meant that he had his choice of universities, either Artificial Intelligence with Robotics at the University of Birmingham or Computer Games Programming at the University of Huddersfield. After much soul searching he decided that he would follow his passion for programming and accept the offer from the [University of Huddersfield](https://www.hud.ac.uk/).
 
-[![Bump Space](/wp-content/uploads/2007/09/bump.png "Bump Space")](/wp-content/uploads/2007/09/bump.png)
+[![Bump Space](https://www.mikecann.blog/wp-content/uploads/2007/09/bump.png "Bump Space")](https://www.mikecann.blog/wp-content/uploads/2007/09/bump.png)
 
 His 4 years at Huddersfield University were some of his happiest. Freed from the requirements and restrictions of secondary school he was able to pursue his passion for development. During the first year of he learnt DarkBASIC, using it to create a few games ([1](/darkbasic/code-drop-v2-2003/), [2](/darkbasic/games/snakez-2003/), [3](/darkbasic/games/darkpool-2003-2/)). Towards the end of the first year he also started to experiment around with Adobe Flash. With Actionscript 1 he created his first personal website with intro Artificial Studios. This was his first foray into the flash but certainty wouldn't be his last.
 
@@ -28,7 +28,7 @@ His 4 years at Huddersfield University were some of his happiest. Freed from the
 
 [BumpSpace](/c/directx9c/projects/bumpspace-spring-2005/) was one such project written in the spring of 2005 using C++ with DirectX. With the project he was attempting to apply some of the knowledge he had been teaching himself outside of lessions, namely Point-Sprite Particles, Bump-mapping and Bezier curves.
 
-![](/wp-content/uploads/2006/06/imgVideoScreens.jpg "Worms")
+![](https://www.mikecann.blog/wp-content/uploads/2006/06/imgVideoScreens.jpg "Worms")
 
 The third year of University was an industrial placement year for Michael. He had secured a place with the Manchester based Mobile Games company [RockPoolGames](https://www.rockpoolgames.com/). There he helped work on several mobile titles including [Ronnie o'Sulivans Snooker](/games/j2me/java/portfolio/ronnie-osulivans-snooker/) and the very successful [Worms2](/games/j2me/java/worms-2/) using his Java knowledge with J2ME. More than the technical aspect of the job he developed a keen sense and understanding of how games are made professionally.
 
@@ -52,7 +52,7 @@ Late 2008 Michael was head hunted to join [GameJacket](/photos-personal/gamejac
 
 In 2009 Michael joined [GamesChart](https://gameschart.com/), with a similar role as to GameJacket. There he wrote APIs in AS3 for other game developers to use. Due to the startup nature of the company he was also involved with a great many areas including serverside development and project management.
 
-![](/wp-content/uploads/2010/01/ScreenHunter_03-Jan.-11-19.10.jpg)Following a turbulent 12 months at GamesChart Michael accepted an offer to become one of the founding members of [Playdemic](/photos-personal/playdemic-my-fist-day/). A company designed to ride the social games wave started by the gaming giant Zynga. For the first year there he worked in a small team to develop [GourmetRanch](/games/gourmet-ranch/) a Facebook based Flash game that combines the best of Farmville with Cafeworld.
+![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_03-Jan.-11-19.10.jpg)Following a turbulent 12 months at GamesChart Michael accepted an offer to become one of the founding members of [Playdemic](/photos-personal/playdemic-my-fist-day/). A company designed to ride the social games wave started by the gaming giant Zynga. For the first year there he worked in a small team to develop [GourmetRanch](/games/gourmet-ranch/) a Facebook based Flash game that combines the best of Farmville with Cafeworld.
 
 As Playdemic's success grew and was subsequently [acquired by Silicon Valley company RockYou at the start of 2011](/misc/playdemic-acquired-by-rockyou/) Michael's role changed from that of game developer to more of a tools and technologies role. He became instrumental in streamlining the release process and facilitated ongoing game development by the numerous individual teams.
 

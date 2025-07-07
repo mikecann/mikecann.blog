@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-08-18T17:55:14.000Z'
+date: "2009-08-18T17:55:14.000Z"
 tags:
   - apple
   - opinion
@@ -15,7 +15,7 @@ Well its now a couple of weeks into using my shiney new MacBook Pro 15" and I ha
 
 The keyboard, I know you can get soft-touch keyboards for PC but I have never tried them before passing them off as "unnecessary" but having used this keyboard for a week now I am a changed man. Just the act of typing on the thing is a pure pleasure! Definately a plus if you are coding on the thing all day ;) One slight negative is that there appear to be some keys missing from it such as the # key and the end and home buttons, not a biggie, im sure there are shortcuts in there somewhere.
 
-[![expose](/wp-content/uploads/2009/08/expose.png "expose")](/wp-content/uploads/2009/08/expose.png)The Expose show all windows feature is great! I have it activated on my middle mouse button right now. Right mouse button show all windows to get an overview of all the windows open then click on the one you want, simple, easy and less confusing that the Windows taskbar in my opinion.
+[![expose](https://www.mikecann.blog/wp-content/uploads/2009/08/expose.png "expose")](https://www.mikecann.blog/wp-content/uploads/2009/08/expose.png)The Expose show all windows feature is great! I have it activated on my middle mouse button right now. Right mouse button show all windows to get an overview of all the windows open then click on the one you want, simple, easy and less confusing that the Windows taskbar in my opinion.
 
 The install / uninstall process. This one took a little bit of getting used to. At first I wasnt sure exactly what was going on, but now I understand that you just drag an application into the "applications" folder to install or drag it out to uninstall its a doddle, much better than Windows' add / remove programs or even worse individual application uninstallers!
 
@@ -25,6 +25,6 @@ Finder. I may not have got it setup totally correctly yet but so far this app ha
 
 The cmd key. Why? What is the purpose of having control, alt and cmd? Im slowly getting used to using the cmd key for things such as cmd &amp; w to close windows and tabs and cmd &amp; n to open new things but I dont see why you couldnt just use ctrl for this purpose. Whats more, when I switch back to a windows computer at home I end up getting confused and hitting the alt key all the time :S
 
-[![examplemenubar](/wp-content/uploads/2009/08/examplemenubar.png "examplemenubar")](/wp-content/uploads/2009/08/examplemenubar.png)
+[![examplemenubar](https://www.mikecann.blog/wp-content/uploads/2009/08/examplemenubar.png "examplemenubar")](https://www.mikecann.blog/wp-content/uploads/2009/08/examplemenubar.png)
 
 The lack of right-click functionality on menu bar items. This is frustrating in some situations, one of the primary being GMarks for firefox. In the morning I like to check a few sites for news and see whats going on in the world. On windows I do this using the GoogleBookmarks plugin for Firefox called Gmarks. I normally right click my "Check Daily" GMarks bookmark folder then select "Open All in Tabs" button. Unfortunately however as you cant rightclick on menu bar items on the Mac you are unable to do this. My only solution so-far for this problem is to fireup parallels and then perform my morning ritual from within windows xp, hardly ideal.

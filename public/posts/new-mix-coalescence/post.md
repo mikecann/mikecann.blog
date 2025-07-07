@@ -1,18 +1,18 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-07-14T10:50:03.000Z'
+date: "2009-07-14T10:50:03.000Z"
 tags:
   - chill
   - downtemo
   - mix
   - music
   - personal
-title: 'New Mix: Coalescence'
+title: "New Mix: Coalescence"
 oldUrl: /personal-mixes/new-mix-coalescence
 openAIMikesBlogFileId: file-IHN3u2cizRC5y6T8JwE90dOZ
 ---
 
-[![artificialcoalcover](/wp-content/uploads/2009/07/artificialcoalcover.png "artificialcoalcover")](/wp-content/uploads/2009/07/artificialcoalcover.png)
+[![artificialcoalcover](https://www.mikecann.blog/wp-content/uploads/2009/07/artificialcoalcover.png "artificialcoalcover")](https://www.mikecann.blog/wp-content/uploads/2009/07/artificialcoalcover.png)
 
 Wow! Well this one was a hell of alot easier to make than [the last one](https://www.mikecann.blog/?p=582).
 

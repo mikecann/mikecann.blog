@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-12-10T20:44:37.000Z'
+date: "2009-12-10T20:44:37.000Z"
 tags:
   - html
   - programming
@@ -18,7 +18,7 @@ I took a little break from my 'top secret' project (more on this coming soon) th
 
 Top of my list was the fact that the index page doesn't render correctly in IE7\. What makes it odd is the fact that the category pages which are essentially identical to the index page rendered fine.This is what it looked like:
 
-[![ScreenHunter_01 Dec. 10 19.28](/wp-content/uploads/2009/12/ScreenHunter_01-Dec.-10-19.28.jpg "ScreenHunter_01 Dec. 10 19.28")](/wp-content/uploads/2009/12/ScreenHunter_01-Dec.-10-19.28.jpg)
+[![ScreenHunter_01 Dec. 10 19.28](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_01-Dec.-10-19.28.jpg "ScreenHunter_01 Dec. 10 19.28")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_01-Dec.-10-19.28.jpg)
 
 Normally when you hear that there is an issue with a site on IE and not on FF or other browsers you automatically assume its CSS, and so did I. After stripping the site down to its bear bones however, comparing the index page against the category page I will still getting this oddness.
 
@@ -32,6 +32,6 @@ This line was the only line that differed in the index to the category page, whi
 
 So I took out the "Transitional" and low and behold it worked!
 
-[![ScreenHunter_02 Dec. 10 19.41](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-10-19.41-1024x484.jpg "ScreenHunter_02 Dec. 10 19.41")](/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-10-19.41.jpg)
+[![ScreenHunter_02 Dec. 10 19.41](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-10-19.41-1024x484.jpg "ScreenHunter_02 Dec. 10 19.41")](https://www.mikecann.blog/wp-content/uploads/2009/12/ScreenHunter_02-Dec.-10-19.41.jpg)
 
 No idea what Transitional does, but I hope this helps someone else out in the future!

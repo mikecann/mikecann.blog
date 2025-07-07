@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-03-20T18:23:06.000Z'
+date: "2011-03-20T18:23:06.000Z"
 tags:
   - bass
   - download
@@ -13,7 +13,7 @@ oldUrl: /audio/artificial-blue-noise
 openAIMikesBlogFileId: file-Ns1tgkLnSwfZiibnKwW296NG
 ---
 
-[![](/wp-content/uploads/2011/03/700.png "700")](/wp-content/uploads/2011/03/700.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/03/700.png "700")](https://www.mikecann.blog/wp-content/uploads/2011/03/700.png)
 
 I've been getting into the whole Dubstep quite abit recently. Its probably just a phase I know, but while im enjoying it all so much at the moment I thought I would chuck down some of my favourites into a mix.
 

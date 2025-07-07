@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-05-09T21:57:03.000Z'
+date: "2011-05-09T21:57:03.000Z"
 tags:
   - instagram
   - instagrid
@@ -12,7 +12,7 @@ oldUrl: /misc/instagrid
 openAIMikesBlogFileId: file-WDniuyD8QZ68Mn8I43iQcBRT
 ---
 
-[![](/wp-content/uploads/2011/05/02.jpg "02")](/wp-content/uploads/2011/05/02.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/05/02.jpg "02")](https://www.mikecann.blog/wp-content/uploads/2011/05/02.jpg)
 
 I have just returned from a little trip to Germany.
 

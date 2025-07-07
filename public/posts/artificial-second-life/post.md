@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-02-26T17:10:56.000Z'
+date: "2012-02-26T17:10:56.000Z"
 tags:
   - dnb
   - dubstep
@@ -11,7 +11,7 @@ oldUrl: /audio/artificial-second-life
 openAIMikesBlogFileId: file-wTqUo67CrVNLVL7vqLr5mJgU
 ---
 
-[![](/wp-content/uploads/2012/02/header.png "header")](/wp-content/uploads/2012/02/header.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/02/header.png "header")](https://www.mikecann.blog/wp-content/uploads/2012/02/header.png)
 
 Just finished and uploaded a new mix I have been putting together over the last couple of weeks. The mix is mostly Dubstep with some Drum'n'Bass thrown in to mix it up a bit. The tracks are mostly all favourites I have had on repeat in the last 6 months.
 

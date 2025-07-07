@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-10-21T17:36:42.000Z'
+date: "2011-10-21T17:36:42.000Z"
 tags:
   - flash
   - javascript
@@ -14,7 +14,7 @@ oldUrl: /programming/why-developing-for-webgl-sucks
 openAIMikesBlogFileId: file-n4UGZVm6W15inu0hpg546dXX
 ---
 
-[![](/wp-content/uploads/2011/10/head02.png "head02")](/wp-content/uploads/2011/10/head02.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/10/head02.png "head02")](https://www.mikecann.blog/wp-content/uploads/2011/10/head02.png)
 
 For some time now I have been working with WebGL and have developed a sort of love/hate relationship with it. I love the ability to instantly target millions of people with GPU accelerated code without any plugins or barriers (excluding the targets that dont support it). However as a developer, writing code that takes advantage of WebGL kinda sucks.
 
@@ -94,7 +94,7 @@ In my last post "[GPU State Preserving Particle Systems with WebGL &amp; HaXe](/
 
 In the end I found the best way to get anywhere is to go from the other direction, a 'top-down' method. Start with something kind of simmilar to what you want then cut bits out one line at a time until you get what you want. Its extremely time consuming and frustrating, but its less frustrating than going from the other way.
 
-[![](/wp-content/uploads/2011/10/1-Trace.gif "1-Trace")](/wp-content/uploads/2011/10/1-Trace.gif)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/10/1-Trace.gif "1-Trace")](https://www.mikecann.blog/wp-content/uploads/2011/10/1-Trace.gif)
 
 There are tools out there that help with debugging what is going wrong. Namely the [WebGL Inspector](https://www.google.co.uk/url?sa=t&rct=j&q=webgl%20inspector&source=web&cd=1&ved=0CBwQFjAA&url=http%3A%2F%2Fbenvanik.github.com%2FWebGL-Inspector%2F&ei=9EWhTsHdAtSJhQe7hv3jBA&usg=AFQjCNElgWdAeKcNOnrDFrSnr6rbCLUcWg) (see above) is intended to provide gDEBugger / PIX like debugging information about what is going on inside webGL. Its a clever bit of tech, it lets you inspect buffers and traces each gl call, however it suffers from the same underlying problem of having no errors. You setup a buffer incorrectly and what you get is "INVALID_VALUE". No indication as to which of the values is invalid or what part of the call you messed up on :(
 

@@ -1,17 +1,17 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2011-08-23T20:39:08.000Z'
+date: "2011-08-23T20:39:08.000Z"
 tags:
   - house
   - mix
   - progressive
   - tech
-title: 'Artificial - Argon [Tech, House, Progressive]'
+title: "Artificial - Argon [Tech, House, Progressive]"
 oldUrl: /audio/artificial-argon-tech-house-progressive
 openAIMikesBlogFileId: file-vwy6te9U1e4pm0T5k6hVwfMq
 ---
 
-[![](/wp-content/uploads/2011/08/Argon-Cover.png "Argon-Cover")](/wp-content/uploads/2011/08/Argon-Cover.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png "Argon-Cover")](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png)
 
 First part in a two part mix, see "[Iridium](/audio/artificial-iridium-trance-electro-house/)" for part 2.
 

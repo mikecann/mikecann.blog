@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/recursive-explore-the-endless-web/cover.jpg
-date: '2012-12-04T08:37:41.000Z'
+date: "2012-12-04T08:37:41.000Z"
 tags:
   - chrome
   - chrome crawler
@@ -57,57 +57,57 @@ Installing and upgrading is dead simple thanks to how Google Chrome's extension 
 
 Then to launch it visit any website and hit the little icon in the Omnibox:
 
-[![](/wp-content/uploads/2012/12/Screenshot_008.png "Screenshot_008")](/wp-content/uploads/2012/12/Screenshot_008.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_008.png "Screenshot_008")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_008.png)
 
 ### How it works
 
 Recursive works by taking in a starting URL which it uses to download the page it points to:
 
-[![](/wp-content/uploads/2012/12/03.jpg "03")](/wp-content/uploads/2012/12/03.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/03.jpg "03")](https://www.mikecann.blog/wp-content/uploads/2012/12/03.jpg)
 
 Once that page is downloaded Recursive parses it looking for links and files. If it finds things it thinks are files then it records them against that URL. It then proceeds to visit all the links in turn, downloading the page then parsing the for yet more files and links.
 
 This cycle continues until a certain "depth" is reached which is the maximum number of links away from the starting URL. You can set the maximum depth allowed in the settings:
 
-[![](/wp-content/uploads/2012/12/04.jpg "04")](/wp-content/uploads/2012/12/04.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/04.jpg "04")](https://www.mikecann.blog/wp-content/uploads/2012/12/04.jpg)
 
 One of the key improvements of Recursive over Chrome Crawler is the way it visualises the data as it is returned:
 
-[![](/wp-content/uploads/2012/12/05.jpg "05")](/wp-content/uploads/2012/12/05.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/05.jpg "05")](https://www.mikecann.blog/wp-content/uploads/2012/12/05.jpg)
 
 Every page is grouped by its domain and is represented by a circular "node".
 
-[![](/wp-content/uploads/2012/12/Screenshot_013.png "Screenshot_013")](/wp-content/uploads/2012/12/Screenshot_013.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_013.png "Screenshot_013")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_013.png)
 
 So for example "/posts/tinkering-with-typescript/" would be grouped under the "mikecann.blog" domain. Any other pages found while running that match this domain are added as little page icons inside the host node.
 
-[![](/wp-content/uploads/2012/12/Screenshot_014.png "Screenshot_014")](/wp-content/uploads/2012/12/Screenshot_014.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_014.png "Screenshot_014")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_014.png)
 
 Any files that are found on a given page are given an appropriate icon and added to that page's domain node.
 
-[![](/wp-content/uploads/2012/12/Screenshot_015.png "Screenshot_015")](/wp-content/uploads/2012/12/Screenshot_015.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_015.png "Screenshot_015")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_015.png)
 
 As Recursive downloads pages and follows links it records the path it takes. It then draws lines between the nodes that are linked:
 
-[![](/wp-content/uploads/2012/12/06.jpg "06")](/wp-content/uploads/2012/12/06.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/06.jpg "06")](https://www.mikecann.blog/wp-content/uploads/2012/12/06.jpg)
 
 ### Interacting
 
 Using the mouse wheel you can zoom in and out to get a better perspective. Click and drag to move about the recursive space. You can also run the app in fullscreen if you so desire.
 
-[![](/wp-content/uploads/2012/12/Screenshot_017.png "Screenshot_017")](/wp-content/uploads/2012/12/Screenshot_017.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_017.png "Screenshot_017")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_017.png)
 
 If you click on a node it tells Recursive to explore that node for one extra level depth.
 
 Right clicking a node opens a menu that lets you either open all the pages contained in that node or view the files for that node.
 
-[![](/wp-content/uploads/2012/12/Screenshot_019.png "Screenshot_019")](/wp-content/uploads/2012/12/Screenshot_019.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_019.png "Screenshot_019")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_019.png)
 
 ### Files
 
 By using the context menu for a node you can checkout all the files that Recursive found for that node. The files are separated into various categories which you can toggle on or off:
 
-[![](/wp-content/uploads/2012/12/Screenshot_020.png "Screenshot_020")](/wp-content/uploads/2012/12/Screenshot_020.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_020.png "Screenshot_020")](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_020.png)
 
 Then if you wish you can download all the files as a zip.
 

@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2009-06-17T20:11:27.000Z'
+date: "2009-06-17T20:11:27.000Z"
 tags:
   - personal
   - photos
@@ -10,7 +10,7 @@ oldUrl: /misc/nova-scotia-in-10-days
 openAIMikesBlogFileId: file-KJBWxrt20pnnPOOrN8cjHa66
 ---
 
-[![novampa](/wp-content/uploads/2009/06/novampa.jpg "novampa")](https://picasaweb.google.co.uk/lh/albumMap?uname=mike.cann&aid=5348332286173974433#map)
+[![novampa](https://www.mikecann.blog/wp-content/uploads/2009/06/novampa.jpg "novampa")](https://picasaweb.google.co.uk/lh/albumMap?uname=mike.cann&aid=5348332286173974433#map)
 
 Yarr' me old sea dogs. I have just returned from a grand voyage to the eastern Canadian territories known as Nova Scotia. There myself and me old sea cappin' red beard rum went-a-hiking and campin' around the Maritimes.
 

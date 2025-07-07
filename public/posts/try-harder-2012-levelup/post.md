@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-03-12T17:39:07.000Z'
+date: "2012-03-12T17:39:07.000Z"
 tags:
   - as3
   - code
@@ -9,12 +9,12 @@ tags:
   - levelup
   - tdd
   - tryharder
-title: 'Try { Harder } 2012 Levelup'
+title: "Try { Harder } 2012 Levelup"
 oldUrl: /misc/try-harder-2012-levelup
 openAIMikesBlogFileId: file-erMs5T3mcP0ODsCK5F1J0JXi
 ---
 
-[![](/wp-content/uploads/2012/03/header.png "header")](/wp-content/uploads/2012/03/header.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2012/03/header.png "header")](https://www.mikecann.blog/wp-content/uploads/2012/03/header.png)
 
 [Last year I was fortunate](/posts/try-harder-my-haxe-slides-and-code/) to be one of the lucky 16 to attend the first try { harder } experimental conference / coder retreat in Nottingham. As mentioned in my [blog post](/posts/try-harder-my-haxe-slides-and-code/) at the time it was an incredible 4-day event in which I learnt so much from some of the most talented and experienced people in the flash community.
 

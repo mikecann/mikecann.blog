@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-02-22T00:06:58.000Z'
+date: "2010-02-22T00:06:58.000Z"
 tags:
   - air
   - component
@@ -20,7 +20,7 @@ Thankfully however adobe provide the tools to allow for resizing the native wind
 
 <!-- more -->
 
-[![](/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif "ScreenHunter_02 Feb. 21 21.40")](/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif "ScreenHunter_02 Feb. 21 21.40")](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif)
 
 The coloured edges indicate where the application is draggable, including the white corner areas.
 

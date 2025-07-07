@@ -1,6 +1,6 @@
 ---
 coverImage: ./header.jpg
-date: '2017-11-05T13:37:29.000Z'
+date: "2017-11-05T13:37:29.000Z"
 tags:
   - machine learning
   - unity
@@ -28,7 +28,7 @@ This is a series of multiple parts, if you liked this post then checkout the oth
 
 # The History
 
-![](/wp-content/uploads/2007/09/Guess.jpg)
+![](https://www.mikecann.blog/wp-content/uploads/2007/09/Guess.jpg)
 
 Before you think about where you want to go next sometimes it helps to think about where you have come from.
 

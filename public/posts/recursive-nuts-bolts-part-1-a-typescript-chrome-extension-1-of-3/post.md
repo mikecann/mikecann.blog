@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2012-12-23T17:33:58.000Z'
+date: "2012-12-23T17:33:58.000Z"
 tags:
   - chrome
   - crawler
@@ -10,12 +10,12 @@ tags:
   - spider
   - typescript
   - web
-title: 'Recursive, Nuts & Bolts Part 1 - A Typescript Chrome Extension  (1 of 3)'
+title: "Recursive, Nuts & Bolts Part 1 - A Typescript Chrome Extension  (1 of 3)"
 oldUrl: /programming/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3
 openAIMikesBlogFileId: file-sggVeEE54Gw24QSRAVSwE34N
 ---
 
-[![screenshot_04](/wp-content/uploads/2012/12/screenshot_041.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_04-5/)
+[![screenshot_04](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_041.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_04-5/)
 
 As [promised](/posts/recursive-explore-the-endless-web/) I have decided to write a few blog posts on some of the technology behind my recently release Chrome extension Recursive.
 
@@ -29,7 +29,7 @@ With that out the way lets get on with the show..
 
 When a user open a new tab or browses a new page in Chrome a background script in Recursive inspects the URL you are visiting and so long as it is of type https:// or https:// it will add a small icon to the omni bar:
 
-[![screenshot_02](/wp-content/uploads/2012/12/screenshot_02.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_02-10/)
+[![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_02.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_02-10/)
 
 Clicking this button opens up a new tab with the Recursive app inside. The app consists of a single HTML document “app.htm” with all of the logic split up into multiple Javascript files which mirror the Typescript files that were used to generate them (more on that below).
 
@@ -47,7 +47,7 @@ I have already mentioned in a[ previous post](/posts/tinkering-with-typescript/)
 
 The way I have structured things in Recursive is to have a central context / entry point in the form of a file called app.ts. This file lives in the root of the project and I use it as a sort of globals file. I know, I know what you are thinking, “Globals! Mike, you should know better!”. In this instance however I think because Recursive is a standable app inside an extension it is unlikely to conflict with any other JS (supposing the libraries I use dont declare any global variables). Besides I don't like the alternative that involves using RequireJS or AMD due to all the magic strings and non-type safety involved.
 
-[![screenshot_03](/wp-content/uploads/2012/12/screenshot_03.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_03-6/)
+[![screenshot_03](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_03.png)](/posts/recursive-nuts-bolts-part-1-a-typescript-chrome-extension-1-of-3/attachment/screenshot_03-6/)
 
 App.ts also contains references to every other typescript file in the app. This means that when a new TS file is created I only have to add a single reference back to app.ts and all the classes and types contained in the other files will be available (this solution actually feels kind of icky, much in the same way as globals do, but one of the samples on the Typescript homepage uses this ‘driver’ method so I guess its okay!).
 
@@ -59,7 +59,7 @@ One important lesson I learnt while working with Typescript on Recursive and wit
 
 Finally, as a little extra I decided to put in a splash screen when you first start up Recursive:
 
-![screenshot1](/wp-content/uploads/2012/12/screenshot1-300x187.png)
+![screenshot1](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot1-300x187.png)
 
 While designing this I was also trying to come up with a logo and name for the app. I was toying with the name Recursive and it got me thinking about fractals and [L-Systems](https://en.wikipedia.org/wiki/L-system). As I am easily distracted I decided to quicky have a go at writing an L-System for the splash screen. It wasn't hard to implement but tweaking all the parameters turned out to be a lot more fun than I was expecting so I spent most of one Sunday evening just playing with it :P
 

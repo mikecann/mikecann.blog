@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-01T13:27:21.000Z'
+date: "2010-08-01T13:27:21.000Z"
 tags:
   - awake
   - book
@@ -12,7 +12,7 @@ oldUrl: /books/exploring-the-world-of-lucid-dreaming
 openAIMikesBlogFileId: file-oZgVGhJ7Z0Zb65ze8EhocRaA
 ---
 
-[![](/wp-content/uploads/2010/08/IMG_0909.jpg "IMG_0909")](/wp-content/uploads/2010/08/IMG_0909.jpg)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/IMG_0909.jpg "IMG_0909")](https://www.mikecann.blog/wp-content/uploads/2010/08/IMG_0909.jpg)
 
 Im not too sure if I have spoken before about Lucid Dreaming. I was interested in the concept several years ago when I first heard about it and then by accidentally managed to do it once while on holiday. It was an incredible experience and ever since the concept of consciously influencing your dreaming state has fascinated me.
 

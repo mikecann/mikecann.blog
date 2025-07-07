@@ -1,6 +1,6 @@
 ---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-16T19:57:36.000Z'
+date: "2010-08-16T19:57:36.000Z"
 tags:
   - competition
   - flash
@@ -11,7 +11,7 @@ oldUrl: /48-hours-later/ludum-dare-18-this-weekend
 openAIMikesBlogFileId: file-zfNNWp2bCPaxLp1PG3aEiBQv
 ---
 
-[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif "ScreenHunter_01 Aug. 16 20.48")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif "ScreenHunter_01 Aug. 16 20.48")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif)
 
 Dont think I have blogged about this yet, so im doing so now.
 

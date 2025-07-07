@@ -1,6 +1,6 @@
 ---
 coverImage: /posts/swft-dependency-injection-component-based-game-framework/cover.jpg
-date: '2010-06-13T16:22:34.000Z'
+date: "2010-06-13T16:22:34.000Z"
 tags:
   - community
   - component
@@ -41,7 +41,7 @@ The next thing was to seek advice on whether it could even be done in RL. I deci
 
 So I wrote up my query[ and posted it](https://groups.google.com/group/robotlegs/browse_thread/thread/f7e325c5caf14d93). I added in some diagrams of how I thought it may look:
 
-[![](/wp-content/uploads/2010/06/Relationships-1-300x259.png "Relationships 1")](/wp-content/uploads/2010/06/Relationships-1.png)[![](/wp-content/uploads/2010/06/Example-1-300x161.png "Example 1")](/wp-content/uploads/2010/06/Example-1.png)
+[![](https://www.mikecann.blog/wp-content/uploads/2010/06/Relationships-1-300x259.png "Relationships 1")](https://www.mikecann.blog/wp-content/uploads/2010/06/Relationships-1.png)[![](https://www.mikecann.blog/wp-content/uploads/2010/06/Example-1-300x161.png "Example 1")](https://www.mikecann.blog/wp-content/uploads/2010/06/Example-1.png)
 
 To cut a long story short, after [several months](https://groups.google.com/group/robotlegs/browse_thread/thread/4833ba99cd12b25a) of [posts](https://groups.google.com/group/robotlegs/browse_thread/thread/4d3eb6d8f8dd64bc#) back and forth with many excellent suggestions and contributions I felt it was time that the project migrated to its own home as not spam up the RL list too much. As such [SWft - Game Framework](https://groups.google.com/group/swft-framework) mailing list was born! Its still very new and as such there arent many posts yet but I hope for that to grow as the project progresses.
 
