@@ -5,6 +5,14 @@ const matter = require("gray-matter");
 const postsDirectory = join(process.cwd(), "public/posts");
 
 module.exports = {
+  // Turbopack configuration (optional)
+  turbopack: {
+    // Add any Turbopack-specific configuration here if needed
+    // For example:
+    // moduleIds: 'named',
+    // treeShaking: true,
+  },
+
   async redirects() {
     const redirects = [];
 

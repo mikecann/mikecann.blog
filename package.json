@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "concurrently --names \"next,convex\" --prefix-colors \"cyan,magenta\" \"bun run dev:next\" \"bun run dev:convex\"",
-    "dev:next": "next dev",
+    "dev:next": "next dev --turbopack",
     "dev:convex": "convex dev",
-    "build-and-deploy": "bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && bun run uploadsPostsToConvex && next build",
+    "build": "next build --turbopack",
+    "build-and-deploy": "bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && bun run uploadsPostsToConvex && next build --turbopack",
     "start": "next start",
     "dev:ts": "tsc --noEmit -w",
     "generateRSS": "bun run ./scripts/generateRSS.ts",
