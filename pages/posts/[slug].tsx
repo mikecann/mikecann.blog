@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ensure } from "../../utils/ensure";
 import Image from "next/image";
-import React from "react";
 import { Horizontal, Vertical } from "../../components/utils/gls";
 import { format } from "date-fns";
 import { getPostRootCoverImagePath, getRelativePathForPost } from "../../utils/posts";
@@ -131,37 +130,6 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                 children={html}
                 rehypePlugins={[rehypeRaw]}
                 components={{
-                  p: ({ children, ...props }) => {
-                    // Check if children contains block-level elements
-                    const hasBlockElements = React.Children.toArray(children).some(
-                      (child) =>
-                        React.isValidElement(child) &&
-                        typeof child.type === "string" &&
-                        [
-                          "div",
-                          "img",
-                          "figure",
-                          "blockquote",
-                          "pre",
-                          "table",
-                          "ul",
-                          "ol",
-                          "h1",
-                          "h2",
-                          "h3",
-                          "h4",
-                          "h5",
-                          "h6",
-                        ].includes(child.type),
-                    );
-
-                    // If it contains block elements, render as div instead of p
-                    if (hasBlockElements) {
-                      return <div {...props}>{children}</div>;
-                    }
-
-                    return <p {...props}>{children}</p>;
-                  },
                   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
                     const { src, alt, width, height } = props;
 

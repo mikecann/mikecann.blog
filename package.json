@@ -50,7 +50,7 @@
     "io-ts": "^2.2.22",
     "isomorphic-fetch": "^3.0.0",
     "ldrs": "^1.1.7",
-    "next": "^15.3.2",
+    "next": "^15.3.5",
     "node-fetch": "^3.3.2",
     "openai": "^4.97.0",
     "posthog-js": "^1.240.4",
