@@ -2,6 +2,8 @@ import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
 import { api } from "../_generated/api";
 import schema from "../schema";
+import { EntryId } from "@convex-dev/rag";
+import { v } from "convex/values";
 
 // Mock the environment variable
 const originalEnv = process.env;
@@ -9,13 +11,20 @@ const originalEnv = process.env;
 // Mock the RAG getEntry function
 const mockRagGetEntry = vi.fn();
 
+// Helper function to cast string to EntryId for testing
+const mockEntryId = (id: string): EntryId => id as EntryId;
+
 // Mock the entire dependencies we need
-vi.mock("@convex-dev/rag", () => ({
-  RAG: class {
-    constructor() {}
-    getEntry = mockRagGetEntry;
-  },
-}));
+vi.mock("@convex-dev/rag", async (importOriginal) => {
+  const actual = (await importOriginal()) as any;
+  return {
+    ...actual,
+    RAG: class {
+      constructor() {}
+      getEntry = mockRagGetEntry;
+    },
+  };
+});
 
 vi.mock("@ai-sdk/openai", () => ({
   openai: {
@@ -61,14 +70,18 @@ describe("listPostsThatNeedProcessing", () => {
   test("returns slugs for posts that exist but have no ragEntryId", async () => {
     const t = convexTest(schema);
 
-    // Insert a blog post without ragEntryId
+    // Insert a blog post with a placeholder ragEntryId to simulate legacy posts
     await t.run(async (ctx) => {
       await ctx.db.insert("blogPosts", {
         slug: "existing-post-no-rag",
         title: "Test Post",
         hash: "old-hash",
+        ragEntryId: mockEntryId("placeholder-entry-id"),
       });
     });
+
+    // Mock RAG to return null for this entry (simulating missing RAG entry)
+    mockRagGetEntry.mockResolvedValue(null);
 
     const posts = [{ slug: "existing-post-no-rag", hash: "new-hash" }];
 
@@ -89,7 +102,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "post-with-missing-rag",
         title: "Test Post",
         hash: "hash123",
-        ragEntryId: "non-existent-entry-id",
+        ragEntryId: mockEntryId("non-existent-entry-id"),
       });
     });
 
@@ -113,7 +126,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "post-with-outdated-hash",
         title: "Test Post",
         hash: "old-hash",
-        ragEntryId: "valid-entry-id",
+        ragEntryId: mockEntryId("valid-entry-id"),
       });
     });
 
@@ -140,7 +153,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "up-to-date-post",
         title: "Test Post",
         hash: "current-hash",
-        ragEntryId: "valid-entry-id",
+        ragEntryId: mockEntryId("valid-entry-id"),
       });
     });
 
@@ -180,14 +193,15 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "up-to-date",
         title: "Up to Date Post",
         hash: "current-hash",
-        ragEntryId: "valid-entry-1",
+        ragEntryId: mockEntryId("valid-entry-1"),
       });
 
-      // Post without ragEntryId
+      // Post without ragEntryId (simulated with placeholder)
       await ctx.db.insert("blogPosts", {
         slug: "no-rag-id",
         title: "No RAG ID Post",
         hash: "some-hash",
+        ragEntryId: mockEntryId("placeholder-no-rag-id"),
       });
 
       // Post with outdated hash
@@ -195,7 +209,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "outdated-hash",
         title: "Outdated Post",
         hash: "old-hash",
-        ragEntryId: "valid-entry-2",
+        ragEntryId: mockEntryId("valid-entry-2"),
       });
     });
 
@@ -247,7 +261,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "duplicate-slug",
         title: "Test Post",
         hash: "existing-hash",
-        ragEntryId: "valid-entry-id",
+        ragEntryId: mockEntryId("valid-entry-id"),
       });
     });
 
@@ -306,7 +320,7 @@ describe("listPostsThatNeedProcessing", () => {
         slug: "error-test",
         title: "Test Post",
         hash: "hash123",
-        ragEntryId: "error-entry-id",
+        ragEntryId: mockEntryId("error-entry-id"),
       });
     });
 
@@ -334,18 +348,19 @@ describe("listPostsThatNeedProcessing", () => {
           slug: "concurrent-1",
           title: "Concurrent Post 1",
           hash: "hash1",
-          ragEntryId: "entry-1",
+          ragEntryId: mockEntryId("entry-1"),
         }),
         ctx.db.insert("blogPosts", {
           slug: "concurrent-2",
           title: "Concurrent Post 2",
           hash: "hash2",
+          ragEntryId: mockEntryId("entry-2"),
         }),
         ctx.db.insert("blogPosts", {
           slug: "concurrent-3",
           title: "Concurrent Post 3",
           hash: "hash3",
-          ragEntryId: "entry-3",
+          ragEntryId: mockEntryId("entry-3"),
         }),
       ]);
     });

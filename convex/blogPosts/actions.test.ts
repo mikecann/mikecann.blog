@@ -2,6 +2,8 @@ import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
 import { api } from "../_generated/api";
 import schema from "../schema";
+import { EntryId } from "@convex-dev/rag";
+import { v } from "convex/values";
 
 // Mock the environment variable
 const originalEnv = process.env;
@@ -9,13 +11,20 @@ const originalEnv = process.env;
 // Mock the RAG add function
 const mockRagAdd = vi.fn();
 
+// Helper function to cast string to EntryId for testing
+const mockEntryId = (id: string): EntryId => id as EntryId;
+
 // Mock the dependencies
-vi.mock("@convex-dev/rag", () => ({
-  RAG: class {
-    constructor() {}
-    add = mockRagAdd;
-  },
-}));
+vi.mock("@convex-dev/rag", async (importOriginal) => {
+  const actual = (await importOriginal()) as any;
+  return {
+    ...actual,
+    RAG: class {
+      constructor() {}
+      add = mockRagAdd;
+    },
+  };
+});
 
 vi.mock("@ai-sdk/openai", () => ({
   openai: {
@@ -49,8 +58,8 @@ describe("upsert action", () => {
   test("creates new blog post when none exists", async () => {
     const t = convexTest(schema);
 
-    const mockEntryId = "new-rag-entry-id";
-    mockRagAdd.mockResolvedValue({ entryId: mockEntryId });
+    const mockEntryIdValue = mockEntryId("new-rag-entry-id");
+    mockRagAdd.mockResolvedValue({ entryId: mockEntryIdValue });
 
     // Execute the action
     await t.action(api.blogPosts.actions.upsert, {
@@ -83,15 +92,15 @@ describe("upsert action", () => {
       slug: mockSlug,
       title: mockTitle,
       hash: mockHash,
-      ragEntryId: mockEntryId,
+      ragEntryId: mockEntryIdValue,
     });
   });
 
   test("updates existing blog post when ragEntryId changes", async () => {
     const t = convexTest(schema);
 
-    const oldRagEntryId = "old-rag-entry-id";
-    const newRagEntryId = "new-rag-entry-id";
+    const oldRagEntryId = mockEntryId("old-rag-entry-id");
+    const newRagEntryId = mockEntryId("new-rag-entry-id");
 
     // First, create an existing blog post
     await t.run(async (ctx) => {
@@ -134,7 +143,7 @@ describe("upsert action", () => {
   test("does not update existing blog post when ragEntryId is the same", async () => {
     const t = convexTest(schema);
 
-    const sameRagEntryId = "same-rag-entry-id";
+    const sameRagEntryId = mockEntryId("same-rag-entry-id");
 
     // First, create an existing blog post
     const originalPost = await t.run(async (ctx) => {
@@ -179,7 +188,7 @@ describe("upsert action", () => {
     const t = convexTest(schema);
 
     // Create first blog post
-    const firstEntryId = "first-entry-id";
+    const firstEntryId = mockEntryId("first-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: firstEntryId });
 
     await t.action(api.blogPosts.actions.upsert, {
@@ -191,7 +200,7 @@ describe("upsert action", () => {
     });
 
     // Create second blog post
-    const secondEntryId = "second-entry-id";
+    const secondEntryId = mockEntryId("second-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: secondEntryId });
 
     await t.action(api.blogPosts.actions.upsert, {
@@ -273,7 +282,7 @@ describe("upsert action", () => {
     const specialContent = "Content with special chars: @#$%^&*(){}[]|\\:;\"'<>,.?/~`";
     const specialTitle = "Title with émojis 🚀 and ñ characters";
     const specialSlug = "special-chars-post";
-    const entryId = "special-entry-id";
+    const entryId = mockEntryId("special-entry-id");
 
     mockRagAdd.mockResolvedValue({ entryId });
 
@@ -313,7 +322,7 @@ describe("upsert action", () => {
     const t = convexTest(schema);
 
     const largeContent = "Lorem ipsum ".repeat(1000); // ~11KB content
-    const entryId = "large-content-entry-id";
+    const entryId = mockEntryId("large-content-entry-id");
 
     mockRagAdd.mockResolvedValue({ entryId });
 
@@ -340,7 +349,7 @@ describe("upsert action", () => {
     const t = convexTest(schema);
 
     // Step 1: Create initial blog post
-    const initialEntryId = "initial-entry-id";
+    const initialEntryId = mockEntryId("initial-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: initialEntryId });
 
     await t.action(api.blogPosts.actions.upsert, {
@@ -367,7 +376,7 @@ describe("upsert action", () => {
     });
 
     // Step 2: Update with new content (different ragEntryId)
-    const updatedEntryId = "updated-entry-id";
+    const updatedEntryId = mockEntryId("updated-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: updatedEntryId });
 
     await t.action(api.blogPosts.actions.upsert, {

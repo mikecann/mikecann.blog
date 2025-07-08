@@ -1,3 +1,4 @@
+import { vEntryId } from "@convex-dev/rag";
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
@@ -65,7 +66,7 @@ export const blogPostSchema = v.object({
   slug: v.string(),
   title: v.string(),
   hash: v.string(),
-  ragEntryId: v.optional(v.string()),
+  ragEntryId: vEntryId,
 });
 
 export default defineSchema({

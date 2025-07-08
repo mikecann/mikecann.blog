@@ -21,7 +21,6 @@ import type * as mikebot_internal_mutations from "../mikebot/internal/mutations.
 import type * as mikebot_lib from "../mikebot/lib.js";
 import type * as mikebot_mutations from "../mikebot/mutations.js";
 import type * as mikebot_queries from "../mikebot/queries.js";
-import type * as rag from "../rag.js";
 import type * as users from "../users.js";
 
 import type {
@@ -52,7 +51,6 @@ declare const fullApi: ApiFromModules<{
   "mikebot/lib": typeof mikebot_lib;
   "mikebot/mutations": typeof mikebot_mutations;
   "mikebot/queries": typeof mikebot_queries;
-  rag: typeof rag;
   users: typeof users;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
