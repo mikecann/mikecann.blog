@@ -42,26 +42,3 @@ export const adminAction = customAction(action, {
   },
 });
 
-// Function to clean up content before sending to OpenAI
-export function preprocessContent(content: string): string {
-  let cleanContent = content
-    // Normalize line endings
-    .replace(/\r\n/g, "\n")
-    .replace(/\r/g, "\n")
-    // Remove excessive whitespace
-    .replace(/\n{3,}/g, "\n\n")
-    // Trim
-    .trim();
-
-  // OpenAI embedding models have token limits (8192 for text-embedding-3-small)
-  // Rough estimate: 1 token ≈ 4 characters, so limit to ~30,000 characters to be safe
-  const MAX_CHARS = 30000;
-  if (cleanContent.length > MAX_CHARS) {
-    console.warn(
-      `Content too long (${cleanContent.length} chars), truncating to ${MAX_CHARS} chars`,
-    );
-    cleanContent = cleanContent.substring(0, MAX_CHARS) + "...";
-  }
-
-  return cleanContent;
-}

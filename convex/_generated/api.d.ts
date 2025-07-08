@@ -8,12 +8,12 @@
  * @module
  */
 
-import type * as blogPosts_actions from "../blogPosts/actions.js";
+import type * as blogPosts_admin_actions from "../blogPosts/admin/actions.js";
+import type * as blogPosts_admin_queries from "../blogPosts/admin/queries.js";
 import type * as blogPosts_internal_actions from "../blogPosts/internal/actions.js";
 import type * as blogPosts_internal_mutations from "../blogPosts/internal/mutations.js";
 import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.js";
 import type * as blogPosts_lib from "../blogPosts/lib.js";
-import type * as blogPosts_queries from "../blogPosts/queries.js";
 import type * as functions from "../functions.js";
 import type * as mikebot_constants from "../mikebot/constants.js";
 import type * as mikebot_internal_actions from "../mikebot/internal/actions.js";
@@ -38,12 +38,12 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  "blogPosts/actions": typeof blogPosts_actions;
+  "blogPosts/admin/actions": typeof blogPosts_admin_actions;
+  "blogPosts/admin/queries": typeof blogPosts_admin_queries;
   "blogPosts/internal/actions": typeof blogPosts_internal_actions;
   "blogPosts/internal/mutations": typeof blogPosts_internal_mutations;
   "blogPosts/internal/queries": typeof blogPosts_internal_queries;
   "blogPosts/lib": typeof blogPosts_lib;
-  "blogPosts/queries": typeof blogPosts_queries;
   functions: typeof functions;
   "mikebot/constants": typeof mikebot_constants;
   "mikebot/internal/actions": typeof mikebot_internal_actions;

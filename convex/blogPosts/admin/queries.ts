@@ -1,7 +1,7 @@
 import { v } from "convex/values";
-import { adminQuery, rag } from "./lib";
-import { EntryId } from "../../node_modules/@convex-dev/rag/src/client/index";
-import { isNotNullOrUndefined } from "../../essentials/misc/filter";
+import { adminQuery, rag } from "../lib";
+import { EntryId } from "../../../node_modules/@convex-dev/rag/src/client/index";
+import { isNotNullOrUndefined } from "../../../essentials/misc/filter";
 
 export type SlugId = string;
 

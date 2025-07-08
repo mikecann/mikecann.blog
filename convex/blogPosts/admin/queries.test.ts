@@ -1,9 +1,8 @@
 import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
-import { api } from "../_generated/api";
-import schema from "../schema";
+import { api } from "../../_generated/api";
+import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
-import { v } from "convex/values";
 
 // Mock the environment variable
 const originalEnv = process.env;
@@ -59,7 +58,7 @@ describe("listPostsThatNeedProcessing", () => {
       { slug: "non-existent-post-2", hash: "hash2" },
     ];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -85,7 +84,7 @@ describe("listPostsThatNeedProcessing", () => {
 
     const posts = [{ slug: "existing-post-no-rag", hash: "new-hash" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -110,7 +109,7 @@ describe("listPostsThatNeedProcessing", () => {
 
     const posts = [{ slug: "post-with-missing-rag", hash: "hash123" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -137,7 +136,7 @@ describe("listPostsThatNeedProcessing", () => {
 
     const posts = [{ slug: "post-with-outdated-hash", hash: "new-hash" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -164,7 +163,7 @@ describe("listPostsThatNeedProcessing", () => {
 
     const posts = [{ slug: "up-to-date-post", hash: "current-hash" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -175,7 +174,7 @@ describe("listPostsThatNeedProcessing", () => {
   test("handles empty posts array", async () => {
     const t = convexTest(schema);
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts: [],
     });
@@ -231,7 +230,7 @@ describe("listPostsThatNeedProcessing", () => {
       { slug: "non-existent", hash: "any-hash" },
     ];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -246,7 +245,7 @@ describe("listPostsThatNeedProcessing", () => {
     process.env.BLOG_POST_ADMIN_TOKEN = "correct-token";
 
     await expect(async () => {
-      await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+      await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
         token: "invalid-token",
         posts: [],
       });
@@ -275,7 +274,7 @@ describe("listPostsThatNeedProcessing", () => {
       { slug: "duplicate-slug", hash: "new-hash" }, // Should need processing (different hash)
     ];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -290,7 +289,7 @@ describe("listPostsThatNeedProcessing", () => {
     const specialSlug = "post-with-special-chars-@#$%";
     const posts = [{ slug: specialSlug, hash: "hash123" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -304,7 +303,7 @@ describe("listPostsThatNeedProcessing", () => {
     const longSlug = "a".repeat(100);
     const posts = [{ slug: longSlug, hash: "hash123" }];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -331,7 +330,7 @@ describe("listPostsThatNeedProcessing", () => {
 
     // Should throw the error from RAG
     await expect(async () => {
-      await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+      await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
         token: mockToken,
         posts,
       });
@@ -382,7 +381,7 @@ describe("listPostsThatNeedProcessing", () => {
       { slug: "concurrent-3", hash: "hash3" },
     ];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -398,7 +397,7 @@ describe("listPostsThatNeedProcessing", () => {
       { slug: "valid-slug", hash: "" },
     ];
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });
@@ -415,7 +414,7 @@ describe("listPostsThatNeedProcessing", () => {
       hash: `hash-${i}`,
     }));
 
-    const result = await t.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+    const result = await t.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
       token: mockToken,
       posts,
     });

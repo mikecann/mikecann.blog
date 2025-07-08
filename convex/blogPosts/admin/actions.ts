@@ -1,6 +1,6 @@
 import { v } from "convex/values";
-import { internal } from "../_generated/api";
-import { adminAction, preprocessContent, rag, RAG_NAMESPACE } from "./lib";
+import { internal } from "../../_generated/api";
+import { adminAction, rag, RAG_NAMESPACE } from "../lib";
 
 export const upsert = adminAction({
   args: {
@@ -10,15 +10,12 @@ export const upsert = adminAction({
     hash: v.string(),
   },
   handler: async (ctx, args) => {
-    // Preprocess content before sending to RAG
-    const cleanContent = preprocessContent(args.content);
-
     const { entryId } = await rag.add(ctx, {
-      namespace: RAG_NAMESPACE,
-      text: cleanContent,
-      key: args.slug,
       title: args.title,
+      key: args.slug,
       contentHash: args.hash,
+      text: args.content,
+      namespace: RAG_NAMESPACE,
     });
 
     const post = await ctx.runQuery(internal.blogPosts.internal.queries.findBlogPostBySlug, {

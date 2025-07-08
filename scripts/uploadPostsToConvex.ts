@@ -23,7 +23,7 @@ const client = new ConvexHttpClient(
 );
 
 async function main() {
-  const posts = getAllPublishablePosts(); //..slice(0, 10);
+  const posts = getAllPublishablePosts();
   console.log(`Found ${posts.length} posts...`);
 
   // First, batch check which posts need processing
@@ -33,7 +33,7 @@ async function main() {
     hash: hashContent(post.content),
   }));
 
-  const slugIds = await client.query(api.blogPosts.queries.listPostsThatNeedProcessing, {
+  const slugIds = await client.query(api.blogPosts.admin.queries.listPostsThatNeedProcessing, {
     posts: postChecks,
     token,
   });
@@ -51,11 +51,11 @@ async function main() {
 
   const uploadPromises = postsToProcess.map((post) =>
     limit(async () => {
-      await client.action(api.blogPosts.actions.upsert, {
+      await client.action(api.blogPosts.admin.actions.upsert, {
         slug: post.slug,
         title: post.meta.title,
         hash: hashContent(post.content),
-        content: post.content,
+        content: preprocessContent(post.content),
         token,
       });
 
@@ -66,6 +66,30 @@ async function main() {
   await Promise.all(uploadPromises);
   console.log("Done.");
   process.exit(0);
+}
+
+// Function to clean up content before sending to OpenAI
+function preprocessContent(content: string): string {
+  let cleanContent = content
+    // Normalize line endings
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    // Remove excessive whitespace
+    .replace(/\n{3,}/g, "\n\n")
+    // Trim
+    .trim();
+
+  // OpenAI embedding models have token limits (8192 for text-embedding-3-small)
+  // Rough estimate: 1 token ≈ 4 characters, so limit to ~30,000 characters to be safe
+  const MAX_CHARS = 30000;
+  if (cleanContent.length > MAX_CHARS) {
+    console.warn(
+      `Content too long (${cleanContent.length} chars), truncating to ${MAX_CHARS} chars`,
+    );
+    cleanContent = cleanContent.substring(0, MAX_CHARS) + "...";
+  }
+
+  return cleanContent;
 }
 
 main().catch((e) => {

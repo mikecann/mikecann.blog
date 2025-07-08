@@ -1,7 +1,7 @@
 import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
-import { api } from "../_generated/api";
-import schema from "../schema";
+import { api } from "../../_generated/api";
+import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
 import { v } from "convex/values";
 
@@ -62,7 +62,7 @@ describe("upsert action", () => {
     mockRagAdd.mockResolvedValue({ entryId: mockEntryIdValue });
 
     // Execute the action
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: mockContent,
       slug: mockSlug,
@@ -115,7 +115,7 @@ describe("upsert action", () => {
     mockRagAdd.mockResolvedValue({ entryId: newRagEntryId });
 
     // Execute the action
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: mockContent,
       slug: mockSlug,
@@ -158,7 +158,7 @@ describe("upsert action", () => {
     mockRagAdd.mockResolvedValue({ entryId: sameRagEntryId });
 
     // Execute the action
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: mockContent,
       slug: mockSlug,
@@ -191,7 +191,7 @@ describe("upsert action", () => {
     const firstEntryId = mockEntryId("first-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: firstEntryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: "First post content",
       slug: "first-post",
@@ -203,7 +203,7 @@ describe("upsert action", () => {
     const secondEntryId = mockEntryId("second-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: secondEntryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: "Second post content",
       slug: "second-post",
@@ -242,7 +242,7 @@ describe("upsert action", () => {
     process.env.BLOG_POST_ADMIN_TOKEN = "correct-token";
 
     await expect(async () => {
-      await t.action(api.blogPosts.actions.upsert, {
+      await t.action(api.blogPosts.admin.actions.upsert, {
         token: "invalid-token",
         content: mockContent,
         slug: mockSlug,
@@ -259,7 +259,7 @@ describe("upsert action", () => {
     mockRagAdd.mockRejectedValue(new Error("RAG service unavailable"));
 
     await expect(async () => {
-      await t.action(api.blogPosts.actions.upsert, {
+      await t.action(api.blogPosts.admin.actions.upsert, {
         token: mockToken,
         content: mockContent,
         slug: mockSlug,
@@ -286,7 +286,7 @@ describe("upsert action", () => {
 
     mockRagAdd.mockResolvedValue({ entryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: specialContent,
       slug: specialSlug,
@@ -326,7 +326,7 @@ describe("upsert action", () => {
 
     mockRagAdd.mockResolvedValue({ entryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: largeContent,
       slug: "large-content-post",
@@ -352,7 +352,7 @@ describe("upsert action", () => {
     const initialEntryId = mockEntryId("initial-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: initialEntryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: "Initial content",
       slug: "e2e-test-post",
@@ -379,7 +379,7 @@ describe("upsert action", () => {
     const updatedEntryId = mockEntryId("updated-entry-id");
     mockRagAdd.mockResolvedValue({ entryId: updatedEntryId });
 
-    await t.action(api.blogPosts.actions.upsert, {
+    await t.action(api.blogPosts.admin.actions.upsert, {
       token: mockToken,
       content: "Updated content",
       slug: "e2e-test-post",
