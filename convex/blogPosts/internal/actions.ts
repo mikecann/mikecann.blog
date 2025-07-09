@@ -12,6 +12,8 @@ export const ragSearchBlogPosts = internalAction({
       namespace: RAG_NAMESPACE,
       query: args.query,
       vectorScoreThreshold: 0.3,
+      chunkContext: { before: 2, after: 1 },
+      limit: 5,
     });
 
     const ragSlugs = ragResults.results.map((r) => ({

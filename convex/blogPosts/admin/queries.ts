@@ -24,8 +24,6 @@ export const listPostsThatNeedProcessing = adminQuery({
 
         if (!existing) return slug;
 
-        if (!existing.ragEntryId) return slug;
-
         const entry = await rag.getEntry(ctx, {
           entryId: existing.ragEntryId as EntryId,
         });
