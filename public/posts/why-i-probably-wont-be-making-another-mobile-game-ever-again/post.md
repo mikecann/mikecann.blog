@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/why-i-probably-wont-be-making-another-mobile-game-ever-again/cover.jpg
 date: '2016-04-15T05:04:41.000Z'
 tags: []
 title: Why I probably won't be making another mobile game ever again
 oldUrl: /misc/why-i-probably-wont-be-making-another-mobile-game-ever-again
-openAIMikesBlogFileId: file-bHYKrfgNNvPfcIon4Ycpdjro
 ---
 
 Exactly one month ago [I wrote about](https://www.mikecann.blog/myprojects/credit-redeemer/introducing-my-new-android-app-credit-redeemer/) a new app I had developed for Android called Credit Redeemer. Thanks to Google and my naivete this simple one week project has dealt a crushing blow to my indie game development career.

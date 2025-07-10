@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-11-09T11:22:10.000Z'
 tags: []
 title: Coder Tidbit 01
 oldUrl: /misc/coder-tidbit-01
-openAIMikesBlogFileId: file-LsCBqvoSc1VpA4D2mprU2517
 ---
 
 Keep coming across things like this at work that make me stop and think for a while so i thought they would be interesting to post up here for others to think about too.

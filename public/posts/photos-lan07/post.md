@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-07-17T09:20:48.000Z'
 tags: []
 title: Photos - LAN07
 oldUrl: /photos-personal/photos-lan07
-openAIMikesBlogFileId: file-0XLYUms3g8GN2rWNoXrlSApZ
 ---
 
 Just got back from this years LAN party with the lads in Stourbridge. Awsome party tho strangely not much gameing went on :P

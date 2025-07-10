@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-pre-release-10/cover.jpg
 date: '2015-07-12T07:59:34.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - mr nibbles forever
 title: Mr Nibbles Forever - Pre Release 10
 oldUrl: /games/mr-nibbles-forever-pre-release-10
-openAIMikesBlogFileId: file-XV1HDbaZEqPw4z6nLY4cfZkp
 ---
 
 Its been almost exactly a week since the last developmental release of Mr Nibbles Forever. According to [the plan](https://www.mikecann.blog/myprojects/mr-nibbles-forever-getting-it-done/) this week should have been about implementing the landing page and gathering feedback from people, as I managed to get the landing page sorted in the first week I decided to spend the time developing the game instead.

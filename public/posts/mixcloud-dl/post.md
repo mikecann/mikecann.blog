@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-09-16T14:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - tool
 title: Mixcloud-dl
 oldUrl: /misc/mixcloud-dl
-openAIMikesBlogFileId: file-1OuPP46A52toRSN8jYjAhSzK
 ---
 
 I love the mix-streaming service Mixcloud but its unfriendly user-interface was really starting to bug me so I whipped up this little tool to help.

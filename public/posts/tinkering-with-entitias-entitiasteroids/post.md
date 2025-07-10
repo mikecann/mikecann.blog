@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/tinkering-with-entitias-entitiasteroids/cover.jpg
 date: '2015-11-09T01:50:07.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - unity
 title: Tinkering With Entitias - Entitiasteroids
 oldUrl: /entitiasteroids/tinkering-with-entitias-entitiasteroids
-openAIMikesBlogFileId: file-WYMFn9xokRpElNvH0GRQBqoY
 ---
 
 **EDIT: Check the comments for an excellent reply from Simon, creator of Entitias.**

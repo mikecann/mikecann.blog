@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-12-27T14:51:40.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - react hooks
 title: Tinkering With React Hooks and Chrome Extensions
 oldUrl: /programming/tinkering-with-react-hooks-and-chrome-extensions
-openAIMikesBlogFileId: file-Um6EJnOFP4V7etKdAKpb3VRL
 ---
 
 I spent a few hours tinkering with the new (alpha release) version of React which includes the new React Hooks feature. I wanted to experiment with it in a semi-realistic environment (not CodeSandbox). I have built a few chrome extensions in the past and I knew the challenges well so I thought it would be a good scenario to challenge React Hooks and see what it can do.

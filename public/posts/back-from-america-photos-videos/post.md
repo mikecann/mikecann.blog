@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-08-21T20:43:53.000Z'
 tags: []
 title: Back From America - Photos + Videos
 oldUrl: /photos-personal/back-from-america-photos-videos
-openAIMikesBlogFileId: file-MYW5SVEYrAj3l0wFOcHXDah8
 ---
 
 Hello All!

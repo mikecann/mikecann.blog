@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-01-05T20:08:28.000Z'
 tags: []
 title: XNALiquids 01
 oldUrl: /c/xnaliquids-01
-openAIMikesBlogFileId: file-dSVqOOVBkhOPiZ7se3x8ppjZ
 ---
 
 Well after seeing what [Polluted Planet](https://www.mikecann.blog/?p=226) did with large numbers of interactive particles in java, it got me interested.

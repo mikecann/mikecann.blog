@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2017-04-01T00:18:00.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - travel
 title: Campin Oz 2017 - Kalbarri
 oldUrl: /above-under/campin-oz-2017-kalbarri
-openAIMikesBlogFileId: file-G4RV4yzIqnr268TAVmawvwBf
 ---
 
 **This post was copied from my site [AboveUnder.com](https://aboveunder.com) a site dedicated to my travel drone photography.**

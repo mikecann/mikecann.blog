@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-03-10T21:25:53.000Z'
 tags: []
 title: Some picassa updates
 oldUrl: /photos-personal/some-picassa-updates
-openAIMikesBlogFileId: file-Tn2HTtQK7i2PRZk3UcS4hWRN
 ---
 
 Just added a few albums to picassa. Highlights include:

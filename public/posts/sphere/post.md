@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:59:43.000Z'
 tags: []
 title: sphere
 oldUrl: /art/sphere
-openAIMikesBlogFileId: file-bTfIZlsdzlYP5XGMXXiUXOxB
 ---
 
 > After watching the film "shpere" i decided to try and create an image simmilar to the sphere in the film.. however mine has some modifications see sphere-two for what i think is a better version

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-09-12T20:48:14.000Z'
 tags: []
 title: I cant stop playing with particles..
 oldUrl: /c/i-cant-stop-playing-with-particles
-openAIMikesBlogFileId: file-cDhSPnhT2qG1mOyHRPoW7atB
 ---
 
 <div>Well I have been at it again, tweaking and altering the particles in LieroXNA. You can see a video of my results below.</div>

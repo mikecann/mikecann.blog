@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-02-26T17:10:56.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - music
 title: Artificial - Second Life
 oldUrl: /audio/artificial-second-life
-openAIMikesBlogFileId: file-wTqUo67CrVNLVL7vqLr5mJgU
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/02/header.png "header")](https://www.mikecann.blog/wp-content/uploads/2012/02/header.png)

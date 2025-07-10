@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-05-20T23:36:29.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - website
 title: Artificial Games Redecorated
 oldUrl: /websites/artificial-games-redecorated
-openAIMikesBlogFileId: file-EohtXbcP2nzjfzYe9WN9s6KP
 ---
 
 [![agscreen01](https://www.mikecann.blog/wp-content/uploads/2009/05/agscreen01.png "agscreen01")](https://www.artificialgames.co.uk)

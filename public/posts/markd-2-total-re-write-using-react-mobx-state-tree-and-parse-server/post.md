@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2017-11-04T15:51:42.000Z'
 tags:
@@ -13,7 +13,6 @@ tags:
   - markd
 title: 'Markd 2 - Total Re-Write using React, Mobx-State-Tree and Parse-Server'
 oldUrl: /markd/markd-2-total-re-write-using-react-mobx-state-tree-and-parse-server
-openAIMikesBlogFileId: file-6k64S37Gcw0Z77U6DNTtSH9T
 ---
 
 I last wrote about Markd [back in September of last year](/posts/portfolio/projects/introducing-markd-pinterest-for-people/) so I think its about time I gave you an update on our latest progress on the project.
@@ -182,7 +181,7 @@ One solution that has evolved over the yeas is [lerna](https://lernajs.io/). Ler
 
 ![](./lerna-structure.png)
 
-Lerna then manages the dependencies between the packages by using symlinks (`npm link`). This makes me shudder every time. I cant believe this is 2017 and we are using symlinks for dependency management 😢
+Lerna then manages the dependencies between the packages by using symlinks (`npm link`). This makes me shudder every time. I cant believe this is 2017 and we are using symlinks for dependency management ðŸ˜¢
 
 I had issues when using Lerna. Libraries were getting included twice in my build and other various issues. In the end I ended up using the very new [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/). Yarn workspaces attempts to formalize the concepts in Lerna by baking them into the dependency management tool itself.
 

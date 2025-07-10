@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-07-23T20:57:14.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - programming
 title: 3 Weeks of Progress on a Mobile Game
 oldUrl: /games/3-weeks-of-progress-on-a-mobile-game
-openAIMikesBlogFileId: file-27Jsyx3nfnDhKCyGzW4YlzXX
 ---
 
 <object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/Main7.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="433" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main7.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>

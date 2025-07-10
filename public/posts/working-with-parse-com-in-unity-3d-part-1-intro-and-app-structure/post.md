@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: >-
   /posts/working-with-parse-com-in-unity-3d-part-1-intro-and-app-structure/cover.jpg
 date: '2014-11-11T01:24:26.000Z'
@@ -7,7 +7,6 @@ tags:
   - unity
 title: Working with Parse.com in Unity 3D - Part 1 - Intro and App Structure
 oldUrl: /programming/working-with-parse-com-in-unity-3d-part-1-intro-and-app-structure
-openAIMikesBlogFileId: file-CI9Tx2Rg3PCAEt9xnJtuSKg3
 ---
 
 > This is part of a three-post series on working with Parse.com in Unity. For more info please see the other posts in the series:

@@ -1,16 +1,15 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2025-02-19T07:31:40.000Z'
 tags:
   - ai
   - thought
 title: This Is How We Create Skynet
-openAIMikesBlogFileId: vsfb_548255639f8a4230ad3ec6c980ac8f60
 ---
 
 This is a bit of a "what-if" post that I've been pondering for a while. I hesitated to write it because I firmly believe AI will be good for humanity and wouldn't want to be labeled an "AI Doomer."
 
-In the end, I decided to go for it—not because I think it will actually happen, but because it's an interesting philosophical thought that *hopefully* will stay in the realm of my beloved science fiction books rather than become reality.
+In the end, I decided to go for itâ€”not because I think it will actually happen, but because it's an interesting philosophical thought that *hopefully* will stay in the realm of my beloved science fiction books rather than become reality.
 
 # Distributed Compute
 
@@ -24,11 +23,11 @@ Blockchains are inherently designed to be distributed, meaning there's no single
 
 The Bitcoin network, for example, [has 21,189 nodes](https://bitnodes.io/) (as of writing). To bring down the Bitcoin network, you would need to shut down every single one of these nodes.
 
-The Bitcoin network, however, is severely limited in its computing power—you couldn't run an LLM on it since it's not designed for that. Running AI requires GPUs or specialized hardware inference chips.
+The Bitcoin network, however, is severely limited in its computing powerâ€”you couldn't run an LLM on it since it's not designed for that. Running AI requires GPUs or specialized hardware inference chips.
 
 So that settles it, right? It's not possible, and we can all sleep soundly tonight?
 
-… ye… no…
+â€¦ yeâ€¦ noâ€¦
 
 A cursory google search turns up these companies that all offer decentralized GPU compute:
 
@@ -60,7 +59,7 @@ Consider if one of the AI's tools was the ability to read and modify its own sou
 
 Self-modifying AI is crucial to my point about a future Skynet because static systems will always have vulnerabilities. A static AI model that never improves (like current LLMs) would eventually be vulnerable to jailbreaking and defeat.
 
-Currently, self-improving AI through agent behavior isn't possible. Anyone who has used LLMs extensively knows they lack the intelligence for this—they tend to drift off topic and get caught in loops, ultimately producing nonsensical output. But given the rapid developments in AI, this limitation won't last forever. Eventually, some well-meaning researcher will solve this puzzle.
+Currently, self-improving AI through agent behavior isn't possible. Anyone who has used LLMs extensively knows they lack the intelligence for thisâ€”they tend to drift off topic and get caught in loops, ultimately producing nonsensical output. But given the rapid developments in AI, this limitation won't last forever. Eventually, some well-meaning researcher will solve this puzzle.
 
 # Monetization
 

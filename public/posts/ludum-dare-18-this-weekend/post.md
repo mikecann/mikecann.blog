@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-08-16T19:57:36.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - ludum
 title: Ludum Dare 18 this Weekend!
 oldUrl: /48-hours-later/ludum-dare-18-this-weekend
-openAIMikesBlogFileId: file-zfNNWp2bCPaxLp1PG3aEiBQv
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif "ScreenHunter_01 Aug. 16 20.48")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif)
@@ -33,4 +32,4 @@ Rules are as follows:
     </div>
     The themes for this edition of the compo are currently being voted on [here](https://www.ludumdare.com/compo/2010/08/15/ludum-dare-18-theme-voting/).
 
-I doubt I will be able to come up with much in the 48 hour limit, but im hoping to get at least something remotely playable!
+I doubt I willÂ be ableÂ to come up with much in the 48 hour limit, but im hoping to getÂ at leastÂ something remotely playable!

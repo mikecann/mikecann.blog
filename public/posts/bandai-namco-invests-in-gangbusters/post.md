@@ -1,12 +1,11 @@
----
+﻿---
 coverImage: ./header.jpg
-date: '2022-10-15T07:31:40.000Z'
+date: "2022-10-15T07:31:40.000Z"
 tags:
   - gangbusters
   - business
   - investment
 title: Bandai Namco Invests in Gangbusters
-openAIMikesBlogFileId: file-VM8KqZ0uNVai9uaGmudp3prV
 ---
 
 Im super excited to announce that [Gangbusters](https://www.gangbusters.io/) (the company that I am a co-founder and CTO of) has been joined on its journey by the gaming powerhouse [Bandai Namco](https://021fund.bn-ent.net/en/news/)!

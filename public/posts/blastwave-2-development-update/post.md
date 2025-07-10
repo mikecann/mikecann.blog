@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-06-26T16:04:17.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - projects
 title: BlastWave 2 Development Update
 oldUrl: /actionscript/blastwave-2-development-update
-openAIMikesBlogFileId: file-Ok0a4aALsTRZulHlIuMWtKtF
 ---
 
 We are still working on [BlastWave 2](https://www.mikecann.blog/?p=513). Over the last 4 days or so we have progressed quite far:

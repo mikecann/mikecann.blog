@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-10-17T16:28:27.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - update
 title: Post To Tumblr - v0.2
 oldUrl: /post-to-tumbr/post-to-tumblr-v0-2
-openAIMikesBlogFileId: file-7LZOu6ETKNIhvk92u5kj6QuX
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0011.png "Shot_001")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0011.png)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-07-15T21:52:24.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - photos
 title: Only In America...
 oldUrl: /photos-personal/only-in-america
-openAIMikesBlogFileId: file-QrbzZKUr2Ya1EcXpCPLSMitD
 ---
 
 While over in [California](/posts/back-from-outer-space/) this month we saw some rather interesting things. Thought I would share them.

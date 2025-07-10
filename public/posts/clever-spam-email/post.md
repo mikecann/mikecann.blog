@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-04-17T18:41:57.000Z"
 tags:
@@ -11,7 +11,6 @@ tags:
   - virus
 title: Clever Spam Email..
 oldUrl: /misc/clever-spam-email
-openAIMikesBlogFileId: file-qyib68JJ6eHbm435uMp1qxAx
 ---
 
 Its not often that spam gets through my gmail spam filters but this one did, and its quite ingenious:

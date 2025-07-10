@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-08-01T12:44:58.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - xna
 title: LieroXNA - Digging up the past..
 oldUrl: /lieroxna/lieroxna-digging-up-the-past
-openAIMikesBlogFileId: file-fD51SGAQtbff8ZNKfVayyxi6
 ---
 
 I received a very pleasant email yesterday from a fine chap Michael Lindholm. He was enquiring about my old project [LieroXNA ](https://www.mikecann.blog/category/lieroxna/)and whether I was still working on it. As it sound like some people are still interested in the project Ill copy / pase the email for the record here:

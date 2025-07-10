@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-08-29T14:59:23.000Z'
 tags: []
 title: '1,000,000 Views!!'
 oldUrl: /misc/1000000-views
-openAIMikesBlogFileId: file-DGh6fJXH8QbASndYM3P34JWN
 ---
 
 Normally when i post a big number like that its followed by the word "particles" but surprisingly this time it followed by the word "views". Why? Well i have (probably a few days ago now) broken my 1 million plays cherry on 4 flash games.<!-- more -->

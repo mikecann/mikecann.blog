@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-05-28T13:35:13.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - projects
 title: "The Next One: Blast Wave 2"
 oldUrl: /blastwave-lost-at-sea/the-next-one-blast-wave-2
-openAIMikesBlogFileId: file-ZocLnSjQdD1MGApIF38L0qdy
 ---
 
 Well we have already started development on what will be the next game. [Oliver](https://www.olip.co.uk) and I have decided to give one of my old titles [Blast Wave](https://www.artificialgames.co.uk/?p=96) a bit of a spruce up. We felt that the game had a good solid style with unique elements, the only thing that let it down was its poor graphics / user interface. So as this time around I have an excellent artist we think it can be given the breath of life it deserves.

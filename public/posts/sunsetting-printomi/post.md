@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-05-12T16:40:42.000Z"
 tags: []
 title: Sunsetting Printomi
 oldUrl: /printomi/sunsetting-printomi
-openAIMikesBlogFileId: file-mogjlvEIgNkJJVu9tobEaAcK
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/05/02.png "02")](https://www.mikecann.blog/wp-content/uploads/2012/05/02.png)

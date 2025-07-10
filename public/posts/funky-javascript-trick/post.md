@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-05-20T11:44:15.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - programming
 title: Funky Javascript Trick
 oldUrl: /programming/funky-javascript-trick
-openAIMikesBlogFileId: file-JJu7mbdlkqP6bMMSZOmysSBa
 ---
 
 ![img01](https://www.mikecann.blog/wp-content/uploads/2009/05/img01.png "img01")

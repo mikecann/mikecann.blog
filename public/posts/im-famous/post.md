@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-09-24T11:07:56.000Z'
 tags: []
 title: Im Famous!
 oldUrl: /misc/im-famous
-openAIMikesBlogFileId: file-IOrAPBVmUgUddMcS6FoJPYi8
 ---
 
 ... well im on the front page of the gamejacket homepage, im not exactly A-list now but its better than nothing ;)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-05-19T07:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - convex
   - tinkering
 title: 'Tinkering With AI App Generators - LazyAI, Pythagora.ai'
-openAIMikesBlogFileId: file-lV6fAj1gU5fDjEc3pcj7YENp
 ---
 
 As is [rapidly becoming a trend](https://mikecann.blog/posts/tinkering-with-spacetime-db) in my tinkering adventures, today's post chronicles a bit of a failed adventure. But that's okay, it's always good to explore and learn, particularly in the rapidly evolving field of AI.

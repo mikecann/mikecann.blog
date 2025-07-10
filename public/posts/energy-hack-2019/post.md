@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-11-19T13:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - perth
 title: Energy Hack 2019
 oldUrl: /personal/energy-hack-2019
-openAIMikesBlogFileId: file-z2WYgoGeQe5J9F1ApBD2wOv0
 ---
 
 Just a quick post on my recent attendance of the one-day hackathon "Energy Hack".

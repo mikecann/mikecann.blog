@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-06-18T12:23:33.000Z"
 tags:
@@ -11,12 +11,11 @@ tags:
   - sea lions
 title: The Trip 2013 - LA to Mazatlan
 oldUrl: /2013-trip/the-trip-2013-la-to-mazatlan
-openAIMikesBlogFileId: file-fZ3PQHRu8lirYx1Ks00HaPel
 ---
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/06/screenshot_02.png)
 
-**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 – LA to Mazatlan](https://www.facebook.com/media/set/?set=a.10151708298921031.1073741835.593661030&type=1). Each picture can be clicked to see a larger version and comment / like**
+**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 â€“ LA to Mazatlan](https://www.facebook.com/media/set/?set=a.10151708298921031.1073741835.593661030&type=1). Each picture can be clicked to see a larger version and comment / like**
 
 Its been a while since my last post, the past three weeks spent travelling across Mexico have been an intense non-stop tour of northern and western Mexico. The small amount of downtime we have been afforded has usually been spent catching up on much needed sleep.
 
@@ -40,7 +39,7 @@ Our first night was in a town an hour or two south of Tijuana called Ensenada. T
 
 [![photo-6](https://www.mikecann.blog/wp-content/uploads/2013/06/photo-6.jpg)](https://www.facebook.com/photo.php?fbid=10151708309516031&set=a.10151708298921031.1073741835.593661030&type=3&theater)
 
-That first night we revealed some tension by going for a nice meal, sharing a beer or two and watching the Mexicans celebrate Mexico City América's victory in the Mexican football cup.
+That first night we revealed some tension by going for a nice meal, sharing a beer or two and watching the Mexicans celebrate Mexico City AmÃ©rica's victory in the Mexican football cup.
 
 The next day was spent in a town called Guerro Negro, south of Ensanada. There some of us took a trip out to a salt farm in the desert. This place was pretty other-worldly:
 

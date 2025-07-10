@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/govhack-2016-colourful-past/cover.jpg
 date: '2016-08-01T07:22:09.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - machine learning
 title: Govhack 2016 - Colourful Past
 oldUrl: /colourful-past/govhack-2016-colourful-past
-openAIMikesBlogFileId: file-wAbJq7SF6BZwJWGPpsuKKer8
 ---
 
 Wow, I cant believe its been one whole year since [the last Govhack](https://www.mikecann.blog/portfolio/projects/govhack-2015-should-i-drive/), the hackathon where groups of people use government data to hack together a project over the course of a weekend.

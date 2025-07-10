@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2006-08-14T12:24:40.000Z"
 tags: []
 title: Polynate
 oldUrl: /art/polynate
-openAIMikesBlogFileId: file-0GprY8Tuh3Psbp6UHYB6uDae
 ---
 
 ![](https://www.mikecann.blog/wp-content/uploads/Image/polynate-thumb.png)

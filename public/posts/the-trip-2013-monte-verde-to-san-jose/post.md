@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-08-05T13:36:29.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - water
 title: The Trip 2013 - Monte Verde to San Jose
 oldUrl: /2013-trip/the-trip-2013-monte-verde-to-san-jose
-openAIMikesBlogFileId: file-11y4mc8FHk8ikwhG0K8cWxRK
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - Monte Verde to San Jose](https://www.facebook.com/media/set/?set=a.10151802457071031.1073741842.593661030&type=1&l=36f0974334). Each picture can be clicked to see a larger version and comment / like.**

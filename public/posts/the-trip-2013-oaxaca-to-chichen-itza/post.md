@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-07-06T23:48:10.000Z"
 tags:
@@ -13,7 +13,6 @@ tags:
   - water
 title: The Trip 2013 - Oaxaca to Chichen Itza
 oldUrl: /2013-trip/the-trip-2013-oaxaca-to-chichen-itza
-openAIMikesBlogFileId: file-UB3NOahtL4ES2dbzei70F2bI
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/07/screenshot_01.png)
@@ -60,7 +59,7 @@ Once it gets nuked on the bbq and served with jalepenos salsa and tortillas howe
 
 [![photo-24](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-24.jpg)](https://www.facebook.com/photo.php?fbid=10151733433091031&set=a.10151733427046031.1073741837.593661030&type=3&theater)
 
-Next up was a small city called San Cristóbal de las Casas
+Next up was a small city called San CristÃ³bal de las Casas
 
 [![photo-50](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-50.jpg)](https://www.facebook.com/photo.php?fbid=10151733436751031&set=a.10151733427046031.1073741837.593661030&type=3&theater)
 

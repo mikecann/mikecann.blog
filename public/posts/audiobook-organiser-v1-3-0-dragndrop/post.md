@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-01-12T00:07:04.000Z"
 tags:
@@ -12,7 +12,6 @@ tags:
   - utility
 title: AudioBook Organiser v1.3.0 - Drag'n'Drop
 oldUrl: /actionscript/audiobook-organiser-v1-3-0-dragndrop
-openAIMikesBlogFileId: file-qb3Tew7CVC4FLshebXvUMzg2
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg "ScreenHunter_04-Jan.-11-22.36")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg)
@@ -38,6 +37,6 @@ NativeDragManager.doDrag(null,cp);
 <div>
 
 [airbadge]Audio Book Orgainser,https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser.air,1,https://www.mikecann.blog/flash/AudioBookOrganiser/badgeImg.jpg[/airbadge]
-Source: [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v130_source.zip](https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v130_source.zip)
+Source:Â [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v130_source.zip](https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v130_source.zip)
 
 </div>

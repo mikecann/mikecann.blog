@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-02-20T16:04:06.000Z'
 tags: []
 title: '#tweetcoding icyslicy'
 oldUrl: /actionscript/tweetcoding-icyslicy
-openAIMikesBlogFileId: file-GWlutqmQXXOtbxG0QPLVkZjL
 ---
 
 This is another entry for tweetcoding comp, this time i have been ultra-cheeky ;)

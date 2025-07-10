@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-02-08T21:42:56.000Z"
 tags:
@@ -12,14 +12,13 @@ tags:
   - flex
 title: "1046: Type was not found or was not a compile-time constant"
 oldUrl: /actionscript/1046-type-was-not-found-or-was-not-a-compile-time-constant
-openAIMikesBlogFileId: file-17HGwCIr15H6eUhuqBGoJgYB
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/02/001.jpg "001")](https://www.mikecann.blog/wp-content/uploads/2011/02/001.jpg)
 
-Came across this little oddity the other day. Took me ages to work out what was going on, so thought I would share in case anyone else ran into the same issue.<!-- more -->
+CameÂ acrossÂ this little oddity the other day. Took me ages to work out what was going on, so thought I would shareÂ in caseÂ anyone else ran into the same issue.<!-- more -->
 
-One day, for a reason I couldn't fathom, my project stopped compiling. I kept getting these odd "1046: Type was not found or was not a compile-time constant" errors all over the place. Not only that, when I tried to include the class in question either via auto-complete (control &amp; space) or via manual import the error persisted.
+One day, for a reason IÂ couldn'tÂ fathom, my project stopped compiling. I kept getting these odd "1046: Type was not found or was not a compile-time constant" errors all over the place. Not only that, when I tried to include the class in question either via auto-complete (control &amp; space) or via manual import the error persisted.
 
 To cut a long story short it seems that if you try to new a member property that is of type Class from another class and the constructor takes in at least one parameter the error will occur.
 

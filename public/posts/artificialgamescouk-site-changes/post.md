@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2008-10-14T23:14:16.000Z"
 tags: []
 title: ArtificialGames.co.uk & Site Changes
 oldUrl: /misc/artificialgamescouk-site-changes
-openAIMikesBlogFileId: file-PmvjrVk1Y6iUPvWKKQhzTGPH
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2008/10/artificialgamesscreeny.png "artificialgamesscreeny")](www.artificialgames.co.uk)

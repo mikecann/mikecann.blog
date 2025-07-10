@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/fixing-unitys-internal-compiler-error/cover.jpg
 date: '2014-05-13T05:25:14.000Z'
 tags: []
 title: Fixing Unity's Internal Compiler Error
 oldUrl: /c/fixing-unitys-internal-compiler-error
-openAIMikesBlogFileId: file-DUq2N8OPx481pffCULBcCCVQ
 ---
 
 As mentioned in my [last post](https://www.mikecann.blog/personal-project/parse-com-type-safe-extensions-for-unity/), I am working on a Unity game that takes advantage of [Parse](https://parse.com) for Asyncronous multiplayer. Well one nice feature of parse is that it uses Tasks to handle its asynchronicity.

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-10-19T20:21:25.000Z'
 tags: []
 title: Cheers Pete!
 oldUrl: /misc/cheers-pete
-openAIMikesBlogFileId: file-dvsSaY54kVDwWXMKO7HoX8tg
 ---
 
 ![](https://www.mikecann.blog/Images/Others/cheerspete.png)

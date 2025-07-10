@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./ml-header.jpg
 date: '2017-11-05T14:51:40.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - agdlml
 title: A Game Developer Learns Machine Learning - Getting Started
 oldUrl: /machine-learning/a-game-developer-learns-machine-learning-getting-started
-openAIMikesBlogFileId: file-vOjMARk10Dxnd9V5Khdzyl20
 ---
 
 I mentioned [in my last post](/machine-learning/a-game-developer-learns-machine-learning-intent/) that the intent is to write an AI to play [Mr Nibbles Forever](http://epicshrimp.com/app/mrnibblesforever/) better an any human. Before we can get anywhere near that goal however we need to get the very basics working first.
@@ -94,7 +93,7 @@ Folling the "Training with PPO" section of the docs we open "TensorBoard" which 
 
 Im not really sure what all those stats mean but thats okay at this stage, we are just tinkering!
 
-The main thing is my model is busy training itself as evidenced by the changing graphs and my pegged CPU 😜
+The main thing is my model is busy training itself as evidenced by the changing graphs and my pegged CPU ðŸ˜œ
 
 ![](./pegged-cpu.png)
 

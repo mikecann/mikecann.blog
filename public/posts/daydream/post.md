@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:36:54.000Z'
 tags: []
 title: daydream
 oldUrl: /art/daydream
-openAIMikesBlogFileId: file-yPbMq3nxuXJlQ3vGpgqXmfbW
 ---
 
 > Daydream was inspired by my good friend Joy Scott and that is her in the picture

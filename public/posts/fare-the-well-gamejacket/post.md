@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-06-18T16:18:04.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - personal
 title: Fare-The-Well GameJacket!
 oldUrl: /photos-personal/fare-the-well-gamejacket
-openAIMikesBlogFileId: file-60jr1gQziGYtzPVlH7EtjFxx
 ---
 
 ![sorrygj](https://www.mikecann.blog/wp-content/uploads/2009/06/sorrygj.gif "sorrygj")

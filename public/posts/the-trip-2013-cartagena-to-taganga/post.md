@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-09-11T13:38:27.000Z"
 tags: []
 title: The Trip 2013 - Cartagena to Taganga
 oldUrl: /uncategorized/the-trip-2013-cartagena-to-taganga
-openAIMikesBlogFileId: file-8tOyj8NZ6QMhL3WsTYNwdslg
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - Cartagena to Taganga](https://www.facebook.com/media/set/?set=a.10151882459876031.1073741846.593661030&type=1&l=ac7f9a9f1a). Each picture can be clicked to see a larger version and comment / like.**

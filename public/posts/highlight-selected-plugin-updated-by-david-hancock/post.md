@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/highlight-selected-plugin-updated-by-david-hancock/cover.jpg
 date: '2009-05-04T15:24:57.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - projects
 title: 'Highlight Selected Plugin, updated by David Hancock'
 oldUrl: /c/highlight-selected-plugin-updated-by-david-hancock
-openAIMikesBlogFileId: file-dI0fyVBcycTPF9Ajh3mRdk9b
 ---
 
 This sort of things brings a big smile to my face; I got an excellent email yesterday from a chap named [Dave Hancock](https://gonegothic.com/) asking my permission to post an update he had made to my [Highlight Selected](https://www.mikecann.blog/?p=403) plugin.

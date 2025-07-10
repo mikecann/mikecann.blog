@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-06-16T10:32:40.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - linux
 title: Mikes Mirror - Hardware
 oldUrl: /projects/mikes-mirror-hardware
-openAIMikesBlogFileId: file-nBD6aOhKpM86r06m51Bt4NeV
 ---
 
 So I decided to build a Smart Mirror as a hobby project. I knew that I could handle the software side of thing but building a frame and wiring the electronics up was going to be a whole new adventure.

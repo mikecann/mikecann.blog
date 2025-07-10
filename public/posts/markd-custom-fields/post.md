@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-05-30T07:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - typescript
 title: Markd - Custom Fields
 oldUrl: /markd/markd-custom-fields
-openAIMikesBlogFileId: file-JBcHiSqilpvH2mLQtW4dlL2M
 ---
 
 Now we have our [new designs](/markd/markd-v3) in place for [Markd](https://markd.co) things can start moving again on new features. This has been an oft-requested one, Custom Fields!

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-10-13T14:08:59.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - video
 title: 10/GUI
 oldUrl: /fun-amp-videos/10gui
-openAIMikesBlogFileId: file-Vr9w7nZ58tjlxVsKEYKzzsWh
 ---
 
 This sort of thing really gets my juices flowing. I want it now!<!-- more -->

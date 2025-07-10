@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/post-to-tumblr-v6-26-new-donation-options/cover.jpg
 date: '2016-09-26T04:02:05.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - update
 title: Post To Tumblr v6.26 - New Donation Options
 oldUrl: /post-to-tumbr/post-to-tumblr-v6-26-new-donation-options
-openAIMikesBlogFileId: file-oDZCgyXBdWk3zLIoGFA5Bsyr
 ---
 
 Its been a while since I have blogged about [Post To Tumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah), my popular Chrome Extension for Tumblr. I have been quiet but certainly not inactive.

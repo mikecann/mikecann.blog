@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-04-11T14:57:49.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - video
 title: Moved.. Again!
 oldUrl: /photos-personal/moved-again
-openAIMikesBlogFileId: file-XeBAdRGfKUj5UvjhkUL0E8l0
 ---
 
 Well as I have announced (rather pointlessly) every time I moved in the past, I thought I would continue the tradition by announcing that I have moved again. This time its back again to my old room in one of my previous flats, The Grand Mancehster.

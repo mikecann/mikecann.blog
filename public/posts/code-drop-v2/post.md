@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/code-drop-v2/cover.jpg
 date: '2003-12-27T21:54:34.000Z'
 tags: []
 title: Code Drop V2
 oldUrl: /darkbasic/code-drop-v2
-openAIMikesBlogFileId: file-hOpL5mu8TUYVJvbb50qEIK6h
 ---
 
 CodeDrop came about mainly by accident. I wanted to see if i could create a 2D particle explosion effect. After i discovered how easy this was to do i decided to create a whole game around it!

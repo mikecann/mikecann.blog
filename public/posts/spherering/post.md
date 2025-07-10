@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T22:00:48.000Z'
 tags: []
 title: spherering
 oldUrl: /art/spherering
-openAIMikesBlogFileId: file-lnQkoY6xyEm9L8YlZ6WO7der
 ---
 
 Its some crazy collection of reflective spheres with rings around them, i dont know what i was going for when i created this

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/camping-oz-2017-the-south/cover.jpg
 date: '2017-09-15T04:52:35.000Z'
 tags: []
 title: Camping Oz 2017 - The South
 oldUrl: /2017-camping-australia/camping-oz-2017-the-south
-openAIMikesBlogFileId: file-pzmagYvHyQIRpUlOJWhm92xi
 ---
 
 After our adventures in Central Australia we started heading south, first stopping off at the curiously peculiar Coober Pedy.

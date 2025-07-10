@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-02-16T08:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - motoko
   - actors
 title: Tinkering With The Internet Computer
-openAIMikesBlogFileId: file-mPv2bJF3qpEAVunxZoQuVSoW
 ---
 
 Im not sure how I first came across [Dfinity](dfinity.org) and the Internet Computer project but when I heard about the technologies they were using (Blockchain, Actors, Motoko) and the goals they were striving for I knew I had to have a tinker.
@@ -76,7 +75,7 @@ my_app.greet(window.prompt("Enter your name:")).then((greeting) => {
 });
 ```
 
-And because its just an RPC the typescript definitions for your actor are easily generated 💯.
+And because its just an RPC the typescript definitions for your actor are easily generated ðŸ’¯.
 
 # Queries vs Mutation
 
@@ -124,4 +123,4 @@ I have barely scratched the surface of the Internet Computer but what I have see
 
 I think for my next step I would like to build something a little more meaningful and have it running on a remote network so others can access it.
 
-Right now however im going to keep an eye on the project and wait a while. They have a bit more work to do to make it user friendly and I don't want to pay the early adopter tax when there are so many other cool shiny things to play with 😉
+Right now however im going to keep an eye on the project and wait a while. They have a bit more work to do to make it user friendly and I don't want to pay the early adopter tax when there are so many other cool shiny things to play with ðŸ˜‰

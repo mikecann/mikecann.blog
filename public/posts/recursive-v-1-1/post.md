@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-12-16T18:38:53.000Z"
 tags:
@@ -14,7 +14,6 @@ tags:
   - update
 title: Recursive v.1.1
 oldUrl: /recursive/recursive-v-1-1
-openAIMikesBlogFileId: file-3bs86YblE2yDz3faZF20eTmN
 ---
 
 [![Screenshot_001](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_001-1024x423.png)](/posts/recursive-v-1-1/attachment/screenshot_001/)

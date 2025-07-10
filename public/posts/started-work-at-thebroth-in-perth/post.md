@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/started-work-at-thebroth-in-perth/cover.jpg
 date: '2015-05-29T00:44:27.000Z'
 tags: []
 title: Started Work at TheBroth in Perth!
 oldUrl: /uncategorized/started-work-at-thebroth-in-perth
-openAIMikesBlogFileId: file-ISK3LF2fRttuzzQb7vWUeqBj
 ---
 
 Just a quick update. After a year of living down in Bunbury Western Australia and working Freelance and on my own projects (see this blog for more) I have decided to re-enter the workforce. Mainly because I was going a little stir crazy being by myself most of the day every day.

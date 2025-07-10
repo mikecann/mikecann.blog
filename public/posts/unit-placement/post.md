@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-05-27T15:24:53.000Z'
 tags: []
 title: Unit Placement
 oldUrl: /c/unit-placement
-openAIMikesBlogFileId: file-xEkxST31rDkP9QWxGiFnIivY
 ---
 
 I have to be honest I haven't been working as hard as I could have recently on the TD project. The reason for this is that I have been trying to decide whether to progress with it atall. I believe it is an awesome project and will be successful, however each time I complete something in the project it adds to the complexity never subtracting from the amount of work remaining.

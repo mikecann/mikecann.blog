@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-07-15T16:07:19.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - update
 title: "Dev Update: BlastWave - Lost At Sea"
 oldUrl: /blastwave-lost-at-sea/dev-update-blastwave-lost-at-sea
-openAIMikesBlogFileId: file-pqSCfodQiJubj3xH13toGxuF
 ---
 
 Oliver and I have been working hard on the game and we are almost ready to rock.

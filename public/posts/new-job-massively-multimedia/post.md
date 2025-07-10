@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-08-04T14:02:35.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - personal
 title: New Job - Massively Multimedia
 oldUrl: /photos-personal/new-job-massively-multimedia
-openAIMikesBlogFileId: file-tX6xL7FzHTr9KcsAKXaIcfyz
 ---
 
 [![logo](https://www.mikecann.blog/wp-content/uploads/2009/08/logo.png "logo")](https://www.mikecann.blog/wp-content/uploads/2009/08/logo.png)

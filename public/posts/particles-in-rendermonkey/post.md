@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-01-24T13:53:11.000Z'
 tags: []
 title: Particles in RenderMonkey
 oldUrl: /hlsl/particles-in-rendermonkey
-openAIMikesBlogFileId: file-US1mHy7KQ53O0Gy8AEqP3EEc
 ---
 
 ![](https://www.mikecann.blog/wp-content/uploads/Image/RM01.png)Well in my final year at university we have been working on shaders. I decided to concentrate on particles as it ties in nicely with my final project (more on that to come).

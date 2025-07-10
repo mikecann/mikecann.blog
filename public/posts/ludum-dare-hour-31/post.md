@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-08-22T08:37:45.000Z"
 tags:
@@ -13,7 +13,6 @@ tags:
   - worms
 title: Ludum Dare - Hour 31
 oldUrl: /48-hours-later/ludum-dare-hour-31
-openAIMikesBlogFileId: file-q9QtBAzNaOFjTuNjRlaZjtf0
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg "ScreenHunter_01 Aug. 22 09.36")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg)

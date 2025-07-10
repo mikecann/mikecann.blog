@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-05-25T08:03:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - chrome extensions
 title: Tasks for Trello - A Trello Tasks Rewrite
 oldUrl: /tasks-for-trello/tasks-for-trello-a-trello-tasks-rewrite
-openAIMikesBlogFileId: file-JNuw9H8iFAAW8z0TU5votBmt
 ---
 
 Its been a while since I wrote about my Chrome extension Trello Tasks but thats not for lack of interest in the project. At the moment it has 3,546 users and I have had innumerable requests for new features so seeing as I had to update it to comply with GDPR anyways, I thought it was time to give it some love.
@@ -21,7 +20,7 @@ Well its pretty much exactly the same as Trello Tasks in functionality, so ill c
 
 ![](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)
 
-The TLDR; of Trello Tasks is: it augments Trello by turning Cards into “completable” tasks.
+The TLDR; of Trello Tasks is: it augments Trello by turning Cards into â€œcompletableâ€ tasks.
 
 One of the most common ways to use Trello is in the "ToDo" style. In this style you have three lists, ToDo, Doing and Done:
 
@@ -73,7 +72,7 @@ So this time around I decided if I was going to do a rewrite, I might as well re
 
 # Rewrite?
 
-So the decision to do a rewrite rather than an upgrade was partly because of the name and partly because I was going to have to make changes to Trello Tasks for GDPR compliance. I also realised that Trello Tasks was built using (what seems like) ancient coding practices so I decided in my typical naïve way that I should just start again, it shouldnt take too long, right?
+So the decision to do a rewrite rather than an upgrade was partly because of the name and partly because I was going to have to make changes to Trello Tasks for GDPR compliance. I also realised that Trello Tasks was built using (what seems like) ancient coding practices so I decided in my typical naÃ¯ve way that I should just start again, it shouldnt take too long, right?
 
 Well it took about twice as long as I was expecting, but I am happy with the way it turned out.
 

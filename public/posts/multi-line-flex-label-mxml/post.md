@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-11-28T19:14:10.000Z"
 tags:
@@ -12,10 +12,9 @@ tags:
   - tip
 title: "Multi-Line Flex Label [MXML]"
 oldUrl: /flex/multi-line-flex-label-mxml
-openAIMikesBlogFileId: file-izllAq04B2dtn1twAQMVihgu
 ---
 
-Just stumbled across this one while writing some mxml for a personal project and thought I would share.
+JustÂ stumbledÂ acrossÂ this one while writing some mxml for a personal project and thought I would share.
 
 Have you ever wanted to have multi-line text in your label component in spark and thought the following should work?
 

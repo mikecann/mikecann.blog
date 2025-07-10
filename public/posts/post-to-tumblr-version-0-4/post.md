@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-10-31T18:50:22.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - update
 title: Post To Tumblr Version 0.4
 oldUrl: /post-to-tumbr/post-to-tumblr-version-0-4
-openAIMikesBlogFileId: file-uljAl40H5Yx29OjShGMPXtMg
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0012.png "Shot_001")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0012.png)
@@ -24,7 +23,7 @@ Once enabled rather than immediately posting the image it will popup a new tab a
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0022.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0022.png)
 
-Its not perfect, I would have preferred the pre formatting window to open in a div popup on the current page instead of a whole new tab, but for now this solution is simple and it works.
+Its not perfect, I would have preferred theÂ pre formattingÂ window to open in a div popup on the current page instead of a whole new tab, but for now this solution is simple and it works.
 
 I must admit I borrowed the idea from another Tumblr posting extension called "Share on Tumblr". The code is ultra simple:
 

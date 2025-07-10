@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/north-western-australia-winter-2014/cover.jpg
 date: '2014-08-30T06:15:18.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - travel
 title: 'North Western Australia, Winter 2014'
 oldUrl: /photos-personal/north-western-australia-winter-2014
-openAIMikesBlogFileId: file-ZwDaLxtTBCODOZLVroFvvXIG
 ---
 
 Well I have been back for over 3 weeks now but only just got round to uploading the pictures and videos from my 3 week trip up north. I had an absolute blast exploring some of the more remote Australian countryside.
@@ -44,7 +43,7 @@ We even managed to make it over to Dampier for a quick photo with the [Red Dog](
 
 [![photo-26](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-26-929x1024.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-26.jpg)
 
-Once we arrived at Broome we met up with Kelsie's Brother Trent and his Fiancé Emily who live up there and spent a few days chilling out around the beautiful area:
+Once we arrived at Broome we met up with Kelsie's Brother Trent and his FiancÃ© Emily who live up there and spent a few days chilling out around the beautiful area:
 
 [![photo-31](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-31-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-31.jpg)
 

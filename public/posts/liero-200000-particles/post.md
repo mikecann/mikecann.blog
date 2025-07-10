@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-09-09T15:35:35.000Z'
 tags: []
 title: 'Liero + 200,000 Particles'
 oldUrl: /c/liero-200000-particles
-openAIMikesBlogFileId: file-lLbDoY6YlzfZ1jMkSKCS6Ljk
 ---
 
 Been workin on this abit this weekend and managed to intergrate my earlier work on GPU particles with the game to create some nice effects. See the video below to see thousands of particles being blown in many different directions.

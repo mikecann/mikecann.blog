@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:40:35.000Z'
 tags: []
 title: llamp
 oldUrl: /art/llamp
-openAIMikesBlogFileId: file-cGTMIumalVg4jQEShV9trgK0
 ---
 
 > Llamp (lava lamp) was created as an experiment with hypervoxels, however when it rendered i found it to be quite boring so i decided to "liven" it up abit in photoshop

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-alpha-7/cover.jpg
 date: '2015-03-14T03:31:31.000Z'
 tags:
@@ -12,7 +12,6 @@ tags:
   - video
 title: Mr Nibbles Forever - Alpha 7
 oldUrl: /mr-nibbles-forever/mr-nibbles-forever-alpha-7
-openAIMikesBlogFileId: file-iAMXd9ZHq0N1uud1baAzqzC8
 ---
 
 Well i'm now 8 weeks into development of Mr Nibbles Forever and I can safely say that the game is now feature complete (this probably should be Beta 1 release then not Apha 7 but oh well :P). I didn't do a release last week as I had quite a bit of other work on and so there wasn't all that much progress so I thought I would skip a week.

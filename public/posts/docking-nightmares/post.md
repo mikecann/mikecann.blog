@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-05-09T11:09:35.000Z'
 tags: []
 title: Docking Nightmares
 oldUrl: /c/docking-nightmares
-openAIMikesBlogFileId: file-fhX6B2VLeOsJkY3dyqrI5Oul
 ---
 
 ![](https://www.mikecann.blog/Work/TDProject/engine04.png)

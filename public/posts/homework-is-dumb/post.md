@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2025-04-25T07:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - tech
   - thought
 title: Homework is Dumb
-openAIMikesBlogFileId: vsfb_81418128a3474938a28b2b713d6cb375
 ---
 
 ***Note: I briefly talked about this idea [in my last post](https://mikecann.blog/posts/always-listening-a-month-with-the-bee-computer-ai-assistant#the-futures-coming-ready-or-not) but I thought it was worth expanding out to a full article as I feel quite strongly about it.***

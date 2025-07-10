@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-11-29T07:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - gangbusters
   - gaming
 title: BattleTabs - Season 1
-openAIMikesBlogFileId: file-4B3AmNCHZLk5NyQhFLLtTX08
 ---
 
 Well its been years in the planning and months in the development but the "Big Summer Update" / "Seasons" / V1 update for our game [BattleTabs](https://battletabs.com) is finally out!

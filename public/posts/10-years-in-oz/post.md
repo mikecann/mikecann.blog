@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-03-14T07:31:40.000Z'
 tags:
   - personal
 title: 10 Years in Oz
-openAIMikesBlogFileId: file-8vfdFgE9PWmnhfPOSrX2o6De
 ---
 
 Wow can you believe it, exactly 10 years to the day since I took the almighty leap into the unknown and traveled half way around the work from the UK to Western Australia to start my new life with a girl I had met just a few short months ago.

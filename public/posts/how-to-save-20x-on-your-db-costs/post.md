@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2023-02-14T07:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - heroku
   - fly.io
 title: How to Save 20x on Your DB Costs
-openAIMikesBlogFileId: file-xQ0BH4eoBC2AKHnR9S2V8KnM
 ---
 
 I have been a long fan of Heroku and we have been using it as the platform that powers [BattleTabs](https://battletabs.io/) for over 3 years and before that [Markd](https://markd.co) but they have long since stopped innovating and after a number of stressful events I decided it was time to break up.

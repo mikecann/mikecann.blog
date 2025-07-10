@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/govhack-2015-should-i-drive/cover.jpg
 date: '2015-07-06T11:27:55.000Z'
 tags:
@@ -13,7 +13,6 @@ tags:
   - team
 title: GovHack 2015 - Should I Drive?
 oldUrl: /hackathons/govhack-2015-should-i-drive
-openAIMikesBlogFileId: file-ySDMK4wyFz2gaiqeTYFQ05hi
 ---
 
 Well I took a short break this weekend from Mr Nibbles Forever development to head down the street to [SpaceCubed](https://spacecubed.com/) and compete in the [2015 GovHack competition](https://www.govhack.org/perth2015/).

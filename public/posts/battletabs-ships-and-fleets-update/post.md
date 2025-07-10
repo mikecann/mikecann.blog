@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-10-28T08:31:40.000Z'
 tags:
   - battletabs
 title: BattleTabs - Ships and Fleets Update
-openAIMikesBlogFileId: file-uIuKn92N7PgEYLRaPkZbVvWC
 ---
 
 After months of hard work we are excited to announce that our latest and largest ever update to [BattleTabs](https://www.battletabs.com/) is finally live! Read on to find out about some of the gory details.

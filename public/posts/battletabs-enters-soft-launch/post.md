@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-04-11T07:31:40.000Z'
 tags:
   - gangbusters
   - battletabs
 title: BattleTabs Enters Soft Launch!
-openAIMikesBlogFileId: file-XoUrTrl627WNuzZAmzCDSmd8
 ---
 
 Phew its been a long long journey for our little game [BattleTabs](https://battletabs.com/) ([watch a summary video here](https://mikecann.blog/posts/battletabs-in-7-minutes)) but finally we are entering the phase that is a culmination of all the hard work, creativity, and perseverance: [the soft launch!](https://play.google.com/store/apps/details?id=io.battletabs)
@@ -26,7 +25,7 @@ In our case we are launching today [just on Android and just in the Philippines]
 
 This phase allows us to gather valuable feedback, fine-tune gameplay, and ensure that everything is as perfect as it can be.
 
-It’s a critical step in ensuring that BattleTabs delivers the best possible experience to its players.
+Itâ€™s a critical step in ensuring that BattleTabs delivers the best possible experience to its players.
 
 # The Last 18 months
 
@@ -42,9 +41,9 @@ That last part is worth underscoring. BattleTabs works in both Landscape (on the
 
 Its also worth noting that, as often get asked this, the game is entirely Typescript using React for the UI and BabylonJS for the 3D rendering. I don't think there are too many games out there that have taken this path not sure if that is a good thing or not but it certainly sets us apart.
 
-# What’s Next?
+# Whatâ€™s Next?
 
-During the soft launch, we’ll be closely monitoring every aspect of the game, from user experience to the technical performance, particularly server performance.
+During the soft launch, weâ€™ll be closely monitoring every aspect of the game, from user experience to the technical performance, particularly server performance.
 
 We still have some important changes we want to make before final release such as a new First Time User Experience (tutorial) as that is super critical for players who are quick to dismiss something if they are confused or frustrated.
 
@@ -56,12 +55,12 @@ Right now the game is only available on Android and in the Philippines but we ar
 
 We invite you to join us in this exciting phase. The best place to stay up to date is to [join the 16,000 other people on our Discord Server](https://discord.gg/battletabs). We post to the [#announcements](https://discord.com/channels/770955477215084554/770963532455477310) channel regularly about everything thats going on with the game.
 
-Your feedback will be invaluable in shaping the final version of BattleTabs. Whether it’s a bug report, a suggestion, or even just sharing your favorite moments, every bit of communication helps us make BattleTabs better for everyone!
+Your feedback will be invaluable in shaping the final version of BattleTabs. Whether itâ€™s a bug report, a suggestion, or even just sharing your favorite moments, every bit of communication helps us make BattleTabs better for everyone!
 
 # Wrapping Up
 
 The soft launch is just the beginning of the next chapter in the BattleTabs saga.
 
-We’re incredibly proud of what we’ve achieved so far and even more excited about what the future holds.
+Weâ€™re incredibly proud of what weâ€™ve achieved so far and even more excited about what the future holds.
 
 Stay tuned, and [let the battles begin](https://play.google.com/store/apps/details?id=io.battletabs)!

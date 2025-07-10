@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-07-12T23:09:27.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - salford
 title: NHS Social Innovation in Salford Competition
 oldUrl: /misc/nhs-social-innovation-in-salford-competition
-openAIMikesBlogFileId: file-CbZ4rs99qaRUOj7thhWx528P
 ---
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/07/screenshot_02.png)
@@ -22,7 +21,7 @@ The competition is split into several parts with the brief for the first part be
 
 Its a really nice idea and a clever way to try to bring in new ideas to solve challenging problems that the NHS currently faces.
 
-To enter you had two write a short (300) word proposal. If your proposal was short listed and you participated in the subsequent meetings you would win £1000\.
+To enter you had two write a short (300) word proposal. If your proposal was short listed and you participated in the subsequent meetings you would win Â£1000\.
 
 My proposal was predictably related to technology and games. I suggested that mobile devices with games loaded on could be given to the elderly so they could keep their minds active by playing games. I also suggested that if tablets were used then other apps could be installed such as Skype that allowed the elderly to keep in contact with relatives.
 

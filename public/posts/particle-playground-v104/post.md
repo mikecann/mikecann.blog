@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-03-20T14:13:47.000Z'
 tags: []
 title: Particle Playground v1.0.4
 oldUrl: /misc/particle-playground-v104
-openAIMikesBlogFileId: file-UrvwyvyG2hnb9KBewumNRu3q
 ---
 
 I have made a few small changes to [Particle Playground](https://www.mikecann.blog/?p=384) today:

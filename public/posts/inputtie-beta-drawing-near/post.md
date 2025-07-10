@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-09-21T19:26:11.000Z"
 tags:
@@ -13,10 +13,9 @@ tags:
   - windows
 title: Inputtie - Beta Drawing Near!
 oldUrl: /inputtie/inputtie-beta-drawing-near
-openAIMikesBlogFileId: file-BM6UTFfOxK0inmcF3U7DaPKg
 ---
 
-Final testing is under way here at mission control for the [Inputtie](https://www.inputtie.com) Beta.
+Final testing isÂ under wayÂ here at mission control for the [Inputtie](https://www.inputtie.com) Beta.
 
 <!-- more -->
 

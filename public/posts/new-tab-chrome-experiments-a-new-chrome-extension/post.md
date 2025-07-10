@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/new-tab-chrome-experiments-a-new-chrome-extension/cover.jpg
 date: '2016-06-27T23:50:30.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - typescript
 title: New Tab Chrome Experiments - A new Chrome Extension
 oldUrl: /new-tab-chrome-experiments/new-tab-chrome-experiments-a-new-chrome-extension
-openAIMikesBlogFileId: file-J7mPD2uSp7ImkbrNCnQKiu6S
 ---
 
 I really enjoy making Chrome Extension, I love how fast it is to go from idea to implementation then availability on the store.

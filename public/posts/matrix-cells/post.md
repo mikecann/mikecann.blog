@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:43:02.000Z'
 tags: []
 title: matrix-cells
 oldUrl: /art/matrix-cells
-openAIMikesBlogFileId: file-DJ5hEkGOwVUEUQEqHcslay31
 ---
 
 > This is still one of my personal favourites, i love the green effect of the hypervoxels and the way it goes with the background so well. You could almost imagine that if there was a matrix and the code looks like the background then perhaps the machines are made up of cells that look like these

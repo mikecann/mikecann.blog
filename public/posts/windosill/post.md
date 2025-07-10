@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-07-31T10:11:53.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - games
 title: Windosill
 oldUrl: /flash/windosill
-openAIMikesBlogFileId: file-HaDENrPuxgVMTnOS3ImeM0Od
 ---
 
 [![windowsil](https://www.mikecann.blog/wp-content/uploads/2009/07/windowsil.png "windowsil")](https://www.mochigames.com/game/play/windosill_v4/)

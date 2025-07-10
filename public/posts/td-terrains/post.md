@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-05-22T11:25:34.000Z'
 tags: []
 title: TD Terrains
 oldUrl: /c/td-terrains
-openAIMikesBlogFileId: file-hm0eJXUcfV8kNc2UTznBmCes
 ---
 
 Well i havent updated in a while one the TD project, not because I wasnt working on anything but mainly because i have been struggling with the nuts and bolts of 3D RTS game development.

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-08-21T18:34:52.000Z"
 tags:
@@ -11,7 +11,6 @@ tags:
   - project
 title: Ludum Dare - Hour 17
 oldUrl: /48-hours-later/ludum-dare-hour-17
-openAIMikesBlogFileId: file-MBuudnUvNEb4scx3IW6bg9rB
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg "ScreenHunter_01 Aug. 21 19.31")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg)

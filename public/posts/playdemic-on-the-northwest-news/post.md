@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2012-02-15T13:20:36.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - tv
 title: Playdemic on the Northwest News
 oldUrl: /business/playdemic-on-the-northwest-news
-openAIMikesBlogFileId: file-oFjAbNNcL1DoAfWqqZm9iwJh
 ---
 
 <iframe width="600" height="335" src="https://www.youtube.com/embed/TjMnDQw4zqI" frameborder="0" allowfullscreen></iframe>
@@ -17,4 +16,4 @@ Yesterday at Playdemic we had a visit from Ed Vaizey the Minister for Culture, C
 
 <!-- more -->
 
-Along with him were a TV crew for the Northwest News. It was a good opportunity for us to show off GourmetRanch abit. Anyways check out the video above. I cant believe they used the Playdemic timeline I wrote on whiteboard in the kitchen including the joke about world domination!
+Along with him were a TV crew for the Northwest News.Â It was a goodÂ opportunityÂ for us to show off GourmetRanch abit. Anyways check out the video above. I cant believe they used the Playdemic timeline I wrote on whiteboard in the kitchen including the joke about world domination!

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-05-29T00:39:25.000Z"
 tags:
@@ -8,12 +8,11 @@ tags:
   - trvel
 title: The Trip 2013 - North Carolina
 oldUrl: /2013-trip/the-trip-2013-north-carolina
-openAIMikesBlogFileId: file-uiwKwt3aTdZvK8Zn8EnMrdTQ
 ---
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/05/screenshot_021.png)
 
-Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album The [Trip 2013 – North Carolina](https://www.facebook.com/media/set/?set=a.10151666149991031.1073741833.593661030&type=3). Each picture can be clicked to see a larger version and comment / like
+Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album The [Trip 2013 â€“ North Carolina](https://www.facebook.com/media/set/?set=a.10151666149991031.1073741833.593661030&type=3). Each picture can be clicked to see a larger version and comment / like
 
 <!-- more -->
 

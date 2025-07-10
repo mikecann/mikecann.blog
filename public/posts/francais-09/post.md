@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-07-30T13:00:55.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - photos
 title: Francais '09
 oldUrl: /photos-personal/francais-09
-openAIMikesBlogFileId: file-Oub6Notknz6ASpwbWgBQaxX8
 ---
 
 Well im finally back in Manchester after my little trip to the south of France. Had a splendid time eating, drinking and working on my tan. We also went to a wedding of two friends on the last couple of days.

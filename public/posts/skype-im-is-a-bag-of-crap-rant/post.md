@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-01-09T19:46:01.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - skype
 title: "Skype IM, is a bag of crap [Rant]"
 oldUrl: /misc/skype-im-is-a-bag-of-crap-rant
-openAIMikesBlogFileId: file-i4qbFNbpUNCxVL3s16u5mapu
 ---
 
 [![head](https://www.mikecann.blog/wp-content/uploads/2013/01/head.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/head-4/)
@@ -23,7 +22,7 @@ For ages I have been using Digsby for my FBChat, GChat, MSN. Skype doesnt have a
 
 Hearing that [MSN is going to shutdown and merge with Skype on March 15th](https://www.winbeta.org/news/microsoft-confirms-windows-live-messenger-service-retirement-march-15th) and that Skype now has Facebook integration I thought it may be about time to try a switch over to using just Skype. Big mistake.
 
-Firstly, its confusing as hell trying to work out how to integrate your Facebook or your MSN contacts into Skype. There is no unified "connected accounts" panel in the options, you must go through a series of menus then click on a tiny cog to attach your account, how the hell you are meant to do that without a Google search I have no idea:
+Firstly, its confusing as hell trying to work out how toÂ integrateÂ your Facebook or your MSN contacts into Skype. There is no unified "connected accounts"Â panel in the options, you must go through a series of menus then click on a tiny cog to attach your account, how the hell you are meant to do that without a Google search I have no idea:
 
 [![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/01/screenshot_01.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/screenshot_01-8/)
 
@@ -39,7 +38,7 @@ There is no spell checking in Skype, okay perhaps if you are a spelling champ th
 
 [![screenshot_05](https://www.mikecann.blog/wp-content/uploads/2013/01/screenshot_05.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/screenshot_05-6/)
 
-If your Facebook mates are offline there is no way to send them a message through Skype. On Digsby it would send the message which would then get picked up when they are next online. So now if want to send them a message you must open chrome and then go to Facebook wait for it to load then send a message through there ARGG!!
+If yourÂ FacebookÂ mates are offline there is no way to send them a message through Skype. On Digsby it would send the message which would then get picked up when they are next online. So now if want to send them a message you must open chrome and then go to Facebook wait for it to load then send a message through there ARGG!!
 
 [![screenshot_06](https://www.mikecann.blog/wp-content/uploads/2013/01/screenshot_06.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/screenshot_06-5/)
 
@@ -55,7 +54,7 @@ Annoying messages and adverts are REALLY annoying.
 
 [![screenshot_10](https://www.mikecann.blog/wp-content/uploads/2013/01/screenshot_10.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/screenshot_10-3/)
 
-Want to delete a conversation, sure that's easy just..
+Want to delete a conversation, sureÂ that'sÂ easy just..
 
 [![screenshot_11](https://www.mikecann.blog/wp-content/uploads/2013/01/screenshot_11.png)](/posts/skype-im-is-a-bag-of-crap-rant/attachment/screenshot_11-3/)
 

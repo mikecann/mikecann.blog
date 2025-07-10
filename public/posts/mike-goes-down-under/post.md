@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mike-goes-down-under/cover.jpg
 date: '2014-03-10T21:16:06.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - travel
 title: Mike Goes Down Under
 oldUrl: /photos-personal/mike-goes-down-under
-openAIMikesBlogFileId: file-a04ZKtWa2EtOp6rXkI5AIy3u
 ---
 
 [![CropperCapture[1]](https://www.mikecann.blog/wp-content/uploads/2014/03/CropperCapture1.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/CropperCapture1.png)

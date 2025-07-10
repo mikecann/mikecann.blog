@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-07-16T19:48:52.000Z'
 tags: []
 title: Fixing Old Posts & Uploading Videos
 oldUrl: /fun-amp-videos/fixing-old-posts-uploading-videos
-openAIMikesBlogFileId: file-UtqI5yC08hXLTlSs2o9s4ftI
 ---
 
 I just realised the other day when I was trying to show someone some of my old projects that half of my old posts are broken.Videos are missing, download links gone, images half broken. Basically the thing is a shambles.

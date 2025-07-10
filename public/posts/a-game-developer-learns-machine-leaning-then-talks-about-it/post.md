@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-01-16T14:51:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - mr nibbles forever
 title: A Game Developer Learns Machine Learning - Then talks about it
 oldUrl: /talks/a-game-developer-learns-machine-leaning-then-talks-about-it
-openAIMikesBlogFileId: file-R6jeQiWtRfvAFYzlp5B3rq5p
 ---
 
 To round off my current Machine Learning adventures I gave a talk at a local Machine Learning group.

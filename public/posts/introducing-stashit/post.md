@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-08-11T07:31:40.000Z'
 tags:
@@ -8,10 +8,9 @@ tags:
   - convex
   - nextjs
 title: Introducing StashIt
-openAIMikesBlogFileId: file-d1pSWFEhTaWbLVBB7W0B8QJ1
 ---
 
-I have a confession to make—I have a superpower: the ability to stay in the flow.
+I have a confession to makeâ€”I have a superpower: the ability to stay in the flow.
 
 ![Hero Image](./hero.webp)
 
@@ -33,7 +32,7 @@ So, what is my superpower? It's a practice or tool I've been a fan of for a long
 
 ![Pocket Image](./pocket.webp)
 
-It works via a mobile app and Chrome extension. You simply press a button to trigger the extension or use another mobile button to share to the app—very simple and quick.
+It works via a mobile app and Chrome extension. You simply press a button to trigger the extension or use another mobile button to share to the appâ€”very simple and quick.
 
 This means you can stay in the flow but still track that side quest for later.
 
@@ -71,7 +70,7 @@ The final piece was putting together a quick Chrome extension that allowed me to
 
 ![Extension Image](./extension.webp)
 
-And that's about it, functionality-wise—nice and simple, but very useful.
+And that's about it, functionality-wiseâ€”nice and simple, but very useful.
 
 Oh, one more thing: because I built it, I can tailor specific functionality to suit me.
 
@@ -106,7 +105,7 @@ This blog post would turn into a book if I talked about each of those, so instea
 
 ![Convex Image](./convex.webp)
 
-A fantastic experience, [as always](https://mikecann.blog/posts/tinkering-with-convex). It's always a pleasure to start a new project with Convex. The speed at which I can get going and how clear the data model is—it's just a joy.
+A fantastic experience, [as always](https://mikecann.blog/posts/tinkering-with-convex). It's always a pleasure to start a new project with Convex. The speed at which I can get going and how clear the data model isâ€”it's just a joy.
 
 However, I bumped into an issue I've mentioned before.
 
@@ -134,7 +133,7 @@ Well, I'm not impressed. Sure, it works and _may_ be flexible and fast (at rende
 
 [This post](https://www.mux.com/blog/what-are-react-server-components?utm_source=pocket_saves) makes me feel better that I'm not the only one.
 
-- The dev experience is way slower than Vite because it doesn't pre-build the pages—only when you first visit them. You end up with a big pause when trying to navigate.
+- The dev experience is way slower than Vite because it doesn't pre-build the pagesâ€”only when you first visit them. You end up with a big pause when trying to navigate.
 
 - Several times, my Next.js cache got corrupted. How? I have no idea. All I know is I suddenly started getting very strange errors that took me ages to work out. In the end, I just deleted the `.next` folder, built it again, and all was well. Still super frustrating.
 
@@ -158,7 +157,7 @@ Both have free and paid tiers, but Capgo also has an open-source version. I want
 
 When the CI builds the game, it zips up the output and then [uploads it to the Convex backend, which creates a new version](https://github.com/mikecann/stashit/blob/master/apps/client/scripts/createAndUploadNewAppVersion.ts) ready for the mobile app to consume.
 
-This all works really well and was surprisingly simple to do—I was pleasantly surprised.
+This all works really well and was surprisingly simple to doâ€”I was pleasantly surprised.
 
 ### Radix Themes
 
@@ -168,13 +167,13 @@ Radix Components are used
 
 in many of the popular [ShadCN/ui](https://ui.shadcn.com/) components, so I thought I'd give their opinionated ["themes"](https://www.radix-ui.com/themes/docs/overview/getting-started) library a go.
 
-I enjoyed the [very prescriptive](https://www.radix-ui.com/themes/docs/theme/overview) way of doing things—sometimes it's nice to just be told one way to do things.
+I enjoyed the [very prescriptive](https://www.radix-ui.com/themes/docs/theme/overview) way of doing thingsâ€”sometimes it's nice to just be told one way to do things.
 
 However, I still found myself needing to use the `style` prop fairly often. I also found myself wishing for a bit more control around styling. I started to suspect that I would have to pull in Tailwind. I did resist, but I think I'll have to bow to the inevitable eventually.
 
 I also found it kind of odd how only some CSS properties were listed as attributes. I suspect this is intentional, as with everything in Radix, but coming from the pure flexibility of the [emotion](https://emotion.sh/docs/introduction)-based [ChakraUI](https://v2.chakra-ui.com/), it just felt a little frustrating at times. Again, I suspect this is intentional.
 
-So, all in all, I'm not exactly sure what to think about Radix Themes. I think I'm still looking for the perfect UI library. ChakraUI gets close—if only it wasn't such a massive drain on TypeScript compilation performance.
+So, all in all, I'm not exactly sure what to think about Radix Themes. I think I'm still looking for the perfect UI library. ChakraUI gets closeâ€”if only it wasn't such a massive drain on TypeScript compilation performance.
 
 ### Convex Auth
 

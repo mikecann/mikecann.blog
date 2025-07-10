@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-06-11T13:31:54.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - wordpress
 title: Starting Afresh
 oldUrl: /websites/starting-afresh
-openAIMikesBlogFileId: file-54R24l1XY61AEd3AR06lDMyw
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/06/ScreenHunter_01-Jun.-11-11.37.jpg "ScreenHunter_01 Jun. 11 11.37")](https://www.mikecann.blog/wp-content/uploads/2010/06/ScreenHunter_01-Jun.-11-11.37.jpg)

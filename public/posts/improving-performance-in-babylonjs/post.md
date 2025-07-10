@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-01-22T07:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - performance
   - games
 title: Improving Performance in BabylonJS
-openAIMikesBlogFileId: file-xHrcma3CewBhyYCZdomkHq2r
 ---
 
 As we close in on our year-long goal of bringing [BattleTabs](https://mikecann.blog/posts/battletabs-in-7-minutes) to mobile the time has come for some long-overdue performance improvements.

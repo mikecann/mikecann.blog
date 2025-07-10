@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-03-05T15:08:49.000Z'
 tags: []
 title: Quake Live
 oldUrl: /misc/quake-live
-openAIMikesBlogFileId: file-8TFvCsLpYjoj7cf11TIVcrjX
 ---
 
 [![](https://cdn-web.quakelive.com/web60/images/sf/general/logo_v60.0.png)](https://www.quakelive.com/#home)

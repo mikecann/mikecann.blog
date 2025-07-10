@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-03-23T20:24:22.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - html5
 title: "Harmony, HTML5 Procedural Drawing"
 oldUrl: /art/harmony-html5-procedural-drawing
-openAIMikesBlogFileId: file-4dK1zMDPHdSLxnl4awXgOXU9
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/03/mcimg.png "mcimg")](https://www.mikecann.blog/wp-content/uploads/2010/03/mcimg.png)

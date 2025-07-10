@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-03-23T20:30:49.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - ssao
 title: Liero3D Progress
 oldUrl: /misc/liero3d-progress
-openAIMikesBlogFileId: file-UjoHqkUsdQxEp8WVpXYfF3Qe
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/03/Untitled-1.jpg "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2011/03/Untitled-1.jpg)
@@ -16,8 +15,8 @@ Just thought I would report on a project my friend [Michael Lindholm](https://li
 
 <!-- more -->
 
-Anyways, it looks like its coming along nicely. He's gone for a voxel-like engine, with screen space ambient occlusion for shading. Personally I think the effect works really well for the game. Check it out:
+Anyways, it looks like its coming along nicely. He's gone for a voxel-like engine, with screen space ambientÂ occlusionÂ for shading. Personally I think the effect works really well for the game. Check it out:
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/kWRnFeKRdvU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you are interested you should follow his blog for the project: [https://liero3d.blogspot.com/](https://liero3d.blogspot.com/)
+If you are interested you should follow his blog for the project:Â [https://liero3d.blogspot.com/](https://liero3d.blogspot.com/)

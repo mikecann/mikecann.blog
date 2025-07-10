@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-07-20T17:37:21.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - video
 title: Incredible Particle & Physics Video
 oldUrl: /fun-amp-videos/incredible-particle-physics-video
-openAIMikesBlogFileId: file-qnebTHJG0C9y1r968Q503c78
 ---
 
 Saw this [post on Gizmodo](https://gizmodo.com/5591613/incredible-physics-engine-yields-some-seriously-jaw+dropping-dirt) and thought I would share on my blog as I think its incredible.

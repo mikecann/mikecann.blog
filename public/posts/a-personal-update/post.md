@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-03-11T08:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - life
 title: A Personal Update
 oldUrl: /personal/a-personal-update
-openAIMikesBlogFileId: file-QCEepD2c8vriVzqfseRg1M9a
 ---
 
 This blog has been going for a long time and in the early days it was a mixture of Personal updates and technical updates.

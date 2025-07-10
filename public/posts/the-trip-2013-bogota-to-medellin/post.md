@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-09-05T13:39:39.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - trip
 title: The Trip 2013 - Bogota to Medellin
 oldUrl: /2013-trip/the-trip-2013-bogota-to-medellin
-openAIMikesBlogFileId: file-3cYFHidsUvygMzdqxE7pxRLb
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/09/screenshot_01.png)

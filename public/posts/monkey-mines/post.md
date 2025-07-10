@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/monkey-mines/cover.jpg
 date: '2009-05-10T13:30:12.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - projects
 title: Monkey Mines
 oldUrl: /games/monkey-mines
-openAIMikesBlogFileId: file-HsiaD9cqTeK3UcL1N2QLyqaf
 ---
 
 Well here it is at last! Finally after almost a month of wheeling and dealing we have at last released Monkey Mines to the world at large.

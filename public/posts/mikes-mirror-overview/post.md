@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-06-13T16:51:40.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - linux
 title: Mikes Mirror - Overview
 oldUrl: /projects/mikes-mirror-overview
-openAIMikesBlogFileId: file-9K1jscUoPTUFD3gg6OmoYKQK
 ---
 
 I have been wanting to do this for a while and as I recently found myself with a little spare time I decided to finally do it... build a Smart Mirror.

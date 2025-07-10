@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-06-19T22:11:05.000Z"
 tags:
@@ -12,7 +12,6 @@ tags:
   - version
 title: PostToTumblr 0.8 - 8000 Users and Counting
 oldUrl: /javascript/posttotumblr-0-8-8000-users-and-counting
-openAIMikesBlogFileId: file-e0VZo0IfSq0mfRoaOGRzR7Dv
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/06/Shot_01.png "Shot_01")](https://www.mikecann.blog/wp-content/uploads/2011/06/Shot_01.png)
@@ -36,4 +35,4 @@ To highlight these new changes I decided to update the promo video too:
 
 I have also added a donation button into the options. I have no idea if anyone will click it, an interesting experiment tho.
 
-If you have it installed it should auto-update, if not go grab it over on the chrome app store: [https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah)
+If you have it installed it should auto-update, if not go grab it over on the chrome app store:Â [https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah)

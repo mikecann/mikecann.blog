@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-07-14T10:50:03.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - personal
 title: "New Mix: Coalescence"
 oldUrl: /personal-mixes/new-mix-coalescence
-openAIMikesBlogFileId: file-IHN3u2cizRC5y6T8JwE90dOZ
 ---
 
 [![artificialcoalcover](https://www.mikecann.blog/wp-content/uploads/2009/07/artificialcoalcover.png "artificialcoalcover")](https://www.mikecann.blog/wp-content/uploads/2009/07/artificialcoalcover.png)

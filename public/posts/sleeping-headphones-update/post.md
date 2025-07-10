@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-10-30T14:51:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - headphones
 title: Sleeping Headphones Update
 oldUrl: /personal/sleeping-headphones-update
-openAIMikesBlogFileId: file-MU33p8XTzKaYxGNx5SXmn88e
 ---
 
 Its been quite some time since my original post on [The Sleeping Headphones Saga](./photos-personal/the-sleeping-headphones-saga/) so I thought it was time I updated with my current situation my my experiments since then.

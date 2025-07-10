@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-04-22T10:16:16.000Z'
 tags: []
 title: 'Play Him Off, Keyboard Cat'
 oldUrl: /fun-amp-videos/play-him-off-keyboard-cat
-openAIMikesBlogFileId: file-PmCtzSVggzB2izEPT5SPepzC
 ---
 
 Latest meme to do with cats, you know im all over this like a nappy rash:

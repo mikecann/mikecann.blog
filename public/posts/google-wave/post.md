@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-10-15T14:06:56.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - wave
 title: Google Wave
 oldUrl: /misc/google-wave
-openAIMikesBlogFileId: file-PGyxYuNQW4GTzi780zTeDFAS
 ---
 
 [![2009-10-15_1400](https://www.mikecann.blog/wp-content/uploads/2009/10/2009-10-15_1400.png "2009-10-15_1400")](https://www.mikecann.blog/wp-content/uploads/2009/10/2009-10-15_1400.png)

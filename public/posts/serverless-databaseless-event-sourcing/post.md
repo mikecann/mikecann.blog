@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-10-16T07:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - typescript
   - event-sourcing
 title: Serverless & Databaseless Event Sourcing
-openAIMikesBlogFileId: file-3Yz1HfS8SCx8zaENMwMXGVc0
 ---
 
 3 years ago while [working at Bamboo](/posts/started-at-bamboo) I was introduced to the concept of [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) for the first time. The concept of turning the database inside out blew my mind. Since then I have been fascinated with the possibilities for the technology and have wanted to build another Event Sourced app.
@@ -27,6 +26,6 @@ If you would like to dig a little deeper into how it all works all the source is
 
 I also put together a miro board for this project here which goes over some of the high-level structure: https://miro.com/app/board/o9J_lq_d2nE=/
 
-BTW I also submitted this project to the [Cloudflare Developer Challenge](https://blog.cloudflare.com/developer-summer-challenge/) and it won! I got a nice little bag of swag for my efforts ❤️ Cloudflare.
+BTW I also submitted this project to the [Cloudflare Developer Challenge](https://blog.cloudflare.com/developer-summer-challenge/) and it won! I got a nice little bag of swag for my efforts â¤ï¸ Cloudflare.
 
 Let me know in the comments what you think!

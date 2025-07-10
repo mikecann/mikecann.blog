@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/an-interview-with-startup-news/cover.jpg
 date: '2016-09-28T23:26:08.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - taslk
 title: An Interview with Startup News
 oldUrl: /media/an-interview-with-startup-news
-openAIMikesBlogFileId: file-LweA32MCYkid6eJyyjn1fzDW
 ---
 
 Just a short one today..

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-08-27T13:58:51.000Z'
 tags: []
 title: Master Cleanse
 oldUrl: /photos-personal/master-cleanse
-openAIMikesBlogFileId: file-Pt35RXnLm6ZUEQR4WGQgiioh
 ---
 
 ![](https://www.mikecann.blog/Images/Others/lemon.JPG)

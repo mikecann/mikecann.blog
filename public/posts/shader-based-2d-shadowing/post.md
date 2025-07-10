@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-08-15T11:10:18.000Z"
 tags:
@@ -12,7 +12,6 @@ tags:
   - xna
 title: Shader Based 2D Shadowing
 oldUrl: /c/shader-based-2d-shadowing
-openAIMikesBlogFileId: file-bP6n3ttyuMdz3oCbCNgfwfm8
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png "11_scene")](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png)
@@ -21,7 +20,7 @@ Those who know me know I used to do [quite abit of development](/posts/?s=xna) i
 
 <!-- more -->
 
-Well I like to check back in every now and then with some of the big players in the community to see what's going on.
+Well I like to check back in every now and then with some of the big players in the community to seeÂ what'sÂ going on.
 
 One of those players is [Catalin Zima](https://www.catalinzima.com/), who is famous for producing many great shader and effect samples.
 

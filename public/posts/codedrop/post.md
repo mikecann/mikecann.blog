@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/codedrop/cover.jpg
 date: '2008-04-12T11:49:06.000Z'
 tags: []
 title: CodeDrop
 oldUrl: /actionscript/codedrop
-openAIMikesBlogFileId: file-AZZOp3uX1Wv95iPG4hcA0tWK
 ---
 
 Well i have made a decision, instead of starting 10000 projects and never finishing i have decided instead to do some quick projects and shoot them out the door. So the best way to do this i figure is to make flash games.

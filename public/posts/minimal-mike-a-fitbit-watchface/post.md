@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-05-28T07:31:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - coding
   - development
 title: Minimal Mike - A Fitbit Clock Face
-openAIMikesBlogFileId: file-v7tNF7bEPjwY7ERNYSXfmxYg
 ---
 
 When I was sent a replacement for my broken [Versa 1](https://www.fitbit.com/global/us/products/smartwatches) by Fitbit they decided to upgrade me to a Versa 2. This was great except it meant that the watch face I was using before no longer worked and I was unable to find a good replacement so I thought it was time to get my hands dirty and code one up myself.

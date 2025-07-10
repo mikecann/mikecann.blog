@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/chainreaction-binarysource-release/cover.jpg
 date: '2007-06-03T11:27:22.000Z'
 tags: []
 title: ChainReaction (Binary+Source Release)
 oldUrl: /actionscript/chainreaction-binarysource-release
-openAIMikesBlogFileId: file-GmV3KUpsqxjHIAyVLt63YA6T
 ---
 
 Okay so i have finally decided to upload this. I had intended to do some more work on it and get it into a more presentable state. However as time goes on and I still havent found time to do any more on it I have just decided to upload it now.

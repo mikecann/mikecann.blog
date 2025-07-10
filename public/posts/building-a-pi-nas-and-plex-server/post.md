@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-09-13T07:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - tinkering
   - linux
 title: Building a Pi NAS and Plex Server
-openAIMikesBlogFileId: file-ACIpY9MB7haDdgLtQdOEAEl1
 ---
 
 My PC is awesome but it has a bit of an addiction to Watts. So I wanted to build a low-powered NAS and Plex server so when I put PC asleep at night I can still enjoy some quality time with my content on the TV downstairs. Since I had a spare Raspberry Pi 4 glaring at me from my desk I thought, sure why not, how hard could it be?
@@ -75,7 +74,7 @@ https://www.amazon.com.au/gp/product/B011M8YACM/ref=ppx_yo_dt_b_asin_title_o02_s
 
 I now had a way to get my 2 x portable drives, 2 x 2.5" drives and 2 x 3.5" drives all to work in the Pi.
 
-I just needed a container for them all. I don't have a 3D printer to make one but thats okay because my Targét game is pretty strong, so I snagged this beaut for $8
+I just needed a container for them all. I don't have a 3D printer to make one but thats okay because my TargÃ©t game is pretty strong, so I snagged this beaut for $8
 
 ![](./container.jpg)
 https://www.target.com.au/p/rattan-plastic-storage-basket/60093127

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-08-26T08:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - typescript
 title: Markd - Import From LinkedIn
 oldUrl: /markd/markd-import-from-linked-in
-openAIMikesBlogFileId: file-qAR28Wy4Otp3NMHgfpMNh0Uy
 ---
 
 Just a quick update today about a new feature for [Markd](https://markd.co): Import from LinkedIn

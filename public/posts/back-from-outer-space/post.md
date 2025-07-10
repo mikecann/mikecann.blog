@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-07-15T18:37:48.000Z'
 tags:
@@ -10,16 +10,15 @@ tags:
   - trip
 title: Back From Outer Space
 oldUrl: /photos-personal/back-from-outer-space
-openAIMikesBlogFileId: file-7R6cH5FVW57s4iORb4nvUlPO
 ---
 
-.. well California actually but im just listening to abit of Prodigy so I thought it appropriate.
+.. well California actually but im just listening to abit ofÂ ProdigyÂ so I thought it appropriate.
 
 Was over for just over two weeks, hired a car with [Toni ](https://www.littlemisstoni.co.uk/)and went-a-road-trippin. First few days were down the coast from San Francisco down the Big Sur to LA. Then from LA accross to Vegas, then all the way back again.
 
 <!-- more -->
 
-Apart from a parking ticket (who knew you have to park in the same direction traffic is flowing?!) everything went pretty smooth. Toni is still over there, will be for the next 6 weeks, hitting the research with the very clever physics bods over at [Berkly Universit](https://berkeley.edu/)y.
+Apart from a parking ticket (who knew you have to park in the same direction traffic is flowing?!) everything went pretty smooth. Toni is still over there, will be for the next 6 weeks, hitting the research with the very clever physics bods over atÂ [Berkly Universit](https://berkeley.edu/)y.
 
 As usual the holiday snaps can be found on my [Picassa Web Albums page](https://picasaweb.google.com/mike.cann/California10#), but here are some highlights:
 

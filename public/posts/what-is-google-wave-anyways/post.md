@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-10-16T16:38:20.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - wave
 title: What is Google Wave Anyways?
 oldUrl: /misc/what-is-google-wave-anyways
-openAIMikesBlogFileId: file-OdopcS6YLkTBsjoqpODKyqEA
 ---
 
 I just thought that not everyone knows what Google Wave actually is. Well this video does a good job of explaining it in like 2 mins:

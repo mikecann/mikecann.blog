@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/my-third-coding-epiphany/cover.jpg
 date: '2016-07-28T05:12:29.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - code
 title: My Third Coding Epiphany
 oldUrl: /misc/my-third-coding-epiphany
-openAIMikesBlogFileId: file-T0estEI1dDIuGGcb84C9n5tu
 ---
 
 I have been meaning to write this post for a while now and since I have spent most of this month back in the UK visiting friends and family I don't have all that much to share technically so I thought it was about time I got this post done.

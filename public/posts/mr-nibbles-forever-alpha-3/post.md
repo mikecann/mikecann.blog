@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-alpha-3/cover.jpg
 date: '2015-02-02T02:23:23.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - unity
 title: Mr Nibbles Forever - Alpha 3
 oldUrl: /mr-nibbles-forever/mr-nibbles-forever-alpha-3
-openAIMikesBlogFileId: file-qjsvMKK8vh5vPEHwoKlL4tXB
 ---
 
 I have had far less time than I would have liked to work on the game this week mainly because it was my birthday over the weekend and quite a bit of time was spent preparing for that.

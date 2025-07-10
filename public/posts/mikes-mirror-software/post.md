@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-06-17T11:23:40.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - linux
 title: Mikes Mirror - Software
 oldUrl: /projects/mikes-mirror-software
-openAIMikesBlogFileId: file-79AEEZRgMn7yl1uTAFEBu5ZC
 ---
 
 Building the frame and assembling [the hardware](/projects/mikes-mirror-hardware/) for my Smart Mirror was a tough but fun journey. But now its time for what im good at, the software.

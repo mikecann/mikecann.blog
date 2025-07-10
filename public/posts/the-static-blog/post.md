@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2017-10-31T21:00:00.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - testies
 title: The Static Blog
 oldUrl: /blog/the-static-blog
-openAIMikesBlogFileId: file-SEGY9MUZS6xWv33JJgJwgweN
 ---
 
 For too long I have suffered from a slow blog. Im currently inbetween project so I decided it was finally time to change that.

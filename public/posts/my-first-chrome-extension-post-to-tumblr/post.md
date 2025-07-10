@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-10-14T20:02:33.000Z"
 tags:
@@ -13,7 +13,6 @@ tags:
   - tumblr
 title: My First Chrome Extension - "Post To Tumblr"
 oldUrl: /post-to-tumbr/my-first-chrome-extension-post-to-tumblr
-openAIMikesBlogFileId: file-MeKc09ikui54Z03fc7wPfkNp
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)

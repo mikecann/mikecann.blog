@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-08-23T20:39:08.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - tech
 title: "Artificial - Argon [Tech, House, Progressive]"
 oldUrl: /audio/artificial-argon-tech-house-progressive
-openAIMikesBlogFileId: file-vwy6te9U1e4pm0T5k6hVwfMq
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png "Argon-Cover")](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png)

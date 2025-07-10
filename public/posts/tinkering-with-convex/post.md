@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2023-08-04T08:31:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - projects
   - BaaS
 title: Tinkering With Convex
-openAIMikesBlogFileId: file-M8UEHi1v5Pgf1Eb4q3qyEyMS
 ---
 
 As a serial tech-tinkerer I knew I wasnt going to be able to resist the pull of [Convex](https://convex.dev) a new powerful Backend as a Service (BaaS) platform. So after reading the docs I dove in and a day later I had a working Threads / Twitter / X - like clone with realtime likes, replies and dynamic searchable lists!
@@ -161,7 +160,7 @@ export const AllMessages: React.FC<Props> = ({ list }) => {
 };
 ```
 
-🤯
+ðŸ¤¯
 
 This is the perfect developer experience in my opinion. You just declare the data you want in a simple to understand query and the platform takes care of the rest ensuring that "messages" is updated whenever there is something new or updated.
 

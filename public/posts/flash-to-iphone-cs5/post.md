@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-10-08T09:23:18.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - tool
 title: Flash to IPhone CS5
 oldUrl: /iphone/flash-to-iphone-cs5
-openAIMikesBlogFileId: file-PPDf5G8XsYUKecNJeolmIMW3
 ---
 
 [![322955593_67152962ab](https://www.mikecann.blog/wp-content/uploads/2009/10/322955593_67152962ab.jpg "322955593_67152962ab")](https://www.mikecann.blog/wp-content/uploads/2009/10/322955593_67152962ab.jpg)

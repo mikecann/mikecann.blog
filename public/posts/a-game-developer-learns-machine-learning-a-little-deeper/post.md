@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2017-12-17T14:51:40.000Z'
 tags:
@@ -13,7 +13,6 @@ tags:
   - agdlml
 title: A Game Developer Learns Machine Learning - A Little Deeper
 oldUrl: /machine-learning/a-game-developer-learns-machine-learning-a-little-deeper
-openAIMikesBlogFileId: file-lY7iR2davD0eIiEfKdDAvIR2
 ---
 
 In my last post on Machine Learning we followed Unity's Getting Started tutorial and managed to get the "Balance Ball" example project up and running. In this post we are going to start something from scratch and see if we can dig a little deeper and learn some new things about Machine Learning.

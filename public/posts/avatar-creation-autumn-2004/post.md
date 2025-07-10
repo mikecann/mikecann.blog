@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2004-08-27T21:57:03.000Z'
 tags: []
 title: Avatar Creation
 oldUrl: /c/avatar-creation-autumn-2004
-openAIMikesBlogFileId: file-tXF4msw8LawEkQSlLAG5Fn3p
 ---
 
 This is my first ever project i did in DirectX. It was created again for a university project at the start of the year in 2004\. I had ambitious plans for a dynamic mesh manipulation application so the user could create their own personal avatar for a MMORPG.

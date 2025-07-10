@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-02-08T12:28:46.000Z'
 tags: []
 title: Stupid vista
 oldUrl: /fun-amp-videos/stupid-vista
-openAIMikesBlogFileId: file-twLx0E9M20njm5vfOa6GIFIV
 ---
 
 So true :P

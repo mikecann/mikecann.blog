@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-11-26T07:31:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - typescript
   - battletabs
 title: How To Halve Your Node JS Memory Usage
-openAIMikesBlogFileId: file-cNe7HyZbu8582C89ocWZzV2q
 ---
 
 We were having serious memory issues on the Heroku hosted NodeJS backend for our game [BattleTabs](https://battletabs.com) when we decided to apply "this one little trick"...

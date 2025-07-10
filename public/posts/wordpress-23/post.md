@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-10-09T23:45:46.000Z'
 tags: []
 title: Wordpress 2.3
 oldUrl: /misc/wordpress-23
-openAIMikesBlogFileId: file-J2oSFIqKarNwY4EN2fm4D9Ew
 ---
 
 Well I decided it was about that time again to take the plunge and upgrade Wordpress to the latest version as my spam filter had stopped working for some reason.

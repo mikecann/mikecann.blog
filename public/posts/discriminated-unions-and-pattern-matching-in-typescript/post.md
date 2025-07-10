@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2022-09-30T07:31:40.000Z'
 tags:
   - typescript
 title: Discriminated Unions & Pattern Matching in Typescript
-openAIMikesBlogFileId: file-QF6voOQP7UxzpheGQIB3k4mQ
 ---
 
 I don't tend to post about general programming topics these days because I usually don't have much to add to the public discourse available in innumerable blogs, videos, podcasts and other places. However over the last year or two I have started to heavily adopt some programming pattern that I find so valuable that its worth re-iterating in my own words.

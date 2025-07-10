@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-07-04T22:23:23.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - update
 title: 3 Days into the 3-Week Challenge
 oldUrl: /games/3-days-into-the-3-week-challenge
-openAIMikesBlogFileId: file-aSFmYzpNXVs2It98SamAzSdh
 ---
 
 <object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/Main.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
@@ -86,7 +85,7 @@ Once I had the level populating I started getting the basics of the physics sort
 
 Once I realised this fact it made my life a whole lot easier. Calculating the physics for the world should now just be a matter of solving a circle against a static grid without rotations. I decided to go with my own physics solution rather one of the existing solutions such as Box2D or Nape as I thought that it should be pretty simple to calculate and I knew from a previous project that using Box2D or Nape would have issues at the joins between tiles.
 
-The solution it turns out took a little longer than I thought but I eventually cracked it. The key was to use the Separating Axis Theorem with Voroni Regions, there is a [great tutorial](https://www.metanetsoftware.com/technique/tutorialA.html) on it over at magnet software, they have a handy SWF that demonstrates the concept really well:
+The solution it turns out took a little longer than I thought but I eventually cracked it. The key was to use the Separating Axis Theorem with Voroni Regions, there is a [great tutorial](https://www.metanetsoftware.com/technique/tutorialA.html) on it over at magnet software, they have a handy SWF thatÂ demonstratesÂ the concept really well:
 
 <object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/A3_circleAABB_VR_sepaxis.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>
 
@@ -180,7 +179,7 @@ On the art side of the project Moh has been making good progress coming up with 
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/07/concept_1.jpg "concept_1")](https://www.mikecann.blog/wp-content/uploads/2012/07/concept_1.jpg)
 
-You may have noticed that currently the game is in Flash. That's because with NME you can target Flash as one of your outputs. This makes developing and testing the game alot easyier (a lot faster to compile and run). I have however been very aware of the problems I could cause myself if I developed the whole game solely in flash and only testing on mobile right at the end. Trying to track down an obscure problem in a fully written game would be a nightmare. So I have been making progress with getting the game to run on my iPhone 4.
+You may have noticed that currently the game is in Flash. That's because with NME you can target Flash as one of your outputs. This makes developing and testing the game alot easyier (a lot faster to compile and run). I have however been very aware of the problems I could cause myself if I developed the whole gameÂ solelyÂ in flash and only testing on mobile right at the end. Trying to track down an obscure problem in a fully written game would be a nightmare. So I have been making progress with getting the game to run on my iPhone 4.
 
 One of the problems I faced (and I banged my against the wall for a while on this one) was that for some reason when the level was populating from the PNG, certain tiles weren't being built. I couldn't for the life of me work out why. To cut a long story short, apparently when building for iOS in Haxe you MUST put the super call in the constructor BEFORE any other call, else the code before the super call in the constructor wont be executed:
 

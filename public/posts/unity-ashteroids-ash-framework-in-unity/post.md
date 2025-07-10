@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/unity-ashteroids-ash-framework-in-unity/cover.jpg
 date: '2014-07-08T10:49:01.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - unity
 title: Unity Ashteroids - Ash Game Framework in Unity
 oldUrl: /unityasteroids/unity-ashteroids-ash-framework-in-unity
-openAIMikesBlogFileId: file-NK5pS5718CdmJZi0VXDWy4wg
 ---
 
 I decided to take a break from the [game development](https://www.mikecann.blog/myprojects/mr-nibbles-3d/mr-nibbles-3d-menus-obscuring/) today to scratch an itch I had had for a while.

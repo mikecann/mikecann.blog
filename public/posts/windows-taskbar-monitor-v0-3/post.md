@@ -1,21 +1,20 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-10-01T10:02:07.000Z"
 tags: []
 title: Windows Taskbar Monitor v0.3
 oldUrl: /c/windows-taskbar-monitor-v0-3
-openAIMikesBlogFileId: file-ZPX3OdDW2eioTOQeHnh5P1Hr
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_01.png "Shot_01")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_01.png)
 
 I have just pushed a few small changes to one of my projects, [Windows Taskbar Monitor](https://code.google.com/p/win7-taskbar-mon/).
 
-One of the users of the app noted that they find it rather annoying having the animated progress bars and asked whether it would be possible to add an option to disable it. I agreed that it could get a little distracting so I added the option to disable the bars.
+One of the users of the app noted that they find it ratherÂ annoyingÂ having the animated progress bars and asked whether it would be possible to add an option to disable it. I agreed that it could get a little distracting so I added the option to disable the bars.
 
 <!-- more -->
 
-While I was there I also added a couple of command line arguments to the app so that you could configure each instance from a shortcut.
+While I was there I also added aÂ coupleÂ of command line arguments to the app so that you could configure each instance from a shortcut.
 
 The options are:
 
@@ -45,8 +44,8 @@ One way to get all three to start with different monitors when windows startup w
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_07.png "Shot_07")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_07.png)
 
-Et voilà when windows starts you should now have three different monitors opening!
+Et voilÃ  when windows starts you should now have three different monitors opening!
 
-I have pushed all the source code and the new binary files to my google code project: [https://code.google.com/p/win7-taskbar-mon/](https://code.google.com/p/win7-taskbar-mon/)
+I have pushed all the source code and the new binary files to my google code project:Â [https://code.google.com/p/win7-taskbar-mon/](https://code.google.com/p/win7-taskbar-mon/)
 
 Enjoy!

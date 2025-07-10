@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-06-18T09:11:43.000Z'
 tags: []
 title: Dry spell
 oldUrl: /misc/dry-spell
-openAIMikesBlogFileId: file-wBIaPrIK7esseAthcc4bSeR3
 ---
 
 Well I have just started a new job in a new town. Well actually the job nor the town is that new as I worked here two years ago during my placement year. The town, Manchester, the company Rockpool Games.

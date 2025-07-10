@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-10-05T17:49:44.000Z'
 tags: []
 title: My Skydive!
 oldUrl: /photos-personal/my-skydive
-openAIMikesBlogFileId: file-sRWSuWLoB7MNDJ7ipnlTeVHa
 ---
 
 Okay well as some of you know i did a skydive a while back. Just got the video of it in the post today, and with some fancy hocus pocus i have edited together this for your enjoyment:

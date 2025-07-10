@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-05-05T20:01:22.000Z'
 tags: []
 title: TowerDefence - A Slow Beginning
 oldUrl: /c/towerdefence-a-slow-beginning
-openAIMikesBlogFileId: file-HbQr9jBXSpDkdLXbscCRb9vT
 ---
 
 ![](https://www.mikecann.blog/Work/TDProject/engine02.png)

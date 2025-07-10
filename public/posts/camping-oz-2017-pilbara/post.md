@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2017-04-22T02:02:00.000Z'
 tags:
@@ -8,12 +8,11 @@ tags:
   - travel
 title: Camping Oz 2017 - Pilbara
 oldUrl: /above-under/camping-oz-2017-pilbara
-openAIMikesBlogFileId: file-PtKqgP2gogJCMiRAVoa3qrMe
 ---
 
 **This post was copied from my site [AboveUnder.com](https://aboveunder.com) a site dedicated to my travel drone photography.**
 
-Karijini is a destination we have been looking forward to for a while. We are keen to get stuck into another one of our passions (other than drone photography); hiking.
+Karijini is a destination we have been looking forward to for a while. We are keen toÂ get stuck into another one of our passions (other than drone photography); hiking.
 
 <!-- more -->
 

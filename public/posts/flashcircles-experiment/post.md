@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-10-02T19:03:26.000Z'
 tags: []
 title: FlashCircles Experiment (+Source)
 oldUrl: /flash/flashcircles-experiment
-openAIMikesBlogFileId: file-GkUBL9EVigYUtCs8ir4XAw0H
 ---
 
 I was in the pub yesterday with Toni and some friends and we saw a painting on the wall that was compleately made up of circles of various sizes with varying borders and none of the circles overlapped.

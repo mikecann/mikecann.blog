@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-3d-menus-obscuring/cover.jpg
 date: '2014-07-05T00:58:51.000Z'
 tags: []
 title: Mr Nibbles 3D - Menus & Obscuring
 oldUrl: /mr-nibbles-3d/mr-nibbles-3d-menus-obscuring
-openAIMikesBlogFileId: file-39yEqZNNDBtmgitE4Q43Sjm6
 ---
 
 While experimenting around with rotating in more than just one axis I ran into an issue. When rotating you can obscure the camera with the level. It would be possible to construct levels such that they can't be rotate into a position that anything would be obscured but it would severely restrict the number and type of levels I could build.

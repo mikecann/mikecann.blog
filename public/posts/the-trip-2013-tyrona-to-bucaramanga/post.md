@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-09-21T12:00:14.000Z"
 tags:
@@ -11,7 +11,6 @@ tags:
   - tyrona
 title: The Trip 2013 - Tyrona to Bucaramanga
 oldUrl: /2013-trip/the-trip-2013-tyrona-to-bucaramanga
-openAIMikesBlogFileId: file-yW2OWTiyarEalEQuLvuwKy2Z
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - Tyrona to Bucaramanga](https://www.facebook.com/media/set/?set=a.10151899189516031.1073741847.593661030&type=1&l=807a813e7f). Each picture can be clicked to see a larger version and comment / like.**

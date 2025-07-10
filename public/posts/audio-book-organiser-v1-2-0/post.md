@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-01-09T19:37:42.000Z"
 tags:
@@ -13,7 +13,6 @@ tags:
   - utility
 title: Audio Book Organiser v1.2.0
 oldUrl: /actionscript/audio-book-organiser-v1-2-0
-openAIMikesBlogFileId: file-8itQm1Eogj7os8o7iAXDQAKi
 ---
 
 [![ScreenHunter_01 Jan. 09 18.34](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg "ScreenHunter_01 Jan. 09 18.34")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-09-18.34.jpg)

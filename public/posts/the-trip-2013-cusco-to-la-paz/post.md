@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-11-22T16:45:58.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - travel
 title: The Trip 2013 - Cusco to La Paz
 oldUrl: /2013-trip/the-trip-2013-cusco-to-la-paz
-openAIMikesBlogFileId: file-yj5leq0ycDjJPmO8zmZUz6LR
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Cusco to La Paz](https://www.facebook.com/media/set/?set=a.10152050714101031.1073741854.593661030&type=1&l=3bf97b28f4). Each picture can be clicked to see a larger version and comment / like.**

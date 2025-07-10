@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-05-16T15:07:13.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - update
 title: Mike Cann & Social Networks
 oldUrl: /projects/mike-cann-social-networks
-openAIMikesBlogFileId: file-FrSg44INmn8I6hvmg6C8emjJ
 ---
 
 Well as it appears that every day there is a new "Must Join" social network and I appear to have joined most of them I thought I would write a little rundown post of where you can find my digital presence.
@@ -36,7 +35,7 @@ Ahh Twitter, that strange little service that is just sooo addictive! Find me, f
 
 [https://soundcloud.com/mike-cann](https://soundcloud.com/mike-cann)
 
-Not exactly  social network, but still find a collection of my mixes ;)
+Not exactly Â social network, but still find a collection of my mixes ;)
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/05/ScreenHunter_05-May.-16-14.57.gif "ScreenHunter_05 May. 16 14.57")](https://picasaweb.google.co.uk/mike.cann)
 

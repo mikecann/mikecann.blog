@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/unity-helper-enumerate-resources/cover.jpg
 date: '2014-06-04T01:48:28.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - util
 title: Unity Helper - Enumerate Resources
 oldUrl: /c/unity-helper-enumerate-resources
-openAIMikesBlogFileId: file-Z97Aps8Ah6tjyBW6hZ2KPwPa
 ---
 
 Following on from [yesterdays post](https://www.mikecann.blog/programming/unity-helpers-utilities-and-extensions-for-unity/) on my [Unity-Helpers](https://github.com/mikecann/Unity-Helpers) I have added another utility to the library.

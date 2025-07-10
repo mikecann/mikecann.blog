@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-06-25T18:54:18.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - music
 title: "New Mix: Artificial - Intelligence"
 oldUrl: /audio/new-mix-artificial-intelligence
-openAIMikesBlogFileId: file-WY1srNryZaBgXzYpEd7y5FU3
 ---
 
 ![aiimage](https://www.mikecann.blog/wp-content/uploads/2009/06/aiimage.gif "aiimage")

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-09-17T07:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - business
   - gangbusters
 title: BattleTabs Global Launch on Discord Activities
-openAIMikesBlogFileId: file-802UFT3PSJBpZvskbMvewW8I
 ---
 
 For the [longest time](https://mikecann.blog/posts/battletabs-6-months-later), Gangbusters has been a Discord-focused company. We use it as our primary method of interacting with our community, receiving bug reports, and gathering feature suggestions.
@@ -18,7 +17,7 @@ Discord is a game-focused social platform where many players are hanging out wit
 
 ![](./battletabs-in-the-app-drawer.png)
 
-In addition to reducing the discovery friction for BattleTabs, Discord also offers a number of other compelling advantages. One of these is the ability to directly message players (we had early access to this feature). We currently use it as another Push Notification channel, but it’s so much more powerful than that—we’ve barely scratched the surface of what’s possible.
+In addition to reducing the discovery friction for BattleTabs, Discord also offers a number of other compelling advantages. One of these is the ability to directly message players (we had early access to this feature). We currently use it as another Push Notification channel, but itâ€™s so much more powerful than thatâ€”weâ€™ve barely scratched the surface of whatâ€™s possible.
 
 ![](./discord-dms.png)
 
@@ -28,7 +27,7 @@ Super-fast and friction-free payments are another strong benefit of using Discor
 
 There are many other strong reasons to be excited about the Discord platform for games, especially when you read about the [incredible success](https://mojiworks.com/news/why-were-all-in-on-discord-activities) stories [from](https://a16z.com/discord-activities-social-gaming/) other [developers](https://discord.com/build-case-studies/frvr). You can see why we were keen to get on there.
 
-Fast forward a year or two, and after much hard work by [Brandon](https://www.gangbusters.io/about), we found ourselves in the inner circle as one of Discord’s Developer Partners. The process of getting BattleTabs on Discord had begun.
+Fast forward a year or two, and after much hard work by [Brandon](https://www.gangbusters.io/about), we found ourselves in the inner circle as one of Discordâ€™s Developer Partners. The process of getting BattleTabs on Discord had begun.
 
 The first step was a "geo test" or soft launch, focusing on Canada. This was an opportunity for Discord to see how the game performed before deciding whether to move forward with a global launch.
 
@@ -48,7 +47,7 @@ And this is where the fun started. To explain the issues we were soon to face, I
 
 ![](./architecture1.png)
 
-You can see from the above diagram that we have two different kinds of servers. Users connect to the "Web" servers via WebSockets, these scale out horizontally and generally aren’t a problem.
+You can see from the above diagram that we have two different kinds of servers. Users connect to the "Web" servers via WebSockets, these scale out horizontally and generally arenâ€™t a problem.
 
 The other kind is the "worker" server. This is a singleton server and was serving many roles (foreshadowing). Some of its responsibilities include:
 
@@ -57,7 +56,7 @@ The other kind is the "worker" server. This is a singleton server and was servin
 + Listening to database events and performing logic, such as alerting web servers to update subscribed users when their currency values change (due to rewards or other events).
 + Handling tasks like cheat detection, server metrics reporting, Discord server bot management, Discord live reporting, and more.
 
-I was aware that the worker was a bottleneck in the architecture, but up to now, it hadn’t been an issue. The worker usually sat at a very low CPU and memory level.
+I was aware that the worker was a bottleneck in the architecture, but up to now, it hadnâ€™t been an issue. The worker usually sat at a very low CPU and memory level.
 
 Regardless, I beefed the worker up to the largest size that [our hosting supported](https://fly.io/docs/about/pricing/).
 
@@ -87,13 +86,13 @@ So although the game was in a semi-broken state, I went to bed thinking that at 
 
 ![](./4m.png)
 
-... well sh*t ... this isn’t good...
+... well sh*t ... this isnâ€™t good...
 
 It turns out that while I was sleeping, we had some "good" news from our friends at Discord...
 
 ![](./moving-you-up-to-rank-4.png)
 
-Ah, crap... I knew at this point I had to take action. This queue wasn’t going to clear itself.
+Ah, crap... I knew at this point I had to take action. This queue wasnâ€™t going to clear itself.
 
 I asked Discord to drop us back down the list. As painful as it was to request LESS traffic, I needed to buy us some breathing room.
 
@@ -103,7 +102,7 @@ So I created a new kind of server called an "eventsWorker." This server took muc
 
 ![](./architecture2.png)
 
-There was a risk of out-of-order event processing, but I carefully examined each event and realized there wasn’t much event-order dependence, particularly between users. Anything that was dependent, I could likely fix later.
+There was a risk of out-of-order event processing, but I carefully examined each event and realized there wasnâ€™t much event-order dependence, particularly between users. Anything that was dependent, I could likely fix later.
 
 This realization gave me the confidence to scale up the number of eventsWorker instances. However, this put a huge strain on the database, so I scaled it up to the largest size that Fly would allow.
 
@@ -125,7 +124,7 @@ To explain what I mean, let's take an example event, `matchFinished`. (By the wa
 + HighScoresService - to update highscore stats
 + MedalAwardingService - to potentially award a user a new medal
 + UserChatDetectionService - to check for abuse if a user plays the same person multiple times
-+ UserStatsService - to update a user’s stats
++ UserStatsService - to update a userâ€™s stats
 + ChallengeUpdatingService - to progress any challenges the user might be on
 + TVChannelsService - to update any playing BattleTabsTV instances
 
@@ -145,27 +144,27 @@ This immediately reduced worker load but increased web server load as expected. 
 
 I went to bed feeling pretty good about things. I did tell Brandon (who is based in the UK) to call me if the servers went down.
 
-I soon fell asleep, fairly confident I would get a good night’s rest...
+I soon fell asleep, fairly confident I would get a good nightâ€™s rest...
 
 # Friday
 
-3:14 a.m. – I got a call from Brandon letting me know that the game was down.
+3:14 a.m. â€“ I got a call from Brandon letting me know that the game was down.
 
-I jumped out of bed and hopped on my PC. Sure enough, things were not looking good and hadn’t been for a couple of hours.
+I jumped out of bed and hopped on my PC. Sure enough, things were not looking good and hadnâ€™t been for a couple of hours.
 
 ![](./friday-morning-graph.png)
 
-This time, it wasn’t immediately obvious what was wrong. It appeared that the worker process was running out of memory. I attempted some desperate fixes but wasn’t sure about the underlying reason.
+This time, it wasnâ€™t immediately obvious what was wrong. It appeared that the worker process was running out of memory. I attempted some desperate fixes but wasnâ€™t sure about the underlying reason.
 
 ![](./desperate-commit-log.png)
 
-By 4:30 a.m. my brain really wasn’t working properly. I felt like the game was stable, so I decided to get an hour of sleep.
+By 4:30 a.m. my brain really wasnâ€™t working properly. I felt like the game was stable, so I decided to get an hour of sleep.
 
 ### Later on Friday
 
 Awake and rested, I realized what the problem might be.
 
-As previously mentioned, one of the worker server’s responsibilities was:
+As previously mentioned, one of the worker serverâ€™s responsibilities was:
 
 > Polling the database for matchmaking, AI turn-taking, daily shop reward rotations, etc.
 
@@ -185,17 +184,17 @@ Much like my app events problem earlier, I knew the solution would be paralleliz
 
 So, I carefully moved the polling code over to the eventsWorker instances. I was very nervous about this, as I knew that allowing multiple servers to poll the database simultaneously risked race conditions and other problems due to polling overlaps.
 
-My solution was to carefully place [distributed locks](https://github.com/mike-marcacci/node-redlock) to ensure that two different workers couldn’t work on the same item from a polling queue simultaneously.
+My solution was to carefully place [distributed locks](https://github.com/mike-marcacci/node-redlock) to ensure that two different workers couldnâ€™t work on the same item from a polling queue simultaneously.
 
 This solution worked well, and I soon had the polling queues back under control.
 
 ![](./polling-under-control-graph.png)
 
-That’s when disaster struck...
+Thatâ€™s when disaster struck...
 
 ![](./slack-to-brandon-wild-db-growth.png)
 
-I had been keeping a close eye on our database’s growth, knowing that if we ran out of space, it would put a hard stop to the game.
+I had been keeping a close eye on our databaseâ€™s growth, knowing that if we ran out of space, it would put a hard stop to the game.
 
 Well, it turns out that with all the chaos of the past 12 hours, I forgot to check the DB size, and it had grown wildly. It finally ran out of space and started refusing connections.
 
@@ -205,7 +204,7 @@ Fortunately, I was looking at the logs when I saw this message go by:
 
 It turns out that pgboss, our app events queuing and jobs system, was timing out when trying to archive completed jobs. I ran a quick query against the database and saw over 7 million event rows waiting to be archived, with another 3 million waiting to be deleted.
 
-It seems like pgboss wasn’t designed to handle this scenario very well and was erroring out during its archival and deletion routines.
+It seems like pgboss wasnâ€™t designed to handle this scenario very well and was erroring out during its archival and deletion routines.
 
 My solution was to manually delete all 10 million rows from the database immediately. This instantly freed up 70 GB of space. I then ran a [Postgres VACUUM](https://www.postgresql.org/docs/current/sql-vacuum.html) to clear up any deleted tuples.
 
@@ -219,36 +218,36 @@ I woke up, hopped on my PC, and to my dismay, saw that my "worker stopped" alert
 
 ![](./slack-message-alert-worker-stopped.png)
 
-Fortunately, it didn’t take long to track down that this time the worker hadn’t actually gone down. The alert had triggered because [Axiom](https://axiom.co/) (our log aggregation tool) had stopped receiving log messages. This happened because our "[log shipper](https://github.com/superfly/fly-log-shipper)" instance had died.
+Fortunately, it didnâ€™t take long to track down that this time the worker hadnâ€™t actually gone down. The alert had triggered because [Axiom](https://axiom.co/) (our log aggregation tool) had stopped receiving log messages. This happened because our "[log shipper](https://github.com/superfly/fly-log-shipper)" instance had died.
 
-I still don’t know why or how this happened, but I quickly gave it a poke, and things were up and running again.
+I still donâ€™t know why or how this happened, but I quickly gave it a poke, and things were up and running again.
 
 From the Grafana logs on the servers, it appeared that everything had been fine overnight, much to my relief.
 
-I think I’m going to leave the day-by-day commentary here, but I believe you’ve got a good sense of the firefight I was putting up at this point.
+I think Iâ€™m going to leave the day-by-day commentary here, but I believe youâ€™ve got a good sense of the firefight I was putting up at this point.
 
 # Lessons
 
 So what lessons did I learn from all this?
 
-1. **Be wary of queues**. Anytime you’re building something that could get backed up if you 10x or 100x your traffic, it’s wise to deal with it now or, at the very least, get some metrics around it so you can keep an eye on it.
+1. **Be wary of queues**. Anytime youâ€™re building something that could get backed up if you 10x or 100x your traffic, itâ€™s wise to deal with it now or, at the very least, get some metrics around it so you can keep an eye on it.
 
 2. **Single points of failure are ticking time bombs**. For the same reasons as above, be cautious of any places that cannot scale horizontally.
 
-3. **Use Axiom**. It’s fast, cheap, and powerful. Log everything, then build graphs.
+3. **Use Axiom**. Itâ€™s fast, cheap, and powerful. Log everything, then build graphs.
 
 ![](./axiom-pricing.png)
 
-500GB on the free tier? That’s just insane.
+500GB on the free tier? Thatâ€™s just insane.
 
-To put it into perspective: despite all the spam we produced over the past week, we’ve amassed 54 million log lines, amounting to just 17GB of space, which is only 1GB compressed!
+To put it into perspective: despite all the spam we produced over the past week, weâ€™ve amassed 54 million log lines, amounting to just 17GB of space, which is only 1GB compressed!
 
 ![](./axiom-dataset-logs.png)
 
-4. **Load test if you can** before you expect a large increase in traffic. Even if you can’t easily hit the expected numbers on your local machine, it should at least hint at where bottlenecks might occur.
+4. **Load test if you can** before you expect a large increase in traffic. Even if you canâ€™t easily hit the expected numbers on your local machine, it should at least hint at where bottlenecks might occur.
 
 # Conclusions & Thanks
 
-It’s still a bit early to talk about the results of all this traffic on the business, but things are going well.
+Itâ€™s still a bit early to talk about the results of all this traffic on the business, but things are going well.
 
 I would like to thank the special people at Discord who took a chance on us and were very patient while we fought through these problems. :)

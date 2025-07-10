@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-10-25T22:19:09.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - version
 title: Inputtie - Version 0.1.6
 oldUrl: /inputtie/inputtie-version-0-1-6
-openAIMikesBlogFileId: file-cDrsVIuOAEyYoU2Ybqpxsz4l
 ---
 
 Made a few small stability changes with Inputtie tonight, thought I would share.

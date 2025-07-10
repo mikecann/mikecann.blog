@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-01-05T15:07:37.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - photos
 title: Manchester Snow Women
 oldUrl: /photos-personal/manchester-snow-women
-openAIMikesBlogFileId: file-6n8iAno3eYb0Vj3omaYKagtI
 ---
 
 Well, this is just incredible, I dont think in my lifetime I have EVER seen so much snow in the UK letalone the city where it NEVER snows, Manchester.

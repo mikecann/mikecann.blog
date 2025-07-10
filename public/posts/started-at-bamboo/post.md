@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-07-15T14:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - react native
 title: Started At Bamboo
 oldUrl: /employment/started-at-bamboo
-openAIMikesBlogFileId: file-WpiCfPAvQ93ssmftTL5juYNv
 ---
 
 Just a quick employment update today.

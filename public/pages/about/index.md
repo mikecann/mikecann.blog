@@ -1,6 +1,5 @@
 ---
 date: 2007-09-14 16:25:48
-openAIMikesBlogFileId: file-NQ33YPlykfxMZizEp13t3U8a
 ---
 
 [![Me Professional](https://www.mikecann.blog/wp-content/uploads/2007/09/Me-Professional.png)](https://www.mikecann.blog/wp-content/uploads/2007/09/Me-Professional.png)

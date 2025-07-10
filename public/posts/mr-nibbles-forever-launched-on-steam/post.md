@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-launched-on-steam/cover.jpg
 date: '2016-05-01T04:03:47.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - publishing
 title: Mr Nibbles Forever - Launched on Steam
 oldUrl: /mr-nibbles-forever/mr-nibbles-forever-launched-on-steam
-openAIMikesBlogFileId: file-PO0g4WXGApQSnX0fI7MdK5g9
 ---
 
 Yesterday marked the culmination of many months of hard work, we [released Mr Nibbles Forever to the Steam store](https://store.steampowered.com/app/448050/)!

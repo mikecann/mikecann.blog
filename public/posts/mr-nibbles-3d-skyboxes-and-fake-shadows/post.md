@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-3d-skyboxes-and-fake-shadows/cover.jpg
 date: '2014-07-09T07:16:04.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - skybox
 title: Mr Nibbles 3D - Skyboxes and Fake Shadows
 oldUrl: /mr-nibbles-3d/mr-nibbles-3d-skyboxes-and-fake-shadows
-openAIMikesBlogFileId: file-rXAPCIrq2bONUEAVvhyaqeE1
 ---
 
 After that [short interlude](https://www.mikecann.blog/myprojects/unityasteroids/unity-ashteroids-ash-framework-in-unity/) im back to games development. This time its more work on Mr Nibbles 3D.

@@ -1,19 +1,18 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-08-15T18:56:59.000Z"
 tags: []
 title: Improve Flash Builder Performance and Compile Times by 30%
 oldUrl: /actionscript/improve-flash-builder-performance-and-compile-times-by-30
-openAIMikesBlogFileId: file-QGfwzCaj5IlG0upB0YQL1D2v
 ---
 
-I spend most of my working day and sometimes my evenings and weekends coding in Flash Builder. Flash Builder is the main professional coding environment for Actionscript and MXML and is sold by Adobe.
+I spend most of my working day and sometimes my evenings and weekends coding in Flash Builder. Flash Builder is the main professional codingÂ environmentÂ for Actionscript and MXML and is sold by Adobe.
 
 <!-- more -->
 
 Its fairly okay as an IDE, not the best but not the worst also. I wont go into all of Flash Builders' problems (I would be here forever) but instead want to talk about one key way you can improve your efficiency when working in Flash Builder.
 
-Firstly the test environment :
+Firstly the testÂ environmentÂ :
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_01.gif "screenshot_01")](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_01.gif)
 
@@ -31,7 +30,7 @@ I have two projects to test these compile times with. Using [RichCodeAnalyser](h
 
 Both projects have a mixture of MXML and AS files as well as employing several .swc libraries.
 
-Ill be testing two different scenarios. 1 complete build from clean. 2\. a single line change in the Main class. Ill run each test three times and take the average. I close FB down between projects just in-case there is any memory caching limiting the performance. All builds are built in debug mode using various different Flex SDK versions.
+Ill be testing two different scenarios. 1 complete build from clean. 2\. a single line change in the Main class. Ill run each test three times and take the average. I close FB down between projects justÂ in-caseÂ there is any memory caching limiting the performance. All builds are built in debug mode using various different Flex SDK versions.
 
 So using the vanilla install of Flash Builder 4.6:
 
@@ -39,7 +38,7 @@ So using the vanilla install of Flash Builder 4.6:
 
 Not a good start. The two projects wont even compile. They get so far through the build then crash, not just the compiler but the entire IDE itself, ugh!
 
-So the first improvement is to up the amount of memory that Flash Builder has. Incredibly  (in this day and age) you have to manually do this, it isn't built into Flash Builder (which is built on Eclipse). So to do this you need to edit the FlashBuilder.ini found (on my machine) at:
+So the first improvement is to up the amount of memory that Flash Builder has. Incredibly Â (in this day and age) you have to manually do this, itÂ isn'tÂ built into Flash Builder (which is built on Eclipse). So to do this you need to edit the FlashBuilder.ini found (on my machine) at:
 
 ```
 

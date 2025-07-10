@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2005-03-27T21:59:15.000Z'
 tags: []
 title: BumpSpace
 oldUrl: /c/bumpspace-spring-2005
-openAIMikesBlogFileId: file-CRK9T42zgsemhsvvfAsuhqT5
 ---
 
 This was a tech demo I created for one of my final projects in my second year of university. Due to the severe time restrictions at the end of the term i wasnt able to do the project i wanted to (ToyTown MMORPG) so insted of trying to struggle and force a large project into a small time frame i decided not to do a MMORPG.

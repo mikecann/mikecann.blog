@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-08-19T09:51:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - personal
 title: Chat for Trello - a Trello Chat Rewrite
 oldUrl: /misc/chat-for-trello-a-trello-chat-rewrite
-openAIMikesBlogFileId: file-416xF8MFDmhuIDknqXB6ZGay
 ---
 
 In the [spirit of repeating myself](http://mikecann.blog/tasks-for-trello/tasks-for-trello-a-trello-tasks-rewrite/). I have decided to rewrite another one of my chrome extensions.
@@ -37,7 +36,7 @@ So this time around I decided if I was going to do a rewrite, I might as well re
 
 # Rewrite?
 
-So the decision to do a rewrite rather than an upgrade was partly because of the name and partly because I was going to have to make changes to Trello Chat for GDPR compliance. I also realized that Trello Chat was built using (what seems like) ancient coding practices so I decided in my typical naïve way that I should just start again, it shouldnt take too long, right?
+So the decision to do a rewrite rather than an upgrade was partly because of the name and partly because I was going to have to make changes to Trello Chat for GDPR compliance. I also realized that Trello Chat was built using (what seems like) ancient coding practices so I decided in my typical naÃ¯ve way that I should just start again, it shouldnt take too long, right?
 
 Well it took about twice as long as I was expecting, but I am happy with the way it turned out.
 

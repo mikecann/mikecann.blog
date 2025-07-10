@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2022-02-20T07:31:40.000Z'
 tags:
   - personal
   - freediving
 title: Under Da Sea
-openAIMikesBlogFileId: file-DhqLloGuDY7EhixffK5rRwJy
 ---
 
 Ever since I was a baby I have loved the water. I remember always enjoying going under the water and holding my breath while I challenged my mates to see who could stay under the longest.

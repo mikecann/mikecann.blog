@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-12-08T20:53:22.000Z"
 tags:
@@ -11,7 +11,6 @@ tags:
   - uraguay
 title: The Trip 2013 - La Paz to Mercedes
 oldUrl: /2013-trip/the-trip-2013-la-paz-to-mercedes
-openAIMikesBlogFileId: file-ARYcsguhHtfbZOscvpx3DUum
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album Trip 2013 - La Paz to Mercedes. Each picture can be clicked to see a larger version and comment / like.**

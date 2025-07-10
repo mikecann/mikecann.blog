@@ -1,12 +1,11 @@
----
+﻿---
 coverImage: ./header.jpg
 date: "2025-07-10T07:31:40.000Z"
 tags:
   - ai
-  - ui
-  - prediction
+  - coding
+  - thought
 title: The Future of Applications
-openAIMikesBlogFileId: file-T818UneCJzOR0ze09OD0xwjX
 ---
 
 **_TLDR; How I think the forgotten art of Test Driven Development is the solution to vibe coding at scale._**
@@ -21,7 +20,7 @@ Well fast-forward to 2025 and tools like [Bolt](https://bolt.new/), [Lovable](ht
 
 When you vibe code you are cruise-controlling your way though app development.
 
-You prompt the AI for a new feature or request a change to something existing. You then just sit back as it does its thing. You then just check that your app still works and accept the code changes usually without inspecting them, you are going purely on “vibes”.
+You prompt the AI for a new feature or request a change to something existing. You then just sit back as it does its thing. You then just check that your app still works and accept the code changes usually without inspecting them, you are going purely on â€œvibesâ€.
 
 Doesn't this sound awfully a lot like what I predicted back in 2022?
 
@@ -43,7 +42,7 @@ Well the problem is that it turns out it kind of does matter as I discovered aft
 
 I made a video about it if you want to watch me recount the horrors of that adventure:
 
-https://www.youtube.com/watch?v=IV36_9QNF9w
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IV36_9QNF9w?si=PmG7Mq2I4XEdDoA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 If you aint got time for dat then no worries, the TLDR; is that just like human coding, vibe coding falls over beyond a certain point because the AI desperately tries implement whatever half-baked request asked of it without much thought for the architecture or maintainability of the application.
 
@@ -51,7 +50,7 @@ This is one of those key distinctions between Junior and Senior human software d
 
 A more senior developer has had enough time to lie in the bed they have shit in and thus know that you have to spend time thinking about the code structure otherwise you will inevitably run into maintainability issues down the road.
 
-We even have a term for this phenomenon: “technical debt”.
+We even have a term for this phenomenon: â€œtechnical debtâ€.
 
 ## Solving AI Tech Debt
 
@@ -59,15 +58,15 @@ So what has this got to do with my 2022 prediction?
 
 Well right at the end of the article I mentioned this:
 
-> I guess in some aspects this is the ultimate promise of [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development). We specify in written english what the system under test should do and dont care about how it does it so long as it does it.
+> I guess in some aspects this is the ultimate promise ofÂ [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development). We specify in written english what the system under test should do and dont care about how it does it so long as it does it.
 
 What I meant by that is that even though you can prompt your way to a solution of some sort the output is only as valid for as long as the LLM remembers or cares to pay attention to your prompt.
 
 The issue everyone is currently facing with vibe coding is that as a codebase grows in size the AI just like a human looses the ability to keep it all in context and thus forgets some of your previous requirements.
 
-This leads to what I sometimes describe as “carpet fitting”. You ask the AI to change the thing over here but it ends up breaking the other thing over there.
+This leads to what I sometimes describe as â€œcarpet fittingâ€. You ask the AI to change the thing over here but it ends up breaking the other thing over there.
 
-What we need is a way to make our prompts “verifiably correct” now and in the future. That way as we make subsequent prompts the AI and us are able to verify that our earlier prompts still hold true.
+What we need is a way to make our prompts â€œverifiably correctâ€ now and in the future. That way as we make subsequent prompts the AI and us are able to verify that our earlier prompts still hold true.
 
 Well fortunately the software industry has just the solution to this conundrum that it has been fine art over decades: **Automated Testing** or more specifically **Test Driven Development** (TDD).
 

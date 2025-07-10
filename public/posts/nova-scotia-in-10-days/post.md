@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-06-17T20:11:27.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - trip
 title: Nova Scotia in 10 Days
 oldUrl: /misc/nova-scotia-in-10-days
-openAIMikesBlogFileId: file-KJBWxrt20pnnPOOrN8cjHa66
 ---
 
 [![novampa](https://www.mikecann.blog/wp-content/uploads/2009/06/novampa.jpg "novampa")](https://picasaweb.google.co.uk/lh/albumMap?uname=mike.cann&aid=5348332286173974433#map)
@@ -26,7 +25,7 @@ We set sail on the sixth of the sixth month of the calendar. The sailing was gen
 .. after the brutal seas around the harbour we were sure in need of a stiff drink, so off we went to the local brewers..
 [![](https://lh4.ggpht.com/_vZ6zE_QJfu0/SjkYLOayB2I/AAAAAAAAZW8/DEXdf66YJcA/s400/DSC03760.JPG)](https://picasaweb.google.co.uk/lh/photo/mmRkh69o8lzxlNxMaZkSkA?feat=embedwebsite)
 
-..the locals however were somewhat queer with allÂ theirÂ dancin' and clappin' and such..
+..the locals however were somewhat queer with allÃ‚Â theirÃ‚Â dancin' and clappin' and such..
 [![](https://lh4.ggpht.com/_vZ6zE_QJfu0/SjkYQJcuQ2I/AAAAAAAAZXc/wTrr-YsCI_g/s400/DSC03765.JPG)](https://picasaweb.google.co.uk/lh/photo/JmR2bnxs45Gtcc77vCJz3g?feat=embedwebsite)
 
 ...red beard was gettin' somewhat restless and had to be reminded of the rules of the establishment...
@@ -35,7 +34,7 @@ We set sail on the sixth of the sixth month of the calendar. The sailing was gen
 ..with that gruff reminder we took our leave in search of a less queer watering hole...
 [![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkYTuaqyNI/AAAAAAAAZXs/CBBmrYeKyE8/s400/DSC03771.JPG)](https://picasaweb.google.co.uk/lh/photo/8sgEww_D3go2-j43hmpfUA?feat=embedwebsite)
 
-...with that old red beard was able to find himself a niceÂ Frenchie mistress for the evening..
+...with that old red beard was able to find himself a niceÃ‚Â Frenchie mistress for the evening..
 [![](https://lh4.ggpht.com/_vZ6zE_QJfu0/SjkYZeRlz1I/AAAAAAAAZYQ/MgB_rrOKK8Q/s400/DSC03779.JPG)
 ](https://picasaweb.google.co.uk/lh/photo/n5KSP6eu6qOoBvxHAbKKzw?feat=embedwebsite)[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkYa9XGMQI/AAAAAAAAZYc/4oQEgMjBD9I/s400/DSC03780.JPG)](https://picasaweb.google.co.uk/lh/photo/zTUq4DIsNUcuU7sSC8dLaw?feat=embedwebsite)
 
@@ -129,7 +128,7 @@ We was swift in departin the dreary camp and its crazy drunken sailors..
 And off again we scamper, this time we sail down the eastern shore away from Cape Breton..
 [![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka1Hvg1LI/AAAAAAAAZl4/U7TlSyTJ0qI/s400/DSC03943.JPG)](https://picasaweb.google.com/lh/photo/q5BXcJ7ndpN6iLV_BX83qg?feat=embedwebsite)
 
-..thar we found some sand with which to enjoy ourÂ maritimeÂ sea tales..
+..thar we found some sand with which to enjoy ourÃ‚Â maritimeÃ‚Â sea tales..
 [![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka5s3WiyI/AAAAAAAAZmU/anRwR-MiByA/s400/DSC03948.JPG)](https://picasaweb.google.com/lh/photo/IjO0n7uHfT3DOklRKh6GTQ?feat=embedwebsite)
 [![](https://lh4.ggpht.com/_vZ6zE_QJfu0/Sjka8ShJDeI/AAAAAAAAZmc/hYe6MbP1arc/s400/DSC03950.JPG)](https://picasaweb.google.com/lh/photo/SAk2nP0B1ZmV6p6KDBepsA?feat=embedwebsite)
 [![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka9q0CmBI/AAAAAAAAZmo/Y6L-KiiX0EU/s400/DSC03952.JPG)](https://picasaweb.google.com/lh/photo/7piRRM6vT_AvFcP47saD6g?feat=embedwebsite)

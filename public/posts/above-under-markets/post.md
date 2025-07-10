@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2017-12-11T14:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - market
 title: Above Under - Markets
 oldUrl: /above-under/above-under-markets
-openAIMikesBlogFileId: file-yS60oE96YAqB17tpuzJSCO8s
 ---
 
 For the past couple of weeks I have run a Sunday market stall for my side-project-business Above Under. Its my first time ever running a stall and its been a really interesting experience thus far.

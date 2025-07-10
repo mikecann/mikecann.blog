@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-06-23T11:12:50.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - trip
 title: The Trip 2013 - Guadalajara to Mexico City
 oldUrl: /td-project/the-trip-2013-guadalajara-to-mexico-city
-openAIMikesBlogFileId: file-8QZGY3iVHYBAnttkbv3TadKp
 ---
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/06/screenshot_021.png)

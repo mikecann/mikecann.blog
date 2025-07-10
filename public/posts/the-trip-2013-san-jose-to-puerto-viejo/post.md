@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-08-13T14:08:48.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - world
 title: The Trip 2013 - San Jose to Puerto Viejo
 oldUrl: /2013-trip/the-trip-2013-san-jose-to-puerto-viejo
-openAIMikesBlogFileId: file-wUUWdl91xTPWOZL2VYMO1wuP
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - San Jose to Puerto Viejo](https://www.facebook.com/media/set/?set=a.10151813853231031.1073741843.593661030&type=1&l=0b304b75a9). Each picture can be clicked to see a larger version and comment / like.**

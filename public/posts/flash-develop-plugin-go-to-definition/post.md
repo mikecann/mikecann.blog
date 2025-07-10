@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/flash-develop-plugin-go-to-definition/cover.jpg
 date: '2009-05-11T19:08:39.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - projects
 title: 'Flash Develop Plugin: Go To Definition'
 oldUrl: /c/flash-develop-plugin-go-to-definition
-openAIMikesBlogFileId: file-OK3tIGiOnlFHJxqVHyXdewI6
 ---
 
 **Go To Definition**

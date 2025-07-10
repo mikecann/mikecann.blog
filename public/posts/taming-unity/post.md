@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/taming-unity/cover.jpg
 date: '2014-04-26T00:42:52.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - unit testing
 title: Taming Unity
 oldUrl: /c/taming-unity
-openAIMikesBlogFileId: file-WeNWwEfR9A0QQMyeHMursrsg
 ---
 
 ![logo](https://www.mikecann.blog/wp-content/uploads/2014/04/logo.png)

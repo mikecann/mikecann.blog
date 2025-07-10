@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/tech-camps-4-kids/cover.jpg
 date: '2016-10-02T01:57:08.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - juge
 title: Tech Camps 4 Kids
 oldUrl: /photos-personal/tech-camps-4-kids
-openAIMikesBlogFileId: file-SXYjft0tWAPkhVm8zs2EEKne
 ---
 
 I started coding when I was 7 years old at a school-holidays computer camp in the UK. We used QBASIC to write a "guess my number game". I remember writing that same program out on the school library computers to the amazement of my mates who insisted that I show them how to do it too.

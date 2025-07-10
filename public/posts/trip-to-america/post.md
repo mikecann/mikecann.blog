@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-07-20T09:51:41.000Z'
 tags: []
 title: Trip to America
 oldUrl: /photos-personal/trip-to-america
-openAIMikesBlogFileId: file-IlI6P8oKbrtK4BVYDXa5CWWY
 ---
 
 ![](https://www.trekamerica.com/images/map_w3.jpg)This will be my last post for a while as im going on a 24day holiday to America on Tuesday. Im going with my old school mate Ben and we will be hitting the west coast on a large 21 day camping trip with the group Trek America.

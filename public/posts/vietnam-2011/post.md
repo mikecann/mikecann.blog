@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-09-17T13:57:32.000Z"
 tags:
@@ -7,12 +7,11 @@ tags:
   - vietnam
 title: Vietnam 2011
 oldUrl: /travel/vietnam-2011
-openAIMikesBlogFileId: file-kMb0obXb7GAGIbLQ9DyDGzUw
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/09/title.jpg "title")](https://www.mikecann.blog/wp-content/uploads/2011/09/title.jpg)
 
-So I got back from my two week backpack around Vietnam last week and its taken me a while to upload my holiday snaps. As there are some 300+ (thats after trimming down too) of them  I have decided to so a short writeup of the trip with some of the highlights.
+So I got back from my two week backpack around Vietnam last week and its taken me a while to upload my holiday snaps. As there are some 300+ (thats after trimming down too)Â of them Â I have decided to so a short writeup of the trip with some of the highlights.
 
 <!-- more -->
 
@@ -24,13 +23,13 @@ I left Manchester at 4am on Sat the 27th September, took a flight from London at
 
 [![](https://lh3.googleusercontent.com/-wpFuDmvT8N0/TnBZ7XHdMCI/AAAAAAAAtNk/KthrCJ6pSQk/s640/P1000266.JPG)](https://picasaweb.google.com/lh/photo/2HNQJC_JMj4w0I4pl1_xBw?feat=embedwebsite)
 
-From there it was a short 14 hour flight over to Hanoi, arriving at 8:20am on Sunday. After meeting Martin, my fellow traveller and friend at the airport at 9 we have an hour Taxi journey to the Hotel arriving at around 11am. Making the journey a total of 31 hours (with a +6hour time difference). A quick beer hoi soon took all the stress of the journey away however:
+From there it was a short 14 hour flight over to Hanoi, arriving at 8:20am on Sunday. After meeting Martin, my fellow traveller and friend at the airport at 9 we have an hour Taxi journey to the Hotel arriving atÂ aroundÂ 11am. Making the journey a total of 31 hours (with a +6hour time difference). A quick beer hoi soon took all the stress of the journey away however:
 
 [![](https://lh5.googleusercontent.com/-H8xcqUfKRcY/TnBZ852JN6I/AAAAAAAAtNo/SWV7eusUKy0/s640/P1000267.JPG)](https://picasaweb.google.com/lh/photo/5rxnvuy29YCrLKHCA6_zbg?feat=embedwebsite)
 
-At Less than 30p a glass we weren't complaining.
+At Less than 30p a glass weÂ weren'tÂ complaining.
 
-That first day we did alot of wandering around, checking out some of the things there were to see in our immediate vicinity. We decided to checkout the 'world famous' water puppet show:
+That first day we did alot of wandering around, checking out some of the things there were to see in ourÂ immediateÂ vicinity. We decided to checkout the 'world famous' water puppet show:
 
 <span style="color: #ff0000;">[<span style="color: #ff0000;">![](https://lh6.googleusercontent.com/-wiYI9glU16M/TnBZ3NRFwsI/AAAAAAAAtNc/U9Ydf8y2Cu0/s640/00003.MTS.jpg)</span>](https://picasaweb.google.com/lh/photo/k5XgjUBAMmz9waR8fGBmtQ?feat=embedwebsite)</span>
 <span style="color: #ff0000;"> (video click to view)</span>

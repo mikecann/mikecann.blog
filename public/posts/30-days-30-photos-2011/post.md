@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2011-06-30T18:13:08.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - upload
 title: 30 Days 30 Photos - 2011
 oldUrl: /photos-personal/30-days-30-photos-2011
-openAIMikesBlogFileId: file-6qLrV0t9XQok6lrTB44MecpC
 ---
 
 <embed type="application/x-shockwave-flash" src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="700" height="600" flashvars="host=picasaweb.google.com&hl=en_GB&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Fmike.cann%2Falbumid%2F5624071118328145361%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_GB" pluginspage="https://www.macromedia.com/go/getflashplayer"></embed>

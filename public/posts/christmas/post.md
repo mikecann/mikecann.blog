@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-11-26T23:10:09.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - photos
 title: Christmas..
 oldUrl: /photos-personal/christmas
-openAIMikesBlogFileId: file-N7wOPmtlOo2GiTHQjQQNbHbH
 ---
 
 Well kind of.. We got our very pretty little tree up today:

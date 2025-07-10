@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-12-16T19:10:12.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - pretty
 title: "Particles, Yey!"
 oldUrl: /fun-amp-videos/particles-yey
-openAIMikesBlogFileId: file-8Se4DvZab0ojODQc9iIBFVn3
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0031.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0031.png)
@@ -26,4 +25,4 @@ Apparently its creator, Grant Kot has been playing around with particles for som
 
 Pretty!
 
-Edit: Didnt realise but this is the same guy that did Polluted Planet that I covered almost 3 years ago -> [/posts/polluted-planet/](/posts/polluted-planet/) thats some awesome particle based dedication right there, I think I need to buy him a beer ;)
+Edit: Didnt realise but this is the same guy that did Polluted Planet that I covered almost 3 years ago -> [/posts/polluted-planet/](/posts/polluted-planet/) thats someÂ awesomeÂ particle based dedication right there, I think I need to buy him a beer ;)

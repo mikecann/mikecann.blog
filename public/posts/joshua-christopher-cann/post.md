@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-06-04T08:31:40.000Z'
 tags:
   - photos and personal
 title: Joshua Christopher Cann
 oldUrl: /projects/joshua-christopher-cann
-openAIMikesBlogFileId: file-DIImtulyEcDjDaV7GkZ0uUfC
 ---
 
 Im proud to announce my latest project: Joshua Christopher Cann :)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/introducing-markd-pinterest-for-people/cover.jpg
 date: '2016-09-15T02:25:17.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - website
 title: Introducing Markd - Pinterest for people
 oldUrl: /markd/introducing-markd-pinterest-for-people
-openAIMikesBlogFileId: file-5wMilSfTKjTh18wihDaXHafh
 ---
 
 [Markd](https://markd.co/) is a project I have been working on for Brandon over a [pepwuper.com](https://www.pepwuper.com/) for a while now.
@@ -18,7 +17,7 @@ openAIMikesBlogFileId: file-5wMilSfTKjTh18wihDaXHafh
 
 Quite simply its a Chrome Extension and website that allows a user to quickly and easily bookmark people you come across on the internet. In [Brandons own words](https://www.pepwuper.com/markd-pinterest-for-people/):
 
-> I wanted a better way to go about the process. A simple tool that would allow me to save someone into my “book of interesting people”, no matter which site I find them on. I wanted it to be easy with image/description automatically filled out. I wanted it to allow me to save reference images. And I wanted it to have a simple way for me to organise and search those I’ve bookmarked later on.
+> I wanted a better way to go about the process. A simple tool that would allow me to save someone into my â€œbook of interesting peopleâ€, no matter which site I find them on. I wanted it to be easy with image/description automatically filled out. I wanted it to allow me to save reference images. And I wanted it to have a simple way for me to organise and search those Iâ€™ve bookmarked later on.
 > And so he contacted me to help him build out such a tool and [Markd](https://markd.co) was born:
 
 ![chrome_2016-09-15_08-36-51](https://www.mikecann.blog/wp-content/uploads/2016/09/chrome_2016-09-15_08-36-51.png)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2010-09-07T07:19:50.000Z'
 tags:
@@ -12,7 +12,6 @@ tags:
   - score
 title: Ludum Dare Hour 408 (15 Days later) - Results!
 oldUrl: /48-hours-later/ludum-dare-hour-408-15-days-later-results
-openAIMikesBlogFileId: file-NUpRDNVRPCBUAgtA3NZSon7p
 ---
 
 Well the judging is now finally over for the Ludum Dare competition I entered 17 days ago.
@@ -23,7 +22,7 @@ So overall I placed #21 which is just outside the top 20\. Not bad for a first t
 
 I actually game second in one category.. Community? Not entirely sure how I managed that but oh well :P
 
-I think I may have received the most number of votes out of any of the games, it certaintly seems like a lot take a look:
+I think I may haveÂ receivedÂ the most number of votes out of any of the games, it certaintly seems like a lot take a look:
 
 ### Ratings
 

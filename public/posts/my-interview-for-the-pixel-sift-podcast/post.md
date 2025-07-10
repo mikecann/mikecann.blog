@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/my-interview-for-the-pixel-sift-podcast/cover.jpg
 date: '2016-05-18T07:14:54.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - podcast
 title: My interview for the Pixel Sift Podcast
 oldUrl: /games/my-interview-for-the-pixel-sift-podcast
-openAIMikesBlogFileId: file-hRYisz7m5qukWr8aDBpnqLl9
 ---
 
 Last week the guys over at the excellent [Pixel Sift](https://pixelsift.com.au/episodes/) reached out and asked if I would like to do an interview with them for their Podcast. So we had a short chat about Mr Nibbles Forever, PC publishing and the [Credit Redeemer debacle](https://www.mikecann.blog/misc/why-i-probably-wont-be-making-another-mobile-game-ever-again/).

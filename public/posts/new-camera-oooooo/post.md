@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-04-21T17:06:04.000Z'
 tags: []
 title: 'New Camera, oooooo!'
 oldUrl: /photos-personal/new-camera-oooooo
-openAIMikesBlogFileId: file-DcqbMw0YijF56KZ6TlyecBCY
 ---
 
 So i have bought a new camera in preparation for my trip to America and have been busy taking pictures of everything that moves.. also stuff that doesnt move.

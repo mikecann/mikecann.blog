@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2025-01-12T07:31:40.000Z'
 tags:
   - ai
   - thought
 title: 'The Missing Piece of AGI: Why Self-Doubt Matters?'
-openAIMikesBlogFileId: file-V7QjLFDyFsC5N1f3phdK6r
 ---
 
 I, along with every other coder on the planet right now, am starting to heavily leverage agentic coding tools in our day-to-day work. Whether it's standalone tools like [bolt.new](http://bolt.new), [v0](https://v0.dev/), [Lovable](https://lovable.dev/), or those built directly into our IDEs like [Cursor](https://www.cursor.com/), [Windsurf](https://codeium.com/windsurf) and [Copilot](https://github.com/features/copilot), they are rapidly becoming indispensable.
@@ -42,11 +41,11 @@ As mentioned in the intro, I've been investigating how well Cursor's Composer wo
 
 # Why is knowing what you don't know required for AGI?
 
-Artificial General Intelligence (AGI) itself doesn’t have a universally agreed-upon definition. But most people would agree it involves some level of reasoning across multiple domains and resembled “human-like” intelligence. 
+Artificial General Intelligence (AGI) itself doesnâ€™t have a universally agreed-upon definition. But most people would agree it involves some level of reasoning across multiple domains and resembled â€œhuman-likeâ€ intelligence. 
 
 I would argue that to provide human-like intelligence the hallucination problem needs to be solved and the only way that can be solved is if it is able to know exactly when it hallucinated or put another way, its able to know when it doesn't know.
 
-Cursor’s composer has a “linting” step that it runs after it generates a code artifact.
+Cursorâ€™s composer has a â€œlintingâ€ step that it runs after it generates a code artifact.
 
 ![cursor-linting](./cursor-linting.png)
 
@@ -78,7 +77,7 @@ One might argue that when an AI uses a tool like "search the web," it indicates 
 
 The model has been prompted (by the user or system) to use the "search web" tool when specific patterns trigger that action as the most probable next step. Yet this cannot truly represent "using web search when you don't know the answer" because the LLM fundamentally cannot recognize its own knowledge gaps.
 
-One can imagine a scenario however where a “tool” might be the ability for the model to introspect its own weights and via mechanistic interpretability analyze its own knowledge at the neuron level to determine if it “knows” something. 
+One can imagine a scenario however where a â€œtoolâ€ might be the ability for the model to introspect its own weights and via mechanistic interpretability analyze its own knowledge at the neuron level to determine if it â€œknowsâ€ something. 
 
 # Conclusion
 

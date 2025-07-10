@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-12-20T19:47:50.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - windows7
 title: "Automatically Expand To Current Folder [Windows7 Tip]"
 oldUrl: /misc/automatically-expand-to-current-folder-windows7-tip
-openAIMikesBlogFileId: file-JuyCQNWf5K9xFqF4st7ZWZMO
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0032.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0032.png)

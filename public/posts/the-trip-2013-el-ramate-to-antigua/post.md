@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-07-23T21:44:43.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - travel
 title: The Trip 2013 - El Ramate to Antigua
 oldUrl: /2013-trip/the-trip-2013-el-ramate-to-antigua
-openAIMikesBlogFileId: file-a9ano6Z9KsnAMsOKDuXhiAxJ
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/07/screenshot_01.png)

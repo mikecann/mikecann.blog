@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-06-25T18:59:09.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - travel
 title: Malaysia 2012
 oldUrl: /photos-personal/malaysia-2012
-openAIMikesBlogFileId: file-w5q1Hig1nyuEM8rltqufzBv7
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg "screenshot_01")](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-10-14T21:07:12.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - travel
 title: Trip 2013 - Bucaramanga to Montanita
 oldUrl: /2013-trip/trip-2013-bucaramanga-to-montanita
-openAIMikesBlogFileId: file-5cPmkgm3sMpiNYSD6eaqysQF
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/10/screenshot_01.png)

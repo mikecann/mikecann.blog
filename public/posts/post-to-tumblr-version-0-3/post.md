@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-10-31T11:04:26.000Z"
 tags:
@@ -14,7 +14,6 @@ tags:
   - video
 title: Post To Tumblr Version 0.3
 oldUrl: /post-to-tumbr/post-to-tumblr-version-0-3
-openAIMikesBlogFileId: file-idNxzXvqSrCoDymGBnejjJ2e
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png)
@@ -59,7 +58,7 @@ In this update I finally worked out how to catch bad username or password return
 });
 ```
 
-In addition I have added some notifications to indicate when the extension is doing something.
+In addition I have added someÂ notifications to indicate when the extension is doingÂ something.
 
 I have made a little demo video below to show this off:
 

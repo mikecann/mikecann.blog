@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-09-06T20:02:53.000Z'
 tags: []
 title: LieroXNA - A Tentative Beginning
 oldUrl: /c/lieroxna-a-tentative-beginning
-openAIMikesBlogFileId: file-wY3ivp2FuxteHRE7ncHzVJJD
 ---
 
 Okay I have decided to start a new mini pet project. As you may have guessed by now I have stopped work on the [TDProject](https://www.mikecann.blog/?p=170). The reason is that it is too large of a project to take on at the same time as having a job, should I ever find myself without a job in the future I may pick it up again.

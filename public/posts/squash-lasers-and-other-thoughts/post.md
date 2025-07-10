@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2022-07-16T07:31:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - AI
   - Computer Vision
 title: 'Squash, Lasers and Other Thoughts'
-openAIMikesBlogFileId: file-w9pgAQ5mfXZJNxOJGgRw5GBZ
 ---
 
 Quite some time ago now a good friend and fellow squash player shared an idea he had with me, to create a system that is able to track a squash ball during a game and project realtime information onto the back wall.

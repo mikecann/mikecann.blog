@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-09-01T08:51:40.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - typescript
 title: Chrome Extension Background Page & React Hooks useEffect Not Working
 oldUrl: /markd/chrome-extension-background-page-useeffect-not-working
-openAIMikesBlogFileId: file-nkgBe4rmtQbBfV5I5geqlwvO
 ---
 
 Its been a little while since I have done a pure tech focused blog post but I discovered an issue with React Hooks and Chrome Extensions for which I could find no mention of anywhere on the internet so I thought I would share the issue and my solution.

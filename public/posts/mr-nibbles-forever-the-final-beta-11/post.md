@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-the-final-beta-11/cover.jpg
 date: '2015-08-05T10:52:26.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - update
 title: Mr Nibbles Forever - The Final Beta (11)
 oldUrl: /mr-nibbles-forever/mr-nibbles-forever-the-final-beta-11
-openAIMikesBlogFileId: file-WRTGbEU8gftS20vGjvnwGDnZ
 ---
 
 It's been 3 weeks since the last update but lots has happened in that time.
@@ -19,19 +18,19 @@ It's been 3 weeks since the last update but lots has happened in that time.
 
 I have tried hard to stick to the [plan I made for myself on the 21st of June](https://www.mikecann.blog/myprojects/mr-nibbles-forever-getting-it-done/). A quick recap:
 
-> **20th – 26th July**
+> **20th â€“ 26th July**
 >
 > 1. Create game trailer and publish to landing page.
 >
 > 2. Contact media and other social networks, point to landing page.
 >
-> **27th July – 2nd August**
+> **27th July â€“ 2nd August**
 >
 > 1. Final bug fix and polish pass.
 >
 > 2. Contact more media and social networks.
 >
-> **3rd – 9th August**
+> **3rd â€“ 9th August**
 >
 > 1. Release Android version of the game.
 >
@@ -63,4 +62,4 @@ This one is by my friend and ex-colleague Alan Mac, great work there Alan, even 
 
 So the time for the release is almost here. So long as this new beta for the game looks okay then I hope to send some emails out to reporters to give the game a play and hopefully a review then in a week or two I hope to push the game to the store!
 
-As usual if you are interested in testing the game you can use this public beta link: https://play.google.com/apps/testing/uk.co.mikecann.mrnibblesforever﻿ or send me an email for the iOS version and ill add you as a beta tester: mike.cann@gmail.com
+As usual if you are interested in testing the game you can use this public beta link: https://play.google.com/apps/testing/uk.co.mikecann.mrnibblesforeverï»¿ or send me an email for the iOS version and ill add you as a beta tester: mike.cann@gmail.com

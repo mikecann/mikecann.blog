@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-03-24T00:34:01.000Z"
 tags: []
 title: More Harmony Creations
 oldUrl: /art/more-harmony-creations
-openAIMikesBlogFileId: file-uqOxhnIC6M2835GXcWS924aE
 ---
 
 Was doing some more playing around on [Harmony](https://mrdoob.com/projects/harmony) this evening, so relaxing. It kinda reminds me of some of the stuff I did on [Particle Playground](https://www.mikecann.blog/programming/particle-playground/).

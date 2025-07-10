@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-03-12T17:11:37.000Z'
 tags:
   - c sharp
 title: Killer space penguins!
 oldUrl: /c/killer-space-penguins
-openAIMikesBlogFileId: file-RMxXaRJA8i1PxhTTBjasoQ5k
 ---
 
 ![](https://www.mikecann.blog/Images/Others/spacepenguin.png)

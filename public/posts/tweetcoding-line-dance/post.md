@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-02-18T13:17:14.000Z'
 tags: []
 title: '#tweetcoding Line Dance'
 oldUrl: /actionscript/tweetcoding-line-dance
-openAIMikesBlogFileId: file-4yItrPyTHSuO8w2zjkAAQSqk
 ---
 
 One for the coders out there. [GrantSkinner (flash guru)](https://gskinner.com) has started a little twitter AS3 contest: [https://gskinner.com/playpen/tweetcoding.html](https://gskinner.com/playpen/tweetcoding.html) its actually pretty fun, wrote my first little one at lunch today:

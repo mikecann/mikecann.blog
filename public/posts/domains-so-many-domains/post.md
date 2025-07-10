@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-07-07T14:37:25.000Z'
 tags:
   - web
 title: Domains so Many Domains!
 oldUrl: /websites/domains-so-many-domains
-openAIMikesBlogFileId: file-Cvp4tz5lzKb8pxqXr1hpXAVp
 ---
 
 Well I have just had my next (not so) bright idea. I have decided to enter the flash games portal business. I see it as a good way to compliment my flash games interest and passion.

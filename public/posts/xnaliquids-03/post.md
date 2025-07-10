@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-01-30T21:56:33.000Z'
 tags: []
 title: XNALiquids 03
 oldUrl: /c/xnaliquids-03
-openAIMikesBlogFileId: file-6VivY9k2lX2C8ibsyCxJIGoV
 ---
 
 Well i was just thinking in work today that it may be possible to detect the bounds of the the particle "clusters" and then line drawing the boundry and then you wouldnt notice the compression that the particles tend to suffer from.

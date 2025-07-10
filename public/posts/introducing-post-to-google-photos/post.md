@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-11-01T08:51:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - typescript
 title: Introducing - Post To Google Photos
 oldUrl: /markd/introducing-post-to-google-photos
-openAIMikesBlogFileId: file-YFuKSjqE0TVROblU0grZ62iH
 ---
 
 Lately we (Markd Ltd) have been working on a few different projects, today we are announcing another of those projects; [Post To Google Photos](https://chrome.google.com/webstore/detail/post-to-google-photos/lafpnfnchohhamoidohgmljijeafebbf).

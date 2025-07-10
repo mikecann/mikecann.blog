@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/introducing-my-new-android-app-credit-redeemer/cover.jpg
 date: '2016-03-15T02:41:38.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - typescript
 title: 'Introducing my new Android app: Credit Redeemer'
 oldUrl: /credit-redeemer/introducing-my-new-android-app-credit-redeemer
-openAIMikesBlogFileId: file-TNffmyyy0t5hSvBPBVHbHIcx
 ---
 
 The past couple of weeks I have been working on a new project and something a little different from my usual games related projects.

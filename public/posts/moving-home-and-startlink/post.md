@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2023-09-08T08:31:40.000Z'
 tags:
   - personal
   - tech
 title: Moving Home & Starlink
-openAIMikesBlogFileId: file-4HBcETysPpJL3fCKgC7PSfnl
 ---
 
 Its been a while since I have given a personal update so I thought I would take this month to talk about my recent move and some adventures with satellite internet.

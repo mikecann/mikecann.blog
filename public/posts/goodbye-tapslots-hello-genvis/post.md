@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2018-02-13T08:00:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - ai
 title: Goodbye TapSlots - Hello GenVis
 oldUrl: /personal/goodbye-tapslots-hello-genvis
-openAIMikesBlogFileId: file-DDTiAvuB6h18QhNmgx6y6R8j
 ---
 
 For the past 3 years (almost) I have been working as a software developer at TapSlots in Perth Australia. Its been a wild ride of learning and development but over the Christmas break I decided that its about time that I tried something new.

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-09-20T14:47:08.000Z'
 tags: []
 title: Malta '08
 oldUrl: /photos-personal/malta-08
-openAIMikesBlogFileId: file-iCugOo7HwDvnoAl3td0Wthus
 ---
 
 Well im back from my excellent holiday in Mata with my little lady. I havent uploaded pics to my picassa account for a while so i thought i would take this oppertunity to do so and upload some holiday snaps at the same time ;)

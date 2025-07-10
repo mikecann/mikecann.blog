@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2023-11-06T07:31:40.000Z'
 tags:
   - convex
   - personal
 title: Im now a Convex.dev Developer Champion!
-openAIMikesBlogFileId: file-1l0xjE6VsGlfX9erippk1DVk
 ---
 
 Just a short one this month as I have been working super hard with the team on the mobile port of [our game BattleTabs](https://mikecann.blog/posts/battletabs-in-7-minutes). But as this is a personal blog I thought I would share something I think is quite cool.

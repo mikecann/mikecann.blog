@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2022-12-29T07:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - GameDev
   - BabylonJS
 title: Why we converted BattleTabs from 2D to 3D
-openAIMikesBlogFileId: file-stbBDKusE7zwsjUBJP7SI2Q3
 ---
 
 This month we completed probably the single largest change in the history of our game [BattleTabs](https://battletabs.io), we converted our 2D game to run completely in 3D. This was obviously a massive undertaking for a 3 year old game but I personally think the results are fantastic and unlock a whole bunch more capabilities for us.

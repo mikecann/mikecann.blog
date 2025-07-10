@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2006-08-03T15:10:09.000Z"
 tags: []
 title: Artificial-Studios 1
 oldUrl: /projects/artificial-sudios-1
-openAIMikesBlogFileId: file-l8bTQFNLCwJUZyqAq53T5FY7
 ---
 
 ![](https://www.mikecann.blog/wp-content/uploads/Image/artstu1.jpg)

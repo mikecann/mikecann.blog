@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-11-01T20:31:47.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - spam
 title: Bigresource.com IS SPAM
 oldUrl: /misc/bigresource-com-is-spam
-openAIMikesBlogFileId: file-4V6ksuifL4FkGAUB2xBCIKgP
 ---
 
 Thats it im angry enough with this site to actually write a blogpost about it.

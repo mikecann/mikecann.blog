@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-04-07T14:34:59.000Z"
 tags: []
 title: Hmmm
 oldUrl: /photos-personal/hmmm
-openAIMikesBlogFileId: file-6a21rwl4c0z7RGviW8GW1Yjq
 ---
 
 Council Tax FAIL ?

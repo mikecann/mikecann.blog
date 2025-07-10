@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-02-17T19:30:02.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - speed
 title: Flex Binding & Compile Times
 oldUrl: /actionscript/flex-binding-compile-times
-openAIMikesBlogFileId: file-cNcqCo4y8YjjBlQNdESZM68A
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/02/commandlin01.jpg "commandlin01")](https://www.mikecann.blog/wp-content/uploads/2011/02/commandlin01.jpg)
@@ -19,7 +18,7 @@ Binding in flex has been playing on my mind for a little while now, so I have de
 
 <!-- more -->
 
-The worry has been that on large projects that make heave use of the flex automatic binding, compile times could be dramatically increased. This is because behind the scenes the flex compiler must convert those syntax sugar ([Bindable] and {}) into actual AS3 code. The exact way this is done I wont go into, but I recommend you google it, its a fascinating topic.
+The worry has been that on large projects that make heave use of the flex automatic binding, compile times could be dramatically increased. This is because behind the scenes the flex compiler must convert those syntax sugar ([Bindable] and {}) intoÂ actualÂ AS3 code. The exact way this is done I wont go into, but IÂ recommendÂ you google it, its a fascinating topic.
 
 I really like the ease of use of automatic binding but at the same time I was worried about how much slower compile times are because of them. So I decided I would try to run some tests and see.
 
@@ -36,4 +35,4 @@ The general gist is that it seems binding adds about 20% onto compile times both
 
 Im not sure if the tests I did were fair so I would love to hear feedback from others.
 
-I have bundled the project up incase anyone wanted to test it themselves: [/wp-content/uploads/2011/02/CompileTestGen.zip](https://www.mikecann.blog/wp-content/uploads/2011/02/CompileTestGen.zip)
+I have bundled the project up incase anyone wanted to test itÂ themselves: [/wp-content/uploads/2011/02/CompileTestGen.zip](https://www.mikecann.blog/wp-content/uploads/2011/02/CompileTestGen.zip)

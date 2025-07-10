@@ -1,11 +1,10 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-10-08T18:59:02.000Z'
 tags:
   - photos
 title: In a Different Time and Place..
 oldUrl: /photos-personal/in-a-different-time-and-place
-openAIMikesBlogFileId: file-W9HtEse972nLpA0oZQI7wqTh
 ---
 
 Wow this is a real blast from the past. Photos from my trip to America just surfaced on Facebook, tagged by one of the other lads that went Jakob. Some of them are great, so I grabbed em and chucked them [on my picassa. ](https://picasaweb.google.co.uk/mike.cann/MeAmerica07#)

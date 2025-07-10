@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-11-19T19:08:59.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - stolen
 title: 'Bike Be Gone :('
 oldUrl: /misc/bike-be-gone
-openAIMikesBlogFileId: file-0jpnlzcOlElpV4hBdpxaD6Xu
 ---
 
 Went downstairs to the first floor carpark this morning to grab my bike for my morning 15min cycle into work to find that all that remained was this:

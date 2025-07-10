@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/blastwave-lost-at-sea/cover.jpg
 date: '2009-12-04T10:38:45.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - projects
 title: 'BlastWave: Lost at Sea'
 oldUrl: /actionscript/blastwave-lost-at-sea
-openAIMikesBlogFileId: file-atM6BeHRaqDqCGAIytL4EMDW
 ---
 
 FINALLY ITS LIVE!!!! Oh my, it has taken literally[ months and months](https://www.mikecann.blog/personal-project/the-next-one-blast-wave-2/) to get all the deals sorted but finally now its done and out.

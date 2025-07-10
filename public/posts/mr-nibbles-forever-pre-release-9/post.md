@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/mr-nibbles-forever-pre-release-9/cover.jpg
 date: '2015-07-03T05:08:07.000Z'
 tags:
@@ -11,7 +11,6 @@ tags:
   - unity3d
 title: Mr Nibbles Forever - Pre Release 9
 oldUrl: /mr-nibbles-forever/mr-nibbles-forever-pre-release-9
-openAIMikesBlogFileId: file-ZxN8zoNOK3sNWWXzZ2G4WD1E
 ---
 
 Well its been almost two weeks since [I declared the (tough) scheduled plan](https://www.mikecann.blog/myprojects/mr-nibbles-forever-getting-it-done/) for the release of Mr Nibbles Forever. In it I planned that last week was to be:
@@ -55,7 +54,7 @@ So although last week was supposed to just be design, I decided to go the full-h
 
 Speaking of development, this week we [supposed to be a bug-fixing and polish pass](https://www.mikecann.blog/myprojects/mr-nibbles-forever-getting-it-done/):
 
-> 29th June – 5th July
+> 29th June â€“ 5th July
 >
 > 1. Do bug-fixing and polish pass of the game. Push release 9 of the game to people for testing and feedback.
 

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2021-08-09T03:31:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - Tinker
   - Programming
 title: Tinkering with GPT-3
-openAIMikesBlogFileId: file-1D5qgG1YEVQT2J7n5y7u1crE
 ---
 
 Back in in the before-times of May 2020 OpenAI made a [stunning announcement](https://openai.com/blog/tags/announcements/) about the capabilities of their latest project named GPT3. When I saw [what it was capable of](https://beta.openai.com/) and it was going to be turned into an API I knew I was going to have to tinker with it!

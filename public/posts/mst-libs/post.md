@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-06-01T08:31:40.000Z'
 tags:
@@ -10,7 +10,6 @@ tags:
   - github
 title: MobX State Tree Libraries
 oldUrl: /projects/mst-libs
-openAIMikesBlogFileId: file-6WhyQTytVQjCcP1AAJv0c5rE
 ---
 
 I have generally steered away from building open-source libraries mainly for selfish reasons (I didn't want to spend the time maintaining them) but I decided that the current work I was doing would benefit from input and improvement from others and so I decided to release two things as libraries and im really happy with how things went.

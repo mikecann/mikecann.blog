@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2014-01-18T18:16:36.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - travel
 title: The Trip 2013 - Jericoacoara to Newport
 oldUrl: /2013-trip/the-trip-2013-jericoacoara-to-newport
-openAIMikesBlogFileId: file-HJdATZBttOPisAQgO0mNcDtR
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Jericoacoara to Newport](https://www.facebook.com/media/set/?set=a.10152177819916031.1073741862.593661030&type=1&l=aa502a700c). Each picture can be clicked to see a larger version and comment / like.**
@@ -93,7 +92,7 @@ Next up was a trip north to the Lapa district where we went to look at the famou
 
 [![photo-44](https://www.mikecann.blog/wp-content/uploads/2014/01/photo-441.jpg)](https://www.facebook.com/photo.php?fbid=10152177824536031&set=a.10152177819916031.1073741862.593661030&type=3&theater)
 
-We weren't very impressed by Selarón's creation and left after a short while. Turns out they weren't the actual steps and just some random steps, woops! It was seriously hot that day though I managed to convince Kelsie to take a short journey to MAR the Museum of Art in Rio.
+We weren't very impressed by SelarÃ³n's creation and left after a short while. Turns out they weren't the actual steps and just some random steps, woops! It was seriously hot that day though I managed to convince Kelsie to take a short journey to MAR the Museum of Art in Rio.
 
 [![photo-45](https://www.mikecann.blog/wp-content/uploads/2014/01/photo-451.jpg)](https://www.facebook.com/photo.php?fbid=10152177824576031&set=a.10152177819916031.1073741862.593661030&type=3&theater)
 

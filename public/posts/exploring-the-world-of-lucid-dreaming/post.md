@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2010-08-01T13:27:21.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - mind
 title: Exploring The World of Lucid Dreaming
 oldUrl: /books/exploring-the-world-of-lucid-dreaming
-openAIMikesBlogFileId: file-oZgVGhJ7Z0Zb65ze8EhocRaA
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/08/IMG_0909.jpg "IMG_0909")](https://www.mikecann.blog/wp-content/uploads/2010/08/IMG_0909.jpg)

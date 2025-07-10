@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-09-10T21:51:19.000Z'
 tags: []
 title: Liero Update - Console & ATi
 oldUrl: /c/liero-update-console-ati
-openAIMikesBlogFileId: file-te9Xf4kAvtpggg36GJguOcYQ
 ---
 
 Well I took Liero into work today just to show to a few people who were interested and to test it on another machine other than my own. And low and behold it didnt work on my work machine which was no surprise as it doesnt have a graphics card so it fell down at the first hurdle. I then went to test it on an artists ATi based machine expecting it to work. It did but sadly there were no particles.

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:58:42.000Z'
 tags: []
 title: spacevirus
 oldUrl: /art/spacevirus
-openAIMikesBlogFileId: file-G9MZCBsZrutLFP7fY9pu1695
 ---
 
 This is one of my very early images and is still one of my favourite ones. It has been my background countless times

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-12-27T11:28:11.000Z"
 tags:
@@ -13,12 +13,11 @@ tags:
   - typescript
 title: "Recursive, Nuts & Bolts Part 2 - Crawling the World Wide Web (2 of 3)"
 oldUrl: /programming/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3
-openAIMikesBlogFileId: file-H2ylXIHCOlc2HyxoFlkqkSyN
 ---
 
 [![screenshot_05](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_05.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_05-5/)
 
-**This is part two of my three part series on the internals of Recursive, an extension for Google Chrome. In the [first post](/posts/?p=2287) I laid the groundwork for the contents of this and the next post. In this post i'm going to talk a little about what Recursive does internally once given  a URL.**
+**This is part two of my three part series on the internals of Recursive, an extension for Google Chrome. In the [first post](/posts/?p=2287) I laid the groundwork for the contents of this and the next post. In this post i'm going to talk a little about what Recursive does internally once given Â a URL.**
 
 ### Chrome Crawler
 
@@ -30,13 +29,13 @@ Recursive is actually based on an extension called Chrome Crawler I wrote [about
 
 Much in the same way that search engine crawlers work, Recursive, downloads a url, scans it for links then recursively follows them.
 
-Normally this sort of behaviour isn’t permitted to Javascript (or Flash for that matter) when running within a web page due to the [Same Origin Policy](https://en.wikipedia.org/wiki/Same_origin_policy) without specific permission from the server you are calling. Chrome extensions however don't have this restriction and thus (with permission given in the extension manifest) the extension is able to download content from any server.
+Normally this sort of behaviour isnâ€™t permitted to Javascript (or Flash for that matter) when running within a web page due to the [Same Origin Policy](https://en.wikipedia.org/wiki/Same_origin_policy)Â without specific permission from the server you are calling. Chrome extensions however don't have this restriction and thus (with permission given in the extension manifest) the extension is able to download content from any server.
 
-This special behaviour is called the Cross-Origin [XMLHttpRequest](https://developer.chrome.com/extensions/xhr.html) and is what allows Recursive to work its magic.
+This special behaviour is called the Cross-Origin [XMLHttpRequest](https://developer.chrome.com/extensions/xhr.html)Â and is what allows Recursive to work its magic.
 
 ### Code Structure
 
-As briefly mentioned in the previous post the Crawling logic is separated from the Rendering logic. This differs from how Chrome Crawler was implemented where he rendering and crawling logic were mushed together. This separation took a little more thought and planning the result however is that the crawling logic makes much more sense and doesn't contain anything that doesn't purely pertain to the logic and data involved with crawling.
+As briefly mentioned in the previous post the Crawling logic is separated from the Rendering logic. This differs from how Chrome Crawler was implemented where he rendering and crawling logic were mushed together. ThisÂ separationÂ took a little more thought and planning the result however is that the crawling logic makes much more sense and doesn't contain anything that doesn't purely pertain to the logic and data involved with crawling.
 
 The crawling code is split up into three main files the Graph, the Crawler and the Parser.
 
@@ -48,7 +47,7 @@ The Crawler represents a single crawl instance. Its responsibility is to follow 
 
 ### Parsing Problems
 
-One issue I encountered while developing Recursive (and Chrome Crawler) was the performance and security issues involved with parsing the HTML returned from the crawl. The way I originally handled this was to pass the entire HTML to JQuery then ask it for all ‘src’ and ‘href’ attributes:
+One issue I encountered while developing Recursive (and Chrome Crawler) was the performance and security issues involved with parsing the HTML returned from the crawl. The way I originally handled this was to pass the entire HTML to JQuery then ask it for all â€˜srcâ€™ and â€˜hrefâ€™ attributes:
 
 ```
 
@@ -80,7 +79,7 @@ if (results) results.forEach(s=>links.push(s.split(""")[1]));
 
 ```
 
-I was worried that the sheer amount of html text that must be parsed by the regex would result in things being really slow however it seems to hold up quite well, and is definitely not the bottle neck in the app.
+I was worried that the sheer amount of html text that must be parsed by the regex would result in things being really slow however it seems to hold up quite well, and isÂ definitelyÂ not the bottle neck in the app.
 
 ### Custom File Filter
 
@@ -88,7 +87,7 @@ One addition to the result parsing that was added in v.1.1 was the ability to de
 
 [![Screenshot_002](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_002.png)](/posts/recursive-v-1-1/attachment/screenshot_002/)
 
-Enabling this adds a third regex call into the results parser. Any matches are added to the Crawler’s files as a special kind of file. When the user opens the files dialog all the matches are shown under a special category:
+Enabling this adds a third regex call into the results parser. Any matches are added to the Crawlerâ€™s files as a special kind of file. When the user opens the files dialog all the matches are shown under a special category:
 
 [![Screenshot_003](https://www.mikecann.blog/wp-content/uploads/2012/12/Screenshot_003.png)](/posts/recursive-v-1-1/attachment/screenshot_003/)
 

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2014-02-15T11:31:48.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - windows
 title: The Mystery of the Missing Disk Space
 oldUrl: /misc/the-mystery-of-the-missing-disk-space
-openAIMikesBlogFileId: file-ryZ3r9960H2NuHGIxJWnc82R
 ---
 
 ![screenshot_06](https://www.mikecann.blog/wp-content/uploads/2014/02/screenshot_06.png)

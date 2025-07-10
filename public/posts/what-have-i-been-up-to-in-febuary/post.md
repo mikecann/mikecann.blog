@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2019-02-27T09:51:40.000Z'
 tags:
@@ -6,7 +6,6 @@ tags:
   - personal
 title: What Have I Been Up To In Feb?
 oldUrl: /personal/what-have-i-been-up-to-in-febuary
-openAIMikesBlogFileId: file-jAzH3WS8NsFT9lGS8oGSvkSy
 ---
 
 Its been an adventurous month of travel, activities and hard work on our exciting new venture [Markd](https://markd.co).

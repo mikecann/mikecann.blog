@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-06-19T18:39:58.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - website
 title: "Bye Bye IntenseDebate, Hello Disqus"
 oldUrl: /websites/bye-bye-intensedebate-hello-disqus
-openAIMikesBlogFileId: file-shfj6z9eiVVtJJlLb6sAUq0X
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/06/disqus2.jpg "disqus2")](https://www.mikecann.blog/wp-content/uploads/2011/06/disqus2.jpg)

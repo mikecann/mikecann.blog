@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-03-02T20:27:49.000Z"
 tags:
@@ -8,12 +8,11 @@ tags:
   - trip
 title: Goodbye Playdemic
 oldUrl: /photos-personal/goodbye-playdemic
-openAIMikesBlogFileId: file-BYBvnK77daoYz7SsN658geFa
 ---
 
 [![head](https://www.mikecann.blog/wp-content/uploads/2013/03/head.png)](/posts/goodbye-playdemic/attachment/head-8/)
 
-Wow doesn't time fly.
+WowÂ doesn'tÂ time fly.
 
 <!-- more -->
 
@@ -24,7 +23,7 @@ Over 8 years ago I was a short nerdy student trying desperately to find a way in
 > alex.rigby@rockpoolgames.com
 >
 > EDIT: Just seen you're looking to go abroad, guess Manchester is a little too close then eh?
-> (source: [https://www.gamedev.net/topic/297068-breaking-into-the-games-industry-is-impossible/page-2#entry2882806](https://www.gamedev.net/topic/297068-breaking-into-the-games-industry-is-impossible/page-2#entry2882806))
+> (source:Â [https://www.gamedev.net/topic/297068-breaking-into-the-games-industry-is-impossible/page-2#entry2882806](https://www.gamedev.net/topic/297068-breaking-into-the-games-industry-is-impossible/page-2#entry2882806))
 
 Little did either of us know the long winding path that would unfold from that moment.
 
@@ -32,8 +31,8 @@ Fast forward 5 years. After their success with Rockpool Paul and Alex approached
 
 Join an exciting new company making cutting edge games with Starboy? [How could I refuse](/posts/playdemic-my-fist-day/)...
 
-Needless to to say the next 3 years were quite a journey. There were ups, there were downs, there were laughs, there were cry's there was even the occasional thigh-rub (still not sure how I didn't get fired for those).
+Needless to to say the next 3 years were quite a journey. There were ups, there were downs, there were laughs, there wereÂ cry'sÂ there was even the occasional thigh-rub (still not sure how I didn't get fired for those).
 
 Like all journeys however, they must some day come to an end. I decided that the majority of the world has yet to experience the emotional cocktail of disgust, fear and slight arousal induced by the thigh-rub. So before I reach "that age" I was going to take some time and bring this unique joy to the wider world.
 
-So whats next? Well I have two months of preparation before I embark on an epic 7 month journey through Central and South America, but ill save the details on that for a separate post.
+So whats next? Well I have two months of preparation before I embark on an epic 7 month journey through Central and South America, but ill save the details on that for aÂ separateÂ post.

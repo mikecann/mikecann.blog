@@ -9,7 +9,6 @@ export const PostMeta = t.intersection([
   }),
   t.partial({
     oldUrl: t.string,
-    openAIMikesBlogFileId: t.string,
     status: t.union([t.literal("draft"), t.literal("published")]),
     canonical: t.string,
   }),

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /posts/worms-2/cover.jpg
 date: "2006-06-13T19:16:57.000Z"
 tags: []
 title: Worms 2
 oldUrl: /games/worms-2
-openAIMikesBlogFileId: file-TGSLv2K7Rxi4bs1iFL5fvezN
 ---
 
 Worms two was the third project I undertook during my stay at [Rockpool Games](https://www.rockpoolgames.com/) and was certainly the one i got most excited about. It was a tough project with extremely tough deadlines.

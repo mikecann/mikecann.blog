@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2011-08-23T20:40:10.000Z"
 tags:
@@ -6,7 +6,6 @@ tags:
   - trance
 title: "Artificial - Iridium [Trance, Electro, House]"
 oldUrl: /audio/artificial-iridium-trance-electro-house
-openAIMikesBlogFileId: file-NuKhF0xz7yuOjFW1oE4whI7j
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/08/Iridium-Cover.png "Iridium-Cover")](https://www.mikecann.blog/wp-content/uploads/2011/08/Iridium-Cover.png)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-09-27T00:22:33.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - tavel
 title: Think Twice Before Getting an STA Travel Cashcard
 oldUrl: /travel/think-twice-before-getting-an-sta-travel-cashcard
-openAIMikesBlogFileId: file-UQqjb84nZPVClMTt63M7iseC
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/09/screenshot_012.png)
@@ -23,7 +22,7 @@ I am half way through my 8 month journey now and have just decided to check my f
 
 The above image is a quick spreadsheet I have put together from my online bank statement for the Cashcard and data gleamed from xe.com. As you can see im getting well under the official exchange rate when withdrawing money using this card.
 
-Okay I thought, well perhaps thats just how much it costs to withdraw money here. So as an experiment I withdrew 700,000 COP from exactly the same cash point using my VISA debit card on the 6th of September, the result was it cost me £230.76 with fees of £10.34 making a total of £241.1 which is still far shy of the £259 that I was being charged by the STA Travel Card around the same date.
+Okay I thought, well perhaps thats just how much it costs to withdraw money here. So as an experiment I withdrew 700,000 COP from exactly the same cash point using my VISA debit card on the 6th of September, the result was it cost me Â£230.76 with fees of Â£10.34 making a total of Â£241.1 which is still far shy of the Â£259 that I was being charged by the STA Travel Card around the same date.
 
 Obviously I was pretty angry when I saw this so I emailed STA which forwarded me onto Tuxedo LTD which is apparently the company that manages the card. After 5 emails of me insisting I get a proper answer to my query I get the following:
 
@@ -31,19 +30,19 @@ Obviously I was pretty angry when I saw this so I emailed STA which forwarded me
 >
 > Thank you for your enquiry regarding a deeper explanation into our exchange rates.
 >
-> Having provided you with the way in which our exchange rate is calculated we have been doing some research regarding what we have referred to as ‘market mid-rate’.
+> Having provided you with the way in which our exchange rate is calculated we have been doing some research regarding what we have referred to as â€˜market mid-rateâ€™.
 >
 > These are the findings from looking at our competitors exchange rates online based on 700,000 COP
 >
 > (These are taken from the 26th of September 2013):
 >
-> Post office cost in GBP: £257.32 exchange rate: 2720.36
+> Post office cost in GBP: Â£257.32 exchange rate: 2720.36
 >
-> Thomas cook cost in GBP: £266.06 exchange rate: 2631
+> Thomas cook cost in GBP: Â£266.06 exchange rate: 2631
 >
-> STA cashcard cost in GBP: £252.79 exchange rate: 2769.07
+> STA cashcard cost in GBP: Â£252.79 exchange rate: 2769.07
 >
-> Having investigated our competitors’ rates it is clear that we are working closely to the other companies on the market and are cheaper than the Post Office and Thomas Cook.
+> Having investigated our competitorsâ€™ rates it is clear that we are working closely to the other companies on the market and are cheaper than the Post Office and Thomas Cook.
 >
 > **We appreciate that the VISA debit card you hold is charging you at a lower rate. With the debit card belonging to a bank rather than a travel company this may affect the way in which they calculate and maintain their exchange rates.**
 >

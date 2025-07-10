@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2017-11-24T14:51:40.000Z'
 tags:
@@ -13,7 +13,6 @@ tags:
   - trello
 title: Startup Weekend Perth November 2017
 oldUrl: /hackathons/startup-weekend-perth-november-2017
-openAIMikesBlogFileId: file-ChA5Njx6K9u1h2CqGQFOydXR
 ---
 
 Its been a while since I have done a hackathon. I spent [half of the year](/posts/and-off-we-go/) camping my way around Australia so I guess thats to be expected. So when I saw that startup weekend was running again at the weekend I thought sure, why not.

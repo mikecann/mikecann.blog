@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2009-09-24T18:19:24.000Z"
 tags:
@@ -7,7 +7,6 @@ tags:
   - iphone
 title: Called It!
 oldUrl: /misc/called-it
-openAIMikesBlogFileId: file-ipMbFdW94VXZ7Gvpfo8R0iVG
 ---
 
 [![500x_fs-details](https://www.mikecann.blog/wp-content/uploads/2009/09/500x_fs-details.jpg "500x_fs-details")](https://www.mikecann.blog/wp-content/uploads/2009/09/500x_fs-details.jpg)

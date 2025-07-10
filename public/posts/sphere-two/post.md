@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T22:00:12.000Z'
 tags: []
 title: sphere-two
 oldUrl: /art/sphere-two
-openAIMikesBlogFileId: file-TpywyHDBlpAwO1qi7OzmQTVJ
 ---
 
 This is a heavily modified version of "sphere" and in my opinion its superior

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2023-01-02T07:31:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - Programmer
   - CI
 title: Rant - Why is CI Development so bad?
-openAIMikesBlogFileId: file-FadZAlrBxdRLaZyBWcBx6WmG
 ---
 
 I dont know about you but every time I have to write a CI script or modify an existing one my stomach fills with dread. I just know im in for a long frustrating session of fighting with some tortured mutant DSL written in YAML only to wait 15 minutes between iterations of cryptic error messages.

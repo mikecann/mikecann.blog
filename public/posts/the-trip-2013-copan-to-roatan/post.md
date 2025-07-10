@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-07-26T17:55:38.000Z"
 tags:
@@ -6,12 +6,11 @@ tags:
   - copan
   - hondorus
   - travel
-title: The Trip 2013 - Copán to Roatán
+title: The Trip 2013 - CopÃ¡n to RoatÃ¡n
 oldUrl: /2013-trip/the-trip-2013-copan-to-roatan
-openAIMikesBlogFileId: file-gNOBOc8sVJjHT1gOhLxkPqyN
 ---
 
-**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - Copán to Roatán](https://www.facebook.com/mikeysee/media_set?set=a.10151781346696031.1073741840.593661030&type=3). Each picture can be clicked to see a larger version and comment / like.**
+**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 - CopÃ¡n to RoatÃ¡n](https://www.facebook.com/mikeysee/media_set?set=a.10151781346696031.1073741840.593661030&type=3). Each picture can be clicked to see a larger version and comment / like.**
 
 So after the 4 day rest in [Antigua and at lake Atitlan](/posts/the-trip-2013-el-ramate-to-antigua/) I was ready to hit the road again. This time I would we travelling with 16 other people on a GAdventues trip that would take us from Guatamala through Hondorus and Nicaragua finally ending in San Jose, Costa Rica in 17 days.
 

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-06-11T15:53:03.000Z'
 tags: []
 title: 'FlashDevelop, Preloaders and GameJacket'
 oldUrl: /actionscript/flashdevelop-preloaders-and-gamejacket
-openAIMikesBlogFileId: file-7dxx2ILswrTQzdBAFspO0w74
 ---
 
 This is a clone of the post i made on the GameJacket developer forums here: [https://gamejacket.com/forum/topic.asp?TOPIC_ID=59](https://gamejacket.com/forum/topic.asp?TOPIC_ID=59) but i think it deserves a re-post here so it can be googled :)

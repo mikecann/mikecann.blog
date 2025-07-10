@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-11-04T12:42:30.000Z"
 tags:
@@ -8,7 +8,6 @@ tags:
   - photos
 title: New York New York
 oldUrl: /photos-personal/new-york-new-york
-openAIMikesBlogFileId: file-wnV4s3qqluC8rqXKic2Ny4z9
 ---
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg "header")](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg)

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/audio-book-organiser-air-mate-flex-4/cover.jpg
 date: "2009-12-30T13:38:29.000Z"
 tags:
@@ -13,7 +13,6 @@ tags:
   - utility
 title: "Audio Book Organiser (AIR, Mate, Flex 4)"
 oldUrl: /actionscript/audio-book-organiser-air-mate-flex-4
-openAIMikesBlogFileId: file-E2L9HwYAXIKEc4MOICM5AwS0
 ---
 
 Well its been a fun Christmas, I have eaten and drunk to the point that im going to be running it off in the gym till next christmas.

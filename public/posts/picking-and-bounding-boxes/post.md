@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-05-29T18:13:36.000Z'
 tags: []
 title: Picking and Bounding Boxes
 oldUrl: /c/picking-and-bounding-boxes
-openAIMikesBlogFileId: file-jwMwDiKz1etj7O278DiQ1D9z
 ---
 
 ![](https://www.mikecann.blog/Work/TDProject/engine06.png)

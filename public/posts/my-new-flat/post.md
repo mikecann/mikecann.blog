@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2008-07-25T15:20:42.000Z'
 tags: []
 title: My new flat
 oldUrl: /misc/my-new-flat
-openAIMikesBlogFileId: file-cc1DpBa8LhJQLPAme5gkoNws
 ---
 
 Well i have been living in my new pad in Leeds for going on 4 weeks. Loving the wide open space and the convenience of it to everything else.

@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-10-31T16:43:49.000Z'
 tags: []
 title: Graduation Part One
 oldUrl: /misc/graduation-part-one
-openAIMikesBlogFileId: file-7NUAUAquTUXHZzWTcItnehIo
 ---
 
 ![](https://www.hud.ac.uk/cms-test/images/logo2.gif)Just got a letter through the post confirming the date for my graduation from Uni. <o:p></o:p>

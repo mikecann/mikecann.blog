@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2024-11-12T07:31:40.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
 title: Mikebot - The Virtual Me
 canonical: >-
   https://stack.convex.dev/building-a-second-brain-how-i-created-mike-ai-chat-bot-with-convex
-openAIMikesBlogFileId: file-WSjkudpT5XM9V9DcaWXyCx
 ---
 
 You know what's better than one Mike Cann? That's right, infinity Mike Canns.

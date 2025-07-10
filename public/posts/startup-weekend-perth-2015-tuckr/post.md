@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/startup-weekend-perth-2015-tuckr/cover.jpg
 date: '2015-11-16T02:49:19.000Z'
 tags:
@@ -9,7 +9,6 @@ tags:
   - startup
 title: Startup Weekend Perth 2015 - Tuckr
 oldUrl: /hackathons/startup-weekend-perth-2015-tuckr
-openAIMikesBlogFileId: file-0BneTIlZLNBCF6xW8txqY6Uk
 ---
 
 So this weekend I took part in an event I signed up for some time ago: Startup Weekend, Perth. Startup Weekend is an event where teams all over the world come together to build a startup over the course of a weekend.

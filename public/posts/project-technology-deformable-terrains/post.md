@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2007-12-05T22:25:38.000Z"
 tags: []
 title: Project Technology (Deformable Terrains)
 oldUrl: /c/project-technology-deformable-terrains
-openAIMikesBlogFileId: file-QDhs3Zb6XQtNeC3OKp5kqA65
 ---
 
 Well i got asked a question [in a comment](https://www.mikecann.blog/?p=208#comment-1333) on how the terrains work in the LieroXNA project so I thought i would do a quick post on this rather than reply in the comments.

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: "2017-11-05T13:37:29.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - agdlml
 title: A Game Developer Learns Machine Learning - Intent
 oldUrl: /machine-learning/a-game-developer-learns-machine-learning-intent
-openAIMikesBlogFileId: file-BcZh2fEl7SqGWXcZDymAIlOS
 ---
 
 Lately I have spent a considerable amount of time thinking about where I want to go in my career and what sort of things do I want to work on going forward.
@@ -42,7 +41,7 @@ Games are not the only thing I have been interested in over the years as this bl
 
 # The New Shiny
 
-So when you are in an industry that moves so fast with so many new technologies being released every day, it can be really hard to know where to spend your time, particularly for someone like me who "just cant stop tinkering with things" ™.
+So when you are in an industry that moves so fast with so many new technologies being released every day, it can be really hard to know where to spend your time, particularly for someone like me who "just cant stop tinkering with things" â„¢.
 
 Machine Learning (ML) is one of the biggest technologies to emerge over the past couple of years. I honestly think that ML has the power to transform every single industry from finance, to agriculture to sports science.
 
@@ -62,7 +61,7 @@ But will I enjoy it? This is a major concern of mine. From what I have seen thus
 
 I am also concerned that this I will basically be starting from scratch again. All my games programming knowledge counts for nothing. Will I be able to adapt to this new set of problems, solutions and tools?
 
-So I think only way to know for sure tho is just to try it and see and the best way to try is to tinker! ™
+So I think only way to know for sure tho is just to try it and see and the best way to try is to tinker! â„¢
 
 # Learn to Learn
 

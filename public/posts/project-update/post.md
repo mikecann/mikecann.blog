@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2007-11-11T22:07:16.000Z'
 tags: []
 title: Project Update
 oldUrl: /c/project-update
-openAIMikesBlogFileId: file-51DhnIKkaznx26CkGlhN8XJm
 ---
 
 Well its been a while since i have posted an update regarding the LieroXNA project. I havent been slacking.

@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-07-18T22:52:57.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - travel
 title: The Trip 2013 - Playa del Carmen to Tikal
 oldUrl: /2013-trip/the-trip-2013-playa-del-carmen-to-tikal
-openAIMikesBlogFileId: file-QD6Pu84R6jXo6Wb1cgFvo8qe
 ---
 
 ![screenshot_01](https://www.mikecann.blog/wp-content/uploads/2013/07/screenshot_01.png)

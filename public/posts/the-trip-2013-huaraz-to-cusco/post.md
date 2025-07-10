@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2013-11-17T22:38:25.000Z"
 tags:
@@ -10,7 +10,6 @@ tags:
   - trip
 title: The Trip 2013 - Huaraz to Cusco
 oldUrl: /2013-trip/the-trip-2013-huaraz-to-cusco
-openAIMikesBlogFileId: file-xvG1901O3YuXHCJ9pPSuMHJa
 ---
 
 **Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [Trip 2013 - Huaraz to Cusco](https://www.facebook.com/media/set/?set=a.10152010035196031.1073741853.593661030&type=1&l=23ceec3c7d). Each picture can be clicked to see a larger version and comment / like.**
@@ -111,7 +110,7 @@ Its not a particularly pleasant taste and makes your tongue go slightly numb how
 
 [![photo-110](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-110.jpg)](https://www.facebook.com/photo.php?fbid=10152010062091031&set=a.10152010035196031.1073741853.593661030&type=3&theater)
 
-On the way we stopped a few times to take pictures of some of the native wildlife including the famous Peruvian Llamas, Alpacas and Vicuña
+On the way we stopped a few times to take pictures of some of the native wildlife including the famous Peruvian Llamas, Alpacas and VicuÃ±a
 
 [![photo-68](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-68.jpg)](https://www.facebook.com/photo.php?fbid=10152010051261031&set=a.10152010035196031.1073741853.593661030&type=3&theater)
 

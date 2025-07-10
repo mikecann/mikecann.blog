@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: ./header.jpg
 date: '2020-09-27T14:51:40.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - gratitude
 title: Mike's Lifehacks - Highlight Reel
 oldUrl: /lifehacks/mikes-lifehacks-highlight-reel
-openAIMikesBlogFileId: file-VTW9qy5qcPq8o3vINFsUEuWD
 ---
 
 This is a technique my girlfriend I have have been practicing every day for years now so I thought I would share.

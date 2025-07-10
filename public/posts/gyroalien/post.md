@@ -1,10 +1,9 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2006-05-17T21:38:59.000Z'
 tags: []
 title: Gyroalien
 oldUrl: /art/gyroalien
-openAIMikesBlogFileId: file-v1XIIEXrwe6VNccJAnU5YBAW
 ---
 
 > This image took me a relatively long time to make because of the modeling involved in creating it. Im not sure exactly what i was envisiging when i started out creating this but it ended up as some half organic teleporting device for one occupant.

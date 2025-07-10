@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2009-11-08T16:56:20.000Z'
 tags:
@@ -7,7 +7,6 @@ tags:
   - video
 title: Trifonic - Parks on Fire
 oldUrl: /fun-amp-videos/trifonic-parks-on-fire
-openAIMikesBlogFileId: file-8fXlBjFNb4fq3sJ5ohplpjup
 ---
 
 Absolutely love the album, love the song and just discovered that I love the video, so have to post it really. Its Parks On Fire by Trifonic from the Album Emergence. Enjoy.

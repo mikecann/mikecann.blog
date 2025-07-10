@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: "2012-07-30T07:21:05.000Z"
 tags:
@@ -9,7 +9,6 @@ tags:
   - nme
 title: Fourth Week Mobile Game Progress Update
 oldUrl: /games/fourth-week-mobile-game-progress-update
-openAIMikesBlogFileId: file-zSFyqVTz6bLuS47rBxMBMmn1
 ---
 
 <object id="test1" width="650" height="400" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/wp-content/uploads/2012/07/Main10.swf" /><param name="pluginspage" value="https://www.adobe.com/go/getflashplayer" /><embed id="test1" width="650" height="400" type="application/x-shockwave-flash" src="/wp-content/uploads/2012/07/Main10.swf" pluginspage="https://www.adobe.com/go/getflashplayer" /></object>

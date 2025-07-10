@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /images/fallback-post-header.png
 date: '2017-05-11T01:12:00.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - travel
 title: Camping Oz 2017 - West Kimberly
 oldUrl: /above-under/camping-oz-2017-west-kimberly
-openAIMikesBlogFileId: file-NRfyLKJRICUHcZIWRZ4Ftc3r
 ---
 
 Wow, its been a while since I have written an update but so much has been going on I have struggled to find the time!
@@ -53,7 +52,7 @@ The sandstone here is getting worn away by the torrential rains they get leaving
 
 [AU0040 - James Price Point Crumbles Away](https://aboveunder.com/products/au0040-james-price-point-crumbles-away)
 
-While at Broome we took a few days to go north to Cape Leveque and stay on the cliffs just below the lighthouse. It was yet another perfect opportunity for some stunning drone photography.
+While at Broome we took a few days to go north to Cape Leveque and stay on the cliffs just below the lighthouse.Â It was yet another perfect opportunity for some stunning drone photography.
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/products/Cape_Leveque_Diagonol_1024x1024.jpg?v=1493557899)
 

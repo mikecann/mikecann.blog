@@ -1,4 +1,4 @@
----
+﻿---
 coverImage: /posts/unit-testing-with-unity-ash-and-unity-test-tools/cover.jpg
 date: '2015-11-02T09:45:01.000Z'
 tags:
@@ -8,7 +8,6 @@ tags:
   - testing
 title: Unit Testing with Unity Ash and Unity Test Tools
 oldUrl: /unity-ash/unit-testing-with-unity-ash-and-unity-test-tools
-openAIMikesBlogFileId: file-vVIGSXLD2raURoQ8bBo5OMps
 ---
 
 So I promised in my [last post](https://www.mikecann.blog/programming/unity-ash-a-different-way-of-thinking-about-making-games-in-unity/) to show how how [Unity-Ash](https://github.com/mikecann/Unity-Ash) can make things easyier when it comes to Unit Testing.
