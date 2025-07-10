@@ -5,7 +5,7 @@ tags:
   - ai
   - coding
   - thought
-title: The Future of Applications
+title: The Future of Vibe Coding
 ---
 
 **_TLDR; How I think the forgotten art of Test Driven Development is the solution to vibe coding at scale._**
