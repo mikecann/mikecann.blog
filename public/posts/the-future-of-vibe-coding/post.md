@@ -20,7 +20,7 @@ Well fast-forward to 2025 and tools like [Bolt](https://bolt.new/), [Lovable](ht
 
 When you vibe code you are cruise-controlling your way though app development.
 
-You prompt the AI for a new feature or request a change to something existing. You then just sit back as it does its thing. You then just check that your app still works and accept the code changes usually without inspecting them, you are going purely on â€œvibesâ€.
+You prompt the AI for a new feature or request a change to something existing. You then just sit back as it does its thing. You then just check that your app still works and accept the code changes usually without inspecting them, you are going purely on "vibes".
 
 Doesn't this sound awfully a lot like what I predicted back in 2022?
 
@@ -50,7 +50,7 @@ This is one of those key distinctions between Junior and Senior human software d
 
 A more senior developer has had enough time to lie in the bed they have shit in and thus know that you have to spend time thinking about the code structure otherwise you will inevitably run into maintainability issues down the road.
 
-We even have a term for this phenomenon: â€œtechnical debtâ€.
+We even have a term for this phenomenon: "technical debt".
 
 ## Solving AI Tech Debt
 
@@ -64,9 +64,9 @@ What I meant by that is that even though you can prompt your way to a solution o
 
 The issue everyone is currently facing with vibe coding is that as a codebase grows in size the AI just like a human looses the ability to keep it all in context and thus forgets some of your previous requirements.
 
-This leads to what I sometimes describe as â€œcarpet fittingâ€. You ask the AI to change the thing over here but it ends up breaking the other thing over there.
+This leads to what I sometimes describe as "carpet fitting". You ask the AI to change the thing over here but it ends up breaking the other thing over there.
 
-What we need is a way to make our prompts â€œverifiably correctâ€ now and in the future. That way as we make subsequent prompts the AI and us are able to verify that our earlier prompts still hold true.
+What we need is a way to make our prompts "verifiably correct" now and in the future. That way as we make subsequent prompts the AI and us are able to verify that our earlier prompts still hold true.
 
 Well fortunately the software industry has just the solution to this conundrum that it has been fine art over decades: **Automated Testing** or more specifically **Test Driven Development** (TDD).
 
