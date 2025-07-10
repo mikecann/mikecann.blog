@@ -48,7 +48,7 @@ If you aint got time for dat then no worries, the TLDR; is that just like human 
 
 This is one of those key distinctions between Junior and Senior human software developers.
 
-A more senior developer has had enough time to lie in the bed they have shit in and thus know that you have to spend time thinking about the code structure otherwise you will inevitably run into maintainability issues down the road.
+A more senior developer has had enough time to lie in the bed they have pooped in and thus know that you have to spend time thinking about the code structure otherwise you will inevitably run into maintainability issues down the road.
 
 We even have a term for this phenomenon: "technical debt".
 
