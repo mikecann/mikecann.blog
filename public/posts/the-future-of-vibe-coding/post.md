@@ -58,7 +58,7 @@ So what has this got to do with my 2022 prediction?
 
 Well right at the end of the article I mentioned this:
 
-> I guess in some aspects this is the ultimate promise ofÂ [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development). We specify in written english what the system under test should do and dont care about how it does it so long as it does it.
+> I guess in some aspects this is the ultimate promise of [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development). We specify in written english what the system under test should do and dont care about how it does it so long as it does it.
 
 What I meant by that is that even though you can prompt your way to a solution of some sort the output is only as valid for as long as the LLM remembers or cares to pay attention to your prompt.
 
