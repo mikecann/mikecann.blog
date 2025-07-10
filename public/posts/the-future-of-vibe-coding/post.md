@@ -85,7 +85,7 @@ _Image borrowed from [this post](https://medium.com/@tunkhine126/red-green-refac
 
 It has long been known that this test-first mentality creates better, more maintainable code but then downside has always been cited as a reduction in development speed. It takes time to write all those tests, time that could be spent just implementing features.
 
-Well in the age of AI speed of development is no longer really an issue, now the issue is one of correctness and confidence.
+Well in the age of AI, speed of development is no longer really an issue, now the issue is one of correctness and confidence.
 
 Writing tests is now painless, what we want is confidence that what LLM has just slopped out is actually going to work and is is going to be maintainable in the future.
 
