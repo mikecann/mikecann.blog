@@ -107,4 +107,4 @@ I don't think Vibe coding is going away in fact I think eventually its going to 
 
 I do think that for us to get to that future though we will have to flip our mental model from a prompt first to a test-first mindset.
 
-Keen to hear what you think!
+What you think?
