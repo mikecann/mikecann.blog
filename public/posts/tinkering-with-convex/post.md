@@ -159,9 +159,6 @@ export const AllMessages: React.FC<Props> = ({ list }) => {
   );
 };
 ```
-
-ðŸ¤¯
-
 This is the perfect developer experience in my opinion. You just declare the data you want in a simple to understand query and the platform takes care of the rest ensuring that "messages" is updated whenever there is something new or updated.
 
 Critically this also works for queries that reference other documents (JOINs). So if one of those joined documents changes then the parent query is "invalidated" and updated.
