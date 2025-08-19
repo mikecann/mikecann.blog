@@ -64,7 +64,7 @@ This for me is one of the key reasons for forgoing so much privacy and was a tot
 
 So although I might have just about been able to stomach the monthly subscription if it did everything I wanted
 
-![image.webp](./image 3.webp)
+![image.webp](./image_3.webp)
 
 I decided that this wearable was not for me and stopped wearing it after just a few days.
 
