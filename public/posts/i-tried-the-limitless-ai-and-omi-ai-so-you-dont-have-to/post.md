@@ -13,7 +13,7 @@ So it's been [5 months since I last wrote something](https://mikecann.blog/posts
 
 If you haven't read that post then the TLDR is that it was a good first step but is plagued by poor hardware (not waterproof) and some questionable software decisions.
 
-Since then I have bought and tried two more always listening devices, the [Limitless AI Pendant](https://www.limitless.ai/) and the [Omi Puck / Pendant thing](https://www.omi.me/?srsltid=AfmBOopB0CUCHIP28stKi5D3a9BTcivQjgAc6OIsfCukWdAPB1q9VwLo) and I have thoughts…
+Since then I have bought and tried two more always-listening devices, the [Limitless AI Pendant](https://www.limitless.ai/) and the [Omi Puck / Pendant thing](https://www.omi.me/?srsltid=AfmBOopB0CUCHIP28stKi5D3a9BTcivQjgAc6OIsfCukWdAPB1q9VwLo) and I have thoughts…
 
 ## Limitless Pendant
 
@@ -23,7 +23,7 @@ Let's start with the Limitless Pendant.
 
 ![image.webp](./image.webp)
 
-The hardware for this device is kind of interesting, you can either wear it as a sort of clip on your clothing:
+The hardware for this device is kind of interesting, you can either wear it as a clip for your clothing:
 
 ![image.webp](./image_1.webp)
 
@@ -33,7 +33,7 @@ Or as a necklace using the string provided:
 
 I chose to wear mine as a necklace as I don't always wear clothes that can easily clip this thing onto.
 
-So things I don't like about this design:
+Some things I don't like about this design are:
 
 1. There is nothing actually holding the pendant onto the rope, it can quite easily come off
 2. The light must always be on, you can dim it but it must always be on and because the microphone is on the same side as the light you can't just turn it around to face your body to hide the light.
@@ -46,7 +46,7 @@ Things that I DO like:
 
 ### Software
 
-Like with the Bee I found that there is still a fundamental flaw in the design of these always listening devices; they are unable to distinguish between me talking to other people and a TV show playing in the background. This is going to have to be solved before these things become mainstream.
+Like with the Bee (and Omi) I found that there is still a fundamental flaw in the design of these always listening devices; they are unable to distinguish between me talking to other people and a TV show playing in the background. This is going to have to be solved before these things become mainstream.
 
 I was hopeful that the Limitless was going to be a bit smarter here as I remember them saying they would be asking for permission before recording anyone unrecognized but I can unfortunately no longer find any reference to that on their website.
 
@@ -86,7 +86,7 @@ I guess they did this because they were originally envisioning this:
 
 I shit you not. This is from the [official Omi video](https://www.youtube.com/watch?v=MZLzvN3vmtI) on the device, they were planning that you would strap this thing to the side of your head.. yeah.. no thanks.
 
-Anyways other things I really DON'T like about the Omi hardware:
+Some other things I really DON'T like about the Omi hardware:
 
 1. The entire thing is a button rather than having one on the side or something like the Limitless. This means that it's suuuper easy to accidentally press it
 
@@ -101,9 +101,9 @@ Also by the way, this thing came with absolutely no instructions out of the box.
 
 ### Software
 
-Yeah this is the biggest load of hot garbage I have ever seen.. I'm pretty sure the devs just vibe coded the crap out of this.
+Yeah this is the biggest load of hot garbage I have ever seen.. I'm pretty sure the devs just vibe coded this thing.
 
-Now to be clear I actually think that some ideas in the app are not too bad such as the idea of "apps":
+To be clear I actually think that some ideas in the app are not too bad such as the idea of "apps":
 
 ![IMG_5540.webp](./IMG_5540.webp)
 
@@ -111,7 +111,7 @@ Rather than showing the transcript for your voice on the home of the app it inst
 
 ![IMG_5609.webp](./IMG_5609.webp)
 
-I actually don't mind this idea, having tried a few of these apps now I know how bad their transcription can sometimes be, so by having another process that takes the raw transcription and converts it into something usable I think is a good idea.
+I actually don't mind this having tried a few of these apps now I know how bad their transcription can sometimes be, so by having another process that takes the raw transcription and converts it into something usable I think is a good idea.
 
 Aaaand that's about it for my compliments about this thing. Okay let's try to do this quickly:
 
@@ -120,16 +120,16 @@ Aaaand that's about it for my compliments about this thing. Okay let's try to do
 
 ![IMG_5541.webp](./d7e2772d-6bb3-46da-901e-5af2492062fc.webp)
 
-1. Expect to see your battery level on the device swing wildly between 100%, 41%, 63%, -1% for no reason whatsoever.
-2. The AI chat is just about useless.. that's if you should ever be able to get it to work
+3. Expect to see your battery level on the device swing wildly between 100%, 41%, 63%, -1% for no reason whatsoever.
+4. The AI chat is just about useless.. that's if you should ever be able to get it to work
 
 ![IMG_5558.webp](./IMG_5558.webp)
 
-1. It does have a todo list (yay!) but for some reason that I am unable to fathom, it regularly undoes all of your "done" to-dos which is incredibly frustrating. Oh and there is no way of hooking up these todos to your existing todo app like Google Tasks or Todoist or something like that.
+5. It does have a todo list (yay!) but for some reason that I am unable to fathom, it regularly undoes all of your "done" to-dos which is incredibly frustrating. Oh and there is no way of hooking up these todos to your existing todo app like Google Tasks or Todoist or something like that.
 
 ![IMG_5562.webp](./6e21fc43-3c81-4e93-83e2-fded8f1f8a48.webp)
 
-1. This is the absolutely worst one, but because I had no idea how to use this thing I think I turned it off or put it in mute or something FOR 4 DAYS. I kept trying to turn it back on, double click it, long-hold click, re-link it etc. and yet I could not get it to start transcribing again and the whole time the UI said it was connected and listening… SO FRUSTRATING.
+6. This is the absolutely worst one, but because I had no idea how to use this thing I think I turned it off or put it in mute or something FOR 4 DAYS. I kept trying to turn it back on, double click it, long-hold click, re-link it etc. and yet I could not get it to start transcribing again and the whole time the UI said it was connected and listening… SO FRUSTRATING.
 
 ![IMG_5557.webp](./632130f0-2aee-4d8d-8e5d-0f51c66862f6.webp)
 
