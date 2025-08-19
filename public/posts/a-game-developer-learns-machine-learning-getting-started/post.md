@@ -93,7 +93,7 @@ Folling the "Training with PPO" section of the docs we open "TensorBoard" which 
 
 Im not really sure what all those stats mean but thats okay at this stage, we are just tinkering!
 
-The main thing is my model is busy training itself as evidenced by the changing graphs and my pegged CPU ðŸ˜œ
+The main thing is my model is busy training itself as evidenced by the changing graphs and my pegged CPU
 
 ![](./pegged-cpu.png)
 

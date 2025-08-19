@@ -75,7 +75,7 @@ my_app.greet(window.prompt("Enter your name:")).then((greeting) => {
 });
 ```
 
-And because its just an RPC the typescript definitions for your actor are easily generated ðŸ’¯.
+And because its just an RPC the typescript definitions for your actor are easily generated.
 
 # Queries vs Mutation
 
@@ -123,4 +123,4 @@ I have barely scratched the surface of the Internet Computer but what I have see
 
 I think for my next step I would like to build something a little more meaningful and have it running on a remote network so others can access it.
 
-Right now however im going to keep an eye on the project and wait a while. They have a bit more work to do to make it user friendly and I don't want to pay the early adopter tax when there are so many other cool shiny things to play with ðŸ˜‰
+Right now however im going to keep an eye on the project and wait a while. They have a bit more work to do to make it user friendly and I don't want to pay the early adopter tax when there are so many other cool shiny things to play with

@@ -33,7 +33,7 @@ What I really want (and I know this sounds lazy) is a personal assistant that co
 
 If something could help me keep track of all the stuff that usually leaks out of my brain like a sieve, and actually make sense of my daily experiences - well, that'd be absolutely incredible.
 
-# The Bee ðŸ
+# The Bee
 
 So when I stumbled across the [Bee Pioneer](https://www.bee.computer/bee-pioneer) - this little gadget promising exactly what I wanted for just $49 USD with no subscription - I couldn't throw my money at them fast enough. Probably should've done a bit more research first, but hey, YOLO right? :D
 
@@ -103,7 +103,7 @@ Sounds amazing, right? But here's the thing - they're the new kids on the block,
 
 Look, I wanted to love this thing (I really did!), but I've run into some proper annoying issues. Let me break it down for you:
 
-### Water and Electronics Don't Mix (Who Knew? ðŸ™„)
+### Water and Electronics Don't Mix (Who Knew?)
 
 Here's a fun story - turns out the Bee isn't waterproof AT ALL. You're supposed to wear this thing 24/7, but one quick dip in the pool and... well, let's just say mine is now sleeping with the fishes. Not ideal for something that's meant to be your constant companion!
 
@@ -169,7 +169,7 @@ It's like giving someone the keys to your digital life before they've even bough
 
 Using this thing has become a proper job! Every day it spits out about 15 todos I need to review and 25+ "facts" I have to verify. Instead of making my life easier, I'm now spending more time managing its output than I would just handling things myself!
 
-The irony is absolutely killing me - it's like hiring a personal assistant who creates more work than they save. (Anyone else had that coworker? ðŸ˜…)
+The irony is absolutely killing me - it's like hiring a personal assistant who creates more work than they save. (Anyone else had that coworker?)
 
 I really wish it was smarter about importance. Rather than drowning me in low-priority noise, focus on the stuff that actually matters! Right now it's just information overload pretending to be assistance.
 
@@ -207,6 +207,6 @@ Look, the Bee Computer is clearly a first attempt - and boy does it show. The ha
 
 Their approach of shipping early and iterating based on user feedback is pretty solid from a product development perspective. I'll be sending them this review - hopefully it helps shape future versions.
 
-As for me, while I won't be replacing my water-damaged Bee (RIP mate ðŸ˜¢), I'm not giving up on this space. I've actually gone ahead and ordered the Limitless pendant - curious to see how their approach differs.
+As for me, while I won't be replacing my water-damaged Bee (RIP mate), I'm not giving up on this space. I've actually gone ahead and ordered the Limitless pendant - curious to see how their approach differs.
 
 I'll report back once I've had a proper play with it. If you're interested in following along on this AI assistant journey, chuck your email in the subscribe form below and I'll let you know when my next post drops.

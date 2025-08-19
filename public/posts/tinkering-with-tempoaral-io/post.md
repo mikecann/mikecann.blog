@@ -99,6 +99,6 @@ However, I'd need to make a real app to get a proper sense of how expensive Temp
 
 Speaking of Convex, I can't help but think about how I might implement a "Workflow-like" structure on Convex.
 
-I've been considering building an Event-Sourced application on Convex for a while, but I think a simpler structure via State Machines might achieve most of what you want... ðŸ¤”
+I've been considering building an Event-Sourced application on Convex for a while, but I think a simpler structure via State Machines might achieve most of what you want...
 
 Stay tunedâ€”I may well tinker with this in the future!

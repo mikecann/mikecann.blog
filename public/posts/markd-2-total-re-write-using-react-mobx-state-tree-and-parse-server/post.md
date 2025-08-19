@@ -181,7 +181,7 @@ One solution that has evolved over the yeas is [lerna](https://lernajs.io/). Ler
 
 ![](./lerna-structure.png)
 
-Lerna then manages the dependencies between the packages by using symlinks (`npm link`). This makes me shudder every time. I cant believe this is 2017 and we are using symlinks for dependency management ðŸ˜¢
+Lerna then manages the dependencies between the packages by using symlinks (`npm link`). This makes me shudder every time. I cant believe this is 2017 and we are using symlinks for dependency management
 
 I had issues when using Lerna. Libraries were getting included twice in my build and other various issues. In the end I ended up using the very new [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/). Yarn workspaces attempts to formalize the concepts in Lerna by baking them into the dependency management tool itself.
 
