@@ -19,7 +19,7 @@
     "checkLinks": "bun run blc http://localhost:3000 -ro --exclude https://www.linkedin.com/in/mikecann",
     "compress:all:lossless": "optimizt --lossless ./public",
     "compress:one:lossless": "optimizt --lossless ./public/posts/google-photos-picker-sync",
-    "compress:one:webp": "optimizt --webp ./public/posts/google-photos-picker-sync",
+    "compress:one:webp": "optimizt --webp ./public/posts/i-tried-the-limitless-ai-and-omi-ai-so-you-dont-have-to",
     "test": "vitest run",
     "dev:test": "vitest"
   },
