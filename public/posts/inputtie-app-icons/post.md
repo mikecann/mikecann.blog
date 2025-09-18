@@ -11,7 +11,7 @@ title: Inputtie - App Icons
 oldUrl: /inputtie/inputtie-app-icons
 ---
 
-With the beta for Inputtie drawing very near Oli and I are adding some final touches to the build and doing those "things we meant to do for ages". Â One of those things being the app icon. This is the icon you will see on your shortcuts and in your taskbar area so its going to be pretty visible.
+With the beta for Inputtie drawing very near Oli and I are adding some final touches to the build and doing those "things we meant to do for ages".  One of those things being the app icon. This is the icon you will see on your shortcuts and in your taskbar area so its going to be pretty visible.
 
 <!-- more -->
 

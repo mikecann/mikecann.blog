@@ -21,7 +21,7 @@ While I was there I made extensive use of the [Instagram](https://instagr.am/) a
 
 The only problem is that there is currently no web interface for the app, so all those great pictures you take cannot be shown off in a gallery format unless you "share" the image to a stream such as flickr or tumbr or something.
 
-Third-party-apps to theÂ rescue! Instagrid is one of many web apps designed to plug this gaping hole in Instagram. Its quick and easy to setup so I have done so:
+Third-party-apps to the rescue! Instagrid is one of many web apps designed to plug this gaping hole in Instagram. Its quick and easy to setup so I have done so:
 
 [https://instagrid.me/mikeysee/](https://instagrid.me/mikeysee/)
 

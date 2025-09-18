@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.webp
-date: '2024-07-01T07:31:40.000Z'
+date: "2024-07-01T07:31:40.000Z"
 tags:
   - ai
   - code
@@ -31,7 +31,7 @@ I aimed to speed up podcast transcription by parallelizing the task into separat
 
 Each Fly.io machine runs a single Docker container with a Whisper binary from [whisper-standalone-win](https://github.com/Purfview/whisper-standalone-win), an [FFmpeg](https://github.com/kribblo/node-ffmpeg-installer) binary, and a Node.js "worker" for "chunking" or "transcription" jobs.
 
-To orchestrate this, I used [Convex](https://convex.dev), an excellent backend as a service that Iâ€™ve discussed [many times before](https://mikecann.blog/tags/convex).
+To orchestrate this, I used [Convex](https://convex.dev), an excellent backend as a service that I've discussed [many times before](https://mikecann.blog/tags/convex).
 
 # Challenges
 
@@ -63,11 +63,11 @@ Another side quest was experimenting with "the new hotness" in web UI design.
 
 [Shadcn/ui](https://ui.shadcn.com/) is popular right now. The idea is to copy and paste component code directly into your project and modify it, creating your own component library.
 
-Shadcn uses Tailwind for styling. Although Iâ€™ve avoided Tailwind due to its "[stringly typed](https://wiki.c2.com/?StringlyTyped)" nature, I decided to try it since itâ€™s widely used.
+Shadcn uses Tailwind for styling. Although I've avoided Tailwind due to its "[stringly typed](https://wiki.c2.com/?StringlyTyped)" nature, I decided to try it since it's widely used.
 
 My conclusions?
 
-Iâ€™m just not sold on Tailwind. I dislike its stringly typed nature and the need for additional tools like `prettier-plugin-tailwindcss` and extra linting rules. Managing className attributes requires more libraries like `tailwind-merge` and `class-variance-authority` which irks me. Tailwind also needs its own compiler/toolchain which is yet another headache to deal with.
+I'm just not sold on Tailwind. I dislike its stringly typed nature and the need for additional tools like `prettier-plugin-tailwindcss` and extra linting rules. Managing className attributes requires more libraries like `tailwind-merge` and `class-variance-authority` which irks me. Tailwind also needs its own compiler/toolchain which is yet another headache to deal with.
 
 Shadcn/ui was also disappointing. While the copy-paste nature is quick, the components lacked features I expected from a UI library. Modifying components that often looked like this is just simply confusing:
 
@@ -85,6 +85,6 @@ Some key areas include:
 - Error handling for Fly.io machine startup needs improvement.
 - More testing is required to ensure stability.
 - The code is messy and needs tidying up.
-- Thereâ€™s no authorization or authentication.
+- There's no authorization or authentication.
 - Worker count limits are needed to prevent potential issues.
 - The UI is basic and was more of an experiment with Shadcn and Tailwind.

@@ -10,7 +10,7 @@ For the last few days I have been playing around with trying to get the[ game of
 
 <!-- more -->
 
-InÂ theoryÂ NME should do all the heavy lifting for you so that it should be as simple as running:
+In theory NME should do all the heavy lifting for you so that it should be as simple as running:
 
 ```text
 

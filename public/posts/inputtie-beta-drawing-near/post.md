@@ -15,7 +15,7 @@ title: Inputtie - Beta Drawing Near!
 oldUrl: /inputtie/inputtie-beta-drawing-near
 ---
 
-Final testing isÂ under wayÂ here at mission control for the [Inputtie](https://www.inputtie.com) Beta.
+Final testing is under way here at mission control for the [Inputtie](https://www.inputtie.com) Beta.
 
 <!-- more -->
 

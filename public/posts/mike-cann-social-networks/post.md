@@ -35,7 +35,7 @@ Ahh Twitter, that strange little service that is just sooo addictive! Find me, f
 
 [https://soundcloud.com/mike-cann](https://soundcloud.com/mike-cann)
 
-Not exactly Â social network, but still find a collection of my mixes ;)
+Not exactly  social network, but still find a collection of my mixes ;)
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/05/ScreenHunter_05-May.-16-14.57.gif "ScreenHunter_05 May. 16 14.57")](https://picasaweb.google.co.uk/mike.cann)
 

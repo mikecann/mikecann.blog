@@ -30,11 +30,11 @@ So onto the game. First some shots:
 
 Okay so if you have been following [waaaay back my original intention](/posts/ludum-dare-hour-1/) was to make a game with the same sort of art style as World of Goo but with the game mechanics of Boom Stick. I think I have stayed pretty true to that original idea.
 
-Basically you fight against waves of enemies that floatÂ acrossÂ the screen. There are currently only 10 waves, I would have liked more and with more variety but oh well ;)
+Basically you fight against waves of enemies that float across the screen. There are currently only 10 waves, I would have liked more and with more variety but oh well ;)
 
-The theme of the competition was "Enemies as Weapons". I haveÂ incorporatedÂ that theme by having the enemies drop giblets when they die. You then have a certain amount of time to pick up those giblets and fire them back at the enemies. Enemies as weapons!
+The theme of the competition was "Enemies as Weapons". I have incorporated that theme by having the enemies drop giblets when they die. You then have a certain amount of time to pick up those giblets and fire them back at the enemies. Enemies as weapons!
 
-So as a disclaimer: im sure the game has many bugs and things, I have run out of time to do much in the way of testing andÂ optimising. If you find any bugs however drop a comment I would love to hear about them as I plan to release this to a few flash portals, so would like to get those bugs fixed ;)
+So as a disclaimer: im sure the game has many bugs and things, I have run out of time to do much in the way of testing and optimising. If you find any bugs however drop a comment I would love to hear about them as I plan to release this to a few flash portals, so would like to get those bugs fixed ;)
 
 Anyways enough jibber jabber. A few more shots then the game is below:
 

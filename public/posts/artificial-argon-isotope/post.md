@@ -20,7 +20,7 @@ I decided to take a little break from the coding and over the past few evenings 
 
 <!-- more -->
 
-Out of all of the mixes I have done [Argon](https://soundcloud.com/mikecann/artificial-argon) is probably myÂ favorite and was pretty much the soundtrack to myÂ Â trip to Vietnam in 2011\. As that was two years ago now I thought it was time I refreshed and updated it with the my current personalÂ favoritesÂ in the tech and progressive house / trance world.
+Out of all of the mixes I have done [Argon](https://soundcloud.com/mikecann/artificial-argon) is probably my favorite and was pretty much the soundtrack to my  trip to Vietnam in 2011\. As that was two years ago now I thought it was time I refreshed and updated it with the my current personal favorites in the tech and progressive house / trance world.
 
 Argon is a lighter element than [Iridium](https://soundcloud.com/mikecann/artificial-iridium) and hence the tracks have a smoother simpler progressive sound. Because this mix is in the same vein as Argon I have decided to call it Argon Isotope.
 

@@ -74,31 +74,31 @@ It wasn't all bad though as it gave me time to reflect, take stock and realise w
 
 I kept up my blog throughout the trip too which served as a public record of my excursion. Infact I wrote 25 blog posts over the course of my time:
 
-[The Trip 2013 â€“ Washington DC](/posts/the-trip-2013-washington-dc/)
-[The Trip 2013 â€“ Toronto](/posts/the-trip-2013-toronto/)
-[The Trip 2013 â€“ Chicago](/posts/the-trip-2013-chicago/)
-[The Trip 2013 â€“ North Carolina](/posts/the-trip-2013-north-carolina/)
-[The Trip 2013 â€“ LA to Mazatlan](/posts/the-trip-2013-la-to-mazatlan/)
-[The Trip 2013 â€“ Guadalajara to Mexico City](/posts/the-trip-2013-guadalajara-to-mexico-city/)
-[The Trip 2013 â€“ Oaxaca to Chichen Itza](/posts/the-trip-2013-oaxaca-to-chichen-itza/)
-[The Trip 2013 â€“ Playa del Carmen to Tikal](/posts/the-trip-2013-playa-del-carmen-to-tikal/)
-[The Trip 2013 â€“ El Ramate to Antigua](/posts/the-trip-2013-el-ramate-to-antigua/)
-[The Trip 2013 â€“ CopÃ¡n to RoatÃ¡n](/posts/the-trip-2013-copan-to-roatan/)
-[The Trip 2013 â€“ Granada to Ometepe](/posts/the-trip-2013-granada-to-ometepe/)
-[The Trip 2013 â€“ Monte Verde to San Jose](/posts/the-trip-2013-monte-verde-to-san-jose/)
-[The Trip 2013 â€“ San Jose to Puerto Viejo](/posts/the-trip-2013-san-jose-to-puerto-viejo/)
-[The Trip 2013 â€“ Puerto Viejo to Panama City](/posts/the-trip-2013-puerto-viejo-to-panama-city/)
-[The Trip 2013 â€“ Bogota to Medellin](/posts/the-trip-2013-bogota-to-medellin/)
-[The Trip 2013 â€“ Cartagena to Taganga](/posts/the-trip-2013-cartagena-to-taganga/)
-[The Trip 2013 â€“ Tyrona to Bucaramanga](/posts/the-trip-2013-tyrona-to-bucaramanga/)
-[Trip 2013 â€“ Bucaramanga to Montanita](/posts/trip-2013-bucaramanga-to-montanita/)
-[The Trip 2013 â€“ Montanita to Huaraz](/posts/the-trip-2013-montanita-to-huaraz/)
-[The Trip 2013 â€“ Huaraz to Cusco](/posts/the-trip-2013-huaraz-to-cusco/)
-[The Trip 2013 â€“ Cusco to La Paz](/posts/the-trip-2013-cusco-to-la-paz/)
-[The Trip 2013 â€“ La Paz to Mercedes](/posts/the-trip-2013-la-paz-to-mercedes/)
-[The Trip 2013 â€“ Mercedes to Itacare](/posts/the-trip-2013-mercedes-to-itacare/)
-[The Trip 2013 â€“ Itacare to Jericoacoara](/posts/the-trip-2013-itacare-to-jericoacoara/)
-[The Trip 2013 â€“ Jericoacoara to Newport](/posts/the-trip-2013-jericoacoara-to-newport/)
+[The Trip 2013 “ Washington DC](/posts/the-trip-2013-washington-dc/)
+[The Trip 2013 “ Toronto](/posts/the-trip-2013-toronto/)
+[The Trip 2013 “ Chicago](/posts/the-trip-2013-chicago/)
+[The Trip 2013 “ North Carolina](/posts/the-trip-2013-north-carolina/)
+[The Trip 2013 “ LA to Mazatlan](/posts/the-trip-2013-la-to-mazatlan/)
+[The Trip 2013 “ Guadalajara to Mexico City](/posts/the-trip-2013-guadalajara-to-mexico-city/)
+[The Trip 2013 “ Oaxaca to Chichen Itza](/posts/the-trip-2013-oaxaca-to-chichen-itza/)
+[The Trip 2013 “ Playa del Carmen to Tikal](/posts/the-trip-2013-playa-del-carmen-to-tikal/)
+[The Trip 2013 “ El Ramate to Antigua](/posts/the-trip-2013-el-ramate-to-antigua/)
+[The Trip 2013 “ CopÃ¡n to RoatÃ¡n](/posts/the-trip-2013-copan-to-roatan/)
+[The Trip 2013 “ Granada to Ometepe](/posts/the-trip-2013-granada-to-ometepe/)
+[The Trip 2013 “ Monte Verde to San Jose](/posts/the-trip-2013-monte-verde-to-san-jose/)
+[The Trip 2013 “ San Jose to Puerto Viejo](/posts/the-trip-2013-san-jose-to-puerto-viejo/)
+[The Trip 2013 “ Puerto Viejo to Panama City](/posts/the-trip-2013-puerto-viejo-to-panama-city/)
+[The Trip 2013 “ Bogota to Medellin](/posts/the-trip-2013-bogota-to-medellin/)
+[The Trip 2013 “ Cartagena to Taganga](/posts/the-trip-2013-cartagena-to-taganga/)
+[The Trip 2013 “ Tyrona to Bucaramanga](/posts/the-trip-2013-tyrona-to-bucaramanga/)
+[Trip 2013 “ Bucaramanga to Montanita](/posts/trip-2013-bucaramanga-to-montanita/)
+[The Trip 2013 “ Montanita to Huaraz](/posts/the-trip-2013-montanita-to-huaraz/)
+[The Trip 2013 “ Huaraz to Cusco](/posts/the-trip-2013-huaraz-to-cusco/)
+[The Trip 2013 “ Cusco to La Paz](/posts/the-trip-2013-cusco-to-la-paz/)
+[The Trip 2013 “ La Paz to Mercedes](/posts/the-trip-2013-la-paz-to-mercedes/)
+[The Trip 2013 “ Mercedes to Itacare](/posts/the-trip-2013-mercedes-to-itacare/)
+[The Trip 2013 “ Itacare to Jericoacoara](/posts/the-trip-2013-itacare-to-jericoacoara/)
+[The Trip 2013 “ Jericoacoara to Newport](/posts/the-trip-2013-jericoacoara-to-newport/)
 
 # 3\. Photos
 
@@ -168,7 +168,7 @@ All of these activities came at a cost however..
 
 # 5\. Finances
 
-** Money Spent: Â£19184**</p>
+** Money Spent: £19184**</p>
 
 Yep it cost more than I was expecting (around 15k) but I stayed out there longer than I had originally planned and done far more activities than I had planned. I also didn't do it in the cheapest possible way by taking 4 guided tours with Trek America and GAdventures totalling 86 days out of my 251.
 

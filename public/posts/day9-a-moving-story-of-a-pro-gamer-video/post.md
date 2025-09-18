@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2010-11-22T17:52:59.000Z'
+date: "2010-11-22T17:52:59.000Z"
 tags:
   - emotional
   - gaming
@@ -8,7 +8,7 @@ tags:
   - tale
   - video
   - watch
-title: 'Day[9] - A Moving Story of a Pro-Gamer [Video]'
+title: "Day[9] - A Moving Story of a Pro-Gamer [Video]"
 oldUrl: /fun-amp-videos/day9-a-moving-story-of-a-pro-gamer-video
 ---
 
@@ -20,4 +20,4 @@ If you enjoy gaming or know someone that enjoys gaming I cant encourage you enou
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/NJztfsXKcPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you liked Day[9]'sÂ quirky style of humor of Â or are interested in watching some more of his casts you should checkout either his [Youtube ](https://www.youtube.com/user/day9tv)channel or his [BlipTV archive](https://www.youtube.com/user/day9tv).
+If you liked Day[9]'s quirky style of humor of  or are interested in watching some more of his casts you should checkout either his [Youtube ](https://www.youtube.com/user/day9tv)channel or his [BlipTV archive](https://www.youtube.com/user/day9tv).

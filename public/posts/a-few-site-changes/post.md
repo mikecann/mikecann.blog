@@ -14,6 +14,6 @@ oldUrl: /websites/a-few-site-changes
 
 As im not out tonight I thought I would do a little work on the site.<!-- more -->
 
-I have been meaning to add the retweet and facebook buttons for ages. I have also updates the flash header to make it a littleÂ prettierÂ :)
+I have been meaning to add the retweet and facebook buttons for ages. I have also updates the flash header to make it a little prettier :)
 
 What d'you think?

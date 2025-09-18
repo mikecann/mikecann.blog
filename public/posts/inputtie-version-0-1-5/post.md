@@ -28,4 +28,4 @@ Inputtie Version 0.1.5 (17/10/10)
 - More errors are caught in the client
 - Keys are now depressed when a connection is cut, no more lingering Shift, yey!
 
-The new version should automatically download, but if youÂ don'tÂ yet have it go grab it on the download page -> [https://www.inputtie.com/download/](https://www.inputtie.com/download/)
+The new version should automatically download, but if you don't yet have it go grab it on the download page -> [https://www.inputtie.com/download/](https://www.inputtie.com/download/)

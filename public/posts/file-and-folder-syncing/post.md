@@ -9,7 +9,7 @@ title: File and Folder Syncing
 oldUrl: /misc/file-and-folder-syncing
 ---
 
-For a long while I have been worried about my lack of backups for my machine. I detest the fact that iÂ  [actually lost some of my older work](https://www.mikecann.blog/lieroxna/lieroxna-digging-up-the-past/). Getting[ the Mac](https://www.mikecann.blog/photos-personal/new-laptop-iphone-fun/) has been the final straw and my instigator for change.
+For a long while I have been worried about my lack of backups for my machine. I detest the fact that i  [actually lost some of my older work](https://www.mikecann.blog/lieroxna/lieroxna-digging-up-the-past/). Getting[ the Mac](https://www.mikecann.blog/photos-personal/new-laptop-iphone-fun/) has been the final straw and my instigator for change.
 
 <!-- more -->
 
@@ -29,7 +29,7 @@ Now there are several differnt providers out there for doing this. Ill list them
 
 ## The Alternatives
 
-**Edit: this is an old post for a more up to date review of SpiderOak check:Â [https://www.cloudwards.net/review/spideroak/](https://www.cloudwards.net/review/spideroak/)**
+**Edit: this is an old post for a more up to date review of SpiderOak check: [https://www.cloudwards.net/review/spideroak/](https://www.cloudwards.net/review/spideroak/)**
 
 [![logo](https://www.mikecann.blog/wp-content/uploads/2009/09/logo.gif "logo")](https://spideroak.com/)
 

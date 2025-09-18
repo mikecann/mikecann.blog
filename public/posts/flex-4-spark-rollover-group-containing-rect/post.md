@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2010-08-02T08:25:14.000Z'
+date: "2010-08-02T08:25:14.000Z"
 tags:
   - behaviour
   - code
@@ -15,11 +15,11 @@ title: Flex 4 Spark & Rollover Group Containing Rect
 oldUrl: /actionscript/flex-4-spark-rollover-group-containing-rect
 ---
 
-Was working on my top-secret Flex-based project over the weekend when I discovered something IÂ hadn'tÂ comeÂ acrossÂ before.
+Was working on my top-secret Flex-based project over the weekend when I discovered something I hadn't come across before.
 
 <!-- more -->
 
-The issue is that when you have a Spark Rect GraphicsElement within a Spark Group it seems that the rollover event of the group is triggered even though the mouseÂ doesn'tÂ roll over the Rect.
+The issue is that when you have a Spark Rect GraphicsElement within a Spark Group it seems that the rollover event of the group is triggered even though the mouse doesn't roll over the Rect.
 
 Here is a video I made to explain my issue on Twitter:
 

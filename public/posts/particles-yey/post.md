@@ -25,4 +25,4 @@ Apparently its creator, Grant Kot has been playing around with particles for som
 
 Pretty!
 
-Edit: Didnt realise but this is the same guy that did Polluted Planet that I covered almost 3 years ago -> [/posts/polluted-planet/](/posts/polluted-planet/) thats someÂ awesomeÂ particle based dedication right there, I think I need to buy him a beer ;)
+Edit: Didnt realise but this is the same guy that did Polluted Planet that I covered almost 3 years ago -> [/posts/polluted-planet/](/posts/polluted-planet/) thats some awesome particle based dedication right there, I think I need to buy him a beer ;)

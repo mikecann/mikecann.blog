@@ -13,7 +13,7 @@ oldUrl: /post-to-tumbr/post-to-tumblr-v3-13
 
 [![head](https://www.mikecann.blog/wp-content/uploads/2013/01/head2.png)](/posts/post-to-tumblr-v3-13/attachment/head-7/)
 
-Just a quick update to my [Chrome Extension PostToTumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en) this morning to fix a few things and add aÂ coupleÂ of features after the large update in v3.12.
+Just a quick update to my [Chrome Extension PostToTumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en) this morning to fix a few things and add a couple of features after the large update in v3.12.
 
 <!-- more -->
 

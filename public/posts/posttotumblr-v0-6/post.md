@@ -14,7 +14,7 @@ oldUrl: /post-to-tumbr/posttotumblr-v0-6
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/12/icon128.png "icon128")](https://www.mikecann.blog/wp-content/uploads/2010/12/icon128.png)
 
-Just a quick update to my chromeÂ extensionÂ tonight. IÂ recentlyÂ had an email asking if there was a way I could make it so that you could send a Tweet at the same time as posting to Tumblr.
+Just a quick update to my chrome extension tonight. I recently had an email asking if there was a way I could make it so that you could send a Tweet at the same time as posting to Tumblr.
 
 <!-- more -->
 

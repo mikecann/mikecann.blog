@@ -58,7 +58,7 @@ In this update I finally worked out how to catch bad username or password return
 });
 ```
 
-In addition I have added someÂ notifications to indicate when the extension is doingÂ something.
+In addition I have added some notifications to indicate when the extension is doing something.
 
 I have made a little demo video below to show this off:
 

@@ -32,7 +32,7 @@ The problem that this update fixed was that the "oauth verifier" that was return
 
 [![screenshot_03](https://www.mikecann.blog/wp-content/uploads/2013/03/screenshot_03.png)](/posts/posttotumblr-v3-18-fixed-tumblr-oauth-change/attachment/screenshot_03-10/)
 
-You see at the end of the query string there is now a "#_=_" well this was causingÂ havocÂ with the URL parameter parsing code in the Google oauth library I was using.
+You see at the end of the query string there is now a "#_=_" well this was causing havoc with the URL parameter parsing code in the Google oauth library I was using.
 
 My solution is quick and dirty, just strip out the "#_=_" from the url while parsing:
 

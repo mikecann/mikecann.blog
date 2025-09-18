@@ -14,7 +14,7 @@ oldUrl: /audio/artificial-blue-noise
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/03/700.png "700")](https://www.mikecann.blog/wp-content/uploads/2011/03/700.png)
 
-I've been getting into the whole Dubstep quite abitÂ recently. Its probably just a phaseÂ IÂ know, but while im enjoying it all so much at the moment I thought I would chuck down some of my favourites into a mix.
+I've been getting into the whole Dubstep quite abit recently. Its probably just a phase I know, but while im enjoying it all so much at the moment I thought I would chuck down some of my favourites into a mix.
 
 <!-- more -->
 

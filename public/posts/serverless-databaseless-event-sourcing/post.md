@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2021-10-16T07:31:40.000Z'
+date: "2021-10-16T07:31:40.000Z"
 tags:
   - cloudflare
   - typescript
@@ -26,6 +26,6 @@ If you would like to dig a little deeper into how it all works all the source is
 
 I also put together a miro board for this project here which goes over some of the high-level structure: https://miro.com/app/board/o9J_lq_d2nE=/
 
-BTW I also submitted this project to the [Cloudflare Developer Challenge](https://blog.cloudflare.com/developer-summer-challenge/) and it won! I got a nice little bag of swag for my efforts â¤ï¸ Cloudflare.
+BTW I also submitted this project to the [Cloudflare Developer Challenge](https://blog.cloudflare.com/developer-summer-challenge/) and it won! I got a nice little bag of swag for my efforts 💟 Cloudflare.
 
 Let me know in the comments what you think!

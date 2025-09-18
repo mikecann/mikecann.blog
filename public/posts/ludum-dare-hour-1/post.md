@@ -19,7 +19,7 @@ Okay I have had an hour now and I have spent it trying to come up with an art st
 
 <!-- more -->
 
-I really like the World Of Goo art style, plus im hoping the shilloette like style will be muchÂ easierÂ for my poor drawing ability :P
+I really like the World Of Goo art style, plus im hoping the shilloette like style will be much easier for my poor drawing ability :P
 
 As for gameplay, "Enemies as Weapons" instantly reminded me of the flash game Boom Stick for some reason. So in that game you shoot enemies flying by overhead with your shotgun. You then run around and pick up ammo that drops from them. You then use that ammo to shoot more of them, simples!
 
@@ -27,4 +27,4 @@ As for gameplay, "Enemies as Weapons" instantly reminded me of the flash game Bo
 
 The great thing about this idea is that I have done work in the past on LieroXNA and Worms 2 Mobile so hopefully I can use some of the experience I have gleamed from doing those games to make this one :)
 
-With design out of the way now, I think im going to setup myÂ environmentÂ and get cracking!
+With design out of the way now, I think im going to setup my environment and get cracking!

@@ -11,11 +11,11 @@ tags:
   - rts
   - starling
   - web
-title: The Three Game Challenge â€“ Part 2 â€“ A Cunning Plan
+title: The Three Game Challenge “ Part 2 “ A Cunning Plan
 oldUrl: /a-cunning-plan/the-three-game-challenge-part-2-a-cunning-plan
 ---
 
-Another week, another game completed as part ofÂ [my three prototype games challenge](/posts/the-three-game-challenge/)Â ([part one](/posts/the-three-game-challenge-part-1-lateshas-crib/), [part three](/posts/the-three-game-challenge-part-3-the-family-jewels/))Â I set myself at the start of this month.
+Another week, another game completed as part of [my three prototype games challenge](/posts/the-three-game-challenge/) ([part one](/posts/the-three-game-challenge-part-1-lateshas-crib/), [part three](/posts/the-three-game-challenge-part-3-the-family-jewels/)) I set myself at the start of this month.
 
 <!-- more -->
 
@@ -30,11 +30,11 @@ You can play the game here:
 
 [Play A Cunning Plan](/projects/acunningplan)
 
-This game was far more complex to create than [Latesha's Crib](/posts/the-three-game-challenge-part-1-lateshas-crib/)Â and hence I spent about 43 hours over the last 9 days making this one.
+This game was far more complex to create than [Latesha's Crib](/posts/the-three-game-challenge-part-1-lateshas-crib/) and hence I spent about 43 hours over the last 9 days making this one.
 
-I was able to save some time by reusing parts of the rendering and hopping logic from Latesha's Crib. As usual I used the Â [Ash Framework](https://www.ashframework.org/) with Adobe Starling and Feathers. To code the AI for the computer player I used [Tim Conkling's Excellent Godmode Behaviour Trees](https://github.com/tconkling/godmode-as3) library which is truly an excellent AS3 library. The way Behaviour Trees work is really cool, I strongly recommend checking them out if you are going to design any sort of AI.
+I was able to save some time by reusing parts of the rendering and hopping logic from Latesha's Crib. As usual I used the  [Ash Framework](https://www.ashframework.org/) with Adobe Starling and Feathers. To code the AI for the computer player I used [Tim Conkling's Excellent Godmode Behaviour Trees](https://github.com/tconkling/godmode-as3) library which is truly an excellent AS3 library. The way Behaviour Trees work is really cool, I strongly recommend checking them out if you are going to design any sort of AI.
 
-Special thanks go to [Mike Rigby](https://www.facebook.com/mikepaulrigby) for helping with play testing and [IanÂ Callaghan](https://www.facebook.com/ian.t.callaghan)Â for suggesting I check out Behaviour Trees :)
+Special thanks go to [Mike Rigby](https://www.facebook.com/mikepaulrigby) for helping with play testing and [Ian Callaghan](https://www.facebook.com/ian.t.callaghan) for suggesting I check out Behaviour Trees :)
 
 Let me know what you think of it, if people are feeling it then I may turn it into a full-blown mobile game!
 

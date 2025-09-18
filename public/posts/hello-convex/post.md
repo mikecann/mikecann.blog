@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2024-12-02T07:31:40.000Z'
+date: "2024-12-02T07:31:40.000Z"
 tags:
   - personal
   - convex
@@ -9,7 +9,7 @@ title: Hello Convex
 
 This is just going to be a quick one to say that I'm super excited to announce that I am joining [Convex](convex.dev) as a Developer Experience Engineer!
 
-If you don't know what Convex is then do yourself a favor and [checkout their excellent site](https://www.convex.dev/) and [docs](https://docs.convex.dev/) but in short its â€œa sync platform that replaces your backend and client state management.â€ I half-jokingly describe it as â€œFirebase for adultsâ€
+If you don't know what Convex is then do yourself a favor and [checkout their excellent site](https://www.convex.dev/) and [docs](https://docs.convex.dev/) but in short its "a sync platform that replaces your backend and client state management." I half-jokingly describe it as "Firebase for adults"
 
 I am super excited about this role as it means I get to do what I love most; tinkering with and producing content about cool technology.
 
@@ -37,4 +37,4 @@ I want to emphasize my deep respect and admiration for my co-founder [Brandon](l
 
 We're currently figuring out the future of both the game and the company. We're open to all possibilities, so please reach out to [Brandon](https://www.notion.so/Gangbusters-a-Retrospective-150fd70ecfa0801ca372eeadcbf73658?pvs=21) or [me](https://www.notion.so/10ffd70ecfa0800eaf28d8aa2604be10?pvs=21) if you have any suggestions.
 
-The game's community holds a special place in my heart. While players have come and gone over the years, those who've stayed have been one of my strongest motivations to keep developing this game, I â™¥ï¸ you guys!
+The game's community holds a special place in my heart. While players have come and gone over the years, those who've stayed have been one of my strongest motivations to keep developing this game, I 💟 you guys!

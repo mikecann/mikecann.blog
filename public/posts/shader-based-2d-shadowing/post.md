@@ -20,7 +20,7 @@ Those who know me know I used to do [quite abit of development](/posts/?s=xna) i
 
 <!-- more -->
 
-Well I like to check back in every now and then with some of the big players in the community to seeÂ what'sÂ going on.
+Well I like to check back in every now and then with some of the big players in the community to see what's going on.
 
 One of those players is [Catalin Zima](https://www.catalinzima.com/), who is famous for producing many great shader and effect samples.
 

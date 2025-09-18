@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /posts/the-sleeping-headphones-saga/cover.jpg
-date: '2017-10-23T09:27:00.000Z'
+date: "2017-10-23T09:27:00.000Z"
 tags:
   - behphones
   - experiment
@@ -100,7 +100,7 @@ One big plus is that they are wireless so that should mean that the risk of stra
 
 At \$100 USD these really are rather expensive as an experiment but I spend 8 hours a day with them on my ears so I guess its worth the investment.
 
-<span style="color: #339966;">**Pros:**Â Wireless, low-profile, soft, designed for sleeping in</span>
+<span style="color: #339966;">**Pros:** Wireless, low-profile, soft, designed for sleeping in</span>
 <span style="color: #ff0000;">**Cons:** Expensive, untested</span>
 
 ## [NOT TRIED] Ear Hero
@@ -120,7 +120,7 @@ The only problem is their rather large (\$150 USD) price-tag makes them out of t
 
 # Conclusion
 
-For me the current winner is theÂ Panasonic RP-HS46, cheap but good quality and comfortable enough to sleep. They still have their issues tho, such a being wired and hard plastic makes lining on them too uncomfortable.
+For me the current winner is the Panasonic RP-HS46, cheap but good quality and comfortable enough to sleep. They still have their issues tho, such a being wired and hard plastic makes lining on them too uncomfortable.
 
 I am however looking forward to trying out the BedPhones wireless when they arrive.
 

@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2024-10-04T07:31:40.000Z'
+date: "2024-10-04T07:31:40.000Z"
 tags:
   - tinkering
   - ai
@@ -20,9 +20,9 @@ This generally happened at points of peak load and usually when I was in bed (ty
 
 Technically, this should not have been possible as Fly.io's machines have [an auto-start/stop feature](https://fly.io/docs/launch/autostop-autostart/) that should ensure that at least one machine is running at all times.
 
-Since I was on vacation and didnâ€™t have time to debug the root cause of the issue, I decided the simplest thing to do was to write a script that would continually check if the worker server was alive, and if it wasn't, start it up.
+Since I was on vacation and didn't have time to debug the root cause of the issue, I decided the simplest thing to do was to write a script that would continually check if the worker server was alive, and if it wasn't, start it up.
 
-I knew that this script would need to be online all the time, so I started thinking about how to host it. I could have easily used my favorite tool, [Convex](https://mikecann.blog/posts/im-now-a-convex-developer-advocate), but I had heard about the recently released [Replit Agents](https://docs.replit.com/replitai/agent), so I thoughtâ€”why not give that a go?
+I knew that this script would need to be online all the time, so I started thinking about how to host it. I could have easily used my favorite tool, [Convex](https://mikecann.blog/posts/im-now-a-convex-developer-advocate), but I had heard about the recently released [Replit Agents](https://docs.replit.com/replitai/agent), so I thought”why not give that a go?
 
 # Replit Agents
 
@@ -34,11 +34,11 @@ The idea was to use their AI to generate my script and host it on Replit. It sho
 
 ![](./initial-impressions.png)
 
-I hadnâ€™t used Replit before, and my initial impressions were good. I was very impressed with the UI. It felt like a cut-down code editor, but with the agent chat on the side, taking up a large chunk of the UI to let you know that this is a sort of "pair programming" type of workflow.
+I hadn't used Replit before, and my initial impressions were good. I was very impressed with the UI. It felt like a cut-down code editor, but with the agent chat on the side, taking up a large chunk of the UI to let you know that this is a sort of "pair programming" type of workflow.
 
 I started out with what I felt was a pretty clear prompt (see the image above) and was happy to see that the agent was able to easily scaffold out the start of the project with a bunch of files.
 
-After it had generated the files, it asked me if it worked. Unfortunately, it didnâ€™t, so I had to dig through the code and do a bit of guesswork to try to work out what was going on.
+After it had generated the files, it asked me if it worked. Unfortunately, it didn't, so I had to dig through the code and do a bit of guesswork to try to work out what was going on.
 
 ![](./env.png)
 
@@ -46,7 +46,7 @@ It probably would have been better if it worked out this issue by itself, but I 
 
 This is where things started to go off the rails a bit. The AI continued to make a lot of mistakes, both architecturally and logically, which required quite a few prompts on my part to sort out.
 
-Eventually, I had what I thought should work, but I was still getting errors. I eventually tracked down the problemâ€”it stemmed right back to the first prompt, where the AI was using a very outdated endpoint URL for the API.
+Eventually, I had what I thought should work, but I was still getting errors. I eventually tracked down the problem”it stemmed right back to the first prompt, where the AI was using a very outdated endpoint URL for the API.
 
 ![](./tracked-down-the-error.png)
 
@@ -58,7 +58,7 @@ With it working, I now wanted to have it run itself every 5 minutes. This cloud 
 
 ![](./always-on.png)
 
-I was super confused at first as it directed me towards an "Always On" feature that doesnâ€™t seem to exist in Replit (anymore). When I pointed it out to the Agent, it even suggested using another service to run the cron!
+I was super confused at first as it directed me towards an "Always On" feature that doesn't seem to exist in Replit (anymore). When I pointed it out to the Agent, it even suggested using another service to run the cron!
 
 I had to manually read through the Replit docs before I worked out how to do it myself in the UI.
 

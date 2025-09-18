@@ -14,11 +14,11 @@ oldUrl: /c/windows-7-taskbar-monitor
 
 Well this will learn me!
 
-A while back, I had an idea for a very simple application that would sit in yourÂ taskbarÂ and give you at-a-glance performance info about your system,Â similarÂ to[ iStat Pro for OSX](https://www.islayer.com/apps/istatpro/). This weekend I finally had time to clean up the code up for release.
+A while back, I had an idea for a very simple application that would sit in your taskbar and give you at-a-glance performance info about your system, similar to[ iStat Pro for OSX](https://www.islayer.com/apps/istatpro/). This weekend I finally had time to clean up the code up for release.
 
 <!-- more -->
 
-The problem is that while looking for aÂ coupleÂ of images for the app I happened to stumbleÂ acrossÂ [Taskbar Meters](https://taskbarmeters.codeplex.com/), which is pretty much the exact same idea I had. Looks like he has made a better job out of it that me too :P
+The problem is that while looking for a couple of images for the app I happened to stumble across [Taskbar Meters](https://taskbarmeters.codeplex.com/), which is pretty much the exact same idea I had. Looks like he has made a better job out of it that me too :P
 
 Ah well, I have decided to release my version of the app nonetheless:
 

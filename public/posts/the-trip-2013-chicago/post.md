@@ -13,7 +13,7 @@ oldUrl: /2013-trip/the-trip-2013-chicago
 
 ![screenshot_08](https://www.mikecann.blog/wp-content/uploads/2013/05/screenshot_08.png)
 
-_Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the albumÂ [The Trip 2013 â€“ Chicago](https://www.facebook.com/media/set/?set=a.10151656151696031.1073741832.593661030&type=3). Each picture can be clicked to see a larger version and comment / like_
+_Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 “ Chicago](https://www.facebook.com/media/set/?set=a.10151656151696031.1073741832.593661030&type=3). Each picture can be clicked to see a larger version and comment / like_
 
 <!-- more -->
 

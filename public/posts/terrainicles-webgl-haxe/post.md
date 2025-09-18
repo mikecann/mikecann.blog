@@ -1,25 +1,25 @@
 ﻿---
 coverImage: /posts/terrainicles-webgl-haxe/cover.jpg
-date: '2011-10-29T14:14:07.000Z'
+date: "2011-10-29T14:14:07.000Z"
 tags: []
-title: 'Terrainicles [WebGL & HaXe]'
+title: "Terrainicles [WebGL & HaXe]"
 oldUrl: /glsl/terrainicles-webgl-haxe
 ---
 
-I have been playing with this thing, tweaking it, making changes for weeks. Theres so many different things I want to add. Different options, scenarios,Â optimisationsÂ etc. I decided however just to follow the 'release early and often' mantra and get this thing out now.
+I have been playing with this thing, tweaking it, making changes for weeks. Theres so many different things I want to add. Different options, scenarios, optimisations etc. I decided however just to follow the 'release early and often' mantra and get this thing out now.
 
 <!-- more -->
 
-Before I go anyÂ furtherÂ check out what im talking about here:
+Before I go any further check out what im talking about here:
 
 [/projects/WebGLTerrainicles/
-(You will need a WebGL compatible browser, that means no IE)Â ](/projects/WebGLTerrainicles/)
+(You will need a WebGL compatible browser, that means no IE) ](/projects/WebGLTerrainicles/)
 
 Its a continuation of my earlier work on [GPU particles using WebGL and HaXE](/posts/gpu-state-preserving-particle-systems-with-webgl-haxe/). Im trying to emulate some work I did years ago in XNA, on the [LieroXNA project](/posts/project-update/).
 
-It uses the same techniques for updating and rendering particles entirely on the GPU as my previous post. What that means is that is possible have millions of particlesÂ interacting updating and renderingÂ simultaneouslyÂ as all the operations are performed on the GPU.
+It uses the same techniques for updating and rendering particles entirely on the GPU as my previous post. What that means is that is possible have millions of particles interacting updating and rendering simultaneously as all the operations are performed on the GPU.
 
-What I have added this time is another texture for the particles to collide with as they move. I wasÂ originallyÂ working with the same dirt and grass texture as my XNA project but I thought as it was Halloween I would get into the spirit a little ;)
+What I have added this time is another texture for the particles to collide with as they move. I was originally working with the same dirt and grass texture as my XNA project but I thought as it was Halloween I would get into the spirit a little ;)
 
 There are several options on the right hand side that can be used to tweak the properties of the simulation. I spent alot of time playing around with these, there are some really cool effects you can achieve with just simple modifications.
 

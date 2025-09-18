@@ -15,8 +15,8 @@ Just thought I would report on a project my friend [Michael Lindholm](https://li
 
 <!-- more -->
 
-Anyways, it looks like its coming along nicely. He's gone for a voxel-like engine, with screen space ambientÂ occlusionÂ for shading. Personally I think the effect works really well for the game. Check it out:
+Anyways, it looks like its coming along nicely. He's gone for a voxel-like engine, with screen space ambient occlusion for shading. Personally I think the effect works really well for the game. Check it out:
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/kWRnFeKRdvU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you are interested you should follow his blog for the project:Â [https://liero3d.blogspot.com/](https://liero3d.blogspot.com/)
+If you are interested you should follow his blog for the project: [https://liero3d.blogspot.com/](https://liero3d.blogspot.com/)

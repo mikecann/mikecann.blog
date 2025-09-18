@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2017-08-09T00:53:00.000Z'
+date: "2017-08-09T00:53:00.000Z"
 tags:
   - blog
   - drone
@@ -32,7 +32,7 @@ Whilst at Airlie beach we had a little bit of an accident.
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_7751_1024x1024.JPG?v=1500961935)
 
-The whole back window of the canopy of our car shattered. We werenâ€™t around when this happened but the witnesses to the event say it â€œjust explodedâ€. My guess is that the continual rattling combined with heating and cooling weakened the window and when it finally gave the hydraulic levers punched through the glass shattering it.
+The whole back window of the canopy of our car shattered. We weren't around when this happened but the witnesses to the event say it "just exploded". My guess is that the continual rattling combined with heating and cooling weakened the window and when it finally gave the hydraulic levers punched through the glass shattering it.
 Either way, for the rest of the trip we now have a very fetching plastic sheet covering the back.
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_7846_1024x1024.JPG?v=1502239692)
@@ -66,12 +66,12 @@ Then we were off again this time heading north to Brisbane where we caught up wi
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/BrizzyPano02_1024x1024.jpg?v=1500961686)
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/Brisbane_River_1024x1024.jpg?v=1500961698)
-Sadly though we had to move on to our last destination in South Queensland; Caloundra. Here we caught up with some of Kelsieâ€™s relatives and took the opportunity to visit Steve Irwins famous Australia Zoo.
+Sadly though we had to move on to our last destination in South Queensland; Caloundra. Here we caught up with some of Kelsie's relatives and took the opportunity to visit Steve Irwins famous Australia Zoo.
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_0587_1024x1024.jpg?v=1500961850)
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_0590_1024x1024.jpg?v=1500961853)
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_0578_1024x1024.jpg?v=1500961843)
-And then that was it for the east coast of Australia for us. Time to start heading back home. Not to worry though as we have a few stops left to make including the world famous Uluru rock near Alice Springs. Until next timeâ€¦
+And then that was it for the east coast of Australia for us. Time to start heading back home. Not to worry though as we have a few stops left to make including the world famous Uluru rock near Alice Springs. Until next time¦
 **This post was copied from my site [AboveUnder.com](https://aboveunder.com) a site dedicated to my travel drone photography.**

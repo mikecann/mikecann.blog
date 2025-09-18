@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2023-12-16T07:31:40.000Z'
+date: "2023-12-16T07:31:40.000Z"
 tags:
   - games
   - tech
@@ -94,7 +94,7 @@ Just incase it was something to do with my local setup I decided to have a go an
 
 Unfortunately the [docs on the testnet page](https://spacetimedb.com/docs/deploying/testnet) were also not working as they say you should use the `spacetime server set "https://testnet.spacetimedb.com"` command but the CLI errors when you attempt this.
 
-In fairness when I reported this to discord user "âš™ 3Blave" very quickly updated the docs so that it now reads `spacetime server add --default "https://testnet.spacetimedb.com" testnet`
+In fairness when I reported this to discord user "š' 3Blave" very quickly updated the docs so that it now reads `spacetime server add --default "https://testnet.spacetimedb.com" testnet`
 
 So now you have to login to the spacetime testnet by calling `spacetime identity set-email <your-identity> <your-email>` but this command needs your `identity` which you get from `spacetime identity list` which again errors with:
 

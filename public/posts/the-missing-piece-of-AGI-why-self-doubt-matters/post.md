@@ -1,10 +1,10 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2025-01-12T07:31:40.000Z'
+date: "2025-01-12T07:31:40.000Z"
 tags:
   - ai
   - thought
-title: 'The Missing Piece of AGI: Why Self-Doubt Matters?'
+title: "The Missing Piece of AGI: Why Self-Doubt Matters?"
 ---
 
 I, along with every other coder on the planet right now, am starting to heavily leverage agentic coding tools in our day-to-day work. Whether it's standalone tools like [bolt.new](http://bolt.new), [v0](https://v0.dev/), [Lovable](https://lovable.dev/), or those built directly into our IDEs like [Cursor](https://www.cursor.com/), [Windsurf](https://codeium.com/windsurf) and [Copilot](https://github.com/features/copilot), they are rapidly becoming indispensable.
@@ -13,15 +13,15 @@ I, along with every other coder on the planet right now, am starting to heavily 
 
 # Knowing what you don't know
 
-Lets do a quick experiment. Think about some really complex topic right now, like [quantum chromodynamics](https://en.wikipedia.org/wiki/Quantum_chromodynamic) or [CRISPR gene editing](https://en.wikipedia.org/wiki/CRISPR_gene_editing). Now how sure are you could explain how one of these topics to someone? 
+Lets do a quick experiment. Think about some really complex topic right now, like [quantum chromodynamics](https://en.wikipedia.org/wiki/Quantum_chromodynamic) or [CRISPR gene editing](https://en.wikipedia.org/wiki/CRISPR_gene_editing). Now how sure are you could explain how one of these topics to someone?
 
 You aren't sure right? You can be pretty confident that you don't know enough about that particular complex topic.
 
-LLMs fundamentally cannot do this, they cannot know what they don't know. They are simply mechanistic token predictors. 
+LLMs fundamentally cannot do this, they cannot know what they don't know. They are simply mechanistic token predictors.
 
 That doesn't mean that the model's structure hasn't formed in a way that resembles human memory, with unfathomably complex relationships between ideas and concepts. These intricate connections are precisely why models excel at predicting the next token and generating outputs that mirror human output.
 
-The key issue is that they cannot do something humans find effortless and natural: being uncertain about things. 
+The key issue is that they cannot do something humans find effortless and natural: being uncertain about things.
 
 Being uncertain requires more than just predicting future tokens, it demands self-introspection and reflection. Self-introspection, by definition, requires having a concept of "self".
 
@@ -41,11 +41,11 @@ As mentioned in the intro, I've been investigating how well Cursor's Composer wo
 
 # Why is knowing what you don't know required for AGI?
 
-Artificial General Intelligence (AGI) itself doesnâ€™t have a universally agreed-upon definition. But most people would agree it involves some level of reasoning across multiple domains and resembled â€œhuman-likeâ€ intelligence. 
+Artificial General Intelligence (AGI) itself doesn't have a universally agreed-upon definition. But most people would agree it involves some level of reasoning across multiple domains and resembled "human-like" intelligence.
 
 I would argue that to provide human-like intelligence the hallucination problem needs to be solved and the only way that can be solved is if it is able to know exactly when it hallucinated or put another way, its able to know when it doesn't know.
 
-Cursorâ€™s composer has a â€œlintingâ€ step that it runs after it generates a code artifact.
+Cursor's composer has a "linting" step that it runs after it generates a code artifact.
 
 ![cursor-linting](./cursor-linting.png)
 
@@ -53,7 +53,7 @@ This helps the agent identify many common issues with hallucinated outputs but i
 
 # Is the solution Mechanistic Interpretability?
 
-Anthropic has been making some [really great contributions](https://www.anthropic.com/research/mapping-mind-language-model) towards trying to understand how exactly LLMs work. 
+Anthropic has been making some [really great contributions](https://www.anthropic.com/research/mapping-mind-language-model) towards trying to understand how exactly LLMs work.
 
 Anthropic's work has mostly been concerned with LLM safety, but as I have outlined above, I think this work will be key for future AGI. The model needs to be able to introspect itself to understand what it does and doesn't know.
 
@@ -61,7 +61,7 @@ This form of mechanistic introspection differs from human introspection, we don'
 
 # Are emotions important?
 
-I think emotions may play a crucial role here, something I haven't seen widely discussed but have long suspected. 
+I think emotions may play a crucial role here, something I haven't seen widely discussed but have long suspected.
 
 Why do we possess such a diverse range of complex emotions, and what purpose do they serve?
 
@@ -77,7 +77,7 @@ One might argue that when an AI uses a tool like "search the web," it indicates 
 
 The model has been prompted (by the user or system) to use the "search web" tool when specific patterns trigger that action as the most probable next step. Yet this cannot truly represent "using web search when you don't know the answer" because the LLM fundamentally cannot recognize its own knowledge gaps.
 
-One can imagine a scenario however where a â€œtoolâ€ might be the ability for the model to introspect its own weights and via mechanistic interpretability analyze its own knowledge at the neuron level to determine if it â€œknowsâ€ something. 
+One can imagine a scenario however where a "tool" might be the ability for the model to introspect its own weights and via mechanistic interpretability analyze its own knowledge at the neuron level to determine if it "knows" something.
 
 # Conclusion
 

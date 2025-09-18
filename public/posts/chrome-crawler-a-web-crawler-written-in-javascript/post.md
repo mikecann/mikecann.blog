@@ -42,9 +42,9 @@ If you are still confused check out the video below:
 
 So why did I make this? Well to be frank, I made it mostly "just 'cause I can"!
 
-Also havingÂ learnedÂ from my last Chrome Extension project [PostToTumblr](/posts/my-first-chrome-extension-post-to-tumblr/) I realised the Chrome API allowed you to do some things that youÂ wouldn'tÂ normally be allowed to do on a website (nameley the [Cross-Origin XHR](https://code.google.com/chrome/extensions/xhr.html)) and I wanted to do something to take advantage of it.
+Also having learned from my last Chrome Extension project [PostToTumblr](/posts/my-first-chrome-extension-post-to-tumblr/) I realised the Chrome API allowed you to do some things that you wouldn't normally be allowed to do on a website (nameley the [Cross-Origin XHR](https://code.google.com/chrome/extensions/xhr.html)) and I wanted to do something to take advantage of it.
 
-It didnt take me long to knock out this project, one lazyÂ SaturdayÂ for the majority of the code and today for a quick fix or two and to write this post and make the video. As such I expect there to be many bugs and problems so if you encounter one drop me an email (my address is found in the options page).
+It didnt take me long to knock out this project, one lazy Saturday for the majority of the code and today for a quick fix or two and to write this post and make the video. As such I expect there to be many bugs and problems so if you encounter one drop me an email (my address is found in the options page).
 
 Oh finally, I wouldnt try using this on a google page as you will likely end up seeing this quite often:
 

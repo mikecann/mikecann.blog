@@ -56,7 +56,7 @@ If a user particularly likes one print then they can order it as a poster:
 
 Currently we only offer posters to people living in the US however we plan on opening it up to other countries when we can.
 
-To print to such a large poster (24x18" @ 150DPI) and maintain the quality of the final product we must capture a large number of pixels. For example here is a comparison between what a user would see onÂ printomi.comÂ and what we store behind the scenes:
+To print to such a large poster (24x18" @ 150DPI) and maintain the quality of the final product we must capture a large number of pixels. For example here is a comparison between what a user would see on printomi.com and what we store behind the scenes:
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/04/08.jpg "08")](https://www.mikecann.blog/wp-content/uploads/2012/04/08.jpg)
 
@@ -64,7 +64,7 @@ The technology that lets us capture these large images and store them in a compr
 
 Printomi is currently only available to a small subset of the [Gourmet Ranch](https://apps.facebook.com/gourmetranch) user base but we are performing a steady-rollout to everyone, so if you don't have access to the button in Gourmet Ranch just yet then don't worry it should be available for you soon!
 
-Printomi is a culmination of many many hours of hard work, late nights and stress. But its been worth it! I've had a blastÂ throughoutÂ the whole process and am proud of the result. I have also learnt a whole bunch in the process. I have had to work with so many technologies to pull this off, to name a few: AS3, C++, C#, ASP.Net, MySQL, IIS, AWS. I have particularly enjoyed the C# work having largely abandoned the language since myÂ [early work](/posts/windows-7-taskbar-performance-monitor-v0-2/)Â [with it.](/posts/killer-space-penguins/)
+Printomi is a culmination of many many hours of hard work, late nights and stress. But its been worth it! I've had a blast throughout the whole process and am proud of the result. I have also learnt a whole bunch in the process. I have had to work with so many technologies to pull this off, to name a few: AS3, C++, C#, ASP.Net, MySQL, IIS, AWS. I have particularly enjoyed the C# work having largely abandoned the language since my [early work](/posts/windows-7-taskbar-performance-monitor-v0-2/) [with it.](/posts/killer-space-penguins/)
 
 [![](https://www.mikecann.blog/wp-content/uploads/2012/04/fb1.jpg "fb")](https://www.facebook.com/printomi)[![](https://www.mikecann.blog/wp-content/uploads/2012/04/tw.jpg "tw")](https://twitter.com/#!/printomi)
 

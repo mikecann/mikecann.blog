@@ -15,7 +15,7 @@ oldUrl: /post-to-tumbr/posttotumblr-v3-12-update
 
 [![head](https://www.mikecann.blog/wp-content/uploads/2013/01/head1.png)](/posts/posttotumblr-v3-12-update/attachment/head-5/)
 
-I have finally found some time to do a long overdue update to my popular Chrome extension [PostToTumblr](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah) built using Haxe.Â 30,000 people currently have the extension installed and they post about 10,000 images, links, quotes per day so I thought it was about time to give it some love.
+I have finally found some time to do a long overdue update to my popular Chrome extension [PostToTumblr](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah) built using Haxe. 30,000 people currently have the extension installed and they post about 10,000 images, links, quotes per day so I thought it was about time to give it some love.
 
 <!-- more -->
 

@@ -28,6 +28,6 @@ With that in mind I structured my slides around what I considered the big advant
 
 Anyways, at the end of the day I really enjoyed preparing and giving my first talk at try {harder}. It was well received and I just hope I have succeeded in inspiring some more people into investigating and using haXe.
 
-I wrote my slides in google docs which are viewable online:Â [https://docs.google.com/present/view?id=dc6wvdg5_151frv985w7](https://docs.google.com/present/view?id=dc6wvdg5_151frv985w7)
+I wrote my slides in google docs which are viewable online: [https://docs.google.com/present/view?id=dc6wvdg5_151frv985w7](https://docs.google.com/present/view?id=dc6wvdg5_151frv985w7)
 
-The code samples and examples mentioned on slides are uploaded here:Â [/projects/TryHarder.zip](/projects/TryHarder.zip)
+The code samples and examples mentioned on slides are uploaded here: [/projects/TryHarder.zip](/projects/TryHarder.zip)

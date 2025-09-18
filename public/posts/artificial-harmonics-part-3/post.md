@@ -15,7 +15,7 @@ oldUrl: /audio/artificial-harmonics-part-3
 
 Well its been a while since I have made a new mix, but I have been collecting tracks for it for a while. This one came together fairly quickly actually, about two days worth of composition and then a few variations until I was happy with it. I decided not to add any movie samples to this one to keep it nice and simple, got alot of other projects on at the moment! Im not even sure if people actually like those movie samples tho, let me know if you do!<!-- more -->
 
-I have called it Harmonics (Part 3) as the thirdÂ instalmentÂ in my Harmonics series is long overdue and I felt that it just kinda felt like a Harmonics Mix.
+I have called it Harmonics (Part 3) as the third instalment in my Harmonics series is long overdue and I felt that it just kinda felt like a Harmonics Mix.
 
 Anyways, I have uploaded the mix to SoundCloud and used the last remaining hour that the free account gives you ;) Give it a listen or download below:
 

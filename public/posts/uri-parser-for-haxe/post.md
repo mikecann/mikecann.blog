@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2011-04-11T21:01:51.000Z'
+date: "2011-04-11T21:01:51.000Z"
 tags:
   - chromecrawler
   - code
@@ -11,15 +11,15 @@ title: URI Parser For HaXe
 oldUrl: /chrome-crawler/uri-parser-for-haxe
 ---
 
-Continuing on my [theme of the moment haXe](/posts/haxe-jqueryextern-gotcha/), I have another post Â regarding the development of my haXe rewrite of Â [ChromeCrawler](/posts/chrome-crawler-v0-4-background-crawling-more/).
+Continuing on my [theme of the moment haXe](/posts/haxe-jqueryextern-gotcha/), I have another post  regarding the development of my haXe rewrite of  [ChromeCrawler](/posts/chrome-crawler-v0-4-background-crawling-more/).
 
 <!-- more -->
 
 I was in need of a way to split a URL into its various parts. To do this in previous versions of ChromeCrawler I used a[ ready built one I found on the web](https://blog.stevenlevithan.com/archives/parseuri).
 
-I thought it should be a fairly simple matter to port this to haXe, unfortunately however thisÂ wasn'tÂ the case. The problem was that haXe, unlike JS, doesnt have the exec() method on its regular expression function. What this meant is that the URL couldnt be split in the same way.
+I thought it should be a fairly simple matter to port this to haXe, unfortunately however this wasn't the case. The problem was that haXe, unlike JS, doesnt have the exec() method on its regular expression function. What this meant is that the URL couldnt be split in the same way.
 
-Confused I jumped on the haXe IRC, unfortunately the solutions the kind people there provided didnt work. Instead I posted a message on the mailing list and within a few hours I had my answer. The solution was to useÂ EReg.match() thenÂ EReg.matched() to get each part.
+Confused I jumped on the haXe IRC, unfortunately the solutions the kind people there provided didnt work. Instead I posted a message on the mailing list and within a few hours I had my answer. The solution was to use EReg.match() then EReg.matched() to get each part.
 
 Anyways, I promised to share the code when I was done so here it is:
 
@@ -123,4 +123,4 @@ Simples!
 
 Im not sure how performant the reflection usage would be on the various platforms haXe targets but atleast it would work and its fairly elegant to boot ;)
 
-Edit: Thank you Adrian Cowen for posting this as a haXe snippet:Â [https://haxe.org/doc/snip/uri_parser](https://haxe.org/doc/snip/uri_parser)
+Edit: Thank you Adrian Cowen for posting this as a haXe snippet: [https://haxe.org/doc/snip/uri_parser](https://haxe.org/doc/snip/uri_parser)

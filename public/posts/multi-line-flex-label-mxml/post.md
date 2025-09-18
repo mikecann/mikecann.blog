@@ -14,7 +14,7 @@ title: "Multi-Line Flex Label [MXML]"
 oldUrl: /flex/multi-line-flex-label-mxml
 ---
 
-JustÂ stumbledÂ acrossÂ this one while writing some mxml for a personal project and thought I would share.
+Just stumbled across this one while writing some mxml for a personal project and thought I would share.
 
 Have you ever wanted to have multi-line text in your label component in spark and thought the following should work?
 

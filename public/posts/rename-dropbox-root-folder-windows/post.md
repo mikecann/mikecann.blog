@@ -10,7 +10,7 @@ oldUrl: /photos-personal/rename-dropbox-root-folder-windows
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/01/pyDropboxPath.png "pyDropboxPath")](https://www.mikecann.blog/wp-content/uploads/2010/01/pyDropboxPath.png)
 
-Following onÂ today'sÂ handy tips that I haveÂ commonlyÂ had to employ when dealing with fresh PC installs, I present PyDropboxPath.
+Following on today's handy tips that I have commonly had to employ when dealing with fresh PC installs, I present PyDropboxPath.
 
 As Dropbox doesnt let you rename the root folder your files are stored in on windows (Defaulted to "My Dropbox") there are occasions when you want to choose a different name. In particular when you are running Bootcamp on a Macbook Pro with a drive shared between Windows and OSX.
 

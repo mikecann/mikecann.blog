@@ -32,4 +32,4 @@ Rules are as follows:
     </div>
     The themes for this edition of the compo are currently being voted on [here](https://www.ludumdare.com/compo/2010/08/15/ludum-dare-18-theme-voting/).
 
-I doubt I willÂ be ableÂ to come up with much in the 48 hour limit, but im hoping to getÂ at leastÂ something remotely playable!
+I doubt I will be able to come up with much in the 48 hour limit, but im hoping to get at least something remotely playable!

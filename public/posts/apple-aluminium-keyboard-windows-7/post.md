@@ -17,7 +17,7 @@ Just got my new computer at work. First thing I did was chuck out the stock keyb
 
 <!-- more -->
 
-As usual when trying to get Apple hardware to play nice with Microsoft there is a little friction. In this case the keyboardÂ doesn'tÂ come with any mapping drivers resulting in the fact that some of the keys are messed up and in wrong locations. So we get to the point of this post. As I have had to do this several times now I thought I would post my solution so I dont spend ages searching each time.
+As usual when trying to get Apple hardware to play nice with Microsoft there is a little friction. In this case the keyboard doesn't come with any mapping drivers resulting in the fact that some of the keys are messed up and in wrong locations. So we get to the point of this post. As I have had to do this several times now I thought I would post my solution so I dont spend ages searching each time.
 
 The solution is to use the Apple Pro Keyboard Layout from [parkernet.com](parkernet.com).
 
@@ -43,7 +43,7 @@ To remove the keyboard layout simply run the installer again.
 
 Use the Windows XP Regional and Language Options control panel to select the new keyboard layout. Full details are included in the read me text file included in the ZIP download.
 
-For those of you who want a step-by-step guide with pictures that you can print out, clickÂ [here](https://parkernet.com/applepro/installation.html).
+For those of you who want a step-by-step guide with pictures that you can print out, click [here](https://parkernet.com/applepro/installation.html).
 
 Sorry there's no Vista step by step, but I have skillfully avoided Vista since it's release.
 
@@ -53,8 +53,8 @@ All keys now operate as per the legends printed upon them.
 
 Shift-2 = @
 
-Ctrl-Alt-2 = â‚¬
+Ctrl-Alt-2 = ‚¬
 
-Shift-3 = Â£
+Shift-3 = £
 
 Ctrl-Alt-3 = #

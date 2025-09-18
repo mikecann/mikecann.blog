@@ -1,12 +1,12 @@
 ﻿---
 coverImage: /posts/post-to-tumblr-v-4/cover.jpg
-date: '2014-02-21T19:10:33.000Z'
+date: "2014-02-21T19:10:33.000Z"
 tags: []
 title: Post To Tumblr v.4
 oldUrl: /post-to-tumbr/post-to-tumblr-v-4
 ---
 
-While I was travelling I have had a great many people contact me about my popular chrome extensionÂ [Post To Tumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en). Some wanted me to fix things some wanted me to add things others wanted to buy the extension outright.
+While I was travelling I have had a great many people contact me about my popular chrome extension [Post To Tumblr](https://chrome.google.com/webstore/detail/post-to-tumblr/dbpicbbcpanckagpdjflgojlknomoiah?hl=en). Some wanted me to fix things some wanted me to add things others wanted to buy the extension outright.
 
 <!-- more -->
 

@@ -16,7 +16,7 @@ Thanks to the cross-platform nature of Haxe and NME it was actually really easy 
 
 I want to give a massive thanks to [Joshua Granick](https://www.joshuagranick.com/blog/) for helping with some of the strange certification issues I was getting. Joshua also very kindly helped test the blackberry build out on his Playbook before very kindly asking RIM to ship one out to test on myself.
 
-Joshua alsoÂ recentlyÂ written a blog post on the Blackberry developer blog highlighting the awesomeness of NME and its ability to target Blackberry devices natively:
+Joshua also recently written a blog post on the Blackberry developer blog highlighting the awesomeness of NME and its ability to target Blackberry devices natively:
 
 [https://devblog.blackberry.com/2012/09/fast-native-games-for-blackberry-without-cc/](https://devblog.blackberry.com/2012/09/fast-native-games-for-blackberry-without-cc/)
 

@@ -15,13 +15,13 @@ oldUrl: /chrome-crawler/chrome-crawler-v0-4-background-crawling-more
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0041.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_0041.png)
 
-I have been asked by several peeps now to add the ability to persist crawls when theÂ pop-upÂ window closes so I rolled out this update.
+I have been asked by several peeps now to add the ability to persist crawls when the pop-up window closes so I rolled out this update.
 
 <!-- more -->
 
 Now when you close the Chrome Crawler popup your crawl is saved so that when you open it up again you can resume.
 
-Not only that but thanks to theÂ awesomenessÂ of the background page API in chrome I have now added the ability to crawl even when the popup isnt open.
+Not only that but thanks to the awesomeness of the background page API in chrome I have now added the ability to crawl even when the popup isnt open.
 
 To enable this head over to the option and untick the "Pause crawling when popup closes" option.
 

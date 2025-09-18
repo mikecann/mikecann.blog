@@ -18,7 +18,7 @@ So I have been working on my "[Terraria like Terrain](/posts/hxaria-terraria-lik
 
 Following on from the last post, I have now made it so that each particle can have its texture changed. This completes the functionality required to render each tile as a point sprite, as talked about in my[ previous post](/posts/hxaria-terraria-like-terrain-in-haxe-and-webgl/).
 
-The way it works is that the entire world isÂ recordedÂ in a 2x2 array Tilemap. This 2x2 array holds a single Tile object for every single tile in the world:
+The way it works is that the entire world is recorded in a 2x2 array Tilemap. This 2x2 array holds a single Tile object for every single tile in the world:
 
 ````actionscript3
 
@@ -44,7 +44,7 @@ The tile type is then passed to the shader in attribute buffers per point sprite
 
 <a href="/wp-content/uploads/2011/11/tilescompressed.png"><img class="alignnone size-full wp-image-1803" title="tilescompressed" src="/wp-content/uploads/2011/11/tilescompressed.png" alt="" width="256" height="352" /></a>
 
-The shader then performs the neccessary calculations to work out what the UVÂ coordinateÂ in the texture. The Vertex Shader:
+The shader then performs the neccessary calculations to work out what the UV coordinate in the texture. The Vertex Shader:
 
 ```glsl
 
@@ -110,7 +110,7 @@ The new tiles are randomly selected from 4 different types, Dirt, Gold, Diamonds
 
 [![](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png "Shot_04")](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png)
 
-The UI may look familiar to people that have seen any experiments anyone who has worked with Three.js before, its the very popular [dat.GUI](https://code.google.com/p/dat-gui/). Its a really simple library written in javascript for creatingÂ controlsÂ that can be used to tweakÂ experiments, perfect for me!
+The UI may look familiar to people that have seen any experiments anyone who has worked with Three.js before, its the very popular [dat.GUI](https://code.google.com/p/dat-gui/). Its a really simple library written in javascript for creating controls that can be used to tweak experiments, perfect for me!
 
 To get dat.GUI to work with haxe, I used the awesome [Extern feature of HaXe](https://www.google.co.uk/url?sa=t&rct=j&q=haxe%20externs&source=web&cd=1&ved=0CBwQFjAA&url=http%3A%2F%2Fhaxe.org%2Fdoc%2Fjs%2Fexterns&ei=Gu_QTvK8IYP4sgbo15TzDA&usg=AFQjCNEQvrXVfGjjQNO-yHhZ6HRTKlcmYw). This means that all I have to do is provide a stub interface to dat.GUI rather than a full implementation in haXe. This is great as it allows me to rapidly begin to use the library but also have the type safety of HaXe. It didnt take long to stub out the bits of the library I needed in an extern:
 
@@ -196,14 +196,14 @@ public var mapHeight : Int;
 
 Simples!
 
-Anyways you can check the final result out on this page:Â [/projects/hxaria/02/
+Anyways you can check the final result out on this page: [/projects/hxaria/02/
 ](/projects/hxaria/02/)(Click and drag to move the camera about)
 
 I have also uploaded a quick video too:
 
 <iframe width="650" height="471" src="https://www.youtube.com/embed/Hw1bntVoNmU?hd=1" frameborder="0" allowfullscreen></iframe>
 
-I have also uploaded the source again to my github page:Â [https://github.com/mikecann/Hxaria](https://github.com/mikecann/Hxaria)
+I have also uploaded the source again to my github page: [https://github.com/mikecann/Hxaria](https://github.com/mikecann/Hxaria)
 (I have also created a tag, incase the source changes in the future)
 
 Next up, lighting!

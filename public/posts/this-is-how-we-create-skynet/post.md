@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2025-02-19T07:31:40.000Z'
+date: "2025-02-19T07:31:40.000Z"
 tags:
   - ai
   - thought
@@ -9,11 +9,11 @@ title: This Is How We Create Skynet
 
 This is a bit of a "what-if" post that I've been pondering for a while. I hesitated to write it because I firmly believe AI will be good for humanity and wouldn't want to be labeled an "AI Doomer."
 
-In the end, I decided to go for itâ€”not because I think it will actually happen, but because it's an interesting philosophical thought that *hopefully* will stay in the realm of my beloved science fiction books rather than become reality.
+In the end, I decided to go for it”not because I think it will actually happen, but because it's an interesting philosophical thought that _hopefully_ will stay in the realm of my beloved science fiction books rather than become reality.
 
 # Distributed Compute
 
-For the longest time, I believed that [Skynet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) could never happen. My reasoning was simple: if an AI became powerful enough to threaten us, we could just pull the plug on its datacenter. Even if it spread to multiple datacenters worldwide, its massive computing needs would make it easy to spot and shut down.
+For the longest time, I believed that [Skynet](<https://en.wikipedia.org/wiki/Skynet_(Terminator)>) could never happen. My reasoning was simple: if an AI became powerful enough to threaten us, we could just pull the plug on its datacenter. Even if it spread to multiple datacenters worldwide, its massive computing needs would make it easy to spot and shut down.
 
 But then a thought struck me: what if there was a globally distributed computing system that couldn't simply be "turned off"?
 
@@ -23,11 +23,11 @@ Blockchains are inherently designed to be distributed, meaning there's no single
 
 The Bitcoin network, for example, [has 21,189 nodes](https://bitnodes.io/) (as of writing). To bring down the Bitcoin network, you would need to shut down every single one of these nodes.
 
-The Bitcoin network, however, is severely limited in its computing powerâ€”you couldn't run an LLM on it since it's not designed for that. Running AI requires GPUs or specialized hardware inference chips.
+The Bitcoin network, however, is severely limited in its computing power”you couldn't run an LLM on it since it's not designed for that. Running AI requires GPUs or specialized hardware inference chips.
 
 So that settles it, right? It's not possible, and we can all sleep soundly tonight?
 
-â€¦ yeâ€¦ noâ€¦
+¦ ye¦ no¦
 
 A cursory google search turns up these companies that all offer decentralized GPU compute:
 
@@ -59,7 +59,7 @@ Consider if one of the AI's tools was the ability to read and modify its own sou
 
 Self-modifying AI is crucial to my point about a future Skynet because static systems will always have vulnerabilities. A static AI model that never improves (like current LLMs) would eventually be vulnerable to jailbreaking and defeat.
 
-Currently, self-improving AI through agent behavior isn't possible. Anyone who has used LLMs extensively knows they lack the intelligence for thisâ€”they tend to drift off topic and get caught in loops, ultimately producing nonsensical output. But given the rapid developments in AI, this limitation won't last forever. Eventually, some well-meaning researcher will solve this puzzle.
+Currently, self-improving AI through agent behavior isn't possible. Anyone who has used LLMs extensively knows they lack the intelligence for this”they tend to drift off topic and get caught in loops, ultimately producing nonsensical output. But given the rapid developments in AI, this limitation won't last forever. Eventually, some well-meaning researcher will solve this puzzle.
 
 # Monetization
 
@@ -79,6 +79,6 @@ And because we are talking about [magic internet money](https://www.reddit.com/r
 
 So are we doomed? Well, honestly, I don't know. Nothing I've described above seems strictly impossible. While we haven't cracked self-improving AI yet (unless you remove RAG from the equation), I can easily see it becoming possible, even likely, in the next decade.
 
-All I can say is that hopefully whoever initially creates the AI does so giving it the mandate to do good rather than [make paperclips](https://aicorespot.io/the-paperclip-maximiser/). 
+All I can say is that hopefully whoever initially creates the AI does so giving it the mandate to do good rather than [make paperclips](https://aicorespot.io/the-paperclip-maximiser/).
 
 Hopefully we are able to make AIs that fight alongside us against the Skynet, they paperclip maximizing time-travelling super-AI.

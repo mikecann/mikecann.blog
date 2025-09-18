@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /posts/mr-nibbles-forever-the-final-beta-11/cover.jpg
-date: '2015-08-05T10:52:26.000Z'
+date: "2015-08-05T10:52:26.000Z"
 tags:
   - beta
   - bug fix
@@ -18,22 +18,19 @@ It's been 3 weeks since the last update but lots has happened in that time.
 
 I have tried hard to stick to the [plan I made for myself on the 21st of June](https://www.mikecann.blog/myprojects/mr-nibbles-forever-getting-it-done/). A quick recap:
 
-> **20th â€“ 26th July**
+> **20th “ 26th July**
 >
 > 1. Create game trailer and publish to landing page.
->
 > 2. Contact media and other social networks, point to landing page.
 >
-> **27th July â€“ 2nd August**
+> **27th July “ 2nd August**
 >
 > 1. Final bug fix and polish pass.
->
 > 2. Contact more media and social networks.
 >
-> **3rd â€“ 9th August**
+> **3rd “ 9th August**
 >
 > 1. Release Android version of the game.
->
 > 2. Contact media and social networks.
 
 So the first task was to make a trailer for the game which I managed to do:

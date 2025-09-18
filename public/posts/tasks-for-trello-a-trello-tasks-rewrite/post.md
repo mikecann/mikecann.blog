@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2018-05-25T08:03:40.000Z'
+date: "2018-05-25T08:03:40.000Z"
 tags:
   - personal projects
   - personal
@@ -20,7 +20,7 @@ Well its pretty much exactly the same as Trello Tasks in functionality, so ill c
 
 ![](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)
 
-The TLDR; of Trello Tasks is: it augments Trello by turning Cards into â€œcompletableâ€ tasks.
+The TLDR; of Trello Tasks is: it augments Trello by turning Cards into "completable" tasks.
 
 One of the most common ways to use Trello is in the "ToDo" style. In this style you have three lists, ToDo, Doing and Done:
 

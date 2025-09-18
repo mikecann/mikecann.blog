@@ -15,7 +15,7 @@ oldUrl: /2013-trip/the-trip-2013-la-to-mazatlan
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/06/screenshot_02.png)
 
-**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 â€“ LA to Mazatlan](https://www.facebook.com/media/set/?set=a.10151708298921031.1073741835.593661030&type=1). Each picture can be clicked to see a larger version and comment / like**
+**Note: This is a condensed version of the pictures I took with some added narrative. The rest of the pics can be viewed in the album [The Trip 2013 “ LA to Mazatlan](https://www.facebook.com/media/set/?set=a.10151708298921031.1073741835.593661030&type=1). Each picture can be clicked to see a larger version and comment / like**
 
 Its been a while since my last post, the past three weeks spent travelling across Mexico have been an intense non-stop tour of northern and western Mexico. The small amount of downtime we have been afforded has usually been spent catching up on much needed sleep.
 

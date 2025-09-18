@@ -1,6 +1,6 @@
 ﻿---
 coverImage: ./header.jpg
-date: '2024-06-06T07:31:40.000Z'
+date: "2024-06-06T07:31:40.000Z"
 tags:
   - ai
   - code
@@ -82,7 +82,7 @@ The Temporal docs are extensive, and there's a lot I haven't explored yet.
 I've run out of time for this tinkering session, but next time I'd like to build a simple application to see what works and what doesn't. Here are some notes for next time:
 
 - How does input validation on Workflows work? Is there input validation at all?
-- Signals and Queries look interesting but a bit convolutedâ€”need to explore those more.
+- Signals and Queries look interesting but a bit convoluted”need to explore those more.
 - Should you use Temporal for your entire application state or just Workflow-based state? If not, how do the two combine?
 
 # Pricing
@@ -101,4 +101,4 @@ Speaking of Convex, I can't help but think about how I might implement a "Workfl
 
 I've been considering building an Event-Sourced application on Convex for a while, but I think a simpler structure via State Machines might achieve most of what you want...
 
-Stay tunedâ€”I may well tinker with this in the future!
+Stay tuned”I may well tinker with this in the future!

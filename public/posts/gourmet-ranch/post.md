@@ -12,15 +12,15 @@ title: Gourmet Ranch
 oldUrl: /games/gourmet-ranch
 ---
 
-[About 6 months ago I joined a new startup](/posts/playdemic-my-fist-day/) called Playdemic as the Lead Flash Developer. IÂ couldn'tÂ say much at the time as we were inÂ stealthÂ mode. As our first product has been out for about a month however, I think its about time I wrote a blog post on the subject.
+[About 6 months ago I joined a new startup](/posts/playdemic-my-fist-day/) called Playdemic as the Lead Flash Developer. I couldn't say much at the time as we were in stealth mode. As our first product has been out for about a month however, I think its about time I wrote a blog post on the subject.
 
 <!-- more -->
 
 [Gourmet Ranch](https://apps.facebook.com/gourmetranch/) is Flash game for face book that follows closely on the heels of the other Facebook game successes such as Farmville and Cafeworld. The premise is simple, you grow crops and animals in your fields and then when the time comes you harvest them and use them to bake recipes. Those recipes are then served to your waiting customers by your waiters.
 
-As the lead flash dev on the project its my responsibility to code all the engine andÂ game playÂ elements. Despite my several years worth of experience with flash games this was a challenging project . Making a game that is a multiplayer game but not a multiplayer game (no client pushing) is definately not for the feint of heart.
+As the lead flash dev on the project its my responsibility to code all the engine and game play elements. Despite my several years worth of experience with flash games this was a challenging project . Making a game that is a multiplayer game but not a multiplayer game (no client pushing) is definately not for the feint of heart.
 
-Despite the challenges and the occasional heated moment during development I think the product we have produced is excellent and is superior to many of theÂ similarÂ games available on Facebook. The stats for the first month of the game are impressive as can be seen from the [data gleamed from AppData](https://appdata.com/apps/facebook/360375426140).
+Despite the challenges and the occasional heated moment during development I think the product we have produced is excellent and is superior to many of the similar games available on Facebook. The stats for the first month of the game are impressive as can be seen from the [data gleamed from AppData](https://appdata.com/apps/facebook/360375426140).
 
 ![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_07-Aug.-04-09.37.jpg "ScreenHunter_07 Aug. 04 09.37")
 

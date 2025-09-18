@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2009-03-19T09:45:31.000Z'
+date: "2009-03-19T09:45:31.000Z"
 tags: []
 title: Particle Playground v1.0.3
 oldUrl: /actionscript/particle-playground-v103
@@ -16,7 +16,7 @@ v1.0.3 (18/03/09)
 - Removed system reset on every setting change
 - Added Simulation settings
 
-So far the game has been doing well on Newgrounds with a current score of <span id="submission_score">3.95</span> <span class="gray">/</span> 5.00 and and average review score of 9.5 / 10 it has managed to win the <span class="white"> Daily 4th Place</span> Ã¢â‚¬â€œ 03<span class="gray">/</span>19<span class="gray">/</span>2009 :)
+So far the game has been doing well on Newgrounds with a current score of <span id="submission_score">3.95</span> <span class="gray">/</span> 5.00 and and average review score of 9.5 / 10 it has managed to win the <span class="white"> Daily 4th Place</span> Ã¢‚¬" 03<span class="gray">/</span>19<span class="gray">/</span>2009 :)
 
 On a related note I came accross this on twitter yesterday: [https://www.unitzeroone.com/blog/2009/03/18/flash-10-massive-amounts-of-3d-particles-with-alchemy-source-included/](https://www.unitzeroone.com/blog/2009/03/18/flash-10-massive-amounts-of-3d-particles-with-alchemy-source-included/) it blew my head, there I thought I was being clever getting 20-40k of particles in 2D and this guy has managed 300k in 3D! Ive already started work dissecting the code so that I can improve PP some ;)
 

@@ -39,7 +39,7 @@ I remembered when I first launched Chrome Crawler a while back someone sent a vi
 
 <iframe src="https://www.youtube.com/embed/C8P6ZttaZRo" height="360" width="640" allowfullscreen="" frameborder="0"></iframe>
 
-When thinking about the problem of how to represent the data I was aware that a key difficulty was representing the relative importance of nodes and edges in the crawl graph but not to swamp the user with too much information.Â I eventually decided that grouping pages and files together under the domains that the crawler found them would be a good way of giving a sense of the relative size of each domain and the number and type of files found there.
+When thinking about the problem of how to represent the data I was aware that a key difficulty was representing the relative importance of nodes and edges in the crawl graph but not to swamp the user with too much information. I eventually decided that grouping pages and files together under the domains that the crawler found them would be a good way of giving a sense of the relative size of each domain and the number and type of files found there.
 
 [![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_021.png)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenshot_02-11/)
 
@@ -49,15 +49,15 @@ Nodes, I decided, would be joined by a single line from the parent domain that c
 
 Once I had the idea how I was going to represent the data from the crawler it was then a matter of working out how to lay out the nodes. I knew that the nodes were going to be circles and I knew that I didn't want them to overlap, I also wanted a dynamic looking graph (like the one in Gephi video above).
 
-To achieve this I decided to use Box2D the popular physics engine to take some of the difficulties with positioning away for me. Using Box2D each edge between the nodes is a distance joint and the nodes themselves are simple circle shapes. Then I just let the simulation run and the nodes move andÂ naturallyÂ try toÂ separateÂ from each other.
+To achieve this I decided to use Box2D the popular physics engine to take some of the difficulties with positioning away for me. Using Box2D each edge between the nodes is a distance joint and the nodes themselves are simple circle shapes. Then I just let the simulation run and the nodes move and naturally try to separate from each other.
 
 [![screenshot_03](https://www.mikecann.blog/wp-content/uploads/2012/12/screenshot_031.png)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenshot_03-7/)
 
-ThisÂ solutionÂ worked in some situation however it was sub-optimal in others. The problem is that because each crawl is different you can end up in situations where there are many small nodes grouped about a parent or a few very large nodes:
+This solution worked in some situation however it was sub-optimal in others. The problem is that because each crawl is different you can end up in situations where there are many small nodes grouped about a parent or a few very large nodes:
 
 [![ScreenHunter_01 Dec. 27 12.49](https://www.mikecann.blog/wp-content/uploads/2012/12/ScreenHunter_01-Dec.-27-12.49.jpg)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenhunter_01-dec-27-12-49/)
 
-I spent a good long while trying to â€˜frigâ€™ it so that the length of the distance joints between the nodes were right in most instances so that the nodesÂ didn'tÂ overlap. The code was starting to look really messy and complex incorporating rules that depended on the number of children / siblings, the relative size of the nodes, the total length of the sibling nodes, the area values with proportion to the total area and so on.
+I spent a good long while trying to ˜frig' it so that the length of the distance joints between the nodes were right in most instances so that the nodes didn't overlap. The code was starting to look really messy and complex incorporating rules that depended on the number of children / siblings, the relative size of the nodes, the total length of the sibling nodes, the area values with proportion to the total area and so on.
 
 No matter how many times I multiplied here, divided here I couldn't hack it into a form that worked for every crawl. So I decided to go back to the drawing board and rethink the layout problem.
 
@@ -65,7 +65,7 @@ No matter how many times I multiplied here, divided here I couldn't hack it into
 
 After some scribbling I decided that what I needed to calculate was the total amount of space required for a node and the amount of space its parent had to allocate to fit it. Once I could correctly calculate those two it should be a relatively simple matter of spacing child nodes correctly about their parent.
 
-I also noted thatÂ each nodeâ€™s required area is simply the recursive sum of the space required by its children:
+I also noted that each node's required area is simply the recursive sum of the space required by its children:
 
 [![ScreenHunter_03 Dec. 27 12.59](https://www.mikecann.blog/wp-content/uploads/2012/12/ScreenHunter_03-Dec.-27-12.59.jpg)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenhunter_03-dec-27-12-59/)
 
@@ -81,7 +81,7 @@ So now you must layer those children into concentric rings so that there is defi
 
 [![ScreenHunter_06 Dec. 27 13.13](https://www.mikecann.blog/wp-content/uploads/2012/12/ScreenHunter_06-Dec.-27-13.13.jpg)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenhunter_06-dec-27-13-13/)
 
-Because we know the distance between the centre of the child and its parent and we know the radius of the child we can calculate the angle between two lines that extend from the parent and lie on points on the outside of the childâ€™s radius and are perpendicular to the child's centre.
+Because we know the distance between the centre of the child and its parent and we know the radius of the child we can calculate the angle between two lines that extend from the parent and lie on points on the outside of the child's radius and are perpendicular to the child's centre.
 
 When we have this angle its a simple matter of looping through all of the (sorted smallest to largest) children adding up the angle required until you reach the maximum 360 degrees. Then you increase the distance between the parent by the diameter of the last node and start again on the second layer of children. This way you can guarantee that every child will have sufficient space about the parent.
 
@@ -91,7 +91,7 @@ When we have this angle its a simple matter of looping through all of the (sorte
 
 I knew that the graph would get very large and would be complex to render so performance was critical. I didn't want to spend ages messing around with WebGL, having done some before I knew that potentially it could take a lot longer than the relatively simple canvas2d. Because Chrome has a hardware accelerated canvas2d I reasoned that the performance should be okay.
 
-Unfortunately even on a decent machine, the rendering is still rather slow, so that you usually cant crawl beyond about a depth of 3\. I tried all the common tips and tricks that can be found on the internet such asÂ minimizingÂ context switches when drawing lines and circles and caching commonly drawn things together in an image so that there are fewer draw calls. I even tried to assist chrome by putting the icons on one large image sheet, thinking it would be represented by a single texture behind the scenes thus minimise context switches when rendering to the GPU.
+Unfortunately even on a decent machine, the rendering is still rather slow, so that you usually cant crawl beyond about a depth of 3\. I tried all the common tips and tricks that can be found on the internet such as minimizing context switches when drawing lines and circles and caching commonly drawn things together in an image so that there are fewer draw calls. I even tried to assist chrome by putting the icons on one large image sheet, thinking it would be represented by a single texture behind the scenes thus minimise context switches when rendering to the GPU.
 
 It seems however, that if you want performance in the browser you are going to have to go with WebGL.
 

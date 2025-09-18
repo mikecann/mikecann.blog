@@ -14,15 +14,15 @@ For the past several months I have been working on a little project completely d
 
 <!-- more -->
 
-One of the basic tenants of the app is that it needs to workÂ  cross-platform, so on mac, windows, linux, etc. As my previous experience with any sort of cross-platform coding involves using Java that was my natural first choice.
+One of the basic tenants of the app is that it needs to work  cross-platform, so on mac, windows, linux, etc. As my previous experience with any sort of cross-platform coding involves using Java that was my natural first choice.
 
 It has been a while since I have coding anything substantial in Java, infact my university project [Chain Reaction](https://www.mikecann.blog/programming/java/chainreaction-binarysource-release/) was my last serious foray into the language:
 
 ![](https://www.mikecann.blog/Work/CRImages/CR01.png)
 
-I knew that I wanted a nice rich interface for the project as it was intended to be sold to non-technical users. My first choice with Java was naturally with Swing. This, however, soon brought back various memories of 'JPanels', 'Layouts' and 'Look and Feels'Â  and the headaches of trying to make simple things look attractive (tho some cool advances have been made with [substance look and feel](https://www.pushing-pixels.org/)).
+I knew that I wanted a nice rich interface for the project as it was intended to be sold to non-technical users. My first choice with Java was naturally with Swing. This, however, soon brought back various memories of 'JPanels', 'Layouts' and 'Look and Feels'  and the headaches of trying to make simple things look attractive (tho some cool advances have been made with [substance look and feel](https://www.pushing-pixels.org/)).
 
-After having worked for years with Flash / Flex I had grown used to the ease of drawing graphics and manipulating Display Objects in the display hierarchy. I was dismayed at how difficult it was to do what I considered 'simple graphic tasks' using Java!Â  A simple google search for the terms "Java 2d graphics" demonstrates how old some of the concepts and documentation is on the subject.
+After having worked for years with Flash / Flex I had grown used to the ease of drawing graphics and manipulating Display Objects in the display hierarchy. I was dismayed at how difficult it was to do what I considered 'simple graphic tasks' using Java!  A simple google search for the terms "Java 2d graphics" demonstrates how old some of the concepts and documentation is on the subject.
 
 I ended up writing and rewriting my view using different libraries like [G](https://geosoft.no/graphics/):
 
@@ -38,7 +38,7 @@ For those who havent heard f JavaFX; taken from Wikipeda:
 
 > <address>[![javafx_logo_color_1](https://www.mikecann.blog/wp-content/uploads/2009/12/javafx_logo_color_1-300x150.jpg "javafx_logo_color_1")](https://www.mikecann.blog/wp-content/uploads/2009/12/javafx_logo_color_1.jpg)JavaFX is a software platform for creating and delivering rich Internet applications that can run across a wide variety of connected devices. The current release (JavaFX 1.2, June 2009) enables building applications for desktop, browser and mobile phones. </address> <address> </address> <address>
 >
-> </address><address>TV set-top boxes, gaming consoles, Blu-ray players and other platforms are planned.JavaFX is fully integrated with the Java Runtime Environment (JRE) â€“ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running Java ME.</address>
+> </address><address>TV set-top boxes, gaming consoles, Blu-ray players and other platforms are planned.JavaFX is fully integrated with the Java Runtime Environment (JRE) “ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running Java ME.</address>
 > What this means is that you can (with a little jiggery pokery) use JavaFX with normal Java. This is great as I had already written a whole load of code in Java which I didn't want to get rid of.
 
 The language JavaFX Script is great. It took a little getting used to as it is a declarative language (much like Flex's MXML except that instead of using XML as the language it uses a Java Script like notation) but once I was used to it I could immediately see the awesome power it brings.
@@ -46,20 +46,20 @@ The language JavaFX Script is great. It took a little getting used to as it is a
 A little sample of code to give you a feel of how its declarative approach works:
 
 Stage {
-Â Â Â  title: "Ello World"
-Â Â Â  width: 300
-Â Â Â  height: 300
+    title: "Ello World"
+    width: 300
+    height: 300
 
 scene: Scene {
-Â Â Â Â Â Â Â  content: [
-Â Â Â Â Â Â Â Â Â Â Â Â  Text {
-Â Â Â Â Â Â Â Â Â Â Â Â Â Â  font: Font { size: 22 }
-Â Â Â Â Â Â Â Â Â Â Â Â Â Â  x: 20, y: 90
-Â Â Â Â Â Â Â Â Â Â Â Â Â Â  textAlignment: TextAlignment.CENTER
-Â Â Â Â Â Â Â Â Â Â Â Â Â Â  content:"Ello World!"
-Â Â Â Â Â Â Â Â Â Â Â Â  }
-Â Â Â Â Â Â Â  ]
-Â Â Â Â  }
+        content: [
+             Text {
+               font: Font { size: 22 }
+               x: 20, y: 90
+               textAlignment: TextAlignment.CENTER
+               content:"Ello World!"
+             }
+        ]
+     }
 }
 
 This is your standard "Hello World" (but with a British twist):
@@ -70,14 +70,14 @@ The simplicity of rendering things to the screen was just what I was looking for
 
 I love some of the features of the language like the natively build in binding, the sequence manipulations, but Ill talk more about some of these features in another post as I have rambled enough in this one as it is.
 
-For now however, if you want to do some more reading into JavaFXÂ  I HIGHLYÂ  this short set of tutorials: [Learning the JavaFX Programming Language - Tutorial](https://java.sun.com/javafx/1/tutorials/core/index.html)
+For now however, if you want to do some more reading into JavaFX  I HIGHLY  this short set of tutorials: [Learning the JavaFX Programming Language - Tutorial](https://java.sun.com/javafx/1/tutorials/core/index.html)
 
 <div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 233px; width: 1px; height: 1px;">
 
 **avaFX** is a [software platform](https://en.wikipedia.org/wiki/Software_platform "Software platform") for creating and delivering [rich Internet applications](https://en.wikipedia.org/wiki/Rich_Internet_application "Rich Internet application") that can run across a wide variety of connected devices. The current release (JavaFX 1.2, June 2009) enables building applications for desktop, browser and mobile phones. TV set-top boxes, gaming consoles, [Blu-ray](https://en.wikipedia.org/wiki/Blu-ray "Blu-ray") players and other platforms are planned.
 
-JavaFX is fully integrated with the [Java Runtime Environment](https://en.wikipedia.org/wiki/Java_Runtime_Environment "Java Runtime Environment") (JRE) â€“ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running [Java ME](https://en.wikipedia.org/wiki/Java_ME "Java ME").
+JavaFX is fully integrated with the [Java Runtime Environment](https://en.wikipedia.org/wiki/Java_Runtime_Environment "Java Runtime Environment") (JRE) “ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running [Java ME](https://en.wikipedia.org/wiki/Java_ME "Java ME").
 
 **JavaFX** is a [software platform](https://en.wikipedia.org/wiki/Software_platform "Software platform") for creating and delivering [rich Internet applications](https://en.wikipedia.org/wiki/Rich_Internet_application "Rich Internet application") that can run across a wide variety of connected devices. The current release (JavaFX 1.2, June 2009) enables building applications for desktop, browser and mobile phones. TV set-top boxes, gaming consoles, [Blu-ray](https://en.wikipedia.org/wiki/Blu-ray "Blu-ray") players and other platforms are planned.
 
-JavaFX is fully integrated with the [Java Runtime Environment](https://en.wikipedia.org/wiki/Java_Runtime_Environment "Java Runtime Environment") (JRE) â€“ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running [Java ME](https://en.wikipedia.org/wiki/Java_ME "Java ME").</div>
+JavaFX is fully integrated with the [Java Runtime Environment](https://en.wikipedia.org/wiki/Java_Runtime_Environment "Java Runtime Environment") (JRE) “ JavaFX applications will run on any desktop and browser that runs the JRE and on top of mobile phones running [Java ME](https://en.wikipedia.org/wiki/Java_ME "Java ME").</div>

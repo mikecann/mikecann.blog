@@ -35,4 +35,4 @@ To highlight these new changes I decided to update the promo video too:
 
 I have also added a donation button into the options. I have no idea if anyone will click it, an interesting experiment tho.
 
-If you have it installed it should auto-update, if not go grab it over on the chrome app store:Â [https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah)
+If you have it installed it should auto-update, if not go grab it over on the chrome app store: [https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah](https://chrome.google.com/webstore/detail/dbpicbbcpanckagpdjflgojlknomoiah)

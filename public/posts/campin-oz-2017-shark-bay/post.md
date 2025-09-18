@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2017-04-06T23:45:00.000Z'
+date: "2017-04-06T23:45:00.000Z"
 tags:
   - blog
   - drone
@@ -48,7 +48,7 @@ After a 3 hour bumpy (unsealed corrugated roads are a bitch) ride we finally rea
 
 Big mistake. We ended up getting seriously bogged in the sand thanks to the 1.5 tonne weight of the trailer plus the weight of all our gear in the back of the car. In hindsight it was inevitable.
 
-We spent the next 3 and a half, hot, sweaty and sandy hours trying to dig ourselves out. We may still have been stuck there now if it wasnâ€™t for a stroke of luck that another car was at the end of this remote beach. Even more luckily for us, they were locals who knew the area and were happy to help us out.
+We spent the next 3 and a half, hot, sweaty and sandy hours trying to dig ourselves out. We may still have been stuck there now if it wasn't for a stroke of luck that another car was at the end of this remote beach. Even more luckily for us, they were locals who knew the area and were happy to help us out.
 
 So massive thanks to John and Emma who run the Shark Bay Ocean Park centre for spending hours and hours of their Sunday helping two naÃ¯ve tourists out. If you are ever in the area you should definitely go say hi and check out the excellent [Ocean Park](https://oceanpark.com.au/ "ocean park").
 

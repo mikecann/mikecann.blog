@@ -88,7 +88,7 @@ When executed you get something that looks like the following:
 
 Which presents a nice graphical representation of the tests run and which failed (if any).
 
-Once built and tested we decided to give the code a simple visual representation. We wanted to show off the ability for haXe to target multiple platforms. To do this we decided to go with [NME ](https://www.haxenme.org/)which I had been experimenting around withÂ recently.
+Once built and tested we decided to give the code a simple visual representation. We wanted to show off the ability for haXe to target multiple platforms. To do this we decided to go with [NME ](https://www.haxenme.org/)which I had been experimenting around with recently.
 
 [NME ](https://www.haxenme.org/)is a library and tool chain for haXe designed to allow the developer to use the flash API on multiple platforms. They achieve this by writing platform targeted version of the flash API. So what this means is code such as the following:
 
@@ -159,14 +159,14 @@ haxelib run nme test YourProject.nmml cpp -64
 
 ```
 
-What it means for this project is we could very quickly get a view for our game of life running in flash,Â JSÂ and native desktop.
+What it means for this project is we could very quickly get a view for our game of life running in flash, JS and native desktop.
 
 To show just how easy it is I made the following video:
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/VNF2gH5o9Zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
 
-You can see the HTML5 build here:Â [/projects/gameoflife/Export/html5/bin/](/projects/gameoflife/Export/html5/bin/)
+You can see the HTML5 build here: [/projects/gameoflife/Export/html5/bin/](/projects/gameoflife/Export/html5/bin/)
 
-And the flash build here:Â [/projects/gameoflife/Export/flash/bin/MyApplication.swf](/projects/gameoflife/Export/flash/bin/MyApplication.swf)
+And the flash build here: [/projects/gameoflife/Export/flash/bin/MyApplication.swf](/projects/gameoflife/Export/flash/bin/MyApplication.swf)
 
-I have uploaded the source for the project here:Â [/projects/gameoflife/gameoflife.zip](/projects/gameoflife/gameoflife.zip)
+I have uploaded the source for the project here: [/projects/gameoflife/gameoflife.zip](/projects/gameoflife/gameoflife.zip)

@@ -12,11 +12,11 @@ oldUrl: /2013-trip/the-trip-2013-washington-dc
 
 ![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2013/05/screenshot_02.png)
 
-So my trip has finally started! I have not had anywhere near as much free time thus far as I thought I would have before I left. A great thing as there is no chance of me getting bored, it does however mean that IÂ haven'tÂ had time to write the frequent blog posts I had promised.
+So my trip has finally started! I have not had anywhere near as much free time thus far as I thought I would have before I left. A great thing as there is no chance of me getting bored, it does however mean that I haven't had time to write the frequent blog posts I had promised.
 
 <!-- more -->
 
-I have decided to try and write these posts a a sort of slideshow withÂ narrativeÂ  Im not sure its the correct format however as it takes quite a while to write each one, so perhaps ill tweak the way I do this as I go along. Each photo taken links back to a publicly available image on facebook so you can like and comment and see a larger version if you wish.
+I have decided to try and write these posts a a sort of slideshow with narrative  Im not sure its the correct format however as it takes quite a while to write each one, so perhaps ill tweak the way I do this as I go along. Each photo taken links back to a publicly available image on facebook so you can like and comment and see a larger version if you wish.
 
 This is just a condensed summary, there are more images in the album [The Trip 2013 - Washington DC](https://www.facebook.com/media/set/?set=a.10151640158721031.1073741830.593661030&type=1&l=5197ba3b4a)
 
@@ -64,11 +64,11 @@ The following day I woke and decided to head back to the area I was in the previ
 
 [![mantis shrimp](https://www.mikecann.blog/wp-content/uploads/2013/05/mantis-shrimp.jpg)](https://www.facebook.com/photo.php?fbid=10151640234691031&set=a.10151640158721031.1073741830.593661030&type=3&theater)
 
-it even had an indoor butterfly enclosure, gingerly I took photos while trying not to crush theÂ delicateÂ insects
+it even had an indoor butterfly enclosure, gingerly I took photos while trying not to crush the delicate insects
 
 [![butterfly](https://www.mikecann.blog/wp-content/uploads/2013/05/butterfly.jpg)](https://www.facebook.com/photo.php?fbid=10151640242761031&set=a.10151640158721031.1073741830.593661030&type=3&theater)
 
-After the museum I took the short walk over to the Whitehouse for theÂ obligatoryÂ pic
+After the museum I took the short walk over to the Whitehouse for the obligatory pic
 
 [![whitehouse](https://www.mikecann.blog/wp-content/uploads/2013/05/whitehouse.jpg)](https://www.facebook.com/photo.php?fbid=10151640243686031&set=a.10151640158721031.1073741830.593661030&type=3&theater)
 
@@ -76,7 +76,7 @@ After the whitehouse I walked over to the Jefferson memorial and wrote my diary 
 
 [![jefferson](https://www.mikecann.blog/wp-content/uploads/2013/05/jefferson.jpg)](https://www.facebook.com/photo.php?fbid=10151640246986031&set=a.10151640158721031.1073741830.593661030&type=3&theater)
 
-That evening I went to watch Martins team play local football. Its really interesting how football is taking off in the states,Â particularlyÂ as they play it in mixed sex teams.
+That evening I went to watch Martins team play local football. Its really interesting how football is taking off in the states, particularly as they play it in mixed sex teams.
 
 [![martins team](https://www.mikecann.blog/wp-content/uploads/2013/05/martins-team.jpg)](https://www.facebook.com/photo.php?fbid=10151640247956031&set=a.10151640158721031.1073741830.593661030&type=3&theater)
 

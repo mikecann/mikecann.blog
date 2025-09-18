@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2017-07-25T07:34:00.000Z'
+date: "2017-07-25T07:34:00.000Z"
 tags:
   - blog
   - drone
@@ -18,7 +18,7 @@ I was excited to arrive because I knew this was going to be the destination wher
 
 ![me snorkelling](//cdn.shopify.com/s/files/1/1830/7597/files/YDXJ0626_1024x1024.jpg?v=1500961620)
 
-Before we went out to whats known as â€œThe Outer Reefâ€ we took a day trip to a nearby island called â€œFitzroy Islandâ€.
+Before we went out to whats known as "The Outer Reef" we took a day trip to a nearby island called "Fitzroy Island".
 
 ![fitzroy isand](//cdn.shopify.com/s/files/1/1830/7597/files/Fitzroy_Pano_1_Output_1024x1024.jpg?v=1500961327)
 
@@ -52,7 +52,7 @@ Port Douglas is a lovely little sea side town that I could totally imagine retir
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/Port_Douglas_Stingray_1024x1024.jpg?v=1500961561)
 
-While at Port Douglas we took a day trip up the cost a little to the rainforests of the Daintree. It wasnâ€™t a particularly sunny day for us sadly but that didnâ€™t stop me having fun taking some drone shots.
+While at Port Douglas we took a day trip up the cost a little to the rainforests of the Daintree. It wasn't a particularly sunny day for us sadly but that didn't stop me having fun taking some drone shots.
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/Daintree_Coast_1024x1024.jpg?v=1500961224)
 
@@ -66,5 +66,5 @@ While there we were lucky enough to see some of the natives in the wild:
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_0460_1024x1024.jpg?v=1500961439)
 
-And then it was time to move on again, this time heading into South Queenslandâ€¦
+And then it was time to move on again, this time heading into South Queensland¦
 **This post was copied from my site [AboveUnder.com](https://aboveunder.com) a site dedicated to my travel drone photography.**

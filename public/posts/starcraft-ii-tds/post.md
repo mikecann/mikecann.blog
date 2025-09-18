@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2010-07-27T08:11:00.000Z'
+date: "2010-07-27T08:11:00.000Z"
 tags:
   - community
   - games
@@ -17,7 +17,7 @@ I, like many others have been eagerly anticipating the latest Blizzard release S
 
 <!-- more -->
 
-I used to spend hours and hours playing the custom maps released with Warcraft III, I still log in every now and then to check out how its going and am suprised every time to see people still making new maps. Some of the mostÂ popularÂ game genres inÂ existenceÂ todayÂ wouldn'tÂ be around if it wasnt thanks to be map making community in WC3\. Genres such as Tower Defence (TD) and Defence of The Ancients (DOTA) were born there.
+I used to spend hours and hours playing the custom maps released with Warcraft III, I still log in every now and then to check out how its going and am suprised every time to see people still making new maps. Some of the most popular game genres in existence today wouldn't be around if it wasnt thanks to be map making community in WC3\. Genres such as Tower Defence (TD) and Defence of The Ancients (DOTA) were born there.
 
 So it made me extremely happy to see this video on YouTube showing that yes custom maps are possible in SC2 and yes you can make TDs with them, horaay!
 

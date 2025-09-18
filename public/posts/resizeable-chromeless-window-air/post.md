@@ -13,7 +13,7 @@ title: Resizeable Chromeless Window AIR
 oldUrl: /mxml/resizeable-chromeless-window-air
 ---
 
-Thought I would share this little ditty. Been working in AIRÂ recentlyÂ and decided to make the window "chromeless" which means there are no controls so no resizing.
+Thought I would share this little ditty. Been working in AIR recently and decided to make the window "chromeless" which means there are no controls so no resizing.
 
 Thankfully however adobe provide the tools to allow for resizing the native window. So I produced this little mxml component to let you resize the window:
 
@@ -21,7 +21,7 @@ Thankfully however adobe provide the tools to allow for resizing the native wind
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif "ScreenHunter_02 Feb. 21 21.40")](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_02-Feb.-21-21.40.gif)
 
-TheÂ colouredÂ edges indicate where the application is draggable, including the white corner areas.
+The coloured edges indicate where the application is draggable, including the white corner areas.
 
 The component that lets you do this is pretty simple:
 

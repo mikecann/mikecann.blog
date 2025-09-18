@@ -18,6 +18,6 @@ And here it is:
 
 Doesnt it look mean?
 
-I dont really need a dirt bikeÂ  as im not exactly going off road in the centre of Manchester so I had a half-hearted go of [selling it on ebay](https://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=280436238262&ssPageName=STRK:MESELX:IT).
+I dont really need a dirt bike  as im not exactly going off road in the centre of Manchester so I had a half-hearted go of [selling it on ebay](https://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=280436238262&ssPageName=STRK:MESELX:IT).
 
 In the end I have decided that ill keep it as it is very shiney and im abit of a magpie :)

@@ -1,6 +1,6 @@
 ﻿---
 coverImage: /images/fallback-post-header.png
-date: '2017-06-13T06:19:00.000Z'
+date: "2017-06-13T06:19:00.000Z"
 tags:
   - blog
   - drone
@@ -10,7 +10,7 @@ title: Camping Oz 2017 - Northern Territory
 oldUrl: /above-under/camping-oz-2017-northern-territory
 ---
 
-Following on from our travels through the East Kimberly region we passed over the border from Western Australia into the Northern Territory. Our first port of call was the second largest city in the NT;Â Kathrine.
+Following on from our travels through the East Kimberly region we passed over the border from Western Australia into the Northern Territory. Our first port of call was the second largest city in the NT; Kathrine.
 
 <!-- more -->
 
@@ -64,7 +64,7 @@ We also spent some time hitting a few museums including the aviation history mus
 
 ![big plane is big!](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_7591_1024x1024.jpg?v=1497333305)
 
-I didnâ€™t know much about the Australian history during WWII, I was obviously very familiar with the UK and Europe but I wasnâ€™t aware that Australia played a part too fighting the Japanese and sending troops to Africa and Europe.
+I didn't know much about the Australian history during WWII, I was obviously very familiar with the UK and Europe but I wasn't aware that Australia played a part too fighting the Japanese and sending troops to Africa and Europe.
 
 While in Darwin we learnt to be on our guard a their were thieves about.
 
@@ -92,9 +92,9 @@ Soon it was time to move on however. Our first stop after Kakadu heading south w
 
 ![](//cdn.shopify.com/s/files/1/1830/7597/files/Mataranka_Hotsprings_Pano_1024x1024.jpg?v=1497334434)
 
-I wasnâ€™t expecting too much from here but it turned out to be awesome with kangaroos and pheasants wandering around the campsite.
+I wasn't expecting too much from here but it turned out to be awesome with kangaroos and pheasants wandering around the campsite.
 
-The springs themselves were warm, beautifully clear and I really didnâ€™t want to leave but leave we sadly did. It wasnâ€™t all bad tho because next up was something I had been looking forward to for ages, Dally Waters and its historic pub:
+The springs themselves were warm, beautifully clear and I really didn't want to leave but leave we sadly did. It wasn't all bad tho because next up was something I had been looking forward to for ages, Dally Waters and its historic pub:
 
 ![dally waters pub](//cdn.shopify.com/s/files/1/1830/7597/files/IMG_7634_1024x1024.jpg?v=1497334484)
 
