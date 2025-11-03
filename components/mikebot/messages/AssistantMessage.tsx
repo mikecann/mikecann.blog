@@ -1,13 +1,13 @@
 import * as React from "react";
 import { BubbleMessageContent } from "./BubbleMessageContent";
 import { HorizontalSpacer } from "gls";
-import { MessageDoc } from "@convex-dev/agent";
+import { type UIMessage } from "@convex-dev/agent/react";
 import { AssistantMessageBubble } from "./AssistantMessageBubble";
 import { useSmoothText } from "@convex-dev/agent/react";
 import { ToolMessage } from "./ToolMessage";
 
 interface Props {
-  message: MessageDoc;
+  message: UIMessage;
 }
 
 // const fadedStyle: React.CSSProperties = {
@@ -22,9 +22,12 @@ interface Props {
 // };
 
 export const AssistantMessage: React.FC<Props> = ({ message }) => {
-  const [visibleText] = useSmoothText(message.text ?? "");
+  const hasToolParts = message.parts?.some((part) => part.type === "tool-call" || part.type === "tool-result");
+  if (hasToolParts) return <ToolMessage message={message} />;
 
-  if (message.tool) return <ToolMessage message={message} />;
+  const [visibleText] = useSmoothText(message.text ?? "", {
+    startStreaming: message.status === "pending",
+  });
 
   // if (
   //   typeof message.message.content == "object" &&

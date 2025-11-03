@@ -1,14 +1,9 @@
 import { v } from "convex/values";
 import { query } from "../_generated/server";
-import {
-  validateThreadBelongsToUser,
-  findThread,
-  getAndValidateThread,
-  mikebot,
-  filterOutToolResults,
-} from "./lib";
+import { validateThreadBelongsToUser, findThread, getAndValidateThread, mikebot } from "./lib";
 import { paginationOptsValidator } from "convex/server";
-import { vStreamArgs } from "@convex-dev/agent";
+import { vStreamArgs, listUIMessages, syncStreams } from "@convex-dev/agent";
+import { components } from "../_generated/api";
 
 export const findThreadForUser = query({
   args: {
@@ -39,16 +34,13 @@ export const listMessagesForUserThread = query({
     await getAndValidateThread(ctx, { threadId: args.threadId, userId: args.userId });
 
     // Grab the messages from the thread based on the current page
-    const paginated = await mikebot.listMessages(ctx, {
+    const paginated = await listUIMessages(ctx, components.agent, {
       threadId: args.threadId,
-      paginationOpts: args.paginationOpts,      
+      paginationOpts: args.paginationOpts,
     });
 
-    // I dont want to send the tool results to the client
-    paginated.page = filterOutToolResults(paginated.page);
-
     // I also want to get the messages that are streaming
-    const streams = await mikebot.syncStreams(ctx, {
+    const streams = await syncStreams(ctx, components.agent, {
       threadId: args.threadId,
       streamArgs: args.streamArgs,
     });

@@ -1,9 +1,9 @@
 import * as React from "react";
-import { MessageDoc } from "@convex-dev/agent";
+import { type UIMessage } from "@convex-dev/agent/react";
 import { exhaustiveCheck, iife } from "../../../essentials/misc/misc";
 
 interface Props {
-  message: MessageDoc;
+  message: UIMessage;
 }
 
 const fadedStyle: React.CSSProperties = {
@@ -18,42 +18,73 @@ const fadedStyle: React.CSSProperties = {
 };
 
 export const ToolMessage: React.FC<Props> = ({ message }) => {
-  if (message.message?.role != "assistant") return null;
-  if (!message.message.content) return null;
-  if (typeof message.message.content == "string") return null;
+  if (message.role != "assistant") return null;
+  if (!message.parts) return null;
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      {message.message.content.map((content, idx) => {
-        if (content.type == "tool-call")
+      {message.parts.map((part, idx) => {
+        // Handle tool-call parts - check for exact type match first
+        if (part.type === "tool-call") {
+          const toolCallPart = part as unknown as { type: "tool-call"; toolCallId: string; toolName?: string; args?: any };
+          if (!toolCallPart.toolName) return null;
+          
           return (
             <div key={idx} style={fadedStyle}>
               <span role="img" aria-label="tool" style={{ opacity: 0.5 }}>
                 🛠️
               </span>
               {iife(() => {
-                if (content.toolName == "searchBlogPosts" && "query" in content.args) {
+                if (toolCallPart.toolName == "searchBlogPosts" && toolCallPart.args && "query" in toolCallPart.args) {
                   return (
                     <>
                       Mikebot searched for{" "}
-                      <span style={{ fontWeight: 500 }}>"{content.args.query}"</span>
+                      <span style={{ fontWeight: 500 }}>"{toolCallPart.args.query}"</span>
                     </>
                   );
                 }
                 return (
                   <>
-                    Mikebot used <span style={{ fontWeight: 500 }}>{content.toolName}</span>
+                    Mikebot used <span style={{ fontWeight: 500 }}>{toolCallPart.toolName}</span>
                   </>
                 );
               })}
             </div>
           );
+        }
 
-        return (
-          <div key={idx} style={fadedStyle}>
-            Unknown tool message content..
-          </div>
-        );
+        // Handle other tool-* types (like tool-call-* variants)
+        if (part.type.startsWith("tool-") && part.type !== "tool-result") {
+          const toolPart = part as any;
+          if (toolPart.toolName) {
+            return (
+              <div key={idx} style={fadedStyle}>
+                <span role="img" aria-label="tool" style={{ opacity: 0.5 }}>
+                  🛠️
+                </span>
+                {iife(() => {
+                  if (toolPart.toolName == "searchBlogPosts" && toolPart.args && "query" in toolPart.args) {
+                    return (
+                      <>
+                        Mikebot searched for{" "}
+                        <span style={{ fontWeight: 500 }}>"{toolPart.args.query}"</span>
+                      </>
+                    );
+                  }
+                  return (
+                    <>
+                      Mikebot used <span style={{ fontWeight: 500 }}>{toolPart.toolName}</span>
+                    </>
+                  );
+                })}
+              </div>
+            );
+          }
+        }
+
+        if (part.type === "tool-result") return null;
+
+        return null;
       })}
     </div>
   );

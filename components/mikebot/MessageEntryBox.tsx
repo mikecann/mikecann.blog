@@ -7,9 +7,8 @@ import { useMutation, insertAtTop } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { optimisticallySendMessage } from "@convex-dev/agent/react";
 import { createUserMessageJSON } from "./helpers";
-import { MessageDoc } from "../../node_modules/@convex-dev/agent/src/client";
 import { OptimisticLocalStore } from "convex/browser";
-import { ThreadQuery } from "../../node_modules/@convex-dev/agent/src/react/types";
+import { type UIMessage } from "@convex-dev/agent/react";
 
 interface Props {
   userId: Id<"users"> | null | undefined;
@@ -113,7 +112,7 @@ export const MessageEntryBox: React.FC<Props> = ({ userId, threadId, defaultMess
 };
 
 export function optimisticallySendAssistantMessage(
-  query: ThreadQuery<unknown, MessageDoc>,
+  query: any,
 ): (store: OptimisticLocalStore, args: { threadId: string }) => void {
   return (store, args) => {
     const queries = store.getAllQueries(query);
@@ -123,8 +122,8 @@ export function optimisticallySendAssistantMessage(
       if (q.args?.threadId !== args.threadId) continue;
       if (q.args.streamArgs) continue;
       for (const m of q.value?.page ?? []) {
-        maxOrder = Math.max(maxOrder, m.order);
-        maxStepOrder = Math.max(maxStepOrder, m.stepOrder);
+        maxOrder = Math.max(maxOrder, m.order ?? 0);
+        maxStepOrder = Math.max(maxStepOrder, m.stepOrder ?? 0);
       }
     }
     const order = maxOrder + 1;
@@ -133,19 +132,16 @@ export function optimisticallySendAssistantMessage(
       paginatedQuery: query,
       argsToMatch: { threadId: args.threadId, streamArgs: undefined },
       item: {
-        _creationTime: Date.now(),
-        _id: crypto.randomUUID(),
+        id: `optimistic-${Date.now()}`,
+        key: `optimistic-${Date.now()}`,
         order,
         stepOrder,
-        status: "pending",
-        threadId: args.threadId,
-        tool: false,
-        message: {
-          role: "assistant",
-          content: "",
-        },
+        status: "pending" as const,
+        role: "assistant" as const,
+        parts: [],
         text: "",
-      },
+        _creationTime: Date.now(),
+      } as unknown as UIMessage,
       localQueryStore: store,
     });
   };

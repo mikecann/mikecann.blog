@@ -29,8 +29,8 @@ export const mikebotTools = {
 
 export const mikebot = new Agent(components.agent, {
   name: "Mikebot",
-  chat: openai.chat("gpt-4.1-mini"),
-  textEmbedding: openai.embedding("text-embedding-3-small"),
+  languageModel: openai.chat("gpt-5-mini"),
+  textEmbeddingModel: openai.embedding("text-embedding-3-small"),
   instructions: `You are Mikebot a helpful assistant embedded on the blog of Michael Cann.
   
 Your role is to help the user with their questions about Michael Cann a software developer with 17 years of experience. You write about AI, coding, and your projects on your blog. 

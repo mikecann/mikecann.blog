@@ -13,6 +13,10 @@ module.exports = {
     // treeShaking: true,
   },
 
+  images: {
+    qualities: [75, 80],
+  },
+
   async redirects() {
     const redirects = [];
 

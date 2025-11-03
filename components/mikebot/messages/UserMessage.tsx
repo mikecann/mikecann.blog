@@ -1,11 +1,10 @@
 import * as React from "react";
 import { BubbleMessageContent } from "./BubbleMessageContent";
-import { MessageDoc } from "@convex-dev/agent";
-import { getMessageStringFromMessageDoc } from "./utils";
+import { type UIMessage } from "@convex-dev/agent/react";
 import { parseUserMessageJSON } from "../helpers";
 
 interface Props {
-  message: MessageDoc;
+  message: UIMessage;
 }
 
 export const UserMessage: React.FC<Props> = ({ message }) => {

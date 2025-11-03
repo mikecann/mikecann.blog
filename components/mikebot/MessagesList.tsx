@@ -5,7 +5,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { MessageRow } from "./messages/MessageRow";
 import { style } from "typestyle";
-import { useThreadMessages } from "@convex-dev/agent/react";
+import { useThreadMessages, type UIMessage } from "@convex-dev/agent/react";
 import { LoadMoreMessages } from "./messages/LoadMoreMessages";
 
 interface Props {
@@ -70,9 +70,15 @@ export const MessagesList: React.FC<Props> = ({ threadId, userId }) => {
       style={{ position: "relative", paddingRight: "0px", paddingLeft: "8px" }}
     >
       {/* <LoadMoreMessages status={messages.status} loadMore={messages.loadMore} /> */}
-      {messages.results.map((m) => (
-        <MessageRow key={m._id} message={m} />
-      ))}
+      {messages.results
+        .filter((m) => {
+          // Filter out tool result messages
+          if (!m.parts) return true;
+          return !m.parts.some((part) => part.type === "tool-result");
+        })
+        .map((m) => (
+          <MessageRow key={m.key} message={m} />
+        ))}
       <div className={snapEndStyle} />
     </Vertical>
   );
