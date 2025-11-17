@@ -8,7 +8,6 @@ tags:
   - convex
   - typescript
 title: Port Geographe Christmas Cruise
-status: draft
 ---
 
 A little over 2 years ago I moved from the bustling city of Perth in Western Australia three hours south to a small seaside town called Busselton. I was keen to get involved in my local neighborhood, meet my neighbours and basically settle into my new home.
