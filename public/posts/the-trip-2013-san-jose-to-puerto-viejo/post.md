@@ -60,7 +60,7 @@ I was relatively successful at first and found that I was able to stand up on th
 
 [![photo-24](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-242.jpg)](https://www.facebook.com/photo.php?fbid=10151813856891031&set=a.10151813853231031.1073741843.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/bZDl5EPX2vQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/bZDl5EPX2vQ" frameborder="0" allowfullscreen></iframe>
 
 The board however was a long board, which made things quite a bit easier:
 

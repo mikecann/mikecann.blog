@@ -24,7 +24,7 @@ Out of all of the mixes I have done [Argon](https://soundcloud.com/mikecann/arti
 
 Argon is a lighter element than [Iridium](https://soundcloud.com/mikecann/artificial-iridium) and hence the tracks have a smoother simpler progressive sound. Because this mix is in the same vein as Argon I have decided to call it Argon Isotope.
 
-<iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2Fmikeysee%2Fartificial-argon-isotope%2F&amp;embed_type=widget_standard&amp;embed_uuid=34002dae-cf25-44a9-b86f-7565999669dd&amp;hide_tracklist=1&amp;hide_cover=1" frameborder="0"></iframe><div style="clear: both; height: 3px; width: auto;"></div>
+<iframe width="100%" height="180" src="https://www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2Fmikeysee%2Fartificial-argon-isotope%2F&amp;embed_type=widget_standard&amp;embed_uuid=34002dae-cf25-44a9-b86f-7565999669dd&amp;hide_tracklist=1&amp;hide_cover=1" frameborder="0"></iframe><div style="clear: both; height: 3px; width: auto;"></div>
 
 [Argon Isotope](https://www.mixcloud.com/mikeysee/artificial-argon-isotope/?utm_source=widget&utm_medium=web&utm_campaign=base_links&utm_term=resource_link)<span> by </span>[Artificial](https://www.mixcloud.com/mikeysee/?utm_source=widget&utm_medium=web&utm_campaign=base_links&utm_term=profile_link)<span> on </span>[ Mixcloud](https://www.mixcloud.com/?utm_source=widget&utm_medium=web&utm_campaign=base_links&utm_term=homepage_link)
 

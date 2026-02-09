@@ -14,7 +14,7 @@ Notepad++ comes with a feature where if you double click a variable it will high
 
 This plugin is very simple and borrows much of the code from the quick-find plugin.
 
-![](/posts/highlightselectionscreen01.png)
+*[Screenshot no longer available]*
 
 I wrote this little plugin an an hour or so last night, i hope others find it useful too :)
 

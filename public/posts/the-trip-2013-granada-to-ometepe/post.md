@@ -59,7 +59,7 @@ Afterwards we went to shisha bar and enjoyed some of the flavoured tobacco
 
 while we were there a number of street performers turned up and started showing off their skills
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/r6fRoH7m2P8" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/r6fRoH7m2P8" frameborder="0" allowfullscreen></iframe>
 
 The following day we decided to go Kayaking on lake Nicaragua, the largest lake in Central America
 
@@ -77,7 +77,7 @@ I really enjoyed the kayaking as our guide took us to places that boats cant rea
 
 In the afternoon we took a trip down to the smelly, noisy market in Granada.
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/7P20Xm7gLWg" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/7P20Xm7gLWg" frameborder="0" allowfullscreen></iframe>
 
 The following day we drove a short way to the ferry that was due to take us to the island in the middle of the lake called Ometepe.
 
@@ -113,7 +113,7 @@ This was the first hike of the trip and the first hour or so it seemed like it w
 
 But then it started getting steeper and steeper.
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/nX3kjQu4Rlk" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/nX3kjQu4Rlk" frameborder="0" allowfullscreen></iframe>
 
 Eventually after several hours, sweaty and tired, we reached the 1000m mark.
 
@@ -149,7 +149,7 @@ The way down was tough and sketchy, most of the time the entire volcano was cove
 
 [![photo-86](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-86.jpg)](https://www.facebook.com/photo.php?fbid=10151789746846031&set=a.10151789732396031.1073741841.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/VtKGkb1mF_Y" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/VtKGkb1mF_Y" frameborder="0" allowfullscreen></iframe>
 
 Needless to say it was a tough hike, it took us 11 hours in total. Near the bottom it started raining heavily. We sheltered under a large Sabre tree at the base of the volcano when we heard an almighty crack from above us. I turned around just in time to see a massive branch from the tree come crashing down not a meter from me. Our guide was understandably nervous after that as we hightailed it out of there.
 

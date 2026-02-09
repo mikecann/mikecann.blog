@@ -16,7 +16,7 @@ Its been a little while since I have had any time to work on my new game Mr Nibb
 
 Check the image above to see his render of Mr Nibbles with his corn 'nibbles' or checkout the video below where I show off some new things:
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/VsD9OG7nqgg" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/VsD9OG7nqgg" frameborder="0" allowfullscreen></iframe>
 
 Note this is just a first pass of the models so the animation quality should improve a lot soon, also we are working on a roll animation for when Mr Nibbles moves fast.
 

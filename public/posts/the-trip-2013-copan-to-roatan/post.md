@@ -31,7 +31,7 @@ They also had some interesting flora and fauna such as this spikey tree
 
 and this butterly named Steve that really loved my hat for some reason
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/-7mTY1AKoqc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/-7mTY1AKoqc" frameborder="0" allowfullscreen></iframe>
 
 There were also some beautiful but noisy Makaws flying about the park
 
@@ -121,6 +121,6 @@ On we way back we had a little accident, I accellerated a little too hard while 
 
 Shes a trooper though and got straight back on the bike and was even able to take this video while we were driving along. Note that the bike's speed always read 0kph so we had no idea how fast we were going.
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/5Asvg5yvSqs" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/5Asvg5yvSqs" frameborder="0" allowfullscreen></iframe>
 
 Unfortunately we had to leave Rotan the next morning early. I had a brilliant time there and didnt want to leave but the trip had only just started so I couldn't wait to see what the rest of it was going to be like!

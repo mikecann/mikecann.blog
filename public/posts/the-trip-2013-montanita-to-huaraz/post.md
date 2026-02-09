@@ -26,7 +26,7 @@ Continuing on my South American travels next up was some nature watching at the 
 
 [![photo-4](https://www.mikecann.blog/wp-content/uploads/2013/10/photo-410.jpg)](https://www.facebook.com/photo.php?fbid=10151984228401031&set=a.10151984227476031.1073741851.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/iw8phw_37kw" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/iw8phw_37kw" frameborder="0" allowfullscreen></iframe>
 
 The main purpose for visiting the islands tho was the birds, including the famous Blue Footed Boobie
 

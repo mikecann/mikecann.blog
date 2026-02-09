@@ -15,9 +15,9 @@ Im very proud to announce my latest project [AboveUnder.com](https://AboveUnder.
 
 As mentioned in a [previous post I recently invested in](https://www.mikecann.blog/travel/camping-australia-2017-the-plan/) a DJI Mavic Pro for my up and coming 5-month camping trip around Australia. Well I knew that I wanted a place that I could showcase all of the awesome photos and videos that im going to take as we go around.
 
-Currently the selection of photos in the [Print Store](https://aboveunder.com/collections/all) is a little bit limited but I expect that to grow rapidly after we hit the road this Friday.
+Currently the selection of photos in the [Print Store](https://aboveunder.com.au/collections/all) is a little bit limited but I expect that to grow rapidly after we hit the road this Friday.
 
-I am planning on mirroring [the blog posts that I write on that site](https://aboveunder.com/blogs/news) onto here.
+I am planning on mirroring [the blog posts that I write on that site](https://aboveunder.com.au/blogs/news) onto here.
 
 The site was built using Shopify. I looked at quite a few shopping platforms and it was a toss up between WooCommerce (free Wordpress plugin) and Shopify. Shopify is fairly expensive \$39 per month and WooCommerce would have been free because I already have a server that I host this blog and others on.
 
@@ -25,4 +25,4 @@ I decided to go with Shopify in the end because it was really fast, did everythi
 
 Anyways check it out let me know what you think!
 
-[https://aboveunder.com/](https://aboveunder.com/)
+[https://aboveunder.com.au/](https://aboveunder.com.au/)

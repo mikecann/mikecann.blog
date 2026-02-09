@@ -133,11 +133,11 @@ Before I left England I knew that one of the things I wanted to do on this trip 
 
 [![photo-77](https://www.mikecann.blog/wp-content/uploads/2013/09/photo-772.jpg)](https://www.facebook.com/photo.php?fbid=10151899245576031&set=a.10151899189516031.1073741847.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/NvGD4ylYuZo" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/NvGD4ylYuZo" frameborder="0" allowfullscreen></iframe>
 
 It was hard work and a steep learning curve but totally worth it. When I had my first 30 minute flight after 6-7 days I was on cloud-9\. Using your knowledge and skills to keep yourself in the air is such an exhilarating feeling. Never mind the stunning views that the fly site "Las Aguilas" offers over the city.
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/6SWq_2xgy7w" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/6SWq_2xgy7w" frameborder="0" allowfullscreen></iframe>
 
 Over the course of the 14 days I only had one accident. I was attempting to take off in very low to no winds, never a good idea at the best of times. I ran ran ran, hit the edge of the cliff and went over the edge, my legs were in the air but I still wasnt gaining much height when suddenly I hit the ground again with my feet, I slide for a little while until im brought to a rather abrupt stop thanks to my side cracking into a tree stump and the wing crashing into a bush.
 
@@ -163,7 +163,7 @@ Well finally it was my turn, I managed to run the short distance to the edge of 
 
 The ride of the canyon was spectacular. The thermals coming up from the valley were so strong they allowed me to ride hundreds of meters above everything. The view from up there was just phenomenal and the few pictures and video I was only just brave enough to attempt only go a short way towards doing the view justice.
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/p3gaQBr1FAs" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/p3gaQBr1FAs" frameborder="0" allowfullscreen></iframe>
 
 Sadly after an hour of pure exhilaration in the air we had to make our way down due to the winds getting too strong. I wait till last so I could watch where everyone else was heading for the landing. I eventually followed them down to a tiny spit of land next to a river, taking great care to avoid the very strong water and the power lines and trees and other obstacles in my way.
 

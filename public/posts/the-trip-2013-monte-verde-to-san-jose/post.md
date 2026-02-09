@@ -32,7 +32,7 @@ The ride takes the best part of a minute and a half which I managed to record in
 
 [![photo-11](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-111.jpg)](https://www.facebook.com/photo.php?fbid=10151802458531031&set=a.10151802457071031.1073741842.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/jM6cfh-TvAg" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/jM6cfh-TvAg" frameborder="0" allowfullscreen></iframe>
 
 The final zip line wasnt a zip line at all, rather it was a giant tarzan swing. To get there you had to walk across a rickety bridge before you reach the platform that you jump from.
 
@@ -50,7 +50,7 @@ To get to the bungee jump spot you had to ride in a small cage across the steep 
 
 One by one the people in the cage took the plunge over the edge until it was my turn. I shuffled up to the edge (my feet were tied to the bungee) before the countdown 5..4..3..2..1.. and I felt the not-so-proverbial boot up the bottom and jumped:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/i8xkBqKVjtQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/i8xkBqKVjtQ" frameborder="0" allowfullscreen></iframe>
 
 The jump was exhilarating tho the way the rope caused you to spin afterwards did make me feel a little nautious.
 
@@ -80,7 +80,7 @@ Canyoneering involves hiking and repelling down waterfalls and is great fun.
 
 Some of the waterfalls are so high that you basically have to zip line down.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/kvP_DJGm4ZA" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/kvP_DJGm4ZA" frameborder="0" allowfullscreen></iframe>
 
 There were a couple of 'surprises' along the way too such as a dive bomb into a pool.
 
@@ -92,7 +92,7 @@ The other was a 'Tsunami'. We were wedged into a small crevice then the stream w
 
 [![photo-41](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-411.jpg)](https://www.facebook.com/photo.php?fbid=10151802461856031&set=a.10151802457071031.1073741842.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/DCphVU42yWc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/DCphVU42yWc" frameborder="0" allowfullscreen></iframe>
 
 I loved the canyoneering, I may have to see if I can do more of it on this trip!
 
@@ -116,7 +116,7 @@ The following day I decided to continue on my adventure sports with some ATV'ing
 
 I had never done it before and was pleasantly surprised at how powerful the small things were.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/c03ilLE3asQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/c03ilLE3asQ" frameborder="0" allowfullscreen></iframe>
 
 We stopped after a few hours and took a break at a small river in the forest.
 
@@ -158,7 +158,7 @@ We had an awesome time though it made me yearn to do some harder rapids in the f
 
 During the ride we had an opportunity to 'ride the bow' which involves sitting on the front of the boat and hanging on for dear life as you sail down the river.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/JcBDXv_c43Q" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/JcBDXv_c43Q" frameborder="0" allowfullscreen></iframe>
 
 It was all good fun until Meike, a Dutch girl in our boat was thrown off and landed on her knee onto a rock.. ouch!
 
@@ -168,7 +168,7 @@ Halfway we stopped for some pineapple and a little cliff jumping.
 
 [![photo-103](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-103.jpg)](https://www.facebook.com/photo.php?fbid=10151802469871031&set=a.10151802457071031.1073741842.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/NYYERpgzSwM" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/NYYERpgzSwM" frameborder="0" allowfullscreen></iframe>
 
 After the rafting we headed to our final destination, the capital of Costa Rica, San Jose. There we spent one more night together as a group getting drunk in a local club.
 

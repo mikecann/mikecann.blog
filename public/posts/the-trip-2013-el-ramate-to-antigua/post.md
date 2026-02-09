@@ -82,7 +82,7 @@ This was exactly the perfect environment I needed to unwind after the previous m
 
 [![photo-62](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-622.jpg)](https://www.facebook.com/photo.php?fbid=10151773335966031&set=a.10151773308266031.1073741839.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/xNybI3rJdQU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/xNybI3rJdQU" frameborder="0" allowfullscreen></iframe>
 
 It even had a traditional Mayan sauna
 

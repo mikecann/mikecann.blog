@@ -37,11 +37,11 @@ We spent two days at the falls, first exploring the Brazilian side when we first
 
 Both sides were absolutely spectacular, the sheer volume of water that cascades from one section of it just boggles the mind..
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/SJFJw3-bdEU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/SJFJw3-bdEU" frameborder="0" allowfullscreen></iframe>
 
 On the second day we all hopped in a speedboat and headed up the river right into the maw of the falls itself
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/qA5xkfp9BCU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/qA5xkfp9BCU" frameborder="0" allowfullscreen></iframe>
 
 While we were there some of us took the opportunity to visit a bird sanctuary.
 

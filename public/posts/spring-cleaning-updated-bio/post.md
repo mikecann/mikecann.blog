@@ -12,6 +12,6 @@ I have been meaning to do this for a while, but never gotten round to it. Well m
 
 <!-- more -->
 
-Anyways I have finally given my bio on the [About](/posts/about-2/) page abit of a spit shine. I originally wrote it based on my CV a long time ago and thought it deserved a little bit of love considering that it gets quite a few hits. Its all written in the third person, im not entirely sure why I decided to do it like that originally, oh well.
+Anyways I have finally given my bio on the [About](/about) page abit of a spit shine. I originally wrote it based on my CV a long time ago and thought it deserved a little bit of love considering that it gets quite a few hits. Its all written in the third person, im not entirely sure why I decided to do it like that originally, oh well.
 
 I have also rearranged some of my earlier work so best to give the archive a more accurate timeline.

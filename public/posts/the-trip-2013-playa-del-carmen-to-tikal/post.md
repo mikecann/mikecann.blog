@@ -52,7 +52,7 @@ We spent the first evening there sampling the local food and drink.
 
 The following day we took a day tour out on a boat to explore the reef. On the way out we had a small bird problem.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/9871Yhj7IJc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/9871Yhj7IJc" frameborder="0" allowfullscreen></iframe>
 
 When in the water we saw all manner of things, from Manitee's..
 
@@ -64,7 +64,7 @@ When in the water we saw all manner of things, from Manitee's..
 
 [![photo-56](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-561.jpg)](https://www.facebook.com/photo.php?fbid=10151749153531031&set=a.10151749137826031.1073741838.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/gxK6e7IxdUM" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/gxK6e7IxdUM" frameborder="0" allowfullscreen></iframe>
 
 .. to fish on the reef
 
@@ -72,7 +72,7 @@ When in the water we saw all manner of things, from Manitee's..
 
 [![photo-53](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-531.jpg)](https://www.facebook.com/photo.php?fbid=10151749152891031&set=a.10151749137826031.1073741838.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/dx2RZ541pbI" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/dx2RZ541pbI" frameborder="0" allowfullscreen></iframe>
 
 The following day we had to say a font farewell to Belize and make our way into Guatemala. First up in this beautiful country was the stunning lost Mayan ruins of Tikal.
 
@@ -112,7 +112,7 @@ We also saw some not so cute creatures
 
 [![photo-100](https://www.mikecann.blog/wp-content/uploads/2013/07/photo-1001.jpg)](https://www.facebook.com/photo.php?fbid=10151749167091031&set=a.10151749137826031.1073741838.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/FQ10GIHtSMo" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/FQ10GIHtSMo" frameborder="0" allowfullscreen></iframe>
 
 I really enjoyed myself at Tikal, a truly magical place...
 

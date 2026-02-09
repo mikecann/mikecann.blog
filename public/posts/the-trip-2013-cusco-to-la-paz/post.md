@@ -76,7 +76,7 @@ Each day we woke early (5am) and the third day was no exception though the views
 
 [![photo-44](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-442.jpg)](https://www.facebook.com/photo.php?fbid=10152050824806031&set=a.10152050714101031.1073741854.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/0f1ecOExxvk" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/0f1ecOExxvk" frameborder="0" allowfullscreen></iframe>
 
 The third day was the best day on the trail in my opinion.
 
@@ -110,7 +110,7 @@ After a little while observing the incredible view we hiked down to the famous p
 
 [![photo-72](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-721.jpg)](https://www.facebook.com/photo.php?fbid=10152050773691031&set=a.10152050714101031.1073741854.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/P1vVggh4IWo" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/P1vVggh4IWo" frameborder="0" allowfullscreen></iframe>
 
 [![photo-76](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-761.jpg)](https://www.facebook.com/photo.php?fbid=10152050776051031&set=a.10152050714101031.1073741854.593661030&type=3&theater)
 
@@ -118,7 +118,7 @@ After several hours exploring the site then having dinner down in the valley we 
 
 [![photo-78](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-781.jpg)](https://www.facebook.com/photo.php?fbid=10152050776591031&set=a.10152050714101031.1073741854.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/LVA4KYRiDDU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/LVA4KYRiDDU" frameborder="0" allowfullscreen></iframe>
 
 Back in Cusco we had a day to enjoy the comforts of a warm bed and good food once more
 
@@ -200,7 +200,7 @@ The following day we caught a bus up to 4900m and hopped on bikes and rode the f
 
 The ride was one of the best things I have done on the entire trip, even the soaking rain thunder, mud and fog couldnt dampen the incredible thrill of racing down the mountain just meters from certain death.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/d3hjL3mr2Xk" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/d3hjL3mr2Xk" frameborder="0" allowfullscreen></iframe>
 
 [![OLYMPUS DIGITAL CAMERA](https://www.mikecann.blog/wp-content/uploads/2013/11/photo-138.jpg)](https://www.facebook.com/photo.php?fbid=10152050797121031&set=a.10152050714101031.1073741854.593661030&type=3&theater)
 

@@ -11,9 +11,9 @@ I just realised some of my old XNAGPUParticles project videos have gone walkies.
 <!-- more -->
 
 [https://www.mikecann.blog/?p=163](https://www.mikecann.blog/?p=163)
-httpvh://www.youtube.com/watch?v=vxrg1YavBIg
+httpvh:https://www.youtube.com/watch?v=vxrg1YavBIg
 [
 https://www.mikecann.blog/?p=169](https://www.mikecann.blog/?p=169)
-httpvh://www.youtube.com/watch?v=3wdIiCCAb9U
+httpvh:https://www.youtube.com/watch?v=3wdIiCCAb9U
 
 I have another reason for these old re-posts, something a little more flash orientated.. Stay tuned for more info ;)

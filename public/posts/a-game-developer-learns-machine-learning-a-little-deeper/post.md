@@ -456,7 +456,7 @@ First we set the brain to "External" mode, this means that the agent will no lon
 
 Now we just need to build our scene exe (also known as environment) and save it to the `/python/` directory.
 
-[![](./building-environment.png.png)](./building-environment.png)
+[![](./building-environment.png)](./building-environment.png)
 
 ## Configuring Hyperparameters
 

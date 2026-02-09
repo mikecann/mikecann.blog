@@ -12,7 +12,7 @@ So its almost a week on since the first build of Mr Nibbles Forever and a fair b
 
 I had a few people play the first Prototype last week and the overwhelming response was that it was too hard so the first thing I did this week was to make the game easier. So I slowed Mr Nibbles down and making the tilting of the device more responsive. Then I added a difficulty progression to the game. The longer you play it the harder the game gets. Check out the difficulty progression in the video below:
 
-<iframe width="854" height="510" src="//www.youtube.com/embed/-XXg4rYJfmA?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
+<iframe width="854" height="510" src="https://www.youtube.com/embed/-XXg4rYJfmA?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
 
 I achieved the difficulty change by ranking each chunk by difficulty then selecting an appropriate one randomly as the player moves along.
 
@@ -26,7 +26,7 @@ I worried about this for a little while as I wasnt sure how to get the three the
 
 Because the game now features three distinct themes I needed to upgrade my chunk building tools to accommodate the different tiling requirements for each theme:
 
-<iframe width="854" height="510" src="//www.youtube.com/embed/kI3iLU1oRgE?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
+<iframe width="854" height="510" src="https://www.youtube.com/embed/kI3iLU1oRgE?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
 
 Building tilesets is now a breeze thanks to custom inspectors and other editor tools.
 

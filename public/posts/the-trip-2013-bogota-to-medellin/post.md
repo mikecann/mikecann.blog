@@ -92,7 +92,7 @@ It was the festival of flowers all week in Medellin which meant flowers, parties
 
 [![photo-64](https://www.mikecann.blog/wp-content/uploads/2013/09/photo-64.jpg)](https://www.facebook.com/photo.php?fbid=10151848409546031&set=a.10151848321426031.1073741845.593661030&type=3&theater)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/H9UbJuxI6NU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/H9UbJuxI6NU" frameborder="0" allowfullscreen></iframe>
 
 I saw yet another person who must have trouble seeing the screen on their tablet.
 

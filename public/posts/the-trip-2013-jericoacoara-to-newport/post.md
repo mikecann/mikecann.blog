@@ -54,13 +54,13 @@ We didn't really know the way to go but we needn't have feared as there were hug
 
 Wow, it was sheer madness down there. 2.5 million+ people all in one place at once is quite a sight
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/pEdOhA2XHXc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/pEdOhA2XHXc" frameborder="0" allowfullscreen></iframe>
 
 It took us far longer than expected to push through the throngs of people crowding the beachfront. We reached Lucas' shop / bar where we were meeting him and Elisa just in time to grab a bottle and head down to the beach for the countdown
 
 [![photo-12](https://www.mikecann.blog/wp-content/uploads/2014/01/photo-121.jpg)](https://www.facebook.com/photo.php?fbid=10152177820466031&set=a.10152177819916031.1073741862.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/mplQ0x-z5eU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/mplQ0x-z5eU" frameborder="0" allowfullscreen></iframe>
 
 Then the sky tore asunder with the most impressive fireworks display I have ever seen
 

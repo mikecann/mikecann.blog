@@ -22,7 +22,7 @@ The solution is to upload the image bytes to Tumblr directly so that Tumblr does
 
 An idea came to me the other day however, why not just cache that image on my server temporarily then provide a URL that tumblr can definitely access and use to download the image. Well after an hour or two of hacking I have it working!
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/Fpn6MVzjqss?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Fpn6MVzjqss?list=UU9-RJld8R0v5ywwBT8csdZA" frameborder="0" allowfullscreen></iframe>
 
 Images are cached on my Parse.com backend and will be deleted after a certain period of time.
 

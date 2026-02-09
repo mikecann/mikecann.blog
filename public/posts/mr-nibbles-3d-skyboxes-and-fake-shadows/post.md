@@ -17,7 +17,7 @@ After that [short interlude](https://www.mikecann.blog/myprojects/unityasteroids
 
 I decided to experiment with Skyboxes. I have never worked with them in Unity so I didn't know how hard they would be to get working. I shouldn't have been worried, as with most thing in Unity, it was a piece of cake. Unity even ships with some default Skyboxes so I chucked one of those in.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/oHtBht-4xpQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/oHtBht-4xpQ" frameborder="0" allowfullscreen></iframe>
 
 In the above video I also demonstrate another thing I worked on, shadows. Unfortunately realtime shadows are a Unity Pro feature which I currently don't own so I decided to have a go at faking shadows.
 

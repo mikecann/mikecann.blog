@@ -18,7 +18,7 @@ oldUrl: /chrome-crawler/chrome-crawler-a-web-crawler-written-in-javascript
 
 [![](https://www.mikecann.blog/wp-content/uploads/2010/12/700.jpg "700")](https://www.mikecann.blog/wp-content/uploads/2010/12/700.jpg)
 
-**EDIT: I now have a newer, better version of this called "[Recursive](/posts/recursive/)"**
+**EDIT: I now have a newer, better version of this called "[Recursive](/posts/recursive-explore-the-endless-web)"**
 
 Depending on your level of geekness you may or may not enjoy this one.
 

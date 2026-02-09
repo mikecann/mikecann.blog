@@ -15,7 +15,7 @@ Well I have been back for over 3 weeks now but only just got round to uploading 
 
 This was the rough journey we took:
 
-<iframe src="https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kCEeJQ21ypI8" width="640" height="480"></iframe>
+*[Interactive map no longer available - Google Maps Engine was discontinued]*
 
 From Bunbury to Broome was 4 days in a car with Kelsie and her parents. We stopped off at a few beautiful spots along the way:
 
@@ -23,7 +23,7 @@ From Bunbury to Broome was 4 days in a car with Kelsie and her parents. We stopp
 
 [![photo-4](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-4-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-4.jpg)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/xIWDnoPbP0M" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/xIWDnoPbP0M" frameborder="0" allowfullscreen></iframe>
 
 [![photo-5](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-5-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-5.jpg)
 
@@ -35,7 +35,7 @@ From Bunbury to Broome was 4 days in a car with Kelsie and her parents. We stopp
 
 [![photo-24](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-24-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-24.jpg)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/aXWZclVWrdE" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/aXWZclVWrdE" frameborder="0" allowfullscreen></iframe>
 
 [![photo-25](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-25-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-25.jpg)
 
@@ -67,7 +67,7 @@ After a few days we were off again, this time two cars; Kelsie, Myself, Trent an
 
 [![photo-66](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-66-1024x682.jpg)](https://www.mikecann.blog/wp-content/uploads/2014/08/photo-66.jpg)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/MVq6WYZe9iM" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/MVq6WYZe9iM" frameborder="0" allowfullscreen></iframe>
 
 Once at Kununurra we had a few days to explore the spectacular landscape:
 

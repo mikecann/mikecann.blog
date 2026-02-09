@@ -8,9 +8,9 @@ title: The Trip 2013 - The Stats
 oldUrl: /2013-trip/the-trip-2013-the-stats
 ---
 
-[![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2014/01/screenshot_02.png)](https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E)
+![screenshot_02](https://www.mikecann.blog/wp-content/uploads/2014/01/screenshot_02.png)
 
-**[ Click](https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E) the image above to browse the map interactively.**
+*[Interactive map no longer available - Google Maps Engine was discontinued]*
 
 Well thats it. Im back now from a trip of a lifetime. I had such an incredible time, saw so many phenomenal things and met so many awesome people. This will be my last post on my trip and as such I would like to wrap it up with some highlights and accompanying stats.
 
@@ -162,7 +162,7 @@ I did as much as I can. Before I went out I told myself not to skimp on activiti
 
 ![](https://www.mikecann.blog/wp-content/uploads/2013/09/photo-772.jpg)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/p3gaQBr1FAs" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/p3gaQBr1FAs" frameborder="0" allowfullscreen></iframe>
 
 All of these activities came at a cost however..
 

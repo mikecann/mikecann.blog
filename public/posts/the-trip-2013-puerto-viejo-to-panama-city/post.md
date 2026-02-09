@@ -67,13 +67,13 @@ I walked with them for a little while before I took off, agreeing to meet up aga
 
 I saw some more interesting things on my travels including an interesting local festival..
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/8QK5GR2QCjQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/8QK5GR2QCjQ" frameborder="0" allowfullscreen></iframe>
 
 .. and some rather cute but dirty animals
 
 [![photo-21](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-215.jpg)](https://www.facebook.com/photo.php?fbid=10151829741246031&set=a.10151829727316031.1073741844.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/HpyVZ2r0e-E" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/HpyVZ2r0e-E" frameborder="0" allowfullscreen></iframe>
 
 Panama City old town is quite a dichotomy. On the one hand you have alot of money being poured into renovating the area as is evident by all the construction works and by fancy boutique hotels and restaurants popping up everywhere. But at the same time there are some incredibly poor areas just a stones throw away.
 
@@ -91,7 +91,7 @@ The next day I met up with another person from my last tour, Meike who just so h
 
 [![photo-27](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-273.jpg)](https://www.facebook.com/photo.php?fbid=10151829747501031&set=a.10151829727316031.1073741844.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/VF2qfg0AWmc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/VF2qfg0AWmc" frameborder="0" allowfullscreen></iframe>
 
 There were a great many tourists there, including one lady that must surely have difficulty looking at her tablet
 
@@ -131,7 +131,7 @@ This place was stunning. We stayed on a place called Franklin's island, a tiny s
 
 [![photo-60](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-602.jpg)](https://www.facebook.com/photo.php?fbid=10151829762916031&set=a.10151829727316031.1073741844.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/vi6hXpwHxPw" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/vi6hXpwHxPw" frameborder="0" allowfullscreen></iframe>
 
 It was an incredible place
 
@@ -172,7 +172,7 @@ We also visited a raised area of sand that was home to a number of starfish.
 
 [![photo-69](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-692.jpg)](https://www.facebook.com/photo.php?fbid=10151829765081031&set=a.10151829727316031.1073741844.593661030&type=3&theater)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/75fzj_4Xmcc" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/75fzj_4Xmcc" frameborder="0" allowfullscreen></iframe>
 
 [![photo-72](https://www.mikecann.blog/wp-content/uploads/2013/08/photo-722.jpg)](https://www.facebook.com/photo.php?fbid=10151829765881031&set=a.10151829727316031.1073741844.593661030&type=3&theater)
 

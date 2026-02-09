@@ -20,7 +20,7 @@ Firstly i assume you have downloaded and installed Flash Develop successfully (i
 
 Next lets setup a project to work in:
 
-![](../../../../../flash/GameJacketTutorial/01.png)
+![](./01.png)
 
 Now we have our project setup lets add a little code into the in our Main.as which will represent our game:
 
@@ -62,7 +62,7 @@ Try running this now, as you should expect there is our "game" up and running.
 
 The next step is to add the GameJacket security code. To do this lets add a new class to the project and call it GJCheck.as:
 
-![](../../../../../flash/GameJacketTutorial/02.png)
+![](./02.png)
 
 Now we are going to fill this with the same code as there is in the "main.as" of the AS3 folder of the GameJacket Developer Pack:</span>
 
@@ -150,7 +150,7 @@ addChild(tf);
 
 Now this is in we need to make sure that this is our new "document" class for the game, to do this in FlashDevelop right-click GJCheck.as and select always compile:
 
-![](../../../../../flash/GameJacketTutorial/03.png)
+![](./03.png)
 
 Now you can test run your game again and unsurprisingly you should be presented with "An error has occured please contact: [you@webmaster.com](mailto:you@webmaster.com)", this is because your game hasnt been uploaded to the GameJacket website yet and hasnt been approved.
 
@@ -188,7 +188,7 @@ addChild(new Preloader());
 
 To do this we need to change add some additional compiler options to the flex compile line. To do this right click the project in the project explorer and select properties then go to the compiler options tab and enter "-frame two Main" in the Additional Compiler Options box:
 
-![](../../../../../flash/GameJacketTutorial/04.png)
+![](./04.png)
 
 Now our preloader should be loaded by flash first and then the game second.
 
@@ -196,8 +196,8 @@ Next we just have to flesh out the preloader, i have omitted the code here but y
 
 And thats all there is to it, you can now test out your game, if you do test it locally you probablly wont see any loading progress as it loads too fast, but if you upload it to the web somewhere you will see the loading percent tick up and then finally you will be presented with a start button to start the game!
 
-![](../../../../../flash/GameJacketTutorial/05.png)
+![](./05.png)
 
 **!!DONT FORGET!!** Dont forget to remove the "securityOK(null);" in the GJCheck constructor before you try to upload to GameJacket or else you will pass the security check every time when you are supposed to fail.
 
-Download project source code: [https://www.mikecann.blog/flash/GameJacketTutorial/GameJacketProject.zip](../../../../../flash/GameJacketTutorial/GameJacketProject.zip)</span>
+Download project source code: [https://www.mikecann.blog/flash/GameJacketTutorial/GameJacketProject.zip](./GameJacketProject.zip)</span>

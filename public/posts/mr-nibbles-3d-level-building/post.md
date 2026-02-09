@@ -16,7 +16,7 @@ Representing the levels as a bitmap image meant that Photoshop became my level e
 
 Obviously that scheme wont work for 3D so I started thinking about how to build levels in the editor. If you have used Unity before you will know that in addition to the actual editor they run a website called the Asset Store where users can submit tools and assets that others can use in their project. It was on there that I came across the [Tidy Tile Mapper](https://www.assetstore.unity3d.com/en/#!/content/2648):
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/Oh1AH9N1-9E" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Oh1AH9N1-9E" frameborder="0" allowfullscreen></iframe>
 
 It looked exactly what I wanted. So I bought it and started using it to build the first few levels you see in the video at the start of this post. It was while I was using it that I discovered problems in the way it works.
 
@@ -24,7 +24,7 @@ Firstly its slow to use both from a performance perspective and from a usability
 
 In short I decided I could do better:
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/QHCb9V0qrow" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/QHCb9V0qrow" frameborder="0" allowfullscreen></iframe>
 
 Its only a few hours work at this point and doesn't have all the features of the Tidy Tile Mapper but it has enough for me to get building my levels quickly. It works by having a "working axis" that you can paint blocks to or remove blocks from. All blocks are added as a child of a "blockmap" which efficiently stores the blocks in dictionaries for very fast lookups.
 

@@ -27,10 +27,10 @@ My proposal was predictably related to technology and games. I suggested that mo
 
 During the early part of my trip I received an email announcing that I was short listed and invited to attend the meetings in Salford. Unfortunately because I was in North Carolina at the time I couldnt attend physically, instead they asked me to attend via Skype and create a video which details my proposal in more detail:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/xZM7soA5dls" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/xZM7soA5dls" frameborder="0" allowfullscreen></iframe>
 
 As a follow up, I was asked to create another video that answered some questions:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/KgBnEq7FV5Q" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/KgBnEq7FV5Q" frameborder="0" allowfullscreen></iframe>
 
 The leaders of the competition now have the option to select mine or one of the other proposals to take further and potentially develop it into an actual scheme.
