@@ -1,21 +1,19 @@
 import { v } from "convex/values";
-import { mutation } from "./_generated/server";
-import { query } from "./_generated/server";
+import { convex } from "./builder";
 
-export const createAnonymousUser = mutation({
-  args: {},
-  handler: async (ctx) => {
+export const createAnonymousUser = convex
+  .mutation()
+  .handler(async (ctx) => {
     return ctx.db.insert("users", {
       kind: "anonymous",
     });
-  },
-});
+  })
+  .public();
 
-export const findUser = query({
-  args: {
-    id: v.id("users"),
-  },
-  handler: async (ctx, { id }) => {
+export const findUser = convex
+  .query()
+  .input({ id: v.id("users") })
+  .handler(async (ctx, { id }) => {
     return ctx.db.get(id);
-  },
-});
+  })
+  .public();

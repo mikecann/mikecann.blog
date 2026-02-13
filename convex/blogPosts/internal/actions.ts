@@ -1,14 +1,17 @@
-import { internalAction, ActionCtx } from "../../_generated/server";
 import { v } from "convex/values";
 import { rag, RAG_NAMESPACE } from "../lib";
 import { BlogPostMatch } from "./queries";
+import { convex } from "../../builder";
+import type { GenericActionCtx } from "convex/server";
+import type { DataModel } from "../../_generated/dataModel";
 
-export const ragSearchBlogPosts = internalAction({
-  args: {
+export const ragSearchBlogPosts = convex
+  .action()
+  .input({
     query: v.string(),
-  },
-  handler: async (ctx: ActionCtx, args): Promise<BlogPostMatch[]> => {
-    const ragResults = await rag.search(ctx, {
+  })
+  .handler(async (ctx, args): Promise<BlogPostMatch[]> => {
+    const ragResults = await rag.search(ctx as GenericActionCtx<DataModel>, {
       namespace: RAG_NAMESPACE,
       query: args.query,
       vectorScoreThreshold: 0.3,
@@ -30,5 +33,5 @@ export const ragSearchBlogPosts = internalAction({
       chunkContent: e.text,
       relevanceScore: ragSlugs.find((r) => r.slug == e.key)?.score ?? 0,
     }));
-  },
-});
+  })
+  .internal();

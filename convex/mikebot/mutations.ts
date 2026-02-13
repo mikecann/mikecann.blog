@@ -1,26 +1,28 @@
 import { v } from "convex/values";
-import { mutation } from "../_generated/server";
 import { validateUserExists, getAndValidateThread, mikebot } from "./lib";
 import { internal } from "../_generated/api";
+import { convex } from "../builder";
 
-export const createThreadForUser = mutation({
-  args: {
+export const createThreadForUser = convex
+  .mutation()
+  .input({
     userId: v.id("users"),
-  },
-  handler: async (ctx, args) => {
+  })
+  .handler(async (ctx, args) => {
     await validateUserExists(ctx.db, { userId: args.userId });
     const thread = await mikebot.createThread(ctx, { userId: args.userId });
     return thread.threadId;
-  },
-});
+  })
+  .public();
 
-export const sendMessageToThreadFromUser = mutation({
-  args: {
+export const sendMessageToThreadFromUser = convex
+  .mutation()
+  .input({
     message: v.string(),
     threadId: v.string(),
     userId: v.id("users"),
-  },
-  handler: async (ctx, args) => {
+  })
+  .handler(async (ctx, args) => {
     // Make sure the user can send a message to this thread
     await getAndValidateThread(ctx, { threadId: args.threadId, userId: args.userId });
 
@@ -40,5 +42,5 @@ export const sendMessageToThreadFromUser = mutation({
       threadId: args.threadId,
       promptMessageId: messageId,
     });
-  },
-});
+  })
+  .public();

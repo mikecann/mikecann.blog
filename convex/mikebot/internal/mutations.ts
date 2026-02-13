@@ -1,13 +1,14 @@
 import { v } from "convex/values";
 import { internal } from "../../_generated/api";
-import { internalMutation, MutationCtx } from "../../_generated/server";
 import { hoursInMs } from "../../../essentials/misc/time";
+import { convex } from "../../builder";
 
-export const scheduleThreadUpdatedNotification = internalMutation({
-  args: {
+export const scheduleThreadUpdatedNotification = convex
+  .mutation()
+  .input({
     threadId: v.string(),
-  },
-  handler: async (ctx: MutationCtx, args) => {
+  })
+  .handler(async (ctx, args) => {
     const notification = await ctx.db
       .query("pendingThreadUpdateNotifications")
       .withIndex("by_threadId", (q) => q.eq("threadId", args.threadId))
@@ -23,14 +24,15 @@ export const scheduleThreadUpdatedNotification = internalMutation({
         { threadId: args.threadId },
       ),
     });
-  },
-});
+  })
+  .internal();
 
-export const deletePendingThreadUpdateNotification = internalMutation({
-  args: {
+export const deletePendingThreadUpdateNotification = convex
+  .mutation()
+  .input({
     threadId: v.string(),
-  },
-  handler: async (ctx, args) => {
+  })
+  .handler(async (ctx, args) => {
     const notification = await ctx.db
       .query("pendingThreadUpdateNotifications")
       .withIndex("by_threadId", (q) => q.eq("threadId", args.threadId))
@@ -42,5 +44,5 @@ export const deletePendingThreadUpdateNotification = internalMutation({
       ctx.scheduler.cancel(notification.scheduledFunctionId),
       ctx.db.delete(notification._id),
     ]);
-  },
-});
+  })
+  .internal();

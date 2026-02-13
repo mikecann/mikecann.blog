@@ -1,20 +1,25 @@
 import { v } from "convex/values";
-import { adminQuery, rag } from "../lib";
+import { rag, validateBlogPostAdminToken } from "../lib";
 import { EntryId } from "../../../node_modules/@convex-dev/rag/src/client/index";
 import { isNotNullOrUndefined } from "../../../essentials/misc/filter";
+import { convex } from "../../builder";
 
 export type SlugId = string;
 
-export const listPostsThatNeedProcessing = adminQuery({
-  args: {
+export const listPostsThatNeedProcessing = convex
+  .query()
+  .input({
+    token: v.string(),
     posts: v.array(
       v.object({
         slug: v.string(),
         hash: v.string(),
       }),
     ),
-  },
-  handler: async (ctx, { posts }): Promise<SlugId[]> => {
+  })
+  .handler(async (ctx, { token, posts }): Promise<SlugId[]> => {
+    validateBlogPostAdminToken(token);
+
     const results = await Promise.all(
       posts.map(async ({ slug, hash }) => {
         const existing = await ctx.db
@@ -38,5 +43,5 @@ export const listPostsThatNeedProcessing = adminQuery({
 
     const out = results.filter(isNotNullOrUndefined);
     return out;
-  },
-});
+  })
+  .public();

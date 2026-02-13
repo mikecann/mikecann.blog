@@ -1,5 +1,5 @@
 import { v } from "convex/values";
-import { internalQuery, query, QueryCtx } from "../../_generated/server";
+import { convex } from "../../builder";
 
 export interface BlogPostMatch {
   blogPost: {
@@ -11,12 +11,13 @@ export interface BlogPostMatch {
   relevanceScore: number;
 }
 
-export const findBlogPostBySlug = internalQuery({
-  args: { slug: v.string() },
-  handler: async (ctx, { slug }) => {
+export const findBlogPostBySlug = convex
+  .query()
+  .input({ slug: v.string() })
+  .handler(async (ctx, { slug }) => {
     return await ctx.db
       .query("blogPosts")
       .withIndex("by_slug", (q) => q.eq("slug", slug))
       .first();
-  },
-});
+  })
+  .internal();

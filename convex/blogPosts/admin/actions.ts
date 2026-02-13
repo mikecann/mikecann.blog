@@ -1,25 +1,30 @@
 import { v } from "convex/values";
 import { internal } from "../../_generated/api";
-import { adminAction, rag, RAG_NAMESPACE } from "../lib";
+import { rag, RAG_NAMESPACE, validateBlogPostAdminToken } from "../lib";
+import { convex } from "../../builder";
 
-export const upsert = adminAction({
-  args: {
+export const upsert = convex
+  .action()
+  .input({
+    token: v.string(),
     content: v.string(),
     slug: v.string(),
     title: v.string(),
     hash: v.string(),
-  },
-  handler: async (ctx, args) => {
+  })
+  .handler(async (ctx, { token, content, slug, title, hash }) => {
+    validateBlogPostAdminToken(token);
+
     const { entryId } = await rag.add(ctx, {
-      title: args.title,
-      key: args.slug,
-      contentHash: args.hash,
-      text: args.content,
+      title,
+      key: slug,
+      contentHash: hash,
+      text: content,
       namespace: RAG_NAMESPACE,
     });
 
     const post = await ctx.runQuery(internal.blogPosts.internal.queries.findBlogPostBySlug, {
-      slug: args.slug,
+      slug,
     });
 
     if (post) {
@@ -33,10 +38,10 @@ export const upsert = adminAction({
     }
 
     await ctx.runMutation(internal.blogPosts.internal.mutations.createBlogPost, {
-      slug: args.slug,
-      title: args.title,
-      hash: args.hash,
+      slug,
+      title,
+      hash,
       ragEntryId: entryId,
     });
-  },
-});
+  })
+  .public();

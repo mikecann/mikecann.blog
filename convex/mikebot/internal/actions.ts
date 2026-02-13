@@ -1,14 +1,15 @@
 import { v } from "convex/values";
-import { internalAction } from "../../_generated/server";
 import { Resend } from "resend";
 import { ensure } from "../../../essentials/misc/ensure";
 import { components } from "../../_generated/api";
 import { sumNumbers } from "../../../essentials/misc/array";
 import { mikebot } from "../lib";
+import { convex } from "../../builder";
 
-export const streamStory = internalAction({
-  args: { promptMessageId: v.string(), threadId: v.string() },
-  handler: async (ctx, { promptMessageId, threadId }) => {
+export const streamStory = convex
+  .action()
+  .input({ promptMessageId: v.string(), threadId: v.string() })
+  .handler(async (ctx, { promptMessageId, threadId }) => {
     // Generate the embeddings for the message from the user, this shouldnt be
     // needed in the future
     await mikebot.generateAndSaveEmbeddings(ctx, {
@@ -29,14 +30,15 @@ export const streamStory = internalAction({
     );
 
     await result.consumeStream();
-  },
-});
+  })
+  .internal();
 
-export const sendThreadUpdatedNotification = internalAction({
-  args: {
+export const sendThreadUpdatedNotification = convex
+  .action()
+  .input({
     threadId: v.string(),
-  },
-  handler: async (ctx, args) => {
+  })
+  .handler(async (ctx, args) => {
     const resend = new Resend(ensure(process.env.RESEND_API_KEY, "RESEND_API_KEY is not set"));
 
     const result = await ctx.runQuery(components.agent.messages.listMessagesByThreadId, {
@@ -95,5 +97,5 @@ export const sendThreadUpdatedNotification = internalAction({
     });
 
     return "sent";
-  },
-});
+  })
+  .internal();
