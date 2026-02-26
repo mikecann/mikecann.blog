@@ -117,7 +117,7 @@ function fixDefunctPicasaLinks(slug: string, raw: string): string {
   return result;
 }
 
-// ─── Fix 4: Specific broken image/link fixes ──────────────────────────────────
+// ─── Fix 4: Specific broken image/link fixes ───────────────────────────────────
 
 function fixSpecificPosts(slug: string, raw: string): string {
   let result = raw;

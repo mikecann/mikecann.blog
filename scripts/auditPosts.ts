@@ -59,6 +59,7 @@ const CONCURRENCY = 30; // max concurrent HTTP requests
 const HTTP_TIMEOUT = 8_000; // 8 seconds
 const RETRY_COUNT = 1;
 const RETRY_DELAY = 500;
+const SHOPIFY_DELAY_MS = 500; // delay between Shopify CDN checks to avoid rate limiting
 
 const postsDirectory = join(process.cwd(), "public/posts");
 const publicDirectory = join(process.cwd(), "public");
@@ -651,28 +652,40 @@ async function main() {
     }
   }
 
-  console.log(`\nPhase 2: Checking ${uniqueUrls.size} unique external URLs (concurrency: ${CONCURRENCY})...\n`);
-
-  // ── Phase 3: Check all external URLs concurrently ─────────────────────────
-
   const urlList = Array.from(uniqueUrls.keys());
+  const shopifyUrls = urlList.filter((u) => getDomain(u) === "cdn.shopify.com");
+  const otherUrls = urlList.filter((u) => getDomain(u) !== "cdn.shopify.com");
+
+  console.log(
+    `\nPhase 2: Checking ${urlList.length} unique external URLs (${otherUrls.length} normal, ${shopifyUrls.length} Shopify with rate limit)...\n`
+  );
+
+  // ── Phase 3: Check all external URLs ─────────────────────────────────────
+  // Shopify URLs: check one at a time with delay to avoid rate limiting
+  // Other URLs: check with full concurrency
+
   let checked = 0;
   let deadCount = 0;
 
-  await pMap(
-    urlList,
-    async (url) => {
-      const result = await checkUrl(url);
-      checked++;
-      if (!result.ok) {
-        deadCount++;
-      }
-      if (checked % 50 === 0 || checked === urlList.length) {
-        console.log(`  Checked ${checked}/${urlList.length} URLs (${deadCount} dead so far)`);
-      }
-    },
-    CONCURRENCY
-  );
+  const processOne = async (url: string) => {
+    const result = await checkUrl(url);
+    checked++;
+    if (!result.ok) {
+      deadCount++;
+    }
+    if (checked % 50 === 0 || checked === urlList.length) {
+      console.log(`  Checked ${checked}/${urlList.length} URLs (${deadCount} dead so far)`);
+    }
+  };
+
+  // Shopify: sequential with delay between each
+  for (const url of shopifyUrls) {
+    await sleep(SHOPIFY_DELAY_MS);
+    await processOne(url);
+  }
+
+  // Others: concurrent
+  await pMap(otherUrls, processOne, CONCURRENCY);
 
   console.log(`\n  Done! ${deadCount} dead URLs out of ${urlList.length} checked.\n`);
 
