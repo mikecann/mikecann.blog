@@ -8,7 +8,7 @@ oldUrl: /c/xnagpuparticles-1000000-dynamic-particles
 
 *[Image no longer available]*This is another submission of work i have done in my final year. This time the project is all my own work.
 
-The project is a continuation based on [work from before Christmas](https://www.mikecann.blog/?p=148) and is an experiment into state preserving particle systems. I started out with examining the basic particle systems such as a static system and one that updates on the CPU. I then moved onto more advanced systems such as the GPU based system described by [Lance Latta](https://www.2ld.de/gdc2004/) and others. I soon discovered however that XNA doesn't support "uber buffers" and as such had to invent a new solution using vertex textures. The result is a particle system written in XNA that is able to update and render 1,000,000 particles at about 22 frames a second with 4 forces.
+The project is a continuation based on work from before Christmas and is an experiment into state preserving particle systems. I started out with examining the basic particle systems such as a static system and one that updates on the CPU. I then moved onto more advanced systems such as the GPU based system described by [Lance Latta](https://www.2ld.de/gdc2004/) and others. I soon discovered however that XNA doesn't support "uber buffers" and as such had to invent a new solution using vertex textures. The result is a particle system written in XNA that is able to update and render 1,000,000 particles at about 22 frames a second with 4 forces.
 
 <!-- more -->
 

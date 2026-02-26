@@ -29,7 +29,7 @@ In the last post I covered how to use Parse.com in Unity itself, in this post I 
 
 ## Environment
 
-I briefly talked about App structure in [my first post](https://www.mikecann.blog/?p=5435). I like to use use Visual Studio with Typescript and C# for my Backend as they all play nicely together an produce a hassle free way of coding up the backend.
+I briefly talked about App structure in my first post. I like to use use Visual Studio with Typescript and C# for my Backend as they all play nicely together an produce a hassle free way of coding up the backend.
 
 I like to have the Parse command line app running in develop mode (parse develop "Parse Unity Sample") at the same time so I can see whats happening on the server when I call it, and it allows for very quick iterations:
 

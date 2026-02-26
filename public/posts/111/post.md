@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-06-20T13:25:40.000Z'
 tags: []
 title: Particle Explosion

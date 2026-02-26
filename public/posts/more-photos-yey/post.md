@@ -6,7 +6,7 @@ title: 'More photos, yey!'
 oldUrl: /photos-personal/more-photos-yey
 ---
 
-Got a new phone the other day, so had to back up all my photos before i switched phones, so i have now uploaded all those photos to my website. You can find the photos by using the link at the top or clicking [here](https://www.mikecann.blog/?p=139).
+Got a new phone the other day, so had to back up all my photos before i switched phones, so i have now uploaded all those photos to my website. You can find the photos by using the link at the top or clicking here.
 
 <!-- more -->
 

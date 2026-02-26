@@ -6,7 +6,7 @@ title: Particle Playground v1.0.3
 oldUrl: /actionscript/particle-playground-v103
 ---
 
-I made some small [heavily requested](https://www.newgrounds.com/portal/reviews/487541) updates to [Particle Playground](https://www.mikecann.blog/?p=384) last night, control C, control V log:
+I made some small [heavily requested](https://www.newgrounds.com/portal/reviews/487541) updates to Particle Playground last night, control C, control V log:
 
 <!-- more -->
 

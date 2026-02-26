@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-08-29T14:59:23.000Z'
 tags: []
 title: '1,000,000 Views!!'

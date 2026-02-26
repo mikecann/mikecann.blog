@@ -6,7 +6,7 @@ title: Particle Playground v1.0.4
 oldUrl: /misc/particle-playground-v104
 ---
 
-I have made a few small changes to [Particle Playground](https://www.mikecann.blog/?p=384) today:
+I have made a few small changes to Particle Playground today:
 
 <!-- more -->
 

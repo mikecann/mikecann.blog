@@ -6,7 +6,7 @@ title: XNALiquids 01
 oldUrl: /c/xnaliquids-01
 ---
 
-Well after seeing what [Polluted Planet](https://www.mikecann.blog/?p=226) did with large numbers of interactive particles in java, it got me interested.
+Well after seeing what Polluted Planet did with large numbers of interactive particles in java, it got me interested.
 
 So i have decided to have a go at implementing it myself in XNA.
 

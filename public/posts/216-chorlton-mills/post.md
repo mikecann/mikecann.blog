@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-03-28T11:59:37.000Z'
 tags: []
 title: 216 Chorlton Mills..

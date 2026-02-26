@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-11T13:47:25.000Z'
 tags: []
 title: A Quick preview of whats to come

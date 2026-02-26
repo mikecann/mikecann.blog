@@ -18,6 +18,7 @@
 import fs from "fs";
 import { join, dirname } from "path";
 import matter from "gray-matter";
+import sharp from "sharp";
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
@@ -141,7 +142,10 @@ async function processPost(slug: string, apiKey: string): Promise<void> {
   console.log(`  [Style ${style.key}] ${title}`);
   console.log(`  Prompt: ${prompt.substring(0, 120)}...`);
 
-  const imgBuffer = await generateImage(prompt, apiKey);
+  const rawBuffer = await generateImage(prompt, apiKey);
+
+  // Convert whatever Gemini returns (usually JPEG) to proper WebP
+  const imgBuffer = await sharp(rawBuffer).webp({ quality: 82 }).toBuffer();
 
   const outPath = join(POSTS_DIR, slug, "header.webp");
   fs.writeFileSync(outPath, imgBuffer);

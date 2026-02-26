@@ -6,7 +6,7 @@ title: New project started! TowerDefence
 oldUrl: /c/new-project-started-towerdefence
 ---
 
-I always need something to be working on in my free time. All this year it has been my [University](https://www.mikecann.blog/?p=163) [projects](https://www.mikecann.blog/?p=168) [that](https://www.mikecann.blog/?p=162) have been keeping me busy. But now all i have left is one exam I have been seeking a new project that I can undertake.
+I always need something to be working on in my free time. All this year it has been my University projects that have been keeping me busy. But now all i have left is one exam I have been seeking a new project that I can undertake.
 
 <!-- more -->
 

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-04-30T19:49:06.000Z'
 tags: []
 title: All-new look

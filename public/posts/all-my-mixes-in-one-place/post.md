@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2014-01-30T12:38:42.000Z'
 tags:
   - mixes

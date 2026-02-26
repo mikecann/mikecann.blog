@@ -6,7 +6,7 @@ title: Project Technology (Deformable Terrains)
 oldUrl: /c/project-technology-deformable-terrains
 ---
 
-Well i got asked a question [in a comment](https://www.mikecann.blog/?p=208#comment-1333) on how the terrains work in the LieroXNA project so I thought i would do a quick post on this rather than reply in the comments.
+Well i got asked a question in a comment on how the terrains work in the LieroXNA project so I thought i would do a quick post on this rather than reply in the comments.
 
 The way the terrains work has changed a few times over the course of development of the project for various reasons mostly related to the incompatabilities of the 360 and my previous methods. I wont go into those previous methods here but if anyone reading this has any questions dont hesitate to ask in a comment or email me. I would also like to say this may not be the most efficient method as I was only getting the terrains up as a proof of concept first then was planning on refining later.
 

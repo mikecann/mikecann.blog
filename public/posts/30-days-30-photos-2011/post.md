@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2011-06-30T18:13:08.000Z'
 tags:
   - camera

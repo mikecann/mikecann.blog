@@ -17,7 +17,7 @@ oldUrl: /programming/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-o
 
 [![screenshot_05](/wp-content/uploads/2012/12/screenshot_05.png)](/posts/recursive-nuts-bolts-part-2-crawling-the-world-wide-web-2-of-3/attachment/screenshot_05-5/)
 
-**This is part two of my three part series on the internals of Recursive, an extension for Google Chrome. In the [first post](/posts/?p=2287) I laid the groundwork for the contents of this and the next post. In this post i'm going to talk a little about what Recursive does internally once given  a URL.**
+**This is part two of my three part series on the internals of Recursive, an extension for Google Chrome. In the first post I laid the groundwork for the contents of this and the next post. In this post i'm going to talk a little about what Recursive does internally once given  a URL.**
 
 ### Chrome Crawler
 

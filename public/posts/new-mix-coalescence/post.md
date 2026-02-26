@@ -13,7 +13,7 @@ oldUrl: /personal-mixes/new-mix-coalescence
 
 [![artificialcoalcover](/wp-content/uploads/2009/07/artificialcoalcover.png "artificialcoalcover")](/wp-content/uploads/2009/07/artificialcoalcover.png)
 
-Wow! Well this one was a hell of alot easier to make than [the last one](https://www.mikecann.blog/?p=582).
+Wow! Well this one was a hell of alot easier to make than the last one.
 
 <!-- more -->
 

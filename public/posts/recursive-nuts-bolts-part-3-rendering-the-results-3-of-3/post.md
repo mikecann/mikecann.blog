@@ -19,7 +19,7 @@ oldUrl: /programming/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3
 
 [![screenshot_01](/wp-content/uploads/2012/12/screenshot_01.png)](/posts/recursive-nuts-bolts-part-3-rendering-the-results-3-of-3/attachment/screenshot_01-7/)
 
-**This is part two of my three part series on the internals of Recursive, an extension for Chrome. In the [first post](/posts/?p=2287) I talked about the general structure of Recursive and some of the lessons I learnt from dealing with Typescript. In the [second post](/posts/?p=2296) I discussed how Recursive goes about crawling and parsing the web. In this, the final post, i'm going to talk about how Recursive represents, lays out and renders that crawled data on the screen.**
+**This is part two of my three part series on the internals of Recursive, an extension for Chrome. In the first post I talked about the general structure of Recursive and some of the lessons I learnt from dealing with Typescript. In the second post I discussed how Recursive goes about crawling and parsing the web. In this, the final post, i'm going to talk about how Recursive represents, lays out and renders that crawled data on the screen.**
 
 <!-- more -->
 

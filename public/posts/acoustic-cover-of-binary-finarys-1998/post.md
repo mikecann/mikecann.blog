@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-04-23T19:00:26.000Z'
 tags: []
 title: Acoustic Cover of Binary Finary's 1998
