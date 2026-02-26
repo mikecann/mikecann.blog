@@ -230,6 +230,49 @@ function fixSpecificPosts(slug: string, raw: string): string {
       break;
     }
 
+    // Remaining broken external images - one-offs from dead external domains
+    case "graduation-part-one": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.hud\.ac\.uk\/cms-test\/images\/logo2\.gif\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead Huddersfield University logo", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "highlight-selected-plugin-updated-by-david-hancock": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/gonegothic\.com\/files\/flashdevelop\/HighlightSelection\/HighlightSelection01\.jpg\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead gonegothic.com screenshot", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "how-to-tell-if-you-cat-is-plotting-to-kill-you": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/icanhascheezburger\.files\.wordpress\.com\/[^)]+\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead ICanHasCheezburger image", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "im-famous": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.artificial-studios\.co\.uk\/wp-content\/[^)]+\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead artificial-studios.co.uk image", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "stall": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.chillblast\.com\/images\/\/[^)]+\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead Chillblast product image", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "trip-to-america": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.trekamerica\.com\/images\/[^)]+\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead TrekAmerica map images", "", "*[Image no longer available]*");
+      break;
+    }
+
+    case "vietnam-2011": {
+      result = result.replace(/!\[[^\]]*\]\(https:\/\/lh4\.googleusercontent\.com\/[^)]+\)/g, "*[Image no longer available]*");
+      logFix(slug, "broken-image", "Replaced dead Google Photos image", "", "*[Image no longer available]*");
+      break;
+    }
+
     // Internal dead links
     case "chrome-crawler-a-web-crawler-written-in-javascript": {
       const old = "/posts/recursive/";

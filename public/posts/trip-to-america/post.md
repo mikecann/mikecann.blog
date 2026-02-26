@@ -6,7 +6,7 @@ title: Trip to America
 oldUrl: /photos-personal/trip-to-america
 ---
 
-![](https://www.trekamerica.com/images/map_w3.jpg)This will be my last post for a while as im going on a 24day holiday to America on Tuesday. Im going with my old school mate Ben and we will be hitting the west coast on a large 21 day camping trip with the group Trek America.
+*[Image no longer available]*This will be my last post for a while as im going on a 24day holiday to America on Tuesday. Im going with my old school mate Ben and we will be hitting the west coast on a large 21 day camping trip with the group Trek America.
 
 <!-- more -->
 
@@ -14,4 +14,4 @@ It should be awesome, going to visit all the main national parks on the Midwest 
 
 Anyways, I may be checking my email when we arrive in the cities, I may not, so dont expect any instant reply from emails while im away.
 
-![](https://www.trekamerica.com/images/w3.jpg)
+*[Image no longer available]*

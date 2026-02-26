@@ -10,6 +10,6 @@ oldUrl: /misc/im-famous
 
 <!-- more -->
 
-![](https://www.artificial-studios.co.uk/wp-content/uploads/image/famous.png)
+*[Image no longer available]*
 
 Source: [https://www.gamejacket.com/news.asp?news=7](https://www.gamejacket.com/news.asp?news=7)

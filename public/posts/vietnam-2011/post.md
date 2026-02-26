@@ -67,11 +67,11 @@ In the afternoon we found a park with some of the cutest monkeys I have ever see
 
 Day 3 we left Hanoi for one of the most famous and most beautiful parts of Vietnam, the Ha Long Bay:
 
-![](https://lh4.googleusercontent.com/-njCRDEGC7YA/TnCKZUfOdCI/AAAAAAAAtWI/TIz9gNh0IW0/s640/P1000483.JPG)
+*[Image no longer available]*
 
 A truly magical place:
 
-![](https://lh4.googleusercontent.com/--6Ly3kNhGx0/TnCEQm6R30I/AAAAAAAAtUs/u5QZu78bkz4/s288/P1000447.JPG)![](https://lh4.googleusercontent.com/-_CAPuzZ5xdc/TnCJ8n29VQI/AAAAAAAAtVE/dFcLnHVS1_Q/s288/P1000450.JPG)
+*[Image no longer available]**[Image no longer available]*
 ![](https://lh5.googleusercontent.com/-rc_RKbaZ3VI/TnCKSSw_0tI/AAAAAAAAtV4/5Fii25yfvyY/s288/P1000478.JPG)![](https://lh3.googleusercontent.com/-OSIcg2d3t8s/TnCP6FBOGdI/AAAAAAAAtWg/be5bxdVJzfk/s288/P1000493.JPG)
 
 The evening was spent on our boat, drinking and karaoke'ing till the early morning.
@@ -85,7 +85,7 @@ So much fun!
 
 We really were sad when we had to leave:
 
-![](https://lh5.googleusercontent.com/-ZBrcRdLIDqk/TnDobw7ZzsI/AAAAAAAAtYM/Jf_DoNF6Cwg/s288/P1000535.JPG)![](https://lh4.googleusercontent.com/-yyvAR5NnT04/TnDofzTMSkI/AAAAAAAAtYU/JcxAqwO3VSs/s288/P1000544.JPG)
+![](https://lh5.googleusercontent.com/-ZBrcRdLIDqk/TnDobw7ZzsI/AAAAAAAAtYM/Jf_DoNF6Cwg/s288/P1000535.JPG)*[Image no longer available]*
 
 That evening we took a sleeper train down the coast:
 
@@ -121,11 +121,11 @@ Which was, well..
 
 Next day we hopped on a diving boat heading for Cham Island, just off the coast of Hoi An:
 
-![](https://lh4.googleusercontent.com/-qJ974Txr0YQ/TnExCUE1m2I/AAAAAAAAta0/ROumdGp5oMo/s640/P1000610.JPG)
+*[Image no longer available]*
 
 We decided to go on a national Vietnamese holiday however so by the time we got there the locals were in the party spirit. We didnt sleep much that night:
 
-![](https://lh4.googleusercontent.com/-mkQ8fbdGNhE/TnExgYMFrjI/AAAAAAAAtbU/1Gs5OKKtyKM/s288/P1000624.JPG)![](https://lh5.googleusercontent.com/-F9QzhgUJLcA/TnExmNivuNI/AAAAAAAAtbc/h-w5qFMb7dg/s288/P1000629.JPG)
+*[Image no longer available]*![](https://lh5.googleusercontent.com/-F9QzhgUJLcA/TnExmNivuNI/AAAAAAAAtbc/h-w5qFMb7dg/s288/P1000629.JPG)
 
 We woke at 5:30am in our tents / personal sauna's on the beach to a ringside seat of the international volleyball championships:
 
@@ -140,11 +140,11 @@ or relaxing on the beach with newly acquired friends:
 <span style="color: #ff0000;">[<span style="color: #ff0000;">![](https://lh6.googleusercontent.com/-9LDh-qeEWoQ/TnE0Up629PI/AAAAAAAAtbw/obEk2hm-iVw/s640/00038.MTS.jpg)</span>](https://picasaweb.google.com/lh/photo/kSz3mnlx5fSa-fKXqNgSoA?feat=embedwebsite)</span>
 <span style="color: #ff0000;"> (Video click to play)</span>
 
-![](https://lh4.googleusercontent.com/-e1kvhP8Rknk/TnE0WgtoNGI/AAAAAAAAtb0/sPGEVWtJ3vU/s640/P1000641.JPG)
+*[Image no longer available]*
 
 The next day we took the boat back to dry land. The following day was one of the best of the entire trip. We hired bikes and explored some of the area.
 
-![](https://lh5.googleusercontent.com/-2EW4-EJrlXI/TnE6bBvTcyI/AAAAAAAAtdM/1_4H1JYFHGo/s288/P1000684.JPG)![](https://lh4.googleusercontent.com/-Yj3Z655Zgo4/TnE6Wsww6yI/AAAAAAAAtdA/UztqIu7OsSM/s288/P1000672.JPG)
+![](https://lh5.googleusercontent.com/-2EW4-EJrlXI/TnE6bBvTcyI/AAAAAAAAtdM/1_4H1JYFHGo/s288/P1000684.JPG)*[Image no longer available]*
 
 I personally had never riden a bike before, but that didnt seem to stop the locals from giving me once after I let him know I had no idea what I was doing on one:
 
@@ -156,9 +156,9 @@ We couldnt have picked a better route to take for my first ride however, up a na
 
 Word cannot describe the exhilaration scooting around that road. We stopped off every now and then to take some pictures of the epic scenery:
 
-![](https://lh4.googleusercontent.com/-TXe2qVzUo_8/TnFEKpw0roI/AAAAAAAAteM/z1rFDJCnQM8/s640/P1000710.JPG)
+*[Image no longer available]*
 
-![](https://lh4.googleusercontent.com/-xHUeUXCf8z8/TnFEL48fCEI/AAAAAAAAteU/AOYXQcFJgYI/s640/P1000711.JPG)
+*[Image no longer available]*
 
 I even got time to do a little planking on the scenery:
 
@@ -171,7 +171,7 @@ A truly unforgettable experience:
 
 On the way home we were trying to outrace the incoming storm:
 
-![](https://lh4.googleusercontent.com/-GowqVjCGnvQ/TnFJl1sb_NI/AAAAAAAAtfc/bhIZjaVEerk/s640/P1000739.JPG)
+*[Image no longer available]*
 
 Unfortunately it seems like scooter cant outrun mother nature, but thats okay, we stopped off in a cafe and saw this on the wall:
 
@@ -179,13 +179,13 @@ Unfortunately it seems like scooter cant outrun mother nature, but thats okay, w
 
 From the best experience in my trip to the worst. The overnight 'sleeper' bus:
 
-![](https://lh4.googleusercontent.com/-sZxmoHFtse4/TnFP1MiiIrI/AAAAAAAAtf8/T7K27KFJ_8o/s640/P1000760.JPG)
+*[Image no longer available]*
 
 I dont want to dwell on the subject but if you ever go to 'nam I strongly recommend avoiding these things.
 
 The next coupple of days in NahTrang was much more pleasant:
 
-![](https://lh4.googleusercontent.com/-buvBIp_hMhM/TnFWBQU1aLI/AAAAAAAAtgs/hhoiE3mGYGo/s640/P1000771.JPG)
+*[Image no longer available]*
 
 ![](https://lh5.googleusercontent.com/-cZjo9P3vnYc/TnFWQOFjMEI/AAAAAAAAthU/lZWWidjYlwc/s640/P1000793.JPG)
 
@@ -201,12 +201,12 @@ Tasted exactly like it looks btw, a bit like a potatoey apple.
 
 Then before I knew it, we were in Saigon staying with some of Martin's relatives on the 20th foor with an incredible view of the city:
 
-![](https://lh4.googleusercontent.com/-X0oViFifWEQ/TnG7dlTkZ5I/AAAAAAAAti8/JUDT93KVXLM/s640/P1000826.JPG)
+*[Image no longer available]*
 
 That day we spent checking out some of the local history:
 
 ![](https://lh6.googleusercontent.com/-jO-yefN7scI/TnG_ohQikuI/AAAAAAAAtjQ/5zUP9K1R3ps/s288/P1000828.JPG)![](https://lh6.googleusercontent.com/-6rl8Htooi4k/TnG_vZpbrYI/AAAAAAAAtjg/qo94Q8b7FBs/s288/P1000831.JPG)
-![](https://lh5.googleusercontent.com/-ffDliBhto50/TnG_28fETrI/AAAAAAAAtj8/TV9PxkGLjfI/s288/P1000840.JPG)![](https://lh4.googleusercontent.com/-HjSwFylANIY/TnG_64S_atI/AAAAAAAAtkE/0e9_vLfGCNI/s288/P1000844.JPG)
+![](https://lh5.googleusercontent.com/-ffDliBhto50/TnG_28fETrI/AAAAAAAAtj8/TV9PxkGLjfI/s288/P1000840.JPG)*[Image no longer available]*
 
 The evening was spent getting to know the locals in some bars:
 
@@ -219,11 +219,11 @@ The next day we had booked a trip to see the famous Cu Chi tunnels. While we wer
 
 The tunnels were a pretty harrowing place:
 
-![](https://lh6.googleusercontent.com/-V4osOhbVbbg/TnHD5apXS5I/AAAAAAAAtk8/0qa_ir78AWA/s288/P1000879.JPG)![](https://lh4.googleusercontent.com/-52-GjxySsik/TnHEEFOWnJI/AAAAAAAAtlU/inBslQZhphc/s288/P1000886.JPG)
+![](https://lh6.googleusercontent.com/-V4osOhbVbbg/TnHD5apXS5I/AAAAAAAAtk8/0qa_ir78AWA/s288/P1000879.JPG)*[Image no longer available]*
 
 I managed to play with some cool toys tho:
 
-![](https://lh4.googleusercontent.com/-wWB6-2Qbe7A/TnHEAC622yI/AAAAAAAAtlM/t8edF18t4iU/s640/P1000884.JPG)
+*[Image no longer available]*
 
 ![](https://lh3.googleusercontent.com/--ucT9MEoMNU/TnHELj2DWuI/AAAAAAAAtlk/kq4Jvj0zqV8/s640/P1000891.JPG)
 

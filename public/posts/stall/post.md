@@ -6,7 +6,7 @@ title: Stall
 oldUrl: /misc/stall
 ---
 
-![](https://www.chillblast.com/images//d_5645.jpg)Well i bought my new shiny PC two weeks ago a nice quad core Q6000 machine with an nVidia 8800GTX. All was good and nice, progress on liero was flying along. The machine didnt even flinch at 1,000,000 particles, i conservatively estimate its capable of 5,000,000 at 30FPS. But just the other day it broke down, no reason, no warning, the mobo just went put. It turns on, the lights come on but it doesnt do anything, doesnt even get to the bios screen, nothing.<o:p></o:p>
+*[Image no longer available]*Well i bought my new shiny PC two weeks ago a nice quad core Q6000 machine with an nVidia 8800GTX. All was good and nice, progress on liero was flying along. The machine didnt even flinch at 1,000,000 particles, i conservatively estimate its capable of 5,000,000 at 30FPS. But just the other day it broke down, no reason, no warning, the mobo just went put. It turns on, the lights come on but it doesnt do anything, doesnt even get to the bios screen, nothing.<o:p></o:p>
 
 <!-- more -->
 

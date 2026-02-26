@@ -22,7 +22,7 @@ Its an excellent upgrade and brings some extra features that were lacking in my 
 Liked the plugin so much I decided to add a few features! Posting here with Mike's permission.
 
 **Screenshot**
-![](https://gonegothic.com/files/flashdevelop/HighlightSelection/HighlightSelection01.jpg)
+*[Image no longer available]*
 
 **Updates**
 Added 4 plugin setting options:
