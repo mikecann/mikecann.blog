@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2017-05-11T01:12:00.000Z"
 tags:
   - blog
