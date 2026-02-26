@@ -37,6 +37,11 @@ _posts3
 local.config.json
 
 .env
+
+# audit/fix script output
+scripts/audit-report.json
+scripts/audit-report.md
+scripts/fix-log.json
 tsconfig.tsbuildinfo
 tmp
 # next-agents-md
