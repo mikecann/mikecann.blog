@@ -11,4 +11,4 @@ oldUrl: /art/verdantgardens
 Used: Bryce 5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/VerdantGardens.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/VerdantGardens.gif "Thumb")
+*[Image no longer available]*

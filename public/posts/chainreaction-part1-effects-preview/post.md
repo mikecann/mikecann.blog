@@ -16,8 +16,8 @@ A full description of what the project is and what it does will follow but for n
 
 You will have to excuse how slow the GIFs run. For some reason i cant get the frame delay any lower than about 10ms, any suggestions?
 
-![](https://www.mikecann.blog/Images/ChainReaction/snow.gif)
-![](https://www.mikecann.blog/Images/ChainReaction/sparks.gif)
-![](https://www.mikecann.blog/Images/ChainReaction/fireworks01.gif)
-![](https://www.mikecann.blog/Images/ChainReaction/fire01.gif)
-![](https://www.mikecann.blog/Images/ChainReaction/matrixCode.gif)
+*[Image no longer available]*
+*[Image no longer available]*
+*[Image no longer available]*
+*[Image no longer available]*
+*[Image no longer available]*

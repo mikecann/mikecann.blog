@@ -11,4 +11,4 @@ This has to be one of my fastest creations (about 30mins) while i was waiting to
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/mass.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/mass.gif "Thumb")
+*[Image no longer available]*

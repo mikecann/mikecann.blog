@@ -11,4 +11,4 @@ Llamp2 uses the same image created by lightwave however i applied different effe
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/llamp2.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/llamp2.gif "Thumb")
+*[Image no longer available]*

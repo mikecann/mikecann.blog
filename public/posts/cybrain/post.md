@@ -11,4 +11,4 @@ Cyber Brain (cybrain) was created from some image i think i saw somewhere with a
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/cybrain.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/cybrain.gif "Thumb")
+*[Image no longer available]*

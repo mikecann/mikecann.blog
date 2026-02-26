@@ -11,4 +11,4 @@ oldUrl: /art/rubicon-purple
 Used: Bryce 5, Photoshop 7
 Download: [3072x1152](https://www.mikecann.blog/Images/Art-Full/Rubicon-Purple.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/Rubicon-Purple.gif "Thumb")
+*[Image no longer available]*

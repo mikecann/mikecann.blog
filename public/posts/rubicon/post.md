@@ -11,4 +11,4 @@ oldUrl: /art/rubicon
 Used: Bryce 5, Photoshop 7
 Download: [3072x1152](https://www.mikecann.blog/Images/Art-Full/Rubicon.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/Rubicon.gif "Thumb")
+*[Image no longer available]*

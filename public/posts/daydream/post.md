@@ -11,4 +11,4 @@ oldUrl: /art/daydream
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/daydream.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/daydream.gif "Thumb")
+*[Image no longer available]*

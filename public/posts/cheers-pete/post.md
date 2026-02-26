@@ -6,6 +6,6 @@ title: Cheers Pete!
 oldUrl: /misc/cheers-pete
 ---
 
-![](https://www.mikecann.blog/Images/Others/cheerspete.png)
+*[Image no longer available]*
 
 Cheers for the support Pete mate :D

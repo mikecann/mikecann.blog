@@ -11,4 +11,4 @@ This is a heavily modified version of "sphere" and in my opinion its superior
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/sphere-two.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/sphere-two.gif "Thumb")
+*[Image no longer available]*

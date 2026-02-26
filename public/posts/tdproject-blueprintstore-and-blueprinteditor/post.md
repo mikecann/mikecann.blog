@@ -6,7 +6,7 @@ title: TDProject BlueprintStore and BlueprintEditor
 oldUrl: /c/tdproject-blueprintstore-and-blueprinteditor
 ---
 
-![](https://www.mikecann.blog/Work/TDProject/engine03.png)
+*[Image no longer available]*
 
 Today I added the BlueprintStore and the BlueprintEditor.
 

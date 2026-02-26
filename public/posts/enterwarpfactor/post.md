@@ -11,4 +11,4 @@ oldUrl: /art/enterwarpfactor
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/enterwarpfactor.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/enterwarpfactor.gif "Thumb")
+*[Image no longer available]*

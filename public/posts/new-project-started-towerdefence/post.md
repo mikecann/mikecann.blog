@@ -28,4 +28,4 @@ So the project has now started, I have enlisted the help of my flatmate and cour
 
 I have been working on getting an engine up and working and the basics of the tool ready for furthur development. So far there isnt a whole lot to see, I have been working through Michael Schuld's exellent [tutorials on 3D XNA games engines](https://www.thehazymind.com/archives/2006/08/introduction_to.htm). And have now got a basic 3D engine up and running although it doesnt look much like a tool yet, but expect more very soon!
 
-![](https://www.mikecann.blog/Work/TDProject/engine01.png)
+*[Image no longer available]*

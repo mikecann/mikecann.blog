@@ -11,4 +11,4 @@ This is one of my more reccent images and is as allways and experiment. I was ex
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/warpfactor.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/warpfactor.gif "Thumb")
+*[Image no longer available]*

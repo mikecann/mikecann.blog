@@ -6,7 +6,7 @@ title: TowerDefence - A Slow Beginning
 oldUrl: /c/towerdefence-a-slow-beginning
 ---
 
-![](https://www.mikecann.blog/Work/TDProject/engine02.png)
+*[Image no longer available]*
 
 Just a quick update on the project, not much to show as of yet. Been working on getting a basic terrain in place with 3D picking so you can place towers on the map.
 

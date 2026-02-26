@@ -7,7 +7,7 @@ title: Killer space penguins!
 oldUrl: /c/killer-space-penguins
 ---
 
-![](https://www.mikecann.blog/Images/Others/spacepenguin.png)
+*[Image no longer available]*
 
 Just to follow on from the previous post and to make it make a little more sense, here is a screenshot of the demo XNA space game i made in a day to show off my new particle engine SDK.
 

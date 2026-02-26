@@ -6,7 +6,7 @@ title: Docking Nightmares
 oldUrl: /c/docking-nightmares
 ---
 
-![](https://www.mikecann.blog/Work/TDProject/engine04.png)
+*[Image no longer available]*
 
 <!-- more -->
 

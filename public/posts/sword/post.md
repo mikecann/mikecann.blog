@@ -11,4 +11,4 @@ oldUrl: /art/sword
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/sword.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/sword.gif "Thumb")
+*[Image no longer available]*

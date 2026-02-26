@@ -18,7 +18,7 @@ One of the basic tenants of the app is that it needs to work  cross-platform, s
 
 It has been a while since I have coding anything substantial in Java, infact my university project [Chain Reaction](https://www.mikecann.blog/programming/java/chainreaction-binarysource-release/) was my last serious foray into the language:
 
-![](https://www.mikecann.blog/Work/CRImages/CR01.png)
+*[Image no longer available]*
 
 I knew that I wanted a nice rich interface for the project as it was intended to be sold to non-technical users. My first choice with Java was naturally with Swing. This, however, soon brought back various memories of 'JPanels', 'Layouts' and 'Look and Feels'  and the headaches of trying to make simple things look attractive (tho some cool advances have been made with [substance look and feel](https://www.pushing-pixels.org/)).
 

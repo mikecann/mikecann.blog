@@ -18,7 +18,7 @@ I love the Ctrl &amp; click feature in Eclipse/Netbeans and the Go To Definition
 
 **Screenshot**
 
-![](https://www.mikecann.blog/Files/GoToS01.png)
+*[Image no longer available]*
 
 **DLL**
 [https://www.mikecann.blog/Files/GoToDefinition.dll](https://www.mikecann.blog/Files/GoToDefinition.dll)

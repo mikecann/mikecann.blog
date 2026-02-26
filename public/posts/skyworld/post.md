@@ -11,4 +11,4 @@ This image is still alot of peoples favourite. I personally think its "okay" ver
 Used: Bryce 5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/skyworld.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/skyworld.gif "Thumb")
+*[Image no longer available]*

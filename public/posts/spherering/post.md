@@ -11,4 +11,4 @@ Its some crazy collection of reflective spheres with rings around them, i dont k
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/spherering.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/spherering.gif "Thumb")
+*[Image no longer available]*

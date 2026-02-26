@@ -9,6 +9,6 @@ oldUrl: /art/supreme-commander-wallpaper
 Well i have just finished making a massive <span class="postbody">(4608x2048) duel-screen wallpaper for a thread on the supreme commander forums.
 
 (click for full screen)
-[![](https://www.mikecann.blog/Images/Others/sc02-thumb.jpg)](https://www.mikecann.blog/Images/Others/sc02.jpg)
+*[Image no longer available]*
 
   </span>

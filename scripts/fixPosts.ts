@@ -134,7 +134,53 @@ function fixWordPressAbsoluteUrls(slug: string, raw: string): string {
   return result;
 }
 
-// ─── Fix 5: Specific broken image/link fixes ───────────────────────────────────
+// ─── Fix 5: Broken images from old mikecann.blog paths (gone, not in S3) ───────
+
+const UNAVAILABLE_NOTE = "*[Image no longer available]*";
+
+// Paths on www.mikecann.blog that are confirmed gone (not in wp-content, not in CloudFront)
+const BROKEN_IMAGE_PATH_PREFIXES = [
+  "https://www.mikecann.blog/Images/",
+  "https://www.mikecann.blog/Work/",
+  "https://www.mikecann.blog/Files/",
+];
+
+function fixBrokenMikecannImages(slug: string, raw: string): string {
+  let result = raw;
+
+  for (const prefix of BROKEN_IMAGE_PATH_PREFIXES) {
+    // Escape prefix for use in regex
+    const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    // 1. Linked image: [![alt](broken)](url) -> note
+    const linkedImgRegex = new RegExp(`\\[!\\[[^\\]]*\\]\\(${escapedPrefix}[^)]*\\)\\]\\([^)]*\\)`, "g");
+    const linkedMatches = result.match(linkedImgRegex);
+    if (linkedMatches) {
+      result = result.replace(linkedImgRegex, UNAVAILABLE_NOTE);
+      logFix(slug, "broken-image", `Replaced ${linkedMatches.length} linked broken image(s) from ${prefix}`, linkedMatches[0], UNAVAILABLE_NOTE);
+    }
+
+    // 2. Standalone markdown image: ![alt](broken) -> note
+    const imgRegex = new RegExp(`!\\[[^\\]]*\\]\\(${escapedPrefix}[^)]*\\)`, "g");
+    const imgMatches = result.match(imgRegex);
+    if (imgMatches) {
+      result = result.replace(imgRegex, UNAVAILABLE_NOTE);
+      logFix(slug, "broken-image", `Replaced ${imgMatches.length} broken image(s) from ${prefix}`, imgMatches[0], UNAVAILABLE_NOTE);
+    }
+
+    // 3. HTML img tags: <img ... src="broken..."> -> note
+    const htmlImgRegex = new RegExp(`<img[^>]*src=["']${escapedPrefix}[^"']*["'][^>]*\\/?>`, "gi");
+    const htmlImgMatches = result.match(htmlImgRegex);
+    if (htmlImgMatches) {
+      result = result.replace(htmlImgRegex, UNAVAILABLE_NOTE);
+      logFix(slug, "broken-image", `Replaced ${htmlImgMatches.length} HTML broken image(s) from ${prefix}`, htmlImgMatches[0], UNAVAILABLE_NOTE);
+    }
+  }
+
+  return result;
+}
+
+// ─── Fix 6: Specific broken image/link fixes ───────────────────────────────────
 
 function fixSpecificPosts(slug: string, raw: string): string {
   let result = raw;
@@ -323,6 +369,7 @@ async function main() {
       raw = fixProtocolRelativeUrls(slug, raw);
       raw = fixDefunctPicasaLinks(slug, raw);
       raw = fixWordPressAbsoluteUrls(slug, raw);
+      raw = fixBrokenMikecannImages(slug, raw);
       raw = fixSpecificPosts(slug, raw);
 
       // Only write if changed

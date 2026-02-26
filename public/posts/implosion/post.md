@@ -11,4 +11,4 @@ Implosion is one of my favourite images because of the variety of colours in it.
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/implosion.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/implosion.gif "Thumb")
+*[Image no longer available]*

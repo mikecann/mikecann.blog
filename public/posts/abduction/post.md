@@ -11,4 +11,4 @@ oldUrl: /art/abduction
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/abduction.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/abduction.gif "Thumb")
+*[Image no longer available]*

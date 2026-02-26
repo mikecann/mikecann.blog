@@ -6,7 +6,7 @@ title: Artificial - Future Harmonics
 oldUrl: /audio/artificial-future-harmonics
 ---
 
-![](https://www.mikecann.blog/Images/Others/FutureHarmonics.png)
+*[Image no longer available]*
 
 Its been quite some time indeed since i have released a mix so i decided to make another one. This one is a culmination of several weeks work and im pretty proud of it.
 

@@ -102,6 +102,19 @@ const BOT_BLOCKED_403_DOMAINS = new Set([
   "portal.acm.org",
 ]);
 
+// Domains whose broken images we treat as info-only (bot-rate-limited or known-gone services)
+const SKIP_BROKEN_IMAGE_DOMAINS = new Set([
+  // Shopify CDN - images load fine in real browsers, bot-rate-limited
+  "cdn.shopify.com",
+  // Old Google Photos / Picasa links - service migrated, old URLs are dead
+  "lh3.ggpht.com",
+  "lh4.ggpht.com",
+  "lh5.ggpht.com",
+  "lh6.ggpht.com",
+  "picasaweb.google.com",
+  "picasaweb.google.co.uk",
+]);
+
 // Defunct services that we know are dead
 const DEFUNCT_SERVICES: Record<string, string> = {
   "flash.revver.com": "Revver (defunct video platform)",
@@ -709,6 +722,9 @@ async function main() {
 
       // Skip defunct services (already reported)
       if (domain && DEFUNCT_SERVICES[domain]) continue;
+
+      // Skip known bot-rate-limited or gone image domains - not actionable
+      if (item.isImage && domain && SKIP_BROKEN_IMAGE_DOMAINS.has(domain)) continue;
 
       const result = urlCache.get(normalized);
       if (result && !result.ok) {

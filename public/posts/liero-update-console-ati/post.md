@@ -16,4 +16,4 @@ Anyways to cut a long story short I have not been able to implement R2VB for ATi
 
 Also something I implemented over the weekend was this fancy console which, makes life alot easier for me when developing, isnt it nice ;)
 
-![](https://www.mikecann.blog/Images/LieroXNA/liero02.png)
+*[Image no longer available]*

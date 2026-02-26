@@ -11,4 +11,4 @@ oldUrl: /art/alien2
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/alien2.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/alien2.gif "Thumb")
+*[Image no longer available]*

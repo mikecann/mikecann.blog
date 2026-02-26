@@ -11,4 +11,4 @@ This is one of my very early images and is still one of my favourite ones. It ha
 Used: Lightwave 7.5, Photoshop 7
 Download: [1024x768](https://www.mikecann.blog/Images/Art-Full/spacevirus.jpg)
 
-![Thumb](https://www.mikecann.blog/Images/Art-Thumbs/spacevirus.gif "Thumb")
+*[Image no longer available]*

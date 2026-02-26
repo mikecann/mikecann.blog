@@ -14,7 +14,7 @@ oldUrl: /darkbasic/snakez-2003
 Used:** DarkBASIC, PhotoShop 7 **
 Download:\*\* [SnakeZ-v1.zip](https://www.mikecann.blog/Files/SnakeZ-v1.zip) (16.9Mb) </font></td>
 
-![](https://www.mikecann.blog/Images/Games-Thumbs/snakez.gif)
+*[Image no longer available]*
 
 </tr>
 </tbody>

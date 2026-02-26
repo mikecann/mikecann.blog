@@ -6,7 +6,7 @@ title: Master Cleanse
 oldUrl: /photos-personal/master-cleanse
 ---
 
-![](https://www.mikecann.blog/Images/Others/lemon.JPG)
+*[Image no longer available]*
 
 This is all I will be eating for the next 14 days! Well the ingredients of anyways. Its called the Master Cleanse and our tour leader in America Becca told me about it and it really intrigued me. It is basically a massive detox that should flush loads of stuff out of my system and set me on track for a healthier life.
 
@@ -28,7 +28,7 @@ Okay, just took the senna tea for the first time. Not particularly great tasting
 
 Well thats almost the end of my first day. Impressions? Well apart from having dreams of going to the toilet then being rudely awoken by my angry bowel at 4:30 and 7:00 all went well. I have been abit hungry, but nothing too severe, tho I agree with others on the internet that say that your sense of smell increases.
 
-![](https://www.mikecann.blog/Images/Others/day1.JPG)Ive just mixed my third litre of lemon and maple (which isnt too bad by the way, never tried maple syrup before, and probably wont again after this, but still its okay) you are only meant to drink 2 litres of it per day but I thought I would ease myself into this a little rather than going hardcore instantly.
+*[Image no longer available]*Ive just mixed my third litre of lemon and maple (which isnt too bad by the way, never tried maple syrup before, and probably wont again after this, but still its okay) you are only meant to drink 2 litres of it per day but I thought I would ease myself into this a little rather than going hardcore instantly.
 
 The worst part so far has to be the salt water, damn that stuff is gross. Im gonna try adding some maple syrup to it tomorrow and see what happens.
 
