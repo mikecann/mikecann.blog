@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-14T16:11:36.000Z'
 tags: []
 title: Imagining the Tenth Dimension

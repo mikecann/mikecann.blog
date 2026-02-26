@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-07-13T23:15:43.000Z'
 tags: []
 title: LAN08

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-07-06T14:27:26.000Z"
 tags: []
 title: Ball Collisions

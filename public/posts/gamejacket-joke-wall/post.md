@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-04-16T09:15:01.000Z"
 tags: []
 title: GameJacket Joke Wall

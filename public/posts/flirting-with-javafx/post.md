@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-12-13T21:38:03.000Z"
 tags:
   - inputtie

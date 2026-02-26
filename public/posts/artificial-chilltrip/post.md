@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-11-25T19:15:52.000Z'
 tags: []
 title: Artificial - ChillTrip

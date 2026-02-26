@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-01-09T19:37:42.000Z"
 tags:
   - actionscript

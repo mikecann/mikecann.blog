@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-12T20:48:14.000Z'
 tags: []
 title: I cant stop playing with particles..

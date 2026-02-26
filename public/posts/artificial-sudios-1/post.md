@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-08-03T15:10:09.000Z"
 tags: []
 title: Artificial-Studios 1

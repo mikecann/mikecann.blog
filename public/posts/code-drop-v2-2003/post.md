@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2003-07-10T14:59:36.000Z"
 tags: []
 title: Code Drop V2 - 2003

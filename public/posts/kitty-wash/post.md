@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-01-26T09:48:24.000Z'
 tags: []
 title: Kitty Wash

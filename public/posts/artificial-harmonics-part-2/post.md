@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-06-30T09:37:06.000Z"
 tags: []
 title: Artificial Harmonics ( part 2 )

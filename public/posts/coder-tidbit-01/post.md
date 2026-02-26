@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-11-09T11:22:10.000Z'
 tags: []
 title: Coder Tidbit 01

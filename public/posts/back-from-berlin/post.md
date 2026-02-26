@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-01-05T08:50:21.000Z'
 tags: []
 title: Back from Berlin

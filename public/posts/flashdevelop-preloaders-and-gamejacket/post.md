@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-06-11T15:53:03.000Z'
 tags: []
 title: 'FlashDevelop, Preloaders and GameJacket'

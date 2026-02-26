@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2008-10-14T23:14:16.000Z"
 tags: []
 title: ArtificialGames.co.uk & Site Changes

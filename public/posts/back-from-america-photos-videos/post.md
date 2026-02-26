@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-08-21T20:43:53.000Z'
 tags: []
 title: Back From America - Photos + Videos

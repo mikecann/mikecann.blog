@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2008-11-11T14:32:56.000Z"
 tags: []
 title: GameJacket

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-04-07T14:34:59.000Z"
 tags: []
 title: Hmmm

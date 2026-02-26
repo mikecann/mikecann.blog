@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-08-26T10:15:51.000Z'
 tags:
   - blastwave 2

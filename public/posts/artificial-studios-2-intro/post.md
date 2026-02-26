@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-08-10T15:47:25.000Z'
 tags: []
 title: Artificial Studios 2 - Intro

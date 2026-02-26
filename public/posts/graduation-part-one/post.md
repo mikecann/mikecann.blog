@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-10-31T16:43:49.000Z'
 tags: []
 title: Graduation Part One

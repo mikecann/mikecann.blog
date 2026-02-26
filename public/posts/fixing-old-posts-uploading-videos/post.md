@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2010-07-16T19:48:52.000Z'
 tags: []
 title: Fixing Old Posts & Uploading Videos

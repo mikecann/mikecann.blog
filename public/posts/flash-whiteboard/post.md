@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-08-12T12:56:47.000Z'
 tags: []
 title: Flash Whiteboard

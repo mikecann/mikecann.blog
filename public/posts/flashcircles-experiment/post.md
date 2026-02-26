@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-10-02T19:03:26.000Z'
 tags: []
 title: FlashCircles Experiment (+Source)

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-01-22T12:21:10.000Z'
 tags: []
 title: How To Get Ahead in Science

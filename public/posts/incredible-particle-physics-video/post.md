@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2010-07-20T17:37:21.000Z'
 tags:
   - engine

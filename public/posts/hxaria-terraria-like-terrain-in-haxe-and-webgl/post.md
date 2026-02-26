@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-11-17T19:32:11.000Z"
 tags: []
 title: "Hxaria, Terraria like terrain in HaXe and WebGL"

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-08-12T12:27:52.000Z"
 tags: []
 title: Cannyshammy Everquest Goodbye

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-11-24T18:08:32.000Z'
 tags: []
 title: Artificial - Future Harmonics

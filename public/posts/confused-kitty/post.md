@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-11-14T14:06:56.000Z'
 tags: []
 title: Confused Kitty

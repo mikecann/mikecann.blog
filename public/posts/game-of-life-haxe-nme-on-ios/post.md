@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-10-13T19:22:42.000Z"
 tags: []
 title: Game of Life HaXe & NME on iOS

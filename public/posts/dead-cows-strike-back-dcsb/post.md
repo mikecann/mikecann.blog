@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-08-10T15:54:24.000Z"
 tags: []
 title: Dead Cows Strike Back (DCSB)

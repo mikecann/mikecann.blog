@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-06-18T09:11:43.000Z'
 tags: []
 title: Dry spell

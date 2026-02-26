@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-02-20T10:24:42.000Z'
 tags: []
 title: Irony

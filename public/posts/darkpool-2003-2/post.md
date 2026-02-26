@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2003-04-10T14:44:30.000Z"
 tags: []
 title: DarkPOOL -- 2003

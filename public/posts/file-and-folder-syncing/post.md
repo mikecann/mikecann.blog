@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-09-03T19:34:07.000Z"
 tags:
   - dropbox

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-04-17T11:13:35.000Z'
 tags: []
 title: ChainReaction (part1) - Effects Preview

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2005-03-27T21:59:15.000Z'
 tags: []
 title: BumpSpace

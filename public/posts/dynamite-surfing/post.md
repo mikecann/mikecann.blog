@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-19T13:35:39.000Z'
 tags: []
 title: Dynamite Surfing

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-01-28T19:41:59.000Z'
 tags: []
 title: hahahahaha
