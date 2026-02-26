@@ -45,6 +45,19 @@ module.exports = {
         source: "/wp-content/:splat*",
         destination: "http://d18l99bmg6trdn.cloudfront.net/wp-content/:splat*",
       },
+      {
+        source: "/flash/:splat*",
+        destination: "http://d18l99bmg6trdn.cloudfront.net/flash/:splat*",
+      },
+      {
+        source: "/DumpingGround/:splat*",
+        destination: "http://d18l99bmg6trdn.cloudfront.net/DumpingGround/:splat*",
+      },
+      // /projects/ 404s on CloudFront, so go direct to S3
+      {
+        source: "/projects/:splat*",
+        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/projects/:splat*",
+      },
     ];
   },
 };

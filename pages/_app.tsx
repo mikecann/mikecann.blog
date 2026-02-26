@@ -9,6 +9,7 @@ import { PostHogProvider } from "posthog-js/react";
 import posthog from "posthog-js";
 import dynamic from "next/dynamic";
 import { GLSDefaults } from "gls";
+import Script from "next/script";
 
 const MikebotDynamic = dynamic(() => import("../components/mikebot/Mikebot"), { ssr: false });
 
@@ -74,6 +75,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         </div>
       </PostHogProvider>
       <Analytics />
+      {/* Ruffle - Flash emulator, auto-intercepts all <embed src="*.swf"> on the page */}
+      <Script src="https://unpkg.com/@ruffle-rs/ruffle" strategy="lazyOnload" />
     </GLSDefaults.Provider>
   );
 };
