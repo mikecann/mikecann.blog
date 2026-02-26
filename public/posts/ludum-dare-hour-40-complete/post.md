@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: "2010-08-22T17:46:14.000Z"
 tags:
@@ -45,7 +45,7 @@ Anyways enough jibber jabber. A few more shots then the game is below:
 
 <object style="width: 600px; height: 500px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="500" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/DumpingGround/ld/18/05/LudumDare18.swf" /><embed style="width: 600px; height: 500px;" type="application/x-shockwave-flash" width="600" height="500" src="/DumpingGround/ld/18/05/LudumDare18.swf"></embed></object>
 
-**EDIT:** I have now made a youtube gameplay video and timelapse of development, [check em here.](/posts/?p=1291)
+**EDIT:** I have now made a youtube gameplay video and timelapse of development, [check em here.](/posts/48-hours-later-timelapse-gameplay-videos)
 
 Tools Used:
 Adobe Photoshop CS5
