@@ -7,7 +7,7 @@ title: New Comments System
 oldUrl: /websites/new-comments-system
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-27-19.11.gif "ScreenHunter_01 Mar. 27 19.11")](https://www.mikecann.blog/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-27-19.11.gif)
+[![](/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-27-19.11.gif "ScreenHunter_01 Mar. 27 19.11")](/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-27-19.11.gif)
 
 Ive started testing out a new comments system on the blog.
 

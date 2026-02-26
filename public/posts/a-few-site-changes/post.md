@@ -10,7 +10,7 @@ title: A Few Site Changes
 oldUrl: /websites/a-few-site-changes
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/Untitled-1.jpg "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2010/08/Untitled-1.jpg)
+[![](/wp-content/uploads/2010/08/Untitled-1.jpg "Untitled-1")](/wp-content/uploads/2010/08/Untitled-1.jpg)
 
 As im not out tonight I thought I would do a little work on the site.<!-- more -->
 

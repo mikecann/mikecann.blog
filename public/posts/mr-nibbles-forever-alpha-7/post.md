@@ -20,7 +20,7 @@ Well i'm now 8 weeks into development of Mr Nibbles Forever and I can safely say
 
 In this release:
 
-![this-week](https://www.mikecann.blog/wp-content/uploads/2015/03/this-week.png)
+![this-week](/wp-content/uploads/2015/03/this-week.png)
 
 Thats all from my [Trello board](https://trello.com/b/Ic11WQzF/mr-nibbles-forever) for the project, the numbers are the amount of time I spent on each one (red is time taken, blue is estimate)
 
@@ -34,15 +34,15 @@ I have also added fruit to the game and "fruit collection" challenges. I have pl
 
 In this release I have also added the Everyplay game recording service. I use this service to record every run in the game, then give the player the option to watch and share it. Hopefully this will encourage social engagement and drive new players to the game and encourage existing players to play more. I introduce this to the player when you complete the first challenge:
 
-[![IMG_0163[1]](https://www.mikecann.blog/wp-content/uploads/2015/03/IMG_01631-1024x768.png)](https://www.mikecann.blog/wp-content/uploads/2015/03/IMG_01631.png)
+[![IMG_0163[1]](/wp-content/uploads/2015/03/IMG_01631-1024x768.png)](/wp-content/uploads/2015/03/IMG_01631.png)
 
 If you click watch replay then the Everyplay service starts up:
 
-[![IMG_0164[1]](https://www.mikecann.blog/wp-content/uploads/2015/03/IMG_01641-1024x768.png)](https://www.mikecann.blog/wp-content/uploads/2015/03/IMG_01641.png)
+[![IMG_0164[1]](/wp-content/uploads/2015/03/IMG_01641-1024x768.png)](/wp-content/uploads/2015/03/IMG_01641.png)
 
 You can even provide a narration to your video using the front facing camera (click to watch)!
 
-[![2015-03-14_11-32-10](https://www.mikecann.blog/wp-content/uploads/2015/03/2015-03-14_11-32-10.png)](https://everyplay.com/videos/14904453)
+[![2015-03-14_11-32-10](/wp-content/uploads/2015/03/2015-03-14_11-32-10.png)](https://everyplay.com/videos/14904453)
 
 I also added IAP so you can purchase outfits if you don't have the patience to collect the nibbles and spin the week. There is also high scores in there now for iOS that uses Game Center.
 

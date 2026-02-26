@@ -13,7 +13,7 @@ title: Ludum Dare - Hour 17
 oldUrl: /48-hours-later/ludum-dare-hour-17
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg "ScreenHunter_01 Aug. 21 19.31")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg)
+[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg "ScreenHunter_01 Aug. 21 19.31")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-21-19.31.jpg)
 
 Okay its been about 6 hours since my last update, and I have been working pretty much solid apart from an hour lunchbreak when I went for a wander into town.
 

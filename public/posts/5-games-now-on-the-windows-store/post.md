@@ -18,7 +18,7 @@ So as of last week the following games from my back catalog are available on the
 
 <h2>Mr Nibbles<h2/>
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-1-300x225.png)](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-1.png)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-2-300x225.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-2.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-3-300x225.png)](https://www.mikecann.blog/wp-content/uploads/2016/12/mr-nibbles-promo-3.png)
+[![](/wp-content/uploads/2016/12/mr-nibbles-promo-1-300x225.png)](/wp-content/uploads/2016/12/mr-nibbles-promo-1.png)[![](/wp-content/uploads/2016/12/mr-nibbles-promo-2-300x225.jpg)](/wp-content/uploads/2016/12/mr-nibbles-promo-2.jpg)[![](/wp-content/uploads/2016/12/mr-nibbles-promo-3-300x225.png)](/wp-content/uploads/2016/12/mr-nibbles-promo-3.png)
 
 Mr Nibbles, the hamster, was a dreamer. One day while longingly looking out the window of his cage he had a dream. He dreamt of emancipating himself from his lifelong prison. He dreamt not just of escaping his cage but leaving the confines of earth itself to enter space! Mr Nibbles dreamt that he will be the first hamster ever to enter orbit.
 
@@ -30,7 +30,7 @@ Follow Mr Nibbles on his quest. Along the way you must help him solve devious pu
 
 <h2>Blast wave - Lost at Sea<h2/>
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-1-300x300.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-1.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-2-300x300.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-2.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-3-300x300.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/blastwave-promo-3.jpg)
+[![](/wp-content/uploads/2016/12/blastwave-promo-1-300x300.jpg)](/wp-content/uploads/2016/12/blastwave-promo-1.jpg)[![](/wp-content/uploads/2016/12/blastwave-promo-2-300x300.jpg)](/wp-content/uploads/2016/12/blastwave-promo-2.jpg)[![](/wp-content/uploads/2016/12/blastwave-promo-3-300x300.jpg)](/wp-content/uploads/2016/12/blastwave-promo-3.jpg)
 
 BlastWave: Lost At Sea is an isometric, challenging puzzle / action game.
 
@@ -46,7 +46,7 @@ Using the mouse you suck and blast your way through 16 challenging levels.
 
 <h2>Icy Slicy<h2/>
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-1-300x240.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-1.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-2-300x240.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-2.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-3-300x240.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-3.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-4-300x240.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/icy-slicy-promo-4.jpg)
+[![](/wp-content/uploads/2016/12/icy-slicy-promo-1-300x240.jpg)](/wp-content/uploads/2016/12/icy-slicy-promo-1.jpg)[![](/wp-content/uploads/2016/12/icy-slicy-promo-2-300x240.jpg)](/wp-content/uploads/2016/12/icy-slicy-promo-2.jpg)[![](/wp-content/uploads/2016/12/icy-slicy-promo-3-300x240.jpg)](/wp-content/uploads/2016/12/icy-slicy-promo-3.jpg)[![](/wp-content/uploads/2016/12/icy-slicy-promo-4-300x240.jpg)](/wp-content/uploads/2016/12/icy-slicy-promo-4.jpg)
 
 Several silly critters and thier things have gotten frozen in the ice and they need your help to cut them out.
 
@@ -62,7 +62,7 @@ Controls:
 
 <h2>Monkey Mines<h2/>
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-1-300x250.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-1.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-2-300x250.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-2.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-3-300x250.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/monkey-mines-promo-3.jpg)
+[![](/wp-content/uploads/2016/12/monkey-mines-promo-1-300x250.jpg)](/wp-content/uploads/2016/12/monkey-mines-promo-1.jpg)[![](/wp-content/uploads/2016/12/monkey-mines-promo-2-300x250.jpg)](/wp-content/uploads/2016/12/monkey-mines-promo-2.jpg)[![](/wp-content/uploads/2016/12/monkey-mines-promo-3-300x250.jpg)](/wp-content/uploads/2016/12/monkey-mines-promo-3.jpg)
 
 This game is a remake of the classic Minesweeper but with a few twists.
 Firstly the board is isometic making for a trickier experience than the classic version.
@@ -81,7 +81,7 @@ Controls:
 
 <h2>Mr Nibbles Forever<h2/>
 
-[![](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-1-300x188.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-1.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-2-300x188.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-2.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-3-300x188.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-3.jpg)[![](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-4-300x188.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/12/nibbles-forever-promo-4.jpg)
+[![](/wp-content/uploads/2016/12/nibbles-forever-promo-1-300x188.jpg)](/wp-content/uploads/2016/12/nibbles-forever-promo-1.jpg)[![](/wp-content/uploads/2016/12/nibbles-forever-promo-2-300x188.jpg)](/wp-content/uploads/2016/12/nibbles-forever-promo-2.jpg)[![](/wp-content/uploads/2016/12/nibbles-forever-promo-3-300x188.jpg)](/wp-content/uploads/2016/12/nibbles-forever-promo-3.jpg)[![](/wp-content/uploads/2016/12/nibbles-forever-promo-4-300x188.jpg)](/wp-content/uploads/2016/12/nibbles-forever-promo-4.jpg)
 
 Everyone's favourite hamsternaut is back! Escape the cage, avoid spiders, collect nibbles and rocket to the moon!
 

@@ -6,7 +6,7 @@ title: Homebrewin' Tip
 oldUrl: /misc/homebrewin-tip
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/01/head.jpg "head")](https://www.mikecann.blog/wp-content/uploads/2012/01/head.jpg)
+[![](/wp-content/uploads/2012/01/head.jpg "head")](/wp-content/uploads/2012/01/head.jpg)
 
 This post is a little off the normal beaten track for my blog. I have been so super busy of late on a project that I havent really had any time for technical personal projects.
 

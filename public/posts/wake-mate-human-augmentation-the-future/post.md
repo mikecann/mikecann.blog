@@ -10,7 +10,7 @@ title: "Wake Mate - Human Augmentation, the future?"
 oldUrl: /photos-personal/wake-mate-human-augmentation-the-future
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-24-14.13.jpg "ScreenHunter_01 Jan. 24 14.13")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-24-14.13.jpg)
+[![](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-24-14.13.jpg "ScreenHunter_01 Jan. 24 14.13")](/wp-content/uploads/2010/01/ScreenHunter_01-Jan.-24-14.13.jpg)
 
 Well after a little deliberation I decided to go for it and take a leap and pre-order a "[WakeMate](https://wakemate.com/)". Mainly as an experiment but partially to fuel the geeky gadget lover inside of me, but I do think this sort of thing is a natural extension to our techno-obsessed lifestyle.
 

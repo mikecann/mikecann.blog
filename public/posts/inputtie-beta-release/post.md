@@ -17,7 +17,7 @@ title: Inputtie - Beta Release!
 oldUrl: /inputtie/inputtie-beta-release
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_01-Sep.-22-19.58.png "ScreenHunter_01 Sep. 22 19.58")](https://www.mikecann.blog/wp-content/uploads/2010/09/ScreenHunter_01-Sep.-22-19.58.png)
+[![](/wp-content/uploads/2010/09/ScreenHunter_01-Sep.-22-19.58.png "ScreenHunter_01 Sep. 22 19.58")](/wp-content/uploads/2010/09/ScreenHunter_01-Sep.-22-19.58.png)
 
 Woooo Hooo! Finally after almost a years worth of toiling we have finally released the beta version of [Inputtie](https://www.inputtie.com).
 
@@ -38,4 +38,4 @@ Grab the download over on the [download page](https://www.inputtie.com/download/
 
 Oh BTW we decided to go with the "e" in a bordered square for our app icon:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_16x16.png "squareborder_16x16")](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_16x16.png)[![](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_32x32.png "squareborder_32x32")](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_32x32.png)[![](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_48x48.png "squareborder_48x48")](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_48x48.png)[![](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_304x3041.png "squareborder_304x304")](https://www.mikecann.blog/wp-content/uploads/2010/09/squareborder_304x3041.png)
+[![](/wp-content/uploads/2010/09/squareborder_16x16.png "squareborder_16x16")](/wp-content/uploads/2010/09/squareborder_16x16.png)[![](/wp-content/uploads/2010/09/squareborder_32x32.png "squareborder_32x32")](/wp-content/uploads/2010/09/squareborder_32x32.png)[![](/wp-content/uploads/2010/09/squareborder_48x48.png "squareborder_48x48")](/wp-content/uploads/2010/09/squareborder_48x48.png)[![](/wp-content/uploads/2010/09/squareborder_304x3041.png "squareborder_304x304")](/wp-content/uploads/2010/09/squareborder_304x3041.png)

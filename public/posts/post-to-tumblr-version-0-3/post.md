@@ -16,7 +16,7 @@ title: Post To Tumblr Version 0.3
 oldUrl: /post-to-tumbr/post-to-tumblr-version-0-3
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_004.png)
+[![](/wp-content/uploads/2010/10/Shot_004.png "Shot_004")](/wp-content/uploads/2010/10/Shot_004.png)
 
 Just made a quick little update to my chrome extension "Post To Tumblr".
 

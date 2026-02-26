@@ -10,7 +10,7 @@ Just a quick update. After a year of living down in Bunbury Western Australia an
 
 <!-- more -->
 
-[![PerthFlights](https://www.mikecann.blog/wp-content/uploads/2015/05/PerthFlights-1024x509.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/05/PerthFlights.jpg)
+[![PerthFlights](/wp-content/uploads/2015/05/PerthFlights-1024x509.jpg)](/wp-content/uploads/2015/05/PerthFlights.jpg)
 
 I have taken a job 2 hours north in Perth at a company called TheBroth. We mainly work on a mobile and web game called SlotsGalaxy. Its similar sort of work to which I was doing at Playdemic so hopefully my old skills arent too rusty :)
 
@@ -18,4 +18,4 @@ Im going to continue to work on my projects such as Mr Nibbles Forever and Post 
 
 I have enjoyed the past year mostly but I think it was time for a change and im looking forward to the next year!
 
-![PERTH](https://www.mikecann.blog/wp-content/uploads/2015/05/PERTH.jpg)
+![PERTH](/wp-content/uploads/2015/05/PERTH.jpg)

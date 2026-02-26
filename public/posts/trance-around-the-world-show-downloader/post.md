@@ -23,6 +23,6 @@ I love the [Trance Around The World radio show by Above and Beyond](https://www.
 
 Anyways, enough jibber jabber. Source is enabled:
 
-[airbadge]TATW Downloader,https://www.mikecann.blog/wp-content/uploads/2010/03/TATWDownloaderAir.air,1,/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-04-23.45.gif[/airbadge]
+[airbadge]TATW Downloader,/wp-content/uploads/2010/03/TATWDownloaderAir.air,1,/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-04-23.45.gif[/airbadge]
 
 Hope you enjoy!

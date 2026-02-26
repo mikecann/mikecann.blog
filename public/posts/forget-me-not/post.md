@@ -10,4 +10,4 @@ I have a terrible memory, often desprite setting alarms leaving notes for myself
 
 <!-- more -->
 
-![photo](https://www.mikecann.blog/wp-content/uploads/2009/01/photo.jpg "photo")
+![photo](/wp-content/uploads/2009/01/photo.jpg "photo")

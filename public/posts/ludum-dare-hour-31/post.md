@@ -15,7 +15,7 @@ title: Ludum Dare - Hour 31
 oldUrl: /48-hours-later/ludum-dare-hour-31
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg "ScreenHunter_01 Aug. 22 09.36")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg)
+[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg "ScreenHunter_01 Aug. 22 09.36")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-22-09.36.jpg)
 
 Well its been quite a while since my last progress report. I have mostly been sleeping (well 4 hours of it anyways).
 

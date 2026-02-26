@@ -10,7 +10,7 @@ title: Ludum Dare 18 this Weekend!
 oldUrl: /48-hours-later/ludum-dare-18-this-weekend
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif "ScreenHunter_01 Aug. 16 20.48")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif)
+[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif "ScreenHunter_01 Aug. 16 20.48")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-16-20.48.gif)
 
 Dont think I have blogged about this yet, so im doing so now.
 

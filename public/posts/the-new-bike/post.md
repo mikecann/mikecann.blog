@@ -14,7 +14,7 @@ Well after the thieving of my bike [a few weeks ago](https://www.mikecann.blog/m
 
 And here it is:
 
-[![photo](https://www.mikecann.blog/wp-content/uploads/2009/12/photo.jpg "photo")](https://www.mikecann.blog/wp-content/uploads/2009/12/photo.jpg)
+[![photo](/wp-content/uploads/2009/12/photo.jpg "photo")](/wp-content/uploads/2009/12/photo.jpg)
 
 Doesnt it look mean?
 

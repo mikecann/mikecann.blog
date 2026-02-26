@@ -10,4 +10,4 @@ Joke a day keep the bugs at bay!
 
 <!-- more -->
 
-![photo1](https://www.mikecann.blog/wp-content/uploads/2009/04/photo1.jpg "photo1")
+![photo1](/wp-content/uploads/2009/04/photo1.jpg "photo1")

@@ -6,7 +6,7 @@ title: Polynate
 oldUrl: /art/polynate
 ---
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/polynate-thumb.png)
+![](/wp-content/uploads/Image/polynate-thumb.png)
 
 I made this one last night while i was messing around. Its a duel-screen piece and took me about 2 hours to complete. I think its need a little more work but it looks okay on my desktop at the moment ;)<!-- more -->
 **

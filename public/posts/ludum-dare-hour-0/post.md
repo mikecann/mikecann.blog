@@ -18,7 +18,7 @@ The theme for the competition is "Enemies as Weapons" which is actually a better
 
 Anyways, here is where all the magic will be happeneing over the next 48 hours:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/photo-1024x768.jpg "photo")](https://www.mikecann.blog/wp-content/uploads/2010/08/photo.jpg)
+[![](/wp-content/uploads/2010/08/photo-1024x768.jpg "photo")](/wp-content/uploads/2010/08/photo.jpg)
 
 I have ChronoLapse setup to capture a screenshot every 60 seconds so hopefully we will get a nice video at the end showing my progress (or lack of :P).
 

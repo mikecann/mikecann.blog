@@ -23,13 +23,13 @@ The first thing I worked on was adding a new type of chunk that serves as a sort
 
 The hanging spiders force the player to slow down and the sign hopefully shows them they do that by tilting the screen:
 
-[![2015-02-02_10-03-16](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-03-16-1024x617.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-03-16.png)
+[![2015-02-02_10-03-16](/wp-content/uploads/2015/02/2015-02-02_10-03-16-1024x617.png)](/wp-content/uploads/2015/02/2015-02-02_10-03-16.png)
 
 I have a bit more work do do on this before its done but I hope it will help teach people the controls, let me know if it works!
 
 Because this chunk acts as a tutorial it needs to go near the start of the level so the second major bit of work this week was to create a "scriptable sequence" that lets me dictate the type of chunk that needs to spawn:
 
-![2015-02-02_10-12-39](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-02_10-12-39.png)
+![2015-02-02_10-12-39](/wp-content/uploads/2015/02/2015-02-02_10-12-39.png)
 
 Previously the chunks were randomly selected based on the difficulty which was based on the distance the player had travelled through the game. Now that its scripted its much more controllable but hopefully still leaves a lot of room for the randomness that makes the game replayable.
 

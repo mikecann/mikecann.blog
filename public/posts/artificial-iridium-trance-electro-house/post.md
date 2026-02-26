@@ -8,7 +8,7 @@ title: "Artificial - Iridium [Trance, Electro, House]"
 oldUrl: /audio/artificial-iridium-trance-electro-house
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/08/Iridium-Cover.png "Iridium-Cover")](https://www.mikecann.blog/wp-content/uploads/2011/08/Iridium-Cover.png)
+[![](/wp-content/uploads/2011/08/Iridium-Cover.png "Iridium-Cover")](/wp-content/uploads/2011/08/Iridium-Cover.png)
 
 Second part in a two part mix, see "[Argon](/audio/artificial-argon-tech-house-progressive/)" for part 1.
 

@@ -10,7 +10,7 @@ title: Playdemic acquired by RockYou
 oldUrl: /misc/playdemic-acquired-by-rockyou
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/01/top.jpg "top")](https://www.mikecann.blog/wp-content/uploads/2011/01/top.jpg)
+[![](/wp-content/uploads/2011/01/top.jpg "top")](/wp-content/uploads/2011/01/top.jpg)
 
 Well as it has now hit the media I guess I can blog about it.
 

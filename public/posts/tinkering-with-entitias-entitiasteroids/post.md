@@ -35,7 +35,7 @@ To dig a little deeper into Entitias I decided to port the [Ashteroids example I
 
 [https://github.com/mikecann/Entitasteroids](https://github.com/mikecann/Entitasteroids)
 
-![2015-11-09_09-22-56](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-09_09-22-56.gif)
+![2015-11-09_09-22-56](/wp-content/uploads/2015/11/2015-11-09_09-22-56.gif)
 
 So what did I learn in the process?
 
@@ -76,7 +76,7 @@ Retrieving data from Unity components such as Rigidbody2D and Transform can be q
 
 During development you would continually run into errors such as:
 
-![2015-11-09_08-26-05](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-09_08-26-05.png)
+![2015-11-09_08-26-05](/wp-content/uploads/2015/11/2015-11-09_08-26-05.png)
 
 Its quite difficult to read and follow whats happening here. Named components would help instead of index's but even with that it can be tough to understand whats going on. Unity-Ash doesnt have this problem really as you rarely ever interact with an Entity directly, you always go via a Node so you can be almost guaranteed that the components exist upon the entity.
 

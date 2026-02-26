@@ -139,34 +139,31 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                     const size = safeSrc && imageSizes[safeSrc];
 
                     if (!size) {
+                      // No local size - render as plain img so the browser can fetch it
+                      // (e.g. /wp-content/ paths go through the Next.js CloudFront rewrite).
+                      // No <a> wrapper here - the markdown may already wrap this in a link.
+                      if (!safeSrc) return null;
                       return (
-                        <span
-                          className="image-wrapper"
-                          style={{
-                            display: "block",
-                            background: "#eee",
-                            padding: 20,
-                            borderRadius: 4,
-                          }}
-                        >
-                          <div style={{ textAlign: "center", color: "#888", fontSize: "0.9em" }}>
-                            Image not found: {safeSrc}
-                          </div>
+                        <span className="image-wrapper">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={safeSrc}
+                            alt={alt ?? ""}
+                            style={{ maxWidth: "100%", height: "auto" }}
+                          />
                         </span>
                       );
                     }
 
                     return (
                       <span className="image-wrapper">
-                        <a href={safeSrc} target="_blank" rel="noopener noreferrer">
-                          <Image
-                            src={safeSrc}
-                            alt={alt ?? ""}
-                            width={width == null ? size.width : Number(width)}
-                            height={height == null ? size.height : Number(height)}
-                            style={{ maxWidth: "100%", height: "auto" }}
-                          />
-                        </a>
+                        <Image
+                          src={safeSrc}
+                          alt={alt ?? ""}
+                          width={width == null ? size.width : Number(width)}
+                          height={height == null ? size.height : Number(height)}
+                          style={{ maxWidth: "100%", height: "auto" }}
+                        />
                       </span>
                     );
                   },

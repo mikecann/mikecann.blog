@@ -15,7 +15,7 @@ title: My First Chrome Extension - "Post To Tumblr"
 oldUrl: /post-to-tumbr/my-first-chrome-extension-post-to-tumblr
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_002.png)
+[![](/wp-content/uploads/2010/10/Shot_002.png "Shot_002")](/wp-content/uploads/2010/10/Shot_002.png)
 
 Woo! I have just published my first Chrome extension :)
 
@@ -69,7 +69,7 @@ Simples!
 
 Theres even an option page where you put in your Tumblr details:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_003.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_003.png)
+[![](/wp-content/uploads/2010/10/Shot_003.png "Shot_003")](/wp-content/uploads/2010/10/Shot_003.png)
 
 Oh, there is one issue.
 

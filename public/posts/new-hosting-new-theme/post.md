@@ -6,7 +6,7 @@ title: "New Hosting, New Theme!"
 oldUrl: /uncategorized/new-hosting-new-theme
 ---
 
-![hero](https://www.mikecann.blog/wp-content/uploads/2014/03/hero.png)
+![hero](/wp-content/uploads/2014/03/hero.png)
 
 In what appears to be an almost annual event I have decided to move hosting of my blog yet again! Im moving away from the £35 per month hosting of 1&amp;1 because although I like the freedom of having my own box that I can remote into i'm just finding it too expensive for me to justify having it. There are so many Platform as a Service (PaaS) options out there that provide high quality hosting cheaply I thought I would switch over.<!-- more -->
 

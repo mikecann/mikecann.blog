@@ -6,7 +6,7 @@ title: Artificial Studios 1
 oldUrl: /projects/artificial-studios-1
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/MainSplash.gif "MainSplash")](https://www.mikecann.blog/wp-content/uploads/2011/10/MainSplash.gif)
+[![](/wp-content/uploads/2011/10/MainSplash.gif "MainSplash")](/wp-content/uploads/2011/10/MainSplash.gif)
 
 Wow, well this is where it all began, my first website!
 

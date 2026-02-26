@@ -35,11 +35,11 @@ As for making the the game endless, I needed a way to proceduralally generate Mr
 
 Chunks must have an entrance and at least one exit tho they can have multiple exits which makes for some interesting player choices:
 
-![2015-01-16_14-35-50](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-35-50.png)
+![2015-01-16_14-35-50](/wp-content/uploads/2015/01/2015-01-16_14-35-50.png)
 
 For now there are 26 chunks in the game and they are randomly picked as the player moves through the world. The idea is to grade these chunks by difficulty and the longer the level goes on for the harder the chunks spawned are.
 
-[![2015-01-16_14-55-28](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-55-28-150x150.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-55-28.png)[![2015-01-16_14-56-42](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-56-42-150x150.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-56-42.png)[![2015-01-16_14-57-49](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-57-49-150x150.png)](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-57-49.png)
+[![2015-01-16_14-55-28](/wp-content/uploads/2015/01/2015-01-16_14-55-28-150x150.png)](/wp-content/uploads/2015/01/2015-01-16_14-55-28.png)[![2015-01-16_14-56-42](/wp-content/uploads/2015/01/2015-01-16_14-56-42-150x150.png)](/wp-content/uploads/2015/01/2015-01-16_14-56-42.png)[![2015-01-16_14-57-49](/wp-content/uploads/2015/01/2015-01-16_14-57-49-150x150.png)](/wp-content/uploads/2015/01/2015-01-16_14-57-49.png)
 
 To help with building chunks I took advantage of what I consider to be the single greatest strength of Unity, its tools customisability, to write some level building and testing tools:
 
@@ -51,7 +51,7 @@ After the hard work was done it was just a matter of adding a little more polish
 
 So for now the game is very basic, there is no progression and nothing in the way of challenges. My thinking is if people enjoy the raw gameplay in its prototype form then I can add Jetpack Joyride style missions and more varied themes and powerups and more mechanics.
 
-So this is where you can come in, give the game a try, see what you think and let me know by leaving a comment or emailing me at: <a href="mailto:mike.cann@gmail.com">mike.cann@gmail.com](https://www.mikecann.blog/wp-content/uploads/2015/01/2015-01-16_14-58-34.png)
+So this is where you can come in, give the game a try, see what you think and let me know by leaving a comment or emailing me at: <a href="mailto:mike.cann@gmail.com">mike.cann@gmail.com](/wp-content/uploads/2015/01/2015-01-16_14-58-34.png)
 
 You can download and try the desktop version here: [https://goo.gl/yDAFUm](https://goo.gl/yDAFUm)
 

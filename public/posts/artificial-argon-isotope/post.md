@@ -14,7 +14,7 @@ title: Artificial - Argon Isotope
 oldUrl: /audio/artificial-argon-isotope
 ---
 
-[![argon](https://www.mikecann.blog/wp-content/uploads/2013/04/argon.png)](/audio/artificial-argon-isotope/attachment/argon/)
+[![argon](/wp-content/uploads/2013/04/argon.png)](/audio/artificial-argon-isotope/attachment/argon/)
 
 I decided to take a little break from the coding and over the past few evenings I have put together a new mix.
 

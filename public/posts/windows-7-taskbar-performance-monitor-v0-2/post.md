@@ -12,7 +12,7 @@ title: Windows 7 Taskbar Performance Monitor v0.2
 oldUrl: /c/windows-7-taskbar-performance-monitor-v0-2
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/02/Shot_01.png "Shot_01")](https://www.mikecann.blog/wp-content/uploads/2011/02/Shot_01.png)
+[![](/wp-content/uploads/2011/02/Shot_01.png "Shot_01")](/wp-content/uploads/2011/02/Shot_01.png)
 
 Been a long time since I have updated this little project of mine. Yep, just checked, its [been almost a year ](/posts/windows-7-taskbar-monitor/)since.
 

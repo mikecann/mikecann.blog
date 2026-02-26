@@ -104,11 +104,11 @@ So it works in a way very much like a raster engine. You only have to render as 
 
 If the screen area moves beyond the extent of the Tilemap then more tiles are randomly generated:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/11/22222.png "22222")](https://www.mikecann.blog/wp-content/uploads/2011/11/22222.png)
+[![](/wp-content/uploads/2011/11/22222.png "22222")](/wp-content/uploads/2011/11/22222.png)
 
 The new tiles are randomly selected from 4 different types, Dirt, Gold, Diamonds and Rock. I have added some controls to the demo that allow you to tweak these values to demonstrate the random tile generation:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png "Shot_04")](https://www.mikecann.blog/wp-content/uploads/2011/11/Shot_041.png)
+[![](/wp-content/uploads/2011/11/Shot_041.png "Shot_04")](/wp-content/uploads/2011/11/Shot_041.png)
 
 The UI may look familiar to people that have seen any experiments anyone who has worked with Three.js before, its the very popular [dat.GUI](https://code.google.com/p/dat-gui/). Its a really simple library written in javascript for creating controls that can be used to tweak experiments, perfect for me!
 

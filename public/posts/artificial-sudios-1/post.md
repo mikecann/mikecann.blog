@@ -6,7 +6,7 @@ title: Artificial-Studios 1
 oldUrl: /projects/artificial-sudios-1
 ---
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/artstu1.jpg)
+![](/wp-content/uploads/Image/artstu1.jpg)
 
 In the beginning there was flash and flash was great, but flash soon betrayed its creator and became hard to maintain.
 

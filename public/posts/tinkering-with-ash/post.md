@@ -21,7 +21,7 @@ Before I go any further I should mention that there is a [Try Harder 'Level Up
 
 Following on in the same 'Tinkering' vein I have decided to investigate an AS3 library by another Try Harder attendee [Richard Lord](https://www.richardlord.net/blog):
 
-[![logo](https://www.mikecann.blog/wp-content/uploads/2013/02/logo.png)](/posts/tinkering-with-ash/attachment/logo-4/)
+[![logo](/wp-content/uploads/2013/02/logo.png)](/posts/tinkering-with-ash/attachment/logo-4/)
 
 What is Ash? Well direct from the [Ash Website:](https://www.ashframework.org/)
 

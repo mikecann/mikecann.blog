@@ -17,7 +17,7 @@ Its not often that spam gets through my gmail spam filters but this one did, and
 
 <!-- more -->
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/04/710shot.gif "710shot")](https://www.mikecann.blog/wp-content/uploads/2010/04/710shot.gif)
+[![](/wp-content/uploads/2010/04/710shot.gif "710shot")](/wp-content/uploads/2010/04/710shot.gif)
 
 Whats clever about it:
 

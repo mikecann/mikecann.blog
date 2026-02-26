@@ -14,7 +14,7 @@ title: AudioBook Organiser v1.3.0 - Drag'n'Drop
 oldUrl: /actionscript/audiobook-organiser-v1-3-0-dragndrop
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg "ScreenHunter_04-Jan.-11-22.36")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg)
+[![](/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg "ScreenHunter_04-Jan.-11-22.36")](/wp-content/uploads/2010/01/ScreenHunter_04-Jan.-11-22.36.jpg)
 
 Well I was just doing some audio book organising and realised that it would be great if I could drag and drop a folder straight from my AIR into iTunes ready for upload to my iPhone.
 

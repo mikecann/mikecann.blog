@@ -13,7 +13,7 @@ title: More HTML5 & HaXe Speed Tests
 oldUrl: /haxe/more-html5-haxe-speed-tests
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/07/header.png "header")](https://www.mikecann.blog/wp-content/uploads/2011/07/header.png)
+[![](/wp-content/uploads/2011/07/header.png "header")](/wp-content/uploads/2011/07/header.png)
 
 Ive spent a little more time this weekend looking at some more  HTML5 with HaXe. Following on from [my previous experiments with WebGL](/posts/chrome-crawler-haxe-three-js-webgl-and-2d-sprites/) I decided to give HTML5's Canvas a a look as it was supposed to be designed specifically for the purpose of doing 2D.
 

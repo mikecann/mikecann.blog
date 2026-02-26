@@ -10,4 +10,4 @@ Council Tax FAIL ?
 
 <!-- more -->
 
-![photo](https://www.mikecann.blog/wp-content/uploads/2009/04/photo.jpg "photo")
+![photo](/wp-content/uploads/2009/04/photo.jpg "photo")

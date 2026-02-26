@@ -12,5 +12,5 @@ Ive finally decided to see what all the fuss is about and jump on the twitter tr
 
 <span>Also in other news I have been been working my way slowly through various foods that I have never had before, tomatos, pasta, rice and now... scorpion! </span>
 
-<span>![photo1](https://www.mikecann.blog/wp-content/uploads/2009/02/photo1.jpg "photo1")
+<span>![photo1](/wp-content/uploads/2009/02/photo1.jpg "photo1")
 </span>

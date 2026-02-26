@@ -17,13 +17,13 @@ oldUrl: >-
 
 A few weeks ago I got a friendly reminder from Apple that my Developer license was about to expire. What I hadn't realized however was that should it expire my games would no longer be available to download on the store.<!-- more -->
 
-[![](https://www.mikecann.blog/wp-content/uploads/2017/02/chrome_2017-02-28_07-11-33-1024x451.png)](https://www.mikecann.blog/wp-content/uploads/2017/02/chrome_2017-02-28_07-11-33.png)
+[![](/wp-content/uploads/2017/02/chrome_2017-02-28_07-11-33-1024x451.png)](/wp-content/uploads/2017/02/chrome_2017-02-28_07-11-33.png)
 
 I can sort of understand this policy for paid apps, should you app earn anything, where does Apple send the money to? But for totally free apps such as [Mr Nibbles](https://itunes.apple.com/us/app/mr-nibbles/id552109003?mt=8) or [Ectoplasm](https://itunes.apple.com/us/app/ectoplasm/id619071417?mt=8) why do this? Its frustrating that I have to pay £80 per year just to keep my free games alive.
 
 To add insult to injury, shortly after receiving the demand for cash from Apple I receive this lovely email:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2017/02/chrome_2017-02-15_07-56-10-1024x642.png)](https://www.mikecann.blog/wp-content/uploads/2017/02/chrome_2017-02-15_07-56-10.png)
+[![](/wp-content/uploads/2017/02/chrome_2017-02-15_07-56-10-1024x642.png)](/wp-content/uploads/2017/02/chrome_2017-02-15_07-56-10.png)
 
 So not only do I have to pay Apple for the privilege of keeping my free apps on their incredible store I also have to continually update them even tho there is nothing wrong with them. Sigh. I have no idea if I can sill even build my old games for iOS any more. Mr Nibbles was built using Haxe which has no doubt moved on significantly in the intervening years.
 

@@ -19,7 +19,7 @@ So when 24 years later and half a world a way I as offered the chance to give ba
 
 [TechCamps4Kids](https://www.techcamps4kids.com/) is run by an incredible South African lady called Brenda who, fedup with the way computer science was taught in school, decided to start her own after-school club to try to tech kids the actual skills they will need to become the next generation that shapes our technological future.
 
-[![tech-campp-for-kids-judging](https://www.mikecann.blog/wp-content/uploads/2016/10/tech-campp-for-kids-judging-300x200.jpg)](https://www.mikecann.blog/wp-content/uploads/2016/10/tech-campp-for-kids-judging.jpg)
+[![tech-campp-for-kids-judging](/wp-content/uploads/2016/10/tech-campp-for-kids-judging-300x200.jpg)](/wp-content/uploads/2016/10/tech-campp-for-kids-judging.jpg)
 
 I was introduced to Brenda and [TechCamps4Kids](https://www.techcamps4kids.com/) via a mutual friend that I know from one of the entrepreneur meetups I attend here in Perth. She told me she was looking for someone in the gaming industry who could be a judge for a game development competition she was holding for the kids. Knowing how I started out on my career I thought this would be a good opportunity to pay just a small part of my thanks back.
 

@@ -45,7 +45,7 @@ haxelib dev nme /Users/mikec/Documents/NME_3.1_Beta
 
 Now when I try to build for ios I get success!
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-12_1149.png "2011-10-12_1149")](https://www.mikecann.blog/wp-content/uploads/2011/10/2011-10-12_1149.png)
+[![](/wp-content/uploads/2011/10/2011-10-12_1149.png "2011-10-12_1149")](/wp-content/uploads/2011/10/2011-10-12_1149.png)
 
 From there is a simple matter of opening the generated xcode project, connecting my iphone and hitting run:
 

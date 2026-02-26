@@ -10,7 +10,7 @@ title: Goodbye Playdemic
 oldUrl: /photos-personal/goodbye-playdemic
 ---
 
-[![head](https://www.mikecann.blog/wp-content/uploads/2013/03/head.png)](/posts/goodbye-playdemic/attachment/head-8/)
+[![head](/wp-content/uploads/2013/03/head.png)](/posts/goodbye-playdemic/attachment/head-8/)
 
 Wow doesn't time fly.
 

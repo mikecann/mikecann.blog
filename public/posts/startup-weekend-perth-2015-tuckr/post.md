@@ -15,13 +15,13 @@ So this weekend I took part in an event I signed up for some time ago: Startup W
 
 <!-- more -->
 
-[![2015-11-16_08-28-59](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-16_08-28-59-1024x615.png)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-16_08-28-59.png)
+[![2015-11-16_08-28-59](/wp-content/uploads/2015/11/2015-11-16_08-28-59-1024x615.png)](/wp-content/uploads/2015/11/2015-11-16_08-28-59.png)
 
 Being very interested in startups as I am and having enjoyed [GovHack earlier this year](https://www.mikecann.blog/portfolio/projects/govhack-2015-should-i-drive/) I thought it would be a perfect event for me.
 
 It started on Friday after work. We piled into the startup-hub Spacecubed on St Georges Terrace. After a few looseners and semi-nervous chitchat we were soon taking our seats for the introduction presentation by the excellent [Marcus Holmes](https://www.startupnews.com.au/about/).
 
-[![2015-11-13 19.49.25](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-13-19.49.25-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-13-19.49.25.jpg)
+[![2015-11-13 19.49.25](/wp-content/uploads/2015/11/2015-11-13-19.49.25-1024x768.jpg)](/wp-content/uploads/2015/11/2015-11-13-19.49.25.jpg)
 
 After the short talk split into informal groups to play "Startups against humanity" (I think). Each group was given a "Problem" and a number of "Solution" cards. In typical [Cards Against Humanity](https://cardsagainsthumanity.com/) style, the problems and solutions were suitably 'humerous' in nature.
 
@@ -31,7 +31,7 @@ Thankfully the game was only played for a brief time before the real action star
 
 This whole process went rather smoothly, all credit to Marcus and his team there for keeping the pitches moving rapidly. Infact the entire event was run very well, it felt much better organised than Govhack, but then again it was the 7th time it had been run.
 
-[![2015-11-13 19.49.27](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-13-19.49.271-1024x765.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-13-19.49.271.jpg)
+[![2015-11-13 19.49.27](/wp-content/uploads/2015/11/2015-11-13-19.49.271-1024x765.jpg)](/wp-content/uploads/2015/11/2015-11-13-19.49.271.jpg)
 
 After presenting their concept the pitchers knocked together quick posters and affixed them to the walls. We, the non-pitchers then went around the various posters and deliberated over which one we wanted to join.
 
@@ -53,7 +53,7 @@ I had quite a few offers by other teams to join them. It seemed like developers 
 
 Just as the situation was starting to look dire, Mary and I we finally secured our third Member Adam then soon after Trent, Daniel and finally the golden catch, Sydel the designer, an even rarer breed than developers at Startup Weekend.
 
-[![2015-11-14 12.53.23](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-14-12.53.23-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-14-12.53.23.jpg)
+[![2015-11-14 12.53.23](/wp-content/uploads/2015/11/2015-11-14-12.53.23-1024x768.jpg)](/wp-content/uploads/2015/11/2015-11-14-12.53.23.jpg)
 
 So we had 6, two developers, one designer and 3 non-tecchies, an ideal composition, things were looking good so we set to work.
 
@@ -67,7 +67,7 @@ In hindsight this is kind of obvious, the event is called Startup Weekend, its a
 
 So although I really wanted to make the actual app, we decided it would have been better if we just concentrated on making a landing page and designing how the app would look and function. These things are what the judges are actually looking for, not an actual working product.
 
-[![2015-11-14 16.47.21](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-14-16.47.21-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-14-16.47.21.jpg)
+[![2015-11-14 16.47.21](/wp-content/uploads/2015/11/2015-11-14-16.47.21-1024x768.jpg)](/wp-content/uploads/2015/11/2015-11-14-16.47.21.jpg)
 
 So until 8pm on Friday, 10pm on Saturday and 4pm on Sunday I hacked together a landing page: [https://tuckr.co](https://tuckr.co) with Adam whilst Sydel produced some awesome mockups for the app. Daniel, Mary and Trent spent the time trying to validate the idea and develop the business model.
 
@@ -75,7 +75,7 @@ During the entire weekend we had regular "check-ins" where all the teams would c
 
 I found check-ins both inspiring and depressing. The were inspiring because could see that other groups were suffering some of the same problems to you but it was also sometimes disheartening to hear how far ahead some of the teams were.
 
-[![2015-11-15 11.36.01](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-15-11.36.01-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-15-11.36.01.jpg)
+[![2015-11-15 11.36.01](/wp-content/uploads/2015/11/2015-11-15-11.36.01-1024x768.jpg)](/wp-content/uploads/2015/11/2015-11-15-11.36.01.jpg)
 
 Soon enough Sunday afternoon rolled around and it was time to present our startup to the the rest of the teams and hopefully win over the four judges.
 
@@ -91,4 +91,4 @@ So after the awards ceremony the event was wrapped up at 8pm. I enjoyed my Start
 
 Massive thanks to my awesome team, you guys did a great job and I hope we can stay in touch and perhaps team up again next time!
 
-[![2015-11-15 19.53.33-2](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-15-19.53.33-2-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-15-19.53.33-2.jpg)
+[![2015-11-15 19.53.33-2](/wp-content/uploads/2015/11/2015-11-15-19.53.33-2-1024x768.jpg)](/wp-content/uploads/2015/11/2015-11-15-19.53.33-2.jpg)

@@ -9,7 +9,7 @@ title: Flash to IPhone CS5
 oldUrl: /iphone/flash-to-iphone-cs5
 ---
 
-[![322955593_67152962ab](https://www.mikecann.blog/wp-content/uploads/2009/10/322955593_67152962ab.jpg "322955593_67152962ab")](https://www.mikecann.blog/wp-content/uploads/2009/10/322955593_67152962ab.jpg)
+[![322955593_67152962ab](/wp-content/uploads/2009/10/322955593_67152962ab.jpg "322955593_67152962ab")](/wp-content/uploads/2009/10/322955593_67152962ab.jpg)
 
 I know this news is a coupple of days old now, but I havent blogged in a little while so I thought why not.
 

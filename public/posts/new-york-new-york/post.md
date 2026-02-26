@@ -10,7 +10,7 @@ title: New York New York
 oldUrl: /photos-personal/new-york-new-york
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg "header")](https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg)
+[![](/wp-content/uploads/2012/11/header.jpg "header")](/wp-content/uploads/2012/11/header.jpg)
 
 Last week I took a trip to New York with my friend Becky. We had an awesome time exploring what the city has to offer.
 

@@ -6,7 +6,7 @@ title: Mr Nibbles & Blackberry
 oldUrl: /mr-nibbles/mr-nibbles-blackberry
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/09/header1.jpg "header")](https://www.mikecann.blog/wp-content/uploads/2012/09/header1.jpg)
+[![](/wp-content/uploads/2012/09/header1.jpg "header")](/wp-content/uploads/2012/09/header1.jpg)
 
 Im proud to announce that Mr Nibbles is now available [on Blackberry App World](https://appworld.blackberry.com/webstore/content/133542/?lang=en) :)
 

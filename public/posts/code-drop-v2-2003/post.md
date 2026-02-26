@@ -6,7 +6,7 @@ title: Code Drop V2 - 2003
 oldUrl: /darkbasic/code-drop-v2-2003
 ---
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/codedrop.gif)<font size="1" face="Verdana, Arial, Helvetica, sans-serif">CodeDrop came about mainly by accident. I wanted to see if i could create a 2D particle explosion effect. After i discovered how easy this was to do i decided to create a whole game around it!</font>
+![](/wp-content/uploads/Image/codedrop.gif)<font size="1" face="Verdana, Arial, Helvetica, sans-serif">CodeDrop came about mainly by accident. I wanted to see if i could create a 2D particle explosion effect. After i discovered how easy this was to do i decided to create a whole game around it!</font>
 
 <font size="1" face="Verdana, Arial, Helvetica, sans-serif">The game is now in its second version, and has many new improvements over the last, check it out, tell me what you think.</font>
 

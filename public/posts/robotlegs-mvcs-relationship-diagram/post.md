@@ -15,4 +15,4 @@ Just as a follow up from my post [on the bleeding edge](https://www.mikecann.blo
 
 (click to enlarge)
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-23-15.51.jpg "ScreenHunter_01 Mar. 23 15.51")](https://www.mikecann.blog/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-23-15.51.jpg)
+[![](/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-23-15.51.jpg "ScreenHunter_01 Mar. 23 15.51")](/wp-content/uploads/2010/03/ScreenHunter_01-Mar.-23-15.51.jpg)

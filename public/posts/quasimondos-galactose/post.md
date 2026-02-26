@@ -12,7 +12,7 @@ title: Quasimondo's Galactose
 oldUrl: /actionscript/quasimondos-galactose
 ---
 
-[![ScreenHunter_02 Jan. 10 20.13](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_02-Jan.-10-20.13.jpg "ScreenHunter_02 Jan. 10 20.13")](https://www.mikecann.blog/wp-content/uploads/2010/01/ScreenHunter_02-Jan.-10-20.13.jpg)
+[![ScreenHunter_02 Jan. 10 20.13](/wp-content/uploads/2010/01/ScreenHunter_02-Jan.-10-20.13.jpg "ScreenHunter_02 Jan. 10 20.13")](/wp-content/uploads/2010/01/ScreenHunter_02-Jan.-10-20.13.jpg)
 
 I have immense respect for some of the flash developers out there and Quasimondo is one of them. He has just released a little particle related experiment.<!-- more -->
 

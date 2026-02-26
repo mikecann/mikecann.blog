@@ -14,7 +14,7 @@ title: Inputtie - Version 0.1.5
 oldUrl: /inputtie/inputtie-version-0-1-5
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Untitled-1.png "Untitled-1")](https://www.mikecann.blog/wp-content/uploads/2010/10/Untitled-1.png)
+[![](/wp-content/uploads/2010/10/Untitled-1.png "Untitled-1")](/wp-content/uploads/2010/10/Untitled-1.png)
 
 Just a few small changes in this update:
 

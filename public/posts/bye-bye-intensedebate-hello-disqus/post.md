@@ -10,7 +10,7 @@ title: "Bye Bye IntenseDebate, Hello Disqus"
 oldUrl: /websites/bye-bye-intensedebate-hello-disqus
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/06/disqus2.jpg "disqus2")](https://www.mikecann.blog/wp-content/uploads/2011/06/disqus2.jpg)
+[![](/wp-content/uploads/2011/06/disqus2.jpg "disqus2")](/wp-content/uploads/2011/06/disqus2.jpg)
 
 Just a quick post. I have swapped over my commenting system from IntenseDebate over to Disqus. I really didnt like some things IntenseDebate did. It also seemed to get alot more spam which I had to manually approve / disapprove all the time.
 

@@ -13,4 +13,4 @@ So after reading my last blog post "A Week on The Mac" the family cat had someth
 
 <!-- more -->
 
-[![cat1](https://www.mikecann.blog/wp-content/uploads/2009/08/cat1.jpg "cat1")](https://www.mikecann.blog/wp-content/uploads/2009/08/cat1.jpg)
+[![cat1](/wp-content/uploads/2009/08/cat1.jpg "cat1")](/wp-content/uploads/2009/08/cat1.jpg)

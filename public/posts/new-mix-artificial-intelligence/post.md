@@ -10,7 +10,7 @@ title: "New Mix: Artificial - Intelligence"
 oldUrl: /audio/new-mix-artificial-intelligence
 ---
 
-![aiimage](https://www.mikecann.blog/wp-content/uploads/2009/06/aiimage.gif "aiimage")
+![aiimage](/wp-content/uploads/2009/06/aiimage.gif "aiimage")
 
 Finally, finally I have decided to say sod it and stop tinkering with this god damn mix! I have been making and remaking this thing for the best part of a year but I can still see the rough edges. Its been driving me quite literally mad! Having said that however I have enjoyed making it, else I wouldn't do it... right?
 

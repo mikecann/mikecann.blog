@@ -10,7 +10,7 @@ title: New Blog Host & Face-lift
 oldUrl: /misc/new-blog-host-face-lift
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/11/mememe.jpg "mememe")](https://www.mikecann.blog/wp-content/uploads/2011/11/mememe.jpg)
+[![](/wp-content/uploads/2011/11/mememe.jpg "mememe")](/wp-content/uploads/2011/11/mememe.jpg)
 Just a quick post to say I have finally moved away from my old hosting on WebFusion and now im on the cheaper (and hopefully) more reliable hosting by [STRATO](https://www.strato-hosting.co.uk/).
 
 <!-- more -->

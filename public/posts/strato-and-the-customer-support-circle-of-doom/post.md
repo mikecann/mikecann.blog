@@ -10,7 +10,7 @@ title: STRATO and the Customer-Support-Circle-of-Doom
 oldUrl: /photos-personal/strato-and-the-customer-support-circle-of-doom
 ---
 
-[/wp-content/uploads/2012/10/screenshot_021.png](https://www.mikecann.blog/wp-content/uploads/2012/10/screenshot_021.png)
+[/wp-content/uploads/2012/10/screenshot_021.png](/wp-content/uploads/2012/10/screenshot_021.png)
 
 Why is it so hard to find a good web hosting company?
 
@@ -20,7 +20,7 @@ About [one year ago I announced](/posts/new-blog-host-face-lift/) that I moved 
 
 Three weeks ago my blog started to suffer problems, as is clear from my analytics data on one of the domains:
 
-[/wp-content/uploads/2012/10/screenshot_05.png](https://www.mikecann.blog/wp-content/uploads/2012/10/screenshot_05.png)
+[/wp-content/uploads/2012/10/screenshot_05.png](/wp-content/uploads/2012/10/screenshot_05.png)
 
 The traffic drops off from normal levels down to nothing in the space of about a week. I was away the start of the month (more on this in a later blog post) and thus wasn't checking the domain. Its only when I received an email from someone informing me about the fact my blog was down that I sat up and took notice.
 
@@ -148,7 +148,7 @@ So short of the long, my sites are now being hosted on 1 & 1 and everything seem
 
 Oh one more thing, apparently STRATO have won awards for their customer service:
 
-[/wp-content/uploads/2012/10/screenshot_06.png](https://www.mikecann.blog/wp-content/uploads/2012/10/screenshot_06.png)
+[/wp-content/uploads/2012/10/screenshot_06.png](/wp-content/uploads/2012/10/screenshot_06.png)
 
 _sigh_
 

@@ -21,7 +21,7 @@ The concept was simple. Allow people to quickly post content to Tumblr by simply
 
 Since that humble beginning I slowly started adding more and more features such as [post preformatting](https://mikecann.blog/posts/post-to-tumblr-version-0-4) and [custom context menus](https://mikecann.blog/posts/post-to-tumblr-v6-16-templated-variables).
 
-![](https://www.mikecann.blog/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
+![](/wp-content/uploads/2016/06/chrome_2016-06-26_15-15-13.png)
 
 Over time the extension grew in popularity, reaching a peak of about 50,000 weekly users:
 

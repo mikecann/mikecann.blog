@@ -14,7 +14,7 @@ title: "1046: Type was not found or was not a compile-time constant"
 oldUrl: /actionscript/1046-type-was-not-found-or-was-not-a-compile-time-constant
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/02/001.jpg "001")](https://www.mikecann.blog/wp-content/uploads/2011/02/001.jpg)
+[![](/wp-content/uploads/2011/02/001.jpg "001")](/wp-content/uploads/2011/02/001.jpg)
 
 Came across this little oddity the other day. Took me ages to work out what was going on, so thought I would share in case anyone else ran into the same issue.<!-- more -->
 

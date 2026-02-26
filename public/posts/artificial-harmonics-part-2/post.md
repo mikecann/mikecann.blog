@@ -8,7 +8,7 @@ oldUrl: /personal-mixes/artificial-harmonics-part-2
 
 \*\*
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/AS.gif)\*\*
+![](/wp-content/uploads/Image/AS.gif)\*\*
 
 **Artist:** [Artificial](https://www.mikecann.blog/www.artificial-studios.co.uk) ** Genre:** downtempo / chillout / pop
 

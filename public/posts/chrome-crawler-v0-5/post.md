@@ -10,7 +10,7 @@ title: Chrome Crawler v0.5
 oldUrl: /chrome-crawler/chrome-crawler-v0-5
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/05/icon128.png "icon128")](https://www.mikecann.blog/wp-content/uploads/2011/05/icon128.png)
+[![](/wp-content/uploads/2011/05/icon128.png "icon128")](/wp-content/uploads/2011/05/icon128.png)
 
 Just a quick update to my Chrome Crawler extension for chrome this afternoon after I received an email from Vinit Agrawal who had spotted and fixed a bug in the code :)
 

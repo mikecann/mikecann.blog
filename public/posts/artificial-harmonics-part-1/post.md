@@ -6,7 +6,7 @@ title: Artificial Harmonics ( part 1 )
 oldUrl: /personal-mixes/artificial-harmonics-part-1
 ---
 
-**![](https://www.mikecann.blog/wp-content/uploads/Image/PixelHouse.gif)**
+**![](/wp-content/uploads/Image/PixelHouse.gif)**
 
 **Artist:** [Artificial](https://www.mikecann.blog/www.artificial-studios.co.uk) ** Genre:** downtempo / chillout
 

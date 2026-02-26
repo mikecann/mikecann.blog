@@ -19,18 +19,18 @@ Well its been exactly [95 days since my last Alpha release](https://www.mikecann
 
 If you follow my [public Trello development board](https://trello.com/b/Ic11WQzF/mr-nibbles-forever) however you can see that I have been working in the intervening time, just not as fast as the earlier development:
 
-[![2015-06-18_15-22-50](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-22-50-1024x525.png)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-22-50.png)
+[![2015-06-18_15-22-50](/wp-content/uploads/2015/06/2015-06-18_15-22-50-1024x525.png)](/wp-content/uploads/2015/06/2015-06-18_15-22-50.png)
 
 In total there is something like 70 hours worth of my time that has gone into this release:
 
-![2015-06-18_15-21-12](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-18_15-21-12.png)
+![2015-06-18_15-21-12](/wp-content/uploads/2015/06/2015-06-18_15-21-12.png)
 
 Although 70 hours doesnt sound like all that much I think that this release contains more changes than any other. As hinted in the last release and other posts, I now have an artist on the project, [Woody Stables](https://twitter.com/woodystables) who has helped totally transform the in-game backgrounds, the outfits, the effects and many other aspects of the game:
 
-[![2015-06-19_07-54-53](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-53-1024x575.png)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-53.png)
-[![2015-06-17_20-46-28](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-17_20-46-28-1024x766.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-17_20-46-28.jpg)
-[![2015-06-19_07-54-14](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-14-1024x576.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-14.jpg)
-[![2015-06-19_07-54-30](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-30-1024x576.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/06/2015-06-19_07-54-30.jpg)
+[![2015-06-19_07-54-53](/wp-content/uploads/2015/06/2015-06-19_07-54-53-1024x575.png)](/wp-content/uploads/2015/06/2015-06-19_07-54-53.png)
+[![2015-06-17_20-46-28](/wp-content/uploads/2015/06/2015-06-17_20-46-28-1024x766.jpg)](/wp-content/uploads/2015/06/2015-06-17_20-46-28.jpg)
+[![2015-06-19_07-54-14](/wp-content/uploads/2015/06/2015-06-19_07-54-14-1024x576.jpg)](/wp-content/uploads/2015/06/2015-06-19_07-54-14.jpg)
+[![2015-06-19_07-54-30](/wp-content/uploads/2015/06/2015-06-19_07-54-30-1024x576.jpg)](/wp-content/uploads/2015/06/2015-06-19_07-54-30.jpg)
 
 So now there are 13 different outfits in the game which you can win by spinning the wheel. They all look different and awesome but still stick to the same cutesy Mr Nibbles art style. Some of them come with cool and interesting effects as the below video shows:
 

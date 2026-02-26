@@ -12,4 +12,4 @@ Got a new phone the other day, so had to back up all my photos before i switched
 
 Some highlights:
 
-![](https://www.mikecann.blog/wp-content/uploads/Photos//My22nd/DSC00369.JPG)![](https://www.mikecann.blog/wp-content/uploads/Photos//My22nd/DSC00239.jpg)![](https://www.mikecann.blog/wp-content/uploads/Photos//Hybrid06/DSC00344.JPG)
+![](/wp-content/uploads/Photos//My22nd/DSC00369.JPG)![](/wp-content/uploads/Photos//My22nd/DSC00239.jpg)![](/wp-content/uploads/Photos//Hybrid06/DSC00344.JPG)

@@ -6,7 +6,7 @@ title: Artificial-Studios 2
 oldUrl: /mysql/artificial-studios-2
 ---
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/artstu2.gif)
+![](/wp-content/uploads/Image/artstu2.gif)
 
 And then there was the second incarnation of Artificial-Studios. Although it was far more manageable than version 1.0 but it was still too complicated to add new content.
 **

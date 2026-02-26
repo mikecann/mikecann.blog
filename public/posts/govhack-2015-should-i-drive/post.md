@@ -23,17 +23,17 @@ I had heard of GovHack from one of the [Morning Startup](https://www.meetup.com/
 
 The West Australian government has been running this competition for several years now to try to promote their new open data policy. The idea is simple, get a bunch of nerds together, give them the data and offer some prizes and see what happens.
 
-[![CI-222zUcAAvd7s.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI-222zUcAAvd7s.jpg-large-768x1024.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/CI-222zUcAAvd7s.jpg-large.jpg)
+[![CI-222zUcAAvd7s.jpg-large](/wp-content/uploads/2015/07/CI-222zUcAAvd7s.jpg-large-768x1024.jpg)](/wp-content/uploads/2015/07/CI-222zUcAAvd7s.jpg-large.jpg)
 
 Well I turned up on Friday evening not knowing anyone and having no clue what to expect. So I grabbed a beer and started chatting.
 
 Some people were in teams already, some people worked together for a day job but it seemed like there were quite a few other people in the same boat as me, new to it, without a team or project or idea. That made me feel a little better, but I still had no clue what to expect.
 
-[![CI_vYWaUEAA1-_P.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_vYWaUEAA1-_P.jpg-large-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_vYWaUEAA1-_P.jpg-large.jpg)
+[![CI_vYWaUEAA1-_P.jpg-large](/wp-content/uploads/2015/07/CI_vYWaUEAA1-_P.jpg-large-1024x768.jpg)](/wp-content/uploads/2015/07/CI_vYWaUEAA1-_P.jpg-large.jpg)
 
 After a few short speeches the participants were invited to stand up and pitch their idea. All in all there were about 20 pitches. Some sounded interesting, some sounded really wacky such as one team wanted to use the data to become evil-masterminds. One team even suggested that they were going to correlate the prizes against the data and see which prizes were the best to go for then work out and idea from there.
 
-![CI_Fh1FUAAAv7yd.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Fh1FUAAAv7yd.jpg-large.jpg)
+![CI_Fh1FUAAAv7yd.jpg-large](/wp-content/uploads/2015/07/CI_Fh1FUAAAv7yd.jpg-large.jpg)
 
 After the pitches were over, we given 5 stickers to stick posters that had been hastily assembled by the pitchers. I think that the idea of this was to gauge the popularity of the project but im not sure exactly how that affected things in the end.
 
@@ -45,7 +45,7 @@ In the end I ended up wandering around for about 30 minutes like a lost lamb as 
 
 I thought this idea seemed simple enough, plus it sounded like something I could help out on, I knew front-end and back-end, had built web and mobile apps before so I signend up.
 
-[![CI_Y6mkUEAAG2fh.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Y6mkUEAAG2fh.jpg-large-1024x652.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/CI_Y6mkUEAAG2fh.jpg-large.jpg)
+[![CI_Y6mkUEAAG2fh.jpg-large](/wp-content/uploads/2015/07/CI_Y6mkUEAAG2fh.jpg-large-1024x652.jpg)](/wp-content/uploads/2015/07/CI_Y6mkUEAAG2fh.jpg-large.jpg)
 
 I think I got really lucky. They turned out to be a truly awesome bunch of people. There were 7 of us in total: Jake, the team leader and front end developer. Cam, the back-end dude with lots of experience with mapping and spacial data. Kim, the data miner and wrangler. Felix, a young but incredibly bright lad who did a bit of everything (including winning the young-and-up-coming guy to watch out for award). James, and his friend Apara who did the super important job of organizing the project and video. And of-course me, who took the role of tooling / data converter / uploader / production / whatever else needed doing.
 
@@ -63,7 +63,7 @@ I am pretty proud that we were able to not only build a working app that uses th
 
 We weren't quite done tho as we still had to do a live presentation to a panel of judges. We had 3 minutes to show what we had, then a little more time for questions from the judges.
 
-[![2015-07-05 16.52.41](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-05-16.52.41-1024x1024.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-05-16.52.41.jpg)
+[![2015-07-05 16.52.41](/wp-content/uploads/2015/07/2015-07-05-16.52.41-1024x1024.jpg)](/wp-content/uploads/2015/07/2015-07-05-16.52.41.jpg)
 
 Personally I felt that this one probably the worst part of the event. There were 20 teams presenting, we were number 14\.
 
@@ -81,16 +81,16 @@ Nevertheless our presentation went okay, nothing too major went wrong (apart fro
 
 After all the presentations, the judges disappeared for 45 minutes while they deliberated, enough time to grab a beer, then the awards started.
 
-![CJJboKPUkAE8Wnm.jpg-large](https://www.mikecann.blog/wp-content/uploads/2015/07/CJJboKPUkAE8Wnm.jpg-large.jpg)
+![CJJboKPUkAE8Wnm.jpg-large](/wp-content/uploads/2015/07/CJJboKPUkAE8Wnm.jpg-large.jpg)
 
 There were \$35,000 up for grabs in prizes over several different categories. You were supposed to elect which prizes you were going for on your project page, some teams chose to select most if not all of the prizes. [We went for 16 of the prizes](https://hackerspace.govhack.org/content/should-i-drive).
 
 In the end we ended up winning 2 of them including the single largest prize: [Main Roads Keep WA Moving Prize](https://hackerspace.govhack.org/prize_entries/main-roads-keep-wa-moving-prize) of $2,500\. In total we won $3,000 between us which was great, not the best but not the worst.
 
-![2015-07-06_19-07-28](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-06_19-07-28.jpg)
+![2015-07-06_19-07-28](/wp-content/uploads/2015/07/2015-07-06_19-07-28.jpg)
 
 For me tho, it wasn't about the prizes (in fact I didn't even know there was any cash prizes when I entered), it was more about getting out there and meeting other like-minded people who wanted to work together and build something new and cool and perhaps learn a thing or two about the WA data along the way.
 
 I think I succeeded in that modest goal 10 fold and am incredibly grateful to GovHack and my team for letting me be a part of it.
 
-[![Team shot](https://www.mikecann.blog/wp-content/uploads/2015/07/Team-shot-1024x768.jpg)](https://www.mikecann.blog/wp-content/uploads/2015/07/Team-shot.jpg)
+[![Team shot](/wp-content/uploads/2015/07/Team-shot-1024x768.jpg)](/wp-content/uploads/2015/07/Team-shot.jpg)

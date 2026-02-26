@@ -14,7 +14,7 @@ title: Shader Based 2D Shadowing
 oldUrl: /c/shader-based-2d-shadowing
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png "11_scene")](https://www.mikecann.blog/wp-content/uploads/2010/08/11_scene.png)
+[![](/wp-content/uploads/2010/08/11_scene.png "11_scene")](/wp-content/uploads/2010/08/11_scene.png)
 
 Those who know me know I used to do [quite abit of development](/posts/?s=xna) in c# using Microsoft's XNA platform.
 

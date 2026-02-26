@@ -12,7 +12,7 @@ title: Jessie Warden - Flash & Flex Videos
 oldUrl: /fun-amp-videos/jessie-warden-flash-flex-videos
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_01-Feb.-02-13.15.gif "ScreenHunter_01 Feb. 02 13.15")](https://www.mikecann.blog/wp-content/uploads/2010/02/ScreenHunter_01-Feb.-02-13.15.gif)
+[![](/wp-content/uploads/2010/02/ScreenHunter_01-Feb.-02-13.15.gif "ScreenHunter_01 Feb. 02 13.15")](/wp-content/uploads/2010/02/ScreenHunter_01-Feb.-02-13.15.gif)
 
 Thought id mention these videos as I have been watching them and really like the content. They are a series of video blog posts by one of the 'celebrities' of the Flash and Flex world, in which he talks about lots of stuff related to whats going on in the industry and the various frameworks he uses or recommends (or doesnt). He also has a few things to say about beer, which is a bonus!
 

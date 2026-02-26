@@ -12,7 +12,7 @@ title: On Porting RobotLegs2 & SwiftSupenders2 to Haxe
 oldUrl: /actionscript/on-porting-robotlegs2-swiftsupenders2-to-haxe
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/06/robotlegsplushaxe.jpg "robotlegsplushaxe")](https://www.mikecann.blog/wp-content/uploads/2012/06/robotlegsplushaxe.jpg)
+[![](/wp-content/uploads/2012/06/robotlegsplushaxe.jpg "robotlegsplushaxe")](/wp-content/uploads/2012/06/robotlegsplushaxe.jpg)
 
 I originally hoped that this post would be about my successful completion of a RobotLegs2 port to Haxe however something else has come up (more on that in a later post) so instead im just going to talk about the process and progress of the port thus far.
 
@@ -34,7 +34,7 @@ Then you can run it with:
 neko as3hx.n
 ```
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.gif "screenshot_01")](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.gif)
+[![](/wp-content/uploads/2012/06/screenshot_01.gif "screenshot_01")](/wp-content/uploads/2012/06/screenshot_01.gif)
 
 To convert a AS3 project give it an input and output folder:
 

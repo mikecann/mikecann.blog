@@ -18,11 +18,11 @@ This post has been over 6 years in the making but im glad I can finally write it
 
 Way back in [March of 2010](https://www.mikecann.blog/myprojects/windows-7-taskbar-monitor/) I wrote about a new tool I had developed with the snappy name "Windows 7 Taskbar Monitor". It was a little tool that used Windows' Performance Counter to show you what the current CPU, Memory and Network usage is:
 
-![taskbar-monitor-sceenshot01](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-sceenshot01.gif)
+![taskbar-monitor-sceenshot01](/wp-content/uploads/2016/11/taskbar-monitor-sceenshot01.gif)
 
 The cunning thing however is that I piggybacked on the new (at the time) "progress" value that you could get which would give you a nice visual indication of the current value for each monitor:
 
-![taskbar-monitor-screenshot02](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-monitor-screenshot02.gif)
+![taskbar-monitor-screenshot02](/wp-content/uploads/2016/11/taskbar-monitor-screenshot02.gif)
 
 To my surprise this little tool has more than justified its effort to create. I have used it every day for the past 6 years and has been an invaluable tool in working out "what the hell is my computer doing?" sort of problems.
 
@@ -34,9 +34,9 @@ Fast-forward a few more years to Windows 10 anniversary edition and Microsoft re
 
 Perfect, this was just what I needed to bring Taskbar Monitor to the store. Well (after a number of lengthy hurdles) I finally achieved it. I totally rewrote the tool to use a more modern Microsoft framework and gave it a new name, Glancer:
 
-[![taskbar-feature2-compressor](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-feature2-compressor-1024x638.gif)](https://www.mikecann.blog/wp-content/uploads/2016/11/taskbar-feature2-compressor.gif)
+[![taskbar-feature2-compressor](/wp-content/uploads/2016/11/taskbar-feature2-compressor-1024x638.gif)](/wp-content/uploads/2016/11/taskbar-feature2-compressor.gif)
 
-[![storescreenshot01](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot01-300x169.png)](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot01.png)[![storescreenshot03](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot03-300x169.png)](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot03.png)[![storescreenshot02](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot02-300x169.png)](https://www.mikecann.blog/wp-content/uploads/2016/11/StoreScreenshot02.png)
+[![storescreenshot01](/wp-content/uploads/2016/11/StoreScreenshot01-300x169.png)](/wp-content/uploads/2016/11/StoreScreenshot01.png)[![storescreenshot03](/wp-content/uploads/2016/11/StoreScreenshot03-300x169.png)](/wp-content/uploads/2016/11/StoreScreenshot03.png)[![storescreenshot02](/wp-content/uploads/2016/11/StoreScreenshot02-300x169.png)](/wp-content/uploads/2016/11/StoreScreenshot02.png)
 
 The basic functionality is the same, its just wrapped up in a prettier package and has a few more options.
 

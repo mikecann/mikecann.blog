@@ -10,7 +10,7 @@ title: Malaysia 2012
 oldUrl: /photos-personal/malaysia-2012
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg "screenshot_01")](https://www.mikecann.blog/wp-content/uploads/2012/06/screenshot_01.jpg)
+[![](/wp-content/uploads/2012/06/screenshot_01.jpg "screenshot_01")](/wp-content/uploads/2012/06/screenshot_01.jpg)
 
 For the past two weeks I have been travelling about Malaysia seeing a very small chunk of what there is to see there.
 

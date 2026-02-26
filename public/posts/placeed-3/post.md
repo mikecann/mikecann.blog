@@ -16,7 +16,7 @@ The reason for making this new version was because the original was starting to 
 
 So that&rsquo;s where I come in, and I wrote from scratch a new app and called it PlaceEd 3 (even though there wasn&rsquo;t really a fully released version of PlaceEd 2).
 
-<!--more-->![](https://www.mikecann.blog/wp-content/uploads/2008/02/placeed3out01.png)
+<!--more-->![](/wp-content/uploads/2008/02/placeed3out01.png)
 
 PlaceEd3 lets the user create a new project. This project can have levels added to it. Each level can have a certain number of layers. Layers can be either one large image or a tileset and tileset data. The user can then create objects and give them variables that can either be static (global to all objects of that type) or they can be local which means each object has its own value for that variable. Objects can then be placed on the level and moved and dragged about. Paths can also be placed on the level, this is useful for games that need to script specific movement sequences.
 

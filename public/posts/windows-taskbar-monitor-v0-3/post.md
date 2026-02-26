@@ -6,7 +6,7 @@ title: Windows Taskbar Monitor v0.3
 oldUrl: /c/windows-taskbar-monitor-v0-3
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_01.png "Shot_01")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_01.png)
+[![](/wp-content/uploads/2011/10/Shot_01.png "Shot_01")](/wp-content/uploads/2011/10/Shot_01.png)
 
 I have just pushed a few small changes to one of my projects, [Windows Taskbar Monitor](https://code.google.com/p/win7-taskbar-mon/).
 
@@ -30,19 +30,19 @@ One way to get all three to start with different monitors when windows startup w
 
 **1) Click the windows start icon, then right click on "all programs" and click open:**
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_04.png "Shot_04")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_04.png)
+[![](/wp-content/uploads/2011/10/Shot_04.png "Shot_04")](/wp-content/uploads/2011/10/Shot_04.png)
 
 **2) Navigate to Programs > Startup then make three shortcuts to Windows Taskbar Monitor v0.3 you can rename the shortcuts if you like:**
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_05.png "Shot_05")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_05.png)
+[![](/wp-content/uploads/2011/10/Shot_05.png "Shot_05")](/wp-content/uploads/2011/10/Shot_05.png)
 
 **3) For each shortcut, right click and select properties:**
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_06.png "Shot_06")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_06.png)
+[![](/wp-content/uploads/2011/10/Shot_06.png "Shot_06")](/wp-content/uploads/2011/10/Shot_06.png)
 
 **4) Now enter your command line arguments in the Target field after the final .exe:**
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_07.png "Shot_07")](https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_07.png)
+[![](/wp-content/uploads/2011/10/Shot_07.png "Shot_07")](/wp-content/uploads/2011/10/Shot_07.png)
 
 Et voilÃ  when windows starts you should now have three different monitors opening!
 

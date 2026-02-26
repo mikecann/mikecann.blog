@@ -16,7 +16,7 @@ title: Chrome Crawler - A web-crawler written in Javascript
 oldUrl: /chrome-crawler/chrome-crawler-a-web-crawler-written-in-javascript
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/12/700.jpg "700")](https://www.mikecann.blog/wp-content/uploads/2010/12/700.jpg)
+[![](/wp-content/uploads/2010/12/700.jpg "700")](/wp-content/uploads/2010/12/700.jpg)
 
 **EDIT: I now have a newer, better version of this called "[Recursive](/posts/recursive-explore-the-endless-web)"**
 
@@ -26,7 +26,7 @@ Depending on your level of geekness you may or may not enjoy this one.
 
 I proudly present [Chrome Crawler](https://chrome.google.com/extensions/detail/amjiobljggbfblhmiadbhpjbjakbkldd), my latest Google Chrome extension:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_002.png "Shot_002")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_002.png)
+[![](/wp-content/uploads/2010/12/Shot_002.png "Shot_002")](/wp-content/uploads/2010/12/Shot_002.png)
 
 The idea is simple really. You just give it a URL, it then goes off and finds all the links on that page then follows them to more pages then gets all the links and follows them and so on and so on.
 
@@ -34,7 +34,7 @@ Along the way it checks each page to see if there are any 'interesting' files li
 
 Theres an options page that lets you customise the way it all works:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_004.png "Shot_004")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_004.png)
+[![](/wp-content/uploads/2010/12/Shot_004.png "Shot_004")](/wp-content/uploads/2010/12/Shot_004.png)
 
 If you are still confused check out the video below:
 
@@ -48,6 +48,6 @@ It didnt take me long to knock out this project, one lazy Saturday for the maj
 
 Oh finally, I wouldnt try using this on a google page as you will likely end up seeing this quite often:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_003.png "Shot_003")](https://www.mikecann.blog/wp-content/uploads/2010/12/Shot_003.png)
+[![](/wp-content/uploads/2010/12/Shot_003.png "Shot_003")](/wp-content/uploads/2010/12/Shot_003.png)
 
 Anyways you can grab it over on the [Chrome extensions gallery here](https://chrome.google.com/extensions/detail/amjiobljggbfblhmiadbhpjbjakbkldd). If you enjoy it please leave me a review / comment, much love!

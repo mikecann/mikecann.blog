@@ -10,7 +10,7 @@ title: The Evolutionary Void
 oldUrl: /books/the-evolutionary-void
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/09/photo.jpg "photo")](https://www.mikecann.blog/wp-content/uploads/2010/09/photo.jpg)
+[![](/wp-content/uploads/2010/09/photo.jpg "photo")](/wp-content/uploads/2010/09/photo.jpg)
 
 Just thought I would post about my favourite author Peter F. Hamilton.
 

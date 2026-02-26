@@ -12,7 +12,7 @@ title: Post To Tumblr - v0.2
 oldUrl: /post-to-tumbr/post-to-tumblr-v0-2
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0011.png "Shot_001")](https://www.mikecann.blog/wp-content/uploads/2010/10/Shot_0011.png)
+[![](/wp-content/uploads/2010/10/Shot_0011.png "Shot_001")](/wp-content/uploads/2010/10/Shot_0011.png)
 
 Just a quick update to [my first chrome extension](/posts/my-first-chrome-extension-post-to-tumblr/).
 

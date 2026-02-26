@@ -10,7 +10,7 @@ title: "Artificial - Argon [Tech, House, Progressive]"
 oldUrl: /audio/artificial-argon-tech-house-progressive
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png "Argon-Cover")](https://www.mikecann.blog/wp-content/uploads/2011/08/Argon-Cover.png)
+[![](/wp-content/uploads/2011/08/Argon-Cover.png "Argon-Cover")](/wp-content/uploads/2011/08/Argon-Cover.png)
 
 First part in a two part mix, see "[Iridium](/audio/artificial-iridium-trance-electro-house/)" for part 2.
 

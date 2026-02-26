@@ -12,4 +12,4 @@ Okay all that know me know i love kittys, but i also love to see kittys get scar
 
 This one made me laugh so hard...
 
-[![](https://www.mikecann.blog/wp-content/uploads/Image/kittywash.png)](https://youtube.com/watch?v=15bwhVxw-Bg)
+[![](/wp-content/uploads/Image/kittywash.png)](https://youtube.com/watch?v=15bwhVxw-Bg)

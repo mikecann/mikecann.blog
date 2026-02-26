@@ -28,13 +28,13 @@ Starting off with [David Arno's .Net port of Ash](https://github.com/DavidArno/A
 
 Ash Entity is the key piece to the puzzle. You add it as a component to your game object:
 
-![screenshot_003](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_003.png)
+![screenshot_003](/wp-content/uploads/2014/07/screenshot_003.png)
 
 It then checks to see which Unity components have been added or removed each frame and updates the Ash Entity reference. Its simple but it works! It even includes the default Unity Components so that means you don't need a base "AshComponent".
 
 The AshEngine serves as the root of the hierarchy. So long as you place entities below it they will be able to find the engine. This makes it really easy and convenient to create scenes at design time and have them work when you hit play:
 
-![screenshot_005](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_005.png)
+![screenshot_005](/wp-content/uploads/2014/07/screenshot_005.png)
 
 From that simple foundation I decided to have a go at porting the entire of Richard's Asteroids example over to Unity. I was surprised at how little issues I ran into. You can give it a play here:
 
@@ -47,7 +47,7 @@ The only changes I needed to make from the .Net port was to change some "interna
 
 Instead of manually defining the components in "EntityCreator" I use Unity's prefab system which makes it really nice and easy to edit properties in the inspector in the editor:
 
-[![screenshot_004](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_004-1024x685.png)](https://www.mikecann.blog/wp-content/uploads/2014/07/screenshot_004.png)
+[![screenshot_004](/wp-content/uploads/2014/07/screenshot_004-1024x685.png)](/wp-content/uploads/2014/07/screenshot_004.png)
 
 Then load them the usual Unity way using Resources.Load().
 

@@ -32,7 +32,7 @@ I may go back to 3) in a week or two if I need to.
 
 As for 1) well I decided after an hour or two of messing around in Photoshop that it would be easier and faster to just buy an off-the-shelf WordPress theme and adjust that to my needs as I was intimately familiar with WordPress. The theme I chose was [Grizzly from Wegrass](https://themeforest.net/item/grizzly-responsive-app-showcase-corporate/1546240):
 
-[![2015-07-03_07-33-47](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-33-47-300x231.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-33-47.png)
+[![2015-07-03_07-33-47](/wp-content/uploads/2015/07/2015-07-03_07-33-47-300x231.png)](/wp-content/uploads/2015/07/2015-07-03_07-33-47.png)
 
 It seemed to have all the features I needed for now and was responsive which is super important these days.
 
@@ -42,11 +42,11 @@ After much head scratching I decided I wanted to base the name around my favorit
 
 So in the end I decided to go with something that was related and instead use the Mantis Shrimp in the logo. So I went with.... Epic Shrimp:
 
-[![2015-07-03_07-41-32](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-41-32-1024x728.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-41-32.png)
+[![2015-07-03_07-41-32](/wp-content/uploads/2015/07/2015-07-03_07-41-32-1024x728.png)](/wp-content/uploads/2015/07/2015-07-03_07-41-32.png)
 
 The site is still very much under development but at least I now have a good landing page for Mr Nibbles, Ectoplasm and Mr Nibbles Forever:
 
-![2015-07-03_07-43-27](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-43-27.png)
+![2015-07-03_07-43-27](/wp-content/uploads/2015/07/2015-07-03_07-43-27.png)
 
 So although last week was supposed to just be design, I decided to go the full-hog and implement too, which means that I have one more week free for development.
 
@@ -58,7 +58,7 @@ Speaking of development, this week we [supposed to be a bug-fixing and polish pa
 
 Its true that I did indeed fix some minor bugs...
 
-![2015-07-03_07-46-39](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-46-39.png)
+![2015-07-03_07-46-39](/wp-content/uploads/2015/07/2015-07-03_07-46-39.png)
 
 ... this week was mostly dedicated to improving the high scores system in the game.
 
@@ -66,23 +66,23 @@ As a result of some feedback from people I decided that the game needs to be mor
 
 I was unsatisfied with my current GameCentre and GoolgePlayServices implementation of the highscores so I decided to roll my own using my Parse.com experience. So now you will notice that next to the high-scores button that every each play you are given your daily rank:
 
-[![2015-07-03_07-49-39](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-49-39-1024x772.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-49-39.png)
+[![2015-07-03_07-49-39](/wp-content/uploads/2015/07/2015-07-03_07-49-39-1024x772.png)](/wp-content/uploads/2015/07/2015-07-03_07-49-39.png)
 
 Clicking the button will show you the top ranked players in each category:
 
-[![2015-07-03_07-51-51](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-51-51-1024x768.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-51-51.png)
+[![2015-07-03_07-51-51](/wp-content/uploads/2015/07/2015-07-03_07-51-51-1024x768.png)](/wp-content/uploads/2015/07/2015-07-03_07-51-51.png)
 
 You will notice that your name is "???" until you set your name:
 
-[![2015-07-03_07-54-31](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-54-31-1024x763.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-54-31.png)
+[![2015-07-03_07-54-31](/wp-content/uploads/2015/07/2015-07-03_07-54-31-1024x763.png)](/wp-content/uploads/2015/07/2015-07-03_07-54-31.png)
 
 Once done, all your old and new scores will now be saved under that name, this works across devices too.
 
-[![2015-07-03_07-55-33](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-55-33-1024x773.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-55-33.png)
+[![2015-07-03_07-55-33](/wp-content/uploads/2015/07/2015-07-03_07-55-33-1024x773.png)](/wp-content/uploads/2015/07/2015-07-03_07-55-33.png)
 
 I am also experimenting around with having a button next to any high score which also has a saved replay.
 
-[![2015-07-03_07-57-26](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-57-26-1024x763.png)](https://www.mikecann.blog/wp-content/uploads/2015/07/2015-07-03_07-57-26.png)
+[![2015-07-03_07-57-26](/wp-content/uploads/2015/07/2015-07-03_07-57-26-1024x763.png)](/wp-content/uploads/2015/07/2015-07-03_07-57-26.png)
 
 Clicking the button will open Everyplay and show the recorded run for that highscore, which I think is pretty cool!
 

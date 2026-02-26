@@ -19,15 +19,15 @@ The 4th week of development is over and although I haven't had as much time as I
 
 I have managed to the "Wheel of Fortune" in and the "Dressing Room". They aren't quite complete yet but you can see where i'm going with it. You can spend your collected nibbles on the wheel:
 
-[![2015-02-09_09-43-42](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-43-42-1024x664.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-43-42.png)
+[![2015-02-09_09-43-42](/wp-content/uploads/2015/02/2015-02-09_09-43-42-1024x664.png)](/wp-content/uploads/2015/02/2015-02-09_09-43-42.png)
 
 You can win a variety of prizes:
 
-![2015-02-09_09-44-45](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-44-45.png)
+![2015-02-09_09-44-45](/wp-content/uploads/2015/02/2015-02-09_09-44-45.png)
 
 At the moment there are two types of prizes "Powerups" and "Outfits". Powerups may be things like an extra life or a free respin of the wheel or slow-mo. Outfits will change the appearance of Mr Nibbles as you play the game. I intend for there to be quite a few to choose from:
 
-[![2015-02-09_09-47-11](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-47-11-1024x576.png)](https://www.mikecann.blog/wp-content/uploads/2015/02/2015-02-09_09-47-11.png)
+[![2015-02-09_09-47-11](/wp-content/uploads/2015/02/2015-02-09_09-47-11-1024x576.png)](/wp-content/uploads/2015/02/2015-02-09_09-47-11.png)
 
 The outfits wont just change the way Mr Nibbles looks they may do extra things such add particle effects, trails or different sounds. Im hoping this will provide the extra variance to the game that will keep the player playing, striving to get more nibbles and a better score.
 

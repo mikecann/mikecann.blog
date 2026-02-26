@@ -6,7 +6,7 @@ title: Martin-Kaye Case Tracker
 oldUrl: /actionscript/martin-kaye-case-tracker
 ---
 
-![](https://www.mikecann.blog/wp-content/uploads/Image/ecase.gif)
+![](/wp-content/uploads/Image/ecase.gif)
 This is my first commercial Rich Internet App written in flash. It was written for the legal firm Martin-Kaye as a front end for thier extensive database.
 
 <!-- more -->

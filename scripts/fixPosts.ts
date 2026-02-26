@@ -117,7 +117,24 @@ function fixDefunctPicasaLinks(slug: string, raw: string): string {
   return result;
 }
 
-// ─── Fix 4: Specific broken image/link fixes ───────────────────────────────────
+// ─── Fix 4: WordPress absolute URLs -> relative (so they go through rewrite to CloudFront) ─
+
+function fixWordPressAbsoluteUrls(slug: string, raw: string): string {
+  let result = raw;
+
+  // https://www.mikecann.blog/wp-content/... -> /wp-content/...
+  // This makes images load through the Next.js rewrite to CloudFront (works on localhost + prod)
+  const wpContentRegex = /https:\/\/www\.mikecann\.blog\/wp-content\//g;
+  const matches = result.match(wpContentRegex);
+  if (matches && matches.length > 0) {
+    result = result.replace(wpContentRegex, "/wp-content/");
+    logFix(slug, "wordpress-absolute-url", `Converted ${matches.length} WordPress wp-content URL(s) to relative`, "https://www.mikecann.blog/wp-content/", "/wp-content/");
+  }
+
+  return result;
+}
+
+// ─── Fix 5: Specific broken image/link fixes ───────────────────────────────────
 
 function fixSpecificPosts(slug: string, raw: string): string {
   let result = raw;
@@ -305,6 +322,7 @@ async function main() {
       raw = fixAboveunder(slug, raw);
       raw = fixProtocolRelativeUrls(slug, raw);
       raw = fixDefunctPicasaLinks(slug, raw);
+      raw = fixWordPressAbsoluteUrls(slug, raw);
       raw = fixSpecificPosts(slug, raw);
 
       // Only write if changed

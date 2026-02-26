@@ -11,7 +11,7 @@ title: Mike Goes Down Under
 oldUrl: /photos-personal/mike-goes-down-under
 ---
 
-[![CropperCapture[1]](https://www.mikecann.blog/wp-content/uploads/2014/03/CropperCapture1.png)](https://www.mikecann.blog/wp-content/uploads/2014/03/CropperCapture1.png)
+[![CropperCapture[1]](/wp-content/uploads/2014/03/CropperCapture1.png)](/wp-content/uploads/2014/03/CropperCapture1.png)
 
 Last May I took off on a journey of a life time to the Americas. In 8.5 months I [visited 16 countries](https://www.mikecann.blog/travel/the-trip-2013-the-stats/). Along the way I had the good fortune of meeting a [special lady](https://www.mikecann.blog/uncategorized/the-trip-2013-guadalajara-to-mexico-city/). We travelled together for 5 months, virtually every second of every single day was spent together.
 

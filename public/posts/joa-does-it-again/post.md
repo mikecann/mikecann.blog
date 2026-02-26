@@ -14,7 +14,7 @@ title: Joa Does It Again!
 oldUrl: /actionscript/joa-does-it-again
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-31-14.04.jpg "ScreenHunter_01 Aug. 31 14.04")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-31-14.04.jpg)
+[![](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-31-14.04.jpg "ScreenHunter_01 Aug. 31 14.04")](/wp-content/uploads/2010/08/ScreenHunter_01-Aug.-31-14.04.jpg)
 
 So I have [written about Mr Joa 'The Flash God' Ebert before](/posts/funk-ioc-a-new-dependency-injection-framework/). He is well known throughout the Flash community for his incredible coding skills, particularly his work on low-level SWF optimisation.
 

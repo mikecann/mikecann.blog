@@ -12,7 +12,7 @@ title: The Final Development Update for Mr Nibbles Mobile Game
 oldUrl: /games/the-final-development-update-for-mr-nibbles-mobile-game
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/08/title.png "title")](https://www.mikecann.blog/wp-content/uploads/2012/08/title.png)
+[![](/wp-content/uploads/2012/08/title.png "title")](/wp-content/uploads/2012/08/title.png)
 
 Well it may have taken two weeks longer than [my original plan](/posts/lets-make-a-mobile-game-in-3-weeks-with-haxe-nme/) but I can say that after five weeks of development the game is pretty much complete.
 
@@ -26,8 +26,8 @@ So a short post this one, this week will be about packaging the game together 
 
 Before I go tho here are the three stages in the game, showing off the awesome artwork of my colleague Moh:
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_021.gif "screenshot_02")](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_021.gif)
+[![](/wp-content/uploads/2012/08/screenshot_021.gif "screenshot_02")](/wp-content/uploads/2012/08/screenshot_021.gif)
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_031.gif "screenshot_03")](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_031.gif)
+[![](/wp-content/uploads/2012/08/screenshot_031.gif "screenshot_03")](/wp-content/uploads/2012/08/screenshot_031.gif)
 
-[![](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_051.jpg "screenshot_05")](https://www.mikecann.blog/wp-content/uploads/2012/08/screenshot_051.jpg)
+[![](/wp-content/uploads/2012/08/screenshot_051.jpg "screenshot_05")](/wp-content/uploads/2012/08/screenshot_051.jpg)

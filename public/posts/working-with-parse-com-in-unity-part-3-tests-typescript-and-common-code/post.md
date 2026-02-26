@@ -33,21 +33,21 @@ I briefly talked about App structure in [my first post](https://www.mikecann.blo
 
 I like to have the Parse command line app running in develop mode (parse develop "Parse Unity Sample") at the same time so I can see whats happening on the server when I call it, and it allows for very quick iterations:
 
-[![2014-11-11_08-39-16](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-39-16-1024x268.png)](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-39-16.png)
+[![2014-11-11_08-39-16](/wp-content/uploads/2014/11/2014-11-11_08-39-16-1024x268.png)](/wp-content/uploads/2014/11/2014-11-11_08-39-16.png)
 
 ## Typescript
 
 I have talked a lot in the past about my love for Typescript and so I love to use it whenever I can. Parse lets you run Javascript code on the server so I use Typescript that compiles to Javascript. To get it to work I first create a Typescript project that has been setup with CommonJS as the module system:
 
-![2014-11-11_08-40-46](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-40-46.png)
+![2014-11-11_08-40-46](/wp-content/uploads/2014/11/2014-11-11_08-40-46.png)
 
 I then make sure all the code is contained withing the /cloud folder (so that the require() works):
 
-[![2014-11-11_08-45-22](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-45-22-1024x324.png)](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-45-22.png)
+[![2014-11-11_08-45-22](/wp-content/uploads/2014/11/2014-11-11_08-45-22-1024x324.png)](/wp-content/uploads/2014/11/2014-11-11_08-45-22.png)
 
 It works well, particularly when combined with my (not yet finished) Typescript definition for Parse which provides type safety for as much as possible:
 
-![2014-11-11_08-47-02](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-47-02.png)
+![2014-11-11_08-47-02](/wp-content/uploads/2014/11/2014-11-11_08-47-02.png)
 
 For example, the code that is run before a User is saved looks like:
 
@@ -112,17 +112,17 @@ I included some simple helpers that I like to use for testing which setup Parse 
 
 If you use Visual Studio's Test Explorer with the parse command line you can get really good feedback on what is happening on the server:
 
-[![2014-11-11_08-59-15](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-59-15-1024x386.png)](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_08-59-15.png)
+[![2014-11-11_08-59-15](/wp-content/uploads/2014/11/2014-11-11_08-59-15-1024x386.png)](/wp-content/uploads/2014/11/2014-11-11_08-59-15.png)
 
 ## Common Code
 
 Because I write my tests in C# and my Unity code is in C# I would like to share my common code between the two projects. Unfortunately simply splitting the project out into a library project then including it as a reference in the testing project doesn't work because Unity requires a different compiler (Unity 3.5 subset on mono) and thus when you try to add that as a reference you get errors related to invalid assemblies:
 
-![2014-11-11_09-03-05](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_09-03-05.png)
+![2014-11-11_09-03-05](/wp-content/uploads/2014/11/2014-11-11_09-03-05.png)
 
 The solution I found is to use a little known trick of linking source. To do this select the "Models" folder from the common project and while holding Control and Shift drag it into the Backend project, you should note that the cursor changes to a little shortcut icon and when in the backend project the file icons now have a shortcut icon to indicate they are linked:
 
-![2014-11-11_09-05-26](https://www.mikecann.blog/wp-content/uploads/2014/11/2014-11-11_09-05-26.png)
+![2014-11-11_09-05-26](/wp-content/uploads/2014/11/2014-11-11_09-05-26.png)
 
 This means that files are linked to the Common project so they are included in compilation and any changes you make to those files in either the Common project or Backend project will be reflected in the other.
 

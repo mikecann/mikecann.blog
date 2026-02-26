@@ -18,35 +18,35 @@ Its been a while since I wrote about my Chrome extension Trello Tasks but thats 
 
 Well its pretty much exactly the same as Trello Tasks in functionality, so ill copy the description [from that post](/posts/trello-tasks-a-new-chrome-extension/):
 
-![](https://www.mikecann.blog/wp-content/uploads/2015/11/screenshot-01-640x400.png)
+![](/wp-content/uploads/2015/11/screenshot-01-640x400.png)
 
 The TLDR; of Trello Tasks is: it augments Trello by turning Cards into "completable" tasks.
 
 One of the most common ways to use Trello is in the "ToDo" style. In this style you have three lists, ToDo, Doing and Done:
 
-![2015-11-25_08-28-57](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-28-57.png)
+![2015-11-25_08-28-57](/wp-content/uploads/2015/11/2015-11-25_08-28-57.png)
 
 In this style, when you start work on something, you move it from the "ToDo" List to "Doing" List then when its complete you move it to "Done" List.
 
 This is all well and good but what if you use a different system of organisation such as arranging the items by category:
 
-![2015-11-25_08-31-45](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-31-45.png)
+![2015-11-25_08-31-45](/wp-content/uploads/2015/11/2015-11-25_08-31-45.png)
 
 Now if you want to indicate that you have read a book or watched a movie you would have to either drag it into the "Done" list (and loose the categorisation) or create a "Done" list for each category. One other option is to "Archive" the card but doing this removes it from the list altogether.
 
-![2015-11-25_08-36-50](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-36-50.gif)
+![2015-11-25_08-36-50](/wp-content/uploads/2015/11/2015-11-25_08-36-50.gif)
 
 So I decided to try and solve this very particular but annoying problem. My solution is to add a checkbox to each card. Now cards can be marked "complete" and "uncomplete" by simply checking the checkbox.
 
-![2015-11-25_08-41-18](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-41-18.png)
+![2015-11-25_08-41-18](/wp-content/uploads/2015/11/2015-11-25_08-41-18.png)
 
 The extension works by piggybacking on Trello's comments system. So each time you complete or uncomplete a task the extension adds a comment to the card.
 
-![2015-11-25_08-43-25](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-43-25.png)
+![2015-11-25_08-43-25](/wp-content/uploads/2015/11/2015-11-25_08-43-25.png)
 
 This means that in a multi-user board you can tell who completed or uncompleted a task and syncing "just works":
 
-![2015-11-25_08-47-32](https://www.mikecann.blog/wp-content/uploads/2015/11/2015-11-25_08-47-32.gif)
+![2015-11-25_08-47-32](/wp-content/uploads/2015/11/2015-11-25_08-47-32.gif)
 
 # Whats different?
 

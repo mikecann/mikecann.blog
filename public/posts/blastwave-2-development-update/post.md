@@ -14,7 +14,7 @@ We are still working on [BlastWave 2](https://www.mikecann.blog/?p=513). Over th
 
 <!-- more -->
 
-![bwupdate](https://www.mikecann.blog/wp-content/uploads/2009/06/bwupdate.jpg "bwupdate")
+![bwupdate](/wp-content/uploads/2009/06/bwupdate.jpg "bwupdate")
 
 As can be seen by the screeny we have added many of the characters (tho they need some touching up still) and have added some scenery elements. On the code side I have been playing around with the physics provided by [Box2D](https://box2dflash.sourceforge.net/).
 

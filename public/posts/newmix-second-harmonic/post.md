@@ -14,7 +14,7 @@ title: Newmix - Second Harmonic
 oldUrl: /audio/newmix-second-harmonic
 ---
 
-[![head02](https://www.mikecann.blog/wp-content/uploads/2013/01/head02.png)](/posts/newmix-second-harmonic/attachment/head02-2/)
+[![head02](/wp-content/uploads/2013/01/head02.png)](/posts/newmix-second-harmonic/attachment/head02-2/)
 
 Its been quite a while since I last made a mix. The last one [Second Life](https://soundcloud.com/mikecann/artificial-second-life) was a collection of my favorite dubstep and bass tunes at the time. Since then the genre has grown and diversified and other sub-genres have opened up. Im really into some of these new sounds that involve more melody and progression but keep that rough bassey sound that popularizes dubstep.
 

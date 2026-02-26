@@ -11,7 +11,7 @@ title: Ludum Dare - Hour 22
 oldUrl: /48-hours-later/ludum-dare-hour-22
 ---
 
-[![](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-23.59.jpg "ScreenHunter_02 Aug. 21 23.59")](https://www.mikecann.blog/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-23.59.jpg)
+[![](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-23.59.jpg "ScreenHunter_02 Aug. 21 23.59")](/wp-content/uploads/2010/08/ScreenHunter_02-Aug.-21-23.59.jpg)
 
 Okay, im starting to get pretty tired. Its not very late (midnight) but I think the lack of sleep last night is catching up with me. Im gonna get a few hours kip now then back up early to start again I think.
 

@@ -10,4 +10,4 @@ A quick little teaser of my next flash game.. ;)
 
 <!-- more -->
 
-[![](https://www.mikecann.blog/wp-content/uploads/2008/11/sneakpeekflashteroids01.png "sneakpeekflashteroids01")](https://www.mikecann.blog/wp-content/uploads/2008/11/sneakpeekflashteroids01.png)
+[![](/wp-content/uploads/2008/11/sneakpeekflashteroids01.png "sneakpeekflashteroids01")](/wp-content/uploads/2008/11/sneakpeekflashteroids01.png)

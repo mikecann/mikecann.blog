@@ -9,7 +9,7 @@ title: Funky Javascript Trick
 oldUrl: /programming/funky-javascript-trick
 ---
 
-![img01](https://www.mikecann.blog/wp-content/uploads/2009/05/img01.png "img01")
+![img01](/wp-content/uploads/2009/05/img01.png "img01")
 
 Ha! [Tuhoojabotti](https://canihasablog.blogspot.com/) just informed me of this neat little trick. If you are on Firefox stick the following into the address bar and hit enter.
 
