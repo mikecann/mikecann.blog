@@ -12,4 +12,4 @@ Yep, thats right, its taken me months of hard effort and stress but i have final
 
 Anyways enough chatter, game follows...
 
-<object width="600" height="600" data="https://www.mikecann.blog/projects/flashteroids/Flashteroids3D.swf" type="application/x-shockwave-flash"><param name="name" value="Flashteroids3D" /><param name="src" value="https://www.mikecann.blog/projects/flashteroids/Flashteroids3D.swf" /><param name="bgcolor" value="#ffffff" /></object>
+<object width="600" height="600" data="/projects/flashteroids/Flashteroids3D.swf" type="application/x-shockwave-flash"><param name="name" value="Flashteroids3D" /><param name="src" value="/projects/flashteroids/Flashteroids3D.swf" /><param name="bgcolor" value="#ffffff" /></object>

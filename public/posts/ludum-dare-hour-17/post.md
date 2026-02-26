@@ -23,7 +23,7 @@ Ive made quite abit of progress with the core bits of the engine including the p
 
 Dont believe me? Take a look for yourself:
 
-<object style="width: 600px; height: 500px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="500" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/DumpingGround/ld/18/02/LudumDare18.swf" /><embed style="width: 600px; height: 500px;" type="application/x-shockwave-flash" width="600" height="500" src="https://www.mikecann.blog/DumpingGround/ld/18/02/LudumDare18.swf"></embed></object>
+<object style="width: 600px; height: 500px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="500" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/DumpingGround/ld/18/02/LudumDare18.swf" /><embed style="width: 600px; height: 500px;" type="application/x-shockwave-flash" width="600" height="500" src="/DumpingGround/ld/18/02/LudumDare18.swf"></embed></object>
 
 Theres still no game really, just a pretty tech demo. Im hoping the gameplay will come next :)
 

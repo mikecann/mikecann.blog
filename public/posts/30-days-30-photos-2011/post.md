@@ -12,7 +12,7 @@ title: 30 Days 30 Photos - 2011
 oldUrl: /photos-personal/30-days-30-photos-2011
 ---
 
-<embed type="application/x-shockwave-flash" src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="700" height="600" flashvars="host=picasaweb.google.com&hl=en_GB&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Fmike.cann%2Falbumid%2F5624071118328145361%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_GB" pluginspage="https://www.macromedia.com/go/getflashplayer"></embed>
+*[Flash embed no longer available]*
 
 For the last 30 days me and some friends have been taking one photo [every single day](https://twitter.com/#!/mikeysee).
 

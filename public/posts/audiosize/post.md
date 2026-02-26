@@ -14,4 +14,4 @@ Its mainly a test to see how the new GameJacket tech fares when floated on the o
 
 Still, give it a go let me know what you think!
 
-<object width="600" height="500" data="https://games.mochiads.com/c/g/audiosize_v1/Audiosize.swf" type="application/x-shockwave-flash"><param name="src" value="https://games.mochiads.com/c/g/audiosize_v1/Audiosize.swf" /></object>
+*[Flash embed no longer available]*

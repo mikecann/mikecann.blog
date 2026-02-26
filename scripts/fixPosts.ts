@@ -180,6 +180,104 @@ function fixBrokenMikecannImages(slug: string, raw: string): string {
   return result;
 }
 
+// ─── Fix 7: Convert absolute https://www.mikecann.blog/projects|DumpingGround to relative ─
+
+function fixMikecannFlashAbsoluteUrls(slug: string, raw: string): string {
+  let result = raw;
+
+  const replacements: Array<{ from: RegExp; to: string; label: string }> = [
+    { from: /https:\/\/www\.mikecann\.blog\/projects\//g, to: "/projects/", label: "https://www.mikecann.blog/projects/" },
+    { from: /https:\/\/www\.mikecann\.blog\/DumpingGround\//g, to: "/DumpingGround/", label: "https://www.mikecann.blog/DumpingGround/" },
+  ];
+
+  for (const { from, to, label } of replacements) {
+    const matches = result.match(from);
+    if (matches && matches.length > 0) {
+      result = result.replace(from, to);
+      logFix(slug, "flash-absolute-url", `Converted ${matches.length} absolute Flash URL(s) to relative`, label, to);
+    }
+  }
+
+  return result;
+}
+
+// ─── Fix 8: Dead third-party Flash embeds ────────────────────────────────────
+
+const FLASH_DEAD_NOTE = "*[Flash embed no longer available]*";
+
+// Domains whose Flash SWF files are permanently gone
+const DEAD_FLASH_DOMAINS = [
+  "flash.revver.com",
+  "games.mochiads.com",
+  "video.google.com",
+  "update.videoegg.com",
+  "static.escapistmagazine.com",
+  "picasaweb.google.com/s/c/bin/slideshow.swf",
+];
+
+function replaceFlashBlock(content: string, urlPattern: RegExp, note: string): { result: string; count: number } {
+  let result = content;
+  let count = 0;
+
+  // Replace full <object>...</object> blocks that reference the dead URL
+  // (handles both data= and nested <param src=> patterns)
+  result = result.replace(/<object[\s\S]*?<\/object>/gi, (match) => {
+    if (urlPattern.test(match)) {
+      count++;
+      return note;
+    }
+    return match;
+  });
+
+  // Replace standalone <embed ...> tags (with optional </embed>) for any that weren't inside an <object>
+  result = result.replace(/<embed[^>]*>(?:<\/embed>)?/gi, (match) => {
+    if (urlPattern.test(match)) {
+      count++;
+      return note;
+    }
+    return match;
+  });
+
+  return { result, count };
+}
+
+function fixVimeoFlashEmbeds(slug: string, raw: string): string {
+  let result = raw;
+  let count = 0;
+
+  // Match full <object> block that references vimeo moogaloop.swf
+  result = result.replace(/<object([^>]*)>[\s\S]*?vimeo\.com\/moogaloop\.swf\?clip_id=(\d+)[\s\S]*?<\/object>/gi, (match, attrs, clipId) => {
+    const wMatch = attrs.match(/width=["']?(\d+)/i);
+    const hMatch = attrs.match(/height=["']?(\d+)/i);
+    const w = wMatch ? wMatch[1] : "640";
+    const h = hMatch ? hMatch[1] : "360";
+    count++;
+    return `<iframe src="https://player.vimeo.com/video/${clipId}" width="${w}" height="${h}" frameborder="0" allowfullscreen></iframe>`;
+  });
+
+  if (count > 0) logFix(slug, "flash-vimeo-rescue", `Converted ${count} Vimeo Flash embed(s) to iframe`, "vimeo.com/moogaloop.swf", "player.vimeo.com/video/...");
+  return result;
+}
+
+function fixDeadThirdPartyFlashEmbeds(slug: string, raw: string): string {
+  let result = raw;
+
+  // First rescue Vimeo (convert to iframe before the dead-embed pass)
+  result = fixVimeoFlashEmbeds(slug, result);
+
+  for (const domain of DEAD_FLASH_DOMAINS) {
+    const escaped = domain.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pattern = new RegExp(escaped, "i");
+    const { result: updated, count } = replaceFlashBlock(result, pattern, FLASH_DEAD_NOTE);
+    if (count > 0) {
+      logFix(slug, "defunct-flash-embed", `Replaced ${count} dead Flash embed(s) from ${domain}`, domain, FLASH_DEAD_NOTE);
+      result = updated;
+    }
+  }
+
+  return result;
+}
+
 // ─── Fix 6: Specific broken image/link fixes ───────────────────────────────────
 
 function fixSpecificPosts(slug: string, raw: string): string {
@@ -413,6 +511,8 @@ async function main() {
       raw = fixDefunctPicasaLinks(slug, raw);
       raw = fixWordPressAbsoluteUrls(slug, raw);
       raw = fixBrokenMikecannImages(slug, raw);
+      raw = fixMikecannFlashAbsoluteUrls(slug, raw);
+      raw = fixDeadThirdPartyFlashEmbeds(slug, raw);
       raw = fixSpecificPosts(slug, raw);
 
       // Only write if changed

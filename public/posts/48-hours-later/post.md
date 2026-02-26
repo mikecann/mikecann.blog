@@ -12,6 +12,6 @@ oldUrl: /games/48-hours-later
 
 Check it out:
 
-https://www.mikecann.blog/DumpingGround/ld/18/05/LudumDare18.swf
+/DumpingGround/ld/18/05/LudumDare18.swf
 
 I blogged about its progress which you can checkout here:

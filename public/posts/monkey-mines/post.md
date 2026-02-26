@@ -16,7 +16,7 @@ What is it? Well its a remake of the classic Minesweeper game, but with a few ch
 
 <!-- more -->
 
-<object width="600" height="500" data="https://www.mikecann.blog/projects/monkeymines/MonkeyMines.swf" type="application/x-shockwave-flash"><param name="src" value="https://www.mikecann.blog/projects/monkeymines/MonkeyMines.swf" /></object>
+<object width="600" height="500" data="/projects/monkeymines/MonkeyMines.swf" type="application/x-shockwave-flash"><param name="src" value="/projects/monkeymines/MonkeyMines.swf" /></object>
 
 The game started off as a small tech-demo of the liquid like motion produced by coupling the cubes together by springs in a tight grid. (I still have that demo and may release the source in a later post if others are interested). We thought for a while about how to turn the demo into a game and ended up on the idea of a Minesweeper game.
 

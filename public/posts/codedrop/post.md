@@ -14,4 +14,4 @@ So here is my first flash game of a few. Its basically a port of a game i did in
 
 Hope you all enjoy it :)
 
-<div><object width="640" height="480" data="https://www.mikecann.blog/projects/codedrop/CodeDrop.swf" type="application/x-shockwave-flash"><param name="src" value="https://www.mikecann.blog/projects/codedrop/CodeDrop.swf" /></object></div>
+<div><object width="640" height="480" data="/projects/codedrop/CodeDrop.swf" type="application/x-shockwave-flash"><param name="src" value="/projects/codedrop/CodeDrop.swf" /></object></div>

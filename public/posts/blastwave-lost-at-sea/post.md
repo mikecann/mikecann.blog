@@ -17,4 +17,4 @@ The Art by [Oliver Pitceathly](https://www.olip.co.uk/) follows a simmilar style
 
 <!-- more -->
 
-<object style="width: 600px; height: 600px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="600" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="https://www.mikecann.blog/projects/blastwave2/blastwave.swf" /><embed style="width: 600px; height: 600px;" type="application/x-shockwave-flash" width="600" height="600" src="https://www.mikecann.blog/projects/blastwave2/blastwave.swf"></embed></object>
+<object style="width: 600px; height: 600px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="600" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/projects/blastwave2/blastwave.swf" /><embed style="width: 600px; height: 600px;" type="application/x-shockwave-flash" width="600" height="600" src="/projects/blastwave2/blastwave.swf"></embed></object>

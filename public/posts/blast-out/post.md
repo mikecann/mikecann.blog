@@ -16,4 +16,4 @@ This is actually a much smaller version than the "full" game that i wrote. I ori
 
 Oh well, i think whats left is still pretty good, hope you enjoy it too!
 
-<object width="600" height="600" data="https://www.mikecann.blog/projects/blastout/BlastOut.swf" type="application/x-shockwave-flash"><param name="quality" value="high" /><param name="name" value="IcySlicy" /><param name="src" value="https://www.mikecann.blog/projects/blastout/BlastOut.sw" /><param name="bgcolor" value="#ffffff" /></object>
+<object width="600" height="600" data="/projects/blastout/BlastOut.swf" type="application/x-shockwave-flash"><param name="quality" value="high" /><param name="name" value="IcySlicy" /><param name="src" value="/projects/blastout/BlastOut.sw" /><param name="bgcolor" value="#ffffff" /></object>

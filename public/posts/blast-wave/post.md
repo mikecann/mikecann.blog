@@ -12,4 +12,4 @@ This one was a blast to make, no pun intended, and only took 2 weeks. Hope you a
 
 <!-- more -->
 
-<div><object width="600" height="600" data="https://www.mikecann.blog/projects/blastwave/BlastWave.swf" type="application/x-shockwave-flash"><param name="src" value="https://www.mikecann.blog/projects/blastwave/BlastWave.swf" /></object></div>
+<div><object width="600" height="600" data="/projects/blastwave/BlastWave.swf" type="application/x-shockwave-flash"><param name="src" value="/projects/blastwave/BlastWave.swf" /></object></div>
