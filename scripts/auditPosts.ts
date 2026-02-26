@@ -539,6 +539,11 @@ function parsePost(slug: string): ParsedPost {
         continue;
       }
 
+      // /wp-content/ is served via the Next.js rewrite to CloudFront - not a local file
+      if (item.url.startsWith("/wp-content/") || item.url.startsWith("../wp-content/")) {
+        continue;
+      }
+
       const exists = checkLocalFile(item.url, postDir);
       if (!exists) {
         localIssues.push({
