@@ -1,11 +1,9 @@
 /**
  * Blog Post Fix Script
  *
- * Applies systematic fixes to blog posts based on audit findings.
- * Outputs a detailed log of all changes made.
+ * Applies systematic fixes to blog posts based on audit findings. Idempotent, safe to re-run.
  *
  * Usage: bun run ./scripts/fixPosts.ts
- * Output: ./scripts/fix-log.json
  */
 
 import fs from "fs";
@@ -21,14 +19,6 @@ interface FixLogEntry {
   line?: number;
   oldText: string;
   newText: string;
-}
-
-interface FixLog {
-  timestamp: string;
-  totalPostsModified: number;
-  totalFixes: number;
-  fixesByCategory: Record<string, number>;
-  entries: FixLogEntry[];
 }
 
 // ─── Config ──────────────────────────────────────────────────────────────────
@@ -295,36 +285,22 @@ async function main() {
     }
   }
 
-  // Step 3: Build and write log
-  console.log("\nStep 3: Writing fix log...\n");
-
   const fixesByCategory: Record<string, number> = {};
   for (const entry of fixLog) {
     fixesByCategory[entry.category] = (fixesByCategory[entry.category] || 0) + 1;
   }
 
-  const log: FixLog = {
-    timestamp: new Date().toISOString(),
-    totalPostsModified: modifiedCount,
-    totalFixes: fixLog.length,
-    fixesByCategory,
-    entries: fixLog,
-  };
-
-  const logPath = join(__dirname, "fix-log.json");
-  fs.writeFileSync(logPath, JSON.stringify(log, null, 2));
-
-  console.log("====================");
+  console.log("\n====================");
   console.log("Fix Complete!\n");
   console.log(`Posts modified: ${modifiedCount}`);
   console.log(`Total fixes:   ${fixLog.length}`);
-  console.log("");
-  console.log("Fixes by category:");
-  for (const [cat, count] of Object.entries(fixesByCategory).sort((a, b) => b[1] - a[1])) {
-    console.log(`  ${cat}: ${count}`);
+  if (fixLog.length > 0) {
+    console.log("");
+    console.log("Fixes by category:");
+    for (const [cat, count] of Object.entries(fixesByCategory).sort((a, b) => b[1] - a[1])) {
+      console.log(`  ${cat}: ${count}`);
+    }
   }
-  console.log("");
-  console.log(`Fix log written to: ${logPath}`);
 }
 
 main().catch((e) => {

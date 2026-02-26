@@ -10,7 +10,7 @@
  * 6. Broken iframes (YouTube removed, defunct services)
  *
  * Usage: bun run ./scripts/auditPosts.ts
- * Output: ./scripts/audit-report.json and ./scripts/audit-report.md
+ * Output: ./scripts/audit-report.json (single source of truth for issues to fix)
  */
 
 import fs from "fs";
@@ -598,140 +598,6 @@ function parsePost(slug: string): ParsedPost {
   return { slug, title, date, localIssues, externalUrls: urlsToCheck };
 }
 
-// ─── Report Generation ───────────────────────────────────────────────────────
-
-function generateMarkdownReport(report: AuditReport): string {
-  const lines: string[] = [];
-
-  lines.push("# Blog Post Audit Report");
-  lines.push("");
-  lines.push(`Generated: ${report.timestamp}`);
-  lines.push("");
-  lines.push("## Summary");
-  lines.push("");
-  lines.push(`- **Total posts scanned:** ${report.totalPosts}`);
-  lines.push(`- **Posts with issues:** ${report.postsWithIssues}`);
-  lines.push(`- **Total issues found:** ${report.totalIssues}`);
-  lines.push("");
-
-  lines.push("### Issues by Type");
-  lines.push("");
-  lines.push("| Type | Count |");
-  lines.push("|------|-------|");
-  for (const [type, count] of Object.entries(report.issuesByType).sort((a, b) => b[1] - a[1])) {
-    lines.push(`| ${type} | ${count} |`);
-  }
-  lines.push("");
-
-  lines.push("### Issues by Severity");
-  lines.push("");
-  lines.push("| Severity | Count |");
-  lines.push("|----------|-------|");
-  for (const [severity, count] of Object.entries(report.issuesBySeverity).sort(
-    (a, b) => b[1] - a[1]
-  )) {
-    lines.push(`| ${severity} | ${count} |`);
-  }
-  lines.push("");
-
-  // Group results by issue type for easier scanning
-  const errorResults = report.results
-    .filter((r) => r.issues.some((i) => i.severity === "error"))
-    .sort((a, b) => b.issues.filter((i) => i.severity === "error").length - a.issues.filter((i) => i.severity === "error").length);
-
-  if (errorResults.length > 0) {
-    lines.push("## Posts with Errors");
-    lines.push("");
-
-    for (const result of errorResults) {
-      const errors = result.issues.filter((i) => i.severity === "error");
-      lines.push(`### ${result.title}`);
-      lines.push(`- **Slug:** \`${result.slug}\``);
-      lines.push(`- **Date:** ${result.date}`);
-      lines.push(`- **Errors:** ${errors.length}`);
-      lines.push("");
-
-      for (const issue of errors) {
-        const urlPart = issue.url ? ` - \`${issue.url}\`` : "";
-        const linePart = issue.line ? ` (line ${issue.line})` : "";
-        lines.push(`- **[${issue.type}]** ${issue.description}${urlPart}${linePart}`);
-      }
-      lines.push("");
-    }
-  }
-
-  // Warnings section
-  const warningOnlyResults = report.results.filter(
-    (r) =>
-      r.issues.some((i) => i.severity === "warning") &&
-      !r.issues.some((i) => i.severity === "error")
-  );
-
-  if (warningOnlyResults.length > 0) {
-    lines.push("## Posts with Warnings Only");
-    lines.push("");
-
-    for (const result of warningOnlyResults) {
-      const warnings = result.issues.filter((i) => i.severity === "warning");
-      lines.push(`### ${result.title}`);
-      lines.push(`- **Slug:** \`${result.slug}\``);
-      lines.push("");
-
-      for (const issue of warnings) {
-        const urlPart = issue.url ? ` - \`${issue.url}\`` : "";
-        const linePart = issue.line ? ` (line ${issue.line})` : "";
-        lines.push(`- **[${issue.type}]** ${issue.description}${urlPart}${linePart}`);
-      }
-      lines.push("");
-    }
-  }
-
-  // Warnings section (only warnings, no errors)
-  const warningResults = report.results.filter(
-    (r) =>
-      r.issues.some((i) => i.severity === "warning")
-  );
-
-  if (warningResults.length > 0) {
-    lines.push("## Posts with Warnings");
-    lines.push("");
-
-    for (const result of warningResults) {
-      const warnings = result.issues.filter((i) => i.severity === "warning");
-      if (warnings.length === 0) continue;
-      lines.push(`### ${result.title}`);
-      lines.push(`- **Slug:** \`${result.slug}\``);
-      lines.push("");
-
-      for (const issue of warnings) {
-        const urlPart = issue.url ? ` - \`${issue.url}\`` : "";
-        const linePart = issue.line ? ` (line ${issue.line})` : "";
-        lines.push(`- **[${issue.type}]** ${issue.description}${urlPart}${linePart}`);
-      }
-      lines.push("");
-    }
-  }
-
-  // Fallback cover image section
-  const fallbackResults = report.results.filter((r) =>
-    r.issues.some((i) => i.type === "fallback-cover-image")
-  );
-
-  if (fallbackResults.length > 0) {
-    lines.push("## Posts Using Fallback Cover Image");
-    lines.push("");
-    lines.push(`Total: ${fallbackResults.length} posts`);
-    lines.push("");
-
-    for (const result of fallbackResults) {
-      lines.push(`- \`${result.slug}\` - ${result.title}`);
-    }
-    lines.push("");
-  }
-
-  return lines.join("\n");
-}
-
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -877,12 +743,8 @@ async function main() {
     results: resultsWithIssues,
   };
 
-  // Write reports
   const jsonPath = join(__dirname, "audit-report.json");
-  const mdPath = join(__dirname, "audit-report.md");
-
   fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
-  fs.writeFileSync(mdPath, generateMarkdownReport(report));
 
   console.log("\n========================");
   console.log("Audit Complete!\n");
@@ -895,9 +757,7 @@ async function main() {
     console.log(`  ${type}: ${count}`);
   }
   console.log("");
-  console.log(`Reports written to:`);
-  console.log(`  JSON: ${jsonPath}`);
-  console.log(`  Markdown: ${mdPath}`);
+  console.log(`Report written to: ${jsonPath}`);
 }
 
 main().catch((e) => {

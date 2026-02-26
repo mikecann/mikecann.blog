@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-02-09T02:03:14.542Z",
-  "totalPosts": 625,
-  "postsWithIssues": 554,
-  "totalIssues": 2438,
+  "timestamp": "2026-02-26T01:01:44.557Z",
+  "totalPosts": 626,
+  "postsWithIssues": 546,
+  "totalIssues": 2324,
   "issuesByType": {
     "fallback-cover-image": 410,
     "flash-embed": 79,
-    "dead-link": 1681,
-    "defunct-embed": 21,
+    "dead-link": 1568,
+    "defunct-embed": 20,
     "broken-image": 247
   },
   "issuesBySeverity": {
-    "info": 1752,
-    "error": 665,
-    "warning": 21
+    "info": 1709,
+    "error": 595,
+    "warning": 20
   },
   "results": [
     {
@@ -363,18 +363,10 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 429",
-          "url": "https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Readme.md",
-          "line": 25,
-          "httpStatus": 429
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 429",
+          "description": "HTTP 404",
           "url": "https://github.com/Unity-Technologies/ml-agents/blob/master/docs/best-practices-ppo.md",
           "line": 488,
-          "httpStatus": 429
+          "httpStatus": 404
         }
       ]
     },
@@ -459,10 +451,10 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 429",
+          "description": "HTTP 404",
           "url": "https://github.com/Unity-Technologies/ml-agents/blob/master/docs/best-practices-ppo.md",
           "line": 225,
-          "httpStatus": 429
+          "httpStatus": 404
         },
         {
           "type": "dead-link",
@@ -617,19 +609,10 @@
       "issues": [
         {
           "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
+          "severity": "error",
+          "description": "Request failed: 20",
           "url": "https://beta.openai.com/examples/",
-          "line": 24,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://openai.com/dall-e-2/",
-          "line": 44,
-          "httpStatus": 403
+          "line": 24
         },
         {
           "type": "dead-link",
@@ -642,25 +625,10 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: 20",
-          "url": "https://openart.ai/discovery?dataSource=md&q=game",
-          "line": 67
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
           "description": "HTTP 405",
           "url": "https://colab.research.google.com/github/KaliYuga-ai/Pixel-Art-Diffusion/blob/main/",
           "line": 83,
           "httpStatus": 405
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://openai.com/blog/openai-codex/",
-          "line": 99,
-          "httpStatus": 403
         },
         {
           "type": "dead-link",
@@ -810,27 +778,6 @@
           "url": "https://www.mikecann.blog/category/myprojects/mr-nibbles-forever/",
           "line": 6,
           "httpStatus": 404
-        }
-      ]
-    },
-    {
-      "slug": "and-off-we-go",
-      "title": "And Off We Go!",
-      "date": "2017-03-24T01:30:00.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au",
-          "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au/pages/map",
-          "line": 18
         }
       ]
     },
@@ -1673,21 +1620,6 @@
       ]
     },
     {
-      "slug": "battletabs-and-fractal",
-      "title": "BattleTabs & Fractal",
-      "date": "2022-08-14T07:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://openai.com/dall-e-2/",
-          "line": 89,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
       "slug": "battletabs-global-launch-on-discord-activities",
       "title": "BattleTabs Global Launch on Discord Activities",
       "date": "2024-09-17T07:31:40.000Z",
@@ -1707,21 +1639,6 @@
           "url": "https://mojiworks.com/news/why-were-all-in-on-discord-activities",
           "line": 18,
           "httpStatus": 404
-        }
-      ]
-    },
-    {
-      "slug": "battletabs-global-launch-on-ios-android",
-      "title": "BattleTabs Global Launch on iOS and Android!",
-      "date": "2024-11-05T07:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/masmovil-engineering/layers-layers-layers-be-careful-6838d59c07fa",
-          "line": 25,
-          "httpStatus": 403
         }
       ]
     },
@@ -2104,13 +2021,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au",
-          "line": 2
         }
       ]
     },
@@ -2124,41 +2034,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au",
-          "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au/blogs/news/campin-oz-2017-lancelin",
-          "line": 4
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au/products/au0010-kalbarri-coast",
-          "line": 12
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au/products/salt-lake-notch-vertical",
-          "line": 22
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au/products/au0009-kalbarri-rocks",
-          "line": 30
         },
         {
           "type": "broken-image",
@@ -2206,34 +2081,6 @@
           "url": "/images/fallback-post-header.png"
         },
         {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au",
-          "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/products/au0006-lancelin-dune",
-          "line": 14
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au/products/au0007-lancelin-dune-lady",
-          "line": 18
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/products/au0008-lancelin-dune-people",
-          "line": 22
-        },
-        {
           "type": "broken-image",
           "severity": "error",
           "description": "HTTP 404",
@@ -2269,69 +2116,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au",
-          "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0015-red-sands-of-shark-bay",
-          "line": 14
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0017-monkey-mia",
-          "line": 20
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/monkey-mia-beach",
-          "line": 24
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0018-monkey-mia-boats",
-          "line": 28
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0020-nanga-beach",
-          "line": 50
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0019-shell-beach-water",
-          "line": 56
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0021-hamelin-pool-stromatolites",
-          "line": 66
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au/products/au0022-hamelin-pool",
-          "line": 70
         },
         {
           "type": "broken-image",
@@ -2409,13 +2193,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au",
-          "line": 47
         }
       ]
     },
@@ -2429,13 +2206,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au",
-          "line": 59
         }
       ]
     },
@@ -2449,27 +2219,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au/products/au0061-darwin-fish",
-          "line": 46
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au/products/au0062-darwin-shore",
-          "line": 50
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au",
-          "line": 95
         }
       ]
     },
@@ -2483,20 +2232,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au",
-          "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au/products/au0023-dales-gorge",
-          "line": 14
         }
       ]
     },
@@ -2510,139 +2245,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au",
-          "line": 66
-        }
-      ]
-    },
-    {
-      "slug": "camping-oz-2017-the-south",
-      "title": "Camping Oz 2017 - The South",
-      "date": "2017-09-15T04:52:35.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/IMG_1106-1024x683.jpg",
-          "line": 6
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/01-4-975x1024.jpg",
-          "line": 12
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/IMG_1084-1024x683.jpg",
-          "line": 16
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/IMG_1100-1024x558.jpg",
-          "line": 20
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Fields-of-Yellow-1024x768.jpg",
-          "line": 24
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/01-6-1024x238.jpg",
-          "line": 28
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Fowlers-Dunes-1024x768.jpg",
-          "line": 34
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Whale-Time-1024x768.jpg",
-          "line": 36
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/IMG_1210-1024x683.jpg",
-          "line": 40
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Bunda-Cliffs-from-the-Side-1024x768.jpg",
-          "line": 44
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Lucky-Bay-Horizontal-1024x768.jpg",
-          "line": 48
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Hellfire-Mixture-1024x768.jpg",
-          "line": 50
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Esperance-Whites-and-Blacks-1024x768.jpg",
-          "line": 52
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Sunset-Sky-Surf-in-Esperance-1024x768.jpg",
-          "line": 54
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Esperance-Wave-of-Light-1024x768.jpg",
-          "line": 58
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Lucky-Bay-Vertical-1024x768.jpg",
-          "line": 60
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/wp-content/uploads/2017/10/Esperance-Beach-1024x768.jpg",
-          "line": 62
         }
       ]
     },
@@ -2656,111 +2258,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0030-eighty-mile-low-tide",
-          "line": 10
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0032-gantheaume-point",
-          "line": 20
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0034-gantheaume-point-rocks",
-          "line": 24
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0033-gantheaume-point-dark-side",
-          "line": 30
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0039-james-price-point-fire-wave-vertical",
-          "line": 36
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0040-james-price-point-crumbles-away",
-          "line": 42
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0041-cape-leveque-diagonol",
-          "line": 48
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0043-cape-leveque-at-sunset",
-          "line": 52
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0044-cape-leveque-lighthouse",
-          "line": 56
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0045-cape-leveque-painted-rocks",
-          "line": 60
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0048-willie-creek-pearl-farm",
-          "line": 74
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0050-willie-creek-standout",
-          "line": 78
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0051-willie-creek-rainbow",
-          "line": 84
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au/products/au0052-willie-creek-sands",
-          "line": 88
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: FailedToOpenSocket",
-          "url": "https://aboveunder.com.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au.au",
-          "line": 93
         }
       ]
     },
@@ -2934,7 +2431,7 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: ConnectionRefused",
+          "description": "Request failed: FailedToOpenSocket",
           "url": "https://hackathon.webdevcody.com/",
           "line": 2
         },
@@ -3046,10 +2543,10 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 403",
-          "url": "https://www.doesmybrowsersupportwebgl.com/",
+          "description": "HTTP 500",
+          "url": "https://code.google.com/p/chrome-crawler/source/browse/#svn%2Ftrunk%2FHaXe",
           "line": 36,
-          "httpStatus": 403
+          "httpStatus": 500
         }
       ]
     },
@@ -3743,14 +3240,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 405",
-          "url": "https://www.amazon.co.uk/Exploring-World-Dreaming-Stephen-LaBerge/dp/0345420128/ref=sr_1_2?ie=UTF8&s=books&qid=1280669165&sr=8-2",
-          "line": 8,
-          "httpStatus": 405
         }
       ]
     },
@@ -3778,21 +3267,6 @@
           "description": "Request failed: ConnectionRefused",
           "url": "https://support.gamejacket.com/forums/19376/entries/40976",
           "line": 4
-        }
-      ]
-    },
-    {
-      "slug": "farewell-bamboo-hello-markd",
-      "title": "Farewell Bamboo - Hello Markd",
-      "date": "2019-01-14T14:51:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/bambooblockchain/announcing-bamboos-closed-beta-173980918983",
-          "line": 12,
-          "httpStatus": 403
         }
       ]
     },
@@ -3896,10 +3370,9 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 521",
+          "description": "Request failed: 20",
           "url": "https://www.rizalalmashoor.com/blog/exception-handling-wrappers-for-taskcontinuewith/",
-          "line": 60,
-          "httpStatus": 521
+          "line": 60
         },
         {
           "type": "dead-link",
@@ -4332,7 +3805,7 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: ConnectionRefused",
+          "description": "Request failed: FailedToOpenSocket",
           "url": "https://artificialgames.co.uk/",
           "line": 12
         }
@@ -4396,14 +3869,6 @@
           "description": "Request failed: ConnectionRefused",
           "url": "https://www.robotlegs.org/",
           "line": 8
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 502",
-          "url": "https://code.google.com/p/funk-as3/wiki/IoC",
-          "line": 57,
-          "httpStatus": 502
         }
       ]
     },
@@ -5026,21 +4491,6 @@
       ]
     },
     {
-      "slug": "i-tried-the-limitless-ai-and-omi-ai-so-you-dont-have-to",
-      "title": "I tried the Limitless AI and Omi AI so you don't have to",
-      "date": "2025-08-19T08:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.forbes.com/sites/marketshare/2012/03/05/if-youre-not-paying-for-it-you-become-the-product/",
-          "line": 126,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
       "slug": "icy-slicy",
       "title": "Icy Slicy",
       "date": "2008-08-13T09:49:18.000Z",
@@ -5422,27 +4872,6 @@
           "description": "Request failed: 20",
           "url": "https://AboveUnder.com",
           "line": 2
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/collections/all",
-          "line": 8
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/pages/map",
-          "line": 10
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au",
-          "line": 15
         }
       ]
     },
@@ -5465,27 +4894,6 @@
           "url": "https://www.mikecann.blog/travel/camping-australia-2017-the-plan/",
           "line": 6,
           "httpStatus": 404
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/collections/all",
-          "line": 8
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/blogs/news",
-          "line": 10
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://aboveunder.com.au.au.au.au.au/",
-          "line": 18
         }
       ]
     },
@@ -5815,7 +5223,7 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: ConnectionRefused",
+          "description": "Request failed: FailedToOpenSocket",
           "url": "https://artificialgames.co.uk/",
           "line": 8
         }
@@ -6332,14 +5740,6 @@
         },
         {
           "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/@mrannedev/it-s-not-javascript-tool-fatigue-it-s-javascript-bullsh-t-fatigue-5f90f81423fb",
-          "line": 160,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
           "severity": "error",
           "description": "Request failed: 20",
           "url": "https://lernajs.io/",
@@ -6669,27 +6069,19 @@
       "issues": [
         {
           "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://platform.openai.com/docs/api-reference/assistants",
-          "line": 24,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://platform.openai.com/assistants/",
-          "line": 32,
-          "httpStatus": 403
+          "severity": "error",
+          "description": "HTTP 404",
+          "url": "https://github.com/mikecann/mikecann.blog/blob/main/convex/messages.ts#L22",
+          "line": 56,
+          "httpStatus": 404
         },
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 404",
+          "description": "HTTP 429",
           "url": "https://github.com/mikecann/mikecann.blog/blob/main/convex/openai/assistants.ts#L15",
           "line": 56,
-          "httpStatus": 404
+          "httpStatus": 429
         },
         {
           "type": "dead-link",
@@ -6703,8 +6095,8 @@
           "type": "dead-link",
           "severity": "error",
           "description": "HTTP 429",
-          "url": "https://github.com/mikecann/mikecann.blog/blob/main/components/mikebot/MessagesList.tsx#L48",
-          "line": 58,
+          "url": "https://github.com/mikecann/mikecann.blog/blob/main/convex/schema.ts#L55",
+          "line": 56,
           "httpStatus": 429
         },
         {
@@ -6718,34 +6110,26 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 404",
+          "description": "HTTP 429",
           "url": "https://github.com/mikecann/mikecann.blog/blob/main/scripts/openai/uploadPostsToStorage.ts#L49",
           "line": 92,
-          "httpStatus": 404
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://platform.openai.com/docs/api-reference/messages",
-          "line": 92,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 404",
-          "url": "https://github.com/mikecann/mikecann.blog/blob/main/convex/openai/assistants.ts#L146",
-          "line": 92,
-          "httpStatus": 404
+          "httpStatus": 429
         },
         {
           "type": "dead-link",
           "severity": "error",
           "description": "HTTP 429",
-          "url": "https://github.com/mikecann/mikecann.blog/blob/main/components/mikebot/MessageContent.tsx#L26",
+          "url": "https://github.com/mikecann/mikecann.blog/blob/main/convex/openai/assistants.ts#L146",
           "line": 92,
           "httpStatus": 429
+        },
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "HTTP 404",
+          "url": "https://github.com/mikecann/mikecann.blog/blob/main/components/mikebot/MessageContent.tsx#L26",
+          "line": 92,
+          "httpStatus": 404
         }
       ]
     },
@@ -6819,8 +6203,8 @@
           "type": "dead-link",
           "severity": "error",
           "description": "HTTP 502",
-          "url": "https://www.aliexpress.com/item/HD-Micro-USB-Camera-1-0MP-USB-CCTV-Camera-720P-USB-Module-With-Cables-USB-Board/32825411576.html?spm=a2g0s.9042311.0.0.1ee84c4dtkgQAk",
-          "line": 76,
+          "url": "https://www.aliexpress.com/item/HD-720P-6LEDs-5-5MM-USB-Endoscope-Borescope-Snake-Inspection-Pipe-Tube-Video-Mini-Camera-IP67/32747992958.html?spm=a2g0s.9042311.0.0.1ee84c4dtkgQAk",
+          "line": 73,
           "httpStatus": 502
         }
       ]
@@ -6841,9 +6225,25 @@
         {
           "type": "dead-link",
           "severity": "error",
+          "description": "HTTP 429",
+          "url": "https://github.com/ageitgey/face_recognition/blob/master/examples/face_recognition_knn.py",
+          "line": 116,
+          "httpStatus": 429
+        },
+        {
+          "type": "dead-link",
+          "severity": "error",
           "description": "Request failed: ConnectionRefused",
           "url": "https://snowboy.kitt.ai/",
           "line": 136
+        },
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "HTTP 429",
+          "url": "https://github.com/mikecann/mikes-mirror/blob/master/src/commands.ts",
+          "line": 173,
+          "httpStatus": 429
         }
       ]
     },
@@ -7231,6 +6631,21 @@
       ]
     },
     {
+      "slug": "mr-nibbles-forever-out-now-on-amazon",
+      "title": "Mr Nibbles Forever - Out Now on Amazon",
+      "date": "2015-10-30T00:54:45.000Z",
+      "issues": [
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "HTTP 405",
+          "url": "https://www.amazon.com/Epic-Shrimp-Mr-Nibbles-Forever/dp/B016UN4K0G/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1446166028&sr=1-1&keywords=mr+nibbles+forever",
+          "line": 2,
+          "httpStatus": 405
+        }
+      ]
+    },
+    {
       "slug": "mr-nibbles-forever-out-now-on-google-play",
       "title": "Mr Nibbles Forever - Out now on Google Play",
       "date": "2015-08-24T10:05:48.000Z",
@@ -7511,6 +6926,21 @@
           "description": "Flash/SWF embed (no longer supported in browsers)",
           "url": "/wp-content/uploads/Flash/skydive/flvplayer.swf",
           "line": 6
+        }
+      ]
+    },
+    {
+      "slug": "my-third-coding-epiphany",
+      "title": "My Third Coding Epiphany",
+      "date": "2016-07-28T05:12:29.000Z",
+      "issues": [
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "HTTP 405",
+          "url": "https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052",
+          "line": 111,
+          "httpStatus": 405
         }
       ]
     },
@@ -7843,6 +7273,14 @@
           "description": "Flash/SWF embed (no longer supported in browsers)",
           "url": "https://picasaweb.google.com/s/c/bin/slideshow.swf",
           "line": 16
+        },
+        {
+          "type": "dead-link",
+          "severity": "info",
+          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
+          "url": "https://www.mikecann.blog/wp-content/uploads/2012/11/header.jpg",
+          "line": 2,
+          "httpStatus": 403
         }
       ]
     },
@@ -7856,6 +7294,14 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
+        },
+        {
+          "type": "dead-link",
+          "severity": "info",
+          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
+          "url": "https://www.mikecann.blog/wp-content/uploads/2013/01/head02.png",
+          "line": 2,
+          "httpStatus": 403
         }
       ]
     },
@@ -7876,6 +7322,14 @@
           "description": "Request failed: ConnectionRefused",
           "url": "https://www.nwsocialvaluefoundation.org/competition/",
           "line": 4
+        },
+        {
+          "type": "broken-image",
+          "severity": "info",
+          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
+          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/screenshot_02.png",
+          "line": 2,
+          "httpStatus": 403
         }
       ]
     },
@@ -8368,7 +7822,7 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: ConnectionRefused",
+          "description": "Request failed: FailedToOpenSocket",
           "url": "https://www.robotlegs.org",
           "line": 18
         }
@@ -9499,10 +8953,9 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 404",
+          "description": "Request failed: 20",
           "url": "https://www.deadworkerspartynetwork.com/theshaft/map1/mapalt1/map.html?worldX=980&worldY=0&worldZ=160&zoom=6",
-          "line": 4,
-          "httpStatus": 404
+          "line": 4
         }
       ]
     },
@@ -9624,14 +9077,6 @@
           "url": "https://www.twitter.com/mikeysee",
           "line": 28,
           "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 500",
-          "url": "https://code.google.com/p/tweetsharp/",
-          "line": 51,
-          "httpStatus": 500
         },
         {
           "type": "broken-image",
@@ -9865,14 +9310,6 @@
           "url": "https://news.ycombinator.com/item?id=26234260#:~:text=YAML%20is%20one%20of%20the,of%20various%20line%2Dendingness'.",
           "line": 14,
           "httpStatus": 405
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 403",
-          "url": "https://sehun.me/why-you-hate-yaml-and-how-to-tackle-it-3e8471cf1ca8",
-          "line": 14,
-          "httpStatus": 403
         },
         {
           "type": "dead-link",
@@ -10315,7 +9752,7 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "Request failed: ConnectionRefused",
+          "description": "Request failed: FailedToOpenSocket",
           "url": "https://www.robotlegs.org",
           "line": 2
         },
@@ -10572,13 +10009,6 @@
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/01/head.png",
           "line": 2,
           "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "Request failed: ConnectionRefused",
-          "url": "https://www.winbeta.org/news/microsoft-confirms-windows-live-messenger-service-retirement-march-15th",
-          "line": 10
         },
         {
           "type": "dead-link",
@@ -11860,37 +11290,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://mikecann.blog/about",
           "line": 4,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://openai.com/blog/openai-api/",
-          "line": 12,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.forbes.com/sites/davidphelan/2023/01/23/how-chatgpt-suddenly-became-googles-code-red-prompting-return-of-page-and-brin/?sh=720f5a2b5977",
-          "line": 60,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
-      "slug": "the-future-of-vibe-coding",
-      "title": "The Future of Vibe Coding",
-      "date": "2025-07-10T07:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/@tunkhine126/red-green-refactor-42b5b643b506",
-          "line": 75,
           "httpStatus": 403
         }
       ]
@@ -17936,14 +17335,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-721.jpg",
-          "line": 68,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-741.jpg",
           "line": 70,
           "httpStatus": 403
@@ -17992,14 +17383,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-891.jpg",
-          "line": 90,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-831.jpg",
           "line": 92,
           "httpStatus": 403
@@ -18024,22 +17407,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-1001.jpg",
-          "line": 100,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-1011.jpg",
-          "line": 106,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-136.jpg",
           "line": 108,
           "httpStatus": 403
@@ -18058,14 +17425,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-1181.jpg",
           "line": 114,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/07/photo-140.jpg",
-          "line": 118,
           "httpStatus": 403
         },
         {
@@ -18119,14 +17478,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-613.jpg",
           "line": 30,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-813.jpg",
-          "line": 34,
           "httpStatus": 403
         },
         {
@@ -18215,14 +17566,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-323.jpg",
           "line": 90,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-363.jpg",
-          "line": 94,
           "httpStatus": 403
         },
         {
@@ -18405,24 +17748,8 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-672.jpg",
-          "line": 175,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-614.jpg",
           "line": 177,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-553.jpg",
-          "line": 179,
           "httpStatus": 403
         },
         {
@@ -18532,14 +17859,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-612.jpg",
           "line": 32,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/08/photo-332.jpg",
-          "line": 36,
           "httpStatus": 403
         },
         {
@@ -18676,21 +17995,6 @@
           "url": "/images/fallback-post-header.png"
         },
         {
-          "type": "defunct-embed",
-          "severity": "warning",
-          "description": "Link to defunct service: Google Maps Engine (defunct)",
-          "url": "https://mapsengine.google.com/map/embed?mid=zqHG_2WyX1Rw.kX4lL2DfOU1E",
-          "line": 4
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2014/01/screenshot_02.png",
-          "line": 2,
-          "httpStatus": 403
-        },
-        {
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
@@ -18707,11 +18011,11 @@
           "httpStatus": 403
         },
         {
-          "type": "dead-link",
+          "type": "broken-image",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2014/01/1085042_10151781387216031_1156564013_o-1024x915.jpg",
-          "line": 168,
+          "url": "https://www.mikecann.blog/wp-content/uploads/2014/01/screenshot_02.png",
+          "line": 2,
           "httpStatus": 403
         },
         {
@@ -18883,14 +18187,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/heeday.jpg",
-          "line": 12,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/mindy.jpg",
           "line": 16,
           "httpStatus": 403
@@ -18963,14 +18259,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/thighcn.jpg",
-          "line": 54,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/glutenfree.jpg",
           "line": 62,
           "httpStatus": 403
@@ -18989,14 +18277,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/falls2.jpg",
           "line": 70,
-          "httpStatus": 403
-        },
-        {
-          "type": "broken-image",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/screenshot_05.png",
-          "line": 2,
           "httpStatus": 403
         }
       ]
@@ -19080,14 +18360,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-172.jpg",
-          "line": 36,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-152.jpg",
           "line": 38,
           "httpStatus": 403
@@ -19120,24 +18392,8 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-252.jpg",
-          "line": 58,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-302.jpg",
           "line": 62,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-282.jpg",
-          "line": 66,
           "httpStatus": 403
         },
         {
@@ -19194,22 +18450,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-682.jpg",
           "line": 88,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-342.jpg",
-          "line": 90,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-532.jpg",
-          "line": 92,
           "httpStatus": 403
         },
         {
@@ -19296,14 +18536,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-1081.jpg",
-          "line": 148,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-1121.jpg",
           "line": 158,
           "httpStatus": 403
@@ -19336,14 +18568,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-872.jpg",
-          "line": 172,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-932.jpg",
           "line": 176,
           "httpStatus": 403
@@ -19354,14 +18578,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-1002.jpg",
           "line": 178,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/photo-972.jpg",
-          "line": 180,
           "httpStatus": 403
         },
         {
@@ -19485,14 +18701,6 @@
           "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/butterfly.jpg",
-          "line": 58,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://www.mikecann.blog/wp-content/uploads/2013/05/whitehouse.jpg",
           "line": 62,
           "httpStatus": 403
@@ -19540,21 +18748,6 @@
       ]
     },
     {
-      "slug": "the-typescript-utils-i-cant-live-without",
-      "title": "The Typescript Utils I Can't Live Without",
-      "date": "2023-03-14T07:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://mikecann.blog/posts/post-to-tumblr-5",
-          "line": 2,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
       "slug": "think-twice-before-getting-an-sta-travel-cashcard",
       "title": "Think Twice Before Getting an STA Travel Cashcard",
       "date": "2013-09-27T00:22:33.000Z",
@@ -19564,14 +18757,6 @@
           "severity": "info",
           "description": "Using fallback cover image (no custom header)",
           "url": "/images/fallback-post-header.png"
-        },
-        {
-          "type": "broken-image",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/09/screenshot_012.png",
-          "line": 2,
-          "httpStatus": 403
         }
       ]
     },
@@ -19704,14 +18889,6 @@
         },
         {
           "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://www.mikecann.blog/wp-content/uploads/2013/02/logo.png",
-          "line": 10,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
           "severity": "error",
           "description": "HTTP 404",
           "url": "https://www.richardlord.net/blog/what-is-an-entity-framework",
@@ -19735,26 +18912,10 @@
       "issues": [
         {
           "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 403",
-          "url": "https://the-guild.dev/blog/subscriptions-and-live-queries-real-time-with-graphql",
-          "line": 107,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
           "severity": "info",
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://mikecann.blog/about",
           "line": 157,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://mikecann.blog/posts/discriminated-unions-and-pattern-matching-in-typescript",
-          "line": 264,
           "httpStatus": 403
         }
       ]
@@ -19805,35 +18966,33 @@
       "issues": [
         {
           "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
+          "severity": "error",
+          "description": "HTTP 404",
           "url": "https://openai.com/blog/tags/announcements/",
           "line": 2,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://beta.openai.com/",
-          "line": 2,
-          "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://beta.openai.com/examples/default-keywords",
-          "line": 54,
-          "httpStatus": 403
+          "httpStatus": 404
         },
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 404",
+          "description": "Request failed: 20",
+          "url": "https://beta.openai.com/",
+          "line": 2
+        },
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "Request failed: 20",
+          "url": "https://beta.openai.com/examples/default-keywords",
+          "line": 54
+        },
+        {
+          "type": "dead-link",
+          "severity": "error",
+          "description": "HTTP 429",
           "url": "https://github.com/mikecann/mikecann.blog/blob/master/scripts/openAIKeywords.ts",
           "line": 86,
-          "httpStatus": 404
+          "httpStatus": 429
         },
         {
           "type": "dead-link",
@@ -19849,21 +19008,6 @@
           "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
           "url": "https://mikecann.blog/posts/a-game-developer-learns-machine-learning-intent",
           "line": 210,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
-      "slug": "tinkering-with-mobx-keystone",
-      "title": "Tinkering with MobX Keystone",
-      "date": "2020-08-15T08:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/@xaviergonz/mobx-keystone-an-alternative-to-mobx-state-tree-without-some-of-its-pains-8140767a3aa1",
-          "line": 20,
           "httpStatus": 403
         }
       ]
@@ -19915,21 +19059,6 @@
       ]
     },
     {
-      "slug": "tinkering-with-the-internet-computer",
-      "title": "Tinkering With The Internet Computer",
-      "date": "2021-02-16T08:31:40.000Z",
-      "issues": [
-        {
-          "type": "dead-link",
-          "severity": "info",
-          "description": "HTTP 403 (likely bot-blocked, probably fine for real users)",
-          "url": "https://medium.com/dfinity/how-i-built-a-multiplayer-reversi-game-on-the-internet-computer-f67d2fed0fc3",
-          "line": 78,
-          "httpStatus": 403
-        }
-      ]
-    },
-    {
       "slug": "tinkering-with-typescript",
       "title": "Tinkering With TypeScript",
       "date": "2012-10-20T06:52:57.000Z",
@@ -19955,14 +19084,6 @@
           "url": "https://www.mikecann.blog/wp-content/uploads/2012/10/screenshot_10.png",
           "line": 32,
           "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 429",
-          "url": "https://github.com/mientjan/typescript-facebook-definition/blob/master/facebook.d.ts",
-          "line": 40,
-          "httpStatus": 429
         },
         {
           "type": "dead-link",
@@ -21051,10 +20172,10 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 404",
+          "description": "HTTP 429",
           "url": "https://github.com/mikecann/UnityAshteroids/blob/master/Assets/Ash/Unity/AshEntity.cs",
           "line": 14,
-          "httpStatus": 404
+          "httpStatus": 429
         },
         {
           "type": "dead-link",
@@ -21582,14 +20703,6 @@
         {
           "type": "dead-link",
           "severity": "error",
-          "description": "HTTP 500",
-          "url": "https://code.google.com/p/win7-taskbar-mon/",
-          "line": 18,
-          "httpStatus": 500
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
           "description": "HTTP 404",
           "url": "https://win7-taskbar-mon.googlecode.com/files/Windows7_Taskbar_Monitor_v0.1.zip",
           "line": 20,
@@ -21615,14 +20728,6 @@
           "url": "https://www.mikecann.blog/wp-content/uploads/2011/02/Shot_01.png",
           "line": 2,
           "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 500",
-          "url": "https://code.google.com/p/win7-taskbar-mon/source/checkout",
-          "line": 18,
-          "httpStatus": 500
         }
       ]
     },
@@ -21644,14 +20749,6 @@
           "url": "https://www.mikecann.blog/wp-content/uploads/2011/10/Shot_01.png",
           "line": 2,
           "httpStatus": 403
-        },
-        {
-          "type": "dead-link",
-          "severity": "error",
-          "description": "HTTP 500",
-          "url": "https://code.google.com/p/win7-taskbar-mon/",
-          "line": 4,
-          "httpStatus": 500
         },
         {
           "type": "dead-link",

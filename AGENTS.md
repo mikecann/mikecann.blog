@@ -70,6 +70,19 @@ bun run ./scripts/fixPosts.ts
 **Adding new fixes:**
 To add a new fix category, add a new function in the script and call it from the main loop. For post-specific fixes, add a case to the `fixSpecificPosts` switch statement.
 
+
+## Audit and fix workflow
+
+When working through audit issues:
+
+1. **Run the audit** to get the current list: `bun run ./scripts/auditPosts.ts`. The list of issues is in `scripts/audit-report.json`.
+2. **Fix issues** (by hand or by running `bun run ./scripts/fixPosts.ts` for automated fixes).
+3. **Verify each fix.** You MUST test that the fix works (e.g. open the post on the site, check the link or image) before declaring it done. Do not mark an issue fixed without verifying.
+4. **Re-run the audit** after fixes. The report shrinks because fixed issues no longer appear. Repeat until the list is empty or only items needing your input remain.
+
+**Rules for agents:**
+- If you need input from the user on how to fix something (e.g. replace dead link with Wayback vs remove), stop and ask. Do not guess.
+- You MUST verify your fix works by testing it yourself (e.g. load the post in the browser, click the link, confirm the image loads) before declaring it fixed.
 ## Known Remaining Issues
 
 As of Feb 2025, the following issues are known but intentionally deferred:
