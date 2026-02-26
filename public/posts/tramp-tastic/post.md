@@ -10,7 +10,7 @@ title: Tramp-tastic!
 oldUrl: /fun-amp-videos/tramp-tastic
 ---
 
-I used to be [into messing about on trampolines](https://picasaweb.google.com/mike.cann/RandomMe#5046188492515494834) which is why this video [on Gizmodo](https://uk.gizmodo.com/) caught my eye. I have watched it several times now and im half in awe of this and half cringing in fright of how dangerous the stunts are he is doing!
+I used to be *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]* which is why this video [on Gizmodo](https://uk.gizmodo.com/) caught my eye. I have watched it several times now and im half in awe of this and half cringing in fright of how dangerous the stunts are he is doing!
 
 <!-- more -->
 

@@ -97,49 +97,49 @@ Yarrr, day six we visited the distant French fortress of Louisbourg. Though thei
 ## Day 7
 
 Day seven 'twas a gloomy sorta day so we went adventurin' in the woodlands in Cape Breton island..
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkaL1rpQTI/AAAAAAAAZiI/0ReJ00rjIYI/s400/DSC03891.JPG)](https://picasaweb.google.com/lh/photo/bfEeMX1Lfih1nsKU5xgMuA?feat=embedwebsite)[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkaSqVaKTI/AAAAAAAAZi0/iWYgxNgJNhI/s400/DSC03896.JPG)](https://picasaweb.google.com/lh/photo/ZmiwIhZwczRkFBhd2JeWHg?feat=embedwebsite)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkaL1rpQTI/AAAAAAAAZiI/0ReJ00rjIYI/s400/DSC03891.JPG)![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkaSqVaKTI/AAAAAAAAZi0/iWYgxNgJNhI/s400/DSC03896.JPG)
 
 ..from a distance we spied our campin' destination, the most northerly site in the whole lands ..
-[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkaaSfg87I/AAAAAAAAZjk/hxu6V0BNByo/s400/DSC03908.JPG)](https://picasaweb.google.com/lh/photo/ssU21PUtyB3_17lFRl0-Sw?feat=embedwebsite)
+![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkaaSfg87I/AAAAAAAAZjk/hxu6V0BNByo/s400/DSC03908.JPG)
 
 ..the weather was grim, though red beard and I persevered on and cooked us a hearty meal..
-[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkabrgHawI/AAAAAAAAZjs/cvsKZcMrc1E/s400/DSC03911.JPG)](https://picasaweb.google.com/lh/photo/keIvgb-wJACfhByXi73TCA?feat=embedwebsite)
+![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkabrgHawI/AAAAAAAAZjs/cvsKZcMrc1E/s400/DSC03911.JPG)
 
 ## Day 7
 
 We was swift in departin the dreary camp and its crazy drunken sailors..
-[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkagNxpZ6I/AAAAAAAAZkI/vOIf1BJlDO0/s400/DSC03923.JPG)](https://picasaweb.google.com/lh/photo/qCjXEnHncsEdG7zNM4SZvA?feat=embedwebsite)
+![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkagNxpZ6I/AAAAAAAAZkI/vOIf1BJlDO0/s400/DSC03923.JPG)
 
 ..we was headin for the most famous hike in all of Nova Scotia..
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkahpjuZ7I/AAAAAAAAZkQ/ziq1afd0-XA/s400/DSC03925.JPG)](https://picasaweb.google.com/lh/photo/e0y2QAZDmcHFVUCn-5xpyg?feat=embedwebsite)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkahpjuZ7I/AAAAAAAAZkQ/ziq1afd0-XA/s400/DSC03925.JPG)
 
 ..unfortunately the weather nay favour us here either. Red beard put a brave face on it tho..
-[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkalxtQ_CI/AAAAAAAAZks/Hg1HLZZDDuE/s400/DSC03929.JPG)](https://picasaweb.google.com/lh/photo/pOgcDpNPYWW8pChGlKl_PQ?feat=embedwebsite)
+![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkalxtQ_CI/AAAAAAAAZks/Hg1HLZZDDuE/s400/DSC03929.JPG)
 
 ..despite this there was beauty to be had..
-[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkamzlI5hI/AAAAAAAAZk0/D889uup3Blo/s400/DSC03933.JPG)](https://picasaweb.google.com/lh/photo/BYqfUm9C7vPP9HXeJYCgUA?feat=embedwebsite)[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkakAUgjaI/AAAAAAAAZkg/Kr-aWAYpoZo/s400/DSC03928.JPG)](https://picasaweb.google.com/lh/photo/fCXUrKwKq7s2r-m-KD25Pw?feat=embedwebsite)[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkavgrdePI/AAAAAAAAZlg/BMRuow-M6K8/s400/DSC03938.JPG)](https://picasaweb.google.com/lh/photo/rz0JjKqkBQZKFvwoglM_6g?feat=embedwebsite)
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkayW8D9AI/AAAAAAAAZlo/zGDHHtc49lY/s400/DSC03939.JPG)](https://picasaweb.google.com/lh/photo/gFJitAfqYZeFN6qLJ1fp8g?feat=embedwebsite)
+![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkamzlI5hI/AAAAAAAAZk0/D889uup3Blo/s400/DSC03933.JPG)![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkakAUgjaI/AAAAAAAAZkg/Kr-aWAYpoZo/s400/DSC03928.JPG)![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkavgrdePI/AAAAAAAAZlg/BMRuow-M6K8/s400/DSC03938.JPG)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkayW8D9AI/AAAAAAAAZlo/zGDHHtc49lY/s400/DSC03939.JPG)
 
 .. after a long day on the open sea we were pleasured by the indoor space provided to warm our sodden feet..
-[![](https://lh4.ggpht.com/_vZ6zE_QJfu0/SjkaznukrTI/AAAAAAAAZlw/8noFIOMnvUw/s400/DSC03940.JPG)](https://picasaweb.google.com/lh/photo/TScfOhnXX9VYyx3fnBt2sA?feat=embedwebsite)
+![](https://lh4.ggpht.com/_vZ6zE_QJfu0/SjkaznukrTI/AAAAAAAAZlw/8noFIOMnvUw/s400/DSC03940.JPG)
 
 ## Day 8
 
 And off again we scamper, this time we sail down the eastern shore away from Cape Breton..
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka1Hvg1LI/AAAAAAAAZl4/U7TlSyTJ0qI/s400/DSC03943.JPG)](https://picasaweb.google.com/lh/photo/q5BXcJ7ndpN6iLV_BX83qg?feat=embedwebsite)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka1Hvg1LI/AAAAAAAAZl4/U7TlSyTJ0qI/s400/DSC03943.JPG)
 
 ..thar we found some sand with which to enjoy ourÃ‚ maritimeÃ‚ sea tales..
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka5s3WiyI/AAAAAAAAZmU/anRwR-MiByA/s400/DSC03948.JPG)](https://picasaweb.google.com/lh/photo/IjO0n7uHfT3DOklRKh6GTQ?feat=embedwebsite)
-[![](https://lh4.ggpht.com/_vZ6zE_QJfu0/Sjka8ShJDeI/AAAAAAAAZmc/hYe6MbP1arc/s400/DSC03950.JPG)](https://picasaweb.google.com/lh/photo/SAk2nP0B1ZmV6p6KDBepsA?feat=embedwebsite)
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka9q0CmBI/AAAAAAAAZmo/Y6L-KiiX0EU/s400/DSC03952.JPG)](https://picasaweb.google.com/lh/photo/7piRRM6vT_AvFcP47saD6g?feat=embedwebsite)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka5s3WiyI/AAAAAAAAZmU/anRwR-MiByA/s400/DSC03948.JPG)
+![](https://lh4.ggpht.com/_vZ6zE_QJfu0/Sjka8ShJDeI/AAAAAAAAZmc/hYe6MbP1arc/s400/DSC03950.JPG)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/Sjka9q0CmBI/AAAAAAAAZmo/Y6L-KiiX0EU/s400/DSC03952.JPG)
 
 ## Day 9
 
 The last day of our epic voyage and we was both feelin rather weary, smelly, and our hair was somewhat greasy..
-[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkbG66WzjI/AAAAAAAAZnY/MB5FOOQtAPM/s400/DSC03958.JPG)](https://picasaweb.google.com/lh/photo/dEmQjmu7cUPsYJMbHHudWA?feat=embedwebsite)
+![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkbG66WzjI/AAAAAAAAZnY/MB5FOOQtAPM/s400/DSC03958.JPG)
 
 ..our weariness was not long lasted however as we pulled into the zenith of our adventures, Peggys Cove..
-[![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkbHxF1tQI/AAAAAAAAZng/yKrgsgt2po4/s400/DSC03960.JPG)](https://picasaweb.google.com/lh/photo/Y72zyELC45-9TFcg8ZhukQ?feat=embedwebsite)[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbKVf-OHI/AAAAAAAAZn0/yhYoUdYwgqo/s400/DSC03964.JPG)](https://picasaweb.google.com/lh/photo/tTY0fbHqpO4wFouXnx2RzA?feat=embedwebsite)[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbNu-BmvI/AAAAAAAAZoE/5af7Gth3iAE/s400/DSC03966.JPG)](https://picasaweb.google.com/lh/photo/wi4GZuucq-apPhvVxnce1A?feat=embedwebsite)
+![](https://lh6.ggpht.com/_vZ6zE_QJfu0/SjkbHxF1tQI/AAAAAAAAZng/yKrgsgt2po4/s400/DSC03960.JPG)![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbKVf-OHI/AAAAAAAAZn0/yhYoUdYwgqo/s400/DSC03964.JPG)![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbNu-BmvI/AAAAAAAAZoE/5af7Gth3iAE/s400/DSC03966.JPG)
 
 .. followed by some grog and sea shanties..
-[![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbWSg2DFI/AAAAAAAAZow/LNIhpStUlyc/s400/DSC03977.JPG)](https://picasaweb.google.com/lh/photo/piw8zIU0pKz5GUgHecjiPg?feat=embedwebsite)[![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkbX1uy-XI/AAAAAAAAZo4/mzTqgfetFuA/s400/DSC03978.JPG)](https://picasaweb.google.com/lh/photo/BtW5QJmS5B0W4OtkBrhGbw?feat=embedwebsite)
+![](https://lh5.ggpht.com/_vZ6zE_QJfu0/SjkbWSg2DFI/AAAAAAAAZow/LNIhpStUlyc/s400/DSC03977.JPG)![](https://lh3.ggpht.com/_vZ6zE_QJfu0/SjkbX1uy-XI/AAAAAAAAZo4/mzTqgfetFuA/s400/DSC03978.JPG)

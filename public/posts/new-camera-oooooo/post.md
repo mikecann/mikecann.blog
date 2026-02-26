@@ -10,7 +10,7 @@ So i have bought a new camera in preparation for my trip to America and have bee
 
 <!-- more -->
 
-Its all been uploaded to [picassa for viewing](https://picasaweb.google.com/mike.cann).
+Its all been uploaded to *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*.
 
 Some highlights:
 

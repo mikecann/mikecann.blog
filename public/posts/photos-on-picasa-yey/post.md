@@ -10,6 +10,6 @@ Well as the photos plugin for wordpress is pretty crap i have decided to upload 
 
 <!-- more -->
 
-You can find them all here: [https://picasaweb.google.com/mike.cann](https://picasaweb.google.com/mike.cann)
+You can find them all here: *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*
 
 There are also some new ones from toni's 21st..

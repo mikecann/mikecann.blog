@@ -12,5 +12,5 @@ Updated my photos on picassa again. Mainly photos from bens birthday and some fr
 
 Some highlights include:
 
-[![](https://lh5.google.co.uk/image/mike.cann/RlIEVmZwEWI/AAAAAAAAArI/T7RoFhtrDm0/DSC00492.JPG?imgmax=912)](https://picasaweb.google.com/mike.cann)[![](https://lh6.google.co.uk/image/mike.cann/Rkwy9WZwD2I/AAAAAAAAAnE/YgTZMMTOgxc/DSC00390.JPG?imgmax=912)](https://picasaweb.google.com/mike.cann)
-[![](https://lh4.google.co.uk/image/mike.cann/RlIElWZwEeI/AAAAAAAAAsE/ffIudU3qjcs/DSC00054.JPG?imgmax=144)](https://picasaweb.google.com/mike.cann)[![](https://lh6.google.co.uk/image/mike.cann/RkwyYWZwDaI/AAAAAAAAAjo/uW3lv0QhYyk/DSC00335.JPG?imgmax=144)](https://picasaweb.google.com/mike.cann)
+![](https://lh5.google.co.uk/image/mike.cann/RlIEVmZwEWI/AAAAAAAAArI/T7RoFhtrDm0/DSC00492.JPG?imgmax=912)![](https://lh6.google.co.uk/image/mike.cann/Rkwy9WZwD2I/AAAAAAAAAnE/YgTZMMTOgxc/DSC00390.JPG?imgmax=912)
+![](https://lh4.google.co.uk/image/mike.cann/RlIElWZwEeI/AAAAAAAAAsE/ffIudU3qjcs/DSC00054.JPG?imgmax=144)![](https://lh6.google.co.uk/image/mike.cann/RkwyYWZwDaI/AAAAAAAAAjo/uW3lv0QhYyk/DSC00335.JPG?imgmax=144)

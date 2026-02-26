@@ -85,7 +85,39 @@ function fixProtocolRelativeUrls(slug: string, raw: string): string {
   return result;
 }
 
-// ─── Fix 3: Specific broken image/link fixes ────────────────────────────────
+// ─── Fix 3: Defunct Picasa links ───────────────────────────────────────────
+
+const PICASA_NOTE = "*[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*";
+
+function fixDefunctPicasaLinks(slug: string, raw: string): string {
+  let result = raw;
+
+  // 1. Image wrapped in Picasa link: [![](imageurl)](picasaurl) -> ![](imageurl) (keep image, drop link)
+  const imageWrapRegex = /\[!\[\]\(([^)]+)\)\]\((https:\/\/picasaweb\.google\.com[^)]*)\)/g;
+  let match;
+  const imageMatches: Array<[string, string]> = [];
+  while ((match = imageWrapRegex.exec(raw)) !== null) {
+    imageMatches.push([match[0], `![](${match[1]})`]);
+  }
+  for (const [oldStr, newStr] of imageMatches) {
+    result = result.replace(oldStr, newStr);
+    logFix(slug, "defunct-embed", "Replaced Picasa-wrapped image link with image only", oldStr, newStr);
+  }
+
+  // 2. Plain markdown links to Picasa: [text](picasaurl) -> note
+  result = result.replace(
+    /\[([^\]]*)\]\((https:\/\/picasaweb\.google\.com[^)]*)\)/g,
+    (full, _text, _url) => {
+      if (full.startsWith("[![](")) return full; // image case already fixed
+      logFix(slug, "defunct-embed", "Replaced Picasa link with discontinued note", full, PICASA_NOTE);
+      return PICASA_NOTE;
+    }
+  );
+
+  return result;
+}
+
+// ─── Fix 4: Specific broken image/link fixes ──────────────────────────────────
 
 function fixSpecificPosts(slug: string, raw: string): string {
   let result = raw;
@@ -272,6 +304,7 @@ async function main() {
       // Apply all fix categories
       raw = fixAboveunder(slug, raw);
       raw = fixProtocolRelativeUrls(slug, raw);
+      raw = fixDefunctPicasaLinks(slug, raw);
       raw = fixSpecificPosts(slug, raw);
 
       // Only write if changed

@@ -6,7 +6,7 @@ title: More Photos..
 oldUrl: /photos-personal/more-photos
 ---
 
-Just some [more photos](https://picasaweb.google.com/mike.cann) of my latest comings and goings :P
+Just some *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]* of my latest comings and goings :P
 
 <!-- more -->
 

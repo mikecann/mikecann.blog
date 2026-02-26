@@ -18,9 +18,9 @@ For the last 30 days me and some friends have been taking one photo [every singl
 
 <!-- more -->
 
-Why? No reason other than we can really. We did it a [couple of years back](https://picasaweb.google.com/mike.cann/1Photo1Month) and it was good fun, so thought it would be worth repeating :)
+Why? No reason other than we can really. We did it a *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]* and it was good fun, so thought it would be worth repeating :)
 
-You can see a rather nice slideshow of all the images which I have uploaded to my [Web Album](https://picasaweb.google.com/lh/myphotos).
+You can see a rather nice slideshow of all the images which I have uploaded to my *[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*.
 
 I took each one using Instagram for the iPhone so all of them can also be found on my [Instagrid](https://instagrid.me/mikeysee/).
 
