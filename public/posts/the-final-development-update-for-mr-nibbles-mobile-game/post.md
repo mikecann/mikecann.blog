@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-08-05T20:52:06.000Z"
 tags:
   - development
