@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2018-06-13T16:51:40.000Z'
 tags:
@@ -43,7 +43,7 @@ When you pair the mirror with some Facial Recognition or Audio Commands then it 
 
 # Building
 
-The building of the mirror was quite an involved process so im going to dedicate posts to both the [software](/projects/mikes-mirror-software/) and [hardware](/projects/mikes-mirror-hardware/) side of things.
+The building of the mirror was quite an involved process so im going to dedicate posts to both the [software](/posts/mikes-mirror-software) and [hardware](/posts/mikes-mirror-hardware) side of things.
 
 # Cost
 
@@ -60,11 +60,11 @@ So how much did the whole thing cost to build?
 
 Which is quite a bit more that is strictly necessary and would probably be quite a bit cheaper if I was to do it again.
 
-For example, the I ended up buying the display brand new from Office Works instead of picking one up cheaper on Gumtree. I had very specific requirements for the screen (read more in the [hardware](/projects/mikes-mirror-hardware/) post) and although I could have found a cheaper one second hand there would have been compromises.
+For example, the I ended up buying the display brand new from Office Works instead of picking one up cheaper on Gumtree. I had very specific requirements for the screen (read more in the [hardware](/posts/mikes-mirror-hardware) post) and although I could have found a cheaper one second hand there would have been compromises.
 
 The Up Core x86 processor was definitely more expensive than some alternatives. I did buy a cheaper processor ARM processor too but I was concerned about compatibility and performance so I decided to grab the more expensive UpCore x86 CPU as a backup. Im glad I did as its a great little machine and really powerful.
 
-As I had no woodworking tools either, I had to spend about \$100 to buy some. This cost would obviously not be needed next time, tho next time I think I would probably go for one that didn't need a frame, read more in the [hardware](/projects/mikes-mirror-hardware/) post.
+As I had no woodworking tools either, I had to spend about \$100 to buy some. This cost would obviously not be needed next time, tho next time I think I would probably go for one that didn't need a frame, read more in the [hardware](/posts/mikes-mirror-hardware) post.
 
 # Time
 
@@ -93,7 +93,7 @@ So probably off and on again I have been working on for the last 3 months or so.
 
 # When went not so well
 
-- I had to order the two way glass three times (more on this in the [hardware](/projects/mikes-mirror-hardware/) post)
+- I had to order the two way glass three times (more on this in the [hardware](/posts/mikes-mirror-hardware) post)
 - Light from the window behind the mirror causes issues with the face detection sometimes. As a attempt at a solution I bought a desk lamp to try to illuminate your face a little more:
 
 ![](./mirror-with-desklight.jpg)
@@ -120,5 +120,5 @@ There's plenty more things I want to add and improve to the mirror. I suspect th
 This is a 3 part series, find the other parts here:
 
 1. Mikes Mirror - Overview
-2. [Mikes Mirror - Hardware](/projects/mikes-mirror-hardware/)
-3. [Mikes Mirror - Software](/projects/mikes-mirror-software/)
+2. [Mikes Mirror - Hardware](/posts/mikes-mirror-hardware)
+3. [Mikes Mirror - Software](/posts/mikes-mirror-software)

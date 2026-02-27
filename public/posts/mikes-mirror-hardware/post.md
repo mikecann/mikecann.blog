@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2018-06-16T10:32:40.000Z'
 tags:
@@ -21,9 +21,9 @@ So I decided to build a Smart Mirror as a hobby project. I knew that I could han
 
 This is a 3 part series, find the other parts here:
 
-1. [Mikes Mirror - Overview](/projects/mikes-mirror-overview/)
+1. [Mikes Mirror - Overview](/posts/mikes-mirror-overview)
 2. Mikes Mirror - Hardware
-3. [Mikes Mirror - Software](/projects/mikes-mirror-software/)
+3. [Mikes Mirror - Software](/posts/mikes-mirror-software)
 
 # Research
 
@@ -315,6 +315,6 @@ I made plenty of mistakes but im actually really happy with the result. I dont e
 
 This is a 3 part series, find the other parts here:
 
-1. [Mikes Mirror - Overview](/projects/mikes-mirror-overview/)
+1. [Mikes Mirror - Overview](/posts/mikes-mirror-overview)
 2. Mikes Mirror - Hardware
-3. [Mikes Mirror - Software](/projects/mikes-mirror-software/)
+3. [Mikes Mirror - Software](/posts/mikes-mirror-software)

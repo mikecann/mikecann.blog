@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: /posts/terrainicles-webgl-haxe/cover.jpg
 date: "2011-10-29T14:14:07.000Z"
 tags: []
@@ -12,8 +12,8 @@ I have been playing with this thing, tweaking it, making changes for weeks. Ther
 
 Before I go any further check out what im talking about here:
 
-[/projects/WebGLTerrainicles/
-(You will need a WebGL compatible browser, that means no IE) ](/projects/WebGLTerrainicles/)
+[/projects/WebGLTerrainicles/index.html
+(You will need a WebGL compatible browser, that means no IE) ](/projects/WebGLTerrainicles/index.html)
 
 Its a continuation of my earlier work on [GPU particles using WebGL and HaXE](/posts/gpu-state-preserving-particle-systems-with-webgl-haxe/). Im trying to emulate some work I did years ago in XNA, on the [LieroXNA project](/posts/project-update/).
 

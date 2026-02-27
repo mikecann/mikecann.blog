@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2018-07-24T14:51:40.000Z'
 tags:
@@ -11,7 +11,7 @@ title: Mikes Mirror - The Talk
 oldUrl: /talks/mikes-mirror-the-talk
 ---
 
-After my many [hard-learnt-lessons](/projects/mikes-mirror-overview/) building a Smart Mirror the past few months, I decided it might be a good idea to share some of those lessons with others in the community.
+After my many [hard-learnt-lessons](/posts/mikes-mirror-overview) building a Smart Mirror the past few months, I decided it might be a good idea to share some of those lessons with others in the community.
 
 <!-- more -->
 
@@ -25,7 +25,7 @@ I produced a slide deck from my previous condensed blogposts on the topic:
 
 2. [Mikes Mirror - Hardware](projects/mikes-mirror-hardware/)
 
-3. [Mikes Mirror - Software](/projects/mikes-mirror-software/)
+3. [Mikes Mirror - Software](/posts/mikes-mirror-software)
 
 If you are interested the [slides are available](https://docs.google.com/presentation/d/1nD3MhRzxJPYn63N_mdyxkSFqVFoFneQpcYXBlVICJEE/edit?usp=sharing) and the published show is here:
 

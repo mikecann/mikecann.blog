@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: "2011-08-11T20:38:13.000Z"
 tags:
@@ -29,7 +29,7 @@ So after a little bit of fiddling and hacking I managed to get point sprites cor
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/KhIT9yNEb8g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-You can play with it here: [/projects/HTML5SpeedTests/HaXeWebGL/bin/](/projects/HTML5SpeedTests/HaXeWebGL/bin/)
+You can play with it here: [/projects/HTML5SpeedTests/HaXeWebGL/bin/index.html](/projects/HTML5SpeedTests/HaXeWebGL/bin/index.html)
 
 The great thing about point sprites is that I only use one draw call per frame and the GPU is very good at rendering them. The only bottleneck really is the number of pixels you need to draw. With that in mind if you drop the size of the point sprite down to 1x1 you can render a very large (5million) points at interactive framerates (18fps):
 

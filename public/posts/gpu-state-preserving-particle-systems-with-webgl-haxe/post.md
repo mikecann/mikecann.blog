@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: /posts/gpu-state-preserving-particle-systems-with-webgl-haxe/cover.jpg
 date: "2011-10-20T12:02:35.000Z"
 tags:
@@ -22,7 +22,7 @@ Well this is the post I didnt think was going to happen. I have been struggling 
 So the idea was to build upon what I had been working with previously with my [stateless particles systems with WebGL and HaXe](/posts/5000000-chrome-crawlers-why-not-haxe-webgl/). The intention from the start was to replicate some of my [very early work](/posts/xnagpuparticles-1000000-dynamic-particles/) (from 2007) on state preserving particle systems in WebGL.
 
 **Before I go any further, you can check it out in action here:
-\*\***[/projects/HaxeWebGLParticles/](/projects/HaxeWebGLParticles/) \*\*
+\*\***[/projects/HaxeWebGLParticles/index.html](/projects/HaxeWebGLParticles/index.html) \*\*
 
 First a quick reminder. The difference between a stateless and state-preserving particle simulation is that in the latter we store and update the positions, velocities and other properties of each particle per frame, allowing us to interact and control the simulation. This differs from the stateless particle simulation (detailed in my[ previous post](/posts/5000000-chrome-crawlers-why-not-haxe-webgl/)), where the position for each particle is calculated each frame based on a fixed algorithm.
 

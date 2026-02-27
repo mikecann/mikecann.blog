@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: "2011-11-26T14:19:40.000Z"
 tags:
@@ -196,8 +196,8 @@ public var mapHeight : Int;
 
 Simples!
 
-Anyways you can check the final result out on this page: [/projects/hxaria/02/
-](/projects/hxaria/02/)(Click and drag to move the camera about)
+Anyways you can check the final result out on this page: /projects/hxaria/02/
+ *(no longer available)*(Click and drag to move the camera about)
 
 I have also uploaded a quick video too:
 

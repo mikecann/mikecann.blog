@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: /posts/ectoplasm-a-game-made-in-24-hours-ish/cover.jpg
 date: "2013-03-12T11:35:01.000Z"
 tags:
@@ -35,7 +35,7 @@ Ectoplasm source: [https://github.com/mikecann/Ectoplasm](https://github.com/mi
 
 I plan on refining the source as I have discussions with others on the Ash Mailing List about how best to go about implementing some of the features, so I suspect that source code may change over the coming weeks.
 
-Because the game is cross-platform that means that it will be accessible on the Apple App Store and Google Play store as soon as it gets approved, for now however you can play the web version over at: [/projects/ectoplasm/](/projects/ectoplasm/)[
-](/projects/ectoplasm/current/)
+Because the game is cross-platform that means that it will be accessible on the Apple App Store and Google Play store as soon as it gets approved, for now however you can play the web version over at: /projects/ectoplasm/ *(no longer available)*
+ *(no longer available)*
 
 You may want to toggle your microphone settings (or disable the microphone entirely ;))

@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: "2011-07-10T19:13:25.000Z"
 tags:
@@ -23,15 +23,15 @@ I had heard from the HaXe mailing list that the [Jeash project](https://haxe.org
 
 So I coded up a quick blitting example to see what sort of performance I would get:
 
-[/projects/HTML5SpeedTests/HaXeJeash/bin/](/projects/HTML5SpeedTests/HaXeJeash/bin/)
+[/projects/HTML5SpeedTests/HaXeJeash/bin/index.html](/projects/HTML5SpeedTests/HaXeJeash/bin/index.html)
 
 The results were okay (I get about 11FPS with 5,000 crawlers) however I was interested to know what sort of cost HaXe adds. So I decided to code up a second example, this time using pure JS:
 
-[/projects/HTML5SpeedTests/JSCanvas/](/projects/HTML5SpeedTests/JSCanvas/)
+[/projects/HTML5SpeedTests/JSCanvas/index.html](/projects/HTML5SpeedTests/JSCanvas/index.html)
 
 The results this time were better (14FPS with 5,000 crawlers) so I now wondered what happens if I do without Jeash and just code up the example using pure HaXe. I was expecting to see the same sort of performance hit as Jeash:
 
-[/projects/HTML5SpeedTests/HaXeCanvas/bin/](/projects/HTML5SpeedTests/HaXeCanvas/bin/)
+[/projects/HTML5SpeedTests/HaXeCanvas/bin/index.html](/projects/HTML5SpeedTests/HaXeCanvas/bin/index.html)
 
 Surprisingly it actually runs faster (17FPS with 5,000 crawlers) ! This is quite a surprise and totally contradicts my notion that going from HaXe -> JS would incur a cost. I was expecting some cost, but a performance increase?! I can only speculate that behind the scenes the JS engine in the browser is able to JIT compile the HaXe JS much better than the hand-crafted JS and hence more speed.
 

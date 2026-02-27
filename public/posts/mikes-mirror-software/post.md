@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2018-06-17T11:23:40.000Z'
 tags:
@@ -13,7 +13,7 @@ title: Mikes Mirror - Software
 oldUrl: /projects/mikes-mirror-software
 ---
 
-Building the frame and assembling [the hardware](/projects/mikes-mirror-hardware/) for my Smart Mirror was a tough but fun journey. But now its time for what im good at, the software.
+Building the frame and assembling [the hardware](/posts/mikes-mirror-hardware) for my Smart Mirror was a tough but fun journey. But now its time for what im good at, the software.
 
 <!-- more -->
 
@@ -21,8 +21,8 @@ Building the frame and assembling [the hardware](/projects/mikes-mirror-hardware
 
 This is a 3 part series, find the other parts here:
 
-1. [Mikes Mirror - Overview](/projects/mikes-mirror-overview/)
-2. [Mikes Mirror - Hardware](/projects/mikes-mirror-hardware/)
+1. [Mikes Mirror - Overview](/posts/mikes-mirror-overview)
+2. [Mikes Mirror - Hardware](/posts/mikes-mirror-hardware)
 3. Mikes Mirror - Software
 
 # Research
@@ -226,6 +226,6 @@ Thanks again for sticking with me through these lengthy posts. Let me know in th
 
 This is a 3 part series, find the other parts here:
 
-1. [Mikes Mirror - Overview](/projects/mikes-mirror-overview/)
-2. [Mikes Mirror - Hardware](/projects/mikes-mirror-hardware/)
-3. [Mikes Mirror - Software](/projects/mikes-mirror-software/)
+1. [Mikes Mirror - Overview](/posts/mikes-mirror-overview)
+2. [Mikes Mirror - Hardware](/posts/mikes-mirror-hardware)
+3. [Mikes Mirror - Software](/posts/mikes-mirror-software)
