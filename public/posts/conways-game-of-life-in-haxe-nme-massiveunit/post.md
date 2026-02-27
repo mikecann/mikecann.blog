@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: "2011-10-09T17:13:29.000Z"
 tags:
@@ -165,7 +165,7 @@ To show just how easy it is I made the following video:
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/VNF2gH5o9Zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
 
-You can see the HTML5 build here: [/projects/gameoflife/Export/html5/bin/](/projects/gameoflife/Export/html5/bin/)
+You can see the HTML5 build here: [/projects/gameoflife/Export/html5/bin/index.html](/projects/gameoflife/Export/html5/bin/index.html)
 
 And the flash build here: [/projects/gameoflife/Export/flash/bin/MyApplication.swf](/projects/gameoflife/Export/flash/bin/MyApplication.swf)
 
