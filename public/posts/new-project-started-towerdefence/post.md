@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-05-03T13:42:03.000Z'
 tags: []
 title: New project started! TowerDefence

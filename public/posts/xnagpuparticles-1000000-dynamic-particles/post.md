@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-30T10:30:40.000Z'
 tags: []
 title: 'XNAGPUParticles (1,000,000 Dynamic Particles)'

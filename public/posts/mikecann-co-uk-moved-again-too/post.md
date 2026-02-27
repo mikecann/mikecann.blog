@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-04-13T21:44:56.000Z"
 tags:
   - hosting

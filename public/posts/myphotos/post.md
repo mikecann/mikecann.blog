@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-08-31T18:13:56.000Z'
 tags: []
 title: MyPhotos

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-05-17T21:56:20.000Z'
 tags: []
 title: planet

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-01-17T20:35:13.000Z"
 tags:
   - acquisition

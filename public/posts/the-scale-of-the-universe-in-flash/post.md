@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-02-03T12:46:36.000Z"
 tags:
   - experiment

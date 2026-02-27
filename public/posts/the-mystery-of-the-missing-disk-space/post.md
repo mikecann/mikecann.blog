@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2014-02-15T11:31:48.000Z"
 tags:
   - disk space

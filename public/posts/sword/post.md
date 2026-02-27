@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-05-17T22:01:56.000Z'
 tags: []
 title: sword

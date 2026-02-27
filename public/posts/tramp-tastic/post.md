@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-11-16T09:25:24.000Z'
 tags:
   - fun

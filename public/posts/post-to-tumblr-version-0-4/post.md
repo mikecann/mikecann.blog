@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-10-31T18:50:22.000Z"
 tags:
   - caption

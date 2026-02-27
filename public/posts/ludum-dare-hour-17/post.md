@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-08-21T18:34:52.000Z"
 tags:
   - bloom

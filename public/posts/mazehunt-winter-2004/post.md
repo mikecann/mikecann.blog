@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2004-11-27T21:58:33.000Z"
 tags: []
 title: MazeHunt

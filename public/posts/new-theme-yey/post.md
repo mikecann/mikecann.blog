@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-02-21T15:42:15.000Z'
 tags: []
 title: New theme yey!

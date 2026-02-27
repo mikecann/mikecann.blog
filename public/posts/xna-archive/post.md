@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-03-11T09:39:15.000Z'
 tags: []
 title: XNA Archive

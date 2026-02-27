@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-07-14T10:50:03.000Z"
 tags:
   - chill

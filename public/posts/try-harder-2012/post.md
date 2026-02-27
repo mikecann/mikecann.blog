@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-10-17T20:02:06.000Z"
 tags:
   - adobe

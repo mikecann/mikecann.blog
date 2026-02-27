@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-06-17T20:11:27.000Z"
 tags:
   - personal

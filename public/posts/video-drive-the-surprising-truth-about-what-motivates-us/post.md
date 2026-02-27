@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2010-06-06T21:24:53.000Z'
 tags:
   - interesting

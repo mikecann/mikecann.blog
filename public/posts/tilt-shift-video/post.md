@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-04-29T08:30:16.000Z'
 tags: []
 title: Tilt-Shift Video

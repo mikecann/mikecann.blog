@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-02-18T13:17:14.000Z'
 tags: []
 title: '#tweetcoding Line Dance'

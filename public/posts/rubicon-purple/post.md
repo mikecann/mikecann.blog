@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-05-17T22:15:32.000Z'
 tags: []
 title: Rubicon-Purple

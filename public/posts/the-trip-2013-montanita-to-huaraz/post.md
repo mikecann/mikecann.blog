@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-11-01T14:22:47.000Z"
 tags:
   - guayaquil

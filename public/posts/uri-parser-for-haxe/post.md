@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-04-11T21:01:51.000Z"
 tags:
   - chromecrawler

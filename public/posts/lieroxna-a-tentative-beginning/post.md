@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-06T20:02:53.000Z'
 tags: []
 title: LieroXNA - A Tentative Beginning

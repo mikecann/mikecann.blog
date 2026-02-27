@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-05-06T20:41:25.000Z'
 tags: []
 title: TDProject BlueprintStore and BlueprintEditor

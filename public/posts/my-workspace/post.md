@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-08-11T16:00:58.000Z'
 tags: []
 title: My Workspace

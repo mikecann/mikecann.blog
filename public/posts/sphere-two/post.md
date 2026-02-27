@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-05-17T22:00:12.000Z'
 tags: []
 title: sphere-two

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-08-22T08:37:45.000Z"
 tags:
   - 48hours

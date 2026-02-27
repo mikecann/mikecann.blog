@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-09-27T00:22:33.000Z"
 tags:
   - cashcard fraud

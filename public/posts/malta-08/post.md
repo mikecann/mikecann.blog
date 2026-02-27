@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-09-20T14:47:08.000Z'
 tags: []
 title: Malta '08

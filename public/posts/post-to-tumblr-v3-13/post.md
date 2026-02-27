@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-01-20T12:17:08.000Z"
 tags:
   - chrome

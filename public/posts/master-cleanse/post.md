@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-08-27T13:58:51.000Z'
 tags: []
 title: Master Cleanse

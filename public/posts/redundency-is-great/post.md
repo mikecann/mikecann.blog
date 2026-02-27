@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-03-31T17:16:54.000Z'
 tags: []
 title: Redundency is Great

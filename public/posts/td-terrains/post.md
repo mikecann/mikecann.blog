@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-05-22T11:25:34.000Z'
 tags: []
 title: TD Terrains

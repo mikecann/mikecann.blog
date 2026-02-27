@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-09T15:35:35.000Z'
 tags: []
 title: 'Liero + 200,000 Particles'

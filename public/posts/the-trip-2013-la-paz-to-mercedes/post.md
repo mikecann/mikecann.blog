@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-12-08T20:53:22.000Z"
 tags:
   - bolivia

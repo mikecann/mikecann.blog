@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-02-07T12:38:52.000Z'
 tags: []
 title: 'More photos, yey!'

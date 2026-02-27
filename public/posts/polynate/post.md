@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-08-14T12:24:40.000Z"
 tags: []
 title: Polynate

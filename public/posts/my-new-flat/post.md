@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-07-25T15:20:42.000Z'
 tags: []
 title: My new flat

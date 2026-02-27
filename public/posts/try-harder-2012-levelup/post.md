@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-03-12T17:39:07.000Z"
 tags:
   - as3

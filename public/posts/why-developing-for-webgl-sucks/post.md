@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-10-21T17:36:42.000Z"
 tags:
   - flash

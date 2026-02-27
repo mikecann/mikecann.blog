@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-10-09T23:45:46.000Z'
 tags: []
 title: Wordpress 2.3

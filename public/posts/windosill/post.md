@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-07-31T10:11:53.000Z"
 tags:
   - excellent

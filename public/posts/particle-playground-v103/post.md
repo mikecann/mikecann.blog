@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-03-19T09:45:31.000Z"
 tags: []
 title: Particle Playground v1.0.3

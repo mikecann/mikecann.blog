@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-01-22T10:50:22.000Z"
 tags: []
 title: T-Mobile Ad

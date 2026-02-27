@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-10-09T16:36:45.000Z'
 tags: []
 title: Undergoing Renovations

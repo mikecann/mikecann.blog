@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-19T19:55:46.000Z'
 tags: []
 title: Supreme Commander Wallpaper

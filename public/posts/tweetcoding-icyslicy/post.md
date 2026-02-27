@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-02-20T16:04:06.000Z'
 tags: []
 title: '#tweetcoding icyslicy'

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-10-01T10:02:07.000Z"
 tags: []
 title: Windows Taskbar Monitor v0.3

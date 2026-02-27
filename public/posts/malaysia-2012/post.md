@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-06-25T18:59:09.000Z"
 tags:
   - malaysia

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2014-01-18T18:16:36.000Z"
 tags:
   - brazil

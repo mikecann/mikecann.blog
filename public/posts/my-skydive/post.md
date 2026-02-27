@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-10-05T17:49:44.000Z'
 tags: []
 title: My Skydive!

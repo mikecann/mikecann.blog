@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-03-26T12:11:11.000Z'
 tags: []
 title: 'Photos on Picasa, yey!'

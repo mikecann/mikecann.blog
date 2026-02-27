@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-09-11T13:38:27.000Z"
 tags: []
 title: The Trip 2013 - Cartagena to Taganga

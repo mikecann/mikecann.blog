@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2006-05-17T22:05:54.000Z'
 tags: []
 title: skyworld

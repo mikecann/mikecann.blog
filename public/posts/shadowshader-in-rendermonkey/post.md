@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-01-24T14:03:02.000Z'
 tags: []
 title: ShadowShader in RenderMonkey

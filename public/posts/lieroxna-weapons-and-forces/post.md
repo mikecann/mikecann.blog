@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-16T19:37:10.000Z'
 tags: []
 title: LieroXNA - Weapons and Forces

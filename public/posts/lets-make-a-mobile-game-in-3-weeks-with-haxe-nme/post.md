@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-07-03T21:28:01.000Z"
 tags: []
 title: Lets Make a Mobile Game in 3-Weeks with Haxe & NME

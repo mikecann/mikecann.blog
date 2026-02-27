@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-04-24T09:41:12.000Z'
 tags: []
 title: Meowcenaries

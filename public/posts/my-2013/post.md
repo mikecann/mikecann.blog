@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-03-23T18:14:19.000Z"
 tags: []
 title: My 2013

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2013-09-21T12:00:14.000Z"
 tags:
   - bucaramanga

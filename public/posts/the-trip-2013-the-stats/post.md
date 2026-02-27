@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2014-01-21T15:13:33.000Z"
 tags:
   - summary

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-04-21T17:06:04.000Z'
 tags: []
 title: 'New Camera, oooooo!'

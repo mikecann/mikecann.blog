@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2010-04-11T14:57:49.000Z'
 tags:
   - flat

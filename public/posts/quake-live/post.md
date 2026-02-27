@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-03-05T15:08:49.000Z'
 tags: []
 title: Quake Live

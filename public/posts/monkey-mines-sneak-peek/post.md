@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2009-04-03T16:51:41.000Z'
 tags: []
 title: Monkey Mines - Sneak Peek

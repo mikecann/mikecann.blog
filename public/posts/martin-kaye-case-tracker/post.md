@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2006-07-27T19:30:57.000Z"
 tags: []
 title: Martin-Kaye Case Tracker

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2012-09-08T00:37:27.000Z'
 tags: []
 title: Mr Nibbles

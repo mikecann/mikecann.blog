@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2008-01-17T21:38:56.000Z"
 tags: []
 title: XNALiquids02

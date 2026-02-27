@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2014-07-04T00:58:22.000Z'
 tags: []
 title: Mr Nibbles 3D - Level Building

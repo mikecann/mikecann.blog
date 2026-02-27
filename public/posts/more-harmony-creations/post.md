@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2010-03-24T00:34:01.000Z"
 tags: []
 title: More Harmony Creations

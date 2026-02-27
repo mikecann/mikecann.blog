@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-10T21:51:19.000Z'
 tags: []
 title: Liero Update - Console & ATi

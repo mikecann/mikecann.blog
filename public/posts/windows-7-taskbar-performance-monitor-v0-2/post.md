@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2011-02-16T20:57:04.000Z"
 tags:
   - c sharp

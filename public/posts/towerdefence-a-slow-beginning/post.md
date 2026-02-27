@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-05-05T20:01:22.000Z'
 tags: []
 title: TowerDefence - A Slow Beginning

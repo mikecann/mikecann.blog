@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-10-11T13:53:57.000Z'
 tags: []
 title: Zero Punctuation - Halo3

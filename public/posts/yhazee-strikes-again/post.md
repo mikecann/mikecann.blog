@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-08-28T10:00:05.000Z'
 tags: []
 title: Yhazee Strikes Again!

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-09-30T19:36:37.000Z'
 tags: []
 title: LieroXNA - Improvements and Additions

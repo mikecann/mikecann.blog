@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-12-27T11:28:11.000Z"
 tags:
   - canvas2d

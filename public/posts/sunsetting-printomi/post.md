@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2012-05-12T16:40:42.000Z"
 tags: []
 title: Sunsetting Printomi

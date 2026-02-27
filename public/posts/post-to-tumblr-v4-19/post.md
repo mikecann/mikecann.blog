@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2014-06-19T01:12:11.000Z'
 tags: []
 title: Post To Tumblr v4.19

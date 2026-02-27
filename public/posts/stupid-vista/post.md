@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2007-02-08T12:28:46.000Z'
 tags: []
 title: Stupid vista

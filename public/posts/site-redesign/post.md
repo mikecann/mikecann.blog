@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: '2008-04-11T11:59:23.000Z'
 tags: []
 title: Site-Redesign

@@ -1,5 +1,5 @@
 ﻿---
-coverImage: /images/fallback-post-header.png
+coverImage: ./header.webp
 date: "2009-03-27T10:38:41.000Z"
 tags: []
 title: "Spam, the mark of the devil.."
