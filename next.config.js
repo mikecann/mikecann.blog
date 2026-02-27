@@ -53,10 +53,22 @@ module.exports = {
         source: "/DumpingGround/:splat*",
         destination: "http://d18l99bmg6trdn.cloudfront.net/DumpingGround/:splat*",
       },
-      // /projects/ 404s on CloudFront, so go direct to S3
+      // These paths 404 on CloudFront but exist directly in S3
       {
         source: "/projects/:splat*",
         destination: "https://mikecann-web-wordpress.s3.amazonaws.com/projects/:splat*",
+      },
+      {
+        source: "/ArtificialStudios1/:splat*",
+        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/ArtificialStudios1/:splat*",
+      },
+      {
+        source: "/Files/:splat*",
+        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Files/:splat*",
+      },
+      {
+        source: "/Work/:splat*",
+        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Work/:splat*",
       },
     ];
   },

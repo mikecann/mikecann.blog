@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2018-10-30T14:51:40.000Z'
 tags:
@@ -11,13 +11,13 @@ title: Sleeping Headphones Update
 oldUrl: /personal/sleeping-headphones-update
 ---
 
-Its been quite some time since my original post on [The Sleeping Headphones Saga](./photos-personal/the-sleeping-headphones-saga/) so I thought it was time I updated with my current situation my my experiments since then.
+Its been quite some time since my original post on The Sleeping Headphones Saga so I thought it was time I updated with my current situation my my experiments since then.
 
 <!-- more -->
 
 # Recap
 
-If the last post is [TLDR;](./photos-personal/the-sleeping-headphones-saga/) then basically the summary is that I (like many others) like to listen to music / audiobooks in bed to help me sleep with. I have been doing it for over two decades now and I thought I would share my experience trying to find the right headphones for my sleeping audio pleasure.
+If the last post is TLDR; then basically the summary is that I (like many others) like to listen to music / audiobooks in bed to help me sleep with. I have been doing it for over two decades now and I thought I would share my experience trying to find the right headphones for my sleeping audio pleasure.
 
 Up to that point I wasnt 100% happy with any of the options on the market and despite trying quite a few, some more expensive than others, I ended up with \$13 Panasonic RP-HS46 as my daily driver for now.
 

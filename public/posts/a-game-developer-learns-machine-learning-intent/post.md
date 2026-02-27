@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: "2017-11-05T13:37:29.000Z"
 tags:
@@ -79,4 +79,4 @@ The goal for the series is I want to be able to write an AI that is able to play
 
 I have no idea if thats an achievable goal but I think its a goal that should give me a solid understanding of the fundamentals of reinforcement learning and give me a target with which to focus on and guide me through this dense but wonderful topic.
 
-So if you are interested in following along, either [add this blog to your favourite RSS reader](/atom.xml) or enter your email below to subscribe and get email updates.
+So if you are interested in following along, either [add this blog to your favourite RSS reader](/rss.xml) or enter your email below to subscribe and get email updates.

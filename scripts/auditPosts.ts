@@ -113,6 +113,11 @@ const SKIP_BROKEN_IMAGE_DOMAINS = new Set([
   "lh6.ggpht.com",
   "picasaweb.google.com",
   "picasaweb.google.co.uk",
+  // Old Google+ / Google Photos CDN URLs (lh*.googleusercontent.com) - same situation as ggpht.com
+  "lh3.googleusercontent.com",
+  "lh4.googleusercontent.com",
+  "lh5.googleusercontent.com",
+  "lh6.googleusercontent.com",
 ]);
 
 // Defunct services that we know are dead
@@ -472,8 +477,8 @@ function parsePost(slug: string): ParsedPost {
   for (const embed of flashEmbeds) {
     localIssues.push({
       type: "flash-embed",
-      severity: "error",
-      description: `Flash/SWF embed (no longer supported in browsers)`,
+      severity: "info",
+      description: `Flash/SWF embed (handled by Ruffle emulator)`,
       url: embed.url,
       line: embed.line,
     });
@@ -552,8 +557,14 @@ function parsePost(slug: string): ParsedPost {
         continue;
       }
 
-      // /wp-content/ is served via the Next.js rewrite to CloudFront - not a local file
-      if (item.url.startsWith("/wp-content/") || item.url.startsWith("../wp-content/")) {
+      // These paths are served via Next.js rewrites to CloudFront/S3 - not local files
+      // These paths are served via Next.js rewrites to CloudFront/S3 - not local files
+      const rewrittenPaths = [
+        "/wp-content/", "../wp-content/",
+        "/projects/", "/flash/", "/DumpingGround/",
+        "/ArtificialStudios1/", "/Files/", "/Work/",
+      ];
+      if (rewrittenPaths.some((p) => item.url.startsWith(p))) {
         continue;
       }
 
@@ -731,9 +742,18 @@ async function main() {
         // Check if this is a known bot-blocked 403
         const isBotBlocked = result.status === 403 && domain && BOT_BLOCKED_403_DOMAINS.has(domain);
 
+        // External dead links are downgraded to warning - they're known-deferred
+        // (old posts link to sites that have gone dark over the years, not fixable)
+        // Images from skipped domains are already filtered above, so broken-image here is still an error
+        const severity = isBotBlocked
+          ? "info"
+          : item.isImage
+            ? "error"
+            : "warning";
+
         issues.push({
           type: item.isImage ? "broken-image" : "dead-link",
-          severity: isBotBlocked ? "info" : "error",
+          severity,
           description: isBotBlocked
             ? `HTTP 403 (likely bot-blocked, probably fine for real users)`
             : result.error

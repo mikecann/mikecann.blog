@@ -85,12 +85,31 @@ When working through audit issues:
 - You MUST verify your fix works by testing it yourself (e.g. load the post in the browser, click the link, confirm the image loads) before declaring it fixed.
 ## Known Remaining Issues
 
-As of Feb 2025, the following issues are known but intentionally deferred:
+As of Feb 2026, the blog has been comprehensively cleaned up. The audit script (`scripts/auditPosts.ts`) should show **zero errors** when run. Any errors that appear are new and should be fixed.
 
-- **Flash/SWF embeds** (79 across 45 posts) - these render as nothing in modern browsers. A future project could use Ruffle (Flash WASM emulator) to restore them.
-- **Dead external links** (around 460 across around 200 posts) - these need case-by-case decisions (Wayback Machine, removal, etc.)
-- **Fallback cover images** (410 posts) - these use `/images/fallback-post-header.png` instead of a custom header. This is a content/design task.
-- **Bot-blocked 403s** (around 1200 URLs, mostly `www.mikecann.blog/wp-content/...`) - these work for real users via the CloudFront rewrite but fail for automated checkers.
+### Audit severity levels
+
+- **error** - genuinely broken, fixable, should be zero of these
+- **warning** - known-deferred issues (external dead links, can't fix other people's websites)
+- **info** - handled by the system (Flash via Ruffle, bot-blocked 403s)
+
+### Accepted/deferred issues (warning or info severity)
+
+- **Dead external links** (~490 across ~200 posts, severity: `warning`) - old posts link to sites that have gone dark over the years. Not fixable without manual curation post-by-post.
+- **Flash/SWF embeds** (~60 across ~40 posts, severity: `info`) - handled by the Ruffle Flash emulator loaded in `_app.tsx`. Internal SWF files are served via Next.js rewrites to CloudFront/S3.
+- **Bot-blocked 403s** (~84 URLs, severity: `info`) - mostly `www.mikecann.blog/wp-content/...` which work fine in real browsers via the CloudFront rewrite.
+
+### What was fixed in Feb 2026
+
+- Added Ruffle Flash emulator for all SWF embeds
+- Added Next.js rewrites for `/flash/`, `/DumpingGround/`, `/projects/`, `/ArtificialStudios1/`, `/Files/`, `/Work/` to CloudFront/S3
+- Fixed all dead third-party Flash embeds (replaced with notes), rescued Vimeo ones to iframes
+- Fixed all WordPress absolute URLs to relative paths
+- Fixed all broken images from old `mikecann.blog/Images/`, `/Work/`, `/Files/` paths
+- Fixed all WordPress `?p=ID` style links (38 across posts)
+- Fixed S3 directory links and mikes-mirror cross-post links
+- Generated AI header images for all 419 posts that had the fallback cover
+- Fixed `/atom.xml` links to `/rss.xml`
 
 ## Other Scripts
 

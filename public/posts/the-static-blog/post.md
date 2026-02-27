@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.webp
 date: '2017-10-31T21:00:00.000Z'
 tags:
@@ -39,7 +39,7 @@ With that in mind, I grabbed the [wordpress migrator plugin](https://github.com/
 
 Once done I uploaded it all to AWS S3, then put CloudFront CDN infront of it and tada! Super Fast Blog!
 
-Im really happy with the end result, page navigation is super fast. I have [archives](/all-archives/), [tags](/all-tags/), [rss](/atom.xml) and even [search](/#search) powered by Algolia!
+Im really happy with the end result, page navigation is super fast. I have [archives](/all-archives/), [tags](/all-tags/), [rss](/rss.xml) and even [search](/#search) powered by Algolia!
 
 All the source for the blog can also be found on github: https://github.com/mikecann/mikecann.blog
 
