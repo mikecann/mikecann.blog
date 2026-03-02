@@ -28,7 +28,7 @@ So here is "A Cunning Plan":
 
 You can play the game here:
 
-[Play A Cunning Plan](/projects/acunningplan)
+[Play A Cunning Plan](/projects/acunningplan/index.html)
 
 This game was far more complex to create than [Latesha's Crib](/posts/the-three-game-challenge-part-1-lateshas-crib/) and hence I spent about 43 hours over the last 9 days making this one.
 

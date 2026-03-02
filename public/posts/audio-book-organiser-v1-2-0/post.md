@@ -25,4 +25,4 @@ New version and sources:
 
 [airbadge]Audio Book Orgainser,https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser.air,1,https://www.mikecann.blog/flash/AudioBookOrganiser/badgeImg.jpg[/airbadge]
 
-Source: [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v120_source.zip](https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v120_source.zip)
+Source: [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v120_source.zip](/flash/AudioBookOrganiser/AudioBookOrganiser_v120_source.zip)

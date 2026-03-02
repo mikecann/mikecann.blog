@@ -66,5 +66,5 @@ addChild(l);
 ```
 
 You can download this project here: [https://www.mikecann.blog/flash/SWFA.zip
-](https://www.mikecann.blog/flash/SWFA.zip)
+](/flash/SWFA.zip)
 Although this makes sense from a flash structure point of view it would of been exceedingly helpfull if some sort of warning or error was thrown, rather than nothing atall.

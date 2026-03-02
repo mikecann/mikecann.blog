@@ -24,7 +24,7 @@ For this one I started off with an idea that I wanted to make a time-based puzzl
 
 Anyways see what you think:
 
-[Play Latesha's Crib](/projects/latesha)
+[Play Latesha's Crib](/projects/latesha/index.html)
 
 In total I spent 31 hours over the last week making this over the past week:
 

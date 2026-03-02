@@ -10,4 +10,4 @@ oldUrl: /flash/cannyshammy-everquest-goodbye
 
 <!-- more -->
 
-**Link:** [Peeky Peeky](https://www.mikecann.blog/flash/cannyshammy2.html)
+**Link:** [Peeky Peeky](/flash/cannyshammy2.html)

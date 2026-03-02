@@ -24,6 +24,8 @@ import { getAllPosts } from "../../scripts/posts/index";
 import imageSize from "image-size";
 import path from "path";
 import fs from "fs";
+import * as React from "react";
+import { FlashPlayerModal } from "../../components/flash/FlashPlayerModal";
 
 type ImageSizes = Record<string, { width: number; height: number }>;
 
@@ -42,6 +44,17 @@ const postContainerClass = style(
 const PostPage = ({ post, html, imageSizes }: Props) => {
   const { meta, slug } = post;
   const { title, date } = meta;
+  const [flashUrl, setFlashUrl] = React.useState<string | null>(null);
+
+  const isFlashPlayableHref = (href: string): boolean => {
+    if (/\.swf(?:$|[?#])/i.test(href)) return true;
+
+    const isFlashPath = href.startsWith("/flash/") || href.startsWith("/DumpingGround/");
+    const isProjectPath = href.startsWith("/projects/");
+    const isHtml = /\.html?(?:$|[?#])/i.test(href);
+
+    return (isFlashPath || isProjectPath) && isHtml;
+  };
 
   return (
     <Layout>
@@ -255,6 +268,22 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
                     const { href, children, ...rest } = props;
                     const safeHref =
                       typeof href === "string" ? getRelativePathForPost(post.slug, href) : "";
+
+                    if (safeHref && isFlashPlayableHref(safeHref)) {
+                      return (
+                        <a
+                          href={safeHref}
+                          {...rest}
+                          onClick={(event) => {
+                            event.preventDefault();
+                            setFlashUrl(safeHref);
+                          }}
+                        >
+                          {children}
+                        </a>
+                      );
+                    }
+
                     return (
                       <a href={safeHref} {...rest}>
                         {children}
@@ -297,6 +326,7 @@ const PostPage = ({ post, html, imageSizes }: Props) => {
           </Vertical>
         </Horizontal>
       </Vertical>
+      {flashUrl ? <FlashPlayerModal url={flashUrl} onClose={() => setFlashUrl(null)} /> : null}
     </Layout>
   );
 };

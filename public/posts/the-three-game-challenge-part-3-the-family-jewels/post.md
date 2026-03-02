@@ -31,7 +31,7 @@ Anyways give it a go and let me know what you think:
 
 [Play The Family Jewels
 
-](/projects/jewels)
+](/projects/jewels/index.html)
 
 This one took a little less time at the others at 31hours over 7 days, as per the other two I recorded my time spent:
 

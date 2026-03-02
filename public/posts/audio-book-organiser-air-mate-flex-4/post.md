@@ -33,6 +33,6 @@ The data is persisted to a file that is saved to your hard drive, so when you op
 
 I havent tested it very much atall so there is a very high likelyhood of being some strange bugs in there. I am also releasing all the source code for this project for all to see, use and study if they so wish.
 
-[https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser.air](https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser.air)
+[https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser.air](/flash/AudioBookOrganiser/AudioBookOrganiser.air)
 
-Source: [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v101_source.zip](https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v101_source.zip)
+Source: [https://www.mikecann.blog/flash/AudioBookOrganiser/AudioBookOrganiser_v101_source.zip](/flash/AudioBookOrganiser/AudioBookOrganiser_v101_source.zip)

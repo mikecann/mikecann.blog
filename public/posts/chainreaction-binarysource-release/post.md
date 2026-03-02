@@ -14,7 +14,7 @@ ChainReaction was my large (60 credits) project for my final year of university.
 
 *[Image no longer available]*
 
-The tool lets an artist or designer visually lay out their effect in an easy to use and understand manner. Once an effect has been created it can be exported out to either the XNA SDK or the [Flash SDK](https://www.mikecann.blog/flash/winter.html) for a programmer to use in thier own projects:
+The tool lets an artist or designer visually lay out their effect in an easy to use and understand manner. Once an effect has been created it can be exported out to either the XNA SDK or the [Flash SDK](/flash/winter.html) for a programmer to use in thier own projects:
 
 *[Image no longer available]*
 
