@@ -2,6 +2,7 @@ import { v } from "convex/values";
 import { convex } from "../../builder";
 import { ensureFP } from "../../../essentials/misc/ensure";
 import { vEntryId } from "@convex-dev/rag";
+import { internal } from "../../_generated/api";
 
 export const createBlogPost = convex
   .mutation()
@@ -17,6 +18,11 @@ export const createBlogPost = convex
       title,
       hash,
       ragEntryId,
+    });
+
+    await ctx.scheduler.runAfter(0, internal.mailchimp.internal.actions.sendNewPostCampaign, {
+      slug,
+      title,
     });
 
     return await ctx.db.get(id).then(ensureFP("Blog post not found"));
