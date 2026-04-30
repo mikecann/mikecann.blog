@@ -13,7 +13,7 @@ I flew halfway around the world to attend a React conference and came away think
 
 As I write this, I'm sitting on a bus making the final four hours back home after roughly 50 hours of solid travel. It has been an absolutely gruelling journey, taking me from my home in Busselton, Western Australia, to the other side of the planet for React Miami.
 
-React Miami has now been running for five years and gathers some of the biggest names in my industry in one place. While I was there I saw ThePrimeagen, Theo, Dax, Ben Davis, Tanner Linsley, Joel Hooks, Kent C. Dodds, Dimitri Mitropoulos, and so many others. It really was an incredible gathering of talent, and quite frankly I felt a little out of place among them.
+React Miami has now been running for five years and gathers some of the biggest names in my industry in one place. While I was there I saw [ThePrimeagen](https://x.com/ThePrimeagen), [Theo](https://x.com/theo), [Dax](https://x.com/thdxr), [Ben Davis](https://x.com/davis7), [Tanner Linsley](https://x.com/tannerlinsley), [Joel Hooks](https://x.com/joelhooks), [Kent C. Dodds](https://x.com/kentcdodds), [Dimitri Mitropoulos](https://www.linkedin.com/in/dimitrimitropoulos/), and so many others. It really was an incredible gathering of talent, and quite frankly I felt a little out of place among them.
 
 I had a great many excellent conversations while I was there, learnt a lot, and even met a few people who recognised me from my minor contributions to the Convex YouTube channel.
 
@@ -49,7 +49,7 @@ There were a few who hadn't heard of Convex, however, and generally those people
 
 # React's complexity
 
-I attended a few talks on React topics and was surprised, and a little embarrassed, at how little I recognised. There were a bunch of APIs and concepts being discussed that were news to me and seemed awfully complex.
+I attended a few talks on React topics and was surprised, and a little embarrassed, at how little I recognised. People were talking about Actions, `useActionState`, `useOptimistic`, `useFormStatus`, `Activity`, Effect Events, partial pre-rendering, and various Server Component related concepts. Some of these are genuinely useful, but the overall surface area feels enormous now.
 
 React's API surface seems like it is getting bigger and bigger all the time. Maybe I'm just getting old (I am), or maybe I'm spoilt by Convex, but a lot of it seemed superfluous.
 
