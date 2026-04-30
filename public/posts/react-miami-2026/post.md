@@ -6,7 +6,6 @@ tags:
   - convex
   - lessons
 title: React Miami 2026 Wasn't Really About React
-status: draft
 ---
 
 I flew halfway around the world to attend a React conference and came away thinking less about React than almost anything else.
