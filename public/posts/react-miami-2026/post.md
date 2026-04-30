@@ -67,4 +67,6 @@ There really are some beautiful parts of Miami, though. I spent a number of hour
 
 All in all, it was a great trip. It really pushed me out of my comfort zone. I got a chance to meet some of the biggest names in my industry, and I met a bunch of people who recognised me and appreciated the content I have been producing.
 
+I went to Miami expecting to learn more about React. I did learn some React, but mostly I came away with a stronger sense that the whole industry is in motion, and that everyone, even the people who seem miles ahead, is still trying to work out what comes next.
+
 It was a bloody long way, though. I'm glad it's only a yearly thing.
