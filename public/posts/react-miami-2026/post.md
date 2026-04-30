@@ -1,5 +1,5 @@
 ﻿---
-coverImage: ./header.jpg
+coverImage: ./header.webp
 date: '2026-04-29T08:31:40.000Z'
 tags:
   - personal
@@ -14,6 +14,8 @@ I flew halfway around the world to attend a React conference and came away think
 As I write this, I'm sitting on a bus making the final four hours back home after roughly 50 hours of solid travel. It has been an absolutely gruelling journey, taking me from my home in Busselton, Western Australia, to the other side of the planet for React Miami.
 
 React Miami has now been running for five years and gathers some of the biggest names in my industry in one place. While I was there I saw [ThePrimeagen](https://x.com/ThePrimeagen), [Theo](https://x.com/theo), [Dax](https://x.com/thdxr), [Ben Davis](https://x.com/davis7), [Tanner Linsley](https://x.com/tannerlinsley), [Joel Hooks](https://x.com/joelhooks), [Kent C. Dodds](https://x.com/kentcdodds), [Dimitri Mitropoulos](https://www.linkedin.com/in/dimitrimitropoulos/), and so many others. It really was an incredible gathering of talent, and quite frankly I felt a little out of place among them.
+
+![React Miami hallway and sponsor booths](./hallway.webp)
 
 I had a great many excellent conversations while I was there, learnt a lot, and even met a few people who recognised me from my minor contributions to the Convex YouTube channel.
 
@@ -39,6 +41,8 @@ This one is hard to describe, but I did feel a bit out of place there. For a tec
 
 I have never really been great with unknown social dynamics, and it took me until the second day before I started to feel a bit more confident. I think the best moments were spent in the relative quiet of the ballroom, chatting with one or two people, or listening to a few others.
 
+![The quieter ballroom area at React Miami](./ballroom.webp)
+
 There were so many super smart and accomplished people there that I was often fearful of saying something stupid. Attending as a Convex representative only compounded that feeling. Once I settled in, though, and spent some time listening rather than speaking, I began to appreciate that these celebrities I had known from the internet were just regular people with regular opinions and thoughts.
 
 # Convex: loved by many, unknown to some
@@ -51,6 +55,8 @@ There were a few who hadn't heard of Convex, however, and generally those people
 
 I attended a few talks on React topics and was surprised, and a little embarrassed, at how little I recognised. People were talking about Actions, `useActionState`, `useOptimistic`, `useFormStatus`, `Activity`, Effect Events, partial pre-rendering, and various Server Component related concepts. Some of these are genuinely useful, but the overall surface area feels enormous now.
 
+![A React Miami talk in progress](./a-talk.webp)
+
 React's API surface seems like it is getting bigger and bigger all the time. Maybe I'm just getting old (I am), or maybe I'm spoilt by Convex, but a lot of it seemed superfluous.
 
 # Miami is big, beautiful, and ugly
@@ -59,9 +65,15 @@ James, the Convex CTO, said he would be interested to hear what I thought about 
 
 Downtown Miami, where the conference was held, I didn't really care for much. The streets were dirty and smelly in parts, thanks to what I presume were grates leading down to sewers or storm drains or something. There were quite a lot of homeless people around in places. Not as bad as central San Francisco, but still quite jarring to see given the incredible wealth and "looksmaxxing" on display elsewhere in the city.
 
+![Downtown Miami street with a sports car and delivery robot](./streets.webp)
+
 The prevalence of Spanish also surprised me. From the airport to the boat cruise I took on my last day there, Spanish was catered for everywhere. To the point where I would almost say that Spanish was the primary language there, not English. I don't have any strong opinions on whether that's a good or bad thing. I just found it interesting as an outside observer.
 
+![Pink delivery robots on a Miami street](./street-robots.webp)
+
 There really are some beautiful parts of Miami, though. I spent a number of hours wandering around the streets and canals of Miami Beach and was humbled by the sheer scale of the opulence and gaudy beauty of the place. I can very easily see why people would choose to live there, even if I'm not sure I could call it home.
+
+![A Miami Beach waterfront home with a yacht outside](./miami-wealth.webp)
 
 # Conclusion
 
