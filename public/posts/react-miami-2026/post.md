@@ -5,64 +5,66 @@ tags:
   - personal
   - convex
   - lessons
-title: 
+title: React Miami 2026 Wasn't Really About React
 status: draft
 ---
 
-As I write this im set on a bus making the final 4 hours back home after some 50 hours of solid travel. Its been an absolutely grueling journey that has seen me travel to the other side of the planet from my home in Busselton Western Australia to Miami Florida for the annual React Miami Conference.
+I flew halfway around the world to attend a React conference and came away thinking less about React than almost anything else.
 
-React Miami has been running for [INSERT_YEARS] years and now gathers some of the biggest names in my industry together in one place. While I was there I saw The Primagen, Theo, Dax, Ben Davis, Tanner Linsy, Joel Hooks, Kent Dodds, Dimitri [SURNAME] and so many others. It really was an incredible gathering of talent that I quite frankly felt out of place to be amongst. 
+As I write this, I'm sitting on a bus making the final four hours back home after roughly 50 hours of solid travel. It has been an absolutely gruelling journey, taking me from my home in Busselton, Western Australia, to the other side of the planet for React Miami.
 
-I had a great many excellent conversations while I was there and learnt many things and even met a few people who recognized me from my minor contributions to the Convex youtube channel.
+React Miami has now been running for five years and gathers some of the biggest names in my industry in one place. While I was there I saw ThePrimeagen, Theo, Dax, Ben Davis, Tanner Linsley, Joel Hooks, Kent C. Dodds, Dimitri Mitropoulos, and so many others. It really was an incredible gathering of talent, and quite frankly I felt a little out of place among them.
 
-Here are the top [6] things I took away from the Conference.
+I had a great many excellent conversations while I was there, learnt a lot, and even met a few people who recognised me from my minor contributions to the Convex YouTube channel.
+
+What surprised me most was how little the trip ended up being about React itself. These are the six things I took away from the conference.
 
 # AI is bigger than React
 
-For a React conference is incredible how insignificant React felt. Sure there were a number of talks on new and recent React features but it felt like they were overshadowed by the the topic de-jor AI. 
+For a React conference, it was incredible how insignificant React felt. Sure, there were a number of talks on new and recent React features, but they felt overshadowed by the topic du jour: AI.
 
-Certainly none of the conversations I had in the hallways and ballroom where people tended to congregate were about React, they were all about AI. I guess this is not so surprising given the massive impact AI has had on the tech industry in the past year compared to React but it was still interesting to note.
+Certainly none of the conversations I had in the hallways and ballroom, where people tended to congregate, were about React. They were all about AI. I guess this is not especially surprising given the massive impact AI has had on the tech industry in the past year, but it was still interesting to see it so clearly at a React conference.
 
 # No one has it figured out
 
-A big source of anxiety for me at the moment is that im not sure about the "right" way to do anything at the moment. Since december and the "agentic" revolution the way we build has been totally disrupted. 
+A big source of uncertainty for me at the moment is that I'm no longer sure about the "right" way to do anything. Since December and the "agentic" revolution, the way we build software has been totally disrupted.
 
-I have written about this before but much of my career has been spent learning about and mastering the art of writing code and building projects, but now that we dont write the code and building projects has changed so much, what does it mean to be an expert in software development?
+I have written about this before, but much of my career has been spent learning about and mastering the art of writing code and building projects. Now that we don't always write the code ourselves, and the way projects are built has changed so much, what does it mean to be an expert in software development?
 
-One thing I took comfort from from the conference is that it appears im not alone in this. Just about every discussion I had with people resulted in me adding new tools and techniques to my ever-growing list of things to investigate. Everyone is experimenting, no one has it figured out yet. This is simultaneously exciting and stressful as I feel like I need to explore everything in depth before I feel confident to form an opinion strong enough to share it with others.
+One thing I took comfort from at the conference is that it appears I'm not alone in this. Just about every discussion I had resulted in me adding new tools and techniques to my ever-growing list of things to investigate. Everyone is experimenting. No one has it figured out yet. This is simultaneously exciting and stressful, because I feel like I need to explore everything in depth before I can form an opinion strong enough to share with others.
 
 # Imposter syndrome
 
-This one is hard to describe, but I did feel a bit out of place there. For a tech conference attended by nerds you would have expected a lot of introverted, shy and awkward people but in the most part that wasnt the case. 
+This one is hard to describe, but I did feel a bit out of place there. For a tech conference attended by nerds, you might expect a lot of introverted, shy, and awkward people, but for the most part that wasn't the case.
 
-I never really have been great with unknown social dynamics and it took me until the second day before I started to feel a bit more confident about things. I think the best moments were spent in the relative quiet of the ballroom chatting or one or two people or listening to a few others. 
+I have never really been great with unknown social dynamics, and it took me until the second day before I started to feel a bit more confident. I think the best moments were spent in the relative quiet of the ballroom, chatting with one or two people, or listening to a few others.
 
-There were so many super smart and accomplished people there I was often fearful of saying something stupid. Attending as a Convex representative only compounded that feeling. Once I settled in though and spent some time just listening rather than speaking I began to appreciate that these celebrities that I had known from the internet were just regular people with regular opinions and thoughts.
+There were so many super smart and accomplished people there that I was often fearful of saying something stupid. Attending as a Convex representative only compounded that feeling. Once I settled in, though, and spent some time listening rather than speaking, I began to appreciate that these celebrities I had known from the internet were just regular people with regular opinions and thoughts.
 
-# Convex loved by all, unknown to some
+# Convex: loved by many, unknown to some
 
-The majority of people I spoke to knew about Convex already which was a pleasant surprise and even better it seemed to be universally loved. Now I know they may have just been saying that because I was wearing a bunch of Convex swag but it was still great to hear.
+The majority of people I spoke to already knew about Convex, which was a pleasant surprise. Even better, it seemed to be universally loved. Now, I know they may have just been saying that because I was wearing a bunch of Convex swag, but it was still great to hear.
 
-There were a few that hadnt heard of Convex however and generally those people were from big enterprises who were attending the Conference as part of a program run by their employer. As with Australia and its big enterprise resource companies I think Convex has a way to go before it is able to break into the mindshare of these big enterprise companies.
+There were a few who hadn't heard of Convex, however, and generally those people were from big enterprises who were attending the conference as part of a program run by their employer. As with Australia's big enterprise resource companies, I think Convex has a way to go before it breaks into the mindshare of those large companies.
 
-# Reacts (un)neccessary complexity
+# React's complexity
 
-I attended a few talks on React topics and was surprised and a little embarrassed at how little I recognized. There were a bunch of APIs and concepts that were being discussed that were news to me and seemed awfully complex. 
+I attended a few talks on React topics and was surprised, and a little embarrassed, at how little I recognised. There were a bunch of APIs and concepts being discussed that were news to me and seemed awfully complex.
 
-React's API surface seems like it getting bigger and bigger all the time and maybe im just getting old (I am) or maybe im spoilt by Convex but it all just seemed so superfluous. 
+React's API surface seems like it is getting bigger and bigger all the time. Maybe I'm just getting old (I am), or maybe I'm spoilt by Convex, but a lot of it seemed superfluous.
 
-# Miami is big beautiful and ugly
+# Miami is big, beautiful, and ugly
 
-James the Convex CTO said he would be interested to hear what I thought about Miami so here are my thoughts. 
+James, the Convex CTO, said he would be interested to hear what I thought about Miami, so here are my thoughts.
 
-Downtown Miami where the conference was held I didnt really care for much, the streets were dirty and smelly in parts thanks to what I presume were grates that went down to the sewers or storm drains or something. There were quite a lot of homeless people around in parts of it, not as bad at central San Francisco but still quite jarring to see given the incredible wealth and "looksmaxxing" from some of the other citizens.
+Downtown Miami, where the conference was held, I didn't really care for much. The streets were dirty and smelly in parts, thanks to what I presume were grates leading down to sewers or storm drains or something. There were quite a lot of homeless people around in places. Not as bad as central San Francisco, but still quite jarring to see given the incredible wealth and "looksmaxxing" on display elsewhere in the city.
 
-The amount of spanish was really quite a surprise, from the airport to the boat cruise I took on my last day there, there was an incredible amount of affordence being given to the Spanish language. To the point where I would almost say that Spanish was the primary language there not English. I dont have any strong opinions on whether thats a good thing or bad I just found it an interesting as an outside observer.
+The prevalence of Spanish also surprised me. From the airport to the boat cruise I took on my last day there, Spanish was catered for everywhere. To the point where I would almost say that Spanish was the primary language there, not English. I don't have any strong opinions on whether that's a good or bad thing. I just found it interesting as an outside observer.
 
-There really are some beautiful parts of Miami though. I spent a number of hours wandering around the streets and canals of [SOUTH_BEACH?!] and humbled by the sheer scale of the opulence and gaudy beauty of the place. I can very easily see why people would choose to live there even if im not sure I could call it home.
+There really are some beautiful parts of Miami, though. I spent a number of hours wandering around the streets and canals of Miami Beach and was humbled by the sheer scale of the opulence and gaudy beauty of the place. I can very easily see why people would choose to live there, even if I'm not sure I could call it home.
 
 # Conclusion
 
-All in all it was a great trip. It realy pushed me out of my comfort zone. I got a chance to meet some of the biggest names in my industry. I met a bunch of people that recognised me and appreciated the content that I have been producing.
+All in all, it was a great trip. It really pushed me out of my comfort zone. I got a chance to meet some of the biggest names in my industry, and I met a bunch of people who recognised me and appreciated the content I have been producing.
 
-It was a bloody long way though im glad its only a yearly thing.
+It was a bloody long way, though. I'm glad it's only a yearly thing.
