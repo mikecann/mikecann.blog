@@ -14,6 +14,7 @@ module.exports = {
   },
 
   images: {
+    unoptimized: true,
     qualities: [75, 80],
   },
 
