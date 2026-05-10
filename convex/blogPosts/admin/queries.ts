@@ -45,3 +45,29 @@ export const listPostsThatNeedProcessing = convex
     return out;
   })
   .public();
+
+export const listPostEmailCampaigns = convex
+  .query()
+  .input({
+    token: v.string(),
+    slugs: v.array(v.string()),
+  })
+  .handler(async (ctx, { token, slugs }) => {
+    validateBlogPostAdminToken(token);
+
+    return await Promise.all(
+      slugs.map(async (slug) => {
+        const campaign = await ctx.db
+          .query("postEmailCampaigns")
+          .withIndex("by_slug", (q) => q.eq("slug", slug))
+          .order("desc")
+          .first();
+
+        return {
+          slug,
+          campaign,
+        };
+      }),
+    );
+  })
+  .public();

@@ -69,6 +69,29 @@ export const blogPostSchema = v.object({
   ragEntryId: vEntryId,
 });
 
+export const postEmailCampaignStatusSchema = v.union(
+  v.literal("queued"),
+  v.literal("creating_campaign"),
+  v.literal("content_set"),
+  v.literal("sending"),
+  v.literal("sent"),
+  v.literal("failed"),
+);
+
+export const postEmailCampaignSchema = v.object({
+  postId: v.id("blogPosts"),
+  slug: v.string(),
+  title: v.string(),
+  status: postEmailCampaignStatusSchema,
+  attempts: v.number(),
+  createdAt: v.number(),
+  updatedAt: v.number(),
+  scheduledFunctionId: v.optional(v.id("_scheduled_functions")),
+  mailchimpCampaignId: v.optional(v.string()),
+  error: v.optional(v.string()),
+  sentAt: v.optional(v.number()),
+});
+
 export default defineSchema({
   users: defineTable({
     kind: v.literal("anonymous"),
@@ -80,4 +103,8 @@ export default defineSchema({
   blogPosts: defineTable(blogPostSchema)
     .index("by_slug", ["slug"])
     .searchIndex("search_title", { searchField: "title" }),
+  postEmailCampaigns: defineTable(postEmailCampaignSchema)
+    .index("by_slug", ["slug"])
+    .index("by_postId", ["postId"])
+    .index("by_status", ["status"]),
 });

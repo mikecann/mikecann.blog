@@ -20,9 +20,26 @@ export const createBlogPost = convex
       ragEntryId,
     });
 
-    await ctx.scheduler.runAfter(0, internal.mailchimp.internal.actions.sendNewPostCampaign, {
-      slug,
-      title,
+    const campaignId = await ctx.runMutation(
+      internal.mailchimp.internal.mutations.createQueuedPostEmailCampaign,
+      {
+        postId: id,
+        slug,
+        title,
+      },
+    );
+
+    const scheduledFunctionId = await ctx.scheduler.runAfter(
+      0,
+      internal.mailchimp.internal.actions.sendNewPostCampaign,
+      {
+        campaignId,
+      },
+    );
+
+    await ctx.runMutation(internal.mailchimp.internal.mutations.attachScheduledFunction, {
+      campaignId,
+      scheduledFunctionId,
     });
 
     return await ctx.db.get(id).then(ensureFP("Blog post not found"));

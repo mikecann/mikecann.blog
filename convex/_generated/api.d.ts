@@ -15,8 +15,11 @@ import type * as blogPosts_internal_mutations from "../blogPosts/internal/mutati
 import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.js";
 import type * as blogPosts_lib from "../blogPosts/lib.js";
 import type * as builder from "../builder.js";
+import type * as mailchimp_admin_actions from "../mailchimp/admin/actions.js";
 import type * as mailchimp_emailTemplate from "../mailchimp/emailTemplate.js";
 import type * as mailchimp_internal_actions from "../mailchimp/internal/actions.js";
+import type * as mailchimp_internal_mutations from "../mailchimp/internal/mutations.js";
+import type * as mailchimp_internal_queries from "../mailchimp/internal/queries.js";
 import type * as mailchimp_lib from "../mailchimp/lib.js";
 import type * as mikebot_constants from "../mikebot/constants.js";
 import type * as mikebot_internal_actions from "../mikebot/internal/actions.js";
@@ -40,8 +43,11 @@ declare const fullApi: ApiFromModules<{
   "blogPosts/internal/queries": typeof blogPosts_internal_queries;
   "blogPosts/lib": typeof blogPosts_lib;
   builder: typeof builder;
+  "mailchimp/admin/actions": typeof mailchimp_admin_actions;
   "mailchimp/emailTemplate": typeof mailchimp_emailTemplate;
   "mailchimp/internal/actions": typeof mailchimp_internal_actions;
+  "mailchimp/internal/mutations": typeof mailchimp_internal_mutations;
+  "mailchimp/internal/queries": typeof mailchimp_internal_queries;
   "mailchimp/lib": typeof mailchimp_lib;
   "mikebot/constants": typeof mikebot_constants;
   "mikebot/internal/actions": typeof mikebot_internal_actions;

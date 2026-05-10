@@ -10,13 +10,14 @@ import pLimit from "p-limit";
 
 const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_ADMIN_TOKEN");
 
-const isProd = Bun.argv[2] == "--production";
+const isProd = Bun.argv.includes("--production") || process.env.VERCEL_ENV === "production";
 
 const convexURL = isProd
   ? process.env.NEXT_PUBLIC_CONVEX_URL_PROD
   : process.env.NEXT_PUBLIC_CONVEX_URL;
 
 console.log("Uploading blog posts to", isProd ? "production" : "development");
+console.log("Convex URL:", convexURL);
 
 const client = new ConvexHttpClient(
   ensure(convexURL, `Missing env NEXT_PUBLIC_CONVEX_URL${isProd ? "_PROD" : ""}`),
@@ -51,7 +52,7 @@ async function main() {
 
   const uploadPromises = postsToProcess.map((post) =>
     limit(async () => {
-      await client.action(api.blogPosts.admin.actions.upsert, {
+      const result = await client.action(api.blogPosts.admin.actions.upsert, {
         slug: post.slug,
         title: post.meta.title,
         hash: hashContent(post.content),
@@ -60,12 +61,65 @@ async function main() {
       });
 
       console.log(`Updated or inserted blog post '${post.slug}'`);
+      return result;
     }),
   );
 
-  await Promise.all(uploadPromises);
+  const results = await Promise.all(uploadPromises);
+  const newPostSlugs = results.filter((r) => r.created).map((r) => r.slug);
+
+  await verifyNewPostEmails(newPostSlugs);
+
   console.log("Done.");
   process.exit(0);
+}
+
+async function verifyNewPostEmails(slugs: string[]) {
+  if (slugs.length === 0) return;
+
+  const timeoutMs = 60_000;
+  const startedAt = Date.now();
+
+  console.log(`Verifying Mailchimp email status for ${slugs.length} new post(s)...`);
+
+  while (Date.now() - startedAt < timeoutMs) {
+    const rows = await client.query(api.blogPosts.admin.queries.listPostEmailCampaigns, {
+      token,
+      slugs,
+    });
+
+    const missing = rows.filter((row) => !row.campaign);
+    const failed = rows.filter((row) => row.campaign?.status === "failed");
+    const pending = rows.filter((row) =>
+      row.campaign ? !["sent", "failed"].includes(row.campaign.status) : true,
+    );
+
+    if (failed.length > 0) {
+      const details = failed
+        .map((row) => `${row.slug}: ${row.campaign?.error ?? "unknown error"}`)
+        .join("\n");
+      throw new Error(`Mailchimp email send failed:\n${details}`);
+    }
+
+    if (missing.length === 0 && pending.length === 0) {
+      for (const row of rows) {
+        console.log(`Mailchimp email sent for '${row.slug}'`);
+      }
+      return;
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  }
+
+  const rows = await client.query(api.blogPosts.admin.queries.listPostEmailCampaigns, {
+    token,
+    slugs,
+  });
+  const summary = rows
+    .map((row) => `${row.slug}: ${row.campaign?.status ?? "missing campaign row"}`)
+    .join("\n");
+
+  throw new Error(`Timed out waiting for Mailchimp email status:\n${summary}`);
 }
 
 // Function to clean up content before sending to OpenAI

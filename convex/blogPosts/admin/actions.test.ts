@@ -47,11 +47,13 @@ describe("upsert action", () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.useFakeTimers();
     process.env = { ...originalEnv };
     process.env.BLOG_POST_ADMIN_TOKEN = mockToken;
   });
 
   afterEach(() => {
+    vi.useRealTimers();
     process.env = originalEnv;
   });
 
@@ -94,6 +96,22 @@ describe("upsert action", () => {
       hash: mockHash,
       ragEntryId: mockEntryIdValue,
     });
+
+    const emailCampaign = await t.run(async (ctx) => {
+      return await ctx.db
+        .query("postEmailCampaigns")
+        .withIndex("by_slug", (q) => q.eq("slug", mockSlug))
+        .first();
+    });
+
+    expect(emailCampaign).toMatchObject({
+      postId: blogPost?._id,
+      slug: mockSlug,
+      title: mockTitle,
+      status: "queued",
+      attempts: 0,
+    });
+    expect(emailCampaign?.scheduledFunctionId).toBeDefined();
   });
 
   test("updates existing blog post when ragEntryId changes", async () => {

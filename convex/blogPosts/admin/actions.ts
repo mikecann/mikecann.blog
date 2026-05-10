@@ -34,7 +34,10 @@ export const upsert = convex
           ragEntryId: entryId,
         });
 
-      return;
+      return {
+        slug,
+        created: false,
+      };
     }
 
     await ctx.runMutation(internal.blogPosts.internal.mutations.createBlogPost, {
@@ -43,5 +46,10 @@ export const upsert = convex
       hash,
       ragEntryId: entryId,
     });
+
+    return {
+      slug,
+      created: true,
+    };
   })
   .public();
