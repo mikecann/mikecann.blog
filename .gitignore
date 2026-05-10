@@ -46,3 +46,5 @@ tsconfig.tsbuildinfo
 tmp
 # next-agents-md
 .next-docs/
+
+.vercel

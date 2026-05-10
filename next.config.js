@@ -41,36 +41,50 @@ module.exports = {
   },
 
   async rewrites() {
-    return [
-      {
-        source: "/wp-content/:splat*",
-        destination: "http://d18l99bmg6trdn.cloudfront.net/wp-content/:splat*",
-      },
-      {
-        source: "/flash/:splat*",
-        destination: "http://d18l99bmg6trdn.cloudfront.net/flash/:splat*",
-      },
-      {
-        source: "/DumpingGround/:splat*",
-        destination: "http://d18l99bmg6trdn.cloudfront.net/DumpingGround/:splat*",
-      },
-      // These paths 404 on CloudFront but exist directly in S3
-      {
-        source: "/projects/:splat*",
-        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/projects/:splat*",
-      },
-      {
-        source: "/ArtificialStudios1/:splat*",
-        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/ArtificialStudios1/:splat*",
-      },
-      {
-        source: "/Files/:splat*",
-        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Files/:splat*",
-      },
-      {
-        source: "/Work/:splat*",
-        destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Work/:splat*",
-      },
-    ];
+    return {
+      beforeFiles: [
+        {
+          source: "/:path*",
+          has: [
+            {
+              type: "host",
+              value: "convex.mikecann.blog",
+            },
+          ],
+          destination: "https://mikes-convex-portfolio.mikeysee.workers.dev/:path*",
+        },
+      ],
+      afterFiles: [
+        {
+          source: "/wp-content/:splat*",
+          destination: "http://d18l99bmg6trdn.cloudfront.net/wp-content/:splat*",
+        },
+        {
+          source: "/flash/:splat*",
+          destination: "http://d18l99bmg6trdn.cloudfront.net/flash/:splat*",
+        },
+        {
+          source: "/DumpingGround/:splat*",
+          destination: "http://d18l99bmg6trdn.cloudfront.net/DumpingGround/:splat*",
+        },
+        // These paths 404 on CloudFront but exist directly in S3
+        {
+          source: "/projects/:splat*",
+          destination: "https://mikecann-web-wordpress.s3.amazonaws.com/projects/:splat*",
+        },
+        {
+          source: "/ArtificialStudios1/:splat*",
+          destination: "https://mikecann-web-wordpress.s3.amazonaws.com/ArtificialStudios1/:splat*",
+        },
+        {
+          source: "/Files/:splat*",
+          destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Files/:splat*",
+        },
+        {
+          source: "/Work/:splat*",
+          destination: "https://mikecann-web-wordpress.s3.amazonaws.com/Work/:splat*",
+        },
+      ],
+    };
   },
 };
