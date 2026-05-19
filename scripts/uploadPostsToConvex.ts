@@ -24,7 +24,7 @@ const client = new ConvexHttpClient(
 );
 
 async function main() {
-  const posts = getAllPublishablePosts();
+  const posts = getAllPublishablePosts(isProd);
   console.log(`Found ${posts.length} posts...`);
 
   // First, batch check which posts need processing

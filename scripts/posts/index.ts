@@ -74,9 +74,13 @@ export const getAllPosts = () => {
   return posts;
 };
 
-export const getAllPublishablePosts = () => {
+export const getAllPublishablePosts = (isProduction = false) => {
   let posts = getAllPosts();
-  if (process.env.NODE_ENV == "production")
+  if (
+    isProduction ||
+    process.env.NODE_ENV == "production" ||
+    process.env.VERCEL_ENV == "production"
+  )
     posts = posts.filter(
       (post) => post.meta.status == "published" || post.meta.status == undefined,
     );
