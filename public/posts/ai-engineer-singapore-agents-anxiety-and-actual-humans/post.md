@@ -1,6 +1,6 @@
 ---
 coverImage: ./header.webp
-date: "2026-05-19T06:31:40.000Z"
+date: "2026-05-20T06:31:40.000Z"
 tags:
   - ai
   - convex
@@ -13,7 +13,7 @@ As I write this, I'm sitting on a bus on my way back from [AI Engineer Singapore
 
 [AI Engineer](https://www.ai.engineer/) is probably the biggest conference right now for software engineers building with AI. Not machine learning researchers, although there were plenty of technical people there, but software engineers, founders, devtools people, agent people, infra people, and everyone else trying to work out what building software looks like now.
 
-I was there because of a slightly funny chain of events. Last year I gave a 15-minute online workshop for a Cursor hackathon, and apparently that went down well enough that Wayne, our head of events at Convex, built a relationship with the organisers. When they decided to run [AI Engineer in Singapore](https://www.ai.engineer/singapore), I was invited to give a proper 90-minute workshop in person.
+I was there because last year I gave a 15-minute online workshop for a Cursor hackathon, and apparently that went down well enough that Wayne, our head of events at Convex, built a relationship with the organisers. When they decided to run [AI Engineer in Singapore](https://www.ai.engineer/singapore), I was invited to give a proper 90-minute workshop in person.
 
 This was quite a big step up for me. I had asked some friends and colleagues beforehand for advice with giving talks and workshops, and one thing that stuck with me was that speaking often gets easier when you can look back and say, "I've done bigger things than this before."
 
@@ -171,7 +171,7 @@ The rooftop at Marina Bay Sands was ridiculous in the way famous city viewpoints
 
 ![At Marina Bay Sands with the Singapore skyline behind me](./marina-bay-selfie.webp)
 
-The more memorable parts, though, were quieter. Walking through the city on Saturday night. Sitting outside chatting with Wayne, Liz and a photographer/media person after an event. Liz headed off at some point, and we ended up sitting on benches talking until we got kicked out around midnight. Wayne looked the most relaxed I had seen him all week.
+The more memorable parts, though, were quieter. Walking through the city on Saturday night. Sitting outside chatting with Wayne, Liz and [Debbie](https://www.instagram.com/debbieyphotography/) after an event. Liz headed off at some point, and we ended up sitting on benches talking until we got kicked out. Wayne looked the most relaxed I had seen him all week.
 
 That was lovely.
 
