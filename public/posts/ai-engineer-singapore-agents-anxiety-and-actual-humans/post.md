@@ -29,8 +29,6 @@ The workshop was called "Convex + AI: Everything You Need to Know".
 
 The idea was to start from nothing and end with a hosted AI application, while being honest about how people actually build now. I didn't want to stand on stage and pretend everyone is still manually hand-writing every line of code, because thats just not the case when it comes to agentic coding.
 
-So the workshop was about how Convex fits into that world: the fundamentals, the guardrails, and the patterns that make AI-assisted app development less likely to wander into a ditch.
-
 IMO Convex is a great fit for the agentic era because AI like humans really benefits from good abstractions and gaurdrails. They also need state. They need workflows. They need persistence, auth, background work, realtime updates, and all the boring-but-essential application stuff around the model.
 
 ![The AI Engineer Singapore workshop room from the front](./workshop-room.webp)
