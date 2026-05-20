@@ -53,11 +53,9 @@ My prayers to the demo gods had obviously been heard that day.
 
 ![Presenting the Convex + AI workshop](./workshop-slides.webp)
 
-I don't know how many people were able to follow along cleanly after that. Some definitely did, some may have used agents to work around the issue, and some probably just watched from that point onwards. That part still bothers me a bit, because a workshop is supposed to be something people can do, not just observe.
+I don't know how many people were able to follow along cleanly after that. Some definitely did, some may have used agents to work around the issue, and some probably just watched from that point onwards.
 
-But the rest of the session went well. Better than I expected, given the start.
-
-The preparation saved me, but not in the sense that preparation prevents things from going wrong, because that is obviously not the case. Preparation saved me because when something did go wrong, I had somewhere to fall back to.
+But its all good the rest of the session went well in the end.
 
 As part of my workshop I built a [small questions platform](https://github.com/mikecann/questions) for the workshop, so people could ask questions as we went. That worked really well, and breaking up the prepared content gave both me and the audience a bit of breathing room. A 90-minute workshop is a long time to talk at people, even when they are interested, because concentration is not infinite.
 
