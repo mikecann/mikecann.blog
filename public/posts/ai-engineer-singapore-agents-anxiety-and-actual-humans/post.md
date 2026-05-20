@@ -31,21 +31,21 @@ The idea was to start from nothing and end with a hosted AI application, while b
 
 So the workshop was about how Convex fits into that world: the fundamentals, the guardrails, and the patterns that make AI-assisted app development less likely to wander into a ditch.
 
-Convex is a good fit for this, I think, because AI-generated apps need more than a call to an LLM API. They need state. They need workflows. They need persistence, auth, background work, realtime updates, and all the boring-but-essential application stuff around the model.
+IMO Convex is a great fit for the agentic era because AI like humans really benefits from good abstractions and gaurdrails. They also need state. They need workflows. They need persistence, auth, background work, realtime updates, and all the boring-but-essential application stuff around the model.
 
 ![The AI Engineer Singapore workshop room from the front](./workshop-room.webp)
 
-So the workshop mostly went well, but there was almost a disaster.
+So the workshop went well for the first 15 minutes but there was a bit of a hiccup..
 
-The first hands-on step of the workshop was for everyone to create a new Convex project. `npm create convex@latest` then `npm run dev`. Very basic. Very reasonable. Exactly the sort of thing you want to work in the first part of a live workshop.
+I indended the audience to create a Convex project from scratch using `npm create convex@latest` then `npm run dev`. Basic but reasonable given I wanted to start people from the very beginning.
 
-It failed, and not just for one person. The setup flow was broken.
+Unfortunately tho, It failed, and not just for one person. The setup flow was broken for everyone.
 
 I was standing in a seminar room with close to 100 people watching me, many of whom had paid hundreds of dollars to be there, and the thing I needed them all to do had stopped working. I was already nervous before the workshop started, but there is a very specific kind of helplessness that comes from being on stage, needing to debug something in real time, while also being painfully aware that the entire room is watching you think.
 
 It turned out that Convex 1.39 had shipped about seven hours before my talk and included a critical bug that broke the workflow I was trying to teach.
 
-Good timing, really. Very funny in the abstract, in the way that being attacked by a swan is probably funny to everyone except the person being attacked.
+Ah great.. Funny in the abstract I guess, in the way that being attacked by a swan is probably funny to everyone except the person being attacked.
 
 ![Swan](./swan.png)
 
@@ -72,6 +72,8 @@ BTW I will insert the video recording of my workshop here once it becomes availa
 One of the most surprising things during the week was how many people recognised me from the 15-minute Cursor hackathon workshop the year before.
 
 That workshop had felt small to me, just one of those things you do, hope is useful, and then move on from. But people remembered it, took value from it, recognised my face during the Convex event on Wednesday, and mentioned it to me throughout the week.
+
+![the convex event](./convexevent.png)
 
 This changed how I think about the videos and workshops I make.
 
@@ -111,7 +113,7 @@ I found that both fascinating and slightly alarming.
 
 My immediate questions were: how many tokens does that use, how do you keep the quality high, how do you stop churn, how do you know the work is useful etc?
 
-That is probably where I am with a lot of agent hype at the moment. Im in love with  AI and all the power they give you, it is for sure changing how software gets made. But I am also suspicious of demos where the impressive part is the number of agents rather than the quality of the outcome.
+That is probably where I am with a lot of agent hype at the moment. Im in love with AI and all the power they give you, it is for sure changing how software gets made. But I am also suspicious of demos where the impressive part is the number of agents rather than the quality of the outcome.
 
 More agents is not necessarily better. Sometimes it is just a more expensive way to make a mess.
 
