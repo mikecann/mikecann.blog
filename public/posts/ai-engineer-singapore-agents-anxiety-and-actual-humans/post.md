@@ -35,11 +35,11 @@ IMO Convex is a great fit for the agentic era because AI like humans really bene
 
 So the workshop went well for the first 15 minutes but there was a bit of a hiccup..
 
-I indended the audience to create a Convex project from scratch using `npm create convex@latest` then `npm run dev`. Basic but reasonable given I wanted to start people from the very beginning.
+I intended the audience to create a Convex project from scratch using `npm create convex@latest` then `npm run dev`. Basic but reasonable given I wanted to start people from the very beginning.
 
-Unfortunately tho, It failed, and not just for one person. The setup flow was broken for everyone.
+Unfortunately tho, that setup process was broken, I received a nasty error when I tried to run `npm run dev` when it worked perfectly the day before.
 
-I was standing in a seminar room with close to 100 people watching me, many of whom had paid hundreds of dollars to be there, and the thing I needed them all to do had stopped working. I was already nervous before the workshop started, but there is a very specific kind of helplessness that comes from being on stage, needing to debug something in real time, while also being painfully aware that the entire room is watching you think.
+So I was standing in a seminar room with close to 100 people watching me, many of whom had paid hundreds of dollars to be there, and the thing I needed them all to do had stopped working. I was already nervous before the workshop started, but there is a very specific kind of helplessness that comes from being on stage, needing to debug something in real time, while also being painfully aware that the entire room is watching you think.
 
 It turned out that Convex 1.39 had shipped about seven hours before my talk and included a critical bug that broke the workflow I was trying to teach.
 
