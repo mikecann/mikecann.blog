@@ -60,3 +60,47 @@ export const retryFailedPostEmailCampaign = convex
     },
   )
   .public();
+
+export const markPostEmailCampaignSent = convex
+  .action()
+  .input({
+    token: v.string(),
+    slug: v.string(),
+    mailchimpCampaignId: v.string(),
+  })
+  .handler(
+    async (
+      ctx,
+      { token, slug, mailchimpCampaignId },
+    ): Promise<{ slug: string; status: "sent"; mailchimpCampaignId: string }> => {
+      validateBlogPostAdminToken(token);
+
+      const campaign: Doc<"postEmailCampaigns"> | null = await ctx.runQuery(
+        internal.mailchimp.internal.queries.findLatestPostEmailCampaignBySlug,
+        {
+          slug,
+        },
+      );
+
+      if (!campaign) {
+        throw new Error(`No Mailchimp email campaign found for post '${slug}'`);
+      }
+
+      if (campaign.mailchimpCampaignId !== mailchimpCampaignId) {
+        throw new Error(
+          `Mailchimp campaign id mismatch for '${slug}': expected '${mailchimpCampaignId}'`,
+        );
+      }
+
+      await ctx.runMutation(internal.mailchimp.internal.mutations.markSent, {
+        campaignId: campaign._id,
+      });
+
+      return {
+        slug,
+        status: "sent",
+        mailchimpCampaignId,
+      };
+    },
+  )
+  .public();

@@ -39,7 +39,9 @@ export async function mailchimpFetch(path: string, options: RequestInit = {}) {
     const body = await response.text();
     throw new Error(`Mailchimp API error ${response.status}: ${body}`);
   }
-  return response.json();
+  const body = await response.text();
+  if (body.length === 0) return null;
+  return JSON.parse(body);
 }
 
 export function generateNewPostEmailHtml(title: string, slug: string): string {
