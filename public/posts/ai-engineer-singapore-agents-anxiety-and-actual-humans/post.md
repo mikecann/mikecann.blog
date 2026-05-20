@@ -27,7 +27,7 @@ The workshop was called "Convex + AI: Everything You Need to Know".
 
 ![The room](./theroom.png)
 
-The idea was to start from nothing and end with a hosted AI application, while being honest about how people actually build now. I didn't want to stand on stage and pretend everyone is still carefully hand-writing every line of code, because people are using Cursor, Claude, agents, copy-paste, vibes, panic, and all the other strange ingredients that go into modern software development.
+The idea was to start from nothing and end with a hosted AI application, while being honest about how people actually build now. I didn't want to stand on stage and pretend everyone is still manually hand-writing every line of code, because thats just not the case when it comes to agentic coding.
 
 So the workshop was about how Convex fits into that world: the fundamentals, the guardrails, and the patterns that make AI-assisted app development less likely to wander into a ditch.
 
@@ -63,7 +63,7 @@ The preparation saved me, but not in the sense that preparation prevents things 
 
 As part of my workshop I built a [small questions platform](https://github.com/mikecann/questions) for the workshop, so people could ask questions as we went. That worked really well, and breaking up the prepared content gave both me and the audience a bit of breathing room. A 90-minute workshop is a long time to talk at people, even when they are interested, because concentration is not infinite.
 
-Afterwards, a few people came up to ask more questions and say nice things. That helped.
+Afterwards, a few people came up to ask more questions and say nice things which felt great.
 
 BTW I will insert the video recording of my workshop here once it becomes available!
 
