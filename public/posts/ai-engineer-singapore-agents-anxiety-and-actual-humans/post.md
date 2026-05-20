@@ -25,6 +25,8 @@ So I went into the week wanting to prove to myself that I could step up into a b
 
 The workshop was called "Convex + AI: Everything You Need to Know".
 
+![The room](./theroom.png)
+
 The idea was to start from nothing and end with a hosted AI application, while being honest about how people actually build now. I didn't want to stand on stage and pretend everyone is still carefully hand-writing every line of code, because people are using Cursor, Claude, agents, copy-paste, vibes, panic, and all the other strange ingredients that go into modern software development.
 
 So the workshop was about how Convex fits into that world: the fundamentals, the guardrails, and the patterns that make AI-assisted app development less likely to wander into a ditch.
