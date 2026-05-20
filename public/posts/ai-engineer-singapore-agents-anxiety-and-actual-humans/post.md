@@ -101,19 +101,19 @@ I don't think AI Engineer radically changed my perspective on AI, but it did mak
 
 The best image of the week might have been Friday night, after the speaker and sponsor dinner, when we ended up in a packed club and I found myself sitting with someone showing off an agent setup on a laptop while music was blasting around us.
 
-Laptops in a nightclub is obviously a very normal and healthy thing, exactly what the founders of nightlife intended, but it also oddly felt quite natural given the current frenetic state of AI.
+Laptops in a nightclub is obviously a very normal and healthy thing, but it also oddly felt quite natural given the current frenetic state of AI.
 
 ![The Friday night conference crowd](./club-night.webp)
 
-His setup was impressive tho. He could apparently spin up hundreds of agents and have them work on things together, but when I asked what they were actually working on, the answer seemed a bit more vague. They chose what they wanted to work on.
+His setup was impressive tho. He could apparently spin up hundreds of agents and have them work on things together, but when I asked what they were actually working on, the answer seemed a bit more vague, roughly "They chose what they wanted to work on".
 
 I found that both fascinating and slightly alarming.
 
-My immediate questions were the boring ones: how many tokens does that use, how do you keep the quality high, how do you stop churn, how do you know the work is useful etc?
+My immediate questions were: how many tokens does that use, how do you keep the quality high, how do you stop churn, how do you know the work is useful etc?
 
-That is probably where I am with a lot of agent hype at the moment. I believe there is something real there, I use agents every day, and I think they are changing how software gets made. But I am also suspicious of demos where the impressive part is the number of agents rather than the quality of the outcome.
+That is probably where I am with a lot of agent hype at the moment. Im in love with  AI and all the power they give you, it is for sure changing how software gets made. But I am also suspicious of demos where the impressive part is the number of agents rather than the quality of the outcome.
 
-More agents is not automatically better. Sometimes it is just a more expensive way to make a mess.
+More agents is not necessarily better. Sometimes it is just a more expensive way to make a mess.
 
 # The human interface layer
 
