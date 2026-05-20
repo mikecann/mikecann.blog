@@ -13,14 +13,19 @@ const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_A
 const isProd = Bun.argv.includes("--production") || process.env.VERCEL_ENV === "production";
 
 const convexURL = isProd
-  ? process.env.NEXT_PUBLIC_CONVEX_URL_PROD
+  ? (process.env.NEXT_PUBLIC_CONVEX_URL_PROD ?? process.env.NEXT_PUBLIC_CONVEX_URL)
   : process.env.NEXT_PUBLIC_CONVEX_URL;
 
 console.log("Uploading blog posts to", isProd ? "production" : "development");
 console.log("Convex URL:", convexURL);
 
 const client = new ConvexHttpClient(
-  ensure(convexURL, `Missing env NEXT_PUBLIC_CONVEX_URL${isProd ? "_PROD" : ""}`),
+  ensure(
+    convexURL,
+    isProd
+      ? "Missing env NEXT_PUBLIC_CONVEX_URL_PROD or NEXT_PUBLIC_CONVEX_URL"
+      : "Missing env NEXT_PUBLIC_CONVEX_URL",
+  ),
 );
 
 async function main() {
