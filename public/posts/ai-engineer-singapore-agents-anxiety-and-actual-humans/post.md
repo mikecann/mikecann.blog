@@ -91,9 +91,9 @@ The actual conference started properly on Friday and ran through the weekend. Th
 
 ![The AI Engineer Singapore sponsor wall](./ai-engineer-sign.webp)
 
-I liked not having to move between rooms constantly. There was one main theatre, so you could just sit down and let the conference come to you. The downside was that the topics jumped around a lot; you might get a design talk, then robotics, then coding, then agents, then something else entirely.
+I liked not having to move between rooms constantly. There was one main theatre, so you could just sit down and let the conference come to you. Topics jumped around between a few different tracks; you might get a design talk, then robotics, then coding, then agents, then something else entirely. This is not necessarily a bad thing as it breaks things up but it did mean that there were a number of talks that did very little for me.
 
-Some of the talks were excellent and some did very little for me. I found myself on my phone or laptop more than I would have liked, which is probably a combination of conference fatigue, uneven talks, and the fact that I was still recovering from the workshop stress.
+Some of the talks were truely excellent however and I learnt a great deal from them, not just the content but also how to give engaging presentations.
 
 ![A talk in the main AI Engineer Singapore theatre](./main-theatre.webp)
 
@@ -107,7 +107,7 @@ Laptops in a nightclub is obviously a very normal and healthy thing, but it also
 
 ![The Friday night conference crowd](./club-night.webp)
 
-His setup was impressive tho. He could apparently spin up hundreds of agents and have them work on things together, but when I asked what they were actually working on, the answer seemed a bit more vague, roughly "They chose what they wanted to work on".
+His setup was impressive tho. He could apparently spin up hundreds of agents and have them work on things together, but when I asked what they were actually working on, he just kind of shrugged, "They chose what they wanted to work on".
 
 I found that both fascinating and slightly alarming.
 
