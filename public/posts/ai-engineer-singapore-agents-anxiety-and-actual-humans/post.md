@@ -1,24 +1,24 @@
 ---
 coverImage: ./header.webp
-date: '2026-05-19T06:31:40.000Z'
+date: "2026-05-19T06:31:40.000Z"
 tags:
   - ai
   - convex
   - personal
   - conference
 status: draft
-title: 'AI Engineer Singapore: agents, anxiety, and actual humans'
+title: "AI Engineer Singapore: agents, anxiety, and actual humans"
 ---
 
-I currently sat on a bus on my way back from AI Engineer Singapore, mostly to run a 90-minute Convex workshop and partly to find out whether I could handle doing that sort of thing without completely falling apart.
+I currently sat on a bus on my way back from [AI Engineer Singapore](https://www.ai.engineer/singapore). I went mostly to run a 90-minute Convex workshop and partly to find out whether I could handle doing that sort of thing without completely falling apart.
 
-AI Engineer is probably the biggest conference right now for software engineers building with AI. Not machine learning researchers, although there were plenty of technical people there, but software engineers, founders, devtools people, agent people, infra people, and everyone else trying to work out what building software looks like now.
+[AI Engineer](https://www.ai.engineer/) is probably the biggest conference right now for software engineers building with AI. Not machine learning researchers, although there were plenty of technical people there, but software engineers, founders, devtools people, agent people, infra people, and everyone else trying to work out what building software looks like now.
 
-I was there because of a slightly funny chain of events. Last year I gave a 15-minute online workshop for a Cursor hackathon. Apparently it went down well enough that Wayne, our head of events at Convex, built a relationship with the organisers, and when they decided to run AI Engineer in Singapore I was invited to give a proper workshop.
+I was there because of a slightly funny chain of events. Last year I gave a 15-minute online workshop for a Cursor hackathon. Apparently it went down well enough that Wayne, our head of events at Convex, built a relationship with the organisers, and when they decided to run [AI Engineer in Singapore](https://www.ai.engineer/singapore) I was invited to give a proper workshop.
 
 A 90-minute workshop. In person. In Singapore.
 
-This was quite a big step up for me. I had messaged Matt Pocock beforehand asking for advice, because I had seen him run a very good workshop at a previous AI Engineer event in Europe. One thing he said was that speaking often gets easier when you can look back and say, "I've done bigger things than this before."
+This was quite a big step up for me. I had asked some friends and colleagues beforehand asking for advice with giving talks and workshops. One thing I took on board was that speaking often gets easier when you can look back and say, "I've done bigger things than this before."
 
 The problem was that I hadn't really done anything bigger than this before.
 
@@ -32,25 +32,27 @@ The idea was to start from nothing and end with a hosted AI application, while b
 
 So the workshop was about how Convex fits into that world: the fundamentals, the guardrails, and the patterns that make AI-assisted app development less likely to wander into a ditch.
 
-Convex is a good fit for this, I think, because AI-generated apps need more than a call to an LLM API. They need state. They need workflows. They need persistence, auth, background work, realtime updates, and all the boring-but-essential application stuff around the model. Convex gives you a lot of that structure, and the structure matters even more when you are building with AI.
+Convex is a good fit for this, I think, because AI-generated apps need more than a call to an LLM API. They need state. They need workflows. They need persistence, auth, background work, realtime updates, and all the boring-but-essential application stuff around the model.
 
 ![The AI Engineer Singapore workshop room from the front](./workshop-room.webp)
 
-About fifteen minutes in, the ditch arrived.
+So the workshop mostly went well but there was almost a disaster..
 
-The first hands-on step of the workshop was for everyone to create a new Convex project. Very basic. Very reasonable. Exactly the sort of thing you want to work in the first part of a live workshop.
+The first hands-on step of the workshop was for everyone to create a new Convex project. `npm create convex@latest` then `npm run dev`. Very basic. Very reasonable. Exactly the sort of thing you want to work in the first part of a live workshop.
 
 It failed.
 
 Not just for one person. The setup flow was broken.
 
-I was standing in a seminar room with close to 100 people watching me, many of whom had paid hundreds of dollars to be there, and the thing I needed them all to do had stopped working. I was already nervous before the workshop started. There is a specific kind of helplessness that comes from being on stage, needing to debug something in real time, while also being painfully aware that the entire room is watching you think.
+I was standing in a seminar room with close to 100 people watching me, many of whom had paid hundreds of dollars to be there, and the thing I needed them all to do had stopped working. I was already nervous before the workshop started but there is a specific kind of helplessness that comes from being on stage, needing to debug something in real time, while also being painfully aware that the entire room is watching you think.
 
 It turned out that Convex 1.39 had shipped about seven hours before my talk and included a critical bug that broke the workflow I was trying to teach.
 
 Good timing, really. Very funny. In the way that being attacked by a swan is probably funny to everyone except the person being attacked.
 
 Fortunately, an audience member helped identify that it was a version issue. Even more fortunately, I had rehearsed the workshop several times and had a backup project from before the broken release. I was able to switch over, route around the problem, and keep going.
+
+My prayers to the demo gods had obviously been heard that day.
 
 ![Presenting the Convex + AI workshop](./workshop-slides.webp)
 
@@ -63,8 +65,6 @@ The preparation saved me. Not in the sense that preparation prevents things from
 I also built a small questions platform for the workshop, so people could ask questions as we went. That worked really well. The questions were good, and breaking up the prepared content gave both me and the audience a bit of breathing room. A 90-minute workshop is a long time to talk at people. Even if they are interested, concentration is not infinite.
 
 Afterwards, a few people came up to ask more questions and say nice things. That helped.
-
-![The Convex + AI workshop crew after the session](./convex-ai-group.webp)
 
 # The strange reality of content impact
 
@@ -149,6 +149,8 @@ It was exactly what I needed.
 The next day Wayne told me the party had mostly fizzled out by midnight anyway, which made me feel much better about the decision. Sometimes the responsible choice is also the correct party analysis.
 
 # Actual humans
+
+![The Convex + AI workshop crew after the session](./convex-ai-group.webp)
 
 There were a lot of status-coded rooms during the week.
 
