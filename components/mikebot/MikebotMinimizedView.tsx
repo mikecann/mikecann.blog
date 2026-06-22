@@ -62,7 +62,7 @@ export const MikebotMinimizedView: React.FC<Props> = ({ onOpen }) => {
         }}
         width={60}
         height={60}
-        src="/images/me.jpg"
+        src="/images/me.webp"
       />
       <AvatarSpeechBubble />
     </Vertical>
