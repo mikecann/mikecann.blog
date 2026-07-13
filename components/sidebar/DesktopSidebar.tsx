@@ -39,7 +39,7 @@ export const DesktopSidebar: React.FC<Props> = ({}) => {
             }}
             width={125}
             height={125}
-            src="/images/me.jpg"
+            src="/images/me.webp"
           />
           <AvatarSpeechBubble style={{ fontSize: "3em" }} />
         </div>

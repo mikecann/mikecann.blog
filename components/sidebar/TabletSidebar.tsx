@@ -38,7 +38,7 @@ export const TabletSidebar: React.FC<Props> = ({}) => {
             }}
             width={120}
             height={120}
-            src="/images/me.jpg"
+            src="/images/me.webp"
           />
           <AvatarSpeechBubble style={{ fontSize: "2.8em" }} />
         </div>

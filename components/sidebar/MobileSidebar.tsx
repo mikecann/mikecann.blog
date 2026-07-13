@@ -43,7 +43,7 @@ export const MobileSidebar: React.FC<Props> = ({}) => {
             }}
             width={40}
             height={40}
-            src="/images/me.jpg"
+            src="/images/me.webp"
           />
           <AvatarSpeechBubble
             style={{ fontSize: "1.2em" }}
