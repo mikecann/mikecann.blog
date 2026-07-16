@@ -10,7 +10,7 @@
     "dev:next": "next dev --turbopack",
     "dev:convex": "convex dev",
     "build": "next build --turbopack",
-    "build-and-deploy": "bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && bun run uploadsPostsToConvex -- --production && next build --turbopack",
+    "build-and-deploy": "if [ \"$VERCEL_ENV\" = \"production\" ]; then bun run populateAlgolia && bun run generateRSS && bun run convex deploy --check-build-environment=disable && bun run uploadsPostsToConvex -- --production; fi && next build --turbopack",
     "start": "next start",
     "dev:ts": "tsc --noEmit -w",
     "generateRSS": "bun run ./scripts/generateRSS.ts",
