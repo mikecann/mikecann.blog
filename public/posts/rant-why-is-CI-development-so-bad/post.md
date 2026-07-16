@@ -4,8 +4,8 @@ date: '2023-01-02T07:31:40.000Z'
 tags:
   - CircleCI
   - Jenkins
-  - Github
-  - Coding
+  - github
+  - coding
   - Programmer
   - CI
 title: Rant - Why is CI Development so bad?

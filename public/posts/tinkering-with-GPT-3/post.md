@@ -2,10 +2,10 @@
 coverImage: ./header.jpg
 date: '2021-08-09T03:31:40.000Z'
 tags:
-  - AI
+  - ai
   - OpenAI
-  - Tinker
-  - Programming
+  - tinker
+  - programming
 title: Tinkering with GPT-3
 ---
 

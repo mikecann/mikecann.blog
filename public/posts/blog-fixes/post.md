@@ -4,7 +4,7 @@ date: "2026-03-12T07:31:40.000Z"
 tags:
   - personal
   - blog
-  - AI
+  - ai
 title: Blog Fixes
 ---
 

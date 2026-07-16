@@ -22,11 +22,11 @@ const styles = style({
 });
 
 export const PageButton: React.FC<Props> = ({ onClick, icon, label, href = "" }) => {
-  return (
-    <Link href={href} as={href}>
-      <Horizontal onClick={onClick} className={styles} verticalAlign="center" spacing={7}>
-        {icon} {label && <div>{label}</div>}
-      </Horizontal>
-    </Link>
+  const content = (
+    <Horizontal onClick={onClick} className={styles} verticalAlign="center" spacing={7}>
+      {icon} {label && <div>{label}</div>}
+    </Horizontal>
   );
+
+  return href ? <Link href={href}>{content}</Link> : content;
 };
