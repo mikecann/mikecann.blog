@@ -21,12 +21,28 @@ const styles = style({
   },
 });
 
+const actionStyles = style({
+  appearance: "none",
+  background: "none",
+  border: 0,
+  font: "inherit",
+  padding: 0,
+  textAlign: "left",
+});
+
 export const PageButton: React.FC<Props> = ({ onClick, icon, label, href = "" }) => {
-  const content = (
-    <Horizontal onClick={onClick} className={styles} verticalAlign="center" spacing={7}>
+  const content = (actionOnly: boolean) => (
+    <Horizontal
+      tag={actionOnly ? "button" : undefined}
+      type={actionOnly ? "button" : undefined}
+      onClick={actionOnly ? onClick : undefined}
+      className={`${styles} ${actionOnly ? actionStyles : ""}`}
+      verticalAlign="center"
+      spacing={7}
+    >
       {icon} {label && <div>{label}</div>}
     </Horizontal>
   );
 
-  return href ? <Link href={href}>{content}</Link> : content;
+  return href ? <Link href={href}>{content(false)}</Link> : content(true);
 };

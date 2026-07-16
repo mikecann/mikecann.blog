@@ -5,6 +5,13 @@ const matter = require("gray-matter");
 const postsDirectory = join(process.cwd(), "public/posts");
 
 module.exports = {
+  // Post metadata is read during static generation, but file tracing cannot tell that
+  // the hundreds of media assets beside post.md are never needed by a server function.
+  // Keeping them in the trace pushes Vercel functions over its uncompressed size limit.
+  outputFileTracingExcludes: {
+    "/*": ["public/posts/**/*.{gif,jpeg,jpg,m4v,mp4,png,webp,zip}"],
+  },
+
   // Turbopack configuration (optional)
   turbopack: {
     // Add any Turbopack-specific configuration here if needed
