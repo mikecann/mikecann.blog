@@ -6,6 +6,7 @@ import { style } from "typestyle";
 interface Props {
   icon: React.ReactNode;
   label?: string;
+  ariaLabel?: string;
   href?: string;
   onClick?: () => any;
 }
@@ -30,11 +31,12 @@ const actionStyles = style({
   textAlign: "left",
 });
 
-export const PageButton: React.FC<Props> = ({ onClick, icon, label, href = "" }) => {
+export const PageButton: React.FC<Props> = ({ onClick, icon, label, ariaLabel, href = "" }) => {
   const content = (actionOnly: boolean) => (
     <Horizontal
       tag={actionOnly ? "button" : undefined}
       type={actionOnly ? "button" : undefined}
+      aria-label={actionOnly && !label ? ariaLabel : undefined}
       onClick={actionOnly ? onClick : undefined}
       className={`${styles} ${actionOnly ? actionStyles : ""}`}
       verticalAlign="center"

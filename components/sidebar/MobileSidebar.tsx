@@ -60,7 +60,11 @@ export const MobileSidebar: React.FC<Props> = ({}) => {
           <PageButton icon={<HiArchive />} href="/years" />
           <PageButton icon={<IoMdInformationCircle />} href="/about" />
           <PageButton icon={<FaRssSquare />} href="/rss.xml" />
-          <PageButton icon={<IoMdSearch />} onClick={() => setSearchVisible(true)} />
+          <PageButton
+            icon={<IoMdSearch />}
+            ariaLabel="Search"
+            onClick={() => setSearchVisible(true)}
+          />
           <PageButton icon={<PiTreasureChestDuotone />} href="/stash" />
         </Vertical>
       </Background>
