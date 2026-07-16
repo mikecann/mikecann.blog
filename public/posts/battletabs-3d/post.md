@@ -3,9 +3,9 @@ coverImage: ./header.jpg
 date: '2022-12-29T07:31:40.000Z'
 tags:
   - battletabs
-  - Gangbusters
-  - GameDev
-  - BabylonJS
+  - gangbusters
+  - gamedev
+  - babylonjs
 title: Why we converted BattleTabs from 2D to 3D
 ---
 

@@ -5,7 +5,7 @@ tags:
   - project
   - squash
   - theory
-  - AI
+  - ai
   - Computer Vision
 title: 'Squash, Lasers and Other Thoughts'
 ---
