@@ -30,7 +30,7 @@ Kids can get instant answers now, so a completed worksheet tells us almost nothi
 
 Schools seem to be responding with more cheating rules and more surveillance. That sounds exhausting for everyone. If AI can walk straight through the homework, I would rather rethink the homework.
 
-AI has made the weakness in homework painfully obvious. Thats useful in a strange way because it forces us to come up with something better.
+AI has made the weakness in homework painfully obvious. That's useful in a strange way because it forces us to come up with something better.
 
 Using ChatGPT to generate a slightly different worksheet for every kid would be a waste of all this technology. Give the student something they can actually talk to. It can ask why they chose an answer, notice when they are guessing and keep poking until they really understand it.
 
@@ -82,7 +82,7 @@ If someone keeps avoiding a topic or suddenly stops engaging, the first question
 
 ![teacher aid](./teacher-aid.webp)
 
-Over time the system should get a feel for what is normal for that student. The teacher still makes the call here. I really dont want some model deciding a ten-year-old is lazy because it misread a few conversations.
+Over time the system should get a feel for what is normal for that student. The teacher still makes the call here. I really don't want some model deciding a ten-year-old is lazy because it misread a few conversations.
 
 That could free up a decent chunk of the teacher's evening, hopefully leaving them with more energy to help the kids who need it.
 
