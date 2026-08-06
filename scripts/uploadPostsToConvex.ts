@@ -7,6 +7,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { ensure } from "../essentials/misc/ensure";
 import { hashContent } from "../utils/hashing";
 import pLimit from "p-limit";
+import { isPostEmailCampaignScheduledOrSent } from "./postEmailCampaignStatus";
 
 const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_ADMIN_TOKEN");
 
@@ -95,9 +96,11 @@ async function verifyNewPostEmails(slugs: string[]) {
 
     const missing = rows.filter((row) => !row.campaign);
     const failed = rows.filter((row) => row.campaign?.status === "failed");
-    const pending = rows.filter((row) =>
-      row.campaign ? !["sent", "failed"].includes(row.campaign.status) : true,
-    );
+    const pending = rows.filter((row) => {
+      if (!row.campaign) return true;
+      if (row.campaign.status === "failed") return false;
+      return !isPostEmailCampaignScheduledOrSent(row.campaign);
+    });
 
     if (failed.length > 0) {
       const details = failed
@@ -108,7 +111,8 @@ async function verifyNewPostEmails(slugs: string[]) {
 
     if (missing.length === 0 && pending.length === 0) {
       for (const row of rows) {
-        console.log(`Mailchimp email sent for '${row.slug}'`);
+        const message = row.campaign?.status === "sent" ? "sent" : "scheduled";
+        console.log(`Mailchimp email ${message} for '${row.slug}'`);
       }
       return;
     }
