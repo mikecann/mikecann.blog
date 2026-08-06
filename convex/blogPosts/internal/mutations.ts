@@ -3,6 +3,7 @@ import { convex } from "../../builder";
 import { ensureFP } from "../../../essentials/misc/ensure";
 import { vEntryId } from "@convex-dev/rag";
 import { internal } from "../../_generated/api";
+import { NEW_POST_EMAIL_DELAY_MS } from "../../mailchimp/constants";
 
 export const createBlogPost = convex
   .mutation()
@@ -30,7 +31,7 @@ export const createBlogPost = convex
     );
 
     const scheduledFunctionId = await ctx.scheduler.runAfter(
-      0,
+      NEW_POST_EMAIL_DELAY_MS,
       internal.mailchimp.internal.actions.sendNewPostCampaign,
       {
         campaignId,

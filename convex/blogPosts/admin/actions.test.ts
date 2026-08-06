@@ -4,6 +4,7 @@ import { api } from "../../_generated/api";
 import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
 import { v } from "convex/values";
+import { NEW_POST_EMAIL_DELAY_MS } from "../../mailchimp/constants";
 
 // Mock the environment variable
 const originalEnv = process.env;
@@ -112,6 +113,15 @@ describe("upsert action", () => {
       attempts: 0,
     });
     expect(emailCampaign?.scheduledFunctionId).toBeDefined();
+
+    const scheduledFunction = await t.run(async (ctx) => {
+      return await ctx.db.system.get(emailCampaign!.scheduledFunctionId!);
+    });
+
+    expect(scheduledFunction).toMatchObject({
+      state: { kind: "pending" },
+      scheduledTime: Date.now() + NEW_POST_EMAIL_DELAY_MS,
+    });
   });
 
   test("updates existing blog post when ragEntryId changes", async () => {
