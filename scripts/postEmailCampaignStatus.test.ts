@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+import type { Id } from "../convex/_generated/dataModel";
 import { isPostEmailCampaignScheduledOrSent } from "./postEmailCampaignStatus";
 
 describe("isPostEmailCampaignScheduledOrSent", () => {
@@ -6,7 +7,7 @@ describe("isPostEmailCampaignScheduledOrSent", () => {
     expect(
       isPostEmailCampaignScheduledOrSent({
         status: "queued",
-        scheduledFunctionId: "scheduled-function-id",
+        scheduledFunctionId: "scheduled-function-id" as Id<"_scheduled_functions">,
       }),
     ).toBe(true);
   });
