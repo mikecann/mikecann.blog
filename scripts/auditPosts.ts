@@ -300,12 +300,19 @@ function isLocalFileRef(url: string): boolean {
 }
 
 // Cache of URL check results to avoid rechecking the same URL
-const urlCache = new Map<string, { ok: boolean; status?: number; error?: string }>();
+type UrlCheckResult = {
+  ok: boolean;
+  status?: number;
+  error?: string;
+  contentType?: string;
+};
+
+const urlCache = new Map<string, UrlCheckResult>();
 
 async function checkUrl(
   url: string,
   retries = RETRY_COUNT
-): Promise<{ ok: boolean; status?: number; error?: string }> {
+): Promise<UrlCheckResult> {
   // Normalize
   const normalizedUrl = url.startsWith("//") ? `https:${url}` : url;
 
@@ -355,6 +362,7 @@ async function checkUrl(
       const result = {
         ok: response.status < 400,
         status: response.status,
+        contentType: response.headers.get("content-type")?.split(";")[0].trim().toLowerCase(),
       };
       urlCache.set(normalizedUrl, result);
       return result;
@@ -738,7 +746,16 @@ async function main() {
       if (item.isImage && domain && SKIP_BROKEN_IMAGE_DOMAINS.has(domain)) continue;
 
       const result = urlCache.get(normalized);
-      if (result && !result.ok) {
+      // Some hosts return an HTML app shell with HTTP 200 for missing files.
+      // A browser still sees a broken image, so status alone is not enough.
+      const hasInvalidImageContentType =
+        item.isImage &&
+        result?.ok &&
+        result.contentType !== undefined &&
+        !result.contentType.startsWith("image/") &&
+        result.contentType !== "application/octet-stream";
+
+      if (result && (!result.ok || hasInvalidImageContentType)) {
         // Check if this is a known bot-blocked 403
         const isBotBlocked = result.status === 403 && domain && BOT_BLOCKED_403_DOMAINS.has(domain);
 
@@ -756,9 +773,11 @@ async function main() {
           severity,
           description: isBotBlocked
             ? `HTTP 403 (likely bot-blocked, probably fine for real users)`
-            : result.error
-              ? `Request failed: ${result.error}`
-              : `HTTP ${result.status}`,
+            : hasInvalidImageContentType
+              ? `Expected image but received ${result.contentType}`
+              : result.error
+                ? `Request failed: ${result.error}`
+                : `HTTP ${result.status}`,
           url: item.url,
           line: item.line,
           httpStatus: result.status,
