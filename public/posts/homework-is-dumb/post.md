@@ -1,4 +1,4 @@
-﻿---
+---
 coverImage: ./header.jpg
 date: '2025-04-25T07:31:40.000Z'
 tags:
