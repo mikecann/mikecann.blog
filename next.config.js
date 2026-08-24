@@ -22,7 +22,7 @@ module.exports = {
 
   images: {
     unoptimized: true,
-    qualities: [75, 80],
+    qualities: [75, 80, 100],
   },
 
   async redirects() {
