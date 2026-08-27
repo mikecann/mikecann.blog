@@ -1,6 +1,6 @@
 import { v } from "convex/values";
+import { EntryId } from "@convex-dev/rag";
 import { rag, validateBlogPostAdminToken } from "../lib";
-import { EntryId } from "../../../node_modules/@convex-dev/rag/src/client/index";
 import { isNotNullOrUndefined } from "../../../essentials/misc/filter";
 import { convex } from "../../builder";
 
