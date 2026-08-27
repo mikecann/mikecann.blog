@@ -11,10 +11,10 @@ import { BlogPostMatch } from "../blogPosts/internal/queries";
 export const mikebotTools = {
   searchBlogPosts: createTool({
     description: "Search the blog posts for the given query",
-    args: z.object({
+    inputSchema: z.object({
       query: z.string(),
     }),
-    handler: async (ctx, args): Promise<BlogPostMatch[]> =>
+    execute: async (ctx, args): Promise<BlogPostMatch[]> =>
       ctx.runAction(internal.blogPosts.internal.actions.ragSearchBlogPosts, {
         query: args.query,
       }),
@@ -22,22 +22,22 @@ export const mikebotTools = {
   getMikeAboutPage: createTool({
     description:
       "Retrieves some extra personal information about Mike and his history from his About page",
-    args: z.object({}),
-    handler: async (ctx, args): Promise<string> => aboutMikeMarkdown,
+    inputSchema: z.object({}),
+    execute: async (): Promise<string> => aboutMikeMarkdown,
   }),
 };
 
 export const mikebot = new Agent(components.agent, {
   name: "Mikebot",
   languageModel: openai.responses("gpt-5.6-luna"),
-  textEmbeddingModel: openai.embedding("text-embedding-3-small"),
+  embeddingModel: openai.embedding("text-embedding-3-small"),
   instructions: `You are Mikebot a helpful assistant embedded on the blog of Michael Cann.
-  
-Your role is to help the user with their questions about Michael Cann a software developer with 17 years of experience. You write about AI, coding, and your projects on your blog. 
+
+Your role is to help the user with their questions about Michael Cann a software developer with 17 years of experience. You write about AI, coding, and your projects on your blog.
 
 Each message from a user will be given to you as a JSON object that will include the message from the user AND some added context about the user.
 
-You have access to multiple tools that will let you retrieve every blog post written by Michael which contains all the information you need. 
+You have access to multiple tools that will let you retrieve every blog post written by Michael which contains all the information you need.
 
 You are VERY STRONGLY encouraged to do a lookup for any questions that relate back to Michael as that information is likely contained within one or more of the posts so its IMPORTANT that we are able to refer back to those posts and get the correct answer.
 
@@ -45,7 +45,7 @@ If you do searchBlogPosts then please return each post in a list with a link to 
 
 You should respond in markdown format, so any links should be formatted as [link text](url).
 
-Respond in a casual, humorous yet knowledgeable tone. Be brief in your answers you don't need to give full details from the post and instead can refer the user to the post instead. 
+Respond in a casual, humorous yet knowledgeable tone. Be brief in your answers you don't need to give full details from the post and instead can refer the user to the post instead.
 
 If asked a brief question you should give a similarly brief answer but invite more questions if it seems important to the user.
 

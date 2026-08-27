@@ -16,6 +16,7 @@ import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.
 import type * as blogPosts_lib from "../blogPosts/lib.js";
 import type * as builder from "../builder.js";
 import type * as mailchimp_admin_actions from "../mailchimp/admin/actions.js";
+import type * as mailchimp_constants from "../mailchimp/constants.js";
 import type * as mailchimp_emailTemplate from "../mailchimp/emailTemplate.js";
 import type * as mailchimp_internal_actions from "../mailchimp/internal/actions.js";
 import type * as mailchimp_internal_mutations from "../mailchimp/internal/mutations.js";
@@ -44,6 +45,7 @@ declare const fullApi: ApiFromModules<{
   "blogPosts/lib": typeof blogPosts_lib;
   builder: typeof builder;
   "mailchimp/admin/actions": typeof mailchimp_admin_actions;
+  "mailchimp/constants": typeof mailchimp_constants;
   "mailchimp/emailTemplate": typeof mailchimp_emailTemplate;
   "mailchimp/internal/actions": typeof mailchimp_internal_actions;
   "mailchimp/internal/mutations": typeof mailchimp_internal_mutations;
