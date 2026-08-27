@@ -29,7 +29,7 @@ export const mikebotTools = {
 
 export const mikebot = new Agent(components.agent, {
   name: "Mikebot",
-  languageModel: openai.chat("gpt-5.6-luna"),
+  languageModel: openai.responses("gpt-5.6-luna"),
   textEmbeddingModel: openai.embedding("text-embedding-3-small"),
   instructions: `You are Mikebot a helpful assistant embedded on the blog of Michael Cann.
   
