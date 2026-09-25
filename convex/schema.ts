@@ -16,6 +16,9 @@ export const postEmailCampaignStatusSchema = v.union(
   v.literal("sending"),
   v.literal("sent"),
   v.literal("failed"),
+  // Never attempted, deliberately (e.g. the per-upload-run cap was hit or
+  // MAILCHIMP_API_KEY is missing). Can be sent with retryFailedPostEmailCampaign.
+  v.literal("skipped"),
 );
 
 export const postEmailCampaignSchema = v.object({
@@ -30,6 +33,10 @@ export const postEmailCampaignSchema = v.object({
   mailchimpCampaignId: v.optional(v.string()),
   error: v.optional(v.string()),
   sentAt: v.optional(v.number()),
+  /** How many times the post URL has been checked and wasn't live yet. */
+  liveCheckAttempts: v.optional(v.number()),
+  /** The uploadPostsToConvex run that created this campaign (for the per-run cap). */
+  uploadRunId: v.optional(v.string()),
 });
 
 export default defineSchema({
@@ -68,5 +75,6 @@ export default defineSchema({
   postEmailCampaigns: defineTable(postEmailCampaignSchema)
     .index("by_slug", ["slug"])
     .index("by_postId", ["postId"])
-    .index("by_status", ["status"]),
+    .index("by_status_and_updatedAt", ["status", "updatedAt"])
+    .index("by_uploadRunId", ["uploadRunId"]),
 });

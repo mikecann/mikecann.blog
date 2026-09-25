@@ -1,6 +1,7 @@
 import { components } from "../_generated/api";
 import { RAG } from "@convex-dev/rag";
 import { openai } from "@ai-sdk/openai";
+import { v } from "convex/values";
 
 export const rag = new RAG(components.rag, {
   filterNames: [],
@@ -9,6 +10,12 @@ export const rag = new RAG(components.rag, {
 });
 
 export const RAG_NAMESPACE = "blog_posts";
+
+/** A post's frontmatter `status` (absent means published). */
+export const vPostStatus = v.union(v.literal("draft"), v.literal("published"));
+
+/** Pruning more posts than this in one upload needs an explicit --force-prune. */
+export const MAX_POSTS_TO_PRUNE_WITHOUT_FORCE = 10;
 
 export const validateBlogPostAdminToken = (token: string) => {
   if (token != process.env.BLOG_POST_ADMIN_TOKEN)

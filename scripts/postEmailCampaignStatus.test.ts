@@ -20,7 +20,7 @@ describe("isPostEmailCampaignScheduledOrSent", () => {
     expect(isPostEmailCampaignScheduledOrSent({ status: "sent" })).toBe(true);
   });
 
-  test.each(["creating_campaign", "content_set", "sending", "failed"])(
+  test.each(["creating_campaign", "content_set", "sending", "failed", "skipped"] as const)(
     "does not treat %s as safely scheduled",
     (status) => {
       expect(isPostEmailCampaignScheduledOrSent({ status })).toBe(false);

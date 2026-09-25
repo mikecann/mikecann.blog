@@ -9,12 +9,15 @@
  */
 
 import type * as blogPosts_admin_actions from "../blogPosts/admin/actions.js";
+import type * as blogPosts_admin_mutations from "../blogPosts/admin/mutations.js";
 import type * as blogPosts_admin_queries from "../blogPosts/admin/queries.js";
 import type * as blogPosts_internal_mutations from "../blogPosts/internal/mutations.js";
 import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.js";
 import type * as blogPosts_lib from "../blogPosts/lib.js";
 import type * as builder from "../builder.js";
-import type * as mailchimp_admin_actions from "../mailchimp/admin/actions.js";
+import type * as crons from "../crons.js";
+import type * as mailchimp_admin_mutations from "../mailchimp/admin/mutations.js";
+import type * as mailchimp_campaigns from "../mailchimp/campaigns.js";
 import type * as mailchimp_constants from "../mailchimp/constants.js";
 import type * as mailchimp_emailTemplate from "../mailchimp/emailTemplate.js";
 import type * as mailchimp_internal_actions from "../mailchimp/internal/actions.js";
@@ -41,12 +44,15 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   "blogPosts/admin/actions": typeof blogPosts_admin_actions;
+  "blogPosts/admin/mutations": typeof blogPosts_admin_mutations;
   "blogPosts/admin/queries": typeof blogPosts_admin_queries;
   "blogPosts/internal/mutations": typeof blogPosts_internal_mutations;
   "blogPosts/internal/queries": typeof blogPosts_internal_queries;
   "blogPosts/lib": typeof blogPosts_lib;
   builder: typeof builder;
-  "mailchimp/admin/actions": typeof mailchimp_admin_actions;
+  crons: typeof crons;
+  "mailchimp/admin/mutations": typeof mailchimp_admin_mutations;
+  "mailchimp/campaigns": typeof mailchimp_campaigns;
   "mailchimp/constants": typeof mailchimp_constants;
   "mailchimp/emailTemplate": typeof mailchimp_emailTemplate;
   "mailchimp/internal/actions": typeof mailchimp_internal_actions;

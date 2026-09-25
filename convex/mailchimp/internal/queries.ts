@@ -1,16 +1,12 @@
 import { v } from "convex/values";
 import { convex } from "../../builder";
 
-export const findLatestPostEmailCampaignBySlug = convex
+export const getPostEmailCampaign = convex
   .query()
   .input({
-    slug: v.string(),
+    campaignId: v.id("postEmailCampaigns"),
   })
-  .handler(async (ctx, { slug }) => {
-    return await ctx.db
-      .query("postEmailCampaigns")
-      .withIndex("by_slug", (q) => q.eq("slug", slug))
-      .order("desc")
-      .first();
+  .handler(async (ctx, { campaignId }) => {
+    return await ctx.db.get("postEmailCampaigns", campaignId);
   })
   .internal();
