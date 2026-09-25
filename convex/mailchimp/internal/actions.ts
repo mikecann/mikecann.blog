@@ -6,6 +6,7 @@ import {
   mailchimpFetch,
   generateNewPostEmailHtml,
   checkPostIsLive,
+  type PostLiveCheck,
   getMailchimpApiKeyBlockReason,
   getPostEmailDeploymentBlockReason,
   MAILCHIMP_LIST_ID,
@@ -46,8 +47,11 @@ export const sendNewPostCampaign = convex
       return null;
     }
 
-    // Don't email a link that 404s: wait until the deploy is actually live.
-    const live = await checkPostIsLive(campaign.slug);
+    // Don't email a link that 404s: wait until the deploy is actually live
+    // (unless an admin retry explicitly asked to skip this check).
+    const live: PostLiveCheck = campaign.skipLiveCheck
+      ? { ok: true }
+      : await checkPostIsLive(campaign.slug);
     if (!live.ok) {
       const outcome = await ctx.runMutation(
         internal.mailchimp.internal.mutations.recordPostNotLiveYet,

@@ -7,15 +7,20 @@ import { cancelPendingSendJob, findLatestCampaignBySlug, scheduleCampaignSend } 
 //   npx convex run --prod mailchimp/admin/mutations:retryFailedPostEmailCampaign \
 //     '{"token":"<BLOG_POST_ADMIN_TOKEN>","slug":"<post-slug>"}'
 
-/** Re-queues a failed or skipped post email and sends it now (after the live check). */
+/**
+ * Re-queues a failed or skipped post email and sends it now, once the post URL
+ * returns 200. Pass `skipLiveCheck: true` only if you've confirmed the post is
+ * live but the automatic check keeps failing.
+ */
 export const retryFailedPostEmailCampaign = convex
   .mutation()
   .input({
     token: v.string(),
     slug: v.string(),
+    skipLiveCheck: v.optional(v.boolean()),
   })
   .returns(v.object({ slug: v.string(), status: v.string(), scheduled: v.boolean() }))
-  .handler(async (ctx, { token, slug }) => {
+  .handler(async (ctx, { token, slug, skipLiveCheck }) => {
     validateBlogPostAdminToken(token);
 
     const campaign = await findLatestCampaignBySlug(ctx, slug);
@@ -34,6 +39,7 @@ export const retryFailedPostEmailCampaign = convex
       status: "queued",
       error: undefined,
       liveCheckAttempts: 0,
+      skipLiveCheck: skipLiveCheck || undefined,
       scheduledFunctionId,
       updatedAt: Date.now(),
     });

@@ -35,6 +35,8 @@ export const postEmailCampaignSchema = v.object({
   sentAt: v.optional(v.number()),
   /** How many times the post URL has been checked and wasn't live yet. */
   liveCheckAttempts: v.optional(v.number()),
+  /** Set by an admin retry to send without checking the post URL first. */
+  skipLiveCheck: v.optional(v.boolean()),
   /** The uploadPostsToConvex run that created this campaign (for the per-run cap). */
   uploadRunId: v.optional(v.string()),
 });

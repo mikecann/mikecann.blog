@@ -249,6 +249,23 @@ describe("retryFailedPostEmailCampaign", () => {
     expect(job).toMatchObject({ state: { kind: "pending" }, scheduledTime: NOW });
   });
 
+  test("can skip the live check when asked to", async () => {
+    const t = setup();
+    const calls = mockFetch({ postStatus: 403 });
+    const campaignId = await insertCampaign(t, { status: "failed" });
+
+    await t.mutation(api.mailchimp.admin.mutations.retryFailedPostEmailCampaign, {
+      token,
+      slug: "my-new-post",
+      skipLiveCheck: true,
+    });
+    await vi.runOnlyPendingTimersAsync();
+    await t.finishInProgressScheduledFunctions();
+
+    expect(calls.some((c) => c.url === POST_URL)).toBe(false);
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent" });
+  });
+
   test("leaves a sent campaign alone", async () => {
     const t = setup();
     await insertCampaign(t, { status: "sent" });

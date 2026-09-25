@@ -238,6 +238,7 @@ async function reportPostEmailProblems(alreadyReported: Set<string>) {
     "",
     "Once the cause is fixed, retry a failed/skipped email with:",
     `  ${retryCommand("<slug>")}`,
+    'If the post is live but the "not live" check keeps failing, add "skipLiveCheck":true.',
     "If it was actually sent (check Mailchimp), record that with",
     "  mailchimp/admin/mutations:markPostEmailCampaignSent instead.",
   ]);
