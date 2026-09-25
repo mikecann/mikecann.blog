@@ -136,7 +136,10 @@ All of them are also `package.json` scripts (`bun run <name>`); see `README.md`.
 - `scripts/optimizeImages.ts` - re-encodes images in place (`bun run optimizeImages public/posts/<slug>`)
 - `scripts/fixFlashPlayableLinks.ts` - normalizes old Flash links so they play in the Ruffle modal (`--dry-run`)
 - `scripts/populateAlgolia.ts` - replaces the Algolia search index (production deploys only; `--dry-run`)
-- `scripts/uploadPostsToConvex.ts` - upserts changed posts into Convex; creating a new post schedules the subscriber email, so it runs last in production deploys
+- `scripts/uploadPostsToConvex.ts` - upserts changed posts into Convex; creating a new post schedules the subscriber email, so it runs after the build in production deploys. Removed posts are pruned; more than 10 at once needs `--force-prune`
+- `scripts/syncAssetsToR2.ts` - uploads new/changed post media and thumbnails to Cloudflare R2 (`bun run syncAssets`); a no-op unless the `R2_*` env vars are set. `--strip` then removes the media from the Vercel deployment (Vercel build machines only). See "Serving media from Cloudflare R2" in README.md
+
+When `NEXT_PUBLIC_ASSET_BASE_URL` is set, post media is served from R2, so link to post media through `assetUrl()` in `utils/assets.ts` rather than hardcoding `/posts/<slug>/...` URLs.
 
 <!-- convex-ai-start -->
 

@@ -5,6 +5,7 @@ import remarkHtml from "remark-html";
 import type { Root } from "mdast";
 import { PostWithContent } from "../scripts/posts";
 import { walkMarkdown } from "../scripts/lib/markdown";
+import { absoluteAssetUrl } from "./assets";
 
 const SITE_URL = "https://mikecann.blog";
 const MORE_MARKER = "<!-- more -->";
@@ -26,12 +27,17 @@ export const getExcerptMarkdown = (content: string): string => {
   return content;
 };
 
-/** Feed readers resolve URLs against the feed, not the post, so make them absolute. */
-export const toAbsoluteUrl = (slug: string, url: string): string => {
+/**
+ * Feed readers resolve URLs against the feed, not the post, so make them absolute. Post media
+ * points at the asset host when NEXT_PUBLIC_ASSET_BASE_URL is set, like it does on the site.
+ */
+export const toAbsoluteUrl = (slug: string, url: string, assetBaseUrl?: string): string => {
   // The site renders `./x` as /posts/<slug>/x; anything else resolves against the post URL.
   const sitePath = url.startsWith("./") ? `/posts/${slug}/${url.slice(2)}` : url;
   try {
-    return new URL(sitePath, `${SITE_URL}/posts/${slug}`).href;
+    const resolved = new URL(sitePath, `${SITE_URL}/posts/${slug}`);
+    if (resolved.origin != SITE_URL) return resolved.href;
+    return absoluteAssetUrl(resolved.pathname + resolved.search + resolved.hash, assetBaseUrl);
   } catch {
     return url;
   }

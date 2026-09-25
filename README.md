@@ -60,13 +60,30 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
   1. `generate` writes `public/rss.xml`, `public/sitemap.xml` (both gitignored) and any missing or outdated cover thumbnails in `public/thumbs/` (committed).
   2. `next build --turbopack`.
 - **Production** (`VERCEL_ENV=production`):
-  1. `convex deploy --cmd 'bun run build'`. The Convex CLI runs the build first, with `NEXT_PUBLIC_CONVEX_URL` set to the production deployment. It only pushes the Convex functions if the build succeeds.
+  1. `convex deploy --cmd 'bun run build && bun run syncAssets'`. The Convex CLI runs the build first, with `NEXT_PUBLIC_CONVEX_URL` set to the production deployment, then uploads new or changed media to R2 (see below). It only pushes the Convex functions if both succeed.
   2. `populateAlgolia` replaces the search index atomically.
-  3. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs last because creating a new post schedules the subscriber email.
+  3. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs after the build because creating a new post schedules the subscriber email (which also waits until the post URL is live).
+  4. `syncAssets -- --strip` removes the media from this deployment once it's safely in R2.
 
   If any step fails, the steps after it don't run.
 
-- **Preview** builds only run `bun run build`.
+- **Preview** builds run `bun run build`, then `syncAssets -- --strip`.
+
+### Serving media from Cloudflare R2
+
+Every Vercel deployment used to include all ~330MB of post media, which filled the free plan's 10GB deployment storage after about 30 deployments. Post media and thumbnails can instead be served from an R2 bucket, which keeps each deployment to a few MB. Images stay in git next to each `post.md` as before; deploys upload anything new or changed.
+
+It's off until configured. To turn it on:
+
+1. In Cloudflare, create an R2 bucket (e.g. `mikecann-blog-assets`) and connect a custom domain to it, e.g. `assets.mikecann.blog` (bucket → Settings → Custom Domains).
+2. Create an R2 API token with **Object Read & Write** on that bucket, and note the access key ID, secret and your account ID.
+3. In Vercel, for Production **and** Preview, set `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `NEXT_PUBLIC_ASSET_BASE_URL=https://assets.mikecann.blog`.
+4. Redeploy. The first deploy uploads everything once; later deploys only upload changed files (compared by MD5).
+5. Delete old deployments in Vercel (or set a deployment retention policy) to reclaim the storage they hold.
+
+With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbnails link straight to the asset domain, and old `/posts/<slug>/<file>` and `/thumbs/...` media URLs redirect there. `syncAssets` never deletes objects from R2, so old links keep working. To roll back, unset `NEXT_PUBLIC_ASSET_BASE_URL` and redeploy; the media is served from the deployment again.
+
+`--strip` only deletes local files on Vercel build machines, and only when `NEXT_PUBLIC_ASSET_BASE_URL` is set, so running it locally is safe.
 
 ## Scripts
 
@@ -84,6 +101,7 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
 | `optimizeImages <path...>`              | Re-encodes the images under a path in place, keeping each one only if it got smaller (`--quality=82`, `--dry-run`) |
 | `populateAlgolia`                       | Replaces the Algolia index with the publishable posts (`--dry-run` prints what it would index)                     |
 | `uploadPostsToConvex [-- --production]` | Upserts changed posts into Convex (dev deployment unless `--production`)                                           |
+| `syncAssets [-- --dry-run \| --strip]`  | Uploads new/changed post media and thumbnails to R2; does nothing unless the `R2_*` env vars are set               |
 | `fixFlashLinks`                         | Normalizes old Flash links so they play in the site's Ruffle modal (`--dry-run` supported)                         |
 
 `scripts/fixPosts.ts` (run with `bun run ./scripts/fixPosts.ts`) applies the automated content fixes described in `AGENTS.md`.
@@ -94,22 +112,27 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
 
 **Vercel** (Project → Settings → Environment Variables):
 
-| Name                                                     | Used by                                                                                                                                                                                                       |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CONVEX_DEPLOY_KEY`                                      | `convex deploy` in production builds (a production deploy key)                                                                                                                                                |
-| `NEXT_PUBLIC_CONVEX_URL` / `NEXT_PUBLIC_CONVEX_URL_PROD` | `uploadPostsToConvex` (in production it prefers `_PROD`). `convex deploy --cmd` sets `NEXT_PUBLIC_CONVEX_URL` only for the build command, so the upload that runs afterwards needs one of these set in Vercel |
-| `BLOG_POST_ADMIN_TOKEN`                                  | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                                                                                                         |
-| `ALGOLIA_ADMIN_KEY`                                      | `populateAlgolia`                                                                                                                                                                                             |
-| `ALGOLIA_APP_ID`                                         | `populateAlgolia` (optional; defaults to the app ID the frontend uses, `JYZJ63OX7U`)                                                                                                                          |
-| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST`    | PostHog analytics in the browser (disabled when the key isn't set)                                                                                                                                            |
+| Name                                                                     | Used by                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CONVEX_DEPLOY_KEY`                                                      | `convex deploy` in production builds (a production deploy key)                                                                                                                                                |
+| `NEXT_PUBLIC_CONVEX_URL` / `NEXT_PUBLIC_CONVEX_URL_PROD`                 | `uploadPostsToConvex` (in production it prefers `_PROD`). `convex deploy --cmd` sets `NEXT_PUBLIC_CONVEX_URL` only for the build command, so the upload that runs afterwards needs one of these set in Vercel |
+| `BLOG_POST_ADMIN_TOKEN`                                                  | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                                                                                                         |
+| `ALGOLIA_ADMIN_KEY`                                                      | `populateAlgolia`                                                                                                                                                                                             |
+| `ALGOLIA_APP_ID`                                                         | `populateAlgolia` (optional; defaults to the app ID the frontend uses, `JYZJ63OX7U`)                                                                                                                          |
+| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST`                    | PostHog analytics in the browser (disabled when the key isn't set)                                                                                                                                            |
+| `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | `syncAssets` (optional; see "Serving media from Cloudflare R2")                                                                                                                                               |
+| `NEXT_PUBLIC_ASSET_BASE_URL`                                             | Where post media and thumbnails are served from, e.g. `https://assets.mikecann.blog` (optional; unset serves them from the deployment)                                                                        |
 
 Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys, and draft posts are left out when it is `production`.
 
 **Convex** (Dashboard → Settings → Environment Variables, or `bunx convex env set NAME value`), for each deployment:
 
-| Name                    | Used by                                                    |
-| ----------------------- | ---------------------------------------------------------- |
-| `BLOG_POST_ADMIN_TOKEN` | Authorizes the admin functions `uploadPostsToConvex` calls |
-| `OPENAI_API_KEY`        | Post embeddings and Mikebot's model (via `@ai-sdk/openai`) |
-| `MAILCHIMP_API_KEY`     | Creating and sending the new-post email campaigns          |
-| `RESEND_API_KEY`        | Mikebot's thread notification emails                       |
+| Name                                  | Used by                                                                                                |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `BLOG_POST_ADMIN_TOKEN`               | Authorizes the admin functions `uploadPostsToConvex` calls                                             |
+| `OPENROUTER_API_KEY`                  | Mikebot's model (OpenRouter's auto router, limited to cheap model tiers in `convex/mikebot/config.ts`) |
+| `OPENAI_API_KEY`                      | Post embeddings for Mikebot's blog search                                                              |
+| `MAILCHIMP_API_KEY`                   | Creating and sending the new-post email campaigns (only the production deployment sends)               |
+| `MIKEBOT_DAILY_TOKEN_BUDGET`          | Optional. Max tokens Mikebot may use per UTC day (default 2,000,000; `0` turns Mikebot off)            |
+| `MIKEBOT_DAILY_COST_BUDGET_USD`       | Optional. Max USD Mikebot may spend per UTC day (default 2; `0` turns Mikebot off)                     |
+| `MAILCHIMP_ALLOW_NON_PRODUCTION_SEND` | Optional. `true` lets a non-production deployment send real campaign emails                            |

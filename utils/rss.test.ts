@@ -29,6 +29,23 @@ describe("toAbsoluteUrl", () => {
     );
     expect(toAbsoluteUrl("my-post", "https://example.com/x")).toBe("https://example.com/x");
   });
+
+  it("points post media at the asset host when one is configured", () => {
+    const base = "https://assets.mikecann.blog";
+    expect(toAbsoluteUrl("my-post", "./header.jpg", base)).toBe(
+      "https://assets.mikecann.blog/posts/my-post/header.jpg",
+    );
+    expect(toAbsoluteUrl("my-post", "/posts/my-post/clip.mp4", base)).toBe(
+      "https://assets.mikecann.blog/posts/my-post/clip.mp4",
+    );
+    // Pages and legacy paths stay on the site
+    expect(toAbsoluteUrl("my-post", "/posts/other", base)).toBe(
+      "https://mikecann.blog/posts/other",
+    );
+    expect(toAbsoluteUrl("my-post", "/wp-content/a.png", base)).toBe(
+      "https://mikecann.blog/wp-content/a.png",
+    );
+  });
 });
 
 describe("postExcerptToHtml", () => {
