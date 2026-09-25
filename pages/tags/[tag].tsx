@@ -1,23 +1,17 @@
 import { Grid, Vertical } from "../../components/utils/gls";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { PostTeaser } from "../../components/PostTeaser";
-import { ensure } from "../../utils/ensure";
-import {
-  getAllYears,
-  getPostsByYear,
-  groupPostsByTag,
-  PostsByTag,
-  getAllTags,
-  sortPosts,
-} from "../../utils/posts";
+import { ensure } from "../../essentials/misc/ensure";
+import { groupPostsByTag, getAllTags, sortPosts } from "../../utils/posts";
 import { ResponsiveSidebarLayouts } from "../../components/layout/ResponsiveSidebarLayouts";
-import { encodeTag } from "../../utils/tags";
+import { tagToParam } from "../../utils/tags";
 import Head from "next/head";
-import { PostWithContent, getAllPublishablePosts } from "../../scripts/posts";
+import { getAllPostsWithoutContent } from "../../scripts/posts";
+import { PostTeaserData, toPostTeaser } from "../../scripts/posts/teasers";
 
 type Props = {
   tag: string;
-  posts: PostWithContent[];
+  posts: PostTeaserData[];
 };
 
 const Page = ({ tag, posts }: Props) => {
@@ -40,11 +34,12 @@ const Page = ({ tag, posts }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const tags = getAllTags(getAllPublishablePosts());
+  const tags = getAllTags(getAllPostsWithoutContent());
   return {
+    // Unencoded: Next encodes params itself, so `raspberry pi` is served at /tags/raspberry%20pi.
     paths: tags.map((tag) => ({
       params: {
-        tag: encodeTag(tag),
+        tag: tagToParam(tag),
       },
     })),
     fallback: false,
@@ -52,11 +47,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const query = ensure(params);
-  const tag = decodeURIComponent(ensure(query.tag) + "");
-  const posts = sortPosts(groupPostsByTag(getAllPublishablePosts())[tag], "desc");
+  const param = ensure(params?.tag) + "";
+  const postsByTag = groupPostsByTag(getAllPostsWithoutContent());
+  const tag = ensure(
+    Object.keys(postsByTag).find((t) => tagToParam(t) == param),
+    `No posts found for tag "${param}"`,
+  );
+  const posts = sortPosts(postsByTag[tag], "desc");
   return {
-    props: { tag, posts },
+    props: { tag, posts: posts.map(toPostTeaser) },
   };
 };
 

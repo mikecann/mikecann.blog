@@ -1,16 +1,17 @@
 import { Grid, Vertical } from "../../components/utils/gls";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { PostTeaser } from "../../components/PostTeaser";
-import { ensure } from "../../utils/ensure";
-import { getAllYears, getPostsByYear, sortPosts } from "../../utils/posts";
+import { ensure } from "../../essentials/misc/ensure";
+import { getAllYears, getPostsByYear, sortPosts, sortYears } from "../../utils/posts";
 import { ArchiveYears } from "../../components/ArchiveYears";
 import { ResponsiveSidebarLayouts } from "../../components/layout/ResponsiveSidebarLayouts";
 import Head from "next/head";
-import { Post, getAllPublishablePosts } from "../../scripts/posts";
+import { getAllPostsWithoutContent } from "../../scripts/posts";
+import { PostTeaserData, toPostTeaser } from "../../scripts/posts/teasers";
 
 type Props = {
   year: string;
-  posts: Post[];
+  posts: PostTeaserData[];
   years: string[];
 };
 
@@ -37,7 +38,7 @@ const Page = ({ year, posts, years }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const years = getAllYears(getAllPublishablePosts());
+  const years = getAllYears(getAllPostsWithoutContent());
   return {
     paths: years.map((year) => ({
       params: {
@@ -52,12 +53,12 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const query = ensure(params);
   const year = ensure(query.year) + "";
 
-  const allPosts = sortPosts(getAllPublishablePosts(), "desc");
+  const allPosts = sortPosts(getAllPostsWithoutContent(), "desc");
   const posts = getPostsByYear(year, allPosts);
-  const years = getAllYears(allPosts);
+  const years = sortYears(getAllYears(allPosts));
 
   return {
-    props: { posts, year, years },
+    props: { posts: posts.map(toPostTeaser), year, years },
   };
 };
 

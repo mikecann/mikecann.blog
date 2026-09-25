@@ -1,21 +1,22 @@
 import { GetStaticProps } from "next";
-import { groupPostsByYear, PostsByYear, sortPosts } from "../utils/posts";
+import { groupPostsByYear, sortPosts, sortYears } from "../utils/posts";
 import { ArchiveYears } from "../components/ArchiveYears";
 import React from "react";
-import { PostsGrid } from "../components/PostsGrid";
+import { PostsGrid, YearOfPosts } from "../components/PostsGrid";
 import { ResponsiveSidebarLayouts } from "../components/layout/ResponsiveSidebarLayouts";
 import { getAllPostsWithoutContent } from "../scripts/posts";
+import { toPostTeaser } from "../scripts/posts/teasers";
 import { Vertical } from "../components/utils/gls";
 
 type Props = {
-  postsByYear: PostsByYear;
+  latestYears: YearOfPosts[];
   theOtherYears: string[];
 };
 
-const IndexPage = ({ postsByYear, theOtherYears }: Props) => {
+const IndexPage = ({ latestYears, theOtherYears }: Props) => {
   return (
     <ResponsiveSidebarLayouts>
-      <PostsGrid postsByYear={postsByYear} />
+      <PostsGrid years={latestYears} />
       <Vertical style={{ marginBottom: 20 }}>
         <h1>Archive</h1>
         <ArchiveYears years={theOtherYears} />
@@ -25,20 +26,16 @@ const IndexPage = ({ postsByYear, theOtherYears }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const allPosts = sortPosts(getAllPostsWithoutContent(), "desc");
-  const postsByYear = groupPostsByYear(allPosts);
+  const postsByYear = groupPostsByYear(sortPosts(getAllPostsWithoutContent(), "desc"));
+  const years = sortYears(Object.keys(postsByYear), "desc");
 
-  const firstThreeYears = Object.keys(postsByYear)
-    .reverse()
-    .slice(0, 3)
-    .reduce((accum, curr) => ({ ...accum, [curr]: postsByYear[parseInt(curr)] }), {});
-
-  const theOtherYears = Object.keys(postsByYear)
-    .filter((year) => !Object.keys(firstThreeYears).includes(year))
-    .reverse();
+  const latestYears = years.slice(0, 3).map((year) => ({
+    year,
+    posts: postsByYear[parseInt(year)].map(toPostTeaser),
+  }));
 
   return {
-    props: { postsByYear: firstThreeYears, theOtherYears },
+    props: { latestYears, theOtherYears: years.slice(3) },
   };
 };
 

@@ -1,15 +1,13 @@
 import * as React from "react";
-import { format } from "date-fns";
 import Image from "next/image";
-import { getPostRootCoverImagePath } from "../utils/posts";
 import { style } from "typestyle";
 import Link from "next/link";
 import { PostTags } from "./PostTags";
-import { Post } from "../scripts/posts";
+import type { PostTeaserData } from "../scripts/posts/teasers";
 import { Vertical } from "./utils/gls";
 
 interface Props {
-  post: Post;
+  post: PostTeaserData;
 }
 
 const imgStyle = style({
@@ -31,21 +29,13 @@ const cardStyle = style({
 
 const linkStyle = style({
   color: "#222",
-  // $nest: {
-  //   "&:hover": {
-  //     transform: "translateY(-5px)",
-  //     boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.2)",
-  //     filter: "grayscale(0)",
-  //   },
-  // },
 });
 
 export const PostTeaser: React.FC<Props> = ({ post }) => {
-  const { meta, slug } = post;
-  const { title, date, tags } = meta;
+  const { slug, title, date, tags, image } = post;
 
   return (
-    <Link className={linkStyle} href="/posts/[slug]" as={`/posts/${slug}`}>
+    <Link className={linkStyle} href={`/posts/${slug}`}>
       <Vertical
         className={cardStyle}
         width={320}
@@ -54,23 +44,21 @@ export const PostTeaser: React.FC<Props> = ({ post }) => {
         <Image
           alt={`post cover image for ${title}`}
           className={imgStyle}
-          src={getPostRootCoverImagePath(post)}
+          src={image}
           width={320}
           height={180}
-          quality={80}
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
         <Vertical>
           <Vertical
             spacing={5}
             style={{ borderTop: "1px solid #ddd", padding: "5px 10px 10px 10px", margin: 0 }}
           >
             <div style={{ margin: 0, fontSize: "1.2em", fontWeight: "bold" }}>{title}</div>
-            <div style={{ color: "#bbbbbb", fontSize: "0.8em" }}>
-              {format(new Date(date), "do MMMM yyyy")}
-            </div>
+            <div style={{ color: "#767676", fontSize: "0.8em" }}>{date}</div>
           </Vertical>
           {tags.length > 0 && (
             <div style={{ borderTop: "1px solid #eee", padding: 5 }}>
