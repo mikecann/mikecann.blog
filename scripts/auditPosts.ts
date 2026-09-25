@@ -1,7 +1,7 @@
 /**
  * Blog Post Audit Script
  *
- * Scans all 625+ blog posts for:
+ * Scans all blog posts for:
  * 1. Dead external links (HTTP 4xx/5xx or unreachable)
  * 2. Broken local images (file doesn't exist on disk)
  * 3. Broken external images (HTTP errors)
@@ -9,13 +9,21 @@
  * 5. Missing or fallback cover images
  * 6. Broken iframes (YouTube removed, defunct services)
  *
- * Usage: bun run ./scripts/auditPosts.ts
+ * Usage: bun run ./scripts/auditPosts.ts [--local-only]
+ *   --local-only skips the HTTP checks of external URLs (fast, offline)
  * Output: ./scripts/audit-report.json (single source of truth for issues to fix)
  */
 
 import fs from "fs";
-import { join, resolve } from "path";
+import { join } from "path";
 import matter from "gray-matter";
+import {
+  getImageRefs,
+  getLinkRefs,
+  getUnparsedImageSyntax,
+  parseMarkdown,
+} from "./lib/markdown";
+import { resolveLocalFile } from "./lib/postAssets";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -62,7 +70,7 @@ const RETRY_DELAY = 500;
 const SHOPIFY_DELAY_MS = 500; // delay between Shopify CDN checks to avoid rate limiting
 
 const postsDirectory = join(process.cwd(), "public/posts");
-const publicDirectory = join(process.cwd(), "public");
+const LOCAL_ONLY = process.argv.includes("--local-only");
 
 // Domains known to block bots / always timeout - skip HTTP checks for these
 const SKIP_DOMAINS = new Set([
@@ -134,79 +142,6 @@ const DEFUNCT_SERVICES: Record<string, string> = {
 
 // ─── URL Extraction ──────────────────────────────────────────────────────────
 
-function extractMarkdownLinks(content: string): Array<{ url: string; line: number }> {
-  const results: Array<{ url: string; line: number }> = [];
-  const lines = content.split("\n");
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const lineNum = i + 1;
-
-    // Markdown links: [text](url) - but not images
-    const linkRegex = /(?<!!)\[([^\]]*)\]\(([^)]+)\)/g;
-    let match;
-    while ((match = linkRegex.exec(line)) !== null) {
-      let url = match[2].trim();
-      // Handle [text](url "title") - only split on space before a quote
-      const titleMatch = url.match(/^(.+?)\s+["']/);
-      if (titleMatch) {
-        url = titleMatch[1];
-      }
-      if (url && !url.startsWith("#") && !url.startsWith("mailto:")) {
-        results.push({ url, line: lineNum });
-      }
-    }
-  }
-
-  return results;
-}
-
-function extractMarkdownImages(content: string): Array<{ url: string; line: number }> {
-  const results: Array<{ url: string; line: number }> = [];
-  const lines = content.split("\n");
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const lineNum = i + 1;
-
-    // Markdown images: ![alt](url)
-    const imgRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
-    let match;
-    while ((match = imgRegex.exec(line)) !== null) {
-      let url = match[2].trim();
-      // Handle ![alt](url "title") - only split on space before a quote
-      const titleMatch = url.match(/^(.+?)\s+["']/);
-      if (titleMatch) {
-        url = titleMatch[1];
-      }
-      if (url) {
-        results.push({ url, line: lineNum });
-      }
-    }
-  }
-
-  return results;
-}
-
-function extractHtmlImages(content: string): Array<{ url: string; line: number }> {
-  const results: Array<{ url: string; line: number }> = [];
-  const lines = content.split("\n");
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const lineNum = i + 1;
-
-    // HTML img tags: <img src="url">
-    const imgRegex = /<img[^>]+src=["']([^"']+)["']/gi;
-    let match;
-    while ((match = imgRegex.exec(line)) !== null) {
-      results.push({ url: match[1], line: lineNum });
-    }
-  }
-
-  return results;
-}
-
 function extractIframes(content: string): Array<{ url: string; line: number; raw: string }> {
   const results: Array<{ url: string; line: number; raw: string }> = [];
   const lines = content.split("\n");
@@ -252,28 +187,6 @@ function extractFlashEmbeds(
     const paramRegex = /<param[^>]+value=["']([^"']*\.swf[^"']*)["'][^>]*>/gi;
     while ((match = paramRegex.exec(line)) !== null) {
       results.push({ url: match[1], line: lineNum, raw: match[0] });
-    }
-  }
-
-  return results;
-}
-
-function extractHtmlLinks(content: string): Array<{ url: string; line: number }> {
-  const results: Array<{ url: string; line: number }> = [];
-  const lines = content.split("\n");
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const lineNum = i + 1;
-
-    // <a href="url">
-    const linkRegex = /<a[^>]+href=["']([^"']+)["']/gi;
-    let match;
-    while ((match = linkRegex.exec(line)) !== null) {
-      const url = match[1];
-      if (url && !url.startsWith("#") && !url.startsWith("mailto:") && !url.startsWith("javascript:")) {
-        results.push({ url, line: lineNum });
-      }
     }
   }
 
@@ -386,21 +299,6 @@ async function checkUrl(
   return result;
 }
 
-function checkLocalFile(url: string, postDir: string): boolean {
-  if (url.startsWith("./") || url.startsWith("../")) {
-    const absPath = resolve(postDir, url);
-    return fs.existsSync(absPath);
-  }
-
-  if (url.startsWith("/")) {
-    // Could be /posts/... or /images/... - resolve from public dir
-    const absPath = join(publicDirectory, url);
-    return fs.existsSync(absPath);
-  }
-
-  return true; // Can't determine, assume OK
-}
-
 // ─── Concurrency helpers ─────────────────────────────────────────────────────
 
 function sleep(ms: number): Promise<void> {
@@ -467,8 +365,8 @@ function parsePost(slug: string): ParsedPost {
     });
   } else {
     if (!isExternalUrl(coverImage)) {
-      const exists = checkLocalFile(coverImage, postDir);
-      if (!exists) {
+      const coverFile = resolveLocalFile(slug, coverImage);
+      if (coverFile && !fs.existsSync(coverFile)) {
         localIssues.push({
           type: "broken-image",
           severity: "error",
@@ -522,10 +420,24 @@ function parsePost(slug: string): ParsedPost {
 
   // ── 4. Collect all URLs ───────────────────────────────────────────────────
 
-  const markdownLinks = extractMarkdownLinks(content);
-  const markdownImages = extractMarkdownImages(content);
-  const htmlImages = extractHtmlImages(content);
-  const htmlLinks = extractHtmlLinks(content);
+  // Parse with the same markdown parser as the site so we see exactly what it renders
+  // (e.g. `![](./a b.png)` isn't an image at all, and code blocks aren't links).
+  const tree = parseMarkdown(content);
+  const links = getLinkRefs(tree).filter(
+    ({ url }) =>
+      url && !url.startsWith("#") && !url.startsWith("mailto:") && !url.startsWith("javascript:"),
+  );
+  const images = getImageRefs(tree).filter(({ url }) => url);
+
+  for (const ref of getUnparsedImageSyntax(tree)) {
+    localIssues.push({
+      type: "broken-image",
+      severity: "error",
+      description: "Image syntax renders as text (spaces in the path need <...>)",
+      url: ref.url,
+      line: ref.line,
+    });
+  }
 
   const allUrlItems: Array<{ url: string; line: number; isImage: boolean }> = [];
   const seenUrls = new Set<string>();
@@ -537,10 +449,8 @@ function parsePost(slug: string): ParsedPost {
     }
   };
 
-  for (const l of markdownLinks) addUrl(l.url, l.line, false);
-  for (const i of markdownImages) addUrl(i.url, i.line, true);
-  for (const i of htmlImages) addUrl(i.url, i.line, true);
-  for (const l of htmlLinks) addUrl(l.url, l.line, false);
+  for (const l of links) addUrl(l.url, l.line ?? 0, false);
+  for (const i of images) addUrl(i.url, i.line ?? 0, true);
 
   // ── 5. Check local file references ────────────────────────────────────────
 
@@ -565,18 +475,11 @@ function parsePost(slug: string): ParsedPost {
         continue;
       }
 
-      // These paths are served via Next.js rewrites to CloudFront/S3 - not local files
-      // These paths are served via Next.js rewrites to CloudFront/S3 - not local files
-      const rewrittenPaths = [
-        "/wp-content/", "../wp-content/",
-        "/projects/", "/flash/", "/DumpingGround/",
-        "/ArtificialStudios1/", "/Files/", "/Work/",
-      ];
-      if (rewrittenPaths.some((p) => item.url.startsWith(p))) {
-        continue;
-      }
+      // Paths rewritten to CloudFront/S3 by next.config.js resolve to undefined - not local files
+      const file = resolveLocalFile(slug, item.url);
+      if (!file) continue;
 
-      const exists = checkLocalFile(item.url, postDir);
+      const exists = fs.existsSync(file);
       if (!exists) {
         localIssues.push({
           type: item.isImage ? "broken-image" : "dead-link",
@@ -689,7 +592,7 @@ async function main() {
     }
   }
 
-  const urlList = Array.from(uniqueUrls.keys());
+  const urlList = LOCAL_ONLY ? [] : Array.from(uniqueUrls.keys());
   const shopifyUrls = urlList.filter((u) => getDomain(u) === "cdn.shopify.com");
   const otherUrls = urlList.filter((u) => getDomain(u) !== "cdn.shopify.com");
 
