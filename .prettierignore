@@ -1,1 +1,9 @@
 /blueprint-templates
+/public/
+/convex/_generated/
+/.next/
+/node_modules/
+/.claude/
+/.agents/
+bun.lock
+skills-lock.json
