@@ -1,48 +1,45 @@
 import { v } from "convex/values";
-import { internal } from "../../_generated/api";
-import { hoursInMs } from "../../../essentials/misc/time";
 import { convex } from "../../builder";
+import { clearPendingReplies, findDailyUsage, getUtcDayKey } from "../guards";
 
-export const scheduleThreadUpdatedNotification = convex
+/** Adds one LLM step's token usage to today's (UTC) total for the daily budget. */
+export const recordTokenUsage = convex
   .mutation()
   .input({
-    threadId: v.string(),
+    inputTokens: v.number(),
+    outputTokens: v.number(),
+    totalTokens: v.number(),
   })
+  .returns(v.null())
   .handler(async (ctx, args) => {
-    const notification = await ctx.db
-      .query("pendingThreadUpdateNotifications")
-      .withIndex("by_threadId", (q) => q.eq("threadId", args.threadId))
-      .first();
+    const now = Date.now();
+    const day = getUtcDayKey(now);
+    const usage = await findDailyUsage(ctx, day);
 
-    if (notification) await ctx.scheduler.cancel(notification.scheduledFunctionId);
-
-    await ctx.db.insert("pendingThreadUpdateNotifications", {
-      threadId: args.threadId,
-      scheduledFunctionId: await ctx.scheduler.runAfter(
-        hoursInMs(3),
-        internal.mikebot.internal.actions.sendThreadUpdatedNotification,
-        { threadId: args.threadId },
-      ),
-    });
+    if (usage) {
+      await ctx.db.patch("mikebotDailyUsage", usage._id, {
+        inputTokens: usage.inputTokens + args.inputTokens,
+        outputTokens: usage.outputTokens + args.outputTokens,
+        totalTokens: usage.totalTokens + args.totalTokens,
+        updatedAt: now,
+      });
+    } else {
+      await ctx.db.insert("mikebotDailyUsage", { day, ...args, updatedAt: now });
+    }
+    return null;
   })
   .internal();
 
-export const deletePendingThreadUpdateNotification = convex
+/** Marks the reply to `promptMessageId` as finished so the thread accepts new messages. */
+export const clearPendingReply = convex
   .mutation()
   .input({
     threadId: v.string(),
+    promptMessageId: v.string(),
   })
-  .handler(async (ctx, args) => {
-    const notification = await ctx.db
-      .query("pendingThreadUpdateNotifications")
-      .withIndex("by_threadId", (q) => q.eq("threadId", args.threadId))
-      .first();
-
-    if (!notification) return;
-
-    await Promise.all([
-      ctx.scheduler.cancel(notification.scheduledFunctionId),
-      ctx.db.delete(notification._id),
-    ]);
+  .returns(v.null())
+  .handler(async (ctx, { threadId, promptMessageId }) => {
+    await clearPendingReplies(ctx, threadId, promptMessageId);
+    return null;
   })
   .internal();

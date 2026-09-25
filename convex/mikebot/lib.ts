@@ -1,12 +1,9 @@
 import { components, internal } from "../_generated/api";
-import { openai } from "@ai-sdk/openai";
-import { Agent, createTool, MessageDoc, ThreadDoc } from "@convex-dev/agent";
-import { Id } from "../_generated/dataModel";
-import { DatabaseReader, QueryCtx } from "../_generated/server";
+import { Agent, createTool } from "@convex-dev/agent";
 import { z } from "zod";
 import { aboutMikeMarkdown } from "./constants";
-import { isNotNullOrUndefined } from "../../essentials/misc/filter";
-import { BlogPostMatch } from "../blogPosts/internal/queries";
+import { searchBlogPosts, type BlogPostMatch } from "../blogPosts/lib";
+import { MIKEBOT_LANGUAGE_MODEL, MIKEBOT_LIMITS } from "./config";
 
 export const mikebotTools = {
   searchBlogPosts: createTool({
@@ -14,10 +11,7 @@ export const mikebotTools = {
     inputSchema: z.object({
       query: z.string(),
     }),
-    execute: async (ctx, args): Promise<BlogPostMatch[]> =>
-      ctx.runAction(internal.blogPosts.internal.actions.ragSearchBlogPosts, {
-        query: args.query,
-      }),
+    execute: async (ctx, args): Promise<BlogPostMatch[]> => searchBlogPosts(ctx, args.query),
   }),
   getMikeAboutPage: createTool({
     description:
@@ -29,8 +23,7 @@ export const mikebotTools = {
 
 export const mikebot = new Agent(components.agent, {
   name: "Mikebot",
-  languageModel: openai.responses("gpt-5.6-luna"),
-  embeddingModel: openai.embedding("text-embedding-3-small"),
+  languageModel: MIKEBOT_LANGUAGE_MODEL,
   instructions: `You are Mikebot a helpful assistant embedded on the blog of Michael Cann.
 
 Your role is to help the user with their questions about Michael Cann a software developer with 17 years of experience. You write about AI, coding, and your projects on your blog.
@@ -53,56 +46,45 @@ If you perform a retrieval and it returns multiple possible answers to the quest
 
 If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
   tools: mikebotTools,
-  maxSteps: 10,
+  maxSteps: MIKEBOT_LIMITS.maxSteps,
+  // Only the most recent messages of the thread are sent as context. No
+  // embedding model is configured, so there is no vector search over messages.
+  contextOptions: { recentMessages: MIKEBOT_LIMITS.recentMessages },
+  // Record token usage for the daily budget (called once per LLM step).
+  usageHandler: async (ctx, { usage }) => {
+    const inputTokens = usage.inputTokens ?? 0;
+    const outputTokens = usage.outputTokens ?? 0;
+    try {
+      await ctx.runMutation(internal.mikebot.internal.mutations.recordTokenUsage, {
+        inputTokens,
+        outputTokens,
+        totalTokens: usage.totalTokens ?? inputTokens + outputTokens,
+      });
+    } catch (error) {
+      // Never fail a reply because usage bookkeeping failed.
+      console.error("Failed to record Mikebot token usage", error);
+    }
+  },
 });
 
-export const validateUserExists = async (db: DatabaseReader, args: { userId: Id<"users"> }) => {
-  const user = await db.get(args.userId);
-  if (!user) throw new Error(`User not found with id ${args.userId}`);
-  return user;
-};
-
-export const validateThreadBelongsToUser = ({
-  thread,
-  userId,
+/**
+ * The prompt saved for a visitor's message: their text plus some context about
+ * where they are on the site. The client parses this back for display.
+ */
+export const createUserPrompt = ({
+  message,
+  currentUrl,
 }: {
-  thread: ThreadDoc;
-  userId: Id<"users">;
-}) => {
-  if (thread.userId !== userId)
-    throw new Error(`Thread ${thread._id} does not belong to user ${userId}`);
-
-  return thread;
-};
-
-export const getAndValidateThread = async (
-  ctx: QueryCtx,
-  args: { threadId: string; userId: Id<"users"> },
-) => {
-  const thread = await findThread(ctx, { threadId: args.threadId });
-  if (!thread) throw new Error(`Thread not found with id ${args.threadId}`);
-  validateThreadBelongsToUser({ thread, userId: args.userId });
-  return thread;
-};
-
-export const findThread = async (ctx: QueryCtx, args: { threadId: string }) => {
-  const thread = await ctx.runQuery(components.agent.threads.getThread, {
-    threadId: args.threadId,
-  });
-  return thread;
-};
-
-export const getThread = async (ctx: QueryCtx, args: { threadId: string }) => {
-  const thread = await findThread(ctx, { threadId: args.threadId });
-  if (!thread) throw new Error(`Thread not found with id ${args.threadId}`);
-  return thread;
-};
-
-export const filterOutToolResults = (messages: MessageDoc[]) =>
-  messages
-    .map((message) => {
-      if (message.message?.role == "tool" && message.message.content[0].type == "tool-result")
-        return null;
-      return message;
-    })
-    .filter(isNotNullOrUndefined);
+  message: string;
+  currentUrl?: string;
+}): string =>
+  JSON.stringify(
+    {
+      context: {
+        currentUrl: (currentUrl ?? "").slice(0, MIKEBOT_LIMITS.maxContextUrlLength),
+      },
+      message,
+    },
+    null,
+    2,
+  );

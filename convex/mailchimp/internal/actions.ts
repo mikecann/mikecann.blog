@@ -1,9 +1,14 @@
 import { v } from "convex/values";
 import { convex } from "../../builder";
 import { internal } from "../../_generated/api";
+import type { Doc } from "../../_generated/dataModel";
 import {
   mailchimpFetch,
   generateNewPostEmailHtml,
+  checkPostIsLive,
+  type PostLiveCheck,
+  getMailchimpApiKeyBlockReason,
+  getPostEmailDeploymentBlockReason,
   MAILCHIMP_LIST_ID,
   MAILCHIMP_FROM_NAME,
   MAILCHIMP_REPLY_TO,
@@ -14,29 +19,63 @@ export const sendNewPostCampaign = convex
   .input({
     campaignId: v.id("postEmailCampaigns"),
   })
+  .returns(v.null())
   .handler(async (ctx, { campaignId }) => {
-    const campaign = await ctx.runMutation(
-      internal.mailchimp.internal.mutations.beginPostEmailCampaign,
-      {
-        campaignId,
-      },
+    const campaign: Doc<"postEmailCampaigns"> | null = await ctx.runQuery(
+      internal.mailchimp.internal.queries.getPostEmailCampaign,
+      { campaignId },
     );
 
-    if (campaign.kind === "missing") {
+    if (!campaign) {
       console.warn(`Mailchimp post email campaign not found: ${campaignId}`);
-      return;
+      return null;
     }
 
-    if (campaign.kind === "already_sent") {
-      console.log(`Mailchimp post email campaign already sent: ${campaignId}`);
-      return;
+    if (campaign.status !== "queued") {
+      console.log(`Post email for '${campaign.slug}' is '${campaign.status}', nothing to do`);
+      return null;
     }
 
-    const { slug, title } = campaign;
+    // Never email the real subscriber list from a dev deployment.
+    const blockReason = getPostEmailDeploymentBlockReason() ?? getMailchimpApiKeyBlockReason();
+    if (blockReason) {
+      await ctx.runMutation(internal.mailchimp.internal.mutations.markFailed, {
+        campaignId,
+        error: `Not sent: ${blockReason}`,
+      });
+      console.error(`Not sending post email for '${campaign.slug}': ${blockReason}`);
+      return null;
+    }
+
+    // Don't email a link that 404s: wait until the deploy is actually live
+    // (unless an admin retry explicitly asked to skip this check).
+    const live: PostLiveCheck = campaign.skipLiveCheck
+      ? { ok: true }
+      : await checkPostIsLive(campaign.slug);
+    if (!live.ok) {
+      const outcome = await ctx.runMutation(
+        internal.mailchimp.internal.mutations.recordPostNotLiveYet,
+        { campaignId, detail: live.detail },
+      );
+      console.warn(`Post '${campaign.slug}' is not live yet (${live.detail}): ${outcome}`);
+      return null;
+    }
+
+    const claim = await ctx.runMutation(
+      internal.mailchimp.internal.mutations.beginPostEmailCampaign,
+      { campaignId },
+    );
+
+    if (claim.kind !== "claimed") {
+      console.log(`Post email ${campaignId} was not claimed (${claim.kind}), nothing to do`);
+      return null;
+    }
+
+    const { slug, title } = claim;
     console.log(`Creating Mailchimp campaign for new post: "${title}" (${slug})`);
 
     try {
-      let mailchimpCampaignId = campaign.mailchimpCampaignId ?? undefined;
+      let mailchimpCampaignId = claim.mailchimpCampaignId ?? undefined;
 
       if (!mailchimpCampaignId) {
         const mailchimpCampaign = await mailchimpFetch("/campaigns", {
@@ -52,19 +91,15 @@ export const sendNewPostCampaign = convex
           }),
         });
 
-        const newMailchimpCampaignId = String(mailchimpCampaign.id);
-        mailchimpCampaignId = newMailchimpCampaignId;
-        await ctx.runMutation(internal.mailchimp.internal.mutations.markMailchimpCampaignCreated, {
-          campaignId,
-          mailchimpCampaignId: newMailchimpCampaignId,
-        });
+        mailchimpCampaignId = String(mailchimpCampaign.id);
+        const recorded = await ctx.runMutation(
+          internal.mailchimp.internal.mutations.markMailchimpCampaignCreated,
+          { campaignId, mailchimpCampaignId },
+        );
+        if (!recorded) throw new Error("Campaign status changed while creating it; stopping");
         console.log(`Campaign created: ${mailchimpCampaignId}`);
       } else {
         console.log(`Reusing Mailchimp campaign: ${mailchimpCampaignId}`);
-      }
-
-      if (!mailchimpCampaignId) {
-        throw new Error("Mailchimp campaign id was not available after campaign creation");
       }
 
       await mailchimpFetch(`/campaigns/${mailchimpCampaignId}/content`, {
@@ -74,15 +109,19 @@ export const sendNewPostCampaign = convex
         }),
       });
 
-      await ctx.runMutation(internal.mailchimp.internal.mutations.markContentSet, {
-        campaignId,
-      });
+      if (
+        !(await ctx.runMutation(internal.mailchimp.internal.mutations.markContentSet, {
+          campaignId,
+        }))
+      )
+        throw new Error("Campaign status changed while setting its content; stopping");
 
       console.log(`Campaign content set, sending...`);
 
-      await ctx.runMutation(internal.mailchimp.internal.mutations.markSending, {
-        campaignId,
-      });
+      if (
+        !(await ctx.runMutation(internal.mailchimp.internal.mutations.markSending, { campaignId }))
+      )
+        throw new Error("Campaign status changed before sending; not sending");
 
       await mailchimpFetch(`/campaigns/${mailchimpCampaignId}/actions/send`, {
         method: "POST",
@@ -93,6 +132,7 @@ export const sendNewPostCampaign = convex
       });
 
       console.log(`Campaign sent successfully for post: "${title}"`);
+      return null;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       await ctx.runMutation(internal.mailchimp.internal.mutations.markFailed, {

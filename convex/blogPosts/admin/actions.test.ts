@@ -3,54 +3,84 @@ import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
 import { api } from "../../_generated/api";
 import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
-import { v } from "convex/values";
-import { NEW_POST_EMAIL_DELAY_MS } from "../../mailchimp/constants";
+import {
+  NEW_POST_EMAIL_DELAY_MS,
+  POST_EMAIL_MAX_CAMPAIGNS_PER_UPLOAD_RUN,
+} from "../../mailchimp/constants";
+import { PRODUCTION_CONVEX_CLOUD_URL } from "../../mailchimp/lib";
+import { modules } from "../../test.setup";
 
-// Mock the environment variable
-const originalEnv = process.env;
+const setup = () => convexTest(schema, modules);
+type TestConvex = ReturnType<typeof setup>;
 
-// Mock the RAG add function
-const mockRagAdd = vi.fn();
+const ragMock = vi.hoisted(() => ({ add: vi.fn(), getEntry: vi.fn() }));
 
-// Helper function to cast string to EntryId for testing
-const mockEntryId = (id: string): EntryId => id as EntryId;
-
-// Mock the dependencies
 vi.mock("@convex-dev/rag", async (importOriginal) => {
-  const actual = (await importOriginal()) as any;
+  const actual = await importOriginal<typeof import("@convex-dev/rag")>();
   return {
     ...actual,
     RAG: class {
-      constructor() {}
-      add = mockRagAdd;
+      add = ragMock.add;
+      getEntry = ragMock.getEntry;
     },
   };
 });
 
 vi.mock("@ai-sdk/openai", () => ({
-  openai: {
-    embedding: () => ({}),
-  },
+  openai: { embedding: () => ({}), responses: () => ({}) },
 }));
 
-vi.mock("../components", () => ({
-  components: {
-    rag: {},
-  },
-}));
+const originalEnv = process.env;
+const mockEntryId = (id: string): EntryId => id as EntryId;
+
+const NOW = new Date("2026-09-25T10:00:00.000Z").getTime();
+const DAY = 24 * 60 * 60 * 1000;
+const token = "test-admin-token";
+
+const upsertArgs = (
+  overrides: {
+    slug?: string;
+    title?: string;
+    hash?: string;
+    content?: string;
+    date?: number;
+    status?: "draft" | "published";
+    uploadRunId?: string;
+  } = {},
+) => ({
+  token,
+  content: "This is test blog post content",
+  slug: "test-blog-post",
+  title: "Test Blog Post",
+  hash: "test-content-hash",
+  date: NOW - DAY,
+  uploadRunId: "run-1",
+  ...overrides,
+});
+
+const getPost = (t: TestConvex, slug = "test-blog-post") =>
+  t.run((ctx) =>
+    ctx.db
+      .query("blogPosts")
+      .withIndex("by_slug", (q) => q.eq("slug", slug))
+      .first(),
+  );
+
+const getCampaigns = (t: TestConvex) =>
+  t.run((ctx) => ctx.db.query("postEmailCampaigns").collect());
 
 describe("upsert action", () => {
-  const mockToken = "test-admin-token";
-  const mockContent = "This is test blog post content";
-  const mockSlug = "test-blog-post";
-  const mockTitle = "Test Blog Post";
-  const mockHash = "test-content-hash";
-
   beforeEach(() => {
     vi.clearAllMocks();
     vi.useFakeTimers();
-    process.env = { ...originalEnv };
-    process.env.BLOG_POST_ADMIN_TOKEN = mockToken;
+    vi.setSystemTime(NOW);
+    process.env = {
+      ...originalEnv,
+      BLOG_POST_ADMIN_TOKEN: token,
+      CONVEX_CLOUD_URL: PRODUCTION_CONVEX_CLOUD_URL,
+      MAILCHIMP_API_KEY: "abc123-us3",
+    };
+    ragMock.getEntry.mockResolvedValue(null);
   });
 
   afterEach(() => {
@@ -58,384 +88,241 @@ describe("upsert action", () => {
     process.env = originalEnv;
   });
 
-  test("creates new blog post when none exists", async () => {
-    const t = convexTest(schema);
+  test("creates a new recent post and queues its email", async () => {
+    const t = setup();
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("new-rag-entry-id") });
 
-    const mockEntryIdValue = mockEntryId("new-rag-entry-id");
-    mockRagAdd.mockResolvedValue({ entryId: mockEntryIdValue });
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
+    expect(result).toEqual({ slug: "test-blog-post", created: true, email: { kind: "queued" } });
 
-    // Execute the action
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: mockContent,
-      slug: mockSlug,
-      title: mockTitle,
-      hash: mockHash,
-    });
-
-    // Verify RAG add was called with correct parameters
-    expect(mockRagAdd).toHaveBeenCalledWith(expect.anything(), {
+    expect(ragMock.add).toHaveBeenCalledWith(expect.anything(), {
       namespace: "blog_posts",
-      text: mockContent,
-      key: mockSlug,
-      title: mockTitle,
-      contentHash: mockHash,
+      text: "This is test blog post content",
+      key: "test-blog-post",
+      title: "Test Blog Post",
+      contentHash: "test-content-hash",
     });
 
-    // Verify the blog post was created in the database
-    const blogPost = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", mockSlug))
-        .first();
-    });
-
-    expect(blogPost).toBeDefined();
+    const blogPost = await getPost(t);
     expect(blogPost).toMatchObject({
-      slug: mockSlug,
-      title: mockTitle,
-      hash: mockHash,
-      ragEntryId: mockEntryIdValue,
+      slug: "test-blog-post",
+      title: "Test Blog Post",
+      hash: "test-content-hash",
+      ragEntryId: "new-rag-entry-id",
     });
 
-    const emailCampaign = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("postEmailCampaigns")
-        .withIndex("by_slug", (q) => q.eq("slug", mockSlug))
-        .first();
-    });
-
-    expect(emailCampaign).toMatchObject({
+    const [campaign] = await getCampaigns(t);
+    expect(campaign).toMatchObject({
       postId: blogPost?._id,
-      slug: mockSlug,
-      title: mockTitle,
+      slug: "test-blog-post",
+      title: "Test Blog Post",
       status: "queued",
       attempts: 0,
-    });
-    expect(emailCampaign?.scheduledFunctionId).toBeDefined();
-
-    const scheduledFunction = await t.run(async (ctx) => {
-      return await ctx.db.system.get(emailCampaign!.scheduledFunctionId!);
+      uploadRunId: "run-1",
     });
 
+    const scheduledFunction = await t.run((ctx) =>
+      ctx.db.system.get("_scheduled_functions", campaign.scheduledFunctionId!),
+    );
     expect(scheduledFunction).toMatchObject({
+      name: "mailchimp/internal/actions:sendNewPostCampaign",
       state: { kind: "pending" },
-      scheduledTime: Date.now() + NEW_POST_EMAIL_DELAY_MS,
+      scheduledTime: NOW + NEW_POST_EMAIL_DELAY_MS,
     });
   });
 
-  test("updates existing blog post when ragEntryId changes", async () => {
-    const t = convexTest(schema);
+  test.each([
+    ["older than 14 days", { date: NOW - 15 * DAY }, "more than 14 days ago"],
+    ["a draft", { status: "draft" as const }, "draft"],
+    ["an invalid date", { date: Number.NaN }, "invalid date"],
+  ])("creates the post but does not email when it is %s", async (_, overrides, reason) => {
+    const t = setup();
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
 
-    const oldRagEntryId = mockEntryId("old-rag-entry-id");
-    const newRagEntryId = mockEntryId("new-rag-entry-id");
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs(overrides));
 
-    // First, create an existing blog post
+    expect(result.created).toBe(true);
+    expect(result.email).toMatchObject({ kind: "none", reason: expect.stringContaining(reason) });
+    expect(await getPost(t)).not.toBeNull();
+    expect(await getCampaigns(t)).toEqual([]);
+  });
+
+  test("never emails from a non-production deployment", async () => {
+    const t = setup();
+    process.env.CONVEX_CLOUD_URL = "https://wooden-warbler-780.convex.cloud";
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
+
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
+
+    expect(result.email).toMatchObject({
+      kind: "none",
+      reason: expect.stringContaining("is not production"),
+    });
+    expect(await getCampaigns(t)).toEqual([]);
+  });
+
+  test("MAILCHIMP_ALLOW_NON_PRODUCTION_SEND=true allows other deployments to send", async () => {
+    const t = setup();
+    process.env.CONVEX_CLOUD_URL = "https://wooden-warbler-780.convex.cloud";
+    process.env.MAILCHIMP_ALLOW_NON_PRODUCTION_SEND = "true";
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
+
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
+    expect(result.email).toEqual({ kind: "queued" });
+  });
+
+  test("records a skipped campaign when MAILCHIMP_API_KEY is missing", async () => {
+    const t = setup();
+    delete process.env.MAILCHIMP_API_KEY;
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
+
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
+
+    expect(result.email).toEqual({ kind: "skipped", reason: "MAILCHIMP_API_KEY is not set" });
+    const [campaign] = await getCampaigns(t);
+    expect(campaign).toMatchObject({
+      status: "skipped",
+      error: expect.stringContaining("API_KEY"),
+    });
+    expect(campaign.scheduledFunctionId).toBeUndefined();
+  });
+
+  test("caps how many emails one upload run can queue", async () => {
+    const t = setup();
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
+
+    const results = [];
+    for (let i = 0; i < POST_EMAIL_MAX_CAMPAIGNS_PER_UPLOAD_RUN + 2; i++)
+      results.push(
+        await t.action(api.blogPosts.admin.actions.upsert, upsertArgs({ slug: `post-${i}` })),
+      );
+
+    expect(results.map((r) => r.email.kind)).toEqual([
+      ...Array(POST_EMAIL_MAX_CAMPAIGNS_PER_UPLOAD_RUN).fill("queued"),
+      "skipped",
+      "skipped",
+    ]);
+    const campaigns = await getCampaigns(t);
+    expect(campaigns.filter((c) => c.status === "skipped")).toHaveLength(2);
+    expect(campaigns.filter((c) => c.status === "skipped")[0].error).toContain("bulk import");
+
+    // A new run starts a fresh count
+    const next = await t.action(
+      api.blogPosts.admin.actions.upsert,
+      upsertArgs({ slug: "next-run-post", uploadRunId: "run-2" }),
+    );
+    expect(next.email).toEqual({ kind: "queued" });
+  });
+
+  test("does not email again for a slug that already had a campaign", async () => {
+    const t = setup();
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("entry") });
+    await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
+
+    // e.g. the post was pruned and later re-added
     await t.run(async (ctx) => {
-      await ctx.db.insert("blogPosts", {
-        slug: mockSlug,
+      const post = await ctx.db.query("blogPosts").first();
+      await ctx.db.delete("blogPosts", post!._id);
+    });
+
+    const result = await t.action(
+      api.blogPosts.admin.actions.upsert,
+      upsertArgs({ uploadRunId: "run-2" }),
+    );
+    expect(result.created).toBe(true);
+    expect(result.email).toMatchObject({
+      kind: "none",
+      reason: expect.stringContaining("already"),
+    });
+    expect(await getCampaigns(t)).toHaveLength(1);
+  });
+
+  test("updates title, hash and ragEntryId of an existing post without emailing", async () => {
+    const t = setup();
+    await t.run((ctx) =>
+      ctx.db.insert("blogPosts", {
+        slug: "test-blog-post",
         title: "Old Title",
         hash: "old-hash",
-        ragEntryId: oldRagEntryId,
-      });
+        ragEntryId: mockEntryId("old-rag-entry-id"),
+      }),
+    );
+    ragMock.getEntry.mockResolvedValue({
+      entryId: "old-rag-entry-id",
+      status: "ready",
+      contentHash: "old-hash",
+      title: "Old Title",
     });
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("new-rag-entry-id") });
 
-    mockRagAdd.mockResolvedValue({ entryId: newRagEntryId });
+    const result = await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
 
-    // Execute the action
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: mockContent,
-      slug: mockSlug,
-      title: mockTitle,
-      hash: mockHash,
+    expect(result).toMatchObject({ created: false, email: { kind: "none" } });
+    expect(ragMock.add).toHaveBeenCalledTimes(1);
+    expect(await getPost(t)).toMatchObject({
+      title: "Test Blog Post",
+      hash: "test-content-hash",
+      ragEntryId: "new-rag-entry-id",
     });
-
-    // Verify the blog post was updated
-    const updatedPost = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", mockSlug))
-        .first();
-    });
-
-    expect(updatedPost).toBeDefined();
-    expect(updatedPost).toMatchObject({
-      slug: mockSlug,
-      title: "Old Title", // Title shouldn't change in update
-      hash: "old-hash", // Hash shouldn't change in update
-      ragEntryId: newRagEntryId, // This should be updated
-    });
+    expect(await getCampaigns(t)).toEqual([]);
   });
 
-  test("does not update existing blog post when ragEntryId is the same", async () => {
-    const t = convexTest(schema);
-
-    const sameRagEntryId = mockEntryId("same-rag-entry-id");
-
-    // First, create an existing blog post
-    const originalPost = await t.run(async (ctx) => {
-      return await ctx.db.insert("blogPosts", {
-        slug: mockSlug,
-        title: "Original Title",
-        hash: "original-hash",
-        ragEntryId: sameRagEntryId,
-      });
+  test("skips re-embedding when the RAG entry already has this content and title", async () => {
+    const t = setup();
+    await t.run((ctx) =>
+      ctx.db.insert("blogPosts", {
+        slug: "test-blog-post",
+        title: "Test Blog Post",
+        hash: "stale-hash",
+        ragEntryId: mockEntryId("current-entry"),
+      }),
+    );
+    ragMock.getEntry.mockResolvedValue({
+      entryId: "current-entry",
+      status: "ready",
+      contentHash: "test-content-hash",
+      title: "Test Blog Post",
     });
 
-    mockRagAdd.mockResolvedValue({ entryId: sameRagEntryId });
+    await t.action(api.blogPosts.admin.actions.upsert, upsertArgs());
 
-    // Execute the action
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: mockContent,
-      slug: mockSlug,
-      title: mockTitle,
-      hash: mockHash,
-    });
-
-    // Verify the blog post was not updated (same ragEntryId)
-    const unchangedPost = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", mockSlug))
-        .first();
-    });
-
-    expect(unchangedPost).toBeDefined();
-    expect(unchangedPost).toMatchObject({
-      _id: originalPost,
-      slug: mockSlug,
-      title: "Original Title", // Should remain unchanged
-      hash: "original-hash", // Should remain unchanged
-      ragEntryId: sameRagEntryId,
-    });
-  });
-
-  test("handles multiple blog posts with different slugs", async () => {
-    const t = convexTest(schema);
-
-    // Create first blog post
-    const firstEntryId = mockEntryId("first-entry-id");
-    mockRagAdd.mockResolvedValue({ entryId: firstEntryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: "First post content",
-      slug: "first-post",
-      title: "First Post",
-      hash: "first-hash",
-    });
-
-    // Create second blog post
-    const secondEntryId = mockEntryId("second-entry-id");
-    mockRagAdd.mockResolvedValue({ entryId: secondEntryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: "Second post content",
-      slug: "second-post",
-      title: "Second Post",
-      hash: "second-hash",
-    });
-
-    // Verify both posts exist in database
-    const allPosts = await t.run(async (ctx) => {
-      return await ctx.db.query("blogPosts").collect();
-    });
-
-    expect(allPosts).toHaveLength(2);
-
-    const firstPost = allPosts.find((p) => p.slug === "first-post");
-    const secondPost = allPosts.find((p) => p.slug === "second-post");
-
-    expect(firstPost).toMatchObject({
-      slug: "first-post",
-      title: "First Post",
-      hash: "first-hash",
-      ragEntryId: firstEntryId,
-    });
-
-    expect(secondPost).toMatchObject({
-      slug: "second-post",
-      title: "Second Post",
-      hash: "second-hash",
-      ragEntryId: secondEntryId,
+    expect(ragMock.add).not.toHaveBeenCalled();
+    expect(await getPost(t)).toMatchObject({
+      hash: "test-content-hash",
+      ragEntryId: "current-entry",
     });
   });
 
   test("validates admin token", async () => {
-    const t = convexTest(schema);
-
-    process.env.BLOG_POST_ADMIN_TOKEN = "correct-token";
-
-    await expect(async () => {
-      await t.action(api.blogPosts.admin.actions.upsert, {
-        token: "invalid-token",
-        content: mockContent,
-        slug: mockSlug,
-        title: mockTitle,
-        hash: mockHash,
-      });
-    }).rejects.toThrow("Invalid token does not match env var BLOG_POST_ADMIN_TOKEN");
+    const t = setup();
+    await expect(
+      t.action(api.blogPosts.admin.actions.upsert, { ...upsertArgs(), token: "invalid-token" }),
+    ).rejects.toThrow("Invalid token does not match env var BLOG_POST_ADMIN_TOKEN");
   });
 
-  test("handles RAG service errors gracefully", async () => {
-    const t = convexTest(schema);
+  test("creates nothing when RAG fails", async () => {
+    const t = setup();
+    ragMock.add.mockRejectedValue(new Error("RAG service unavailable"));
 
-    // Mock RAG to throw an error
-    mockRagAdd.mockRejectedValue(new Error("RAG service unavailable"));
-
-    await expect(async () => {
-      await t.action(api.blogPosts.admin.actions.upsert, {
-        token: mockToken,
-        content: mockContent,
-        slug: mockSlug,
-        title: mockTitle,
-        hash: mockHash,
-      });
-    }).rejects.toThrow("RAG service unavailable");
-
-    // Verify no blog post was created
-    const posts = await t.run(async (ctx) => {
-      return await ctx.db.query("blogPosts").collect();
-    });
-
-    expect(posts).toHaveLength(0);
+    await expect(t.action(api.blogPosts.admin.actions.upsert, upsertArgs())).rejects.toThrow(
+      "RAG service unavailable",
+    );
+    expect(await t.run((ctx) => ctx.db.query("blogPosts").collect())).toHaveLength(0);
+    expect(await getCampaigns(t)).toEqual([]);
   });
 
   test("handles special characters in content and title", async () => {
-    const t = convexTest(schema);
+    const t = setup();
+    const specialTitle = "Title with émojis 🚀, $& and <b>tags</b>";
+    ragMock.add.mockResolvedValue({ entryId: mockEntryId("special") });
 
-    const specialContent = "Content with special chars: @#$%^&*(){}[]|\\:;\"'<>,.?/~`";
-    const specialTitle = "Title with émojis 🚀 and ñ characters";
-    const specialSlug = "special-chars-post";
-    const entryId = mockEntryId("special-entry-id");
+    await t.action(
+      api.blogPosts.admin.actions.upsert,
+      upsertArgs({ slug: "special-chars-post", title: specialTitle }),
+    );
 
-    mockRagAdd.mockResolvedValue({ entryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: specialContent,
-      slug: specialSlug,
-      title: specialTitle,
-      hash: mockHash,
-    });
-
-    const post = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", specialSlug))
-        .first();
-    });
-
-    expect(post).toMatchObject({
-      slug: specialSlug,
-      title: specialTitle,
-      hash: mockHash,
-      ragEntryId: entryId,
-    });
-
-    // Verify RAG was called with special characters
-    expect(mockRagAdd).toHaveBeenCalledWith(expect.anything(), {
-      namespace: "blog_posts",
-      text: specialContent,
-      key: specialSlug,
-      title: specialTitle,
-      contentHash: mockHash,
-    });
-  });
-
-  test("handles large content", async () => {
-    const t = convexTest(schema);
-
-    const largeContent = "Lorem ipsum ".repeat(1000); // ~11KB content
-    const entryId = mockEntryId("large-content-entry-id");
-
-    mockRagAdd.mockResolvedValue({ entryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: largeContent,
-      slug: "large-content-post",
-      title: "Large Content Post",
-      hash: "large-content-hash",
-    });
-
-    const post = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", "large-content-post"))
-        .first();
-    });
-
-    expect(post).toBeDefined();
-    expect(post?.ragEntryId).toBe(entryId);
-  });
-
-  test("end-to-end: create, update, and verify database state", async () => {
-    const t = convexTest(schema);
-
-    // Step 1: Create initial blog post
-    const initialEntryId = mockEntryId("initial-entry-id");
-    mockRagAdd.mockResolvedValue({ entryId: initialEntryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: "Initial content",
-      slug: "e2e-test-post",
-      title: "E2E Test Post",
-      hash: "initial-hash",
-    });
-
-    // Verify initial creation
-    let post = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", "e2e-test-post"))
-        .first();
-    });
-
-    expect(post).toMatchObject({
-      slug: "e2e-test-post",
-      title: "E2E Test Post",
-      hash: "initial-hash",
-      ragEntryId: initialEntryId,
-    });
-
-    // Step 2: Update with new content (different ragEntryId)
-    const updatedEntryId = mockEntryId("updated-entry-id");
-    mockRagAdd.mockResolvedValue({ entryId: updatedEntryId });
-
-    await t.action(api.blogPosts.admin.actions.upsert, {
-      token: mockToken,
-      content: "Updated content",
-      slug: "e2e-test-post",
-      title: "Updated E2E Test Post",
-      hash: "updated-hash",
-    });
-
-    // Verify update
-    post = await t.run(async (ctx) => {
-      return await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", "e2e-test-post"))
-        .first();
-    });
-
-    expect(post).toMatchObject({
-      slug: "e2e-test-post",
-      title: "E2E Test Post", // Title should remain from original
-      hash: "initial-hash", // Hash should remain from original
-      ragEntryId: updatedEntryId, // This should be updated
-    });
-
-    // Step 3: Verify only one post exists (no duplicates)
-    const allPosts = await t.run(async (ctx) => {
-      return await ctx.db.query("blogPosts").collect();
-    });
-
-    expect(allPosts).toHaveLength(1);
-    expect(allPosts[0].slug).toBe("e2e-test-post");
+    expect(await getPost(t, "special-chars-post")).toMatchObject({ title: specialTitle });
+    const [campaign] = await getCampaigns(t);
+    expect(campaign.title).toBe(specialTitle);
   });
 });

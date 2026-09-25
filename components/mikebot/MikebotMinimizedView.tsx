@@ -1,4 +1,4 @@
-import { Grid, Vertical } from "../../components/utils/gls";
+import { Vertical } from "../../components/utils/gls";
 import * as React from "react";
 import { style } from "typestyle";
 import { floatAnimation } from "../animations";
@@ -6,6 +6,8 @@ import { AvatarSpeechBubble } from "./AvatarSpeechBubble";
 
 interface Props {
   onOpen: () => void;
+  /** Called when the visitor looks likely to open Mikebot, to preload the widget. */
+  onPrefetch?: () => void;
 }
 
 const cardStyle = style({
@@ -18,7 +20,7 @@ const cardStyle = style({
   pointerEvents: "initial",
 });
 
-export const MikebotMinimizedView: React.FC<Props> = ({ onOpen }) => {
+export const MikebotMinimizedView: React.FC<Props> = ({ onOpen, onPrefetch }) => {
   const [shouldShow, setShouldShow] = React.useState(true);
   const isPostsPage = window.location.pathname.includes("/posts");
   const lastScrollY = React.useRef(0);
@@ -48,6 +50,17 @@ export const MikebotMinimizedView: React.FC<Props> = ({ onOpen }) => {
     <Vertical
       className={cardStyle}
       onClick={onOpen}
+      onMouseEnter={onPrefetch}
+      onTouchStart={onPrefetch}
+      onFocus={onPrefetch}
+      onKeyDown={(e: React.KeyboardEvent) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        onOpen();
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Chat with Mikebot"
       style={{
         opacity: shouldShow ? 1 : 0,
         transition: "all 0.3s linear",

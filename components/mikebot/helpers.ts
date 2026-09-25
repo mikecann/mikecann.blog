@@ -3,24 +3,12 @@ import { useQueries } from "convex/react";
 
 export const useQueryWithStatus = makeUseQueryWithStatus(useQueries);
 
+/** The JSON shape the server stores for a visitor's message (see createUserPrompt). */
 export type UserMessageJSON = {
   context: {
     currentUrl: string;
   };
   message: string;
-};
-
-export const createUserMessageJSON = (args: { message: string; currentUrl: string }): string => {
-  return JSON.stringify(
-    {
-      context: {
-        currentUrl: args.currentUrl,
-      },
-      message: args.message,
-    },
-    null,
-    2,
-  );
 };
 
 export const parseUserMessageJSON = (message: string): UserMessageJSON => {
