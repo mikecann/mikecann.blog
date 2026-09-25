@@ -8,10 +8,7 @@ import { SearchModal } from "../searchModal/SearchModal";
 import { useState } from "react";
 import { Background } from "./Background";
 import { SocialIcons } from "./SocialIcons";
-import Link from "next/link";
-import { onOpenMikebot } from "../mikebot/signals";
-import { AvatarSpeechBubble } from "../mikebot/AvatarSpeechBubble";
-import { floatAnimation } from "../animations";
+import { AvatarButton } from "./AvatarButton";
 import { Grid, Horizontal } from "../utils/gls";
 import { VerticalSpacer } from "gls";
 
@@ -23,26 +20,7 @@ export const DesktopSidebar: React.FC<Props> = ({}) => {
   return (
     <>
       <Background>
-        <div
-          onClick={() => onOpenMikebot.dispatch("")}
-          style={{
-            cursor: "pointer",
-            position: "relative",
-            animation: `${floatAnimation()} 6s ease-in-out infinite`,
-          }}
-        >
-          <img
-            alt={`profile picture of me mike cann`}
-            style={{
-              borderRadius: "50%",
-              boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
-            }}
-            width={125}
-            height={125}
-            src="/images/me.webp"
-          />
-          <AvatarSpeechBubble style={{ fontSize: "3em" }} />
-        </div>
+        <AvatarButton size={125} bubbleProps={{ style: { fontSize: "3em" } }} />
         <VerticalSpacer space={20} />
         <div style={{ fontSize: "1.8em", fontWeight: "bold" }}>Mike Cann</div>
         <VerticalSpacer space={30} />
@@ -52,7 +30,15 @@ export const DesktopSidebar: React.FC<Props> = ({}) => {
           <SocialIcons />
         </Horizontal>
         <VerticalSpacer space={30} />
-        <Grid width={300} justify="center" cols={2} colSpan={2} spacing={[30, 40]}>
+        <Grid
+          tag="nav"
+          aria-label="Main"
+          width={300}
+          justify="center"
+          cols={2}
+          colSpan={2}
+          spacing={[30, 40]}
+        >
           <PageButton icon={<FaHome />} label="Home" href="/" />
           <PageButton icon={<FaTags />} label="Tags" href="/tags" />
           <PageButton icon={<HiArchive />} label="Archive" href="/years" />

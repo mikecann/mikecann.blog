@@ -9,22 +9,22 @@ interface Props {}
 export const SocialIcons: React.FC<Props> = ({}) => {
   return (
     <>
-      <SocialIcon href="https://github.com/mikecann">
+      <SocialIcon href="https://github.com/mikecann" label="GitHub">
         <AiOutlineGithub />
       </SocialIcon>
-      <SocialIcon href="https://stackoverflow.com/users/521097/mikeysee">
+      <SocialIcon href="https://stackoverflow.com/users/521097/mikeysee" label="Stack Overflow">
         <RiStackOverflowLine />
       </SocialIcon>
-      <SocialIcon href="https://twitter.com/mikeysee">
+      <SocialIcon href="https://twitter.com/mikeysee" label="Twitter">
         <AiOutlineTwitter />
       </SocialIcon>
-      <SocialIcon href="https://facebook.com/mikeysee">
+      <SocialIcon href="https://facebook.com/mikeysee" label="Facebook">
         <AiFillFacebook />
       </SocialIcon>
-      <SocialIcon href="https://www.linkedin.com/in/mikecann/">
+      <SocialIcon href="https://www.linkedin.com/in/mikecann/" label="LinkedIn">
         <AiFillLinkedin />
       </SocialIcon>
-      <SocialIcon href="mailto:mike.cann@gmail.com">
+      <SocialIcon href="mailto:mike.cann@gmail.com" label="Email Mike">
         <MdEmail />
       </SocialIcon>
     </>
