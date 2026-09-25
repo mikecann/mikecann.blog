@@ -62,11 +62,13 @@ const checkOldUrls = (posts: PostWithContent[]) => {
   for (const post of posts) {
     const { oldUrl } = post.meta;
     if (oldUrl === undefined) continue;
-    if (!oldUrl.startsWith("/")) errors.push(`${at(post.slug)}: oldUrl must start with "/": ${oldUrl}`);
+    if (!oldUrl.startsWith("/"))
+      errors.push(`${at(post.slug)}: oldUrl must start with "/": ${oldUrl}`);
     slugsByOldUrl.set(oldUrl, [...(slugsByOldUrl.get(oldUrl) ?? []), post.slug]);
   }
   for (const [oldUrl, slugs] of slugsByOldUrl)
-    if (slugs.length > 1) errors.push(`oldUrl ${oldUrl} is used by several posts: ${slugs.join(", ")}`);
+    if (slugs.length > 1)
+      errors.push(`oldUrl ${oldUrl} is used by several posts: ${slugs.join(", ")}`);
 };
 
 const checkImageRefs = (post: PostWithContent) => {
@@ -92,7 +94,8 @@ const checkImageFiles = () => {
     const expected = getExpectedImageFormat(file);
     if (!expected) continue;
     const actual = detectImageFormatOfFile(file);
-    if (!actual) errors.push(`${relative(process.cwd(), file)}: has an image extension but isn't an image`);
+    if (!actual)
+      errors.push(`${relative(process.cwd(), file)}: has an image extension but isn't an image`);
     else if (actual != expected) mismatched++;
   }
   // Browsers sniff the real format, so these still render; they're just misleadingly named.

@@ -36,6 +36,7 @@ bun run auditPosts --local-only   # skip the HTTP checks (a few seconds, offline
 Links and images are extracted by parsing each post with the same markdown parser as the site (`scripts/lib/markdown.ts`), and local paths are resolved the way the browser resolves them (`scripts/lib/postAssets.ts`).
 
 **What it checks:**
+
 - Dead external links (HTTP 4xx/5xx, unreachable domains, SSL errors)
 - Broken local images (file doesn't exist on disk)
 - Image syntax that renders as literal text (e.g. unescaped spaces in the path)
@@ -47,10 +48,12 @@ Links and images are extracted by parsing each post with the same markdown parse
 - Internal links to non-existent posts
 
 **Output:**
+
 - `scripts/audit-report.json` - structured machine-readable report
 - `scripts/audit-report.md` - human-readable markdown report
 
 **Notes:**
+
 - Takes around 2-3 minutes to run (checks around 3500 unique external URLs with concurrency 30)
 - Uses a URL cache to avoid rechecking duplicates
 - Classifies known bot-blocking domains (LinkedIn, Facebook, Medium, etc.) as skipped
@@ -65,6 +68,7 @@ bun run ./scripts/fixPosts.ts
 ```
 
 **What it fixes:**
+
 - Domain migrations (e.g. `aboveunder.com` to `aboveunder.com.au`)
 - Protocol-relative URLs (`//domain.com` to `https://domain.com`)
 - Specific broken image paths (double extensions, wrong paths)
@@ -73,11 +77,11 @@ bun run ./scripts/fixPosts.ts
 - Downloads missing assets from CloudFront when needed
 
 **Output:**
+
 - `scripts/fix-log.json` - detailed log of every change made (post slug, category, old text, new text)
 
 **Adding new fixes:**
 To add a new fix category, add a new function in the script and call it from the main loop. For post-specific fixes, add a case to the `fixSpecificPosts` switch statement.
-
 
 ## Audit and fix workflow
 
@@ -89,8 +93,10 @@ When working through audit issues:
 4. **Re-run the audit** after fixes. The report shrinks because fixed issues no longer appear. Repeat until the list is empty or only items needing your input remain.
 
 **Rules for agents:**
+
 - If you need input from the user on how to fix something (e.g. replace dead link with Wayback vs remove), stop and ask. Do not guess.
 - You MUST verify your fix works by testing it yourself (e.g. load the post in the browser, click the link, confirm the image loads) before declaring it fixed.
+
 ## Known Remaining Issues
 
 As of Feb 2026, the blog has been comprehensively cleaned up. The audit script (`scripts/auditPosts.ts`) should show **zero errors** when run. Any errors that appear are new and should be fixed.
@@ -133,6 +139,7 @@ All of them are also `package.json` scripts (`bun run <name>`); see `README.md`.
 - `scripts/uploadPostsToConvex.ts` - upserts changed posts into Convex; creating a new post schedules the subscriber email, so it runs last in production deploys
 
 <!-- convex-ai-start -->
+
 This project uses [Convex](https://convex.dev) as its backend.
 
 When working on Convex code, **always read `convex/_generated/ai/guidelines.md` first** for important guidelines on how to correctly use Convex APIs and patterns. The file contains rules that override what you may have learned about Convex from training data.
