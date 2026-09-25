@@ -4,7 +4,7 @@ Context and instructions for AI agents working on this codebase.
 
 ## Project Overview
 
-This is a personal blog (mikecann.blog) built with Next.js 16, React 19, and Convex. It contains 625+ markdown posts spanning 2004-2025, stored in `public/posts/<slug>/post.md` with YAML frontmatter.
+This is a personal blog (mikecann.blog) built with Next.js 16, React 19, and Convex. It contains 630+ markdown posts spanning 2003 to today, stored in `public/posts/<slug>/post.md` with YAML frontmatter. See `README.md` for setup, the build/deploy pipeline, scripts and environment variables.
 
 ## Blog Post Structure
 
@@ -13,6 +13,10 @@ This is a personal blog (mikecann.blog) built with Next.js 16, React 19, and Con
 - Frontmatter fields: `title`, `date`, `tags`, `coverImage`, and optional `oldUrl`, `status`, `canonical`
 - Posts use standard markdown with raw HTML allowed (via `rehype-raw`)
 - Common embedded content: YouTube iframes, Mixcloud iframes, and legacy Flash/SWF embeds
+- Posts are parsed by `react-markdown` (remark + `remark-gfm`). An image path containing spaces must be wrapped in `<...>` or it renders as literal text, so name new files without spaces
+- Many old posts have CRLF line endings and a UTF-8 BOM. Don't normalize or mass-reformat posts: `uploadPostsToConvex` hashes the content, so every changed post is re-embedded (prettier ignores `public/` for this reason)
+- `public/thumbs/<slug>.webp` is a generated 640px thumbnail of each cover image (`bun run generateThumbnails`, which also runs in every build). Commit new thumbnails along with new posts
+- Run `bun run validatePosts` after changing posts. It's fast and offline, runs in CI, and checks frontmatter, cover images, unique `oldUrl`s, that every rendered image exists locally, and that no file with an image extension isn't an image
 
 ## WordPress Legacy
 
@@ -25,12 +29,16 @@ The blog was migrated from WordPress. Many older posts reference images via `htt
 Comprehensive blog post auditor. Scans all posts for broken links, missing images, dead embeds, and other issues.
 
 ```bash
-bun run ./scripts/auditPosts.ts
+bun run auditPosts                # full audit, including every external URL
+bun run auditPosts --local-only   # skip the HTTP checks (a few seconds, offline)
 ```
+
+Links and images are extracted by parsing each post with the same markdown parser as the site (`scripts/lib/markdown.ts`), and local paths are resolved the way the browser resolves them (`scripts/lib/postAssets.ts`).
 
 **What it checks:**
 - Dead external links (HTTP 4xx/5xx, unreachable domains, SSL errors)
 - Broken local images (file doesn't exist on disk)
+- Image syntax that renders as literal text (e.g. unescaped spaces in the path)
 - Broken external images
 - Flash/SWF embeds (no longer supported in browsers)
 - Defunct service embeds (Picasa, Google Maps Engine, etc.)
@@ -75,7 +83,7 @@ To add a new fix category, add a new function in the script and call it from the
 
 When working through audit issues:
 
-1. **Run the audit** to get the current list: `bun run ./scripts/auditPosts.ts`. The list of issues is in `scripts/audit-report.json`.
+1. **Run the audit** to get the current list: `bun run auditPosts`. The list of issues is in `scripts/audit-report.json`.
 2. **Fix issues** (by hand or by running `bun run ./scripts/fixPosts.ts` for automated fixes).
 3. **Verify each fix.** You MUST test that the fix works (e.g. open the post on the site, check the link or image) before declaring it done. Do not mark an issue fixed without verifying.
 4. **Re-run the audit** after fixes. The report shrinks because fixed issues no longer appear. Repeat until the list is empty or only items needing your input remain.
@@ -113,12 +121,16 @@ As of Feb 2026, the blog has been comprehensively cleaned up. The audit script (
 
 ## Other Scripts
 
-- `scripts/generateRSS.ts` - generates RSS feed
-- `scripts/uploadPostsToConvex.ts` - uploads post metadata to Convex
-- `scripts/populateAlgolia.ts` - populates Algolia search index
-- `scripts/normalizePosts.ts` - one-time migration script for normalizing post metadata
-- `scripts/replaceUrlsInPosts.ts` - URL replacement utility
-- `scripts/extractAndInsertOldUrls.ts` - extracts old WordPress URLs for redirect mapping
+All of them are also `package.json` scripts (`bun run <name>`); see `README.md`.
+
+- `scripts/validatePosts.ts` - fast offline content checks, run in CI
+- `scripts/generateRSS.ts` - writes `public/rss.xml` (gitignored, generated in every build)
+- `scripts/generateSitemap.ts` - writes `public/sitemap.xml` (gitignored, generated in every build)
+- `scripts/generateThumbnails.ts` - writes `public/thumbs/<slug>.webp` for new or changed cover images
+- `scripts/optimizeImages.ts` - re-encodes images in place (`bun run optimizeImages public/posts/<slug>`)
+- `scripts/fixFlashPlayableLinks.ts` - normalizes old Flash links so they play in the Ruffle modal (`--dry-run`)
+- `scripts/populateAlgolia.ts` - replaces the Algolia search index (production deploys only; `--dry-run`)
+- `scripts/uploadPostsToConvex.ts` - upserts changed posts into Convex; creating a new post schedules the subscriber email, so it runs last in production deploys
 
 <!-- convex-ai-start -->
 This project uses [Convex](https://convex.dev) as its backend.
