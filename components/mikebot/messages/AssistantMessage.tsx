@@ -22,12 +22,15 @@ interface Props {
 // };
 
 export const AssistantMessage: React.FC<Props> = ({ message }) => {
-  const hasToolParts = message.parts?.some((part) => part.type === "tool-call" || part.type === "tool-result");
-  if (hasToolParts) return <ToolMessage message={message} />;
-
+  // Hooks must run on every render, before any early return.
   const [visibleText] = useSmoothText(message.text ?? "", {
     startStreaming: message.status === "pending",
   });
+
+  const hasToolParts = message.parts?.some(
+    (part) => part.type === "tool-call" || part.type === "tool-result",
+  );
+  if (hasToolParts) return <ToolMessage message={message} />;
 
   // if (
   //   typeof message.message.content == "object" &&
