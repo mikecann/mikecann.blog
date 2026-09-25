@@ -58,7 +58,7 @@ In the end I decided to buy not one but two computers.
 
 Firstly the Pine Rock64:
 
-[![](./rock64.jpg)](./rock69.jpg)
+[![](./rock64.jpg)](./rock64.jpg)
 
 This is a cheap ARM powered board the size of a credit card that according to reviews is significantly more powerful and more memory for the price than the Raspberry Pi 3.
 

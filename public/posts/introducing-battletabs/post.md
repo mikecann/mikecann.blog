@@ -76,7 +76,7 @@ Scoring is pretty simple for now with a point ranking based on the number of gam
 
 Development was quite an involved process as it often is with games. We first had to decide how we wanted to present the game, should it be 3D, topdown, isometric or something more exotic?
 
-![](./playing areas.png)
+![](./playing-areas.png)
 
 We ended up with a simple isometric layout. We felt like it gave us the right combination of aesthetic and simplicity on art requirements as you can simply horizontal flip the sprite to make it look like its going in a different direction.
 

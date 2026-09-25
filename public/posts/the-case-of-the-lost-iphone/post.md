@@ -21,7 +21,7 @@ I was contacted to give an interview by Dariya Salmin of ABC's South West Radio 
 
 A few weekends ago it was an unusually hot spring day here in Western Australia and we were on a weekend break at the seaside town of Busselton. As it was so warm I decided to head down the beach for an early-season swim under the famous Jetty.
 
-![](./The Sheds of the Jetty Afar.jpg)
+![](./the-sheds-of-the-jetty-afar.jpg)
 
 I had a fantastic swim, there wasn't anyone else down there and the water was full of fish hiding under the jetty.
 

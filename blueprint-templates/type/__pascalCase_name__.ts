@@ -1,17 +1,7 @@
-import * as t from "io-ts";
+import { z } from "zod";
 
-export const {{pascalCase name}} = t.intersection([
-  t.strict({
+export const {{pascalCase name}} = z.object({
 
-  }), 
-  t.partial({
-    
-  })
-]);
+});
 
-export interface {{pascalCase name}} extends t.TypeOf<typeof {{pascalCase name}}> {}
-
-export const produce{{pascalCase name}} = (overrides?: Partial<{{pascalCase name}}> & {}): {{pascalCase name}} =>
-{{pascalCase name}}.encode({
-    ...overrides,
-  });
+export type {{pascalCase name}} = z.infer<typeof {{pascalCase name}}>;

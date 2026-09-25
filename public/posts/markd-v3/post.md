@@ -22,7 +22,7 @@ So we teamed up with an old colleague of mine [Alan Macfarlane](https://www.melb
 
 Alan went away and came up with a bunch of awesome ideas for characters which we then used as the basis for many of the pages.
 
-![](./different characters.png)
+![](./different-characters.png)
 
 In the end we went with a very simple and stylized version that we thought suits the brand we want, is easily extensible and hopefully easy to animate in the future should we wish to.
 
