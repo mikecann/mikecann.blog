@@ -34,6 +34,7 @@ export const generateSitemap = (unsortedPosts: Post[]): string => {
     { path: "/", lastmod: latestDate(posts) },
     { path: "/about" },
     { path: "/stash" },
+    { path: "/subscribe" },
     ...posts.map((post) => ({ path: `/posts/${post.slug}`, lastmod: new Date(post.meta.date) })),
     { path: "/tags", lastmod: latestDate(posts) },
     ...byTag.map(([tag, tagPosts]) => ({

@@ -85,6 +85,15 @@ With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbna
 
 `--strip` only deletes local files on Vercel build machines, and only when `NEXT_PUBLIC_ASSET_BASE_URL` is set, so running it locally is safe.
 
+## Newsletter signups
+
+New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign up through the site's own forms, which call the Convex HTTP action `POST /newsletter/subscribe` (`convex/http.ts`); nothing from Mailchimp is loaded on the page.
+
+- The endpoint adds the address as `pending`, so Mailchimp sends its double opt-in confirmation email, and tags it with the form it came from (`blog-post-footer`, `blog-post-prompt`, `blog-subscribe-page`, `blog-about`). Filter by tag in Mailchimp to see which forms work.
+- It's rate limited per address and overall (each signup triggers a confirmation email), has a honeypot field for bots, and only the production deployment adds people to the real list.
+- The forms: the end of every post (`#subscribe`), a dismissible slide-in on posts once a reader is halfway through (never shown again after signing up, and hidden for 30 days after "No thanks"), the `/subscribe` page (linked from the sidebar) and the About page.
+- Signups, failures and prompt views/dismissals are sent to PostHog as `newsletter_*` events.
+
 ## Scripts
 
 | Script                                  | What it does                                                                                                       |

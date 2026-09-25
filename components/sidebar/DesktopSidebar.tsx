@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PageButton } from "./PageButton";
-import { FaHome, FaTags, FaRssSquare } from "react-icons/fa";
+import { FaHome, FaTags, FaRssSquare, FaEnvelope } from "react-icons/fa";
 import { HiArchive } from "react-icons/hi";
 import { IoMdSearch, IoMdInformationCircle } from "react-icons/io";
 import { PiTreasureChestDuotone } from "react-icons/pi";
@@ -43,6 +43,7 @@ export const DesktopSidebar: React.FC<Props> = ({}) => {
           <PageButton icon={<FaTags />} label="Tags" href="/tags" />
           <PageButton icon={<HiArchive />} label="Archive" href="/years" />
           <PageButton icon={<IoMdInformationCircle />} label="About" href="/about" />
+          <PageButton icon={<FaEnvelope />} label="Subscribe" href="/subscribe" />
           <PageButton icon={<FaRssSquare />} label="RSS" href="/rss.xml" />
           <PageButton icon={<IoMdSearch />} label="Search" onClick={() => setSearchVisible(true)} />
           <PageButton icon={<PiTreasureChestDuotone />} label="Stash" href="/stash" />

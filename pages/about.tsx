@@ -6,6 +6,7 @@ import fs from "fs";
 import { ResponsiveSidebarLayouts } from "../components/layout/ResponsiveSidebarLayouts";
 import Head from "next/head";
 import { Vertical } from "../components/utils/gls";
+import { SubscribeForm } from "../components/newsletter/SubscribeForm";
 
 type Props = {
   content: string;
@@ -28,6 +29,11 @@ const About = ({ content }: Props) => (
       <div className="markdown-content">
         <ReactMarkdown children={content} />
       </div>
+      <h2>Get new posts by email</h2>
+      <p style={{ color: "#5d686f", marginTop: 0 }}>
+        About one post a month. No spam, unsubscribe any time.
+      </p>
+      <SubscribeForm source="about" />
     </Vertical>
   </ResponsiveSidebarLayouts>
 );

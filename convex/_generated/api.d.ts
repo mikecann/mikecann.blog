@@ -16,6 +16,7 @@ import type * as blogPosts_internal_queries from "../blogPosts/internal/queries.
 import type * as blogPosts_lib from "../blogPosts/lib.js";
 import type * as builder from "../builder.js";
 import type * as crons from "../crons.js";
+import type * as http from "../http.js";
 import type * as mailchimp_admin_mutations from "../mailchimp/admin/mutations.js";
 import type * as mailchimp_campaigns from "../mailchimp/campaigns.js";
 import type * as mailchimp_constants from "../mailchimp/constants.js";
@@ -34,6 +35,7 @@ import type * as mikebot_mutations from "../mikebot/mutations.js";
 import type * as mikebot_queries from "../mikebot/queries.js";
 import type * as mikebot_sha256 from "../mikebot/sha256.js";
 import type * as mikebot_shared from "../mikebot/shared.js";
+import type * as newsletter_lib from "../newsletter/lib.js";
 import type * as users from "../users.js";
 
 import type {
@@ -51,6 +53,7 @@ declare const fullApi: ApiFromModules<{
   "blogPosts/lib": typeof blogPosts_lib;
   builder: typeof builder;
   crons: typeof crons;
+  http: typeof http;
   "mailchimp/admin/mutations": typeof mailchimp_admin_mutations;
   "mailchimp/campaigns": typeof mailchimp_campaigns;
   "mailchimp/constants": typeof mailchimp_constants;
@@ -69,6 +72,7 @@ declare const fullApi: ApiFromModules<{
   "mikebot/queries": typeof mikebot_queries;
   "mikebot/sha256": typeof mikebot_sha256;
   "mikebot/shared": typeof mikebot_shared;
+  "newsletter/lib": typeof newsletter_lib;
   users: typeof users;
 }>;
 

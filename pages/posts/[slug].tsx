@@ -15,8 +15,7 @@ import { Horizontal, Vertical } from "../../components/utils/gls";
 import { getPostRootCoverImagePath, getRelativePathForPost } from "../../utils/posts";
 import { TopNavbar } from "../../components/navbar/TopNavbar";
 import Layout from "../../components/layout/Layout";
-import { MailchimpSignupForm } from "../../components/mailchimp/MailchimpSignupForm";
-import { MailchimpSignupPopup } from "../../components/mailchimp/MailchimpSignupPopup";
+import { SubscribeForm } from "../../components/newsletter/SubscribeForm";
 import { PostTags } from "../../components/PostTags";
 import { PostComments } from "../../components/PostComments";
 import { Post, getAllPublishablePosts, getPostBySlug } from "../../scripts/posts";
@@ -30,6 +29,12 @@ import { SITE_URL, absoluteAssetUrl, assetUrl } from "../../utils/assets";
 
 // Syntax highlighting is only downloaded by posts that contain code blocks.
 const CodeBlock = dynamic(() => import("../../components/markdown/CodeBlock"));
+
+// Client-only: whether it shows depends on the reader's scrolling and browser storage.
+const SubscribePrompt = dynamic(
+  () => import("../../components/newsletter/SubscribePrompt").then((m) => m.SubscribePrompt),
+  { ssr: false },
+);
 
 // Only needed once a Flash link is clicked.
 const FlashPlayerModal = dynamic(
@@ -356,10 +361,17 @@ const PostPageContent = ({
               }}
             />
 
-            <div style={{ backgroundColor: `rgba(0,0,0,0.015)`, padding: 10 }}>
-              <h3 style={{ textAlign: "center", color: "#aaa" }}>SUBSCRIBE TO FUTURE POSTS</h3>
-              <MailchimpSignupForm />
+            <div id="subscribe" style={{ backgroundColor: `rgba(0,0,0,0.015)`, padding: 10 }}>
+              <h3 style={{ textAlign: "center", color: "#5d686f", marginBottom: 4 }}>
+                GET NEW POSTS BY EMAIL
+              </h3>
+              <p style={{ textAlign: "center", color: "#5d686f", marginTop: 0, fontSize: 14 }}>
+                About one post a month on AI, coding, games and side projects. No spam, unsubscribe
+                any time.
+              </p>
+              <SubscribeForm source="post-footer" />
             </div>
+            <SubscribePrompt inlineFormId="subscribe" />
 
             <div
               style={{
@@ -371,7 +383,6 @@ const PostPageContent = ({
             />
 
             <div style={{ backgroundColor: `rgba(0,0,0,0.015)`, padding: 10 }}>
-              <MailchimpSignupPopup />
               <h3 style={{ textAlign: "center", color: "#aaa" }}>COMMENT</h3>
               <PostComments />
             </div>

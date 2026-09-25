@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PageButton } from "./PageButton";
-import { FaHome, FaTags, FaRssSquare } from "react-icons/fa";
+import { FaHome, FaTags, FaRssSquare, FaEnvelope } from "react-icons/fa";
 import { HiArchive } from "react-icons/hi";
 import { IoMdSearch, IoMdInformationCircle } from "react-icons/io";
 import { SearchModal } from "../searchModal/SearchModal";
@@ -36,6 +36,7 @@ export const MobileSidebar: React.FC<Props> = ({}) => {
           <PageButton icon={<FaTags />} ariaLabel="Tags" href="/tags" />
           <PageButton icon={<HiArchive />} ariaLabel="Archive" href="/years" />
           <PageButton icon={<IoMdInformationCircle />} ariaLabel="About" href="/about" />
+          <PageButton icon={<FaEnvelope />} ariaLabel="Subscribe by email" href="/subscribe" />
           <PageButton icon={<FaRssSquare />} ariaLabel="RSS feed" href="/rss.xml" />
           <PageButton
             icon={<IoMdSearch />}

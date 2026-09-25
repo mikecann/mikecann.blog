@@ -25,9 +25,10 @@ function getMailchimpConfig() {
   return { apiKey, dc, baseUrl: `https://${dc}.api.mailchimp.com/3.0` };
 }
 
-export async function mailchimpFetch(path: string, options: RequestInit = {}) {
+/** Calls the Mailchimp API and returns the raw response, including error responses. */
+export async function mailchimpRequest(path: string, options: RequestInit = {}) {
   const { apiKey, baseUrl } = getMailchimpConfig();
-  const response = await fetch(`${baseUrl}${path}`, {
+  return fetch(`${baseUrl}${path}`, {
     ...options,
     headers: {
       ...options.headers,
@@ -35,6 +36,10 @@ export async function mailchimpFetch(path: string, options: RequestInit = {}) {
       "Content-Type": "application/json",
     },
   });
+}
+
+export async function mailchimpFetch(path: string, options: RequestInit = {}) {
+  const response = await mailchimpRequest(path, options);
   if (!response.ok) {
     const body = await response.text();
     throw new Error(`Mailchimp API error ${response.status}: ${body}`);
