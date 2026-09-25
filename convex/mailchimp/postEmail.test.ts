@@ -1,4 +1,5 @@
 import { convexTest } from "convex-test";
+import { INDEXNOW_KEY } from "../seo/indexNow";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { EntryId } from "@convex-dev/rag";
 import { api, internal } from "../_generated/api";
@@ -11,8 +12,8 @@ import { PRODUCTION_CONVEX_CLOUD_URL } from "./lib";
 const setup = () => convexTest(schema, modules);
 type TestConvex = ReturnType<typeof setup>;
 
-vi.mock("@ai-sdk/openai", () => ({
-  openai: { embedding: () => ({}), responses: () => ({}) },
+vi.mock("@convex-dev/ai-sdk-provider", () => ({
+  convexGateway: Object.assign(() => ({}), { embeddingModel: () => ({}) }),
 }));
 
 const originalEnv = process.env;
@@ -58,6 +59,7 @@ const mockFetch = ({ postStatus = 200, failSend = false } = {}) => {
     calls.push({ url, method, body: init?.body ? String(init.body) : undefined });
 
     if (url === POST_URL) return new Response("<html/>", { status: postStatus });
+    if (url.startsWith("https://api.indexnow.org/")) return new Response(null, { status: 200 });
     if (url.endsWith("/campaigns") && method === "POST")
       return Response.json({ id: "mc-campaign-1" });
     if (url.endsWith("/content") && method === "PUT") return Response.json({});
@@ -97,11 +99,12 @@ describe("sendNewPostCampaign", () => {
 
     expect(calls.map((c) => `${c.method} ${c.url}`)).toEqual([
       `GET ${POST_URL}`,
+      `GET https://api.indexnow.org/indexnow?url=${encodeURIComponent(POST_URL)}&key=${INDEXNOW_KEY}`,
       "POST https://us3.api.mailchimp.com/3.0/campaigns",
       "PUT https://us3.api.mailchimp.com/3.0/campaigns/mc-campaign-1/content",
       "POST https://us3.api.mailchimp.com/3.0/campaigns/mc-campaign-1/actions/send",
     ]);
-    const html = JSON.parse(calls[2].body!).html as string;
+    const html = JSON.parse(calls[3].body!).html as string;
     expect(html).toContain(">My $&amp; &lt;New&gt; Post</a>");
     expect(html).not.toContain("{{POST_TITLE}}");
 

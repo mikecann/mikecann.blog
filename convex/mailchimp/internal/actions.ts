@@ -12,7 +12,9 @@ import {
   MAILCHIMP_LIST_ID,
   MAILCHIMP_FROM_NAME,
   MAILCHIMP_REPLY_TO,
+  getPostUrl,
 } from "../lib";
+import { notifyIndexNow } from "../../seo/indexNow";
 
 export const sendNewPostCampaign = convex
   .action()
@@ -72,6 +74,11 @@ export const sendNewPostCampaign = convex
     }
 
     const { slug, title } = claim;
+
+    // The post is live and this run announces it, so tell search engines too. A retry that resumes
+    // an already created Mailchimp campaign skips this; pinging twice would be harmless anyway.
+    if (!claim.mailchimpCampaignId) await notifyIndexNow(getPostUrl(slug));
+
     console.log(`Creating Mailchimp campaign for new post: "${title}" (${slug})`);
 
     try {

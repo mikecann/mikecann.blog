@@ -36,6 +36,7 @@ import type * as mikebot_queries from "../mikebot/queries.js";
 import type * as mikebot_sha256 from "../mikebot/sha256.js";
 import type * as mikebot_shared from "../mikebot/shared.js";
 import type * as newsletter_lib from "../newsletter/lib.js";
+import type * as seo_indexNow from "../seo/indexNow.js";
 import type * as users from "../users.js";
 
 import type {
@@ -73,6 +74,7 @@ declare const fullApi: ApiFromModules<{
   "mikebot/sha256": typeof mikebot_sha256;
   "mikebot/shared": typeof mikebot_shared;
   "newsletter/lib": typeof newsletter_lib;
+  "seo/indexNow": typeof seo_indexNow;
   users: typeof users;
 }>;
 
