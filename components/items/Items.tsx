@@ -48,7 +48,7 @@ const itemStyle = style(
     },
   },
   media({ minWidth: 0, maxWidth: 500 }, { width: "100%", maxWidth: "100%" }),
-  media({ minWidth: 501 }, { maxWidth: "280px" })
+  media({ minWidth: 501 }, { maxWidth: "280px" }),
 );
 
 export const Items = ({}: Props) => {
@@ -56,7 +56,7 @@ export const Items = ({}: Props) => {
   const { isLoading, loadMore, results, status } = usePaginatedQuery(
     makeFunctionReference<"query">("items:listForMikesBlogPaginated"),
     { statusKind },
-    { initialNumItems: 50 }
+    { initialNumItems: 50 },
   );
 
   const { ref, inView, entry } = useInView({
@@ -90,6 +90,9 @@ export const Items = ({}: Props) => {
                   objectFit: "cover",
                 }}
                 src={item.headerImageUrl ?? defaultHeaderImageUrl}
+                alt=""
+                loading="lazy"
+                decoding="async"
               />
               <Vertical style={{ padding: "0px 10px 10px 10px" }}>
                 <h3
