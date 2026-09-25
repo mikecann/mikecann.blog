@@ -57,11 +57,13 @@ beforeEach(() => {
   vi.useFakeTimers();
   vi.setSystemTime(START);
   delete process.env.MIKEBOT_DAILY_TOKEN_BUDGET;
+  delete process.env.MIKEBOT_DAILY_COST_BUDGET_USD;
 });
 
 afterEach(() => {
   vi.useRealTimers();
   delete process.env.MIKEBOT_DAILY_TOKEN_BUDGET;
+  delete process.env.MIKEBOT_DAILY_COST_BUDGET_USD;
 });
 
 describe("anonymous identity", () => {
@@ -268,6 +270,37 @@ describe("sending messages", () => {
     // The budget resets on the next UTC day
     vi.setSystemTime(START + 24 * 60 * 60 * 1000);
     await send(t, threadId, "a new day");
+  });
+
+  test("refuses messages once the daily cost budget is used up", async () => {
+    const t = setup();
+    const threadId = await createUserWithThread(t);
+    process.env.MIKEBOT_DAILY_COST_BUDGET_USD = "0.5";
+
+    const record = (costUsd?: number) =>
+      t.mutation(internal.mikebot.internal.mutations.recordTokenUsage, {
+        inputTokens: 1000,
+        outputTokens: 100,
+        totalTokens: 1100,
+        costUsd,
+      });
+    await record(0.3);
+    await record(); // a step whose cost wasn't reported
+    await send(t, threadId, "still fine");
+    await finishPendingReplies(t);
+
+    await record(0.2);
+    const usage = await t.run((ctx) => ctx.db.query("mikebotDailyUsage").collect());
+    expect(usage).toHaveLength(1);
+    expect(usage[0].costUsd).toBeCloseTo(0.5);
+    await expectMikebotError(send(t, threadId, "over budget"), "budget_exhausted");
+  });
+
+  test("MIKEBOT_DAILY_COST_BUDGET_USD=0 switches Mikebot off", async () => {
+    const t = setup();
+    const threadId = await createUserWithThread(t);
+    process.env.MIKEBOT_DAILY_COST_BUDGET_USD = "0";
+    await expectMikebotError(send(t, threadId, "hello?"), "budget_exhausted");
   });
 
   test("MIKEBOT_DAILY_TOKEN_BUDGET=0 switches Mikebot off", async () => {

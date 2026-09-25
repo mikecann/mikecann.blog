@@ -5,7 +5,7 @@ import { convex } from "../builder";
 import { MIKEBOT_LIMITS } from "./config";
 import {
   assertNoActivePendingReply,
-  assertWithinDailyTokenBudget,
+  assertWithinDailyBudget,
   clearPendingReplies,
   consumeRateLimit,
   findOwnedThread,
@@ -56,7 +56,7 @@ export const sendMessageToThreadFromUser = convex
     // whole mutation (including rate-limit consumption) is rolled back.
     const now = Date.now();
     await assertNoActivePendingReply(ctx, args.threadId, now);
-    await assertWithinDailyTokenBudget(ctx, now);
+    await assertWithinDailyBudget(ctx, now);
     await consumeRateLimit(ctx, "sendMessagePerUser", user._id);
     await consumeRateLimit(ctx, "sendMessagePerUserPerDay", user._id);
     await consumeRateLimit(ctx, "sendMessageGlobal");

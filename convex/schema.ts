@@ -69,12 +69,14 @@ export default defineSchema({
     promptMessageId: v.string(),
     startedAt: v.number(),
   }).index("by_threadId", ["threadId"]),
-  // Tokens used by Mikebot per UTC day ("YYYY-MM-DD"), for the daily budget.
+  // Tokens and cost used by Mikebot per UTC day ("YYYY-MM-DD"), for the daily budgets.
   mikebotDailyUsage: defineTable({
     day: v.string(),
     inputTokens: v.number(),
     outputTokens: v.number(),
     totalTokens: v.number(),
+    // USD as reported by OpenRouter; absent on rows written before the switch to OpenRouter.
+    costUsd: v.optional(v.number()),
     updatedAt: v.number(),
   }).index("by_day", ["day"]),
   // LEGACY: nothing reads or writes this table any more (it backed the removed

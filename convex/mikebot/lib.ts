@@ -50,15 +50,17 @@ If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
   // Only the most recent messages of the thread are sent as context. No
   // embedding model is configured, so there is no vector search over messages.
   contextOptions: { recentMessages: MIKEBOT_LIMITS.recentMessages },
-  // Record token usage for the daily budget (called once per LLM step).
-  usageHandler: async (ctx, { usage }) => {
+  // Record token usage and cost for the daily budgets (called once per LLM step).
+  usageHandler: async (ctx, { usage, providerMetadata }) => {
     const inputTokens = usage.inputTokens ?? 0;
     const outputTokens = usage.outputTokens ?? 0;
+    const cost = providerMetadata?.openrouter?.usage?.cost;
     try {
       await ctx.runMutation(internal.mikebot.internal.mutations.recordTokenUsage, {
         inputTokens,
         outputTokens,
         totalTokens: usage.totalTokens ?? inputTokens + outputTokens,
+        costUsd: typeof cost == "number" ? cost : undefined,
       });
     } catch (error) {
       // Never fail a reply because usage bookkeeping failed.

@@ -4,6 +4,7 @@ import { components } from "../_generated/api";
 import type { Doc, Id } from "../_generated/dataModel";
 import type { MutationCtx, QueryCtx } from "../_generated/server";
 import {
+  MIKEBOT_DAILY_COST_BUDGET_ENV_VAR,
   MIKEBOT_DAILY_TOKEN_BUDGET_ENV_VAR,
   MIKEBOT_LIMITS,
   type MikebotRateLimitName,
@@ -133,23 +134,27 @@ export const clearPendingReplies = async (
 };
 
 // ---------------------------------------------------------------------------
-// Daily token budget (kill switch)
+// Daily token and cost budgets (kill switches)
 // ---------------------------------------------------------------------------
 
 export const getUtcDayKey = (now: number) => new Date(now).toISOString().slice(0, 10);
 
-export const getDailyTokenBudget = (): number => {
-  const raw = process.env[MIKEBOT_DAILY_TOKEN_BUDGET_ENV_VAR];
-  if (raw === undefined || raw.trim() === "") return MIKEBOT_LIMITS.defaultDailyTokenBudget;
+const readBudgetEnv = (envVar: string, fallback: number): number => {
+  const raw = process.env[envVar];
+  if (raw === undefined || raw.trim() === "") return fallback;
   const parsed = Number(raw);
   if (!Number.isFinite(parsed) || parsed < 0) {
-    console.warn(
-      `Ignoring invalid ${MIKEBOT_DAILY_TOKEN_BUDGET_ENV_VAR}="${raw}", using the default budget`,
-    );
-    return MIKEBOT_LIMITS.defaultDailyTokenBudget;
+    console.warn(`Ignoring invalid ${envVar}="${raw}", using the default budget`);
+    return fallback;
   }
   return parsed;
 };
+
+export const getDailyTokenBudget = () =>
+  readBudgetEnv(MIKEBOT_DAILY_TOKEN_BUDGET_ENV_VAR, MIKEBOT_LIMITS.defaultDailyTokenBudget);
+
+export const getDailyCostBudgetUsd = () =>
+  readBudgetEnv(MIKEBOT_DAILY_COST_BUDGET_ENV_VAR, MIKEBOT_LIMITS.defaultDailyCostBudgetUsd);
 
 export const findDailyUsage = (ctx: QueryCtx, day: string) =>
   ctx.db
@@ -157,9 +162,12 @@ export const findDailyUsage = (ctx: QueryCtx, day: string) =>
     .withIndex("by_day", (q) => q.eq("day", day))
     .unique();
 
-export const assertWithinDailyTokenBudget = async (ctx: QueryCtx, now: number) => {
+export const assertWithinDailyBudget = async (ctx: QueryCtx, now: number) => {
   const usage = await findDailyUsage(ctx, getUtcDayKey(now));
-  if ((usage?.totalTokens ?? 0) >= getDailyTokenBudget())
+  if (
+    (usage?.totalTokens ?? 0) >= getDailyTokenBudget() ||
+    (usage?.costUsd ?? 0) >= getDailyCostBudgetUsd()
+  )
     throw mikebotError(
       "budget_exhausted",
       "Mikebot has used up all of its thinking for today. Please come back tomorrow!",

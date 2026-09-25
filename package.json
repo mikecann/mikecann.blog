@@ -35,6 +35,7 @@
     "@convex-dev/agent": "^0.7.1",
     "@convex-dev/rag": "^0.7.6",
     "@convex-dev/rate-limiter": "^0.4.0",
+    "@openrouter/ai-sdk-provider": "^3.1.0",
     "@vercel/analytics": "^2.0.1",
     "ai": "^7.0.83",
     "algoliasearch": "^5.57.0",

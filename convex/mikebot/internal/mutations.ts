@@ -2,13 +2,14 @@ import { v } from "convex/values";
 import { convex } from "../../builder";
 import { clearPendingReplies, findDailyUsage, getUtcDayKey } from "../guards";
 
-/** Adds one LLM step's token usage to today's (UTC) total for the daily budget. */
+/** Adds one LLM step's token usage and cost to today's (UTC) totals for the daily budgets. */
 export const recordTokenUsage = convex
   .mutation()
   .input({
     inputTokens: v.number(),
     outputTokens: v.number(),
     totalTokens: v.number(),
+    costUsd: v.optional(v.number()),
   })
   .returns(v.null())
   .handler(async (ctx, args) => {
@@ -21,10 +22,16 @@ export const recordTokenUsage = convex
         inputTokens: usage.inputTokens + args.inputTokens,
         outputTokens: usage.outputTokens + args.outputTokens,
         totalTokens: usage.totalTokens + args.totalTokens,
+        costUsd: (usage.costUsd ?? 0) + (args.costUsd ?? 0),
         updatedAt: now,
       });
     } else {
-      await ctx.db.insert("mikebotDailyUsage", { day, ...args, updatedAt: now });
+      await ctx.db.insert("mikebotDailyUsage", {
+        day,
+        ...args,
+        costUsd: args.costUsd ?? 0,
+        updatedAt: now,
+      });
     }
     return null;
   })
