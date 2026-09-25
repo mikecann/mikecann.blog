@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.50",
-    "@artsy/fresnel": "^8.5.0",
     "@convex-dev/agent": "^0.7.1",
     "@convex-dev/rag": "^0.7.6",
     "@convex-dev/rate-limiter": "^0.4.0",

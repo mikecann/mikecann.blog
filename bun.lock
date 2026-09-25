@@ -6,7 +6,6 @@
       "name": "next-mikecann",
       "dependencies": {
         "@ai-sdk/openai": "^4.0.50",
-        "@artsy/fresnel": "^8.5.0",
         "@convex-dev/agent": "^0.7.1",
         "@convex-dev/rag": "^0.7.6",
         "@convex-dev/rate-limiter": "^0.4.0",
@@ -97,8 +96,6 @@
     "@algolia/requester-fetch": ["@algolia/requester-fetch@5.57.0", "", { "dependencies": { "@algolia/client-common": "5.57.0" } }, "sha512-AX3RlOudXMdTwtwUqdAf5hAVLvXfOZZH1FZh6ALDdrhVLT0TtAIe48N6nYcWcTnwoTxK/wDIQqZ19IMjK8zJAA=="],
 
     "@algolia/requester-node-http": ["@algolia/requester-node-http@5.57.0", "", { "dependencies": { "@algolia/client-common": "5.57.0" } }, "sha512-cWZc1dKb7wy9/wPpwMtL1y89gK2G7y2A47Coa7zwf1ydtIeJm4+S+XxoQ2b/ZRiQnrC1YHavLjYUPDCdnT7Khg=="],
-
-    "@artsy/fresnel": ["@artsy/fresnel@8.5.0", "", { "peerDependencies": { "react": ">=18.0.0" } }, "sha512-Rt5NfZEJ8/4fQJVtz2wR4KjQbHVdZr/+0uWPZ+W2OXiHTurhcxVijgBq3xP8e/YtjJ06uuJR7034bKpiNVqMAg=="],
 
     "@babel/runtime": ["@babel/runtime@7.28.4", "", {}, "sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ=="],
 
