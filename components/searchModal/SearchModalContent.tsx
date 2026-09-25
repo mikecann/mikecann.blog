@@ -54,17 +54,10 @@ const SearchModalContent: React.FC<SearchModalProps> = ({ onClose }) => {
     input.focus();
   }, [input]);
 
-  React.useEffect(() => {
-    const onEvent = (e: KeyboardEvent) => {
-      if (e.key == "Escape") onClose();
-    };
-    window.addEventListener("keyup", onEvent);
-    return () => window.removeEventListener("keyup", onEvent);
-  }, [onClose]);
-
   return (
     <Modal
       onClose={onClose}
+      ariaLabel="Search"
       style={{
         maxWidth: 600,
         width: "calc(100% - 50px)",

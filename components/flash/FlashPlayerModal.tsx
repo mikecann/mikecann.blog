@@ -31,7 +31,10 @@ const extractSwfFromWrapperHtml = (html: string): string | null => {
 export const FlashPlayerModal: React.FC<Props> = ({ url, onClose }) => {
   const normalizedUrl = React.useMemo(() => {
     // Some old links point to a project folder, serve index.html explicitly.
-    if (/^\/(?:projects|flash|DumpingGround)\//.test(url) && !/\.[a-z0-9]{2,6}(?:$|[?#])/i.test(url)) {
+    if (
+      /^\/(?:projects|flash|DumpingGround)\//.test(url) &&
+      !/\.[a-z0-9]{2,6}(?:$|[?#])/i.test(url)
+    ) {
       return `${url.replace(/\/+$/, "")}/index.html`;
     }
     return url;
@@ -58,7 +61,10 @@ export const FlashPlayerModal: React.FC<Props> = ({ url, onClose }) => {
         const swfPath = extractSwfFromWrapperHtml(html);
         if (!swfPath) return;
 
-        const absoluteSwfUrl = new URL(swfPath, new URL(normalizedUrl, window.location.origin)).toString();
+        const absoluteSwfUrl = new URL(
+          swfPath,
+          new URL(normalizedUrl, window.location.origin),
+        ).toString();
         const sameOriginSwfUrl = absoluteSwfUrl.replace(window.location.origin, "");
         if (!cancelled) setResolvedUrl(sameOriginSwfUrl);
       } catch {
@@ -76,18 +82,10 @@ export const FlashPlayerModal: React.FC<Props> = ({ url, onClose }) => {
 
   const showSwfObject = isSwfUrl(resolvedUrl);
 
-  React.useEffect(() => {
-    const onKeyUp = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-
-    window.addEventListener("keyup", onKeyUp);
-    return () => window.removeEventListener("keyup", onKeyUp);
-  }, [onClose]);
-
   return (
     <Modal
       onClose={onClose}
+      ariaLabel="Flash player"
       style={{
         width: "min(1200px, calc(100vw - 40px))",
         height: "min(780px, calc(100vh - 40px))",
@@ -96,7 +94,10 @@ export const FlashPlayerModal: React.FC<Props> = ({ url, onClose }) => {
         overflow: "hidden",
       }}
     >
-      <CloseButton style={{ position: "absolute", top: 8, right: 8, zIndex: 2 }} onClick={onClose} />
+      <CloseButton
+        style={{ position: "absolute", top: 8, right: 8, zIndex: 2 }}
+        onClick={onClose}
+      />
       <div style={{ height: "100%", width: "100%", backgroundColor: "#111" }}>
         {isResolving ? (
           <div
@@ -132,7 +133,12 @@ export const FlashPlayerModal: React.FC<Props> = ({ url, onClose }) => {
           <iframe
             src={resolvedUrl}
             title="Flash content"
-            style={{ border: 0, width: "100%", height: "100%", display: isResolving ? "none" : "block" }}
+            style={{
+              border: 0,
+              width: "100%",
+              height: "100%",
+              display: isResolving ? "none" : "block",
+            }}
             allowFullScreen
           />
         )}

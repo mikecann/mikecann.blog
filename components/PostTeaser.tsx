@@ -62,7 +62,7 @@ export const PostTeaser: React.FC<Props> = ({ post }) => {
           </Vertical>
           {tags.length > 0 && (
             <div style={{ borderTop: "1px solid #eee", padding: 5 }}>
-              <PostTags tags={tags} />
+              <PostTags tags={tags} asLinks={false} />
             </div>
           )}
         </Vertical>

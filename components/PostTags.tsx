@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { classes, style } from "typestyle";
 import { randomNiceColor } from "./utils/colors";
-import { encodeTag } from "../utils/tags";
+import { tagPath } from "../utils/tags";
 import { HorizontalProps } from "gls";
 import { Horizontal } from "./utils/gls";
 
@@ -58,7 +58,7 @@ export const PostTags: React.FC<Props> = ({ tags, style, asLinks = true, ...rest
         return asLinks ? (
           <Link
             key={i}
-            href={`/tags/${encodeTag(tag)}`}
+            href={tagPath(tag)}
             className={classes(tagStyles, tagLinkStyles)}
             style={tagStyle}
           >

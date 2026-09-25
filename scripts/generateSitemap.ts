@@ -6,7 +6,7 @@
 import fs from "fs";
 import { getAllPublishablePosts, type Post } from "./posts";
 import { groupPostsByTag, groupPostsByYear, sortPosts } from "../utils/posts";
-import { encodeTag } from "../utils/tags";
+import { tagPath } from "../utils/tags";
 
 const SITE_URL = "https://mikecann.blog";
 
@@ -37,7 +37,7 @@ export const generateSitemap = (unsortedPosts: Post[]): string => {
     ...posts.map((post) => ({ path: `/posts/${post.slug}`, lastmod: new Date(post.meta.date) })),
     { path: "/tags", lastmod: latestDate(posts) },
     ...byTag.map(([tag, tagPosts]) => ({
-      path: `/tags/${encodeTag(tag)}`,
+      path: tagPath(tag),
       lastmod: latestDate(tagPosts),
     })),
     { path: "/years", lastmod: latestDate(posts) },
