@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 
-// we need a function that accepts the script src and couple of other parameters
+type ScriptStatus = "idle" | "loading" | "ready" | "error";
 
-// Borrowed from : https://imkarthikeyans.hashnode.dev/how-to-add-comments-using-utterances-to-your-nextjs-blog
+/**
+ * Injects the utterances comments script into the element referenced by `ref`.
+ *
+ * Borrowed from: https://imkarthikeyans.hashnode.dev/how-to-add-comments-using-utterances-to-your-nextjs-blog
+ */
 const useScript = ({
   url,
   theme,
@@ -16,18 +20,22 @@ const useScript = ({
   issueTerm: string;
   label: string;
   repo: string;
-  ref: React.RefObject<any>;
-}) => {
-  const [status, setStatus] = useState(url ? "loading" : "idle");
+  ref: React.RefObject<HTMLElement | null>;
+}): ScriptStatus => {
+  const [status, setStatus] = useState<ScriptStatus>(url ? "loading" : "idle");
 
-  // run the useEffect when the url of the script changes
   useEffect(() => {
     if (!url) {
       setStatus("idle");
       return;
     }
 
-    let script = document.createElement("script");
+    const container = ref.current;
+    if (!container) return;
+
+    setStatus("loading");
+
+    const script = document.createElement("script");
     script.src = url;
     script.async = true;
     script.crossOrigin = "anonymous";
@@ -36,48 +44,22 @@ const useScript = ({
     script.setAttribute("repo", repo);
     script.setAttribute("label", label);
 
-    // Add script to document body
-    ref?.current?.appendChild(script);
+    const onScriptEvent = (event: Event) => setStatus(event.type === "load" ? "ready" : "error");
+    script.addEventListener("load", onScriptEvent);
+    script.addEventListener("error", onScriptEvent);
 
-    // store status of the script
-
-    const setAttributeStatus = (event: any) => {
-      /**
-         * Console.log value from event
-            {
-                bubbles: false
-                cancelBubble: false
-                cancelable: false
-                composed: false
-                currentTarget: null
-                defaultPrevented: false
-                eventPhase: 0
-                isTrusted: true
-                path: [script]
-                returnValue: true
-                srcElement: null
-                target: null
-                timeStamp: 276483.5
-                type: "load"
-            }
-
-            based on the type property we will get know whether script is ready or errored out
-            */
-
-      setStatus(event.type === "load" ? "ready" : "error");
-    };
-
-    script.addEventListener("load", setAttributeStatus);
-    script.addEventListener("error", setAttributeStatus);
+    container.appendChild(script);
 
     return () => {
-      // useEffect clean up
-      if (script) {
-        script.removeEventListener("load", setAttributeStatus);
-        script.removeEventListener("error", setAttributeStatus);
-      }
+      script.removeEventListener("load", onScriptEvent);
+      script.removeEventListener("error", onScriptEvent);
+      // Remove the script and anything it injected (utterances adds an iframe), so a re-run or a
+      // remount for another post starts from an empty container.
+      script.remove();
+      container.replaceChildren();
     };
-  }, [url]);
+  }, [url, theme, issueTerm, repo, label, ref]);
+
   return status;
 };
 
