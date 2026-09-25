@@ -12,9 +12,7 @@ export const ArchiveYears: React.FC<Props> = ({ years }) => {
       {years.map((year) => (
         <Horizontal key={year} verticalAlign="center">
           <div style={{ fontSize: "2em" }}>
-            <Link href="/years/[year]" as={`/years/${year}`}>
-              {year}
-            </Link>
+            <Link href={`/years/${year}`}>{year}</Link>
           </div>
           <div
             style={{

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ResponsiveSidebarLayouts } from "../../components/layout/ResponsiveSidebarLayouts";
 import Head from "next/head";
 import { getAllPostsWithoutContent } from "../../scripts/posts";
+import { tagPath } from "../../utils/tags";
 
 type Props = {
   tags: { tag: string; postsCount: number }[];
@@ -24,7 +25,7 @@ const Page = ({ tags }: Props) => {
               verticalAlign="center"
               style={{ fontSize: 0.5 + 0.1 * postsCount + `em` }}
             >
-              <Link href={`/tags/${tag}`}>{tag}</Link>
+              <Link href={tagPath(tag)}>{tag}</Link>
             </Vertical>
           ))}
         </Grid>

@@ -1,13 +1,12 @@
 import * as React from "react";
-import { format } from "date-fns";
 import { style } from "typestyle";
 import Link from "next/link";
-import { Post } from "../scripts/posts";
+import type { PostArchiveEntry } from "../scripts/posts/teasers";
 import { Vertical } from "./utils/gls";
 
 interface Props {
   title: string;
-  posts: Post[];
+  posts: PostArchiveEntry[];
 }
 
 const cardStyle = style({
@@ -23,20 +22,9 @@ export const ArchiveCard: React.FC<Props> = ({ title, posts }) => {
       <h1 style={{ margin: "0 0 10px" }}>{title}</h1>
       <Vertical spacing={10}>
         {posts.map((post) => (
-          <div
-            key={post.slug}
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              return false;
-            }}
-          >
-            <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
-              {post.meta.title}
-            </Link>
-            <span style={{ marginLeft: 5, color: "#ccc", fontSize: "0.7em" }}>
-              {format(new Date(post.meta.date), "do MMMM")}
-            </span>
+          <div key={post.slug}>
+            <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+            <span style={{ marginLeft: 5, color: "#767676", fontSize: "0.7em" }}>{post.date}</span>
           </div>
         ))}
       </Vertical>
