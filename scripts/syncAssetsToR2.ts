@@ -3,8 +3,9 @@
 //
 //   bun run ./scripts/syncAssetsToR2.ts            upload new/changed files
 //   bun run ./scripts/syncAssetsToR2.ts --dry-run  list what would be uploaded
-//   bun run ./scripts/syncAssetsToR2.ts --strip    upload, then delete the local media so the
-//                                                  Vercel deployment doesn't include it
+//   bun run ./scripts/syncAssetsToR2.ts --strip    upload, then (only on Vercel build machines,
+//                                                  with NEXT_PUBLIC_ASSET_BASE_URL set) delete the
+//                                                  local media so the deployment doesn't include it
 //
 // Opt-in: without the R2_* env vars this does nothing (the site serves media from /public as
 // before). Remote objects are never deleted, so old URLs and preview deployments keep working.
@@ -29,7 +30,9 @@ const endpoint =
   process.env.R2_ENDPOINT ?? (R2_ACCOUNT_ID && `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`);
 const assetBaseUrl = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 
-const isMediaFile = (relPath: string) => path.basename(relPath) != "post.md";
+// post.md stays in the deployment (getStaticProps reads it); the thumbnail manifest is a build cache.
+const isMediaFile = (relPath: string) =>
+  path.basename(relPath) != "post.md" && relPath != "thumbs/manifest.json";
 
 const listLocalFiles = (): string[] => {
   const files: string[] = [];
@@ -63,14 +66,13 @@ const listRemoteETags = async (client: S3Client): Promise<Map<string, string>> =
   return etags;
 };
 
-// Deleting local files is only safe inside a throwaway build container.
-const assertSafeToStrip = () => {
+// Deleting local files is only safe inside a throwaway build container, and only useful when the
+// pages link to the uploaded copies. ALLOW_STRIP_OUTSIDE_VERCEL=1 is for testing in a copy.
+const whyNotStrip = (): string | undefined => {
+  if (!assetBaseUrl) return "NEXT_PUBLIC_ASSET_BASE_URL isn't set, so pages link to local media";
   const onVercel = process.env.VERCEL == "1" && process.cwd().startsWith("/vercel/");
-  if (onVercel || process.env.ALLOW_STRIP_OUTSIDE_VERCEL == "1") return;
-  throw new Error(
-    "--strip deletes media from public/ and only runs on Vercel build machines " +
-      "(set ALLOW_STRIP_OUTSIDE_VERCEL=1 to override in a disposable copy)",
-  );
+  if (!onVercel && process.env.ALLOW_STRIP_OUTSIDE_VERCEL != "1")
+    return "this isn't a Vercel build machine";
 };
 
 async function main() {
@@ -84,7 +86,6 @@ async function main() {
     console.log("R2 not configured, skipping asset sync (media is served from public/)");
     return;
   }
-  if (strip) assertSafeToStrip();
 
   const client = new S3Client({
     accessKeyId: R2_ACCESS_KEY_ID,
@@ -141,10 +142,14 @@ async function main() {
   );
   console.log(`Uploaded ${uploaded} files to R2 bucket ${R2_BUCKET}`);
 
-  if (strip) {
-    for (const relPath of localFiles) fs.rmSync(path.join(publicDir, relPath));
-    console.log(`Removed ${localFiles.length} media files from public/ for this deployment`);
+  if (!strip) return;
+  const reason = whyNotStrip();
+  if (reason) {
+    console.log(`Keeping local media (--strip skipped: ${reason})`);
+    return;
   }
+  for (const relPath of localFiles) fs.rmSync(path.join(publicDir, relPath));
+  console.log(`Removed ${localFiles.length} media files from public/ for this deployment`);
 }
 
 main().catch((e) => {

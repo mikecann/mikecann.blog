@@ -11,7 +11,7 @@
     "dev:convex": "convex dev",
     "generate": "bun run generateRSS && bun run generateSitemap && bun run generateThumbnails",
     "build": "bun run generate && next build --turbopack",
-    "build-and-deploy": "if [ \"$VERCEL_ENV\" = \"production\" ]; then convex deploy --check-build-environment=disable --cmd 'bun run build' && bun run populateAlgolia && bun run uploadPostsToConvex -- --production; else bun run build; fi",
+    "build-and-deploy": "if [ \"$VERCEL_ENV\" = \"production\" ]; then convex deploy --check-build-environment=disable --cmd 'bun run build && bun run syncAssets' && bun run populateAlgolia && bun run uploadPostsToConvex -- --production && bun run syncAssets -- --strip; else bun run build && bun run syncAssets -- --strip; fi",
     "start": "next start",
     "typecheck": "next typegen && tsc --noEmit && tsc --noEmit -p scripts",
     "dev:ts": "tsc --noEmit -w",
@@ -27,7 +27,8 @@
     "optimizeImages": "bun run ./scripts/optimizeImages.ts",
     "fixFlashLinks": "bun run ./scripts/fixFlashPlayableLinks.ts",
     "populateAlgolia": "bun run ./scripts/populateAlgolia.ts",
-    "uploadPostsToConvex": "bun run ./scripts/uploadPostsToConvex.ts"
+    "uploadPostsToConvex": "bun run ./scripts/uploadPostsToConvex.ts",
+    "syncAssets": "bun run ./scripts/syncAssetsToR2.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.50",
