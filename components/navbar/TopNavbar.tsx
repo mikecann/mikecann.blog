@@ -32,7 +32,12 @@ export const TopNavbar: React.FC<Props> = () => {
   return (
     <>
       <Horizontal
+        tag="nav"
+        aria-label="Main"
         verticalAlign="center"
+        // The bar fades out while scrolling down; bring it back if a keyboard user tabs into it so
+        // focus never lands on an invisible control.
+        onFocus={() => setShouldShow(true)}
         style={{
           width: "100%",
           backgroundColor: "white",
@@ -49,11 +54,9 @@ export const TopNavbar: React.FC<Props> = () => {
           pointerEvents: shouldShow ? "auto" : "none",
         }}
       >
-        <Link href="/">
-          <IconButton>
-            <FaHome />
-          </IconButton>
-        </Link>
+        <IconButton href="/" aria-label="Home" title="Home">
+          <FaHome aria-hidden="true" focusable="false" />
+        </IconButton>
 
         <StretchSpacer />
 
@@ -66,8 +69,13 @@ export const TopNavbar: React.FC<Props> = () => {
 
         <StretchSpacer />
 
-        <IconButton onClick={() => setSearchVisible(true)}>
-          <FaSearch />
+        <IconButton
+          aria-label="Search"
+          title="Search"
+          aria-haspopup="dialog"
+          onClick={() => setSearchVisible(true)}
+        >
+          <FaSearch aria-hidden="true" focusable="false" />
         </IconButton>
       </Horizontal>
 

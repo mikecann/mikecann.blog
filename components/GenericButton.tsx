@@ -23,6 +23,10 @@ const buttonStyle = style({
       boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
       transform: "translateY(-1px)",
     },
+    "&:focus-visible": {
+      outline: "2px solid #f1773c",
+      outlineOffset: 2,
+    },
     "&:active": {
       background: "#bfc9d9",
       transform: "translateY(1px)",
@@ -35,8 +39,8 @@ const buttonStyle = style({
   },
 });
 
-export const GenericButton: React.FC<Props> = ({ children, ...rest }) => (
-  <button className={buttonStyle} {...rest}>
+export const GenericButton: React.FC<Props> = ({ children, type = "button", ...rest }) => (
+  <button type={type} className={buttonStyle} {...rest}>
     {children}
   </button>
 );
