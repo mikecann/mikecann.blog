@@ -1,11 +1,12 @@
 import { components } from "../_generated/api";
 import { RAG } from "@convex-dev/rag";
-import { openai } from "@ai-sdk/openai";
+import { convexGateway } from "@convex-dev/ai-sdk-provider";
 import { v } from "convex/values";
 
 export const rag = new RAG(components.rag, {
   filterNames: [],
-  textEmbeddingModel: openai.embedding("text-embedding-3-small"),
+  // Through the Convex AI Gateway. Same model as before, so existing embeddings stay valid.
+  textEmbeddingModel: convexGateway.embeddingModel("openai/text-embedding-3-small"),
   embeddingDimension: 1536,
 });
 

@@ -1,39 +1,26 @@
-import { openrouter } from "@openrouter/ai-sdk-provider";
+import { convexGateway } from "@convex-dev/ai-sdk-provider";
 import { DAY, HOUR, MINUTE, type RateLimitConfig } from "@convex-dev/rate-limiter";
 import { MIKEBOT_MAX_MESSAGE_LENGTH } from "./shared";
 
-/**
- * Model tiers the OpenRouter auto router may pick from: the cheap, fast tiers of each major
- * family. It picks the best of these for each message, and newer versions that match a pattern
- * are used automatically, so Mikebot keeps up with new models without code changes. Without
- * this list the router can pick frontier models that cost 20-100x more.
- */
-export const MIKEBOT_ALLOWED_MODELS = [
-  "openai/gpt-*-luna",
-  "openai/gpt-*-luna-pro",
-  "google/gemini-*-flash",
-  "google/gemini-*-flash-lite",
-  "deepseek/deepseek-*-flash",
-  "qwen/qwen*-flash",
-  "z-ai/glm-*-flash",
-  "z-ai/glm-*-flashx",
-];
+/** Used when the MIKEBOT_MODEL env var isn't set. */
+export const MIKEBOT_DEFAULT_MODEL = "openai/gpt-5.6-luna";
 
 /**
- * Hard price ceiling in USD per million tokens, in case a pattern above ever matches a pricier
- * model. OpenRouter fails the request rather than exceed it.
+ * Env var that picks Mikebot's model without a code change, using any Convex AI Gateway model id,
+ * e.g. "openai/gpt-6-luna" once the gateway lists it, or "openrouter/auto". The gateway doesn't
+ * accept OpenRouter's routing options, so "openrouter/auto" can't be limited to cheap models and
+ * may pick pricey ones; the daily cost budget below still caps the spend.
  */
-export const MIKEBOT_MAX_PRICE_PER_MILLION_TOKENS = { prompt: 1, completion: 4 };
+export const MIKEBOT_MODEL_ENV_VAR = "MIKEBOT_MODEL";
 
 /**
- * The language model behind Mikebot: OpenRouter's auto router (needs OPENROUTER_API_KEY in the
- * Convex environment). Usage accounting is on so each step reports its cost for the daily budget.
+ * The language model behind Mikebot, called through the Convex AI Gateway: Convex holds the
+ * provider keys and bills the usage, so the deployment needs no API key (it does need a paid
+ * Convex plan). The gateway reports each step's cost, which feeds the daily cost budget.
  */
-export const MIKEBOT_LANGUAGE_MODEL = openrouter("openrouter/auto", {
-  plugins: [{ id: "auto-router", allowed_models: MIKEBOT_ALLOWED_MODELS }],
-  provider: { max_price: MIKEBOT_MAX_PRICE_PER_MILLION_TOKENS },
-  usage: { include: true },
-});
+export const MIKEBOT_LANGUAGE_MODEL = convexGateway(
+  process.env[MIKEBOT_MODEL_ENV_VAR]?.trim() || MIKEBOT_DEFAULT_MODEL,
+);
 
 /** Env var holding the max tokens Mikebot may use per UTC day (0 turns Mikebot off). */
 export const MIKEBOT_DAILY_TOKEN_BUDGET_ENV_VAR = "MIKEBOT_DAILY_TOKEN_BUDGET";

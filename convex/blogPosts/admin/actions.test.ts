@@ -26,8 +26,8 @@ vi.mock("@convex-dev/rag", async (importOriginal) => {
   };
 });
 
-vi.mock("@ai-sdk/openai", () => ({
-  openai: { embedding: () => ({}), responses: () => ({}) },
+vi.mock("@convex-dev/ai-sdk-provider", () => ({
+  convexGateway: Object.assign(() => ({}), { embeddingModel: () => ({}) }),
 }));
 
 const originalEnv = process.env;

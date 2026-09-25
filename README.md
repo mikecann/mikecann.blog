@@ -136,12 +136,13 @@ Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys, and draft p
 
 **Convex** (Dashboard → Settings → Environment Variables, or `bunx convex env set NAME value`), for each deployment:
 
-| Name                                  | Used by                                                                                                |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `BLOG_POST_ADMIN_TOKEN`               | Authorizes the admin functions `uploadPostsToConvex` calls                                             |
-| `OPENROUTER_API_KEY`                  | Mikebot's model (OpenRouter's auto router, limited to cheap model tiers in `convex/mikebot/config.ts`) |
-| `OPENAI_API_KEY`                      | Post embeddings for Mikebot's blog search                                                              |
-| `MAILCHIMP_API_KEY`                   | Creating and sending the new-post email campaigns (only the production deployment sends)               |
-| `MIKEBOT_DAILY_TOKEN_BUDGET`          | Optional. Max tokens Mikebot may use per UTC day (default 2,000,000; `0` turns Mikebot off)            |
-| `MIKEBOT_DAILY_COST_BUDGET_USD`       | Optional. Max USD Mikebot may spend per UTC day (default 2; `0` turns Mikebot off)                     |
-| `MAILCHIMP_ALLOW_NON_PRODUCTION_SEND` | Optional. `true` lets a non-production deployment send real campaign emails                            |
+Mikebot's model and the blog-search embeddings go through the [Convex AI Gateway](https://docs.convex.dev/ai-gateway/overview), so no AI provider keys are needed; it needs a paid Convex plan and bills at OpenRouter's rates. Mikebot's own daily budgets (below) stop it before Convex's deployment usage limits would: hitting a Convex **disable** threshold turns off the whole deployment, including post uploads and newsletter signups, so set those limits well above the Mikebot budget.
+
+| Name                                  | Used by                                                                                                                             |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `BLOG_POST_ADMIN_TOKEN`               | Authorizes the admin functions `uploadPostsToConvex` calls                                                                          |
+| `MAILCHIMP_API_KEY`                   | Creating and sending the new-post email campaigns (only the production deployment sends)                                            |
+| `MIKEBOT_MODEL`                       | Optional. Which Convex AI Gateway model Mikebot uses (default `openai/gpt-5.6-luna`), e.g. `openai/gpt-6-luna` or `openrouter/auto` |
+| `MIKEBOT_DAILY_TOKEN_BUDGET`          | Optional. Max tokens Mikebot may use per UTC day (default 2,000,000; `0` turns Mikebot off)                                         |
+| `MIKEBOT_DAILY_COST_BUDGET_USD`       | Optional. Max USD Mikebot may spend per UTC day (default 2; `0` turns Mikebot off)                                                  |
+| `MAILCHIMP_ALLOW_NON_PRODUCTION_SEND` | Optional. `true` lets a non-production deployment send real campaign emails                                                         |

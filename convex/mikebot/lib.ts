@@ -54,7 +54,11 @@ If asked, the best way to contact mike is via email: mike.cann@gmail.com.`,
   usageHandler: async (ctx, { usage, providerMetadata }) => {
     const inputTokens = usage.inputTokens ?? 0;
     const outputTokens = usage.outputTokens ?? 0;
-    const cost = providerMetadata?.openrouter?.usage?.cost;
+    const cost = providerMetadata?.convexGateway?.cost;
+    if (!usage.totalTokens && !usage.inputTokens && cost === undefined)
+      console.warn(
+        "Mikebot: the model reported no usage for this step; the daily budgets can't count it",
+      );
     try {
       await ctx.runMutation(internal.mikebot.internal.mutations.recordTokenUsage, {
         inputTokens,

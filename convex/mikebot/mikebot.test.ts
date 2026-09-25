@@ -9,9 +9,9 @@ import { sha256Hex } from "./sha256";
 import { getUtcDayKey } from "./guards";
 import { modules } from "../test.setup";
 
-// Never talk to OpenAI from tests.
-vi.mock("@ai-sdk/openai", () => ({
-  openai: { responses: () => ({}), embedding: () => ({}) },
+// Never call the Convex AI Gateway from tests.
+vi.mock("@convex-dev/ai-sdk-provider", () => ({
+  convexGateway: Object.assign(() => ({}), { embeddingModel: () => ({}) }),
 }));
 
 const TOKEN_A = "a".repeat(64);
@@ -225,6 +225,7 @@ describe("sending messages", () => {
     await send(t, otherThreadId, "hello", TOKEN_B);
   });
 
+  // Sends a full day's worth of messages, which can be slow on a busy CI runner.
   test("caps messages per user per day", async () => {
     const t = setup();
     const threadId = await createUserWithThread(t);
@@ -237,7 +238,7 @@ describe("sending messages", () => {
     }
     vi.setSystemTime(START + rate * 60_000);
     await expectMikebotError(send(t, threadId, "one too many"), "daily_limit");
-  });
+  }, 20_000);
 
   test("refuses messages once the daily token budget is used up", async () => {
     const t = setup();

@@ -9,8 +9,8 @@ import { modules } from "../../test.setup";
 const setup = () => convexTest(schema, modules);
 type TestConvex = ReturnType<typeof setup>;
 
-vi.mock("@ai-sdk/openai", () => ({
-  openai: { embedding: () => ({}), responses: () => ({}) },
+vi.mock("@convex-dev/ai-sdk-provider", () => ({
+  convexGateway: Object.assign(() => ({}), { embeddingModel: () => ({}) }),
 }));
 
 const originalEnv = process.env;
