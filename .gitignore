@@ -32,9 +32,6 @@ npm-debug.log*
 # vercel
 .vercel
 
-_posts2
-_posts3
-
 local.config.json
 
 .env
@@ -48,4 +45,6 @@ tmp
 # next-agents-md
 .next-docs/
 
-.vercel
+# generated at build time (bun run generate)
+/public/rss.xml
+/public/sitemap.xml
