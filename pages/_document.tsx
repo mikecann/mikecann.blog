@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { getStyles } from "typestyle";
+import type { JSX } from "react";
 
 export default class extends Document {
   render(): JSX.Element {

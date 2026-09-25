@@ -1,6 +1,5 @@
 import * as React from "react";
 import { style } from "typestyle";
-import * as css from "csstips";
 import Script from "next/script";
 
 interface Props {}
