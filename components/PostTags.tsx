@@ -1,13 +1,20 @@
 import * as React from "react";
 import Link from "next/link";
-import { style } from "typestyle";
+import { classes, style } from "typestyle";
 import { randomNiceColor } from "./utils/colors";
+import { encodeTag } from "../utils/tags";
 import { HorizontalProps } from "gls";
 import { Horizontal } from "./utils/gls";
 
 interface Props extends HorizontalProps {
   tags: string[];
   style?: React.CSSProperties;
+  /**
+   * Render each tag as a link to its tag page (default). Pass `false` when the tags are rendered
+   * inside another link (e.g. a post card) as nested links are invalid HTML, the tags are then
+   * rendered as plain, non-interactive text.
+   */
+  asLinks?: boolean;
 }
 
 const tagStyles = style({
@@ -15,22 +22,23 @@ const tagStyles = style({
   backgroundColor: "#eee",
   borderRadius: 6,
   color: "#333",
+});
+
+const tagLinkStyles = style({
+  cursor: "pointer",
   $nest: {
-    "&:hover": {
-      backgroundColor: "#ddd",
+    // keep the text colour the same as before rather than picking up the global link colours
+    "&:hover, &:focus, &:active, &:visited": {
+      color: "#333",
     },
-    a: {
-      color: "#666",
-      $nest: {
-        "&:hover": {
-          color: "#222",
-        },
-      },
+    "&:focus-visible": {
+      outline: "2px solid #f1773c",
+      outlineOffset: 1,
     },
   },
 });
 
-export const PostTags: React.FC<Props> = ({ tags, style, ...rest }) => {
+export const PostTags: React.FC<Props> = ({ tags, style, asLinks = true, ...rest }) => {
   if (tags.length == 0) return null;
   return (
     <Horizontal
@@ -44,17 +52,24 @@ export const PostTags: React.FC<Props> = ({ tags, style, ...rest }) => {
       spacing={5}
       {...rest}
     >
-      {tags.map((t, i) => (
-        <div
-          key={i}
-          className={tagStyles}
-          style={{ backgroundColor: randomNiceColor(t), marginBottom: "0.5em" }}
-        >
-          <div style={{ cursor: "pointer" }} onClick={() => (window.location.href = `/tags/${t}`)}>
-            {String(t)}
-          </div>
-        </div>
-      ))}
+      {tags.map((t, i) => {
+        const tag = String(t);
+        const tagStyle = { backgroundColor: randomNiceColor(t), marginBottom: "0.5em" };
+        return asLinks ? (
+          <Link
+            key={i}
+            href={`/tags/${encodeTag(tag)}`}
+            className={classes(tagStyles, tagLinkStyles)}
+            style={tagStyle}
+          >
+            {tag}
+          </Link>
+        ) : (
+          <span key={i} className={tagStyles} style={tagStyle}>
+            {tag}
+          </span>
+        );
+      })}
     </Horizontal>
   );
 };

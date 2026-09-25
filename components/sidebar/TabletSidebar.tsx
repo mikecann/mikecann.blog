@@ -8,9 +8,7 @@ import { useState } from "react";
 import { Background } from "./Background";
 import { SocialIcons } from "./SocialIcons";
 import { PiTreasureChestDuotone } from "react-icons/pi";
-import { onOpenMikebot } from "../mikebot/signals";
-import { floatAnimation } from "../animations";
-import { AvatarSpeechBubble } from "../mikebot/AvatarSpeechBubble";
+import { AvatarButton } from "./AvatarButton";
 import { Grid, Vertical } from "../utils/gls";
 import { VerticalSpacer } from "gls";
 
@@ -22,26 +20,7 @@ export const TabletSidebar: React.FC<Props> = ({}) => {
   return (
     <>
       <Background style={{ width: 200 }}>
-        <div
-          onClick={() => onOpenMikebot.dispatch("")}
-          style={{
-            cursor: "pointer",
-            position: "relative",
-            animation: `${floatAnimation()} 6s ease-in-out infinite`,
-          }}
-        >
-          <img
-            alt={`profile picture of me mike cann`}
-            style={{
-              borderRadius: "50%",
-              boxShadow: "0 5px 15px 0px rgba(0, 0, 0, 0.6)",
-            }}
-            width={120}
-            height={120}
-            src="/images/me.webp"
-          />
-          <AvatarSpeechBubble style={{ fontSize: "2.8em" }} />
-        </div>
+        <AvatarButton size={120} bubbleProps={{ style: { fontSize: "2.8em" } }} />
         <VerticalSpacer space={20} />
         <div style={{ fontSize: "1.8em", fontWeight: "bold" }}>Mike Cann</div>
         <VerticalSpacer space={30} />
@@ -49,7 +28,7 @@ export const TabletSidebar: React.FC<Props> = ({}) => {
           <SocialIcons />
         </Grid>
         <VerticalSpacer space={30} />
-        <Vertical width="100%" horizontalAlign="center" spacing={20}>
+        <Vertical tag="nav" aria-label="Main" width="100%" horizontalAlign="center" spacing={20}>
           <PageButton icon={<FaHome />} label="Home" href="/" />
           <PageButton icon={<FaTags />} label="Tags" href="/tags" />
           <PageButton icon={<HiArchive />} label="Archive" href="/years" />

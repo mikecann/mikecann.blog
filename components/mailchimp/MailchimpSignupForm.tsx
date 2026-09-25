@@ -1,9 +1,31 @@
 import * as React from "react";
+import { style } from "typestyle";
 
-interface Props {}
+const visuallyHidden = style({
+  position: "absolute",
+  width: 1,
+  height: 1,
+  padding: 0,
+  margin: -1,
+  overflow: "hidden",
+  clip: "rect(0, 0, 0, 0)",
+  whiteSpace: "nowrap",
+  border: 0,
+});
+
+// globals.css removes the outline from all inputs, give the submit button a visible keyboard focus ring
+const submitStyles = style({
+  $nest: {
+    "&:focus-visible": {
+      outline: "2px solid #f1773c",
+      outlineOffset: 2,
+    },
+  },
+});
 
 export function MailchimpSignupForm() {
   const [email, setEmail] = React.useState("");
+  const emailId = React.useId();
   return (
     <div>
       <form
@@ -14,15 +36,20 @@ export function MailchimpSignupForm() {
         target="_blank"
       >
         <div style={{ display: "flex", marginBottom: 20 }}>
+          <label htmlFor={emailId} className={visuallyHidden}>
+            Email address
+          </label>
           <input
+            id={emailId}
             style={{ width: "100%", marginRight: 10 }}
             type="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             name="EMAIL"
           />
-          <input type="submit" value="Subscribe" name="subscribe" />
+          <input type="submit" value="Subscribe" name="subscribe" className={submitStyles} />
         </div>
       </form>
     </div>

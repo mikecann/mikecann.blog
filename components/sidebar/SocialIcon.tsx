@@ -4,7 +4,9 @@ import { style } from "typestyle";
 
 interface Props {
   href: string;
-  children?: React.ReactElement;
+  /** Accessible name for the icon-only link, e.g. "GitHub" (also shown as a tooltip) */
+  label?: string;
+  children?: React.ReactElement<React.SVGAttributes<SVGElement>>;
 }
 
 const styles = style({
@@ -12,18 +14,32 @@ const styles = style({
   opacity: 0.8,
   cursor: "pointer",
   color: "white",
+  borderRadius: 2,
   $nest: {
-    "&:hover": {
+    "&:hover, &:focus-visible": {
       opacity: 1,
       color: "white",
+    },
+    "&:focus-visible": {
+      outline: "2px solid white",
+      outlineOffset: 2,
     },
   },
 });
 
-export const SocialIcon: React.FC<Props> = ({ children, href }) => {
+export const SocialIcon: React.FC<Props> = ({ children, href, label }) => {
+  // mailto: etc. shouldn't open a blank tab, only web links open in a new one
+  const opensNewTab = /^https?:\/\//.test(href);
   return (
-    <Link target="_blank" className={styles} href={href}>
-      {children}
+    <Link
+      className={styles}
+      href={href}
+      target={opensNewTab ? "_blank" : undefined}
+      rel={opensNewTab ? "noopener noreferrer" : undefined}
+      aria-label={label && opensNewTab ? `${label} (opens in a new tab)` : label}
+      title={label}
+    >
+      {children && React.cloneElement(children, { "aria-hidden": true, focusable: "false" })}
     </Link>
   );
 };
