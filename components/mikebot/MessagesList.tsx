@@ -1,16 +1,13 @@
 import { Vertical } from "../../components/utils/gls";
 import * as React from "react";
-import { Id } from "../../convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { type UsePaginatedQueryResult } from "convex/react";
 import { MessageRow } from "./messages/MessageRow";
 import { style } from "typestyle";
-import { useThreadMessages, type UIMessage } from "@convex-dev/agent/react";
+import { type UIMessage } from "@convex-dev/agent/react";
 import { LoadMoreMessages } from "./messages/LoadMoreMessages";
 
 interface Props {
-  threadId: string;
-  userId: Id<"users">;
+  messages: UsePaginatedQueryResult<UIMessage>;
 }
 
 const listStyles = style({
@@ -51,17 +48,7 @@ const snapEndStyle = style({
   scrollSnapAlign: "end",
 });
 
-export const MessagesList: React.FC<Props> = ({ threadId, userId }) => {
-  const messages = useThreadMessages(
-    api.mikebot.queries.listMessagesForUserThread,
-    { threadId, userId },
-    { initialNumItems: 10, stream: true },
-  );
-
-  React.useEffect(() => {
-    console.log(`MESSAGES`, messages.status, messages.results);
-  }, [messages.results]);
-
+export const MessagesList: React.FC<Props> = ({ messages }) => {
   return (
     <Vertical
       spacing="10px"
@@ -69,7 +56,7 @@ export const MessagesList: React.FC<Props> = ({ threadId, userId }) => {
       className={listStyles}
       style={{ position: "relative", paddingRight: "0px", paddingLeft: "8px" }}
     >
-      {/* <LoadMoreMessages status={messages.status} loadMore={messages.loadMore} /> */}
+      <LoadMoreMessages status={messages.status} loadMore={messages.loadMore} />
       {messages.results
         .filter((m) => {
           // Filter out tool result messages

@@ -35,7 +35,26 @@ export const postEmailCampaignSchema = v.object({
 export default defineSchema({
   users: defineTable({
     kind: v.literal("anonymous"),
-  }),
+    // SHA-256 (hex) of the secret token the visitor's browser keeps in
+    // localStorage; the token itself is never stored. Rows created before tokens
+    // existed have no hash and can no longer be signed in to.
+    tokenHash: v.optional(v.string()),
+  }).index("by_tokenHash", ["tokenHash"]),
+  // One row per Mikebot thread that is waiting on a reply, so a visitor can't
+  // queue up several expensive replies at once.
+  mikebotPendingReplies: defineTable({
+    threadId: v.string(),
+    promptMessageId: v.string(),
+    startedAt: v.number(),
+  }).index("by_threadId", ["threadId"]),
+  // Tokens used by Mikebot per UTC day ("YYYY-MM-DD"), for the daily budget.
+  mikebotDailyUsage: defineTable({
+    day: v.string(),
+    inputTokens: v.number(),
+    outputTokens: v.number(),
+    totalTokens: v.number(),
+    updatedAt: v.number(),
+  }).index("by_day", ["day"]),
   // LEGACY: nothing reads or writes this table any more (it backed the removed
   // Mikebot thread-notification emails). It is kept only because production may
   // still hold rows, and removing a table that has documents from the schema can

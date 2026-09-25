@@ -1,29 +1,21 @@
 "use client";
-import { Grid, Horizontal } from "../../components/utils/gls";
+import { Horizontal } from "../../components/utils/gls";
 import * as React from "react";
 import { style } from "typestyle";
-import { MessageRow } from "./messages/MessageRow";
-import { MessageEntryBox } from "./MessageEntryBox";
 import { useMe } from "./MikebotMeProvider";
-import { useMutation, useQuery } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import { Id } from "../../convex/_generated/dataModel";
 import { useEffect } from "react";
-import { MessagesList } from "./MessagesList";
-import { useQueryWithStatus } from "./helpers";
 import { AiOutlineClear } from "react-icons/ai";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { mirage } from "ldrs";
 import { LuMaximize2, LuMinimize2 } from "react-icons/lu";
 import { useState } from "react";
 import { MdOutlineHelpOutline } from "react-icons/md";
+import { useMikebotThread } from "./useMikebotThread";
+import { MikebotConversation } from "./MikebotConversation";
 
 interface Props {
   onMinimize: () => void;
   initialMessage?: string | null;
 }
-
-mirage.register();
 
 const windowStyle = style({
   display: "flex",
@@ -71,40 +63,32 @@ const overlayStyle = style({
   pointerEvents: "initial",
 });
 
-const currentThreadIdStorageKey = "mikebot2_current_thread_id";
+const errorBannerStyle: React.CSSProperties = {
+  margin: "8px",
+  padding: "8px",
+  borderRadius: "4px",
+  background: "#fdecea",
+  color: "#8a1c1c",
+  fontSize: "0.85em",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "8px",
+};
 
 export const MikebotWidgetView: React.FC<Props> = ({ onMinimize, initialMessage }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [currentThreadId, setCurrentThreadId] = React.useState<string | null>(
-    () => localStorage[currentThreadIdStorageKey],
-  );
   const me = useMe();
+  const token = me.status === "ready" ? me.token : null;
+  const thread = useMikebotThread(token);
 
-  const createThread = useMutation(api.mikebot.mutations.createThreadForUser);
-
-  const threadQuery = useQueryWithStatus(
-    api.mikebot.queries.findThreadForUser,
-    currentThreadId && me ? { threadId: currentThreadId, userId: me._id } : "skip",
-  );
-
-  useEffect(() => {
-    if (!me) return;
-
-    if (currentThreadId) {
-      if (threadQuery.data) return;
-      if (threadQuery.status == "pending") return;
-      setCurrentThreadId(null);
-      return;
-    }
-
-    createThread({ userId: me._id })
-      .then((id) => {
-        localStorage[currentThreadIdStorageKey] = id;
-        setCurrentThreadId(id);
-      })
-      .catch(console.error);
-  }, [currentThreadId, me, threadQuery.data?._id, threadQuery.status]);
+  const error =
+    me.status === "error"
+      ? { message: me.message, retry: me.retry }
+      : thread.error
+        ? { message: thread.error, retry: thread.clearError }
+        : null;
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 50);
@@ -181,11 +165,13 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize, initialMessage 
             </button>
             <button
               onClick={() => {
-                if (!confirm("Are you sure you want to clear this thread?")) return;
-                localStorage.removeItem(currentThreadIdStorageKey);
-                setCurrentThreadId(null);
+                if (!thread.threadId || thread.isDeleting) return;
+                if (!confirm("Are you sure you want to delete this conversation?")) return;
+                void thread.deleteThread();
               }}
               aria-label="Delete thread"
+              title="Delete this conversation"
+              disabled={!thread.threadId || thread.isDeleting}
               className={iconButtonStyle}
             >
               <AiOutlineClear />
@@ -205,34 +191,28 @@ export const MikebotWidgetView: React.FC<Props> = ({ onMinimize, initialMessage 
             )}
           </Horizontal>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexGrow: 1,
-            borderBottom: "1px solid #eee",
-            height: "max(50vh, 300px)",
-          }}
-        >
-          {threadQuery.data && me ? (
-            <MessagesList threadId={threadQuery.data._id} userId={me._id} />
-          ) : (
-            <Horizontal
+        {error ? (
+          <div role="alert" style={errorBannerStyle}>
+            <span>{error.message}</span>
+            <button
+              onClick={error.retry}
               style={{
-                height: "100%",
+                border: "none",
+                background: "none",
+                color: "inherit",
+                textDecoration: "underline",
+                cursor: "pointer",
+                flexShrink: 0,
               }}
-              horizontalAlign="center"
-              verticalAlign="center"
             >
-              {/* @ts-ignore */}
-              <l-mirage size={80} color="#a0a0a0" />
-            </Horizontal>
-          )}
-        </div>
-        <MessageEntryBox
-          userId={me?._id}
-          threadId={threadQuery.data?._id}
-          defaultMessage={initialMessage}
+              Try again
+            </button>
+          </div>
+        ) : null}
+        <MikebotConversation
+          token={token}
+          threadId={thread.threadId}
+          initialMessage={initialMessage}
         />
       </div>
     </>
