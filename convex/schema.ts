@@ -75,7 +75,7 @@ export default defineSchema({
     inputTokens: v.number(),
     outputTokens: v.number(),
     totalTokens: v.number(),
-    // USD as reported by OpenRouter; absent on rows written before the switch to OpenRouter.
+    // USD as reported by the Convex AI Gateway; absent on rows written before cost was tracked.
     costUsd: v.optional(v.number()),
     updatedAt: v.number(),
   }).index("by_day", ["day"]),
