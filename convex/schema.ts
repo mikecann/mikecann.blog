@@ -39,6 +39,19 @@ export const postEmailCampaignSchema = v.object({
   uploadRunId: v.optional(v.string()),
 });
 
+/** Validators for whole documents (with system fields), for `.returns()`. */
+export const blogPostDocSchema = v.object({
+  _id: v.id("blogPosts"),
+  _creationTime: v.number(),
+  ...blogPostSchema.fields,
+});
+
+export const postEmailCampaignDocSchema = v.object({
+  _id: v.id("postEmailCampaigns"),
+  _creationTime: v.number(),
+  ...postEmailCampaignSchema.fields,
+});
+
 export default defineSchema({
   users: defineTable({
     kind: v.literal("anonymous"),

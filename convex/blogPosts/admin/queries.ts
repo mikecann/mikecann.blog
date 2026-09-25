@@ -8,6 +8,7 @@ import {
   POST_EMAIL_QUEUED_STUCK_AFTER_MS,
 } from "../../mailchimp/constants";
 import { IN_PROGRESS_STATUSES } from "../../mailchimp/campaigns";
+import { postEmailCampaignDocSchema } from "../../schema";
 
 export type SlugId = string;
 
@@ -50,6 +51,11 @@ export const listPostEmailCampaigns = convex
     token: v.string(),
     slugs: v.array(v.string()),
   })
+  .returns(
+    v.array(
+      v.object({ slug: v.string(), campaign: v.union(v.null(), postEmailCampaignDocSchema) }),
+    ),
+  )
   .handler(async (ctx, { token, slugs }) => {
     validateBlogPostAdminToken(token);
 
