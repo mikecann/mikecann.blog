@@ -1,43 +1,37 @@
-import { omit } from "ramda";
-import { Post, PostWithContent } from "../scripts/posts";
+import type { Post } from "../scripts/posts";
 
 type SortDirection = "asc" | "desc";
 
+/** Returns a sorted copy of the posts, oldest first by default. */
 export const sortPosts = <T extends Post>(posts: T[], direction: SortDirection = "asc"): T[] => {
-  return posts.sort((post1, post2) => {
-    const d1 = Date.parse(post1.meta.date);
-    const d2 = Date.parse(post2.meta.date);
-
-    if (d1 > d2) return direction == "desc" ? -1 : 1;
-    return direction == "desc" ? 1 : -1;
-  });
+  const sign = direction == "desc" ? -1 : 1;
+  return [...posts].sort(
+    (post1, post2) => (Date.parse(post1.meta.date) - Date.parse(post2.meta.date)) * sign,
+  );
 };
 
-// export const sortPostsDescending = (posts: Post[]): Post[] =>
-//   posts.sort((post1, post2) =>
-//     Date.parse(post1.meta.date ?? "") > Date.parse(post2.meta.date ?? "") ? -1 : 1
-//   );
-
+/** Resolves a `./relative` path in a post's markdown to its root path under `/posts/<slug>/`. */
 export const getRelativePathForPost = (slug: string, path: string) =>
   path.startsWith("./") ? `/posts/${slug}/${path.replace("./", "")}` : path;
 
 export const getPostRootCoverImagePath = ({ meta: { coverImage }, slug }: Post) =>
-  coverImage.startsWith("./") ? `/posts/${slug}/${coverImage.replace("./", "")}` : coverImage;
+  getRelativePathForPost(slug, coverImage);
 
-export const getPostYear = (post: Post): number => new Date(post.meta.date).getFullYear();
+// Post dates are UTC ISO strings, so group by the UTC year.
+export const getPostYear = (post: Post): number => new Date(post.meta.date).getUTCFullYear();
 
-export type PostsByYear = {
-  [year: number]: Post[];
+export type PostsByYear<T extends Post = Post> = {
+  [year: number]: T[];
 };
 
 export type PostsByTag<T extends Post = Post> = {
   [tag: string]: T[];
 };
 
-export const groupPostsByYear = (posts: Post[]): PostsByYear => {
-  let postsByYear: PostsByYear = {};
+export const groupPostsByYear = <T extends Post>(posts: T[]): PostsByYear<T> => {
+  const postsByYear: PostsByYear<T> = {};
 
-  for (let post of posts) {
+  for (const post of posts) {
     const year = getPostYear(post);
     if (!postsByYear[year]) postsByYear[year] = [];
     postsByYear[year].push(post);
@@ -47,10 +41,10 @@ export const groupPostsByYear = (posts: Post[]): PostsByYear => {
 };
 
 export const groupPostsByTag = <T extends Post>(posts: T[]): PostsByTag<T> => {
-  let postsByTag: PostsByTag<T> = {};
+  const postsByTag: PostsByTag<T> = {};
 
-  for (let post of posts) {
-    for (let tag of post.meta.tags) {
+  for (const post of posts) {
+    for (const tag of post.meta.tags) {
       if (!postsByTag[tag]) postsByTag[tag] = [];
       postsByTag[tag].push(post);
     }
@@ -60,7 +54,7 @@ export const groupPostsByTag = <T extends Post>(posts: T[]): PostsByTag<T> => {
 };
 
 export const calculateTagsLastUse = <T extends Post>(
-  tags: PostsByTag<T>
+  tags: PostsByTag<T>,
 ): { tag: string; posts: T[]; lastUse: Date }[] =>
   Object.entries(tags).map(([tag, posts]) => ({
     tag,
@@ -68,15 +62,13 @@ export const calculateTagsLastUse = <T extends Post>(
     lastUse: posts.length == 0 ? new Date(0) : new Date(sortPosts(posts, "desc")[0].meta.date),
   }));
 
-export const getPostsByYear = (year: string, posts: Post[]) =>
-  groupPostsByYear(posts)[parseInt(year)];
+export const getPostsByYear = <T extends Post>(year: string, posts: T[]): T[] =>
+  groupPostsByYear(posts)[parseInt(year)] ?? [];
 
 export const getAllYears = (posts: Post[]) => Object.keys(groupPostsByYear(posts));
 
 export const getAllTags = (posts: Post[]) => Object.keys(groupPostsByTag(posts));
 
+/** Returns a sorted copy of the years. */
 export const sortYears = (years: string[], direction: SortDirection = "asc") =>
-  years.sort((a, b) => (parseInt(a) - parseInt(b)) * (direction == "desc" ? -1 : 1));
-
-export const removeContentFromPosts = (posts: PostWithContent[]): Post[] =>
-  posts.map((post) => omit(["content"], post));
+  [...years].sort((a, b) => (parseInt(a) - parseInt(b)) * (direction == "desc" ? -1 : 1));
