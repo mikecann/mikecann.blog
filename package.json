@@ -15,6 +15,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "dev:ts": "tsc --noEmit -w",
     "generateRSS": "bun run ./scripts/generateRSS.ts",
+    "generateSitemap": "bun run ./scripts/generateSitemap.ts",
     "fixFlashLinks": "bun run ./scripts/fixFlashPlayableLinks.ts",
     "uploadsPostsToConvex": "bun run ./scripts/uploadPostsToConvex.ts",
     "populateAlgolia": "bun run ./scripts/populateAlgolia.ts",
