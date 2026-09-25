@@ -1,11 +1,10 @@
 import { components, internal } from "../_generated/api";
 import { openai } from "@ai-sdk/openai";
-import { Agent, createTool, MessageDoc, ThreadDoc } from "@convex-dev/agent";
+import { Agent, createTool, ThreadDoc } from "@convex-dev/agent";
 import { Id } from "../_generated/dataModel";
 import { DatabaseReader, QueryCtx } from "../_generated/server";
 import { z } from "zod";
 import { aboutMikeMarkdown } from "./constants";
-import { isNotNullOrUndefined } from "../../essentials/misc/filter";
 import { BlogPostMatch } from "../blogPosts/internal/queries";
 
 export const mikebotTools = {
@@ -91,18 +90,3 @@ export const findThread = async (ctx: QueryCtx, args: { threadId: string }) => {
   });
   return thread;
 };
-
-export const getThread = async (ctx: QueryCtx, args: { threadId: string }) => {
-  const thread = await findThread(ctx, { threadId: args.threadId });
-  if (!thread) throw new Error(`Thread not found with id ${args.threadId}`);
-  return thread;
-};
-
-export const filterOutToolResults = (messages: MessageDoc[]) =>
-  messages
-    .map((message) => {
-      if (message.message?.role == "tool" && message.message.content[0].type == "tool-result")
-        return null;
-      return message;
-    })
-    .filter(isNotNullOrUndefined);

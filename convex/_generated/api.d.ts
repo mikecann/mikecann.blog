@@ -24,7 +24,6 @@ import type * as mailchimp_internal_queries from "../mailchimp/internal/queries.
 import type * as mailchimp_lib from "../mailchimp/lib.js";
 import type * as mikebot_constants from "../mikebot/constants.js";
 import type * as mikebot_internal_actions from "../mikebot/internal/actions.js";
-import type * as mikebot_internal_mutations from "../mikebot/internal/mutations.js";
 import type * as mikebot_lib from "../mikebot/lib.js";
 import type * as mikebot_mutations from "../mikebot/mutations.js";
 import type * as mikebot_queries from "../mikebot/queries.js";
@@ -53,7 +52,6 @@ declare const fullApi: ApiFromModules<{
   "mailchimp/lib": typeof mailchimp_lib;
   "mikebot/constants": typeof mikebot_constants;
   "mikebot/internal/actions": typeof mikebot_internal_actions;
-  "mikebot/internal/mutations": typeof mikebot_internal_mutations;
   "mikebot/lib": typeof mikebot_lib;
   "mikebot/mutations": typeof mikebot_mutations;
   "mikebot/queries": typeof mikebot_queries;
