@@ -72,6 +72,7 @@
     "@types/react-dom": "^19.2.5",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/rss": "^0.0.32",
+    "aws4fetch": "^1.0.20",
     "concurrently": "^10.0.5",
     "convex-test": "^0.0.56",
     "dotenv": "^17.4.2",
