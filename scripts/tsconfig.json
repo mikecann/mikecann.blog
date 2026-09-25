@@ -6,7 +6,6 @@
     "types": ["bun"]
   },
   "include": ["./**/*.ts"],
-  // TODO: postEmailCampaignStatus.test.ts passes a plain string where a campaign status union
-  // is expected (line 26); remove this exclude once that's fixed.
-  "exclude": ["./postEmailCampaignStatus.test.ts"]
+  // Override the root exclude list, which excludes scripts/ itself.
+  "exclude": []
 }

@@ -20,7 +20,8 @@ export const AvatarSpeechBubble: React.FC<Props> = ({
   floatAnimSize,
 }) => {
   return (
-    <div style={{ transform: "scale(-1, 1)", position: "absolute", top, left }}>
+    // A span (not a div) because this sits inside the sidebar's avatar <button>; it's decorative.
+    <span aria-hidden style={{ transform: "scale(-1, 1)", position: "absolute", top, left }}>
       <PiChatCircleTextDuotone
         style={{
           zIndex: 1,
@@ -31,6 +32,6 @@ export const AvatarSpeechBubble: React.FC<Props> = ({
           ...style,
         }}
       />
-    </div>
+    </span>
   );
 };
