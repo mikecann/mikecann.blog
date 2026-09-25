@@ -40,7 +40,14 @@ function writePost(slug: string, raw: string): void {
   fs.writeFileSync(absPostPath, raw, "utf8");
 }
 
-function logFix(slug: string, category: string, description: string, oldText: string, newText: string, line?: number): void {
+function logFix(
+  slug: string,
+  category: string,
+  description: string,
+  oldText: string,
+  newText: string,
+  line?: number,
+): void {
   fixLog.push({ slug, category, description, line, oldText, newText });
 }
 
@@ -57,7 +64,13 @@ function fixAboveunder(slug: string, raw: string): string {
 
   if (matches && matches.length > 0) {
     result = result.replace(regex, "aboveunder.com.au");
-    logFix(slug, "aboveunder-domain", `Updated ${matches.length} aboveunder.com -> aboveunder.com.au`, "aboveunder.com", "aboveunder.com.au");
+    logFix(
+      slug,
+      "aboveunder-domain",
+      `Updated ${matches.length} aboveunder.com -> aboveunder.com.au`,
+      "aboveunder.com",
+      "aboveunder.com.au",
+    );
   }
 
   return result;
@@ -78,7 +91,13 @@ function fixProtocolRelativeUrls(slug: string, raw: string): string {
     const matches = result.match(regex);
     if (matches && matches.length > 0) {
       result = result.replace(regex, `https://${domain}`);
-      logFix(slug, "protocol-relative-url", `Fixed ${matches.length} protocol-relative URL(s) for ${domain}`, `//${domain}`, `https://${domain}`);
+      logFix(
+        slug,
+        "protocol-relative-url",
+        `Fixed ${matches.length} protocol-relative URL(s) for ${domain}`,
+        `//${domain}`,
+        `https://${domain}`,
+      );
     }
   }
 
@@ -87,7 +106,8 @@ function fixProtocolRelativeUrls(slug: string, raw: string): string {
 
 // ─── Fix 3: Defunct Picasa links ───────────────────────────────────────────
 
-const PICASA_NOTE = "*[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*";
+const PICASA_NOTE =
+  "*[Photo album no longer available - Picasa was discontinued and migrated to Google Photos]*";
 
 function fixDefunctPicasaLinks(slug: string, raw: string): string {
   let result = raw;
@@ -101,7 +121,13 @@ function fixDefunctPicasaLinks(slug: string, raw: string): string {
   }
   for (const [oldStr, newStr] of imageMatches) {
     result = result.replace(oldStr, newStr);
-    logFix(slug, "defunct-embed", "Replaced Picasa-wrapped image link with image only", oldStr, newStr);
+    logFix(
+      slug,
+      "defunct-embed",
+      "Replaced Picasa-wrapped image link with image only",
+      oldStr,
+      newStr,
+    );
   }
 
   // 2. Plain markdown links to Picasa: [text](picasaurl) -> note
@@ -109,9 +135,15 @@ function fixDefunctPicasaLinks(slug: string, raw: string): string {
     /\[([^\]]*)\]\((https:\/\/picasaweb\.google\.com[^)]*)\)/g,
     (full, _text, _url) => {
       if (full.startsWith("[![](")) return full; // image case already fixed
-      logFix(slug, "defunct-embed", "Replaced Picasa link with discontinued note", full, PICASA_NOTE);
+      logFix(
+        slug,
+        "defunct-embed",
+        "Replaced Picasa link with discontinued note",
+        full,
+        PICASA_NOTE,
+      );
       return PICASA_NOTE;
-    }
+    },
   );
 
   return result;
@@ -128,7 +160,13 @@ function fixWordPressAbsoluteUrls(slug: string, raw: string): string {
   const matches = result.match(wpContentRegex);
   if (matches && matches.length > 0) {
     result = result.replace(wpContentRegex, "/wp-content/");
-    logFix(slug, "wordpress-absolute-url", `Converted ${matches.length} WordPress wp-content URL(s) to relative`, "https://www.mikecann.blog/wp-content/", "/wp-content/");
+    logFix(
+      slug,
+      "wordpress-absolute-url",
+      `Converted ${matches.length} WordPress wp-content URL(s) to relative`,
+      "https://www.mikecann.blog/wp-content/",
+      "/wp-content/",
+    );
   }
 
   return result;
@@ -153,11 +191,20 @@ function fixBrokenMikecannImages(slug: string, raw: string): string {
     const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
     // 1. Linked image: [![alt](broken)](url) -> note
-    const linkedImgRegex = new RegExp(`\\[!\\[[^\\]]*\\]\\(${escapedPrefix}[^)]*\\)\\]\\([^)]*\\)`, "g");
+    const linkedImgRegex = new RegExp(
+      `\\[!\\[[^\\]]*\\]\\(${escapedPrefix}[^)]*\\)\\]\\([^)]*\\)`,
+      "g",
+    );
     const linkedMatches = result.match(linkedImgRegex);
     if (linkedMatches) {
       result = result.replace(linkedImgRegex, UNAVAILABLE_NOTE);
-      logFix(slug, "broken-image", `Replaced ${linkedMatches.length} linked broken image(s) from ${prefix}`, linkedMatches[0], UNAVAILABLE_NOTE);
+      logFix(
+        slug,
+        "broken-image",
+        `Replaced ${linkedMatches.length} linked broken image(s) from ${prefix}`,
+        linkedMatches[0],
+        UNAVAILABLE_NOTE,
+      );
     }
 
     // 2. Standalone markdown image: ![alt](broken) -> note
@@ -165,7 +212,13 @@ function fixBrokenMikecannImages(slug: string, raw: string): string {
     const imgMatches = result.match(imgRegex);
     if (imgMatches) {
       result = result.replace(imgRegex, UNAVAILABLE_NOTE);
-      logFix(slug, "broken-image", `Replaced ${imgMatches.length} broken image(s) from ${prefix}`, imgMatches[0], UNAVAILABLE_NOTE);
+      logFix(
+        slug,
+        "broken-image",
+        `Replaced ${imgMatches.length} broken image(s) from ${prefix}`,
+        imgMatches[0],
+        UNAVAILABLE_NOTE,
+      );
     }
 
     // 3. HTML img tags: <img ... src="broken..."> -> note
@@ -173,7 +226,13 @@ function fixBrokenMikecannImages(slug: string, raw: string): string {
     const htmlImgMatches = result.match(htmlImgRegex);
     if (htmlImgMatches) {
       result = result.replace(htmlImgRegex, UNAVAILABLE_NOTE);
-      logFix(slug, "broken-image", `Replaced ${htmlImgMatches.length} HTML broken image(s) from ${prefix}`, htmlImgMatches[0], UNAVAILABLE_NOTE);
+      logFix(
+        slug,
+        "broken-image",
+        `Replaced ${htmlImgMatches.length} HTML broken image(s) from ${prefix}`,
+        htmlImgMatches[0],
+        UNAVAILABLE_NOTE,
+      );
     }
   }
 
@@ -186,15 +245,29 @@ function fixMikecannFlashAbsoluteUrls(slug: string, raw: string): string {
   let result = raw;
 
   const replacements: Array<{ from: RegExp; to: string; label: string }> = [
-    { from: /https:\/\/www\.mikecann\.blog\/projects\//g, to: "/projects/", label: "https://www.mikecann.blog/projects/" },
-    { from: /https:\/\/www\.mikecann\.blog\/DumpingGround\//g, to: "/DumpingGround/", label: "https://www.mikecann.blog/DumpingGround/" },
+    {
+      from: /https:\/\/www\.mikecann\.blog\/projects\//g,
+      to: "/projects/",
+      label: "https://www.mikecann.blog/projects/",
+    },
+    {
+      from: /https:\/\/www\.mikecann\.blog\/DumpingGround\//g,
+      to: "/DumpingGround/",
+      label: "https://www.mikecann.blog/DumpingGround/",
+    },
   ];
 
   for (const { from, to, label } of replacements) {
     const matches = result.match(from);
     if (matches && matches.length > 0) {
       result = result.replace(from, to);
-      logFix(slug, "flash-absolute-url", `Converted ${matches.length} absolute Flash URL(s) to relative`, label, to);
+      logFix(
+        slug,
+        "flash-absolute-url",
+        `Converted ${matches.length} absolute Flash URL(s) to relative`,
+        label,
+        to,
+      );
     }
   }
 
@@ -215,7 +288,11 @@ const DEAD_FLASH_DOMAINS = [
   "picasaweb.google.com/s/c/bin/slideshow.swf",
 ];
 
-function replaceFlashBlock(content: string, urlPattern: RegExp, note: string): { result: string; count: number } {
+function replaceFlashBlock(
+  content: string,
+  urlPattern: RegExp,
+  note: string,
+): { result: string; count: number } {
   let result = content;
   let count = 0;
 
@@ -246,16 +323,26 @@ function fixVimeoFlashEmbeds(slug: string, raw: string): string {
   let count = 0;
 
   // Match full <object> block that references vimeo moogaloop.swf
-  result = result.replace(/<object([^>]*)>[\s\S]*?vimeo\.com\/moogaloop\.swf\?clip_id=(\d+)[\s\S]*?<\/object>/gi, (match, attrs, clipId) => {
-    const wMatch = attrs.match(/width=["']?(\d+)/i);
-    const hMatch = attrs.match(/height=["']?(\d+)/i);
-    const w = wMatch ? wMatch[1] : "640";
-    const h = hMatch ? hMatch[1] : "360";
-    count++;
-    return `<iframe src="https://player.vimeo.com/video/${clipId}" width="${w}" height="${h}" frameborder="0" allowfullscreen></iframe>`;
-  });
+  result = result.replace(
+    /<object([^>]*)>[\s\S]*?vimeo\.com\/moogaloop\.swf\?clip_id=(\d+)[\s\S]*?<\/object>/gi,
+    (match, attrs, clipId) => {
+      const wMatch = attrs.match(/width=["']?(\d+)/i);
+      const hMatch = attrs.match(/height=["']?(\d+)/i);
+      const w = wMatch ? wMatch[1] : "640";
+      const h = hMatch ? hMatch[1] : "360";
+      count++;
+      return `<iframe src="https://player.vimeo.com/video/${clipId}" width="${w}" height="${h}" frameborder="0" allowfullscreen></iframe>`;
+    },
+  );
 
-  if (count > 0) logFix(slug, "flash-vimeo-rescue", `Converted ${count} Vimeo Flash embed(s) to iframe`, "vimeo.com/moogaloop.swf", "player.vimeo.com/video/...");
+  if (count > 0)
+    logFix(
+      slug,
+      "flash-vimeo-rescue",
+      `Converted ${count} Vimeo Flash embed(s) to iframe`,
+      "vimeo.com/moogaloop.swf",
+      "player.vimeo.com/video/...",
+    );
   return result;
 }
 
@@ -270,7 +357,13 @@ function fixDeadThirdPartyFlashEmbeds(slug: string, raw: string): string {
     const pattern = new RegExp(escaped, "i");
     const { result: updated, count } = replaceFlashBlock(result, pattern, FLASH_DEAD_NOTE);
     if (count > 0) {
-      logFix(slug, "defunct-flash-embed", `Replaced ${count} dead Flash embed(s) from ${domain}`, domain, FLASH_DEAD_NOTE);
+      logFix(
+        slug,
+        "defunct-flash-embed",
+        `Replaced ${count} dead Flash embed(s) from ${domain}`,
+        domain,
+        FLASH_DEAD_NOTE,
+      );
       result = updated;
     }
   }
@@ -330,44 +423,107 @@ function fixSpecificPosts(slug: string, raw: string): string {
 
     // Remaining broken external images - one-offs from dead external domains
     case "graduation-part-one": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.hud\.ac\.uk\/cms-test\/images\/logo2\.gif\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead Huddersfield University logo", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/www\.hud\.ac\.uk\/cms-test\/images\/logo2\.gif\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead Huddersfield University logo",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "highlight-selected-plugin-updated-by-david-hancock": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/gonegothic\.com\/files\/flashdevelop\/HighlightSelection\/HighlightSelection01\.jpg\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead gonegothic.com screenshot", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/gonegothic\.com\/files\/flashdevelop\/HighlightSelection\/HighlightSelection01\.jpg\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead gonegothic.com screenshot",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "how-to-tell-if-you-cat-is-plotting-to-kill-you": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/icanhascheezburger\.files\.wordpress\.com\/[^)]+\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead ICanHasCheezburger image", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/icanhascheezburger\.files\.wordpress\.com\/[^)]+\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead ICanHasCheezburger image",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "im-famous": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.artificial-studios\.co\.uk\/wp-content\/[^)]+\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead artificial-studios.co.uk image", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/www\.artificial-studios\.co\.uk\/wp-content\/[^)]+\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead artificial-studios.co.uk image",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "stall": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.chillblast\.com\/images\/\/[^)]+\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead Chillblast product image", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/www\.chillblast\.com\/images\/\/[^)]+\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead Chillblast product image",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "trip-to-america": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/www\.trekamerica\.com\/images\/[^)]+\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead TrekAmerica map images", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/www\.trekamerica\.com\/images\/[^)]+\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead TrekAmerica map images",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
     case "vietnam-2011": {
-      result = result.replace(/!\[[^\]]*\]\(https:\/\/lh4\.googleusercontent\.com\/[^)]+\)/g, "*[Image no longer available]*");
-      logFix(slug, "broken-image", "Replaced dead Google Photos image", "", "*[Image no longer available]*");
+      result = result.replace(
+        /!\[[^\]]*\]\(https:\/\/lh4\.googleusercontent\.com\/[^)]+\)/g,
+        "*[Image no longer available]*",
+      );
+      logFix(
+        slug,
+        "broken-image",
+        "Replaced dead Google Photos image",
+        "",
+        "*[Image no longer available]*",
+      );
       break;
     }
 
@@ -388,7 +544,13 @@ function fixSpecificPosts(slug: string, raw: string): string {
       const fix = "using for my personal projects";
       if (result.includes(old)) {
         result = result.replace(old, fix);
-        logFix(slug, "internal-dead-link", "Removed dead link to non-existent haxe-2 post (no matching post found)", old, fix);
+        logFix(
+          slug,
+          "internal-dead-link",
+          "Removed dead link to non-existent haxe-2 post (no matching post found)",
+          old,
+          fix,
+        );
       }
       break;
     }
@@ -408,7 +570,13 @@ function fixSpecificPosts(slug: string, raw: string): string {
       const fix = "/about";
       if (result.includes(old)) {
         result = result.replace(old, fix);
-        logFix(slug, "internal-dead-link", "Fixed About page link (was /posts/about-2/, now /about)", old, fix);
+        logFix(
+          slug,
+          "internal-dead-link",
+          "Fixed About page link (was /posts/about-2/, now /about)",
+          old,
+          fix,
+        );
       }
       break;
     }
@@ -419,7 +587,13 @@ function fixSpecificPosts(slug: string, raw: string): string {
       const fix = `*[Interactive map no longer available - Google Maps Engine was discontinued]*`;
       if (result.includes(old)) {
         result = result.replace(old, fix);
-        logFix(slug, "defunct-embed", "Replaced defunct Google Maps Engine iframe with note", old, fix);
+        logFix(
+          slug,
+          "defunct-embed",
+          "Replaced defunct Google Maps Engine iframe with note",
+          old,
+          fix,
+        );
       }
       break;
     }
@@ -434,11 +608,23 @@ function fixSpecificPosts(slug: string, raw: string): string {
       const fixTextLink = `*[Interactive map no longer available - Google Maps Engine was discontinued]*`;
       if (result.includes(oldImgLine)) {
         result = result.replace(oldImgLine, fixImgLine);
-        logFix(slug, "defunct-embed", "Removed defunct Maps Engine link from image", oldImgLine, fixImgLine);
+        logFix(
+          slug,
+          "defunct-embed",
+          "Removed defunct Maps Engine link from image",
+          oldImgLine,
+          fixImgLine,
+        );
       }
       if (result.includes(oldTextLink)) {
         result = result.replace(oldTextLink, fixTextLink);
-        logFix(slug, "defunct-embed", "Replaced defunct Maps Engine link text with note", oldTextLink, fixTextLink);
+        logFix(
+          slug,
+          "defunct-embed",
+          "Replaced defunct Maps Engine link text with note",
+          oldTextLink,
+          fixTextLink,
+        );
       }
       break;
     }
@@ -454,7 +640,14 @@ async function downloadCloudFrontAssets(): Promise<void> {
 
   // Download GameJacket tutorial images + zip
   const gamejacketDir = join(postsDirectory, "flashdevelop-preloaders-and-gamejacket");
-  const gamejacketFiles = ["01.png", "02.png", "03.png", "04.png", "05.png", "GameJacketProject.zip"];
+  const gamejacketFiles = [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "GameJacketProject.zip",
+  ];
 
   for (const file of gamejacketFiles) {
     const destPath = join(gamejacketDir, file);

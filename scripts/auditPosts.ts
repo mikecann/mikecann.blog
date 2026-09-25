@@ -17,12 +17,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import {
-  getImageRefs,
-  getLinkRefs,
-  getUnparsedImageSyntax,
-  parseMarkdown,
-} from "./lib/markdown";
+import { getImageRefs, getLinkRefs, getUnparsedImageSyntax, parseMarkdown } from "./lib/markdown";
 import { resolveLocalFile } from "./lib/postAssets";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -160,9 +155,7 @@ function extractIframes(content: string): Array<{ url: string; line: number; raw
   return results;
 }
 
-function extractFlashEmbeds(
-  content: string
-): Array<{ url: string; line: number; raw: string }> {
+function extractFlashEmbeds(content: string): Array<{ url: string; line: number; raw: string }> {
   const results: Array<{ url: string; line: number; raw: string }> = [];
   const lines = content.split("\n");
 
@@ -209,7 +202,9 @@ function isExternalUrl(url: string): boolean {
 }
 
 function isLocalFileRef(url: string): boolean {
-  return url.startsWith("./") || url.startsWith("../") || (url.startsWith("/") && !url.startsWith("//"));
+  return (
+    url.startsWith("./") || url.startsWith("../") || (url.startsWith("/") && !url.startsWith("//"))
+  );
 }
 
 // Cache of URL check results to avoid rechecking the same URL
@@ -222,10 +217,7 @@ type UrlCheckResult = {
 
 const urlCache = new Map<string, UrlCheckResult>();
 
-async function checkUrl(
-  url: string,
-  retries = RETRY_COUNT
-): Promise<UrlCheckResult> {
+async function checkUrl(url: string, retries = RETRY_COUNT): Promise<UrlCheckResult> {
   // Normalize
   const normalizedUrl = url.startsWith("//") ? `https:${url}` : url;
 
@@ -308,7 +300,7 @@ function sleep(ms: number): Promise<void> {
 async function pMap<T, R>(
   items: T[],
   fn: (item: T) => Promise<R>,
-  concurrency: number
+  concurrency: number,
 ): Promise<R[]> {
   const results: R[] = new Array(items.length);
   let idx = 0;
@@ -499,7 +491,11 @@ function parsePost(slug: string): ParsedPost {
   // Also add iframe URLs that aren't from defunct services
   for (const iframe of iframes) {
     const domain = getDomain(iframe.url);
-    if (domain && !DEFUNCT_SERVICES[domain] && isExternalUrl(iframe.url.startsWith("//") ? `https:${iframe.url}` : iframe.url)) {
+    if (
+      domain &&
+      !DEFUNCT_SERVICES[domain] &&
+      isExternalUrl(iframe.url.startsWith("//") ? `https:${iframe.url}` : iframe.url)
+    ) {
       if (!seenUrls.has(iframe.url)) {
         seenUrls.add(iframe.url);
         externalUrls.push({ url: iframe.url, line: iframe.line, isImage: false });
@@ -519,7 +515,10 @@ function parsePost(slug: string): ParsedPost {
         line: item.line,
       });
     }
-    if (item.url.startsWith("//") && !localIssues.some(i => i.url === item.url && i.type === "protocol-relative-url")) {
+    if (
+      item.url.startsWith("//") &&
+      !localIssues.some((i) => i.url === item.url && i.type === "protocol-relative-url")
+    ) {
       localIssues.push({
         type: "protocol-relative-url",
         severity: "warning",
@@ -597,7 +596,7 @@ async function main() {
   const otherUrls = urlList.filter((u) => getDomain(u) !== "cdn.shopify.com");
 
   console.log(
-    `\nPhase 2: Checking ${urlList.length} unique external URLs (${otherUrls.length} normal, ${shopifyUrls.length} Shopify with rate limit)...\n`
+    `\nPhase 2: Checking ${urlList.length} unique external URLs (${otherUrls.length} normal, ${shopifyUrls.length} Shopify with rate limit)...\n`,
   );
 
   // ── Phase 3: Check all external URLs ─────────────────────────────────────
@@ -665,11 +664,7 @@ async function main() {
         // External dead links are downgraded to warning - they're known-deferred
         // (old posts link to sites that have gone dark over the years, not fixable)
         // Images from skipped domains are already filtered above, so broken-image here is still an error
-        const severity = isBotBlocked
-          ? "info"
-          : item.isImage
-            ? "error"
-            : "warning";
+        const severity = isBotBlocked ? "info" : item.isImage ? "error" : "warning";
 
         issues.push({
           type: item.isImage ? "broken-image" : "dead-link",

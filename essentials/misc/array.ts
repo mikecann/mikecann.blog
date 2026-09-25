@@ -113,7 +113,7 @@ export type LengthAtLeast<T extends readonly any[], L extends number> = Pick<
 // Borrowed from: https://stackoverflow.com/a/69370003/521097
 export function hasLengthAtLeast<T extends readonly any[], L extends number>(
   arr: T,
-  len: L
+  len: L,
 ): arr is T & LengthAtLeast<T, L> {
   return arr.length >= len;
 }

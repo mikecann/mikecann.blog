@@ -13,8 +13,7 @@ export const UserMessage: React.FC<Props> = ({ message }) => {
 
   try {
     userMessage = parseUserMessageJSON(message.text).message;
-  } catch (e) {
-  }
+  } catch (e) {}
 
   return (
     <div style={{ display: "flex", justifyContent: "flex-end", flexDirection: "row" }}>

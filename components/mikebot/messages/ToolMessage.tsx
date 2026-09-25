@@ -26,16 +26,25 @@ export const ToolMessage: React.FC<Props> = ({ message }) => {
       {message.parts.map((part, idx) => {
         // Handle tool-call parts - check for exact type match first
         if (part.type === "tool-call") {
-          const toolCallPart = part as unknown as { type: "tool-call"; toolCallId: string; toolName?: string; args?: any };
+          const toolCallPart = part as unknown as {
+            type: "tool-call";
+            toolCallId: string;
+            toolName?: string;
+            args?: any;
+          };
           if (!toolCallPart.toolName) return null;
-          
+
           return (
             <div key={idx} style={fadedStyle}>
               <span role="img" aria-label="tool" style={{ opacity: 0.5 }}>
                 🛠️
               </span>
               {iife(() => {
-                if (toolCallPart.toolName == "searchBlogPosts" && toolCallPart.args && "query" in toolCallPart.args) {
+                if (
+                  toolCallPart.toolName == "searchBlogPosts" &&
+                  toolCallPart.args &&
+                  "query" in toolCallPart.args
+                ) {
                   return (
                     <>
                       Mikebot searched for{" "}
@@ -63,7 +72,11 @@ export const ToolMessage: React.FC<Props> = ({ message }) => {
                   🛠️
                 </span>
                 {iife(() => {
-                  if (toolPart.toolName == "searchBlogPosts" && toolPart.args && "query" in toolPart.args) {
+                  if (
+                    toolPart.toolName == "searchBlogPosts" &&
+                    toolPart.args &&
+                    "query" in toolPart.args
+                  ) {
                     return (
                       <>
                         Mikebot searched for{" "}

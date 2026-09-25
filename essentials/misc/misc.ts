@@ -6,7 +6,10 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 export type ThenArg<T> = T extends Promise<infer U> ? U : T;
 
 interface Omitted {
-  <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
+  <T extends object, K extends [...(keyof T)[]]>(
+    obj: T,
+    ...keys: K
+  ): {
     [K2 in Exclude<keyof T, K[number]>]: T[K2];
   };
 }
@@ -39,14 +42,14 @@ export type DeepOmit<T, K> = T extends Primitive
         ? TP extends Primitive
           ? TP // leave primitives and functions alone
           : TP extends any[]
-          ? DeepOmitArray<TP, K> // Array special handling
-          : DeepOmit<TP, K>
+            ? DeepOmitArray<TP, K> // Array special handling
+            : DeepOmit<TP, K>
         : never;
     };
 
 export function omitDeep<T extends object, K extends string>(obj: T, toOmit: K): DeepOmit<T, K> {
   return JSON.parse(JSON.stringify(obj), (key: string, value: any) =>
-    key === toOmit ? undefined : value
+    key === toOmit ? undefined : value,
   );
 }
 
@@ -237,7 +240,7 @@ export function getAt<T>(arr: T[], index: number): T {
   const el = arr[index];
   if (el == undefined)
     throw new Error(
-      `Could not get element at index '${index}' in array, it appears to be undefined`
+      `Could not get element at index '${index}' in array, it appears to be undefined`,
     );
   return el;
 }
@@ -245,7 +248,7 @@ export function getAt<T>(arr: T[], index: number): T {
 export const ensureFindIndex = <T>(
   arr: T[],
   pred: (el: T) => boolean,
-  err = `Could not find element index`
+  err = `Could not find element index`,
 ) => {
   const index = arr.findIndex(pred);
   if (index == -1) throw new Error(err);
@@ -254,15 +257,15 @@ export const ensureFindIndex = <T>(
 
 export const simultaneously = <P, T extends Record<string, P>, U>(
   obj: T,
-  fn: (entry: P) => Promise<U>
+  fn: (entry: P) => Promise<U>,
 ) => {
   return Promise.all(
-    Object.entries(obj).map(([key, value]) => fn(value).then((result) => ({ key, result })))
+    Object.entries(obj).map(([key, value]) => fn(value).then((result) => ({ key, result }))),
   ).then((entries) =>
     entries.reduce(
       (accum, curr) => ({ ...accum, [curr.key]: curr.result }),
-      {} as Record<keyof T, U>
-    )
+      {} as Record<keyof T, U>,
+    ),
   );
 };
 
@@ -275,7 +278,7 @@ export const idArrayToRecord = <T extends { id: string }>(objects: T[]): Record<
 
 export const arrayToRecord = <T extends object>(
   objects: T[],
-  getKey: (item: T) => string
+  getKey: (item: T) => string,
 ): Record<string, T> => {
   const obj: any = {};
   for (const o of objects) obj[getKey(o)] = o;
@@ -285,7 +288,7 @@ export const arrayToRecord = <T extends object>(
 export const arrayToRecordWithValueGetter = <T extends object, V>(
   objects: T[],
   getKey: (item: T) => string,
-  getValue: (item: T) => V = (item) => item as unknown as V // Default to original object if no getValue function is provided
+  getValue: (item: T) => V = (item) => item as unknown as V, // Default to original object if no getValue function is provided
 ): Record<string, V> => {
   const obj: Record<string, V> = {};
   for (const o of objects) {
@@ -295,17 +298,20 @@ export const arrayToRecordWithValueGetter = <T extends object, V>(
 };
 
 export function idTupleToRecord<T extends { id: keyof any }>(
-  tuple: ReadonlyArray<T>
+  tuple: ReadonlyArray<T>,
 ): Record<T["id"], T> {
-  return tuple.reduce((acc, element) => {
-    (acc as any)[element.id] = element;
-    return acc;
-  }, {} as Record<T["id"], T>);
+  return tuple.reduce(
+    (acc, element) => {
+      (acc as any)[element.id] = element;
+      return acc;
+    },
+    {} as Record<T["id"], T>,
+  );
 }
 
 export const potentialRecordToRecord = <T extends Record<string, unknown>>(
   potential: T[] | Record<string, T> | undefined,
-  getKey: (item: T) => string
+  getKey: (item: T) => string,
 ): Record<string, T> => {
   if (!potential) return {};
   if (Array.isArray(potential)) return arrayToRecord(potential, getKey);
@@ -326,19 +332,19 @@ export const checkIfDuplicatesExistsInArray = (arr: string[]) => new Set(arr).si
 
 export const optionalParams = <T extends Record<string, any>>(
   params: Partial<T> | undefined,
-  alternatives: T
+  alternatives: T,
 ): T =>
   Object.keys(alternatives).reduce(
     (accum, key) => ({
       ...accum,
       [key]: params && params[key] != undefined ? params[key] : alternatives[key],
     }),
-    {}
+    {},
   ) as any;
 
 export const objectMap = <TInp, TOutp, TInpRecord extends Record<string, TInp>>(
   objInput: TInpRecord,
-  mapper: (value: TInp, key: string) => TOutp
+  mapper: (value: TInp, key: string) => TOutp,
 ): Record<keyof TInpRecord, TOutp> => {
   const outp: any = {};
   for (const key in objInput) outp[key] = mapper(objInput[key]!, key);
@@ -347,7 +353,7 @@ export const objectMap = <TInp, TOutp, TInpRecord extends Record<string, TInp>>(
 
 export const objectMapStr = <TInp, TOut>(
   objInput: { [s: string]: TInp },
-  mapper: (value: TInp, key: string) => TOut
+  mapper: (value: TInp, key: string) => TOut,
 ): { [s: string]: TOut } => {
   const outp: any = {};
   for (const key in objInput) outp[key] = mapper(objInput[key]!, key);
@@ -356,7 +362,7 @@ export const objectMapStr = <TInp, TOut>(
 
 export const objectFilter = <TInp>(
   objInput: Record<string, TInp>,
-  predicate: (value: TInp, key: string) => boolean
+  predicate: (value: TInp, key: string) => boolean,
 ): Record<string, TInp> => {
   const outp: any = {};
   for (const key in objInput) {

@@ -22,8 +22,8 @@ export const slugFromChildren = (children: any) => {
       typeof element === "string"
         ? element
         : element?.type !== undefined && typeof element.props.children === "string"
-        ? element.props.children
-        : []
+          ? element.props.children
+          : [],
     )
     .join("");
 
