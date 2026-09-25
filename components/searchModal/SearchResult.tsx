@@ -1,11 +1,26 @@
 import { Horizontal, Vertical } from "../../components/utils/gls";
 import * as React from "react";
-import { format } from "date-fns";
 import Link from "next/link";
-import { AlgoliaHit } from "../../scripts/algolia/types";
+import type { SearchHit } from "../../utils/algolia";
+import { formatUTCDate } from "../../utils/dates";
+import { assetUrl } from "../../utils/assets";
 
-export function SearchResult({ hit, onClick }: { hit: AlgoliaHit; onClick?: () => any }) {
-  const { coverImage, createdAt, excerpt, title, slug } = hit;
+/**
+ * The index has stored cover images relative to the post (`./header.jpg`); newer indexes store
+ * root paths. Resolve either to a URL the browser can load.
+ */
+export const getSearchHitImageUrl = ({
+  coverImage,
+  slug,
+}: Pick<SearchHit, "coverImage" | "slug">) => {
+  if (!coverImage) return "/images/fallback-post-header.jpg";
+  if (/^(?:[a-z][a-z0-9+.-]*:)?\/\//i.test(coverImage)) return coverImage;
+  if (coverImage.startsWith("/")) return assetUrl(coverImage);
+  return assetUrl(`/posts/${slug}/${coverImage.replace(/^\.\//, "")}`);
+};
+
+export function SearchResult({ hit, onClick }: { hit: SearchHit; onClick?: () => any }) {
+  const { createdAt, title, slug } = hit;
   const [isOver, setIsOver] = React.useState(false);
   return (
     <Link href={`/posts/${slug}`} onClick={onClick}>
@@ -18,12 +33,14 @@ export function SearchResult({ hit, onClick }: { hit: AlgoliaHit; onClick?: () =
           overflowX: "hidden",
         }}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          // layout="fill"
           alt={`${title} post cover image`}
-          src={coverImage}
+          src={getSearchHitImageUrl(hit)}
           width={100}
           height={60}
+          loading="lazy"
+          decoding="async"
           style={{
             objectFit: "cover",
             borderRadius: 6,
@@ -37,9 +54,7 @@ export function SearchResult({ hit, onClick }: { hit: AlgoliaHit; onClick?: () =
           style={{ width: "calc(100% - 140px)", overflow: "hidden" }}
         >
           <div style={{ margin: 0 }}>{title}</div>
-          <div style={{ color: "#bbbbbb", fontSize: "0.8em" }}>
-            {format(new Date(createdAt), "do MMMM yyyy")}
-          </div>
+          <div style={{ color: "#767676", fontSize: "0.8em" }}>{formatUTCDate(createdAt)}</div>
         </Vertical>
       </Horizontal>
     </Link>
