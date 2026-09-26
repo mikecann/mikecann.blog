@@ -3,11 +3,11 @@ import { DAY, HOUR, MINUTE, type RateLimitConfig } from "@convex-dev/rate-limite
 import { MIKEBOT_MAX_MESSAGE_LENGTH } from "./shared";
 
 /** Used when the MIKEBOT_MODEL env var isn't set. */
-export const MIKEBOT_DEFAULT_MODEL = "openai/gpt-5.6-luna";
+export const MIKEBOT_DEFAULT_MODEL = "openai/gpt-6-luna";
 
 /**
  * Env var that picks Mikebot's model without a code change, using any Convex AI Gateway model id,
- * e.g. "openai/gpt-6-luna" once the gateway lists it, or "openrouter/auto". The gateway doesn't
+ * e.g. "openai/gpt-6-luna-pro", "google/gemini-3.8-flash" or "openrouter/auto". The gateway doesn't
  * accept OpenRouter's routing options, so "openrouter/auto" can't be limited to cheap models and
  * may pick pricey ones; the daily cost budget below still caps the spend.
  */
