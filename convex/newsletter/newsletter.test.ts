@@ -53,6 +53,7 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
   delete process.env.MAILCHIMP_API_KEY;
   delete process.env.MAILCHIMP_ALLOW_NON_PRODUCTION_SEND;
 });
@@ -182,6 +183,24 @@ describe("newsletter signup endpoint", () => {
         .location,
     ).toBe("https://mikecann.blog/about?newsletter=confirm_email");
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  test("sends readers to the error status when Mailchimp can't be reached", async () => {
+    const t = setup();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => {
+        throw new TypeError("fetch failed");
+      }),
+    );
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    expect((await postForm(t, { email: "reader@example.com", returnTo: "/about" })).location).toBe(
+      "https://mikecann.blog/about?newsletter=error",
+    );
+    expect((await subscribe(t, { email: "other@example.com" })).json).toMatchObject({
+      status: "error",
+      fallbackUrl: HOSTED_SIGNUP_FORM_URL,
+    });
   });
 
   test("plain form posts are rate limited too", async () => {

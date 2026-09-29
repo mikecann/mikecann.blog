@@ -55,7 +55,13 @@ async function subscribe(ctx: ActionCtx, fields: SignupFields): Promise<Subscrib
   const global = await newsletterRateLimiter.limit(ctx, "newsletterSubscribeGlobal");
   if (!global.ok) return SUBSCRIBE_RESULTS.rate_limited;
 
-  return await addPendingSubscriber(email, source);
+  try {
+    return await addPendingSubscriber(email, source);
+  } catch (error) {
+    // Mailchimp unreachable. A 500 would strand readers whose form posted here directly.
+    console.error("Mailchimp signup request failed:", error);
+    return SUBSCRIBE_RESULTS.error;
+  }
 }
 
 /**
