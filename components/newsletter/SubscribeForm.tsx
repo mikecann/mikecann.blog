@@ -1,6 +1,11 @@
 import * as React from "react";
+import { useRouter } from "next/router";
 import { classes, style } from "typestyle";
 import {
+  SIGNUP_STATUS_PARAM,
+  SUBSCRIBE_ENDPOINT,
+  SUBSCRIBE_RESULTS,
+  isSubscribeStatus,
   isSuccess,
   rememberSubscribed,
   subscribeToNewsletter,
@@ -72,12 +77,27 @@ const message = style({ margin: "8px 0 0", fontSize: 14, color: "#5d686f", minHe
 const successMessage = style({ color: "#2e7d32", fontWeight: 600 });
 
 export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className }) => {
+  const router = useRouter();
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const [email, setEmail] = React.useState("");
   const [website, setWebsite] = React.useState("");
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<SubscribeResult | null>(null);
   const emailId = React.useId();
   const done = result != null && isSuccess(result.status);
+
+  const showOutcome = (outcome: SubscribeResult, eventProperties?: Record<string, unknown>) => {
+    setResult(outcome);
+    trackEvent(isSuccess(outcome.status) ? "newsletter_subscribed" : "newsletter_signup_failed", {
+      source,
+      status: outcome.status,
+      ...eventProperties,
+    });
+    if (isSuccess(outcome.status)) {
+      rememberSubscribed();
+      onSubscribed?.(outcome);
+    }
+  };
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,21 +106,31 @@ export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className
     setResult(null);
     const outcome = await subscribeToNewsletter({ email, source, website });
     setSubmitting(false);
-    setResult(outcome);
-    trackEvent(isSuccess(outcome.status) ? "newsletter_subscribed" : "newsletter_signup_failed", {
-      source,
-      status: outcome.status,
-    });
-    if (isSuccess(outcome.status)) {
-      rememberSubscribed();
-      onSubscribed?.(outcome);
-    }
+    showOutcome(outcome);
   };
 
+  // If the form was submitted before this page's JavaScript loaded, the browser posted it to the
+  // endpoint itself, and the endpoint redirected back here with the status in the URL. Show it, then
+  // take it out of the URL so a reload or a shared link doesn't show it again.
+  React.useEffect(() => {
+    if (!router.isReady) return;
+    const { [SIGNUP_STATUS_PARAM]: status, ...query } = router.query;
+    if (!isSubscribeStatus(status)) return;
+    router
+      .replace({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false })
+      .catch(() => {});
+    showOutcome(SUBSCRIBE_RESULTS[status], { via: "form-post" });
+    containerRef.current?.scrollIntoView({ block: "center" });
+  }, [router.isReady]);
+
   return (
-    <div className={className}>
+    <div className={className} ref={containerRef}>
       {!done && (
-        <form onSubmit={onSubmit}>
+        // method and action only matter if the form is submitted before React takes over; they keep
+        // the address out of the URL (a GET would put it in the query string).
+        <form method="post" action={SUBSCRIBE_ENDPOINT} onSubmit={onSubmit}>
+          <input type="hidden" name="source" value={source} />
+          <input type="hidden" name="returnTo" value={router.asPath.split(/[?#]/)[0]} />
           <label htmlFor={emailId} className={visuallyHidden}>
             Email address
           </label>

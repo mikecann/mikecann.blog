@@ -1,12 +1,13 @@
 import { httpRouter } from "convex/server";
-import { httpAction } from "./_generated/server";
+import { httpAction, type ActionCtx } from "./_generated/server";
 import {
   addPendingSubscriber,
   isPlausibleEmail,
   newsletterRateLimiter,
   normalizeEmail,
-  type SubscribeResult,
+  signupRedirectUrl,
 } from "./newsletter/lib";
+import { SUBSCRIBE_RESULTS, type SubscribeResult } from "./newsletter/results";
 import { sha256Hex } from "./mikebot/sha256";
 
 const http = httpRouter();
@@ -25,45 +26,58 @@ const json = (result: SubscribeResult, status = 200) =>
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
+/** `website` is a honeypot field that people never see or fill in. */
+type SignupFields = { email?: unknown; source?: unknown; website?: unknown };
+
+async function subscribe(ctx: ActionCtx, fields: SignupFields): Promise<SubscribeResult> {
+  const email = typeof fields.email == "string" ? normalizeEmail(fields.email) : "";
+  const source = typeof fields.source == "string" ? fields.source : "unknown";
+  if (!isPlausibleEmail(email)) return SUBSCRIBE_RESULTS.invalid_email;
+
+  // Bots fill in every field; pretend it worked so they don't adapt.
+  if (typeof fields.website == "string" && fields.website.trim() != "")
+    return SUBSCRIBE_RESULTS.confirm_email;
+
+  const perEmail = await newsletterRateLimiter.limit(ctx, "newsletterSubscribePerEmail", {
+    key: sha256Hex(email),
+  });
+  if (!perEmail.ok) return SUBSCRIBE_RESULTS.rate_limited;
+  const global = await newsletterRateLimiter.limit(ctx, "newsletterSubscribeGlobal");
+  if (!global.ok) return SUBSCRIBE_RESULTS.rate_limited;
+
+  return await addPendingSubscriber(email, source);
+}
+
 /**
  * Newsletter signup: `{ email, source, website }` as JSON (sent as text/plain so browsers skip the
- * CORS preflight). `website` is a honeypot field that people never see or fill in.
+ * CORS preflight). A form submitted before the blog's JavaScript has loaded arrives instead as a
+ * plain form post with the same fields plus `returnTo`, and gets a redirect back to that page.
  */
 http.route({
   path: "/newsletter/subscribe",
   method: "POST",
   handler: httpAction(async (ctx, request) => {
-    let body: { email?: unknown; source?: unknown; website?: unknown };
+    if (request.headers.get("Content-Type")?.startsWith("application/x-www-form-urlencoded")) {
+      const form = new URLSearchParams(await request.text());
+      const { status } = await subscribe(ctx, {
+        email: form.get("email"),
+        source: form.get("source"),
+        website: form.get("website"),
+      });
+      // 303 so the browser follows it with a GET, and a reload doesn't resubmit the form.
+      return new Response(null, {
+        status: 303,
+        headers: { Location: signupRedirectUrl(request.headers, form.get("returnTo"), status) },
+      });
+    }
+
+    let body: SignupFields;
     try {
       body = JSON.parse(await request.text());
     } catch {
       return json({ status: "error", message: "Invalid request." }, 400);
     }
-
-    const email = typeof body.email == "string" ? normalizeEmail(body.email) : "";
-    const source = typeof body.source == "string" ? body.source : "unknown";
-    if (!isPlausibleEmail(email))
-      return json({ status: "invalid_email", message: "That email address doesn't look right." });
-
-    // Bots fill in every field; pretend it worked so they don't adapt.
-    if (typeof body.website == "string" && body.website.trim() != "")
-      return json({
-        status: "confirm_email",
-        message: "Almost done! Check your inbox and click the link to confirm your subscription.",
-      });
-
-    const tooMany = {
-      status: "rate_limited",
-      message: "Too many signup attempts right now. Please try again in a little while.",
-    } as const;
-    const perEmail = await newsletterRateLimiter.limit(ctx, "newsletterSubscribePerEmail", {
-      key: sha256Hex(email),
-    });
-    if (!perEmail.ok) return json(tooMany);
-    const global = await newsletterRateLimiter.limit(ctx, "newsletterSubscribeGlobal");
-    if (!global.ok) return json(tooMany);
-
-    return json(await addPendingSubscriber(email, source));
+    return json(await subscribe(ctx, body));
   }),
 });
 
