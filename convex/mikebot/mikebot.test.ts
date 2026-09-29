@@ -6,7 +6,7 @@ import { api, internal } from "../_generated/api";
 import schema from "../schema";
 import { MIKEBOT_LIMITS } from "./config";
 import { sha256Hex } from "./sha256";
-import { getUtcDayKey } from "./guards";
+import { getUtcDayKey, mikebotRateLimiter } from "./guards";
 import { modules } from "../test.setup";
 
 // Never call the Convex AI Gateway from tests.
@@ -229,14 +229,16 @@ describe("sending messages", () => {
   test("caps messages per user per day", async () => {
     const t = setup();
     const threadId = await createUserWithThread(t);
+    const [user] = await t.run((ctx) => ctx.db.query("users").collect());
     const { rate } = MIKEBOT_LIMITS.rateLimits.sendMessagePerUserPerDay;
+    // The daily window starts at a random offset, so moving the clock forward
+    // could roll into a new window and reset the count. Keep the clock still and
+    // refill the per-minute bucket instead, so only the daily limit applies.
     for (let i = 0; i < rate; i++) {
-      // Space messages out so only the daily limit applies
-      vi.setSystemTime(START + i * 60_000);
       await send(t, threadId, `message ${i}`);
       await finishPendingReplies(t);
+      await t.run((ctx) => mikebotRateLimiter.reset(ctx, "sendMessagePerUser", { key: user._id }));
     }
-    vi.setSystemTime(START + rate * 60_000);
     await expectMikebotError(send(t, threadId, "one too many"), "daily_limit");
   }, 20_000);
 
