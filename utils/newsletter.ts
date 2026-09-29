@@ -1,18 +1,20 @@
 import { CONVEX_SITE_URL } from "./convex";
+import {
+  SIGNUP_STATUS_PARAM,
+  SUBSCRIBE_RESULTS,
+  isSubscribeStatus,
+  type SubscribeResult,
+  type SubscribeStatus,
+} from "../convex/newsletter/results";
 
-export type SubscribeStatus =
-  "confirm_email" | "already_subscribed" | "invalid_email" | "rate_limited" | "error";
+// Statuses, messages and the redirect's query parameter are shared with the signup endpoint.
+export * from "../convex/newsletter/results";
 
-/** Mirrors `SubscribeResult` in convex/newsletter/lib.ts. */
-export type SubscribeResult = {
-  status: SubscribeStatus;
-  message: string;
-  fallbackUrl?: string;
-};
-
-/** Mailchimp's hosted form, used when the request can't reach our endpoint at all. */
-export const HOSTED_SIGNUP_FORM_URL =
-  "https://epicshrimp.us3.list-manage.com/subscribe?u=aaed03be8d4e6cc7ca902a572&id=3c8f7e6e85";
+/**
+ * The signup endpoint (convex/http.ts). The form's JavaScript posts JSON here; a form submitted
+ * before the JavaScript loads posts here as a plain HTML form.
+ */
+export const SUBSCRIBE_ENDPOINT = `${CONVEX_SITE_URL}/newsletter/subscribe`;
 
 export const isSuccess = (status: SubscribeStatus) =>
   status == "confirm_email" || status == "already_subscribed";
@@ -28,18 +30,14 @@ export async function subscribeToNewsletter(args: {
 }): Promise<SubscribeResult> {
   try {
     // text/plain keeps this a "simple" CORS request, so there's no preflight round trip.
-    const response = await fetch(`${CONVEX_SITE_URL}/newsletter/subscribe`, {
+    const response = await fetch(SUBSCRIBE_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(args),
     });
     return (await response.json()) as SubscribeResult;
   } catch {
-    return {
-      status: "error",
-      message: "Sorry, something went wrong. Please try Mailchimp's signup form instead.",
-      fallbackUrl: HOSTED_SIGNUP_FORM_URL,
-    };
+    return SUBSCRIBE_RESULTS.error;
   }
 }
 
@@ -73,8 +71,10 @@ export const rememberPromptDismissed = (now = Date.now()) =>
 export const shouldOfferSubscribePrompt = (now = Date.now()): boolean => {
   if (readStorage(SUBSCRIBED_KEY)) return false;
   if (Number(readStorage(DISMISSED_UNTIL_KEY) ?? 0) > now) return false;
-  // Readers arriving from one of the new-post emails are already subscribed.
   const params = new URLSearchParams(window.location.search);
+  // Readers arriving from one of the new-post emails are already subscribed.
   if (params.has("mc_cid") || params.get("utm_medium") == "email") return false;
+  // They've just used the signup form on this page (see SubscribeForm).
+  if (isSubscribeStatus(params.get(SIGNUP_STATUS_PARAM))) return false;
   return true;
 };
