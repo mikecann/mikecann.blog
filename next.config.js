@@ -57,9 +57,13 @@ const securityHeaders = [
 module.exports = {
   // Post metadata is read during static generation, but file tracing cannot tell that
   // the hundreds of media assets beside post.md are never needed by a server function.
-  // Keeping them in the trace pushes Vercel functions over its uncompressed size limit.
+  // Keeping them in the trace pushes Vercel functions over its uncompressed size limit, and when
+  // media is served from R2, `syncAssets --strip` deletes them before Vercel packages the functions.
   outputFileTracingExcludes: {
-    "/*": ["public/posts/**/*.{gif,jpeg,jpg,m4v,mp4,png,webp,zip}"],
+    "/*": [
+      `public/posts/**/*.{${mediaExtensions.join(",")}}`,
+      `public/thumbs/**/*.{${mediaExtensions.join(",")}}`,
+    ],
   },
 
   images: {
