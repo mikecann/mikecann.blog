@@ -26,6 +26,16 @@ const json = (result: SubscribeResult, status = 200) =>
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
+/** `null` for anything that isn't a JSON object (JSON.parse also accepts `null`, `1`, `"text"`...). */
+const parseJsonObject = (text: string): Record<string, unknown> | null => {
+  try {
+    const value: unknown = JSON.parse(text);
+    return typeof value == "object" && value != null ? (value as Record<string, unknown>) : null;
+  } catch {
+    return null;
+  }
+};
+
 /** `website` is a honeypot field that people never see or fill in. */
 type SignupFields = { email?: unknown; source?: unknown; website?: unknown };
 
@@ -71,12 +81,8 @@ http.route({
       });
     }
 
-    let body: SignupFields;
-    try {
-      body = JSON.parse(await request.text());
-    } catch {
-      return json({ status: "error", message: "Invalid request." }, 400);
-    }
+    const body = parseJsonObject(await request.text());
+    if (!body) return json({ status: "error", message: "Invalid request." }, 400);
     return json(await subscribe(ctx, body));
   }),
 });
