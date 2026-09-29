@@ -3,7 +3,7 @@ import { EMAIL_TEMPLATE } from "./emailTemplate";
 
 export const MAILCHIMP_LIST_ID = "3c8f7e6e85";
 export const MAILCHIMP_FROM_NAME = "Mike Cann";
-export const MAILCHIMP_REPLY_TO = "mike.cann@gmail.com";
+export const MAILCHIMP_REPLY_TO = "mike@mikecann.blog";
 
 export function sanitizeMailchimpApiKey(apiKey: string): string {
   return apiKey.trim().replace(/^["']+|["']+$/g, "");
