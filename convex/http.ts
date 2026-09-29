@@ -42,11 +42,12 @@ type SignupFields = { email?: unknown; source?: unknown; website?: unknown };
 async function subscribe(ctx: ActionCtx, fields: SignupFields): Promise<SubscribeResult> {
   const email = typeof fields.email == "string" ? normalizeEmail(fields.email) : "";
   const source = typeof fields.source == "string" ? fields.source : "unknown";
-  if (!isPlausibleEmail(email)) return SUBSCRIBE_RESULTS.invalid_email;
 
   // Bots fill in every field; pretend it worked so they don't adapt.
   if (typeof fields.website == "string" && fields.website.trim() != "")
     return SUBSCRIBE_RESULTS.confirm_email;
+
+  if (!isPlausibleEmail(email)) return SUBSCRIBE_RESULTS.invalid_email;
 
   const perEmail = await newsletterRateLimiter.limit(ctx, "newsletterSubscribePerEmail", {
     key: sha256Hex(email),

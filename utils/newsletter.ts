@@ -2,6 +2,7 @@ import { CONVEX_SITE_URL } from "./convex";
 import {
   SIGNUP_STATUS_PARAM,
   SUBSCRIBE_RESULTS,
+  isSubscribeStatus,
   type SubscribeResult,
   type SubscribeStatus,
 } from "../convex/newsletter/results";
@@ -74,6 +75,6 @@ export const shouldOfferSubscribePrompt = (now = Date.now()): boolean => {
   // Readers arriving from one of the new-post emails are already subscribed.
   if (params.has("mc_cid") || params.get("utm_medium") == "email") return false;
   // They've just used the signup form on this page (see SubscribeForm).
-  if (params.has(SIGNUP_STATUS_PARAM)) return false;
+  if (isSubscribeStatus(params.get(SIGNUP_STATUS_PARAM))) return false;
   return true;
 };

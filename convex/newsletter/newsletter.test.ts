@@ -127,6 +127,10 @@ describe("newsletter signup endpoint", () => {
     const fetchMock = mailchimpReplies();
     const { json } = await subscribe(t, { email: "bot@example.com", website: "http://spam" });
     expect(json.status).toBe("confirm_email");
+    // Even with junk in the email field
+    expect((await subscribe(t, { email: "junk", website: "http://spam" })).json.status).toBe(
+      "confirm_email",
+    );
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
