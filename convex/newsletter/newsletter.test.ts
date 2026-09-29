@@ -115,6 +115,7 @@ describe("newsletter signup endpoint", () => {
     const fetchMock = mailchimpReplies();
     expect((await subscribe(t, "not json")).status).toBe(400);
     expect((await subscribe(t, "null")).status).toBe(400);
+    expect((await subscribe(t, "[]")).status).toBe(400);
     expect((await subscribe(t, { email: "nope" })).json.status).toBe("invalid_email");
     expect((await subscribe(t, { email: `${"a".repeat(250)}@x.co` })).json.status).toBe(
       "invalid_email",

@@ -26,11 +26,13 @@ const json = (result: SubscribeResult, status = 200) =>
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
-/** `null` for anything that isn't a JSON object (JSON.parse also accepts `null`, `1`, `"text"`...). */
+/** `null` for anything that isn't a JSON object (JSON.parse also accepts `[]`, `null`, `1`...). */
 const parseJsonObject = (text: string): Record<string, unknown> | null => {
   try {
     const value: unknown = JSON.parse(text);
-    return typeof value == "object" && value != null ? (value as Record<string, unknown>) : null;
+    return typeof value == "object" && value != null && !Array.isArray(value)
+      ? (value as Record<string, unknown>)
+      : null;
   } catch {
     return null;
   }
