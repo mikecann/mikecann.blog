@@ -67,7 +67,7 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
 
   If any step fails, the steps after it don't run.
 
-- **Preview** builds run `bun run build`, then `syncAssets -- --strip`. Previews only upload media that's missing from R2 and never replace an existing file, so a branch can't change what production serves (see below).
+- **Preview** builds run `bun run build`, then `syncAssets -- --strip`. Previews only upload media that's missing from R2 and never replace an existing file, so building a branch doesn't change what production serves (see below).
 
 ### Serving media from Cloudflare R2
 

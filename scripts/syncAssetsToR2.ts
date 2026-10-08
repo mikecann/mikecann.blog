@@ -12,8 +12,9 @@
 //
 // Every deployment links to the same keys, so only production deploys (VERCEL_ENV=production)
 // replace a file that is already in R2. Preview builds and local runs only upload files that are
-// missing, so a branch can never change the media production serves. A preview that edits an
-// existing file shows the R2 copy until the change reaches production.
+// missing, so building a branch doesn't replace the media production serves. A preview that edits
+// an existing file shows the R2 copy until the change reaches production. This guards against
+// mistakes, not a hostile branch: preview builds still hold credentials that can write the bucket.
 
 import fs from "fs";
 import path from "path";
