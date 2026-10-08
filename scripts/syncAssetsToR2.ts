@@ -1,7 +1,7 @@
 // Uploads post media and thumbnails to Cloudflare R2 so pages can load them from
 // NEXT_PUBLIC_ASSET_BASE_URL instead of Vercel storing ~300MB of media in every deployment.
 //
-//   bun run ./scripts/syncAssetsToR2.ts            upload new/changed files
+//   bun run ./scripts/syncAssetsToR2.ts            upload new files (and changed ones in production)
 //   bun run ./scripts/syncAssetsToR2.ts --dry-run  list what would be uploaded
 //   bun run ./scripts/syncAssetsToR2.ts --strip    upload, then (only on Vercel build machines,
 //                                                  with NEXT_PUBLIC_ASSET_BASE_URL set) delete the
@@ -9,12 +9,18 @@
 //
 // Opt-in: without the R2_* env vars this does nothing (the site serves media from /public as
 // before). Remote objects are never deleted, so old URLs and preview deployments keep working.
+//
+// Every deployment links to the same keys, so only production deploys (VERCEL_ENV=production)
+// replace a file that is already in R2. Preview builds and local runs only upload files that are
+// missing, so a branch can never change the media production serves. A preview that edits an
+// existing file shows the R2 copy until the change reaches production.
 
 import fs from "fs";
 import path from "path";
 import { S3Client } from "bun";
 import { AwsClient } from "aws4fetch";
 import pLimit from "p-limit";
+import { planAssetSync } from "./lib/assetSync";
 
 const publicDir = path.join(process.cwd(), "public");
 const syncedDirs = ["posts", "thumbs"];
@@ -23,6 +29,7 @@ const cacheControl = "public, max-age=86400, s-maxage=604800, stale-while-revali
 const args = new Set(process.argv.slice(2));
 const dryRun = args.has("--dry-run");
 const strip = args.has("--strip");
+const overwrite = process.env.VERCEL_ENV == "production";
 
 const { R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET } = process.env;
 // Override for other S3-compatible stores or a local mock when testing.
@@ -102,14 +109,25 @@ async function main() {
 
   const localFiles = listLocalFiles();
   const remoteETags = await listRemoteETags(client);
-  const toUpload = localFiles.filter(
-    (relPath) => remoteETags.get(relPath) != md5(path.join(publicDir, relPath)),
-  );
+  const { upload: toUpload, skippedChanged } = planAssetSync({
+    localFiles,
+    remoteETags,
+    localMd5: (relPath) => md5(path.join(publicDir, relPath)),
+    overwrite,
+  });
 
   console.log(
     `${localFiles.length} local media files, ${remoteETags.size} already in R2, ` +
       `${toUpload.length} to upload`,
   );
+  if (skippedChanged.length > 0) {
+    console.log(
+      `Not replacing ${skippedChanged.length} changed files that are already in R2 ` +
+        `(only production deploys do), so this deployment shows the R2 copies:`,
+    );
+    for (const relPath of skippedChanged.slice(0, 20)) console.log(`  ${relPath}`);
+    if (skippedChanged.length > 20) console.log(`  ...and ${skippedChanged.length - 20} more`);
+  }
 
   if (dryRun) {
     for (const relPath of toUpload) console.log(`  would upload ${relPath}`);
@@ -118,6 +136,7 @@ async function main() {
 
   const limit = pLimit(16);
   let uploaded = 0;
+  let alreadyCreated = 0;
   await Promise.all(
     toUpload.map((relPath) =>
       limit(async () => {
@@ -129,8 +148,14 @@ async function main() {
           headers: {
             "Content-Type": file.type || "application/octet-stream",
             "Cache-Control": cacheControl,
+            // Outside production, R2 refuses the write if the key appeared since we listed it.
+            ...(overwrite ? {} : { "If-None-Match": "*" }),
           },
         });
+        if (!overwrite && response.status == 412) {
+          alreadyCreated++;
+          return;
+        }
         if (!response.ok)
           throw new Error(
             `Uploading ${relPath} failed: ${response.status} ${await response.text()}`,
@@ -141,6 +166,8 @@ async function main() {
     ),
   );
   console.log(`Uploaded ${uploaded} files to R2 bucket ${R2_BUCKET}`);
+  if (alreadyCreated > 0)
+    console.log(`Skipped ${alreadyCreated} files that another deploy uploaded in the meantime`);
 
   if (!strip) return;
   const reason = whyNotStrip();
