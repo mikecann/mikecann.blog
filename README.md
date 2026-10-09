@@ -67,7 +67,7 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
 
   If any step fails, the steps after it don't run.
 
-- **Preview** builds run `bun run build`, then `syncAssets -- --strip`.
+- **Preview** builds run `bun run build`, then `syncAssets -- --strip`. Previews only upload media that's missing from R2 and never replace an existing file, so building a branch doesn't change what production serves (see below).
 
 ### Serving media from Cloudflare R2
 
@@ -78,10 +78,12 @@ It's off until configured. To turn it on:
 1. In Cloudflare, create an R2 bucket (e.g. `mikecann-blog-assets`) and connect a custom domain to it, e.g. `assets.mikecann.blog` (bucket → Settings → Custom Domains).
 2. Create an R2 API token with **Object Read & Write** on that bucket, and note the access key ID, secret and your account ID.
 3. In Vercel, for Production **and** Preview, set `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `NEXT_PUBLIC_ASSET_BASE_URL=https://assets.mikecann.blog`.
-4. Redeploy. The first deploy uploads everything once; later deploys only upload changed files (compared by MD5).
+4. Redeploy. The first deploy uploads everything once. Later production deploys upload new and changed files (compared by MD5), and previews only upload new ones.
 5. Delete old deployments in Vercel (or set a deployment retention policy) to reclaim the storage they hold.
 
 With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbnails link straight to the asset domain, and old `/posts/<slug>/<file>` and `/thumbs/...` media URLs redirect there. `syncAssets` never deletes objects from R2, so old links keep working. To roll back, unset `NEXT_PUBLIC_ASSET_BASE_URL` and redeploy; the media is served from the deployment again.
+
+Every deployment, production or preview, links to the same keys in the bucket. So only production deploys (`VERCEL_ENV=production`) replace a file that's already in R2. Preview builds and local runs only upload files that are missing, and list the changed ones they skipped. A preview that edits an existing image or thumbnail shows the R2 copy until the change reaches production. To see a changed image in a preview, give it a new file name, which also avoids stale copies in browser and CDN caches.
 
 `--strip` only deletes local files on Vercel build machines, and only when `NEXT_PUBLIC_ASSET_BASE_URL` is set, so running it locally is safe.
 
@@ -110,7 +112,7 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 | `optimizeImages <path...>`              | Re-encodes the images under a path in place, keeping each one only if it got smaller (`--quality=82`, `--dry-run`) |
 | `populateAlgolia`                       | Replaces the Algolia index with the publishable posts (`--dry-run` prints what it would index)                     |
 | `uploadPostsToConvex [-- --production]` | Upserts changed posts into Convex (dev deployment unless `--production`)                                           |
-| `syncAssets [-- --dry-run \| --strip]`  | Uploads new/changed post media and thumbnails to R2; does nothing unless the `R2_*` env vars are set               |
+| `syncAssets [-- --dry-run \| --strip]`  | Uploads new post media and thumbnails to R2 (and changed ones in production); a no-op without the `R2_*` env vars  |
 | `fixFlashLinks`                         | Normalizes old Flash links so they play in the site's Ruffle modal (`--dry-run` supported)                         |
 
 `scripts/fixPosts.ts` (run with `bun run ./scripts/fixPosts.ts`) applies the automated content fixes described in `AGENTS.md`.
