@@ -78,7 +78,7 @@ It's off until configured. To turn it on:
 1. In Cloudflare, create an R2 bucket (e.g. `mikecann-blog-assets`) and connect a custom domain to it, e.g. `assets.mikecann.blog` (bucket → Settings → Custom Domains).
 2. Create an R2 API token with **Object Read & Write** on that bucket, and note the access key ID, secret and your account ID.
 3. In Vercel, for Production **and** Preview, set `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `NEXT_PUBLIC_ASSET_BASE_URL=https://assets.mikecann.blog`.
-4. Redeploy. The first deploy uploads everything once; later deploys only upload new and changed files (compared by MD5).
+4. Redeploy. The first deploy uploads everything once. Later production deploys upload new and changed files (compared by MD5), and previews only upload new ones.
 5. Delete old deployments in Vercel (or set a deployment retention policy) to reclaim the storage they hold.
 
 With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbnails link straight to the asset domain, and old `/posts/<slug>/<file>` and `/thumbs/...` media URLs redirect there. `syncAssets` never deletes objects from R2, so old links keep working. To roll back, unset `NEXT_PUBLIC_ASSET_BASE_URL` and redeploy; the media is served from the deployment again.
