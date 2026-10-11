@@ -1,5 +1,5 @@
 ---
-coverImage: ./header.webp
+coverImage: ./header-illustrated.webp
 date: "2026-10-11T00:00:00.000Z"
 tags:
   - personal
