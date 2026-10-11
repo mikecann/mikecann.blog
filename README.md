@@ -87,6 +87,8 @@ Every deployment, production or preview, links to the same keys in the bucket. S
 
 `--strip` only deletes local files on Vercel build machines, and only when `NEXT_PUBLIC_ASSET_BASE_URL` is set, so running it locally is safe.
 
+`--strip` has to run after `next build`, because the build reads image sizes and thumbnails from `public/`. By then Vercel's Next.js adapter has already copied `public/` into the deployment's build output (`.next/output/static`), so `--strip` deletes the media from there as well as from `public/`. Deleting it from `public/` alone leaves all ~330MB of media in every deployment. To check a deployment, open it in Vercel → Resources and filter Static Assets by `.webp`: only a few site images should be listed, none under `/posts/` or `/thumbs/`.
+
 ## Newsletter signups
 
 New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign up through the site's own forms, which call the Convex HTTP action `POST /newsletter/subscribe` (`convex/http.ts`); nothing from Mailchimp is loaded on the page.

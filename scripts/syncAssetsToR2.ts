@@ -5,7 +5,9 @@
 //   bun run ./scripts/syncAssetsToR2.ts --dry-run  list what would be uploaded
 //   bun run ./scripts/syncAssetsToR2.ts --strip    upload, then (only on Vercel build machines,
 //                                                  with NEXT_PUBLIC_ASSET_BASE_URL set) delete the
-//                                                  local media so the deployment doesn't include it
+//                                                  local media so the deployment doesn't include it.
+//                                                  Run it after `next build`, which reads image sizes
+//                                                  and thumbnails from public/
 //
 // Opt-in: without the R2_* env vars this does nothing (the site serves media from /public as
 // before). Remote objects are never deleted, so old URLs and preview deployments keep working.
@@ -24,6 +26,8 @@ import pLimit from "p-limit";
 import { planAssetSync } from "./lib/assetSync";
 
 const publicDir = path.join(process.cwd(), "public");
+// Where Vercel's Next.js adapter writes the deployment's static files during `next build`.
+const buildOutputStaticDir = path.join(process.cwd(), ".next/output/static");
 const syncedDirs = ["posts", "thumbs"];
 const cacheControl = "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400";
 
@@ -178,6 +182,21 @@ async function main() {
   }
   for (const relPath of localFiles) fs.rmSync(path.join(publicDir, relPath));
   console.log(`Removed ${localFiles.length} media files from public/ for this deployment`);
+
+  // Vercel's Next.js adapter copies public/ into the build output during `next build`, so by now
+  // the deployment already has its own copy of the media. Remove that too. After the build command,
+  // Vercel only adds public/ files that are missing from the output, so stripped files stay out.
+  if (!fs.existsSync(buildOutputStaticDir)) return;
+  let removedFromOutput = 0;
+  for (const relPath of localFiles) {
+    const outputPath = path.join(buildOutputStaticDir, relPath);
+    if (!fs.existsSync(outputPath)) continue;
+    fs.rmSync(outputPath);
+    removedFromOutput++;
+  }
+  console.log(
+    `Removed ${removedFromOutput} media files from the build output in .next/output/static`,
+  );
 }
 
 main().catch((e) => {
