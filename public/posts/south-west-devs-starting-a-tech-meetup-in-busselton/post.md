@@ -11,7 +11,7 @@ title: "South West Devs: Starting a Tech Meetup in Busselton"
 
 I honestly can't believe I haven't properly written about this before, but a couple of years back now I started a little tech meetup group down here in Busselton called [South West Devs](https://www.southwestdevs.com.au/). It's a free monthly get-together for anyone in the South West of WA who's into tech, and I thought it was about time I wrote up how it all came about.
 
-![The September 2026 meetup in the Kyst boardroom](./september-meetup.webp)
+![The July 2026 meetup in the Kyst boardroom](./july-2026-kyst.webp)
 
 # Why I started it
 
