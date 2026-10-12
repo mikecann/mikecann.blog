@@ -18,9 +18,15 @@ The best way to get a feel for it is to watch the video Josh and I made. It expl
 
 ## Why I built it
 
-Josh is 6 and an absolute legend, but he can't read yet. He's always got plenty of ideas though, and for a while I was the one typing them into Claude or Codex for him every single time. I wanted him to get that joy of building things himself, so Let's Build It is entirely voice driven. He just talks to it, and a minute or so later he's playing whatever he dreamt up.
+Josh is 6 and an absolute legend, but he can't read yet. 
 
-I'd also much rather he spent his screen time being creative than passively watching stuff on his iPad. The problem is, a lot of the places kids make games have pretty perverse incentives, so there are no ads in Let's Build It and everything he makes stays private. I can also set up his profile so I control the kinds of things he builds.
+He's always got plenty of ideas though, and for a while I was the one typing them into Claude or Codex. 
+
+I wanted him to get that joy of building things himself tho, so Let's Build It is entirely voice driven. He just talks to it, and then I have a whole process of agents and whatnot that build it in the background for him.
+
+For me I would much rather that screen time is spent being creative rather than passively watching tv or whatnot. 
+
+The problem is, a lot of the places kids make games have pretty perverse incentives to make more money. So thats why I want no ads in Let's Build It and everything he makes stays private. Theres also a whole profile section that I can setup as a parent to control the things that the AI builds for him.
 
 ## Try it out
 
