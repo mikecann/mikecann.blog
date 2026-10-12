@@ -1,5 +1,5 @@
 ---
-coverImage: ./header.webp
+coverImage: ./header-josh-wave.webp
 date: "2026-10-12T00:00:00.000Z"
 tags:
   - personal
