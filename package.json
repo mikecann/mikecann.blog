@@ -39,7 +39,7 @@
     "ai": "^7.0.114",
     "algoliasearch": "^5.57.0",
     "convex": "^1.46.0",
-    "convex-helpers": "^0.1.123",
+    "convex-helpers": "^0.1.127",
     "date-fns": "^4.4.0",
     "fluent-convex": "^0.13.0",
     "gls": "^3.0.1",
@@ -79,5 +79,8 @@
     "sharp": "^0.35.4",
     "typescript": "^7.0.2",
     "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "convex-helpers": "^0.1.127"
   }
 }
