@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  buildLatestActivity,
   buildPostActivity,
   findEmbeddedYouTubeId,
   formatAgo,
@@ -137,5 +138,18 @@ describe("buildPostActivity", () => {
 
     expect(activity.since).toEqual([]);
     expect(activity.elsewhere).toEqual({ video: null, xPost: null });
+  });
+});
+
+describe("buildLatestActivity", () => {
+  it("picks the newest video and X posts", () => {
+    const activity = buildLatestActivity([...items].reverse(), 2);
+
+    expect(activity.latestVideo?.id).toBe("newestVideo");
+    expect(activity.latestXPosts.map((x) => x.text)).toEqual(["newest x", "about the touchscreen"]);
+  });
+
+  it("copes with no activity", () => {
+    expect(buildLatestActivity([])).toEqual({ latestVideo: null, latestXPosts: [] });
   });
 });

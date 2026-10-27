@@ -16,11 +16,15 @@ export type NewerPost = {
 
 export type SinceItem = NewerPost | Video;
 
-export type PostActivity = {
-  /** The same project in other formats: the video embedded in the post, an X post about it. */
-  elsewhere: { video: Video | null; xPost: XPost | null };
+/** My newest video and X posts. */
+export type LatestActivity = {
   latestVideo: Video | null;
   latestXPosts: XPost[];
+};
+
+export type PostActivity = LatestActivity & {
+  /** The same project in other formats: the video embedded in the post, an X post about it. */
+  elsewhere: { video: Video | null; xPost: XPost | null };
   /** Blog posts and videos published after this post, newest first. */
   since: SinceItem[];
 };
@@ -61,6 +65,15 @@ const byNewest = (a: { date: string }, b: { date: string }) =>
   Date.parse(b.date) - Date.parse(a.date);
 
 const isNewer = (date: string, than: string) => Date.parse(date) > Date.parse(than);
+
+/** The newest video and the newest `maxXPosts` X posts, for the homepage. */
+export const buildLatestActivity = (items: ActivityItem[], maxXPosts = 5): LatestActivity => {
+  const sorted = [...items].sort(byNewest);
+  return {
+    latestVideo: sorted.find((item): item is Video => item.kind == "video") ?? null,
+    latestXPosts: sorted.filter((item): item is XPost => item.kind == "x").slice(0, maxXPosts),
+  };
+};
 
 /**
  * Works out what to show around a post: the same project elsewhere, what Mike has been posting
