@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "kind": "x",
+      "date": "2026-10-18T12:00:00.000Z",
+      "text": "As you might expect Opus 5.5 is a fantastic way to imagine a space before you commit to an expensive home improvement project!",
+      "url": "https://x.com/mikeysee",
+      "likes": 37
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-16T06:00:00.000Z",
+      "text": "I dont know what this new thing is Claude Desktop is doing but I dont like it.",
+      "url": "https://x.com/mikeysee",
+      "likes": 436
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-16T04:00:00.000Z",
+      "text": "Almost as cool as flying cars is the new Convex 1.47.0 release!\n\nSome cool new \"staging\" functionality for folks with massive tables.\n\nAlso some work to try to prevent secrets leakage into the agent context.",
+      "url": "https://x.com/mikeysee",
+      "likes": 28
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-16T02:00:00.000Z",
+      "text": "The Sammy Sofa Saga continues..\n\nI trained my own model to detect sammy because the off the shelf one wasnt cutting it (woke me and my wife up with a false alarm).\n\nLast night was the first night I took it for a dry run, looks like it worked!",
+      "url": "https://x.com/mikeysee",
+      "likes": 17
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-11T08:00:00.000Z",
+      "text": "Introducing: Let's Build It! A mobile app for kids to safely make apps and games using just their voice.",
+      "url": "https://x.com/mikeysee",
+      "likes": 32,
+      "post": "introducing-lets-build-it"
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-11T03:19:32.000Z",
+      "text": "Im getting some push back on the AI generated cartoon broll I use in my videos.\n\nShould I stop using generated cartoon videos in my videos?",
+      "url": "https://x.com/mikeysee/status/2109121694405406894",
+      "likes": 1
+    },
+    {
+      "kind": "video",
+      "id": "2jGiVHdQUkE",
+      "date": "2026-10-10T15:00:00.000Z",
+      "title": "Let's build a database!",
+      "durationSeconds": 2280
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-09T23:59:58.000Z",
+      "text": "The sammy sofa saga continues. Last night was the first night I had the \"remediations\" in place.\n\nThe home hub on the kitchen side plays a recording of me telling sammy off and the lights turn on.",
+      "url": "https://x.com/mikeysee/status/2108709084442861739",
+      "likes": 5
+    },
+    {
+      "kind": "x",
+      "date": "2026-10-09T07:39:07.000Z",
+      "text": "Me: Hey Claude can you please rotate my env var for me\n\nClaude: No\n\nMe: Okay can you talk to Codex to have it to it please\n\nClaude: No\n\nMe: Sigh. Okay please give me a prompt so I can have Codex do it.\n\nClaude: Sure! No worries",
+      "url": "https://x.com/mikeysee/status/2108462246561259808",
+      "likes": 45
+    },
+    {
+      "kind": "video",
+      "id": "K4rrd90JJG4",
+      "date": "2026-09-23T15:00:09.000Z",
+      "title": "We made AI on Convex way simpler",
+      "durationSeconds": 340
+    },
+    {
+      "kind": "video",
+      "id": "CSeLb7O2fc8",
+      "date": "2026-09-22T15:00:01.000Z",
+      "title": "Why some AI models search more and still score worse",
+      "durationSeconds": 448
+    },
+    {
+      "kind": "x",
+      "date": "2026-09-18T07:29:21.000Z",
+      "text": "This month's blog post is all about my trip to SF last week for @convex Abstract and all the activities around it.\n\nCheck it out if you want to see a bunch of pictures from my travels and some personal insights!",
+      "url": "https://x.com/mikeysee/status/2100849644955984063",
+      "likes": 2,
+      "post": "a-big-week-in-sf"
+    },
+    {
+      "kind": "video",
+      "id": "i2n_f0aX_G8",
+      "date": "2026-08-21T15:45:03.000Z",
+      "title": "Why is web search for AI agents so confusing?",
+      "durationSeconds": 968
+    },
+    {
+      "kind": "video",
+      "id": "l61cLu8e2tg",
+      "date": "2026-08-17T15:47:55.000Z",
+      "title": "I made 100 programming languages talk to Convex",
+      "durationSeconds": 1356
+    },
+    {
+      "kind": "video",
+      "id": "1-9ClkQnKL4",
+      "date": "2026-08-06T16:44:55.000Z",
+      "title": "Convex just raised $57m.. I asked the CEO why",
+      "durationSeconds": 1119
+    },
+    {
+      "kind": "x",
+      "date": "2026-08-05T20:00:00.000Z",
+      "text": "Want a really fun and accessible hardware project to build? Checkout this giant touchscreen I built for my family using AI, hotglue and @convex.\n\nWhat do you think, will hardware projects become even cooler now that the cost of sofware goes to 0?",
+      "url": "https://x.com/mikeysee/status/2085142885322862913",
+      "likes": 23,
+      "post": "i-built-my-family-a-giant-touchscreen"
+    },
+    {
+      "kind": "video",
+      "id": "ubRYvl4gfGE",
+      "date": "2026-08-05T19:03:23.000Z",
+      "title": "I built my family a giant touchscreen",
+      "durationSeconds": 1388
+    },
+    {
+      "kind": "video",
+      "id": "WXpkpNNFJeQ",
+      "date": "2026-07-29T16:30:20.000Z",
+      "title": "The bare minimum you need to know about Convex",
+      "durationSeconds": 630
+    }
+  ]
+}

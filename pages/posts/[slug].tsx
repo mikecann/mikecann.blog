@@ -19,6 +19,12 @@ import { SubscribeForm } from "../../components/newsletter/SubscribeForm";
 import { PostTags } from "../../components/PostTags";
 import { PostComments } from "../../components/PostComments";
 import { Post, getAllPublishablePosts, getPostBySlug } from "../../scripts/posts";
+import { getPostThumbnailRootPath } from "../../scripts/posts/teasers";
+import { getActivityItems } from "../../scripts/activity";
+import { buildPostActivity, type NewerPost, type PostActivity } from "../../utils/activity";
+import { ActivityRail } from "../../components/activity/ActivityRail";
+import { PostElsewhereLinks } from "../../components/activity/PostElsewhereLinks";
+import { SinceThisPost } from "../../components/activity/SinceThisPost";
 import { getPostDescription } from "../../scripts/posts/description";
 import { slugFromChildren } from "../../components/utils/slug";
 import { HeadingLink } from "../../components/HeadingLink";
@@ -55,6 +61,8 @@ type Props = {
   /** Root path of the cover image, e.g. `/posts/<slug>/header.webp`. */
   coverImage: string;
   needsFlash: boolean;
+  /** Mike's videos and X posts around this post (see utils/activity.ts). */
+  activity: PostActivity;
 };
 
 const postContainerClass = style(
@@ -224,10 +232,12 @@ const PostPageContent = ({
   description,
   coverImage,
   needsFlash,
+  activity,
 }: Props) => {
   const { meta, slug } = post;
   const { title, date, tags } = meta;
   const [flashUrl, setFlashUrl] = React.useState<string | null>(null);
+  const articleRef = React.useRef<HTMLDivElement>(null);
 
   const components = React.useMemo(
     () => createMarkdownComponents({ slug, imageSizes, openFlash: setFlashUrl }),
@@ -315,6 +325,7 @@ const PostPageContent = ({
         </div>
         <Horizontal width="100%" horizontalAlign="center">
           <Vertical
+            ref={articleRef}
             className={postContainerClass}
             style={{
               marginTop: `60vh`,
@@ -336,6 +347,7 @@ const PostPageContent = ({
                 {formattedDate}
               </time>
               <PostTags horizontalAlign="center" tags={tags} />
+              <PostElsewhereLinks {...activity.elsewhere} />
             </Vertical>
             <Horizontal width="100%" horizontalAlign="center">
               <div
@@ -351,6 +363,8 @@ const PostPageContent = ({
                 {markdown}
               </ReactMarkdown>
             </div>
+
+            <SinceThisPost items={activity.since} />
 
             <div
               style={{
@@ -388,6 +402,7 @@ const PostPageContent = ({
             </div>
           </Vertical>
         </Horizontal>
+        <ActivityRail activity={activity} articleRef={articleRef} />
       </Vertical>
       {flashUrl ? <FlashPlayerModal url={flashUrl} onClose={() => setFlashUrl(null)} /> : null}
       {needsFlash ? <RuffleScript /> : null}
@@ -433,10 +448,24 @@ const getImageSizes = (slug: string, markdown: string): ImageSizes => {
   return imageSizes;
 };
 
+const getNewerPosts = (post: Post, limit: number): NewerPost[] =>
+  getAllPublishablePosts()
+    .filter((other) => Date.parse(other.meta.date) > Date.parse(post.meta.date))
+    .sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date))
+    .slice(0, limit)
+    .map((other) => ({
+      kind: "post",
+      slug: other.slug,
+      title: other.meta.title,
+      date: other.meta.date,
+      image: assetUrl(getPostThumbnailRootPath(other)),
+    }));
+
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const slug = ensure(params?.slug) + "";
   const { meta, content } = getPostBySlug(slug);
   const post: Post = { slug, meta };
+  const maxSince = 3;
 
   return {
     props: {
@@ -447,6 +476,15 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
       description: getPostDescription(content) || meta.title,
       coverImage: getPostRootCoverImagePath(post),
       needsFlash: postNeedsFlash(slug, content),
+      activity: buildPostActivity({
+        slug,
+        date: meta.date,
+        title: meta.title,
+        markdown: content,
+        items: getActivityItems(),
+        newerPosts: getNewerPosts(post, maxSince),
+        maxSince,
+      }),
     },
   };
 };
