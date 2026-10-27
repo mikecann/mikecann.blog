@@ -51,6 +51,18 @@ describe("findEmbeddedYouTubeId", () => {
   it("ignores posts without an embed", () => {
     expect(findEmbeddedYouTubeId("Watch it at https://youtu.be/ubRYvl4gfGE")).toBeUndefined();
   });
+
+  it("ignores playlist embeds", () => {
+    const playlist = `<iframe src="https://www.youtube.com/embed/videoseries?list=PLdFGn0KeUCYer1aL7cEzpcDIg51vycrio"></iframe>`;
+    expect(findEmbeddedYouTubeId(playlist)).toBeUndefined();
+    expect(findEmbeddedYouTubeId(`${playlist}\n\n${touchscreenMarkdown}`)).toBe("ubRYvl4gfGE");
+  });
+
+  it("ignores ids that aren't 11 characters", () => {
+    expect(
+      findEmbeddedYouTubeId(`<iframe src="https://www.youtube.com/embed/Avxrg1YavBIg">`),
+    ).toBeUndefined();
+  });
 });
 
 describe("formatDuration", () => {

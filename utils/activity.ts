@@ -25,7 +25,10 @@ export type PostActivity = {
   since: SinceItem[];
 };
 
-const youTubeEmbedPattern = /youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})/;
+// Video ids are exactly 11 characters. Playlist embeds (`/embed/videoseries?list=...`) are
+// skipped: "videoseries" happens to be 11 characters too, but it isn't a video.
+const youTubeEmbedPattern =
+  /youtube(?:-nocookie)?\.com\/embed\/(?!videoseries)([\w-]{11})(?![\w-])/;
 
 /** The id of the first YouTube video embedded in a post's markdown. */
 export const findEmbeddedYouTubeId = (markdown: string): string | undefined =>
