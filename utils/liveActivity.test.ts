@@ -71,6 +71,12 @@ describe("toXPostItem", () => {
     expect(toXPostItem({ ...tweet, text: "RT @convex: Convex 1.48 is out" })).toBeNull();
   });
 
+  it("skips replies in my own threads, which don't start with @", () => {
+    const threadReply = { ...tweet, text: 'This was on the "no guidelines" category:' };
+    expect(toXPostItem({ ...threadReply, isReply: true })).toBeNull();
+    expect(toXPostItem({ ...threadReply, isReply: false })).not.toBeNull();
+  });
+
   it("decodes entities and drops trailing media links", () => {
     expect(
       toXPostItem({ ...tweet, text: "Convex &amp; Claude &lt;3 https://t.co/S0Z8vvoDWW" })?.text,
