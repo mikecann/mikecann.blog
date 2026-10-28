@@ -1,6 +1,6 @@
 import * as React from "react";
 import { classes, media, style } from "typestyle";
-import type { PostActivity } from "../../utils/activity";
+import { postMaxXPosts, type PostActivity } from "../../utils/activity";
 import { VideoCard, XPostCard } from "./ActivityCards";
 import {
   LatestActivityPanel,
@@ -8,6 +8,7 @@ import {
   activityPanelStyle,
   newestActivityDate,
 } from "./LatestActivity";
+import { useFreshLatestActivity } from "./useFreshLatestActivity";
 
 interface Props {
   activity: PostActivity;
@@ -88,7 +89,11 @@ const useIsReading = (articleRef: React.RefObject<HTMLElement | null>) => {
 export const ActivityRail: React.FC<Props> = ({ activity, articleRef }) => {
   const isReading = useIsReading(articleRef);
   const { elsewhere } = activity;
-  const hasLatest = newestActivityDate(activity) != null;
+  const latest = useFreshLatestActivity(activity, postMaxXPosts, [
+    elsewhere.video,
+    elsewhere.xPost,
+  ]);
+  const hasLatest = newestActivityDate(latest) != null;
 
   if (!elsewhere.video && !elsewhere.xPost && !hasLatest) return null;
 
@@ -102,7 +107,7 @@ export const ActivityRail: React.FC<Props> = ({ activity, articleRef }) => {
         </section>
       ) : null}
 
-      <LatestActivityPanel heading="Meanwhile" activity={activity} />
+      <LatestActivityPanel heading="Meanwhile" activity={latest} />
     </aside>
   );
 };

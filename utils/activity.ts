@@ -61,19 +61,59 @@ export const formatAgo = (isoDate: string, now: number): string => {
   return formatUTCDate(isoDate, "d MMM");
 };
 
-const byNewest = (a: { date: string }, b: { date: string }) =>
+export const byNewest = (a: { date: string }, b: { date: string }) =>
   Date.parse(b.date) - Date.parse(a.date);
 
 const isNewer = (date: string, than: string) => Date.parse(date) > Date.parse(than);
 
-/** The newest video and the newest `maxXPosts` X posts, for the homepage. */
-export const buildLatestActivity = (items: ActivityItem[], maxXPosts = 5): LatestActivity => {
-  const sorted = [...items].sort(byNewest);
+/** `https://x.com/mikeysee/status/123` → `"123"`. Hand-copied posts may only have the profile URL. */
+const xStatusId = (url: string) => url.match(/\/status\/(\d+)/)?.[1];
+
+/**
+ * X post text cut down to its first few words, so a post copied by hand (without its link, and
+ * with the odd apostrophe or link missing) still matches the same post from the X API.
+ */
+export const normaliseXText = (text: string) =>
+  text
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/['’]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .slice(0, 60);
+
+/** Whether two items are the same video or X post, wherever each copy came from. */
+export const isSameActivity = (a: ActivityItem, b: ActivityItem): boolean => {
+  if (a.kind == "video" && b.kind == "video") return a.id == b.id;
+  if (a.kind == "x" && b.kind == "x") {
+    const aId = xStatusId(a.url);
+    const bId = xStatusId(b.url);
+    if (aId && bId) return aId == bId;
+    return normaliseXText(a.text) == normaliseXText(b.text);
+  }
+  return false;
+};
+
+/**
+ * The newest video and the newest `maxXPosts` X posts, for the homepage. Anything in `exclude`
+ * is left out, e.g. a post's own video, which is already shown as "this post elsewhere".
+ */
+export const buildLatestActivity = (
+  items: ActivityItem[],
+  maxXPosts = 5,
+  exclude: ActivityItem[] = [],
+): LatestActivity => {
+  const sorted = [...items]
+    .filter((item) => !exclude.some((excluded) => isSameActivity(item, excluded)))
+    .sort(byNewest);
   return {
     latestVideo: sorted.find((item): item is Video => item.kind == "video") ?? null,
     latestXPosts: sorted.filter((item): item is XPost => item.kind == "x").slice(0, maxXPosts),
   };
 };
+
+/** How many X posts the "Meanwhile" panel beside a post shows. */
+export const postMaxXPosts = 4;
 
 /**
  * Works out what to show around a post: the same project elsewhere, what Mike has been posting
@@ -86,7 +126,7 @@ export const buildPostActivity = ({
   markdown,
   items,
   newerPosts,
-  maxXPosts = 4,
+  maxXPosts = postMaxXPosts,
   maxSince = 3,
 }: {
   slug: string;
@@ -122,8 +162,11 @@ export const buildPostActivity = ({
 
   return {
     elsewhere: { video, xPost },
-    latestVideo: videos.find((other) => other.id != video?.id) ?? null,
-    latestXPosts: xPosts.filter((other) => other != xPost).slice(0, maxXPosts),
+    ...buildLatestActivity(
+      items,
+      maxXPosts,
+      [video, xPost].filter((item) => item != null),
+    ),
     since,
   };
 };
