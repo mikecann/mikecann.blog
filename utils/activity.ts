@@ -95,6 +95,27 @@ export const isSameActivity = (a: ActivityItem, b: ActivityItem): boolean => {
 };
 
 /**
+ * The newer items plus anything in the older ones they don't cover, newest first. Merges the
+ * portfolio's items into the hand-kept snapshot, and fresh items into the ones a page was built
+ * with.
+ *
+ * Where both have the same item the newer copy wins (from the portfolio it has the real date,
+ * link and likes), but keeps the older copy's `post`, as the snapshot is where items get linked to
+ * the blog post they're about.
+ */
+export const mergeActivityItems = (
+  older: ActivityItem[],
+  newer: ActivityItem[],
+): ActivityItem[] => {
+  const fromNewer = newer.map((item) => {
+    const post = older.find((other) => isSameActivity(other, item))?.post;
+    return post && !item.post ? { ...item, post } : item;
+  });
+  const olderOnly = older.filter((other) => !newer.some((item) => isSameActivity(other, item)));
+  return [...fromNewer, ...olderOnly].sort(byNewest);
+};
+
+/**
  * The newest video and the newest `maxXPosts` X posts, for the homepage. Anything in `exclude`
  * is left out, e.g. a post's own video, which is already shown as "this post elsewhere".
  */

@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getActivityItems } from "../../scripts/activity";
+import { getActivity } from "../../scripts/activity";
 import type { ActivityItem } from "../../utils/activity";
 
 export type ActivityResponse = { items: ActivityItem[] };
@@ -16,10 +16,14 @@ export default async function handler(
   _req: NextApiRequest,
   res: NextApiResponse<ActivityResponse>,
 ) {
-  const items = await getActivityItems();
+  const { items, failed } = await getActivity();
   // Vercel's CDN keeps the response for an hour, so the portfolio is asked about once an hour,
-  // not once per visitor.
-  res.setHeader("Cache-Control", "public, s-maxage=3600, stale-while-revalidate=86400");
+  // not once per visitor. If part of it couldn't be reached, only for a minute, so a blip doesn't
+  // leave the snapshot showing for the next hour.
+  res.setHeader(
+    "Cache-Control",
+    failed ? "public, s-maxage=60" : "public, s-maxage=3600, stale-while-revalidate=86400",
+  );
   res.status(200).json({
     items: [
       ...items.filter((item) => item.kind == "video").slice(0, maxVideos),

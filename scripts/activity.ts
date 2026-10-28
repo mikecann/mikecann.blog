@@ -1,9 +1,9 @@
 import { z } from "zod";
 import rawActivity from "../data/activity.json";
+import { mergeActivityItems } from "../utils/activity";
 import {
   PortfolioTweetSchema,
   PortfolioVideoSchema,
-  mergeActivityItems,
   toVideoItem,
   toXPostItem,
 } from "../utils/liveActivity";
@@ -76,7 +76,13 @@ const parseRows = <T>(rows: unknown[], schema: z.ZodType<T>): T[] =>
     return parsed.success ? [parsed.data] : [];
   });
 
-const fetchLiveItems = async (): Promise<ActivityItem[]> => {
+type LiveItems = {
+  items: ActivityItem[];
+  /** Whether either query failed, so `items` is missing the videos or the X posts. */
+  failed: boolean;
+};
+
+const fetchLiveItems = async (): Promise<LiveItems> => {
   const [videos, tweets] = await Promise.allSettled([
     queryPortfolio("videos:list"),
     queryPortfolio("tweets:list"),
@@ -86,30 +92,39 @@ const fetchLiveItems = async (): Promise<ActivityItem[]> => {
   if (tweets.status == "rejected")
     console.warn(`Couldn't load X posts from the portfolio, using the snapshot:`, tweets.reason);
 
-  return [
-    ...(videos.status == "fulfilled" ? parseRows(videos.value, PortfolioVideoSchema) : []).map(
-      toVideoItem,
-    ),
-    ...(tweets.status == "fulfilled" ? parseRows(tweets.value, PortfolioTweetSchema) : []).map(
-      toXPostItem,
-    ),
-  ].filter((item) => item != null);
+  return {
+    items: [
+      ...(videos.status == "fulfilled" ? parseRows(videos.value, PortfolioVideoSchema) : []).map(
+        toVideoItem,
+      ),
+      ...(tweets.status == "fulfilled" ? parseRows(tweets.value, PortfolioTweetSchema) : []).map(
+        toXPostItem,
+      ),
+    ].filter((item) => item != null),
+    failed: videos.status == "rejected" || tweets.status == "rejected",
+  };
 };
 
 // A build renders hundreds of post pages per process, so they share one fetch. The cache expires
 // so a long-running server (the /api/activity function) still picks up new posts.
 const liveCacheMs = 5 * 60 * 1000;
-let liveCache: { fetchedAt: number; items: Promise<ActivityItem[]> } | undefined;
+let liveCache: { fetchedAt: number; result: Promise<LiveItems> } | undefined;
 
-const getLiveItems = (): Promise<ActivityItem[]> => {
+const getLiveItems = (): Promise<LiveItems> => {
   if (!liveCache || Date.now() - liveCache.fetchedAt > liveCacheMs)
-    liveCache = { fetchedAt: Date.now(), items: fetchLiveItems() };
-  return liveCache.items;
+    liveCache = { fetchedAt: Date.now(), result: fetchLiveItems() };
+  return liveCache.result;
 };
 
 /**
  * Mike's recent X posts and YouTube videos, newest first: the live ones from the portfolio plus
- * anything in the snapshot they don't cover (see utils/liveActivity.ts).
+ * anything in the snapshot they don't cover. `failed` says whether part of the portfolio couldn't
+ * be reached, so some of these are only from the snapshot.
  */
-export const getActivityItems = async (): Promise<ActivityItem[]> =>
-  mergeActivityItems(getSnapshotItems(), await getLiveItems());
+export const getActivity = async (): Promise<{ items: ActivityItem[]; failed: boolean }> => {
+  const live = await getLiveItems();
+  return { items: mergeActivityItems(getSnapshotItems(), live.items), failed: live.failed };
+};
+
+/** {@link getActivity}'s items, for pages built with whatever's available. */
+export const getActivityItems = async (): Promise<ActivityItem[]> => (await getActivity()).items;

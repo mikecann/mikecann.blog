@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { ActivityItem } from "./activity";
-import { mergeActivityItems, parseIsoDuration, toVideoItem, toXPostItem } from "./liveActivity";
+import { mergeActivityItems, type ActivityItem } from "./activity";
+import { parseIsoDuration, toVideoItem, toXPostItem } from "./liveActivity";
 
 describe("parseIsoDuration", () => {
   it("reads YouTube durations", () => {
@@ -138,5 +138,13 @@ describe("mergeActivityItems", () => {
 
   it("falls back to the snapshot when there's nothing live", () => {
     expect(mergeActivityItems(snapshot, [])).toEqual(snapshot);
+  });
+
+  it("keeps a page's newer built items when the API only has the snapshot", () => {
+    const built = [live[0], { ...live[1], post: "introducing-lets-build-it" }];
+    const merged = mergeActivityItems(built, snapshot);
+
+    expect(merged[0]).toEqual(live[0]);
+    expect(merged.filter((item) => item.kind == "x")).toHaveLength(2);
   });
 });

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { byNewest, isSameActivity, type ActivityItem, type Video, type XPost } from "./activity";
+import type { Video, XPost } from "./activity";
 
 /**
  * A video from convex.mikecann.blog's public `videos:list` query
@@ -76,25 +76,4 @@ export const toXPostItem = (tweet: PortfolioTweet): XPost | null => {
     url: `https://x.com/mikeysee/status/${tweet.tweetId}`,
     ...(tweet.likeCount != undefined ? { likes: tweet.likeCount } : {}),
   };
-};
-
-/**
- * The live items plus anything in the hand-kept snapshot they don't cover, newest first.
- *
- * Where both have the same item the live copy wins (it has the real date, link and likes), but
- * keeps the snapshot's `post`, as the snapshot is where items get linked to the blog post they're
- * about.
- */
-export const mergeActivityItems = (
-  snapshot: ActivityItem[],
-  live: ActivityItem[],
-): ActivityItem[] => {
-  const fromLive = live.map((item) => {
-    const post = snapshot.find((handKept) => isSameActivity(handKept, item))?.post;
-    return post && !item.post ? { ...item, post } : item;
-  });
-  const snapshotOnly = snapshot.filter(
-    (handKept) => !live.some((item) => isSameActivity(handKept, item)),
-  );
-  return [...fromLive, ...snapshotOnly].sort(byNewest);
 };

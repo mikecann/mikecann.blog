@@ -1,5 +1,10 @@
 import * as React from "react";
-import { buildLatestActivity, type ActivityItem, type LatestActivity } from "../../utils/activity";
+import {
+  buildLatestActivity,
+  mergeActivityItems,
+  type ActivityItem,
+  type LatestActivity,
+} from "../../utils/activity";
 import type { ActivityResponse } from "../../pages/api/activity";
 
 // One request per visit, shared by every panel and page the visitor goes through.
@@ -12,9 +17,10 @@ const loadFreshItems = () =>
     .catch(() => null));
 
 /**
- * The activity a page was built with, swapped for the latest from /api/activity once it loads.
+ * The activity a page was built with, topped up with the latest from /api/activity once it loads.
  * Pages are only rebuilt on deploy, so without this the panels would be as old as the last
- * deploy. If the request fails the built-in activity stays.
+ * deploy. The two are merged rather than swapped, so if the API could only offer the older
+ * snapshot (the portfolio was down) the page keeps the newer items it was built with.
  */
 export const useFreshLatestActivity = (
   built: LatestActivity,
@@ -34,8 +40,9 @@ export const useFreshLatestActivity = (
   }, []);
 
   if (!items) return built;
+  const builtItems = [built.latestVideo, ...built.latestXPosts].filter((item) => item != null);
   return buildLatestActivity(
-    items,
+    mergeActivityItems(builtItems, items),
     maxXPosts,
     exclude.filter((item) => item != null),
   );
