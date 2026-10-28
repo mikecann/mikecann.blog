@@ -21,6 +21,9 @@ export const PortfolioTweetSchema = z.object({
   text: z.string(),
   publishedAt: z.string(),
   likeCount: z.number().optional(),
+  /** Set by the sync from X's own data, so it catches replies in my own threads too. Missing on
+   * posts synced before the portfolio started recording it. */
+  isReply: z.boolean().optional(),
 });
 
 export type PortfolioVideo = z.infer<typeof PortfolioVideoSchema>;
@@ -58,8 +61,9 @@ const decodeXEntities = (text: string) =>
   text.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
 
 export const toXPostItem = (tweet: PortfolioTweet): XPost | null => {
-  // Replies (to anyone else) and reposts aren't things I've posted, they'd just be noise here.
-  if (tweet.text.startsWith("@") || tweet.text.startsWith("RT @")) return null;
+  // Replies and reposts aren't things I've posted, they'd just be noise here. The @ check covers
+  // older posts synced before `isReply` existed.
+  if (tweet.isReply || tweet.text.startsWith("@") || tweet.text.startsWith("RT @")) return null;
   if (!/^\d+$/.test(tweet.tweetId) || !isValidDate(tweet.publishedAt)) return null;
 
   const text = decodeXEntities(tweet.text)
