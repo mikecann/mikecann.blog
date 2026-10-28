@@ -5,6 +5,7 @@ import {
   findEmbeddedYouTubeId,
   formatAgo,
   formatDuration,
+  isSameActivity,
   type ActivityItem,
   type NewerPost,
 } from "./activity";
@@ -151,5 +152,61 @@ describe("buildLatestActivity", () => {
 
   it("copes with no activity", () => {
     expect(buildLatestActivity([])).toEqual({ latestVideo: null, latestXPosts: [] });
+  });
+
+  it("leaves out excluded items, even when they're copies", () => {
+    const activity = buildLatestActivity(items, 5, [
+      { kind: "video", id: "newestVideo", date: "2026-10-10T15:00:00.000Z", title: "Copy" },
+      { kind: "x", date: "2026-10-16T06:00:00.000Z", text: "Newest X!", url: "https://x.com/z" },
+    ]);
+
+    expect(activity.latestVideo?.id).toBe("ubRYvl4gfGE");
+    expect(activity.latestXPosts.map((x) => x.text)).toEqual(["about the touchscreen", "older x"]);
+  });
+});
+
+describe("isSameActivity", () => {
+  const xPost = (text: string, url = "https://x.com/mikeysee"): ActivityItem => ({
+    kind: "x",
+    date: "2026-10-16T06:00:00.000Z",
+    text,
+    url,
+  });
+
+  it("matches X posts by their status id when both have one", () => {
+    expect(
+      isSameActivity(
+        xPost("one", "https://x.com/mikeysee/status/123"),
+        xPost("two", "https://twitter.com/i/web/status/123"),
+      ),
+    ).toBe(true);
+    expect(
+      isSameActivity(
+        xPost("same", "https://x.com/mikeysee/status/123"),
+        xPost("same", "https://x.com/mikeysee/status/456"),
+      ),
+    ).toBe(false);
+  });
+
+  it("matches a hand-copied X post by its text", () => {
+    expect(
+      isSameActivity(
+        xPost("I dont know what this new thing is Claude Desktop is doing but I dont like it."),
+        xPost(
+          "I don't know what this new thing is Claude Desktop is doing but I don't like it. https://t.co/abc",
+          "https://x.com/mikeysee/status/123",
+        ),
+      ),
+    ).toBe(true);
+    expect(isSameActivity(xPost("one thing"), xPost("another thing"))).toBe(false);
+  });
+
+  it("never matches a video with an X post", () => {
+    expect(
+      isSameActivity(
+        { kind: "video", id: "abcdefghijk", date: "2026-10-16T06:00:00.000Z", title: "a" },
+        xPost("a"),
+      ),
+    ).toBe(false);
   });
 });

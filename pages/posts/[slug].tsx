@@ -481,7 +481,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
         date: meta.date,
         title: meta.title,
         markdown: content,
-        items: getActivityItems(),
+        items: await getActivityItems(),
         newerPosts: getNewerPosts(post, maxSince),
         maxSince,
       }),

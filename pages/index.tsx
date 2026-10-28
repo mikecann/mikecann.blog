@@ -14,6 +14,9 @@ import {
   HomeActivityStrip,
   homeColumnsClass,
 } from "../components/activity/HomeActivity";
+import { useFreshLatestActivity } from "../components/activity/useFreshLatestActivity";
+
+const homeMaxXPosts = 4;
 
 type Props = {
   latestYears: YearOfPosts[];
@@ -22,7 +25,8 @@ type Props = {
   activity: LatestActivity;
 };
 
-const IndexPage = ({ latestYears, theOtherYears, activity }: Props) => {
+const IndexPage = ({ latestYears, theOtherYears, activity: builtActivity }: Props) => {
+  const activity = useFreshLatestActivity(builtActivity, homeMaxXPosts);
   return (
     <ResponsiveSidebarLayouts>
       <HomeActivityStrip activity={activity} />
@@ -53,7 +57,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       latestYears,
       theOtherYears: years.slice(3),
-      activity: buildLatestActivity(getActivityItems(), 4),
+      activity: buildLatestActivity(await getActivityItems(), homeMaxXPosts),
     },
   };
 };
