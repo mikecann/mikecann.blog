@@ -6,8 +6,8 @@ import type { BrowserOptions } from "@sentry/nextjs";
  *
  * Production only. Agents run dev servers and preview deployments of this site all day, and an
  * agent watches Sentry and opens a thread for anything serious, so nothing but the production
- * deployment may report. next.config.js sets BLOG_SENTRY_ENABLED at build time from VERCEL_ENV,
- * and both inits check it.
+ * deployment may report: the browser checks it's on mikecann.blog (previews are on *.vercel.app),
+ * and the server checks VERCEL_ENV at runtime.
  */
 
 // A public client key (it ships to every browser), so it's fine in git.
