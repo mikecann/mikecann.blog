@@ -55,6 +55,13 @@ const securityHeaders = [
 ];
 
 module.exports = {
+  // Read by utils/sentry.ts. Only production deployments report errors to Sentry, so previews,
+  // dev servers and local builds never do. Baked in at build time so the browser bundle gets it too.
+  env: {
+    BLOG_SENTRY_ENABLED: process.env.VERCEL_ENV == "production" ? "1" : "",
+    BLOG_SENTRY_RELEASE: process.env.VERCEL_GIT_COMMIT_SHA || "",
+  },
+
   // Post metadata is read during static generation, but file tracing cannot tell that
   // the hundreds of media assets beside post.md are never needed by a server function.
   // Keeping them in the trace pushes Vercel functions over its uncompressed size limit, and when

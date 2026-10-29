@@ -9,6 +9,7 @@ The personal blog of Mike Cann: https://mikecann.blog
 - **[Convex](https://convex.dev)** backend (`convex/`): an embedding of every post (via `@convex-dev/rag`) for Mikebot, the AI chat bot on the site (`@convex-dev/agent`, OpenAI). It also emails subscribers about new posts via Mailchimp.
 - **[Algolia](https://www.algolia.com)** for search (index `next-mikecann`).
 - **[Utterances](https://utteranc.es)** for comments, **[Ruffle](https://ruffle.rs)** to play old Flash embeds, and **PostHog** and Vercel Analytics for analytics.
+- **[Sentry](https://sentry.io)** for errors (project `mikecann-blog`), from the production deployment only: the browser in `instrumentation-client.ts` / `utils/sentryClient.ts` (tag `component: web`) and pages and API routes in `instrumentation.ts` (`component: server`). Errors only, no tracing or replay, and no source map upload. The Convex backend's errors reach Sentry through Convex's log stream.
 - **[bun](https://bun.sh)** as the package manager and to run the scripts in `scripts/`.
 
 ## Local setup
@@ -136,7 +137,7 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | `syncAssets` (optional; see "Serving media from Cloudflare R2")                                                                                                                                               |
 | `NEXT_PUBLIC_ASSET_BASE_URL`                                             | Where post media and thumbnails are served from, e.g. `https://assets.mikecann.blog` (optional; unset serves them from the deployment)                                                                        |
 
-Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys, and draft posts are left out when it is `production`.
+Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys and whether Sentry is on, and draft posts are left out when it is `production`.
 
 **Convex** (Dashboard → Settings → Environment Variables, or `bunx convex env set NAME value`), for each deployment:
 
