@@ -137,7 +137,7 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | `syncAssets` (optional; see "Serving media from Cloudflare R2")                                                                                                                                               |
 | `NEXT_PUBLIC_ASSET_BASE_URL`                                             | Where post media and thumbnails are served from, e.g. `https://assets.mikecann.blog` (optional; unset serves them from the deployment)                                                                        |
 
-Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys and whether Sentry is on, and draft posts are left out when it is `production`.
+Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys and whether the server reports to Sentry, and draft posts are left out when it is `production`.
 
 **Convex** (Dashboard → Settings → Environment Variables, or `bunx convex env set NAME value`), for each deployment:
 

@@ -1,14 +1,11 @@
 import type { Instrumentation } from "next";
 import { isBotUserAgent, SENTRY_DSN, sentryDataCollection, sentryRelease } from "./utils/sentry";
 
-// Production deployments only (see utils/sentry.ts). VERCEL is checked at runtime as well, so a
-// production build started anywhere but Vercel (`next start` on a laptop) stays quiet. There is
-// no middleware or edge route, so only the Node.js runtime needs it. The SDK is imported only
-// when it's on, so other builds and dev servers never load it.
-const enabled =
-  process.env.BLOG_SENTRY_ENABLED == "1" &&
-  process.env.VERCEL == "1" &&
-  process.env.NEXT_RUNTIME == "nodejs";
+// Production deployments only (see utils/sentry.ts). VERCEL_ENV is read at runtime (it isn't
+// baked into the bundle), so previews, dev servers and `next start` on a laptop stay quiet. There
+// is no middleware or edge route, so only the Node.js runtime needs it. The SDK is imported only
+// when it's on.
+const enabled = process.env.VERCEL_ENV == "production" && process.env.NEXT_RUNTIME == "nodejs";
 
 export async function register() {
   if (!enabled) return;

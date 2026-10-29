@@ -55,10 +55,8 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  // Read by utils/sentry.ts. Only production deployments report errors to Sentry, so previews,
-  // dev servers and local builds never do. Baked in at build time so the browser bundle gets it too.
+  // The Sentry release (see utils/sentry.ts), baked in so the browser bundle gets it too.
   env: {
-    BLOG_SENTRY_ENABLED: process.env.VERCEL_ENV == "production" ? "1" : "",
     BLOG_SENTRY_RELEASE: process.env.VERCEL_GIT_COMMIT_SHA || "",
   },
 
