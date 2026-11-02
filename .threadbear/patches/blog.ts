@@ -4,11 +4,11 @@
 export default {
   icon: "text.book.closed",
   actions: [
-    { title: "Blog", icon: "safari", run: "open https://mikecann.blog/" },
+    { title: "Blog", icon: "safari", url: "https://mikecann.blog/" },
     {
       title: "Sentry",
       icon: "exclamationmark.triangle",
-      run: "open 'https://mikec.sentry.io/issues/?project=4512336957800448'",
+      url: "https://mikec.sentry.io/issues/?project=4512336957800448",
     },
   ],
   hooks: [
