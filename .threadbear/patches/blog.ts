@@ -5,7 +5,19 @@ export default {
   icon: "text.book.closed",
   actions: [
     { title: "Blog", icon: "safari", run: "open https://mikecann.blog/" },
-    { title: "Sentry", icon: "exclamationmark.triangle", run: "open 'https://mikec.sentry.io/issues/?project=4512336957800448'" },
+    {
+      title: "Sentry",
+      icon: "exclamationmark.triangle",
+      run: "open 'https://mikec.sentry.io/issues/?project=4512336957800448'",
+    },
   ],
-  hooks: [{ title: "Validate posts", on: "turn.end", run: "setopt pipefail; bun run validatePosts 2>&1 | tail -5", edited: "public/posts/**", tell: "failures" }],
+  hooks: [
+    {
+      title: "Validate posts",
+      on: "turn.end",
+      run: "setopt pipefail; bun run validatePosts 2>&1 | tail -5",
+      edited: "public/posts/**",
+      tell: "failures",
+    },
+  ],
 };
