@@ -39,7 +39,7 @@
     "@vercel/analytics": "^2.0.1",
     "ai": "^7.0.114",
     "algoliasearch": "^5.57.0",
-    "convex": "^1.46.0",
+    "convex": "^1.49.0",
     "convex-helpers": "^0.1.127",
     "date-fns": "^4.4.0",
     "fluent-convex": "^0.13.0",
