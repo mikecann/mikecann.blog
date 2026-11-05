@@ -15,7 +15,7 @@ export default {
     {
       title: "Validate posts",
       on: "turn.end",
-      run: "setopt pipefail; bun run validatePosts 2>&1 | tail -5",
+      run: "./scripts/validate-posts.sh",
       edited: "public/posts/**",
       tell: "failures",
     },
