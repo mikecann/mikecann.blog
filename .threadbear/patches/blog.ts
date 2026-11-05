@@ -15,6 +15,8 @@ export default {
     {
       title: "Validate posts",
       on: "turn.end",
+      // A script, as Threadbear only runs a patch's hooks by themselves when
+      // they're one script it hashed.
       run: "./scripts/validate-posts.sh",
       edited: "public/posts/**",
       tell: "failures",
