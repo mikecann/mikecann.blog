@@ -120,7 +120,12 @@ export type PostLiveCheck = { ok: true } | { ok: false; detail: string };
 export async function checkPostIsLive(slug: string): Promise<PostLiveCheck> {
   const url = getPostUrl(slug);
   try {
-    const response = await fetch(url, { method: "GET", redirect: "follow" });
+    // Cloudflare caches pages for a day, including a 404 seen before the deploy went live. A
+    // unique query string misses that cache, so this sees what Vercel is serving right now.
+    const response = await fetch(`${url}?live-check=${Date.now()}`, {
+      method: "GET",
+      redirect: "follow",
+    });
     if (response.status === 200) return { ok: true };
     return { ok: false, detail: `${url} returned HTTP ${response.status}` };
   } catch (error) {

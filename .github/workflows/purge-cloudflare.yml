@@ -1,0 +1,37 @@
+name: Purge Cloudflare cache
+
+# Cloudflare caches the blog's pages for a day (the "Cache blog pages" cache rule on the
+# mikecann.blog zone), so Vercel only serves each page about once a day instead of on every
+# cache miss. That keeps us well under the Hobby plan's ISR Reads limit, but it means a new
+# deploy isn't visible until the cache is emptied, and stale HTML would point at JS chunks the
+# new deployment no longer has. So empty it as soon as Vercel reports production is live.
+on:
+  deployment_status:
+  # For a deploy that skipped this (a rollback or promote in the Vercel dashboard).
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  purge:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Purge everything on mikecann.blog
+        env:
+          # Token can only purge the cache on the mikecann.blog zone.
+          CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          # Vercel reports success as the domain switches over; give it a moment so the purge
+          # doesn't let Cloudflare refetch a page from the old deployment.
+          sleep 15
+          curl --fail-with-body -sS -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CLOUDFLARE_PURGE_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}'

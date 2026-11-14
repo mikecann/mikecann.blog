@@ -119,10 +119,13 @@ describe("checkPostIsLive", () => {
     const fetchMock = vi.spyOn(globalThis, "fetch");
     fetchMock.mockResolvedValueOnce(new Response("ok", { status: 200 }));
     expect(await checkPostIsLive("my-post")).toEqual({ ok: true });
-    expect(fetchMock).toHaveBeenCalledWith("https://mikecann.blog/posts/my-post", {
-      method: "GET",
-      redirect: "follow",
-    });
+    expect(fetchMock).toHaveBeenCalledWith(
+      expect.stringMatching(/^https:\/\/mikecann\.blog\/posts\/my-post\?live-check=\d+$/),
+      {
+        method: "GET",
+        redirect: "follow",
+      },
+    );
 
     fetchMock.mockResolvedValueOnce(new Response("nope", { status: 404 }));
     expect(await checkPostIsLive("my-post")).toEqual({

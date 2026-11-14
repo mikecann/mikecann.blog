@@ -70,6 +70,12 @@ Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel 
 
 - **Preview** builds run `bun run build`, then `syncAssets -- --strip`. Previews only upload media that's missing from R2 and never replace an existing file, so building a branch doesn't change what production serves (see below).
 
+### Cloudflare page cache
+
+Cloudflare caches every page on `mikecann.blog` for a day (cache rule "Cache blog pages (purged on deploy)", with Smart Tiered Cache on), except `/api/` and `/_vercel/`. Without it, every Vercel cache miss (mostly crawlers working through old posts and tag pages) cost ISR Reads, and the blog was using about 750k of the Hobby plan's 1M a month. Hitting the limit pauses the project.
+
+When Vercel reports a production deploy live, `.github/workflows/purge-cloudflare.yml` empties the whole Cloudflare cache (secrets `CLOUDFLARE_PURGE_TOKEN`, a purge-only token for this zone, and `CLOUDFLARE_ZONE_ID`). A rollback or promote in the Vercel dashboard may not trigger it, so run the workflow by hand after one.
+
 ### Serving media from Cloudflare R2
 
 Every Vercel deployment used to include all ~330MB of post media, which filled the free plan's 10GB deployment storage after about 30 deployments. Post media and thumbnails can instead be served from an R2 bucket, which keeps each deployment to a few MB. Images stay in git next to each `post.md` as before; deploys upload anything new or changed.
