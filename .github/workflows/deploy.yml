@@ -59,8 +59,16 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: bunx wrangler deploy
 
+      # After the site is live: a new post schedules the subscriber email, which waits until the
+      # post's page loads.
+      - name: Upload changed posts to Convex
+        env:
+          BLOG_POST_ADMIN_TOKEN: ${{ secrets.BLOG_POST_ADMIN_TOKEN }}
+        run: bun run uploadPostsToConvex -- --production
+
       - name: Update the search index
         env:
+          # A key limited to the next-mikecann* indices, not the account's admin key.
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
         run: |
           if [ -z "$ALGOLIA_ADMIN_KEY" ]; then
@@ -68,10 +76,3 @@ jobs:
             exit 0
           fi
           bun run populateAlgolia
-
-      # After the site is live: a new post schedules the subscriber email, which waits until the
-      # post's page loads.
-      - name: Upload changed posts to Convex
-        env:
-          BLOG_POST_ADMIN_TOKEN: ${{ secrets.BLOG_POST_ADMIN_TOKEN }}
-        run: bun run uploadPostsToConvex -- --production

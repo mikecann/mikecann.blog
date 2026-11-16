@@ -60,8 +60,8 @@ Every push to `main` deploys, through `.github/workflows/deploy.yml`:
 1. `convex deploy --cmd 'bun run build && bun run syncAssets'`. The Convex CLI runs the build first, with `NEXT_PUBLIC_CONVEX_URL` set to the production deployment, then uploads new or changed media to R2 (see below). It only pushes the Convex functions if both succeed.
    - `bun run build` runs `generate` (writes `public/rss.xml`, `public/sitemap.xml` and `worker/redirects.generated.json`, all gitignored, plus any missing cover thumbnails in `public/thumbs/`, which are committed), then `astro build` into `dist/`.
 2. `wrangler deploy` uploads `dist/` and the Worker to Cloudflare. Only changed files are uploaded.
-3. `populateAlgolia` replaces the search index atomically.
-4. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs once the site is live because creating a new post schedules the subscriber email, which waits until the post's page loads.
+3. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs once the site is live because creating a new post schedules the subscriber email, which waits until the post's page loads.
+4. `populateAlgolia` replaces the search index atomically. It's last so a search problem can't hold up the posts.
 
 If any step fails, the steps after it don't run. `DEPLOY_ENV=production` marks a production build: drafts are left out and `syncAssets` may replace files already in R2.
 
@@ -113,18 +113,18 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 
 **GitHub** (repo → Settings → Secrets and variables → Actions), used by the deploy workflow. Public values are variables, the rest are secrets:
 
-| Name                                                  | Kind     | Used by                                                                                                              |
-| ----------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| `CONVEX_DEPLOY_KEY`                                   | secret   | `convex deploy` (a production deploy key with only `deployment:deploy`)                                              |
-| `CLOUDFLARE_API_TOKEN`                                | secret   | `wrangler deploy`; also the source of the R2 credentials. Scoped to the account's Workers and R2 and the blog's zone |
-| `CLOUDFLARE_ACCOUNT_ID`                               | variable | `wrangler deploy`                                                                                                    |
-| `R2_ACCOUNT_ID`, `R2_BUCKET`                          | variable | `syncAssets`                                                                                                         |
-| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`            | secret   | `syncAssets`; derived from `CLOUDFLARE_API_TOKEN` (see "Serving media from Cloudflare R2")                           |
-| `NEXT_PUBLIC_CONVEX_URL_PROD`                         | variable | `uploadPostsToConvex` (`convex deploy --cmd` only sets `NEXT_PUBLIC_CONVEX_URL` for the build command)               |
-| `BLOG_POST_ADMIN_TOKEN`                               | secret   | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                |
-| `ALGOLIA_ADMIN_KEY`                                   | secret   | `populateAlgolia` (the step is skipped with a warning if it's missing)                                               |
-| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | variable | PostHog analytics in the browser (disabled when the key isn't set)                                                   |
-| `NEXT_PUBLIC_ASSET_BASE_URL`                          | variable | Where post media and thumbnails are served from (`https://assets.mikecann.blog`)                                     |
+| Name                                                  | Kind     | Used by                                                                                                                      |
+| ----------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `CONVEX_DEPLOY_KEY`                                   | secret   | `convex deploy` (a production deploy key with only `deployment:deploy`)                                                      |
+| `CLOUDFLARE_API_TOKEN`                                | secret   | `wrangler deploy`; also the source of the R2 credentials. Scoped to the account's Workers and R2 and the blog's zone         |
+| `CLOUDFLARE_ACCOUNT_ID`                               | variable | `wrangler deploy`                                                                                                            |
+| `R2_ACCOUNT_ID`, `R2_BUCKET`                          | variable | `syncAssets`                                                                                                                 |
+| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`            | secret   | `syncAssets`; derived from `CLOUDFLARE_API_TOKEN` (see "Serving media from Cloudflare R2")                                   |
+| `NEXT_PUBLIC_CONVEX_URL_PROD`                         | variable | `uploadPostsToConvex` (`convex deploy --cmd` only sets `NEXT_PUBLIC_CONVEX_URL` for the build command)                       |
+| `BLOG_POST_ADMIN_TOKEN`                               | secret   | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                        |
+| `ALGOLIA_ADMIN_KEY`                                   | secret   | `populateAlgolia`: a key limited to the `next-mikecann*` indices with only the write permissions it needs, not the admin key |
+| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | variable | PostHog analytics in the browser (disabled when the key isn't set)                                                           |
+| `NEXT_PUBLIC_ASSET_BASE_URL`                          | variable | Where post media and thumbnails are served from (`https://assets.mikecann.blog`)                                             |
 
 The `NEXT_PUBLIC_` names are left over from Next.js; `astro.config.mjs` inlines them into the browser code. `ALGOLIA_APP_ID` is optional and defaults to the app ID the frontend uses, `JYZJ63OX7U`.
 
