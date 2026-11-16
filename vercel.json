@@ -21,6 +21,17 @@
           "value": "www.mikecann.co.uk"
         }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://mikecann.blog/$1",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "next-mikecann.vercel.app"
+        }
+      ]
     }
   ]
 }
