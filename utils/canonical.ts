@@ -21,6 +21,10 @@ const decodeFully = (segment: string) => {
 export const canonicalUrlForPath = (pathname: string) => {
   const path = pathname
     .split(/[?#]/)[0]
+    // Pages are built as files (build.format "file"), so Astro.url ends in .html during the
+    // build; the site serves them without it.
+    .replace(/\.html$/, "")
+    .replace(/\/index$/, "/")
     .split("/")
     .map((segment) => encodeURIComponent(decodeFully(segment)))
     .join("/");
