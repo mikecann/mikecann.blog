@@ -10,7 +10,7 @@
     "dev:convex": "convex dev",
     "generate": "bun run generateRSS && bun run generateSitemap && bun run generateThumbnails && bun run generateRedirects",
     "build": "bun run generate && astro build",
-    "typecheck": "astro sync && tsc --noEmit && tsc --noEmit -p scripts && tsc --noEmit -p worker",
+    "typecheck": "bun run generateRedirects && astro sync && tsc --noEmit && tsc --noEmit -p scripts && tsc --noEmit -p worker",
     "dev:ts": "tsc --noEmit -w",
     "test": "vitest run",
     "dev:test": "vitest",

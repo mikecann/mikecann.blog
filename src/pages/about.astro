@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import { join } from "node:path";
 import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
+import { Markdown } from "../../components/markdown/Markdown";
 import SidebarPage from "../layouts/SidebarPage.astro";
 import { Vertical } from "../../components/utils/gls";
 import { SubscribeForm } from "../../components/newsletter/SubscribeForm";
@@ -16,7 +16,7 @@ const { content } = matter(
   <Vertical style={{ paddingRight: 20, maxWidth: 700, width: "100%" }}>
     <h1>About</h1>
     <div class="markdown-content">
-      <ReactMarkdown children={content} />
+      <Markdown markdown={content} />
     </div>
     <h2>Get new posts by email</h2>
     <p style="color: #5d686f; margin-top: 0">
