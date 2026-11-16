@@ -11,5 +11,9 @@
     "html_handling": "drop-trailing-slash",
     "not_found_handling": "404-page",
   },
+  // mikecann.blog's DNS record still points at Vercel; this route sends every request to the
+  // Worker first, so removing it (here or in the dashboard) puts the old Vercel site back.
+  // www.mikecann.blog, convex.mikecann.blog and mikecann.co.uk are still on Vercel.
+  "routes": [{ "pattern": "mikecann.blog/*", "zone_name": "mikecann.blog" }],
   "observability": { "enabled": true },
 }
