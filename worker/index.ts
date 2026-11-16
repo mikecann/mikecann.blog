@@ -76,19 +76,36 @@ const proxyLegacy = (url: URL, origin: string) =>
     cf: { cacheEverything: true, cacheTtl: 30 * 24 * 60 * 60 },
   });
 
+// The security headers public/_headers gives the static assets, for the responses made here.
+const securityHeaders: Record<string, string> = {
+  "Strict-Transport-Security": "max-age=63072000",
+  "X-Content-Type-Options": "nosniff",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "X-Frame-Options": "SAMEORIGIN",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+};
+
+const withSecurityHeaders = (response: Response) => {
+  const secured = new Response(response.body, response);
+  for (const [name, value] of Object.entries(securityHeaders)) secured.headers.set(name, value);
+  return secured;
+};
+
+const route = async (request: Request, env: Env, ctx: ExecutionContext): Promise<Response> => {
+  const url = new URL(request.url);
+
+  if (url.pathname == "/api/activity") return handleActivity(request, ctx);
+
+  const destination = oldUrlRedirects[normalisePath(url.pathname)];
+  if (destination) return Response.redirect(new URL(destination, url).toString(), 308);
+
+  const legacy = legacyOrigins.find(([prefix]) => url.pathname.startsWith(prefix));
+  if (legacy) return proxyLegacy(url, legacy[1]);
+
+  // Not a page or file we have: the assets binding answers with 404.html and a 404 status.
+  return env.ASSETS.fetch(request);
+};
+
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    const url = new URL(request.url);
-
-    if (url.pathname == "/api/activity") return handleActivity(request, ctx);
-
-    const destination = oldUrlRedirects[normalisePath(url.pathname)];
-    if (destination) return Response.redirect(new URL(destination, url).toString(), 308);
-
-    const legacy = legacyOrigins.find(([prefix]) => url.pathname.startsWith(prefix));
-    if (legacy) return proxyLegacy(url, legacy[1]);
-
-    // Not a page or file we have: the assets binding answers with 404.html and a 404 status.
-    return env.ASSETS.fetch(request);
-  },
+  fetch: async (request, env, ctx) => withSecurityHeaders(await route(request, env, ctx)),
 } satisfies ExportedHandler<Env>;
