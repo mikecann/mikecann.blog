@@ -16,7 +16,7 @@
         "convex": "^1.49.0",
         "convex-helpers": "^0.1.127",
         "date-fns": "^4.4.0",
-        "fluent-convex": "^0.13.0",
+        "fluent-convex": "^0.15.0",
         "gls": "^3.0.1",
         "gray-matter": "^4.0.3",
         "image-size": "^2.0.2",
@@ -595,7 +595,7 @@
 
     "fflate": ["fflate@0.4.8", "", {}, "sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA=="],
 
-    "fluent-convex": ["fluent-convex@0.13.0", "", { "peerDependencies": { "convex": "^1.31.0", "convex-helpers": ">=0.1.0", "zod": "^3.25.0 || ^4.0.0" }, "optionalPeers": ["convex-helpers", "zod"] }, "sha512-C+9m3ICdGBrY75gbUn5im6r+pJr4G5o06PJc7igL8VXA+KyoNABDsUTnjAwrajGvBxySx6wqNbDnaYun9xzQgg=="],
+    "fluent-convex": ["fluent-convex@0.15.0", "", { "peerDependencies": { "convex": "^1.46.0", "convex-helpers": "^0.1.127", "zod": "^3.25.0 || ^4.0.0" }, "optionalPeers": ["convex-helpers", "zod"] }, "sha512-WLgFjo3wUzIFuisnnvepegCOca+k5wRptpd29gZ/ZaKngLfPv4W0O3hIhloUntgThP2mgodF5QEPAtJhxpeHqQ=="],
 
     "format": ["format@0.2.2", "", {}, "sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww=="],
 

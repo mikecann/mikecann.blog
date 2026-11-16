@@ -42,7 +42,7 @@
     "convex": "^1.49.0",
     "convex-helpers": "^0.1.127",
     "date-fns": "^4.4.0",
-    "fluent-convex": "^0.13.0",
+    "fluent-convex": "^0.15.0",
     "gls": "^3.0.1",
     "gray-matter": "^4.0.3",
     "image-size": "^2.0.2",
