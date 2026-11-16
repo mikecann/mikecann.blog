@@ -19,6 +19,7 @@ import {
   getImageRefs,
   getUnparsedImageSyntax,
   parseMarkdown,
+  walkMarkdown,
   type MarkdownRef,
 } from "./lib/markdown";
 import { resolveLocalFile, publicDirectory } from "./lib/postAssets";
@@ -88,6 +89,26 @@ const checkImageRefs = (post: PostWithContent) => {
     );
 };
 
+// In HTML, `<h2/>` doesn't close anything: the slash is ignored and it opens another heading, so
+// the rest of the post ends up inside it. Next.js hid that (React rebuilt the page in the
+// browser); the static site shows it, which broke 5-games-now-on-the-windows-store. Only
+// elements that can't be empty are checked; `<br/>`, `<img/>` and SVG shapes are fine.
+const selfClosedElement =
+  /<(h[1-6]|p|div|span|a|b|i|u|em|strong|ul|ol|li|table|thead|tbody|tr|td|th|blockquote|section|article|header|footer|center|font|iframe|video|audio|object|script)\s*\/>/gi;
+
+const checkRawHtml = (post: PostWithContent) => {
+  const offset = frontmatterLineCount(post);
+  walkMarkdown(parseMarkdown(post.content), (node) => {
+    if (node.type != "html") return;
+    for (const match of node.value.matchAll(selfClosedElement)) {
+      const line = node.position ? node.position.start.line + offset : undefined;
+      errors.push(
+        `${at(post.slug, line)}: ${match[0]} doesn't close anything in HTML; use </${match[1]}> or an empty element`,
+      );
+    }
+  });
+};
+
 const checkImageFiles = () => {
   let mismatched = 0;
   for (const file of listFiles(publicDirectory)) {
@@ -108,6 +129,7 @@ const main = () => {
   for (const post of posts) {
     checkCoverImage(post);
     checkImageRefs(post);
+    checkRawHtml(post);
   }
   checkOldUrls(posts);
   checkImageFiles();

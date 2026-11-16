@@ -43,10 +43,21 @@ const getCodeLanguage = (code: HastElement): string | undefined => {
   return languageClass?.slice("language-".length);
 };
 
+const containsLink = (node: HastNode): boolean =>
+  node.type == "element" && (node.tagName == "a" || node.children.some(containsLink));
+
 const createHeading =
   (Tag: "h1" | "h2" | "h3" | "h4" | "h5") =>
   ({ node, children, ...rest }: React.HTMLAttributes<HTMLHeadingElement> & ExtraProps) => {
     const slug = slugFromChildren(children);
+    // A heading that is already a link can't be wrapped in its own #slug link: browsers don't
+    // nest links and would split the heading in two.
+    if (node && containsLink(node))
+      return (
+        <Tag id={slug} style={headingStyle}>
+          {children}
+        </Tag>
+      );
     return (
       <Tag id={slug} style={headingStyle}>
         <HeadingLink slug={slug} {...(rest as React.HTMLAttributes<HTMLAnchorElement>)}>
