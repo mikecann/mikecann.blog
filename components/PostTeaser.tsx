@@ -1,7 +1,7 @@
 import * as React from "react";
-import Image from "next/image";
+import Image from "./utils/Image";
 import { style } from "typestyle";
-import Link from "next/link";
+import Link from "./utils/Link";
 import { PostTags } from "./PostTags";
 import type { PostTeaserData } from "../scripts/posts/teasers";
 import { Vertical } from "./utils/gls";

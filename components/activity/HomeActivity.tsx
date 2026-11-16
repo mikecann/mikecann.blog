@@ -8,6 +8,7 @@ import {
   activityHeadingStyle,
   newestActivityDate,
 } from "./LatestActivity";
+import { useFreshLatestActivity } from "./useFreshLatestActivity";
 
 /**
  * From this width the homepage has room for the column beside two columns of post cards, even
@@ -71,15 +72,25 @@ const stripItemClass = style({
   $nest: { "& > a": { flex: 1 } },
 });
 
+type HomeActivityProps = {
+  /** The activity the page was built with; topped up from /api/activity once it loads. */
+  activity: LatestActivity;
+  maxXPosts: number;
+};
+
 /** My latest video and X posts in a column beside the homepage posts, on wide screens. */
-export const HomeActivityRail = ({ activity }: { activity: LatestActivity }) => (
-  <aside aria-label="Mike, elsewhere" className={railClass}>
-    <LatestActivityPanel heading="Elsewhere" activity={activity} />
-  </aside>
-);
+export const HomeActivityRail = ({ activity: built, maxXPosts }: HomeActivityProps) => {
+  const activity = useFreshLatestActivity(built, maxXPosts);
+  return (
+    <aside aria-label="Mike, elsewhere" className={railClass}>
+      <LatestActivityPanel heading="Elsewhere" activity={activity} />
+    </aside>
+  );
+};
 
 /** The same as a swipeable strip above the posts, for narrower screens and phones. */
-export const HomeActivityStrip = ({ activity }: { activity: LatestActivity }) => {
+export const HomeActivityStrip = ({ activity: built, maxXPosts }: HomeActivityProps) => {
+  const activity = useFreshLatestActivity(built, maxXPosts);
   const newestDate = newestActivityDate(activity);
   if (!newestDate) return null;
 

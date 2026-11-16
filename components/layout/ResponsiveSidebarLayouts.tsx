@@ -2,12 +2,13 @@ import * as React from "react";
 import { style } from "typestyle";
 import Layout from "./Layout";
 import { Horizontal, Vertical } from "../utils/gls";
-import { MobileSidebar } from "../sidebar/MobileSidebar";
-import { TabletSidebar } from "../sidebar/TabletSidebar";
-import { DesktopSidebar } from "../sidebar/DesktopSidebar";
-
 interface Props {
   children?: React.ReactNode;
+  // The sidebars are interactive (search, Mikebot), so the Astro layout passes them in as islands
+  // through these named slots while the page content stays static HTML.
+  mobile?: React.ReactNode;
+  tablet?: React.ReactNode;
+  desktop?: React.ReactNode;
 }
 
 const mobileQuery = "@media (max-width: 769px)";
@@ -42,19 +43,18 @@ const contentClassName = style({
  * only the (fixed-position) sidebars are switched with CSS media queries so the server-rendered
  * HTML is correct at every size.
  */
-export const ResponsiveSidebarLayouts: React.FC<Props> = ({ children }) => {
+export const ResponsiveSidebarLayouts: React.FC<Props> = ({
+  children,
+  mobile,
+  tablet,
+  desktop,
+}) => {
   return (
     <Layout>
       <Horizontal height="100%">
-        <div className={mobileClassName}>
-          <MobileSidebar />
-        </div>
-        <div className={tabletClassName}>
-          <TabletSidebar />
-        </div>
-        <div className={desktopClassName}>
-          <DesktopSidebar />
-        </div>
+        <div className={mobileClassName}>{mobile}</div>
+        <div className={tabletClassName}>{tablet}</div>
+        <div className={desktopClassName}>{desktop}</div>
 
         <Vertical width="100%" className={contentClassName} spacing={40}>
           {children}

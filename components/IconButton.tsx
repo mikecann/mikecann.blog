@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "next/link";
+import Link from "./utils/Link";
 import { classes, style } from "typestyle";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {

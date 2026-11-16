@@ -1,0 +1,30 @@
+---
+import SidebarPage from "../../layouts/SidebarPage.astro";
+import { PostTeaser } from "../../../components/PostTeaser";
+import { ArchiveYears } from "../../../components/ArchiveYears";
+import { Grid, Vertical } from "../../../components/utils/gls";
+import { getAllYears, getPostsByYear, sortPosts, sortYears } from "../../../utils/posts";
+import { getAllPostsWithoutContent } from "../../../scripts/posts";
+import { toPostTeaser } from "../../../scripts/posts/teasers";
+
+export const getStaticPaths = () =>
+  getAllYears(getAllPostsWithoutContent()).map((year) => ({ params: { year } }));
+
+const year = Astro.params.year!;
+const allPosts = sortPosts(getAllPostsWithoutContent(), "desc");
+const posts = getPostsByYear(year, allPosts).map(toPostTeaser);
+const years = sortYears(getAllYears(allPosts));
+---
+
+<SidebarPage title={`archive ${year} - mikecann.blog`}>
+  <Vertical width="100%">
+    <h1>{year}</h1>
+    <Grid width="100%" spacing={20} style={{ alignItems: "start" }}>
+      {posts.map((post) => <PostTeaser post={post} />)}
+    </Grid>
+  </Vertical>
+  <Vertical style={{ marginBottom: 20 }}>
+    <h1>Archive</h1>
+    <ArchiveYears years={years} />
+  </Vertical>
+</SidebarPage>

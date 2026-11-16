@@ -1,0 +1,27 @@
+---
+import SidebarPage from "../../layouts/SidebarPage.astro";
+import { PostTeaser } from "../../../components/PostTeaser";
+import { Grid, Vertical } from "../../../components/utils/gls";
+import { groupPostsByTag, sortPosts } from "../../../utils/posts";
+import { tagToParam } from "../../../utils/tags";
+import { getAllPostsWithoutContent } from "../../../scripts/posts";
+import { toPostTeaser } from "../../../scripts/posts/teasers";
+
+export const getStaticPaths = () =>
+  Object.entries(groupPostsByTag(getAllPostsWithoutContent())).map(([tag, posts]) => ({
+    // Unencoded: `raspberry pi` is built as tags/raspberry pi.html, served at /tags/raspberry%20pi.
+    params: { tag: tagToParam(tag) },
+    props: { tag, posts: sortPosts(posts, "desc").map(toPostTeaser) },
+  }));
+
+const { tag, posts } = Astro.props;
+---
+
+<SidebarPage title={`${tag} - mikecann.blog`}>
+  <Vertical width="100%">
+    <h1>{tag}</h1>
+    <Grid width="100%" spacing={20} style={{ alignItems: "start" }}>
+      {posts.map((post) => <PostTeaser post={post} />)}
+    </Grid>
+  </Vertical>
+</SidebarPage>

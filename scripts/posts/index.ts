@@ -41,8 +41,8 @@ export const getPostCoverImageRootPath = (slug: string, coverImage: string) => {
 };
 
 /**
- * In `next dev` posts are re-read on every call so edits show up on refresh. Everywhere else
- * (`next build` workers, scripts) each post is parsed at most once per process.
+ * In `astro dev` posts are re-read on every call so edits show up on refresh. Everywhere else
+ * (`astro build`, scripts) each post is parsed at most once per process.
  */
 const shouldCachePosts = () => process.env.NODE_ENV !== "development";
 
@@ -82,11 +82,11 @@ export const getAllPosts = (): PostWithContent[] => {
 export const isDraft = (post: Post) => post.meta.status == "draft";
 
 /**
- * Drafts are only included when running `next dev` or when `INCLUDE_DRAFTS=1` is set, and never
- * in a Vercel production deployment.
+ * Drafts are only included when running `astro dev` or when `INCLUDE_DRAFTS=1` is set, and never
+ * in a production deploy (`DEPLOY_ENV=production`).
  */
 export const shouldIncludeDrafts = () => {
-  if (process.env.VERCEL_ENV == "production") return false;
+  if (process.env.DEPLOY_ENV == "production") return false;
   return process.env.NODE_ENV == "development" || process.env.INCLUDE_DRAFTS == "1";
 };
 

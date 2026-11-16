@@ -1,5 +1,5 @@
 /**
- * Records an analytics event in PostHog if it's configured and has loaded (see `_app.tsx`, which
+ * Records an analytics event in PostHog if it's configured and has loaded (see `utils/posthog.ts`, which
  * loads it once the page is idle). Never throws and never delays the caller.
  */
 export const trackEvent = (event: string, properties?: Record<string, unknown>) => {

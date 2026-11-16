@@ -1,0 +1,25 @@
+---
+import SidebarPage from "../../layouts/SidebarPage.astro";
+import { Grid, Vertical } from "../../../components/utils/gls";
+import { groupPostsByTag, calculateTagsLastUse } from "../../../utils/posts";
+import { tagPath } from "../../../utils/tags";
+import { getAllPostsWithoutContent } from "../../../scripts/posts";
+
+const tags = calculateTagsLastUse(groupPostsByTag(getAllPostsWithoutContent()))
+  .sort((a, b) => b.lastUse.getTime() - a.lastUse.getTime())
+  .map(({ tag, posts }) => ({ tag, postsCount: posts.length }));
+---
+
+<SidebarPage title="tags - mikecann.blog">
+  <Vertical style={{ marginBottom: 20 }}>
+    <Grid width="100%" spacing={[5, 20]} style={{ alignItems: "center" }}>
+      {
+        tags.map(({ tag, postsCount }) => (
+          <Vertical verticalAlign="center" style={{ fontSize: 0.5 + 0.1 * postsCount + `em` }}>
+            <a href={tagPath(tag)}>{tag}</a>
+          </Vertical>
+        ))
+      }
+    </Grid>
+  </Vertical>
+</SidebarPage>

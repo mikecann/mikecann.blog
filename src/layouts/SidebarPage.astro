@@ -1,0 +1,21 @@
+---
+import type { ComponentProps } from "astro/types";
+import Base from "./Base.astro";
+import { ResponsiveSidebarLayouts } from "../../components/layout/ResponsiveSidebarLayouts";
+import { MobileSidebar } from "../../components/sidebar/MobileSidebar";
+import { TabletSidebar } from "../../components/sidebar/TabletSidebar";
+import { DesktopSidebar } from "../../components/sidebar/DesktopSidebar";
+
+type Props = ComponentProps<typeof Base>;
+---
+
+<Base {...Astro.props}>
+  <slot name="head" slot="head" />
+  <ResponsiveSidebarLayouts>
+    {/* Only the sidebar for the current screen size is visible, so client:visible hydrates just that one. */}
+    <MobileSidebar slot="mobile" client:visible />
+    <TabletSidebar slot="tablet" client:visible />
+    <DesktopSidebar slot="desktop" client:visible />
+    <slot />
+  </ResponsiveSidebarLayouts>
+</Base>

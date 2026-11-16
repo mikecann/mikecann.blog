@@ -16,7 +16,7 @@ import { isPostEmailCampaignScheduledOrSent } from "./postEmailCampaignStatus";
 
 const token = ensure(process.env.BLOG_POST_ADMIN_TOKEN, "Missing env BLOG_POST_ADMIN_TOKEN");
 
-const isProd = Bun.argv.includes("--production") || process.env.VERCEL_ENV === "production";
+const isProd = Bun.argv.includes("--production") || process.env.DEPLOY_ENV === "production";
 const forcePrune = Bun.argv.includes("--force-prune");
 
 // Identifies this run so the server can cap how many new-post emails one upload

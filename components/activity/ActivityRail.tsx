@@ -12,8 +12,8 @@ import { useFreshLatestActivity } from "./useFreshLatestActivity";
 
 interface Props {
   activity: PostActivity;
-  /** The post's article. The rail hides once its top reaches the top of the viewport. */
-  articleRef: React.RefObject<HTMLElement | null>;
+  /** id of the post's article. The rail hides once its top reaches the top of the viewport. */
+  articleId: string;
 }
 
 /** Below this width there's no room beside the 700px article, so the rail isn't shown. */
@@ -54,14 +54,14 @@ const hiddenClass = style({
 });
 
 /** Whether the reader has scrolled the article up to the top of the screen. */
-const useIsReading = (articleRef: React.RefObject<HTMLElement | null>) => {
+const useIsReading = (articleId: string) => {
   const [isReading, setIsReading] = React.useState(false);
 
   React.useEffect(() => {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const article = articleRef.current;
+      const article = document.getElementById(articleId);
       if (!article) return;
       setIsReading(article.getBoundingClientRect().top < window.innerHeight * readingThreshold);
     };
@@ -77,7 +77,7 @@ const useIsReading = (articleRef: React.RefObject<HTMLElement | null>) => {
       window.removeEventListener("resize", scheduleUpdate);
       cancelAnimationFrame(frame);
     };
-  }, [articleRef]);
+  }, [articleId]);
 
   return isReading;
 };
@@ -86,8 +86,8 @@ const useIsReading = (articleRef: React.RefObject<HTMLElement | null>) => {
  * What Mike's been up to elsewhere, beside the top of a post. It slides away once the reader
  * gets into the article and comes back when they scroll back up to the top.
  */
-export const ActivityRail: React.FC<Props> = ({ activity, articleRef }) => {
-  const isReading = useIsReading(articleRef);
+export const ActivityRail: React.FC<Props> = ({ activity, articleId }) => {
+  const isReading = useIsReading(articleId);
   const { elsewhere } = activity;
   const latest = useFreshLatestActivity(activity, postMaxXPosts, [
     elsewhere.video,

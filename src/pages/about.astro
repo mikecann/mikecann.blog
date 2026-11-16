@@ -1,0 +1,27 @@
+---
+import fs from "node:fs";
+import { join } from "node:path";
+import matter from "gray-matter";
+import ReactMarkdown from "react-markdown";
+import SidebarPage from "../layouts/SidebarPage.astro";
+import { Vertical } from "../../components/utils/gls";
+import { SubscribeForm } from "../../components/newsletter/SubscribeForm";
+
+const { content } = matter(
+  fs.readFileSync(join(process.cwd(), "public/pages/about/index.md"), "utf8"),
+);
+---
+
+<SidebarPage title="about - mikecann.blog">
+  <Vertical style={{ paddingRight: 20, maxWidth: 700, width: "100%" }}>
+    <h1>About</h1>
+    <div class="markdown-content">
+      <ReactMarkdown children={content} />
+    </div>
+    <h2>Get new posts by email</h2>
+    <p style="color: #5d686f; margin-top: 0">
+      About one post a month. No spam, unsubscribe any time.
+    </p>
+    <SubscribeForm client:visible source="about" path="/about" />
+  </Vertical>
+</SidebarPage>

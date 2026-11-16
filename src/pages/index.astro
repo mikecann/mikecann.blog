@@ -1,0 +1,41 @@
+---
+import SidebarPage from "../layouts/SidebarPage.astro";
+import { ArchiveYears } from "../../components/ArchiveYears";
+import { PostsGrid } from "../../components/PostsGrid";
+import { Vertical } from "../../components/utils/gls";
+import {
+  HomeActivityRail,
+  HomeActivityStrip,
+  homeColumnsClass,
+} from "../../components/activity/HomeActivity";
+import { groupPostsByYear, sortPosts, sortYears } from "../../utils/posts";
+import { getAllPostsWithoutContent } from "../../scripts/posts";
+import { toPostTeaser } from "../../scripts/posts/teasers";
+import { getActivityItems } from "../../scripts/activity";
+import { buildLatestActivity } from "../../utils/activity";
+
+const homeMaxXPosts = 4;
+
+const postsByYear = groupPostsByYear(sortPosts(getAllPostsWithoutContent(), "desc"));
+const years = sortYears(Object.keys(postsByYear), "desc");
+const latestYears = years.slice(0, 3).map((year) => ({
+  year,
+  posts: postsByYear[parseInt(year)].map(toPostTeaser),
+}));
+const activity = buildLatestActivity(await getActivityItems(), homeMaxXPosts);
+---
+
+<SidebarPage>
+  {/* Built with the activity at deploy time, then topped up from /api/activity in the browser. */}
+  <HomeActivityStrip client:idle activity={activity} maxXPosts={homeMaxXPosts} />
+  <div class={homeColumnsClass}>
+    <Vertical spacing={40} style={{ minWidth: 0 }}>
+      <PostsGrid years={latestYears} />
+      <Vertical style={{ marginBottom: 20 }}>
+        <h1>Archive</h1>
+        <ArchiveYears years={years.slice(3)} />
+      </Vertical>
+    </Vertical>
+    <HomeActivityRail client:idle activity={activity} maxXPosts={homeMaxXPosts} />
+  </div>
+</SidebarPage>

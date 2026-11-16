@@ -1,8 +1,8 @@
-import { init } from "@sentry/nextjs";
+import { init } from "@sentry/browser";
 import { SENTRY_DSN, sentryDataCollection, sentryRelease } from "./sentry";
 
 /**
- * Sentry for the browser (component `web`). Only loaded by instrumentation-client.ts on the
+ * Sentry for the browser (component `web`). Only loaded by utils/startSentry.ts on the
  * production site, as its own chunk, so other pages and builds never download the SDK.
  */
 export const initSentry = () =>

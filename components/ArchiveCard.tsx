@@ -1,6 +1,6 @@
 import * as React from "react";
 import { style } from "typestyle";
-import Link from "next/link";
+import Link from "./utils/Link";
 import type { PostArchiveEntry } from "../scripts/posts/teasers";
 import { Vertical } from "./utils/gls";
 

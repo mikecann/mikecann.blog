@@ -6,14 +6,11 @@
     "node": "24.x"
   },
   "scripts": {
-    "dev": "concurrently --names \"next,convex\" --prefix-colors \"cyan,magenta\" \"bun run dev:next\" \"bun run dev:convex\"",
-    "dev:next": "next dev --turbopack",
+    "dev": "concurrently --names \"astro,convex\" --prefix-colors \"cyan,magenta\" \"bun run dev:astro\" \"bun run dev:convex\"",
     "dev:convex": "convex dev",
-    "generate": "bun run generateRSS && bun run generateSitemap && bun run generateThumbnails",
-    "build": "bun run generate && next build --turbopack",
-    "build-and-deploy": "if [ \"$VERCEL_ENV\" = \"production\" ]; then convex deploy --check-build-environment=disable --cmd 'bun run build && bun run syncAssets' && bun run populateAlgolia && bun run uploadPostsToConvex -- --production && bun run syncAssets -- --strip; else bun run build && bun run syncAssets -- --strip; fi",
-    "start": "next start",
-    "typecheck": "next typegen && tsc --noEmit && tsc --noEmit -p scripts",
+    "generate": "bun run generateRSS && bun run generateSitemap && bun run generateThumbnails && bun run generateRedirects",
+    "build": "bun run generate && astro build",
+    "typecheck": "astro sync && tsc --noEmit && tsc --noEmit -p scripts && tsc --noEmit -p worker",
     "dev:ts": "tsc --noEmit -w",
     "test": "vitest run",
     "dev:test": "vitest",
@@ -28,17 +25,21 @@
     "fixFlashLinks": "bun run ./scripts/fixFlashPlayableLinks.ts",
     "populateAlgolia": "bun run ./scripts/populateAlgolia.ts",
     "uploadPostsToConvex": "bun run ./scripts/uploadPostsToConvex.ts",
-    "syncAssets": "bun run ./scripts/syncAssetsToR2.ts"
+    "syncAssets": "bun run ./scripts/syncAssetsToR2.ts",
+    "dev:astro": "astro dev",
+    "generateRedirects": "bun run ./scripts/generateRedirects.ts",
+    "preview": "wrangler dev"
   },
   "dependencies": {
+    "@astrojs/react": "^7.1.9",
     "@convex-dev/agent": "^0.7.3",
     "@convex-dev/ai-sdk-provider": "^0.2.1",
     "@convex-dev/rag": "^0.7.6",
     "@convex-dev/rate-limiter": "^0.4.0",
-    "@sentry/nextjs": "^11.10.0",
-    "@vercel/analytics": "^2.0.1",
+    "@sentry/browser": "^11.12.0",
     "ai": "^7.0.114",
     "algoliasearch": "^5.57.0",
+    "astro": "^7.4.12",
     "convex": "^1.49.0",
     "convex-helpers": "^0.1.127",
     "date-fns": "^4.4.0",
@@ -47,7 +48,6 @@
     "gray-matter": "^4.0.3",
     "image-size": "^2.0.2",
     "ldrs": "^1.1.9",
-    "next": "^16.3.3",
     "p-limit": "^7.3.3",
     "posthog-js": "^1.421.0",
     "react": "19.2.8",
@@ -65,6 +65,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261116.1",
     "@edge-runtime/vm": "^5.0.0",
     "@types/bun": "^1.4.0",
     "@types/node": "^24.13.3",
@@ -79,7 +80,8 @@
     "prettier": "^3.9.6",
     "sharp": "^0.35.4",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "wrangler": "^4.162.0"
   },
   "overrides": {
     "convex-helpers": "^0.1.127"

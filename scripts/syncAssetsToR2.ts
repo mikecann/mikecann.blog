@@ -1,18 +1,14 @@
 // Uploads post media and thumbnails to Cloudflare R2 so pages can load them from
-// NEXT_PUBLIC_ASSET_BASE_URL instead of Vercel storing ~300MB of media in every deployment.
+// NEXT_PUBLIC_ASSET_BASE_URL (assets.mikecann.blog). The Worker deployment has its own copy too,
+// which still answers old /posts/<slug>/<file> links.
 //
 //   bun run ./scripts/syncAssetsToR2.ts            upload new files (and changed ones in production)
 //   bun run ./scripts/syncAssetsToR2.ts --dry-run  list what would be uploaded
-//   bun run ./scripts/syncAssetsToR2.ts --strip    upload, then (only on Vercel build machines,
-//                                                  with NEXT_PUBLIC_ASSET_BASE_URL set) delete the
-//                                                  local media so the deployment doesn't include it.
-//                                                  Run it after `next build`, which reads image sizes
-//                                                  and thumbnails from public/
 //
 // Opt-in: without the R2_* env vars this does nothing (the site serves media from /public as
 // before). Remote objects are never deleted, so old URLs and preview deployments keep working.
 //
-// Every deployment links to the same keys, so only production deploys (VERCEL_ENV=production)
+// Every deployment links to the same keys, so only production deploys (DEPLOY_ENV=production)
 // replace a file that is already in R2. Preview builds and local runs only upload files that are
 // missing, so building a branch doesn't replace the media production serves. A preview that edits
 // an existing file shows the R2 copy until the change reaches production. This guards against
@@ -26,15 +22,12 @@ import pLimit from "p-limit";
 import { planAssetSync } from "./lib/assetSync";
 
 const publicDir = path.join(process.cwd(), "public");
-// Where Vercel's Next.js adapter writes the deployment's static files during `next build`.
-const buildOutputStaticDir = path.join(process.cwd(), ".next/output/static");
 const syncedDirs = ["posts", "thumbs"];
 const cacheControl = "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400";
 
 const args = new Set(process.argv.slice(2));
 const dryRun = args.has("--dry-run");
-const strip = args.has("--strip");
-const overwrite = process.env.VERCEL_ENV == "production";
+const overwrite = process.env.DEPLOY_ENV == "production";
 
 const { R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET } = process.env;
 // Override for other S3-compatible stores or a local mock when testing.
@@ -76,15 +69,6 @@ const listRemoteETags = async (client: S3Client): Promise<Map<string, string>> =
     } while (continuationToken);
   }
   return etags;
-};
-
-// Deleting local files is only safe inside a throwaway build container, and only useful when the
-// pages link to the uploaded copies. ALLOW_STRIP_OUTSIDE_VERCEL=1 is for testing in a copy.
-const whyNotStrip = (): string | undefined => {
-  if (!assetBaseUrl) return "NEXT_PUBLIC_ASSET_BASE_URL isn't set, so pages link to local media";
-  const onVercel = process.env.VERCEL == "1" && process.cwd().startsWith("/vercel/");
-  if (!onVercel && process.env.ALLOW_STRIP_OUTSIDE_VERCEL != "1")
-    return "this isn't a Vercel build machine";
 };
 
 async function main() {
@@ -173,30 +157,6 @@ async function main() {
   console.log(`Uploaded ${uploaded} files to R2 bucket ${R2_BUCKET}`);
   if (alreadyCreated > 0)
     console.log(`Skipped ${alreadyCreated} files that another deploy uploaded in the meantime`);
-
-  if (!strip) return;
-  const reason = whyNotStrip();
-  if (reason) {
-    console.log(`Keeping local media (--strip skipped: ${reason})`);
-    return;
-  }
-  for (const relPath of localFiles) fs.rmSync(path.join(publicDir, relPath));
-  console.log(`Removed ${localFiles.length} media files from public/ for this deployment`);
-
-  // Vercel's Next.js adapter copies public/ into the build output during `next build`, so by now
-  // the deployment already has its own copy of the media. Remove that too. After the build command,
-  // Vercel only adds public/ files that are missing from the output, so stripped files stay out.
-  if (!fs.existsSync(buildOutputStaticDir)) return;
-  let removedFromOutput = 0;
-  for (const relPath of localFiles) {
-    const outputPath = path.join(buildOutputStaticDir, relPath);
-    if (!fs.existsSync(outputPath)) continue;
-    fs.rmSync(outputPath);
-    removedFromOutput++;
-  }
-  console.log(
-    `Removed ${removedFromOutput} media files from the build output in .next/output/static`,
-  );
 }
 
 main().catch((e) => {

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "next/link";
+import Link from "./utils/Link";
 import { Grid, Horizontal } from "./utils/gls";
 
 interface Props {

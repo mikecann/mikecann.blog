@@ -3,6 +3,9 @@ import { formatUTCDate } from "./dates";
 
 export type { ActivityItem, Video, XPost };
 
+/** What /api/activity (worker/index.ts) returns. */
+export type ActivityResponse = { items: ActivityItem[] };
+
 /** A blog post published after the one being read. */
 export type NewerPost = {
   kind: "post";

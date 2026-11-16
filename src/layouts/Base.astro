@@ -1,0 +1,91 @@
+---
+import "../../styles/normalize.css";
+import "../../styles/globals.css";
+import Mikebot from "../../components/mikebot/Mikebot";
+import { SITE_URL } from "../../utils/assets";
+import { canonicalUrlForPath } from "../../utils/canonical";
+import { TYPESTYLE_PLACEHOLDER } from "../middleware";
+
+const SITE_DESCRIPTION =
+  "The blog of Mike Cann, a software developer who can't stop tinkering. Posts since 2004 on games, TypeScript, AI, Convex, side projects and life.";
+
+interface Props {
+  /** Shown as `<title>`; defaults to the site name. */
+  title?: string;
+  description?: string;
+  /** Overrides the page's own URL as the canonical one (posts can point elsewhere). */
+  canonical?: string;
+  /** Error pages aren't indexed and have no canonical URL. */
+  noindex?: boolean;
+  ogTitle?: string;
+  ogType?: string;
+  ogImage?: string;
+  twitterCard?: string;
+}
+
+const {
+  title = "mikecann.blog",
+  description = SITE_DESCRIPTION,
+  canonical,
+  noindex = false,
+  ogTitle = "mikecann.blog",
+  ogType = "website",
+  ogImage = `${SITE_URL}/images/me.jpg`,
+  twitterCard = "summary",
+} = Astro.props;
+
+const pageUrl = canonicalUrlForPath(Astro.url.pathname);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS feed for blog posts"
+      href="https://mikecann.blog/rss.xml"
+    />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Mike Cann Personal Blog Developer Programmer Typescript Games Unity BattleTabs Tinkering Software England Australia Manchester Perth"
+    />
+    {
+      noindex ? (
+        <meta name="robots" content="noindex" />
+      ) : (
+        <link rel="canonical" href={canonical ?? pageUrl} />
+      )
+    }
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:site_name" content="mikecann.blog" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content={ogType} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:description" content={description} />
+    <slot name="head" />
+    <style id="styles-target" set:html={TYPESTYLE_PLACEHOLDER} />
+  </head>
+  <body>
+    <slot />
+    <div
+      style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none"
+    >
+      <Mikebot client:only="react" />
+    </div>
+    <script>
+      import { startPosthogWhenIdle } from "../../utils/posthog";
+      import { startSentry } from "../../utils/startSentry";
+      startSentry();
+      startPosthogWhenIdle();
+    </script>
+  </body>
+</html>

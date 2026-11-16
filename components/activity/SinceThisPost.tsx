@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "next/link";
+import Link from "../utils/Link";
 import { classes, media, style } from "typestyle";
 import { FaYoutube } from "react-icons/fa";
 import type { NewerPost, SinceItem, Video } from "../../utils/activity";

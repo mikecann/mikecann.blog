@@ -1,13 +1,11 @@
-import type { BrowserOptions } from "@sentry/nextjs";
+import type { BrowserOptions } from "@sentry/browser";
 
 /**
- * Shared by the two Sentry inits: instrumentation-client.ts (component `web`) and
- * instrumentation.ts (component `server`). Errors only: no tracing, replay or profiling.
+ * Sentry for the browser (utils/startSentry.ts). Errors only: no tracing, replay or profiling.
  *
  * Production only. Agents run dev servers and preview deployments of this site all day, and an
  * agent watches Sentry and opens a thread for anything serious, so nothing but the production
- * deployment may report: the browser checks it's on mikecann.blog (previews are on *.vercel.app),
- * and the server checks VERCEL_ENV at runtime.
+ * site may report: the browser checks it's on mikecann.blog (previews are on workers.dev).
  */
 
 // A public client key (it ships to every browser), so it's fine in git.

@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mikecann-blog",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    // The Astro build. Pages are served from here without running the Worker.
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // /posts/<slug>/ redirects to /posts/<slug>, as it always has.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "observability": { "enabled": true },
+}

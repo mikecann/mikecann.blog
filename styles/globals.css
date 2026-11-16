@@ -212,3 +212,17 @@ blockquote p {
 .post-header {
   object-fit: cover;
 }
+
+/* The link icon beside a post heading, shown while the heading's link is hovered. */
+.heading-link-icon {
+  display: none;
+  position: absolute;
+  left: -1.3em;
+  top: 0.4em;
+  font-size: 0.7em;
+  opacity: 0.1;
+}
+
+a:hover + .heading-link-icon {
+  display: block;
+}

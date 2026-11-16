@@ -231,10 +231,11 @@ describe("newsletter signup endpoint", () => {
     expect(redirect(from("https://www.mikecann.blog"), "/posts/a?x=1#subscribe")).toBe(
       "https://www.mikecann.blog/posts/a?x=1&newsletter=confirm_email",
     );
-    expect(
-      redirect(from("https://next-mikecann-git-my-branch-mikecanns-projects.vercel.app"), "/"),
-    ).toBe(
-      "https://next-mikecann-git-my-branch-mikecanns-projects.vercel.app/?newsletter=confirm_email",
+    expect(redirect(from("https://mikecann-blog.mikeysee.workers.dev"), "/")).toBe(
+      "https://mikecann-blog.mikeysee.workers.dev/?newsletter=confirm_email",
+    );
+    expect(redirect(from("https://1a2b3c4d-mikecann-blog.mikeysee.workers.dev"), "/")).toBe(
+      "https://1a2b3c4d-mikecann-blog.mikeysee.workers.dev/?newsletter=confirm_email",
     );
     expect(redirect(from("http://localhost:3000"), "/about")).toBe(
       "http://localhost:3000/about?newsletter=confirm_email",
@@ -248,7 +249,8 @@ describe("newsletter signup endpoint", () => {
     for (const origin of [
       "https://evil.example",
       "https://mikecann.blog.evil.example",
-      "https://next-mikecann-x-mikecanns-projects.vercel.app.evil.example",
+      "https://mikecann-blog.mikeysee.workers.dev.evil.example",
+      "https://evil-mikecann-blog.attacker.workers.dev",
       "http://mikecann.blog",
       null,
     ])

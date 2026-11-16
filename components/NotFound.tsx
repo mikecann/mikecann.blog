@@ -1,11 +1,8 @@
-import { ResponsiveSidebarLayouts } from "../components/layout/ResponsiveSidebarLayouts";
 import * as React from "react";
-import { useRouter } from "next/router";
 import { SearchHit, searchPosts } from "../utils/algolia";
-import { SearchResult } from "../components/searchModal/SearchResult";
-import { SearchModal } from "../components/searchModal/SearchModal";
-import Head from "next/head";
-import { Vertical } from "../components/utils/gls";
+import { SearchResult } from "./searchModal/SearchResult";
+import { SearchModal } from "./searchModal/SearchModal";
+import { Vertical } from "./utils/gls";
 
 type State =
   | { kind: "searching" }
@@ -23,8 +20,8 @@ const getSearchTerm = () => {
   }
 };
 
-const NotFoundPage = () => {
-  const router = useRouter();
+/** What the 404 page shows: it looks for the post the missing URL was probably after. */
+export const NotFound = () => {
   const [state, setState] = React.useState<State>({ kind: "searching" });
   const [searchVisible, setSearchVisible] = React.useState(false);
 
@@ -59,8 +56,8 @@ const NotFoundPage = () => {
   }, []);
 
   React.useEffect(() => {
-    if (state.kind == "redirecting") router.replace(state.url);
-  }, [state, router]);
+    if (state.kind == "redirecting") window.location.replace(state.url);
+  }, [state]);
 
   const openSearch = (event: React.MouseEvent) => {
     event.preventDefault();
@@ -116,15 +113,8 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <ResponsiveSidebarLayouts>
-        <Head>
-          <title key="title">404 - mikecann.blog</title>
-        </Head>
-        {render()}
-      </ResponsiveSidebarLayouts>
+      {render()}
       {searchVisible && <SearchModal onClose={() => setSearchVisible(false)} />}
     </>
   );
 };
-
-export default NotFoundPage;

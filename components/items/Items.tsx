@@ -1,10 +1,9 @@
 import { Grid, Horizontal, Vertical } from "../../components/utils/gls";
 import { PostTeaser } from "../PostTeaser";
 import { ResponsiveSidebarLayouts } from "../layout/ResponsiveSidebarLayouts";
-import Head from "next/head";
 import { PostWithContent } from "../../scripts/posts";
 import { usePaginatedQuery, useQuery } from "convex/react";
-import Link from "next/link";
+import Link from "../utils/Link";
 import { makeFunctionReference } from "convex/server";
 import { style, media } from "typestyle";
 import { formatDistance } from "date-fns";

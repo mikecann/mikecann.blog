@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useRouter } from "next/router";
 import { classes, style } from "typestyle";
 import {
   SIGNUP_STATUS_PARAM,
@@ -18,6 +17,8 @@ interface Props {
   source: string;
   onSubscribed?: (result: SubscribeResult) => void;
   className?: string;
+  /** The page's path, for the no-JavaScript fallback to come back to. */
+  path?: string;
 }
 
 const visuallyHidden = style({
@@ -76,8 +77,8 @@ const button = style({
 const message = style({ margin: "8px 0 0", fontSize: 14, color: "#5d686f", minHeight: "1em" });
 const successMessage = style({ color: "#2e7d32", fontWeight: 600 });
 
-export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className }) => {
-  const router = useRouter();
+export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className, path }) => {
+  const returnTo = path ?? (typeof window == "undefined" ? "/" : window.location.pathname);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [email, setEmail] = React.useState("");
   const [website, setWebsite] = React.useState("");
@@ -113,15 +114,14 @@ export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className
   // endpoint itself, and the endpoint redirected back here with the status in the URL. Show it, then
   // take it out of the URL so a reload or a shared link doesn't show it again.
   React.useEffect(() => {
-    if (!router.isReady) return;
-    const { [SIGNUP_STATUS_PARAM]: status, ...query } = router.query;
+    const url = new URL(window.location.href);
+    const status = url.searchParams.get(SIGNUP_STATUS_PARAM);
     if (!isSubscribeStatus(status)) return;
-    router
-      .replace({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false })
-      .catch(() => {});
+    url.searchParams.delete(SIGNUP_STATUS_PARAM);
+    window.history.replaceState(window.history.state, "", url.pathname + url.search + url.hash);
     showOutcome(SUBSCRIBE_RESULTS[status], { via: "form-post" });
     containerRef.current?.scrollIntoView({ block: "center" });
-  }, [router.isReady]);
+  }, []);
 
   return (
     <div className={className} ref={containerRef}>
@@ -130,7 +130,7 @@ export const SubscribeForm: React.FC<Props> = ({ source, onSubscribed, className
         // the address out of the URL (a GET would put it in the query string).
         <form method="post" action={SUBSCRIBE_ENDPOINT} onSubmit={onSubmit}>
           <input type="hidden" name="source" value={source} />
-          <input type="hidden" name="returnTo" value={router.asPath.split(/[?#]/)[0]} />
+          <input type="hidden" name="returnTo" value={returnTo} />
           <label htmlFor={emailId} className={visuallyHidden}>
             Email address
           </label>

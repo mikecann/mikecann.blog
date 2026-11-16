@@ -4,7 +4,7 @@ Context and instructions for AI agents working on this codebase.
 
 ## Project Overview
 
-This is a personal blog (mikecann.blog) built with Next.js 16, React 19, and Convex. It contains 630+ markdown posts spanning 2003 to today, stored in `public/posts/<slug>/post.md` with YAML frontmatter. See `README.md` for setup, the build/deploy pipeline, scripts and environment variables.
+This is a personal blog (mikecann.blog) built with Astro, React 19 and Convex, hosted on Cloudflare Workers. It contains 630+ markdown posts spanning 2003 to today, stored in `public/posts/<slug>/post.md` with YAML frontmatter. See `README.md` for setup, the build/deploy pipeline, scripts and environment variables.
 
 ## Blog Post Structure
 
@@ -20,7 +20,7 @@ This is a personal blog (mikecann.blog) built with Next.js 16, React 19, and Con
 
 ## WordPress Legacy
 
-The blog was migrated from WordPress. Many older posts reference images via `https://www.mikecann.blog/wp-content/uploads/...` URLs. These are served through a Next.js rewrite rule in `next.config.js` that proxies `/wp-content/*` to a CloudFront distribution (`d18l99bmg6trdn.cloudfront.net`). These URLs return 403 to automated requests (bot detection) but work fine in real browsers.
+The blog was migrated from WordPress. Many older posts reference images via `https://www.mikecann.blog/wp-content/uploads/...` URLs. These are served by the Worker (`worker/index.ts`), which proxies `/wp-content/*` to a CloudFront distribution (`d18l99bmg6trdn.cloudfront.net`). These URLs return 403 to automated requests (bot detection) but work fine in real browsers.
 
 ## Blog Audit and Fix Scripts
 
@@ -110,13 +110,13 @@ As of Feb 2026, the blog has been comprehensively cleaned up. The audit script (
 ### Accepted/deferred issues (warning or info severity)
 
 - **Dead external links** (~490 across ~200 posts, severity: `warning`) - old posts link to sites that have gone dark over the years. Not fixable without manual curation post-by-post.
-- **Flash/SWF embeds** (~60 across ~40 posts, severity: `info`) - handled by the Ruffle Flash emulator loaded in `_app.tsx`. Internal SWF files are served via Next.js rewrites to CloudFront/S3.
+- **Flash/SWF embeds** (~60 across ~40 posts, severity: `info`) - handled by the Ruffle Flash emulator loaded by `src/pages/posts/[slug].astro`. Internal SWF files are served via the Worker's proxy to CloudFront/S3.
 - **Bot-blocked 403s** (~84 URLs, severity: `info`) - mostly `www.mikecann.blog/wp-content/...` which work fine in real browsers via the CloudFront rewrite.
 
 ### What was fixed in Feb 2026
 
 - Added Ruffle Flash emulator for all SWF embeds
-- Added Next.js rewrites for `/flash/`, `/DumpingGround/`, `/projects/`, `/ArtificialStudios1/`, `/Files/`, `/Work/` to CloudFront/S3
+- Added proxies (now in `worker/index.ts`) for `/flash/`, `/DumpingGround/`, `/projects/`, `/ArtificialStudios1/`, `/Files/`, `/Work/` to CloudFront/S3
 - Fixed all dead third-party Flash embeds (replaced with notes), rescued Vimeo ones to iframes
 - Fixed all WordPress absolute URLs to relative paths
 - Fixed all broken images from old `mikecann.blog/Images/`, `/Work/`, `/Files/` paths
@@ -137,7 +137,7 @@ All of them are also `package.json` scripts (`bun run <name>`); see `README.md`.
 - `scripts/fixFlashPlayableLinks.ts` - normalizes old Flash links so they play in the Ruffle modal (`--dry-run`)
 - `scripts/populateAlgolia.ts` - replaces the Algolia search index (production deploys only; `--dry-run`)
 - `scripts/uploadPostsToConvex.ts` - upserts changed posts into Convex; creating a new post schedules the subscriber email, so it runs after the build in production deploys. Removed posts are pruned; more than 10 at once needs `--force-prune`
-- `scripts/syncAssetsToR2.ts` - uploads new post media and thumbnails to Cloudflare R2 (`bun run syncAssets`); a no-op unless the `R2_*` env vars are set. Only production deploys replace files that are already in R2; previews and local runs only upload missing ones, so they don't replace what production serves. Keep it that way when changing the script. `--strip` then removes the media from the Vercel deployment (Vercel build machines only): from `public/` and from the copy Vercel's Next.js adapter already made in `.next/output/static` during `next build`. Removing it from `public/` alone doesn't shrink the deployment. See "Serving media from Cloudflare R2" in README.md
+- `scripts/syncAssetsToR2.ts` - uploads new post media and thumbnails to Cloudflare R2 (`bun run syncAssets`); a no-op unless the `R2_*` env vars are set. Only production deploys replace files that are already in R2; previews and local runs only upload missing ones, so they don't replace what production serves. Keep it that way when changing the script.
 
 When `NEXT_PUBLIC_ASSET_BASE_URL` is set, post media is served from R2, so link to post media through `assetUrl()` in `utils/assets.ts` rather than hardcoding `/posts/<slug>/...` URLs.
 
@@ -149,13 +149,3 @@ When working on Convex code, **always read `convex/_generated/ai/guidelines.md` 
 
 Convex agent skills for common tasks can be installed by running `npx convex ai-files install`.
 <!-- convex-ai-end -->
-
-<!-- BEGIN:nextjs-agent-rules -->
-
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->

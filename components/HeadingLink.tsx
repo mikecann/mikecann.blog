@@ -10,27 +10,13 @@ interface Props extends React.DetailedHTMLProps<
   node?: unknown;
 }
 
-export const HeadingLink: React.FC<Props> = ({ slug, node, ...rest }) => {
-  const [isOver, setIsOver] = React.useState(false);
-  return (
-    <>
-      {isOver ? (
-        <FaLink
-          style={{
-            position: "absolute",
-            left: "-1.3em",
-            top: "0.4em",
-            fontSize: "0.7em",
-            opacity: 0.1,
-          }}
-        />
-      ) : null}
-      <a
-        href={`#${slug}`}
-        onMouseOver={() => setIsOver(true)}
-        onMouseLeave={() => setIsOver(false)}
-        {...rest}
-      />
-    </>
-  );
-};
+/**
+ * A heading's text as a link to itself. A faint link icon shows beside it on hover; that's done in
+ * CSS (`.heading-link-icon` in globals.css) so post pages need no JavaScript for it.
+ */
+export const HeadingLink: React.FC<Props> = ({ slug, node, ...rest }) => (
+  <>
+    <a href={`#${slug}`} {...rest} />
+    <FaLink className="heading-link-icon" aria-hidden="true" focusable="false" />
+  </>
+);

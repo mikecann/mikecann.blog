@@ -1,0 +1,29 @@
+---
+import SidebarPage from "../../layouts/SidebarPage.astro";
+import { Vertical } from "../../../components/utils/gls";
+import { StashItems } from "../../../components/items/StashItems";
+---
+
+<SidebarPage title="stash - mikecann.blog">
+  <Vertical className="stash-page" style={{ marginBottom: 20, overflowX: "hidden" }}>
+    <img
+      src="/images/stashit-logo.png"
+      alt="StashIt logo"
+      width="200"
+      height="60"
+      loading="lazy"
+      decoding="async"
+      style="height: auto"
+    />
+    <h1 style="margin: 0px">My Stash</h1>
+    <p>
+      Articles that I have been reading lately.. This is part of my{" "}
+      <a href="https://mikecann.blog/posts/introducing-stashit">StashIt</a> project. Read more about
+      it here:{" "}
+      <a href="https://mikecann.blog/posts/introducing-stashit">
+        https://mikecann.blog/posts/introducing-stashit
+      </a>
+    </p>
+    <StashItems client:only="react" />
+  </Vertical>
+</SidebarPage>

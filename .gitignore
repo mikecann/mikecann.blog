@@ -48,3 +48,9 @@ tmp
 # generated at build time (bun run generate)
 /public/rss.xml
 /public/sitemap.xml
+/worker/redirects.generated.json
+
+# astro and wrangler
+/dist/
+/.astro/
+/.wrangler/

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../utils/Link";
 import * as React from "react";
 import { style } from "typestyle";
 

@@ -63,7 +63,11 @@ const queryPortfolio = async (path: string): Promise<unknown[]> => {
     signal: AbortSignal.timeout(portfolioTimeoutMs),
   });
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
-  const body = await response.json();
+  const body = (await response.json()) as {
+    status?: string;
+    value?: unknown;
+    errorMessage?: string;
+  } | null;
   if (body?.status != "success" || !Array.isArray(body.value))
     throw new Error(`${path}: ${body?.errorMessage ?? "unexpected response"}`);
   return body.value;

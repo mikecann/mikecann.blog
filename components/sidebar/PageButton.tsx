@@ -1,5 +1,5 @@
 import { Horizontal } from "../../components/utils/gls";
-import Link from "next/link";
+import Link from "../utils/Link";
 import * as React from "react";
 import { classes, style } from "typestyle";
 

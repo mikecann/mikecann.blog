@@ -3,9 +3,9 @@ import {
   buildLatestActivity,
   mergeActivityItems,
   type ActivityItem,
+  type ActivityResponse,
   type LatestActivity,
 } from "../../utils/activity";
-import type { ActivityResponse } from "../../pages/api/activity";
 
 // One request per visit, shared by every panel and page the visitor goes through.
 let freshItems: Promise<ActivityItem[] | null> | undefined;

@@ -1,6 +1,6 @@
 import { Horizontal, Vertical } from "../../components/utils/gls";
 import * as React from "react";
-import Link from "next/link";
+import Link from "../utils/Link";
 import type { SearchHit } from "../../utils/algolia";
 import { formatUTCDate } from "../../utils/dates";
 import { assetUrl } from "../../utils/assets";

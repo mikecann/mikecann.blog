@@ -1,0 +1,23 @@
+---
+import SidebarPage from "../../layouts/SidebarPage.astro";
+import { ArchiveCard } from "../../../components/ArchiveCard";
+import { Grid, Vertical } from "../../../components/utils/gls";
+import { groupPostsByYear, sortPosts, sortYears } from "../../../utils/posts";
+import { getAllPostsWithoutContent } from "../../../scripts/posts";
+import { toPostArchiveEntry } from "../../../scripts/posts/teasers";
+
+// Years newest first, posts within each year oldest first.
+const postsByYear = groupPostsByYear(sortPosts(getAllPostsWithoutContent()));
+const years = sortYears(Object.keys(postsByYear), "desc").map((year) => ({
+  year,
+  posts: postsByYear[parseInt(year)].map(toPostArchiveEntry),
+}));
+---
+
+<SidebarPage title="archive - mikecann.blog">
+  <Vertical style={{ marginBottom: 20 }}>
+    <Grid width="100%" spacing={20} style={{ alignItems: "start" }}>
+      {years.map(({ year, posts }) => <ArchiveCard title={year} posts={posts} />)}
+    </Grid>
+  </Vertical>
+</SidebarPage>

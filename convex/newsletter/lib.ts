@@ -79,11 +79,14 @@ export async function addPendingSubscriber(
 
 const LIVE_BLOG_ORIGIN = "https://mikecann.blog";
 
-/** Origins the signup endpoint may send readers back to: the blog, its Vercel previews and local dev. */
+/**
+ * Origins the signup endpoint may send readers back to: the blog, its Cloudflare previews
+ * (mikecann-blog.mikeysee.workers.dev and its per-version `<id>-mikecann-blog.` URLs) and local dev.
+ */
 const isBlogOrigin = (origin: string) =>
   origin == LIVE_BLOG_ORIGIN ||
   origin == "https://www.mikecann.blog" ||
-  /^https:\/\/next-mikecann-[a-z0-9-]+-mikecanns-projects\.vercel\.app$/.test(origin) ||
+  /^https:\/\/([a-z0-9-]+-)?mikecann-blog\.mikeysee\.workers\.dev$/.test(origin) ||
   /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
 
 const parseUrl = (value: string | null, base?: string) => {

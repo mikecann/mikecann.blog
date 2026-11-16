@@ -1,0 +1,192 @@
+---
+import Base from "../../layouts/Base.astro";
+import { TopNavbar } from "../../../components/navbar/TopNavbar";
+import { Horizontal, Vertical } from "../../../components/utils/gls";
+import { PostTags } from "../../../components/PostTags";
+import { PostMarkdown } from "../../../components/post/PostMarkdown";
+import { postContainerClass } from "../../../components/post/styles";
+import { SubscribeForm } from "../../../components/newsletter/SubscribeForm";
+import { SubscribePrompt } from "../../../components/newsletter/SubscribePrompt";
+import { PostComments } from "../../../components/PostComments";
+import { ActivityRail } from "../../../components/activity/ActivityRail";
+import { PostElsewhereLinks } from "../../../components/activity/PostElsewhereLinks";
+import { SinceThisPost } from "../../../components/activity/SinceThisPost";
+import { FlashLinks } from "../../../components/flash/FlashLinks";
+import { getAllPublishablePosts, type Post } from "../../../scripts/posts";
+import { getPostDescription } from "../../../scripts/posts/description";
+import { getImageSizes, getNewerPosts } from "../../../scripts/posts/postPage";
+import { getActivityItems } from "../../../scripts/activity";
+import { getPostRootCoverImagePath } from "../../../utils/posts";
+import { buildPostActivity } from "../../../utils/activity";
+import { postNeedsFlash } from "../../../utils/flash";
+import { formatUTCDate } from "../../../utils/dates";
+import { SITE_URL, absoluteAssetUrl, assetUrl } from "../../../utils/assets";
+
+export const getStaticPaths = () =>
+  getAllPublishablePosts().map(({ slug, meta, content }) => ({
+    params: { slug },
+    props: { post: { slug, meta } satisfies Post, markdown: content },
+  }));
+
+const { post, markdown } = Astro.props;
+const { slug, meta } = post;
+const { title, date, tags } = meta;
+const maxSince = 3;
+
+const description = getPostDescription(markdown) || title;
+const coverImage = getPostRootCoverImagePath(post);
+const needsFlash = postNeedsFlash(slug, markdown);
+const activity = buildPostActivity({
+  slug,
+  date,
+  title,
+  markdown,
+  items: await getActivityItems(),
+  newerPosts: getNewerPosts(post, maxSince),
+  maxSince,
+});
+
+const url = `${SITE_URL}/posts/${slug}`;
+const canonical = meta.canonical ?? url;
+const imageUrl = absoluteAssetUrl(coverImage);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  datePublished: date,
+  image: [imageUrl],
+  author: { "@type": "Person", name: "Mike Cann", url: `${SITE_URL}/about` },
+  url,
+  mainEntityOfPage: canonical,
+  keywords: tags.join(", "),
+};
+
+// Pinned so the integrity hash stays valid. To upgrade, bump the version and recompute the hash:
+//   curl -sL https://unpkg.com/@ruffle-rs/ruffle@<version>/ruffle.js | openssl dgst -sha384 -binary | openssl base64 -A
+const RUFFLE_SRC = "https://unpkg.com/@ruffle-rs/ruffle@0.6.0/ruffle.js";
+const RUFFLE_INTEGRITY = "sha384-eYV2CNXhSXdisg3+UbVhJIIRzygKoAWlfmBTkftwI9bsN5ctHUovLhbLzCcTelXF";
+
+const dashedRule = "border-top: 1px dashed #ddd; width: 100%; margin-top: 20px; margin-bottom: 20px";
+---
+
+<Base
+  title={`${title} - mikecann.blog`}
+  description={description}
+  canonical={canonical}
+  ogTitle={title}
+  ogType="article"
+  ogImage={imageUrl}
+  twitterCard="summary_large_image"
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={date} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content={imageUrl} />
+    {/* Escape "<" so post content can never close the script tag. */}
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")}
+    />
+  </Fragment>
+
+  <div style="width: 100%; height: 100%">
+    <TopNavbar client:idle />
+
+    <Vertical
+      width="100%"
+      style={{ position: "relative", backgroundImage: `url('/images/background-pattern.jpg')` }}
+    >
+      <div style="width: 100%; height: 75vh; position: absolute; top: 0; left: 0; z-index: 0">
+        <img
+          class="post-header"
+          src={assetUrl(coverImage)}
+          alt={`post header image for ${title}`}
+          fetchpriority="high"
+          decoding="async"
+          sizes="100vw"
+          style="position: absolute; height: 100%; width: 100%; inset: 0; color: transparent"
+        />
+        <div
+          style="width: 100%; height: 40px; background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(250,250,250,0) 100%); bottom: 0; left: 0; position: absolute"
+        >
+        </div>
+      </div>
+      <Horizontal width="100%" horizontalAlign="center">
+        <Vertical
+          id="post-article"
+          className={postContainerClass}
+          style={{
+            marginTop: `60vh`,
+            marginBottom: 40,
+            maxWidth: 700,
+            width: "100%",
+            border: `1px solid #ddd`,
+            boxShadow: `rgb(221 221 221 / 15%) 0px 3px 0px 5px`,
+            backgroundColor: `white`,
+            borderRadius: 6,
+            zIndex: 1,
+          }}
+        >
+          <h1 style="font-size: 3em; margin: 0; color: #555; text-align: center">{title}</h1>
+          <Vertical spacing={5} style={{ marginBottom: 10, marginTop: 10, textAlign: "center" }}>
+            <time datetime={date} style="color: #767676">{formatUTCDate(date)}</time>
+            <PostTags horizontalAlign="center" tags={tags} />
+            <PostElsewhereLinks {...activity.elsewhere} />
+          </Vertical>
+          <Horizontal width="100%" horizontalAlign="center">
+            <div style="height: 10px; margin-top: 20px; border-top: 1px solid #ddd; width: 10%"></div>
+          </Horizontal>
+          <div class="markdown-content">
+            <PostMarkdown slug={slug} markdown={markdown} imageSizes={getImageSizes(slug, markdown)} />
+          </div>
+
+          {/* An island so recent items can say "3h ago" rather than the date. */}
+          <SinceThisPost client:visible items={activity.since} />
+
+          <div style={dashedRule}></div>
+
+          <div id="subscribe" style="background-color: rgba(0,0,0,0.015); padding: 10px">
+            <h3 style="text-align: center; color: #5d686f; margin-bottom: 4px">
+              GET NEW POSTS BY EMAIL
+            </h3>
+            <p style="text-align: center; color: #5d686f; margin-top: 0; font-size: 14px">
+              About one post a month on AI, coding, games and side projects. No spam, unsubscribe
+              any time.
+            </p>
+            <SubscribeForm client:visible source="post-footer" path={`/posts/${slug}`} />
+          </div>
+          {/* Whether it shows depends on the reader's scrolling and browser storage. */}
+          <SubscribePrompt client:only="react" inlineFormId="subscribe" />
+
+          <div style={dashedRule}></div>
+
+          <div style="background-color: rgba(0,0,0,0.015); padding: 10px">
+            <h3 style="text-align: center; color: #aaa">COMMENT</h3>
+            <PostComments client:visible />
+          </div>
+        </Vertical>
+      </Horizontal>
+      <ActivityRail client:idle activity={activity} articleId="post-article" />
+    </Vertical>
+    {needsFlash && <FlashLinks client:idle />}
+  </div>
+  {
+    needsFlash && (
+      <script is:inline define:vars={{ src: RUFFLE_SRC, integrity: RUFFLE_INTEGRITY }}>
+        // Ruffle, the Flash emulator, once the page has loaded. It polyfills every Flash embed on
+        // the page, including ones the Flash player modal adds later.
+        const loadRuffle = () => {
+          const script = document.createElement("script");
+          script.src = src;
+          script.integrity = integrity;
+          script.crossOrigin = "anonymous";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") loadRuffle();
+        else window.addEventListener("load", loadRuffle, { once: true });
+      </script>
+    )
+  }
+</Base>

@@ -4,11 +4,11 @@ The personal blog of Mike Cann: https://mikecann.blog
 
 ## Stack
 
-- **[Next.js 16](https://nextjs.org)** (pages router, Turbopack). Every page is statically generated at build time from markdown files in `public/posts`.
-- **[Vercel](https://vercel.com)** hosting, behind Cloudflare.
+- **[Astro](https://astro.build)** builds every page to a static HTML file from the markdown in `public/posts`. The page components are React (`components/`), rendered to HTML at build time; only the interactive parts (search, Mikebot, the newsletter forms, comments, the activity panels) load JavaScript, as Astro islands. Pages are in `src/pages`, layouts in `src/layouts`.
+- **[Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)** hosting: the pages are the Worker's static assets, and `worker/index.ts` handles the rest (`/api/activity`, old WordPress URLs, the 404 page).
 - **[Convex](https://convex.dev)** backend (`convex/`): an embedding of every post (via `@convex-dev/rag`) for Mikebot, the AI chat bot on the site (`@convex-dev/agent`, OpenAI). It also emails subscribers about new posts via Mailchimp.
 - **[Algolia](https://www.algolia.com)** for search (index `next-mikecann`).
-- **[Utterances](https://utteranc.es)** for comments, **[Ruffle](https://ruffle.rs)** to play old Flash embeds, and **PostHog** and Vercel Analytics for analytics.
+- **[Utterances](https://utteranc.es)** for comments, **[Ruffle](https://ruffle.rs)** to play old Flash embeds, and **PostHog** for analytics.
 - **[Sentry](https://sentry.io)** for errors (project `mikecann-blog`), from the production deployment only: the browser in `instrumentation-client.ts` / `utils/sentryClient.ts` (tag `component: web`) and pages and API routes in `instrumentation.ts` (`component: server`). Errors only, no tracing or replay, and no source map upload. The Convex backend's errors reach Sentry through Convex's log stream.
 - **[bun](https://bun.sh)** as the package manager and to run the scripts in `scripts/`.
 
@@ -16,10 +16,10 @@ The personal blog of Mike Cann: https://mikecann.blog
 
 ```bash
 bun install
-bun run dev        # next dev and convex dev side by side
+bun run dev        # astro dev and convex dev side by side
 ```
 
-On its first run, `convex dev` asks you to log in and pick a deployment, then writes `CONVEX_DEPLOYMENT` and `NEXT_PUBLIC_CONVEX_URL` to `.env.local`. To run just the site, use `bun run dev:next`.
+On its first run, `convex dev` asks you to log in and pick a deployment, then writes `CONVEX_DEPLOYMENT` and `NEXT_PUBLIC_CONVEX_URL` to `.env.local`. To run just the site, use `bun run dev:astro`. To try the production build with the Worker, `bun run build` then `bun run preview` (wrangler dev).
 
 For the scripts that talk to other services, copy `.env.example` to `.env` and fill in what you need. Bun loads `.env` and `.env.local` automatically.
 
@@ -51,50 +51,31 @@ The rest of the post. Standard markdown plus GFM, and raw HTML (iframes etc.) is
 - Run `bun run validatePosts` before pushing. It checks frontmatter, cover images and image references, and runs in CI.
 - Avoid mass-reformatting or re-saving old posts (many have CRLF line endings or a BOM). The Convex upload hashes each post's content, so any change re-embeds that post.
 
-Old WordPress media (`/wp-content/...`) and old Flash projects (`/flash/`, `/projects/`, ...) are proxied to CloudFront/S3 by rewrites in `next.config.js`. See `AGENTS.md` for the post audit and fix tooling.
+Old WordPress media (`/wp-content/...`) and old Flash projects (`/flash/`, `/projects/`, ...) are proxied to CloudFront/S3 by the Worker (`worker/index.ts`). See `AGENTS.md` for the post audit and fix tooling.
 
 ## Build and deploy
 
-Vercel runs `bun run build-and-deploy` (this is the Build Command in the Vercel project settings).
+Every push to `main` deploys, through `.github/workflows/deploy.yml`:
 
-- **`bun run build`** (every build, including previews):
-  1. `generate` writes `public/rss.xml`, `public/sitemap.xml` (both gitignored) and any missing or outdated cover thumbnails in `public/thumbs/` (committed).
-  2. `next build --turbopack`.
-- **Production** (`VERCEL_ENV=production`):
-  1. `convex deploy --cmd 'bun run build && bun run syncAssets'`. The Convex CLI runs the build first, with `NEXT_PUBLIC_CONVEX_URL` set to the production deployment, then uploads new or changed media to R2 (see below). It only pushes the Convex functions if both succeed.
-  2. `populateAlgolia` replaces the search index atomically.
-  3. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs after the build because creating a new post schedules the subscriber email (which also waits until the post URL is live).
-  4. `syncAssets -- --strip` removes the media from this deployment once it's safely in R2.
+1. `convex deploy --cmd 'bun run build && bun run syncAssets'`. The Convex CLI runs the build first, with `NEXT_PUBLIC_CONVEX_URL` set to the production deployment, then uploads new or changed media to R2 (see below). It only pushes the Convex functions if both succeed.
+   - `bun run build` runs `generate` (writes `public/rss.xml`, `public/sitemap.xml` and `worker/redirects.generated.json`, all gitignored, plus any missing cover thumbnails in `public/thumbs/`, which are committed), then `astro build` into `dist/`.
+2. `wrangler deploy` uploads `dist/` and the Worker to Cloudflare. Only changed files are uploaded.
+3. `populateAlgolia` replaces the search index atomically.
+4. `uploadPostsToConvex -- --production` upserts changed posts into Convex. It runs once the site is live because creating a new post schedules the subscriber email, which waits until the post's page loads.
 
-  If any step fails, the steps after it don't run.
+If any step fails, the steps after it don't run. `DEPLOY_ENV=production` marks a production build: drafts are left out and `syncAssets` may replace files already in R2.
 
-- **Preview** builds run `bun run build`, then `syncAssets -- --strip`. Previews only upload media that's missing from R2 and never replace an existing file, so building a branch doesn't change what production serves (see below).
-
-### Cloudflare page cache
-
-Cloudflare caches every page on `mikecann.blog` for a day (cache rule "Cache blog pages (purged on deploy)", with Smart Tiered Cache on), except `/api/` and `/_vercel/`. Without it, every Vercel cache miss (mostly crawlers working through old posts and tag pages) cost ISR Reads, and the blog was using about 750k of the Hobby plan's 1M a month. Hitting the limit pauses the project.
-
-When Vercel reports a production deploy live, `.github/workflows/purge-cloudflare.yml` empties the whole Cloudflare cache (secrets `CLOUDFLARE_PURGE_TOKEN`, a purge-only token for this zone, and `CLOUDFLARE_ZONE_ID`). A rollback or promote in the Vercel dashboard may not trigger it, so run the workflow by hand after one.
+To try a build on Cloudflare without touching the live site, `bunx wrangler versions upload` gives a preview URL for that version.
 
 ### Serving media from Cloudflare R2
 
-Every Vercel deployment used to include all ~330MB of post media, which filled the free plan's 10GB deployment storage after about 30 deployments. Post media and thumbnails can instead be served from an R2 bucket, which keeps each deployment to a few MB. Images stay in git next to each `post.md` as before; deploys upload anything new or changed.
+Post media and thumbnails are served from the `mikecann-blog-assets` R2 bucket at `assets.mikecann.blog` (`NEXT_PUBLIC_ASSET_BASE_URL`). Images stay in git next to each `post.md`; deploys upload anything new or changed (compared by MD5). The Worker's own assets include the media too, so old `/posts/<slug>/<file>` links still work.
 
-It's off until configured. To turn it on:
+With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbnails link straight to the asset domain. `syncAssets` never deletes objects from R2, so old links keep working. Unset it and the pages link to the copies in the Worker's assets instead.
 
-1. In Cloudflare, create an R2 bucket (e.g. `mikecann-blog-assets`) and connect a custom domain to it, e.g. `assets.mikecann.blog` (bucket → Settings → Custom Domains).
-2. Create an R2 API token with **Object Read & Write** on that bucket, and note the access key ID, secret and your account ID.
-3. In Vercel, for Production **and** Preview, set `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` and `NEXT_PUBLIC_ASSET_BASE_URL=https://assets.mikecann.blog`.
-4. Redeploy. The first deploy uploads everything once. Later production deploys upload new and changed files (compared by MD5), and previews only upload new ones.
-5. Delete old deployments in Vercel (or set a deployment retention policy) to reclaim the storage they hold.
+Only production deploys (`DEPLOY_ENV=production`) replace a file that's already in R2. Local runs only upload files that are missing, and list the changed ones they skipped.
 
-With `NEXT_PUBLIC_ASSET_BASE_URL` set, pages, RSS, `og:image` and search thumbnails link straight to the asset domain, and old `/posts/<slug>/<file>` and `/thumbs/...` media URLs redirect there. `syncAssets` never deletes objects from R2, so old links keep working. To roll back, unset `NEXT_PUBLIC_ASSET_BASE_URL` and redeploy; the media is served from the deployment again.
-
-Every deployment, production or preview, links to the same keys in the bucket. So only production deploys (`VERCEL_ENV=production`) replace a file that's already in R2. Preview builds and local runs only upload files that are missing, and list the changed ones they skipped. A preview that edits an existing image or thumbnail shows the R2 copy until the change reaches production. To see a changed image in a preview, give it a new file name, which also avoids stale copies in browser and CDN caches.
-
-`--strip` only deletes local files on Vercel build machines, and only when `NEXT_PUBLIC_ASSET_BASE_URL` is set, so running it locally is safe.
-
-`--strip` has to run after `next build`, because the build reads image sizes and thumbnails from `public/`. By then Vercel's Next.js adapter has already copied `public/` into the deployment's build output (`.next/output/static`), so `--strip` deletes the media from there as well as from `public/`. Deleting it from `public/` alone leaves all ~330MB of media in every deployment. To check a deployment, open it in Vercel → Resources and filter Static Assets by `.webp`: only a few site images should be listed, none under `/posts/` or `/thumbs/`.
+The R2 credentials are derived from the deploy's Cloudflare API token (access key ID = the token's ID, secret = the SHA-256 of the token), so one token covers both.
 
 ## Newsletter signups
 
@@ -109,19 +90,19 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 
 | Script                                  | What it does                                                                                                       |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `dev`, `dev:next`, `dev:convex`         | Local development                                                                                                  |
-| `build`, `build-and-deploy`, `start`    | See above                                                                                                          |
-| `typecheck`                             | `tsc` for the app and for `scripts/` (which has its own `scripts/tsconfig.json`)                                   |
+| `dev`, `dev:astro`, `dev:convex`        | Local development                                                                                                  |
+| `build`, `preview`                      | See above; `preview` serves `dist/` with the Worker through `wrangler dev`                                         |
+| `typecheck`                             | `tsc` for the app, `scripts/` and `worker/` (each has its own tsconfig)                                            |
 | `test`, `dev:test`                      | vitest (Convex functions, scripts, utils)                                                                          |
 | `format`, `format:check`                | prettier (`public/` is ignored so post content is never reformatted)                                               |
 | `validatePosts`                         | Fast offline checks of all posts (run in CI)                                                                       |
 | `auditPosts`                            | Slow, thorough audit, including every external link; `--local-only` skips the HTTP checks. See `AGENTS.md`         |
-| `generate`                              | Runs `generateRSS`, `generateSitemap` and `generateThumbnails`                                                     |
+| `generate`                              | Runs `generateRSS`, `generateSitemap`, `generateThumbnails` and `generateRedirects` (old WordPress URLs)           |
 | `generateThumbnails`                    | Writes a 640px WebP of each cover image to `public/thumbs/<slug>.webp`; `--force` regenerates all of them          |
 | `optimizeImages <path...>`              | Re-encodes the images under a path in place, keeping each one only if it got smaller (`--quality=82`, `--dry-run`) |
 | `populateAlgolia`                       | Replaces the Algolia index with the publishable posts (`--dry-run` prints what it would index)                     |
 | `uploadPostsToConvex [-- --production]` | Upserts changed posts into Convex (dev deployment unless `--production`)                                           |
-| `syncAssets [-- --dry-run \| --strip]`  | Uploads new post media and thumbnails to R2 (and changed ones in production); a no-op without the `R2_*` env vars  |
+| `syncAssets [-- --dry-run]`             | Uploads new post media and thumbnails to R2 (and changed ones in production); a no-op without the `R2_*` env vars  |
 | `fixFlashLinks`                         | Normalizes old Flash links so they play in the site's Ruffle modal (`--dry-run` supported)                         |
 
 `scripts/fixPosts.ts` (run with `bun run ./scripts/fixPosts.ts`) applies the automated content fixes described in `AGENTS.md`.
@@ -130,20 +111,22 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 
 `.env.example` lists them all by name.
 
-**Vercel** (Project → Settings → Environment Variables):
+**GitHub** (repo → Settings → Secrets and variables → Actions), used by the deploy workflow. Public values are variables, the rest are secrets:
 
-| Name                                                                     | Used by                                                                                                                                                                                                       |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CONVEX_DEPLOY_KEY`                                                      | `convex deploy` in production builds (a production deploy key)                                                                                                                                                |
-| `NEXT_PUBLIC_CONVEX_URL` / `NEXT_PUBLIC_CONVEX_URL_PROD`                 | `uploadPostsToConvex` (in production it prefers `_PROD`). `convex deploy --cmd` sets `NEXT_PUBLIC_CONVEX_URL` only for the build command, so the upload that runs afterwards needs one of these set in Vercel |
-| `BLOG_POST_ADMIN_TOKEN`                                                  | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                                                                                                         |
-| `ALGOLIA_ADMIN_KEY`                                                      | `populateAlgolia`                                                                                                                                                                                             |
-| `ALGOLIA_APP_ID`                                                         | `populateAlgolia` (optional; defaults to the app ID the frontend uses, `JYZJ63OX7U`)                                                                                                                          |
-| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST`                    | PostHog analytics in the browser (disabled when the key isn't set)                                                                                                                                            |
-| `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | `syncAssets` (optional; see "Serving media from Cloudflare R2")                                                                                                                                               |
-| `NEXT_PUBLIC_ASSET_BASE_URL`                                             | Where post media and thumbnails are served from, e.g. `https://assets.mikecann.blog` (optional; unset serves them from the deployment)                                                                        |
+| Name                                                  | Kind     | Used by                                                                                                              |
+| ----------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| `CONVEX_DEPLOY_KEY`                                   | secret   | `convex deploy` (a production deploy key with only `deployment:deploy`)                                              |
+| `CLOUDFLARE_API_TOKEN`                                | secret   | `wrangler deploy`; also the source of the R2 credentials. Scoped to the account's Workers and R2 and the blog's zone |
+| `CLOUDFLARE_ACCOUNT_ID`                               | variable | `wrangler deploy`                                                                                                    |
+| `R2_ACCOUNT_ID`, `R2_BUCKET`                          | variable | `syncAssets`                                                                                                         |
+| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`            | secret   | `syncAssets`; derived from `CLOUDFLARE_API_TOKEN` (see "Serving media from Cloudflare R2")                           |
+| `NEXT_PUBLIC_CONVEX_URL_PROD`                         | variable | `uploadPostsToConvex` (`convex deploy --cmd` only sets `NEXT_PUBLIC_CONVEX_URL` for the build command)               |
+| `BLOG_POST_ADMIN_TOKEN`                               | secret   | `uploadPostsToConvex`. Must match the Convex env var of the same name                                                |
+| `ALGOLIA_ADMIN_KEY`                                   | secret   | `populateAlgolia` (the step is skipped with a warning if it's missing)                                               |
+| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | variable | PostHog analytics in the browser (disabled when the key isn't set)                                                   |
+| `NEXT_PUBLIC_ASSET_BASE_URL`                          | variable | Where post media and thumbnails are served from (`https://assets.mikecann.blog`)                                     |
 
-Vercel sets `VERCEL_ENV` itself. It decides whether a build deploys and whether the server reports to Sentry, and draft posts are left out when it is `production`.
+The `NEXT_PUBLIC_` names are left over from Next.js; `astro.config.mjs` inlines them into the browser code. `ALGOLIA_APP_ID` is optional and defaults to the app ID the frontend uses, `JYZJ63OX7U`.
 
 **Convex** (Dashboard → Settings → Environment Variables, or `bunx convex env set NAME value`), for each deployment:
 

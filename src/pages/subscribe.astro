@@ -1,0 +1,54 @@
+---
+import SidebarPage from "../layouts/SidebarPage.astro";
+import { Vertical } from "../../components/utils/gls";
+import { SubscribeForm } from "../../components/newsletter/SubscribeForm";
+import { getAllPostsWithoutContent } from "../../scripts/posts";
+import { sortPosts } from "../../utils/posts";
+import { formatUTCDate } from "../../utils/dates";
+
+const DESCRIPTION =
+  "Get Mike Cann's new blog posts by email: AI, coding, games and side projects, about one post a month.";
+
+const recentPosts = sortPosts(getAllPostsWithoutContent(), "desc")
+  .slice(0, 5)
+  .map((post) => ({
+    slug: post.slug,
+    title: post.meta.title,
+    date: formatUTCDate(post.meta.date, "MMMM yyyy"),
+  }));
+---
+
+<SidebarPage
+  title="subscribe - mikecann.blog"
+  description={DESCRIPTION}
+  ogTitle="Subscribe to mikecann.blog"
+>
+  <Vertical style={{ paddingRight: 20, maxWidth: 700, width: "100%", marginBottom: 40 }}>
+    <h1>Get new posts by email</h1>
+    <p>
+      I write about whatever I'm tinkering with: AI, TypeScript, games, Convex, side projects and
+      the odd bit of life. Pop your email in below and you'll get an email whenever there's a new
+      post, which is about once a month.
+    </p>
+    <p style="color: #5d686f">
+      No spam, and you can unsubscribe with one click from any email. You'll get a quick email to
+      confirm first.
+    </p>
+    <SubscribeForm client:load source="subscribe-page" path="/subscribe" />
+
+    <h2 style="margin-top: 40px">Recent posts</h2>
+    <ul style="padding-left: 20px; line-height: 1.8">
+      {
+        recentPosts.map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}`}>{post.title}</a>{" "}
+            <span style="color: #5d686f; font-size: 14px">({post.date})</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p style="color: #5d686f">
+      Prefer a feed reader? There's an <a href="/rss.xml">RSS feed</a> too.
+    </p>
+  </Vertical>
+</SidebarPage>
