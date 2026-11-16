@@ -54,7 +54,9 @@ const send = (t: TestConvex, campaignId: Id<"postEmailCampaigns">) =>
 const mockFetch = ({ postStatus = 200, failSend = false } = {}) => {
   const calls: { url: string; method: string; body?: string }[] = [];
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input, init) => {
-    const url = String(input);
+    // The live check adds a unique ?live-check= to get past Cloudflare's cache; leave it out so
+    // the requests read the same every run.
+    const url = String(input).replace(/\?live-check=\d+$/, "");
     const method = init?.method ?? "GET";
     calls.push({ url, method, body: init?.body ? String(init.body) : undefined });
 
