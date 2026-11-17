@@ -101,7 +101,9 @@ function Admin() {
       </Card>
     );
   return (
-    <div style={{ "--mv-top": "0px" } as CSSProperties}>
+    // The viewer fills the window under the bar, so its background doesn't stop where its
+    // content does (styles in MachinesAdmin below)
+    <div className="blog-admin" style={{ "--mv-top": "0px" } as CSSProperties}>
       <header style={styles.bar}>
         <a href="/">mikecann.blog</a>
         <span style={{ marginLeft: "auto" }}>{me.email}</span>
@@ -138,7 +140,11 @@ export default function MachinesAdmin() {
       client={getClient()}
       api={{ refreshSession: api.admin.auth.refreshSession, signOut: api.admin.auth.signOut }}
     >
-      <style>{"@keyframes admin-spin { to { transform: rotate(360deg) } }"}</style>
+      <style>
+        {"@keyframes admin-spin { to { transform: rotate(360deg) } }" +
+          ".blog-admin { display: flex; flex-direction: column; min-height: 100dvh }" +
+          ".blog-admin > .mv { flex: 1 }"}
+      </style>
       <App />
     </ConvexAuthProvider>
   );
