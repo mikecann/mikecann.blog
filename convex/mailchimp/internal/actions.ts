@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import { convex } from "../../builder";
 import { internal } from "../../_generated/api";
-import type { Doc } from "../../_generated/dataModel";
+import type { Doc, Id } from "../../_generated/dataModel";
 import {
   mailchimpFetch,
   generateNewPostEmailHtml,
@@ -13,8 +13,15 @@ import {
   MAILCHIMP_FROM_NAME,
   MAILCHIMP_REPLY_TO,
   getPostUrl,
+  isPostGoneFromSite,
 } from "../lib";
 import { notifyIndexNow } from "../../seo/indexNow";
+
+/**
+ * Mailchimp campaign statuses that mean the email has gone out or will without us: sent, being
+ * sent, or scheduled (by hand in Mailchimp). Anything else ("save", "paused") hasn't sent.
+ */
+const MAILCHIMP_DELIVERED_STATUSES: ReadonlySet<string> = new Set(["sent", "sending", "schedule"]);
 
 export const sendNewPostCampaign = convex
   .action()
@@ -63,9 +70,29 @@ export const sendNewPostCampaign = convex
       return null;
     }
 
+    // An earlier email about what may be this same post, under a slug Convex still has: if the
+    // live site no longer serves that slug, the post was renamed even though the deploy didn't
+    // prune it. If the site can't say, check again later rather than risk a second email.
+    const goneFromSite: Id<"postEmailCampaigns">[] = [];
+    for (const earlier of await ctx.runQuery(
+      internal.mailchimp.internal.queries.listEarlierEmailSlugsToCheck,
+      { campaignId },
+    )) {
+      const gone = await isPostGoneFromSite(earlier.slug);
+      if (gone === null) {
+        const outcome = await ctx.runMutation(
+          internal.mailchimp.internal.mutations.recordPostNotLiveYet,
+          { campaignId, detail: `couldn't tell whether '${earlier.slug}' is still on the site` },
+        );
+        console.warn(`Post email for '${campaign.slug}' waits on '${earlier.slug}': ${outcome}`);
+        return null;
+      }
+      if (gone) goneFromSite.push(earlier.campaignId);
+    }
+
     const claim = await ctx.runMutation(
       internal.mailchimp.internal.mutations.beginPostEmailCampaign,
-      { campaignId },
+      { campaignId, goneFromSite },
     );
 
     if (claim.kind !== "claimed") {
@@ -106,7 +133,18 @@ export const sendNewPostCampaign = convex
         if (!recorded) throw new Error("Campaign status changed while creating it; stopping");
         console.log(`Campaign created: ${mailchimpCampaignId}`);
       } else {
-        console.log(`Reusing Mailchimp campaign: ${mailchimpCampaignId}`);
+        // A retry of a campaign that already exists in Mailchimp. Its last run may have died after
+        // Mailchimp accepted the send, so ask Mailchimp first: sending it again must never happen.
+        const existing = await mailchimpFetch(`/campaigns/${mailchimpCampaignId}`);
+        const mailchimpStatus = String(existing?.status ?? "");
+        if (MAILCHIMP_DELIVERED_STATUSES.has(mailchimpStatus)) {
+          await ctx.runMutation(internal.mailchimp.internal.mutations.markSent, { campaignId });
+          console.log(
+            `Mailchimp campaign ${mailchimpCampaignId} is already '${mailchimpStatus}'; recorded it as sent`,
+          );
+          return null;
+        }
+        console.log(`Reusing Mailchimp campaign: ${mailchimpCampaignId} (${mailchimpStatus})`);
       }
 
       await mailchimpFetch(`/campaigns/${mailchimpCampaignId}/content`, {
