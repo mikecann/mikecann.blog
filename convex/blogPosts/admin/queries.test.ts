@@ -5,6 +5,7 @@ import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
 import type { Id } from "../../_generated/dataModel";
 import { modules } from "../../test.setup";
+import { insertCampaignRow } from "../../mailchimp/postEmail.testkit";
 
 const setup = () => convexTest(schema, modules);
 type TestConvex = ReturnType<typeof setup>;
@@ -112,7 +113,7 @@ describe("listPostEmailCampaignProblems", () => {
         updatedAt: number,
         scheduledFunctionId?: Id<"_scheduled_functions">,
       ) =>
-        ctx.db.insert("postEmailCampaigns", {
+        insertCampaignRow(ctx, {
           postId,
           slug,
           title: slug,
@@ -126,7 +127,7 @@ describe("listPostEmailCampaignProblems", () => {
       await insert("recent-failure", "failed", NOW - DAY);
       await insert("ancient-failure", "failed", NOW - 60 * DAY);
       await insert("recent-skip", "skipped", NOW - HOUR);
-      await insert("stuck-sending", "sending", NOW - 2 * HOUR);
+      await insert("stuck-sending", "sending", NOW - 3 * HOUR);
       await insert("busy-sending", "sending", NOW - 5 * 60 * 1000);
       await insert("stuck-queued", "queued", NOW - 4 * HOUR);
       await insert("fresh-queued", "queued", NOW - HOUR);

@@ -36,7 +36,8 @@ export const postEmailStateValidator = v.union(
   v.object({ kind: v.literal("sent"), sentAt: v.number(), mailchimpCampaignId }),
   v.object({ kind: v.literal("failed"), error: v.string(), mailchimpCampaignId }),
   v.object({ kind: v.literal("skipped"), reason: v.string() }),
-  v.object({ kind: v.literal("cancelled"), reason: v.string() }),
+  // Keeps the Mailchimp campaign of a retry it cancelled, which may have sent before
+  v.object({ kind: v.literal("cancelled"), reason: v.string(), mailchimpCampaignId }),
   v.object({
     kind: v.literal("alreadyEmailed"),
     earlierCampaignId: v.id("postEmailCampaigns"),

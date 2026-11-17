@@ -1,5 +1,5 @@
 import { v } from "convex/values";
-import { convex } from "../../builder";
+import { machines } from "../../machines";
 import { vEntryId } from "@convex-dev/rag";
 import { queueNewPostEmailIfEligible, vPostEmailDecision } from "../../mailchimp/campaigns";
 import { vPostStatus } from "../lib";
@@ -9,9 +9,10 @@ import { vPostStatus } from "../lib";
  * this transaction, so concurrent uploads can't create duplicates). A newly
  * created post may queue the "new post" email; updates never do.
  */
-export const upsertBlogPost = convex
-  .mutation()
-  .input({
+// On the state machines catalog's internalMutation, as a new post's email is born by the post
+// email machine's QUEUE or SKIP, which are server events.
+export const upsertBlogPost = machines.internalMutation({
+  args: {
     slug: v.string(),
     title: v.string(),
     hash: v.string(),
@@ -19,9 +20,9 @@ export const upsertBlogPost = convex
     date: v.number(),
     status: v.optional(vPostStatus),
     uploadRunId: v.string(),
-  })
-  .returns(v.object({ created: v.boolean(), email: vPostEmailDecision }))
-  .handler(async (ctx, { slug, title, hash, ragEntryId, date, status, uploadRunId }) => {
+  },
+  returns: v.object({ created: v.boolean(), email: vPostEmailDecision }),
+  handler: async (ctx, { slug, title, hash, ragEntryId, date, status, uploadRunId }) => {
     const existing = await ctx.db
       .query("blogPosts")
       .withIndex("by_slug", (q) => q.eq("slug", slug))
@@ -50,5 +51,5 @@ export const upsertBlogPost = convex
     });
 
     return { created: true, email };
-  })
-  .internal();
+  },
+});

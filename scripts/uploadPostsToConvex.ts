@@ -8,7 +8,6 @@ import type { FunctionReturnType } from "convex/server";
 import { ensure } from "../essentials/misc/ensure";
 import { hashContent } from "../utils/hashing";
 import pLimit from "p-limit";
-import { isPostEmailCampaignScheduledOrSent } from "./postEmailCampaignStatus";
 
 // Usage: bun run ./scripts/uploadPostsToConvex.ts [--production] [--force-prune]
 //   --production   upload to the production deployment
@@ -186,11 +185,11 @@ async function verifyNewPostEmails(slugs: string[]) {
     });
 
     const missing = rows.filter((row) => !row.campaign);
-    const failed = rows.filter((row) => row.campaign?.status === "failed");
+    const failed = rows.filter((row) => row.campaign?.kind === "failed");
     const pending = rows.filter((row) => {
       if (!row.campaign) return true;
-      if (row.campaign.status === "failed") return false;
-      return !isPostEmailCampaignScheduledOrSent(row.campaign);
+      if (row.campaign.kind === "failed") return false;
+      return !row.campaign.scheduledOrSent;
     });
 
     if (failed.length > 0) {
@@ -202,7 +201,7 @@ async function verifyNewPostEmails(slugs: string[]) {
 
     if (missing.length === 0 && pending.length === 0) {
       for (const row of rows) {
-        const message = row.campaign?.status === "sent" ? "sent" : "scheduled";
+        const message = row.campaign?.kind === "sent" ? "sent" : "scheduled";
         console.log(`Mailchimp email ${message} for '${row.slug}'`);
       }
       return;
@@ -216,7 +215,7 @@ async function verifyNewPostEmails(slugs: string[]) {
     slugs,
   });
   const summary = rows
-    .map((row) => `${row.slug}: ${row.campaign?.status ?? "missing campaign row"}`)
+    .map((row) => `${row.slug}: ${row.campaign?.kind ?? "missing campaign row"}`)
     .join("\n");
 
   throw new Error(`Timed out waiting for Mailchimp email status:\n${summary}`);
@@ -236,7 +235,7 @@ async function reportPostEmailProblems(alreadyReported: Set<string>) {
         (p.error ? ` - ${p.error}` : ""),
     ),
     "",
-    "Once the cause is fixed, retry a failed/skipped email with:",
+    "Once the cause is fixed, retry an email that didn't go out with:",
     `  ${retryCommand("<slug>")}`,
     'If the post is live but the "not live" check keeps failing, add "skipLiveCheck":true.',
     'A post skipped as a rename that really is a different post needs "allowEarlierEmail":true.',

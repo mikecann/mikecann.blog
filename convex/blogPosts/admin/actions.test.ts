@@ -9,8 +9,13 @@ import {
 } from "../../mailchimp/constants";
 import { PRODUCTION_CONVEX_CLOUD_URL } from "../../mailchimp/lib";
 import { modules } from "../../test.setup";
+import { register } from "@convex-dev/state-machines/test";
 
-const setup = () => convexTest(schema, modules);
+const setup = () => {
+  const t = convexTest(schema, modules);
+  register(t);
+  return t;
+};
 type TestConvex = ReturnType<typeof setup>;
 
 const ragMock = vi.hoisted(() => ({ add: vi.fn(), getEntry: vi.fn() }));
@@ -119,16 +124,19 @@ describe("upsert action", () => {
       status: "queued",
       attempts: 0,
       uploadRunId: "run-1",
+      postDate: NOW - DAY,
+      state: {
+        kind: "queued",
+        sendAt: NOW + NEW_POST_EMAIL_DELAY_MS,
+        liveChecks: 0,
+        skipLiveCheck: false,
+        allowEarlierEmail: false,
+      },
     });
-
-    const scheduledFunction = await t.run((ctx) =>
-      ctx.db.system.get("_scheduled_functions", campaign.scheduledFunctionId!),
-    );
-    expect(scheduledFunction).toMatchObject({
-      name: "mailchimp/internal/actions:sendNewPostCampaign",
-      state: { kind: "pending" },
-      scheduledTime: NOW + NEW_POST_EMAIL_DELAY_MS,
-    });
+    // The post email machine's SEND_DUE starts the send then
+    expect(campaign.stateTimers).toMatchObject([
+      { event: "SEND_DUE", dueAt: NOW + NEW_POST_EMAIL_DELAY_MS },
+    ]);
   });
 
   test.each([
@@ -182,9 +190,9 @@ describe("upsert action", () => {
     const [campaign] = await getCampaigns(t);
     expect(campaign).toMatchObject({
       status: "skipped",
-      error: expect.stringContaining("API_KEY"),
+      state: { kind: "skipped", reason: expect.stringContaining("API_KEY") },
     });
-    expect(campaign.scheduledFunctionId).toBeUndefined();
+    expect(campaign.stateTimers).toEqual([]);
   });
 
   test("caps how many emails one upload run can queue", async () => {
@@ -203,8 +211,9 @@ describe("upsert action", () => {
       "skipped",
     ]);
     const campaigns = await getCampaigns(t);
-    expect(campaigns.filter((c) => c.status === "skipped")).toHaveLength(2);
-    expect(campaigns.filter((c) => c.status === "skipped")[0].error).toContain("bulk import");
+    const skipped = campaigns.flatMap((c) => (c.state.kind === "skipped" ? [c.state] : []));
+    expect(skipped).toHaveLength(2);
+    expect(skipped[0].reason).toContain("bulk import");
 
     // A new run starts a fresh count
     const next = await t.action(

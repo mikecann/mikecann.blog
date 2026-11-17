@@ -86,12 +86,26 @@ New posts are emailed to a Mailchimp list (see `convex/mailchimp`). Readers sign
 - The forms: the end of every post (`#subscribe`), a dismissible slide-in on posts once a reader is halfway through (never shown again after signing up, and hidden for 30 days after "No thanks"), the `/subscribe` page (linked from the sidebar) and the About page.
 - Signups, failures and prompt views/dismissals are sent to PostHog as `newsletter_*` events.
 
+## New post emails
+
+When a deploy uploads a new, recent, published post, its email to subscribers is a row in `postEmailCampaigns` that the `postEmail` state machine moves along ([`@convex-dev/state-machines`](https://github.com/convex/state-machines), vendored in `vendor/`). The rules, with a sentence on every state and transition, are in `convex/mailchimp/machine.ts`, and the diagram is in [docs/state-machines.md](docs/state-machines.md), generated from them (`bun run machines:diagrams`; `bun run test` fails when it's out of date).
+
+- It waits 30 minutes, then checks the post's page returns 200 (every 10 minutes for two hours), then creates, fills and sends one Mailchimp campaign. Each state the send can stall in has a timer, so nothing stays stuck.
+- A renamed post isn't emailed twice: before sending, it looks for an earlier email with the same title or date whose post has gone (`convex/mailchimp/earlierEmail.ts`).
+- A retry resumes the same Mailchimp campaign and asks Mailchimp first whether it already went out, so it never sends twice. When a send call fails, it asks Mailchimp too, rather than guessing.
+- Problems are printed at the end of every deploy, with the command to retry: `mailchimp/admin/mutations:retryFailedPostEmailCampaign`.
+- Only the catalog's `internalMutation` (`convex/machines.ts`) may move a campaign, and `bun run lint` runs the library's rules on `convex/` (the rest of the codebase isn't linted).
+
+The admin Machines page, [/admin/machines](https://mikecann.blog/admin/machines), shows the machines live, with the rows in each state and their history. Sign in with `BLOG_POST_ADMIN_TOKEN`: the page trades it at the deployment's `POST /admin/session` for an hour's JWT that the deployment signs itself (`convex/admin/session.ts`, `convex/auth.config.ts`), and the page's queries (`convex/viewer.ts`) answer only that.
+
 ## Scripts
 
 | Script                                  | What it does                                                                                                       |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | `dev`, `dev:astro`, `dev:convex`        | Local development                                                                                                  |
 | `build`, `preview`                      | See above; `preview` serves `dist/` with the Worker through `wrangler dev`                                         |
+| `lint`                                  | The state machines library's lint rules on `convex/`                                                               |
+| `machines:diagrams`                     | Rewrites `docs/state-machines.md` from the machines' rules                                                         |
 | `typecheck`                             | `tsc` for the app, `scripts/` and `worker/` (each has its own tsconfig)                                            |
 | `test`, `dev:test`                      | vitest (Convex functions, scripts, utils)                                                                          |
 | `format`, `format:check`                | prettier (`public/` is ignored so post content is never reformatted)                                               |
@@ -132,11 +146,12 @@ The `NEXT_PUBLIC_` names are left over from Next.js; `astro.config.mjs` inlines 
 
 Mikebot's model and the blog-search embeddings go through the [Convex AI Gateway](https://docs.convex.dev/ai-gateway/overview), so no AI provider keys are needed; it needs a paid Convex plan and bills at OpenRouter's rates. Mikebot's own daily budgets (below) stop it before Convex's deployment usage limits would: hitting a Convex **disable** threshold turns off the whole deployment, including post uploads and newsletter signups, so set those limits well above the Mikebot budget.
 
-| Name                                  | Used by                                                                                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `BLOG_POST_ADMIN_TOKEN`               | Authorizes the admin functions `uploadPostsToConvex` calls                                                                              |
-| `MAILCHIMP_API_KEY`                   | Creating and sending the new-post email campaigns (only the production deployment sends)                                                |
-| `MIKEBOT_MODEL`                       | Optional. Which Convex AI Gateway model Mikebot uses (default `openai/gpt-6-luna`), e.g. `google/gemini-3.8-flash` or `openrouter/auto` |
-| `MIKEBOT_DAILY_TOKEN_BUDGET`          | Optional. Max tokens Mikebot may use per UTC day (default 2,000,000; `0` turns Mikebot off)                                             |
-| `MIKEBOT_DAILY_COST_BUDGET_USD`       | Optional. Max USD Mikebot may spend per UTC day (default 2; `0` turns Mikebot off)                                                      |
-| `MAILCHIMP_ALLOW_NON_PRODUCTION_SEND` | Optional. `true` lets a non-production deployment send real campaign emails                                                             |
+| Name                                  | Used by                                                                                                                                                                                                                                |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BLOG_POST_ADMIN_TOKEN`               | Authorizes the admin functions `uploadPostsToConvex` calls                                                                                                                                                                             |
+| `MAILCHIMP_API_KEY`                   | Creating and sending the new-post email campaigns (only the production deployment sends)                                                                                                                                               |
+| `MIKEBOT_MODEL`                       | Optional. Which Convex AI Gateway model Mikebot uses (default `openai/gpt-6-luna`), e.g. `google/gemini-3.8-flash` or `openrouter/auto`                                                                                                |
+| `MIKEBOT_DAILY_TOKEN_BUDGET`          | Optional. Max tokens Mikebot may use per UTC day (default 2,000,000; `0` turns Mikebot off)                                                                                                                                            |
+| `MIKEBOT_DAILY_COST_BUDGET_USD`       | Optional. Max USD Mikebot may spend per UTC day (default 2; `0` turns Mikebot off)                                                                                                                                                     |
+| `ADMIN_JWT_PRIVATE_JWK`               | The private key (a P-256 JWK) that signs the admin Machines page's sign-ins. Make one with `node -e 'console.log(JSON.stringify(require("crypto").generateKeyPairSync("ec",{namedCurve:"P-256"}).privateKey.export({format:"jwk"})))'` |
+| `MAILCHIMP_ALLOW_NON_PRODUCTION_SEND` | Optional. `true` lets a non-production deployment send real campaign emails                                                                                                                                                            |

@@ -9,6 +9,7 @@ import {
 } from "./newsletter/lib";
 import { SUBSCRIBE_RESULTS, type SubscribeResult } from "./newsletter/results";
 import { sha256Hex } from "./mikebot/sha256";
+import { adminJwks, adminRateLimiter, isAdminToken, signAdminJwt } from "./admin/session";
 
 const http = httpRouter();
 
@@ -100,6 +101,65 @@ http.route({
   path: "/newsletter/subscribe",
   method: "OPTIONS",
   handler: httpAction(async () => new Response(null, { status: 204, headers: corsHeaders })),
+});
+
+// The admin sign-in (admin/session.ts). Only the blog's own pages may call it from a browser.
+const ADMIN_ORIGINS = new Set([
+  "https://mikecann.blog",
+  "https://www.mikecann.blog",
+  "https://mikecann-blog.mikeysee.workers.dev",
+  "http://localhost:4321",
+]);
+
+const adminJson = (request: Request, body: unknown, status = 200) => {
+  const origin = request.headers.get("Origin");
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-store",
+      ...(origin && ADMIN_ORIGINS.has(origin)
+        ? { "Access-Control-Allow-Origin": origin, Vary: "Origin" }
+        : {}),
+    },
+  });
+};
+
+/**
+ * Trades the admin token for an hour's signed admin JWT: `{ token }` as JSON, sent as text/plain
+ * so browsers skip the CORS preflight. Rate limited, wrong tokens included.
+ */
+http.route({
+  path: "/admin/session",
+  method: "POST",
+  handler: httpAction(async (ctx, request) => {
+    const body = parseJsonObject(await request.text());
+    const token = typeof body?.token == "string" ? body.token : "";
+
+    const limit = await adminRateLimiter.limit(ctx, "adminSignIn");
+    if (!limit.ok)
+      return adminJson(
+        request,
+        { error: "Too many tries. Wait a few minutes and try again." },
+        429,
+      );
+    if (!isAdminToken(token))
+      return adminJson(request, { error: "That isn't the admin token." }, 401);
+
+    return adminJson(request, await signAdminJwt());
+  }),
+});
+
+// The public key Convex checks the admin JWTs against (auth.config.ts)
+http.route({
+  path: "/.well-known/jwks.json",
+  method: "GET",
+  handler: httpAction(
+    async () =>
+      new Response(JSON.stringify(adminJwks()), {
+        headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=3600" },
+      }),
+  ),
 });
 
 export default http;

@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as admin_session from "../admin/session.js";
 import type * as blogPosts_admin_actions from "../blogPosts/admin/actions.js";
 import type * as blogPosts_admin_mutations from "../blogPosts/admin/mutations.js";
 import type * as blogPosts_admin_queries from "../blogPosts/admin/queries.js";
@@ -17,16 +18,19 @@ import type * as blogPosts_lib from "../blogPosts/lib.js";
 import type * as builder from "../builder.js";
 import type * as crons from "../crons.js";
 import type * as http from "../http.js";
+import type * as machines from "../machines.js";
 import type * as mailchimp_admin_mutations from "../mailchimp/admin/mutations.js";
 import type * as mailchimp_campaignState from "../mailchimp/campaignState.js";
 import type * as mailchimp_campaigns from "../mailchimp/campaigns.js";
 import type * as mailchimp_constants from "../mailchimp/constants.js";
+import type * as mailchimp_earlierEmail from "../mailchimp/earlierEmail.js";
 import type * as mailchimp_emailTemplate from "../mailchimp/emailTemplate.js";
 import type * as mailchimp_internal_actions from "../mailchimp/internal/actions.js";
 import type * as mailchimp_internal_migrations from "../mailchimp/internal/migrations.js";
 import type * as mailchimp_internal_mutations from "../mailchimp/internal/mutations.js";
 import type * as mailchimp_internal_queries from "../mailchimp/internal/queries.js";
 import type * as mailchimp_lib from "../mailchimp/lib.js";
+import type * as mailchimp_machine from "../mailchimp/machine.js";
 import type * as mikebot_config from "../mikebot/config.js";
 import type * as mikebot_constants from "../mikebot/constants.js";
 import type * as mikebot_guards from "../mikebot/guards.js";
@@ -41,6 +45,7 @@ import type * as newsletter_lib from "../newsletter/lib.js";
 import type * as newsletter_results from "../newsletter/results.js";
 import type * as seo_indexNow from "../seo/indexNow.js";
 import type * as users from "../users.js";
+import type * as viewer from "../viewer.js";
 
 import type {
   ApiFromModules,
@@ -49,6 +54,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  "admin/session": typeof admin_session;
   "blogPosts/admin/actions": typeof blogPosts_admin_actions;
   "blogPosts/admin/mutations": typeof blogPosts_admin_mutations;
   "blogPosts/admin/queries": typeof blogPosts_admin_queries;
@@ -58,16 +64,19 @@ declare const fullApi: ApiFromModules<{
   builder: typeof builder;
   crons: typeof crons;
   http: typeof http;
+  machines: typeof machines;
   "mailchimp/admin/mutations": typeof mailchimp_admin_mutations;
   "mailchimp/campaignState": typeof mailchimp_campaignState;
   "mailchimp/campaigns": typeof mailchimp_campaigns;
   "mailchimp/constants": typeof mailchimp_constants;
+  "mailchimp/earlierEmail": typeof mailchimp_earlierEmail;
   "mailchimp/emailTemplate": typeof mailchimp_emailTemplate;
   "mailchimp/internal/actions": typeof mailchimp_internal_actions;
   "mailchimp/internal/migrations": typeof mailchimp_internal_migrations;
   "mailchimp/internal/mutations": typeof mailchimp_internal_mutations;
   "mailchimp/internal/queries": typeof mailchimp_internal_queries;
   "mailchimp/lib": typeof mailchimp_lib;
+  "mailchimp/machine": typeof mailchimp_machine;
   "mikebot/config": typeof mikebot_config;
   "mikebot/constants": typeof mikebot_constants;
   "mikebot/guards": typeof mikebot_guards;
@@ -82,6 +91,7 @@ declare const fullApi: ApiFromModules<{
   "newsletter/results": typeof newsletter_results;
   "seo/indexNow": typeof seo_indexNow;
   users: typeof users;
+  viewer: typeof viewer;
 }>;
 
 /**
@@ -114,4 +124,5 @@ export declare const components: {
   agent: import("@convex-dev/agent/_generated/component.js").ComponentApi<"agent">;
   rag: import("@convex-dev/rag/_generated/component.js").ComponentApi<"rag">;
   rateLimiter: import("@convex-dev/rate-limiter/_generated/component.js").ComponentApi<"rateLimiter">;
+  stateMachines: import("@convex-dev/state-machines/_generated/component.js").ComponentApi<"stateMachines">;
 };

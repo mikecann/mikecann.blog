@@ -7,7 +7,7 @@ import {
   RAG_NAMESPACE,
   validateBlogPostAdminToken,
 } from "../lib";
-import { patchCampaign, cancelPendingSendJob } from "../../mailchimp/campaigns";
+import { internal } from "../../_generated/api";
 
 /**
  * Deletes the blogPosts rows (and their RAG entries) for posts that no longer
@@ -51,19 +51,9 @@ export const pruneRemovedPosts = convex
       await ctx.db.delete("blogPosts", post._id);
 
       // Don't email subscribers about a post that has just been removed.
-      const campaigns = await ctx.db
-        .query("postEmailCampaigns")
-        .withIndex("by_slug", (q) => q.eq("slug", post.slug))
-        .take(20);
-      for (const campaign of campaigns) {
-        if (campaign.status !== "queued") continue;
-        await cancelPendingSendJob(ctx, campaign);
-        await patchCampaign(ctx, campaign._id, {
-          status: "failed",
-          error: "Not sent: the post was removed before its email went out",
-          updatedAt: Date.now(),
-        });
-      }
+      await ctx.runMutation(internal.mailchimp.internal.mutations.cancelForRemovedPost, {
+        slug: post.slug,
+      });
     }
 
     console.log(`Pruned ${stalePosts.length} removed posts: ${staleSlugs.join(", ")}`);
