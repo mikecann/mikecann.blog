@@ -71,8 +71,13 @@ const mockFetch = ({
 
     const other = otherPosts[url.replace("https://mikecann.blog/posts/", "")];
     if (other === "error") throw new TypeError("fetch failed");
-    if (url.startsWith("https://mikecann.blog/posts/"))
-      return new Response(null, { status: other ?? postStatus });
+    if (url.startsWith("https://mikecann.blog/posts/")) {
+      const status = other ?? postStatus;
+      // Like fetch, a redirect that's followed answers with the page at the other end
+      if (status >= 300 && status < 400 && init?.redirect !== "manual")
+        return new Response("<html/>", { status: 200 });
+      return new Response(null, { status });
+    }
     if (url.startsWith("https://api.indexnow.org/")) return new Response(null, { status: 200 });
     if (url.endsWith("/campaigns") && method === "POST")
       return Response.json({ id: "mc-campaign-1" });
@@ -430,6 +435,33 @@ describe("a renamed post", () => {
     expect(await getCampaign(t, oldEmail)).toMatchObject({
       status: "failed",
       error: expect.stringContaining("removed"),
+    });
+  });
+
+  test("a retry of the old slug's email doesn't send when its URL now redirects to the new one", async () => {
+    // As above, but the upload stopped before pruning the old slug, so its post row is still there
+    const t = setup();
+    const calls = mockFetch({ otherPosts: { "my-old-slug": 301 } });
+    const oldEmail = await insertEarlierEmail(
+      t,
+      { status: "failed", error: "boom", mailchimpCampaignId: undefined, sentAt: undefined },
+      { postStillExists: true },
+    );
+    const newEmail = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+    await send(t, newEmail);
+    expect(await getCampaign(t, newEmail)).toMatchObject({ status: "sent" });
+
+    await t.mutation(api.mailchimp.admin.mutations.retryFailedPostEmailCampaign, {
+      token,
+      slug: "my-old-slug",
+    });
+    await vi.runOnlyPendingTimersAsync();
+    await t.finishInProgressScheduledFunctions();
+
+    expect(calls.filter((c) => c.url.endsWith("/actions/send"))).toHaveLength(1);
+    expect(await getCampaign(t, oldEmail)).toMatchObject({
+      status: "queued",
+      liveCheckAttempts: 1,
     });
   });
 

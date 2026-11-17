@@ -122,11 +122,18 @@ export async function checkPostIsLive(slug: string): Promise<PostLiveCheck> {
   try {
     // Cloudflare caches pages for a day, including a 404 seen before the deploy went live. A
     // unique query string misses that cache, so this sees what Vercel is serving right now.
+    // Redirects aren't followed: a post's URL that redirects has moved (a renamed post whose old
+    // URL points at the new one), and the email belongs to the post at the other end.
     const response = await fetch(`${url}?live-check=${Date.now()}`, {
       method: "GET",
-      redirect: "follow",
+      redirect: "manual",
     });
     if (response.status === 200) return { ok: true };
+    if (response.status >= 300 && response.status < 400)
+      return {
+        ok: false,
+        detail: `${url} redirects to ${response.headers.get("location") ?? "another page"}, so the post has moved`,
+      };
     return { ok: false, detail: `${url} returned HTTP ${response.status}` };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

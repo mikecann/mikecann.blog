@@ -123,9 +123,18 @@ describe("checkPostIsLive", () => {
       expect.stringMatching(/^https:\/\/mikecann\.blog\/posts\/my-post\?live-check=\d+$/),
       {
         method: "GET",
-        redirect: "follow",
+        redirect: "manual",
       },
     );
+
+    fetchMock.mockResolvedValueOnce(
+      new Response(null, { status: 301, headers: { location: "/posts/renamed" } }),
+    );
+    expect(await checkPostIsLive("my-post")).toEqual({
+      ok: false,
+      detail:
+        "https://mikecann.blog/posts/my-post redirects to /posts/renamed, so the post has moved",
+    });
 
     fetchMock.mockResolvedValueOnce(new Response("nope", { status: 404 }));
     expect(await checkPostIsLive("my-post")).toEqual({
