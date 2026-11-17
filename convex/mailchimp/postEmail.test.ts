@@ -72,7 +72,6 @@ const insertCampaign = (
       postId,
       slug: "my-new-post",
       title: "My $& <New> Post",
-      status: "queued",
       attempts: 0,
       createdAt: NOW,
       updatedAt: NOW,
@@ -193,7 +192,6 @@ describe("sending", () => {
     expect(html).not.toContain("{{POST_TITLE}}");
 
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "sent",
       attempts: 1,
       state: { kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-campaign-1" },
       stateTimers: [],
@@ -232,7 +230,6 @@ describe("sending", () => {
     expect(calls).toHaveLength(1);
     const campaign = await getCampaign(t, campaignId);
     expect(campaign).toMatchObject({
-      status: "queued",
       attempts: 0,
       state: { kind: "queued", liveChecks: 1, sendAt: NOW + POST_LIVE_CHECK_RETRY_DELAY_MS },
     });
@@ -256,7 +253,6 @@ describe("sending", () => {
     await send(t, campaignId);
 
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "failed",
       state: {
         kind: "failed",
         error: expect.stringContaining(`never went live: checked ${POST_LIVE_CHECK_MAX_ATTEMPTS}`),
@@ -333,7 +329,6 @@ describe("sending", () => {
 
     await expect(send(t, campaignId)).rejects.toThrow("Mailchimp API error 400");
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "failed",
       state: {
         kind: "failed",
         mailchimpCampaignId: "mc-campaign-1",
@@ -353,7 +348,6 @@ describe("sending", () => {
       `POST ${MAILCHIMP}/campaigns/mc-campaign-1/actions/send`,
     ]);
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "sent",
       attempts: 2,
     });
   });
@@ -370,7 +364,6 @@ describe("sending", () => {
 
     expect(mailchimpCalls(calls).at(-1)).toBe(`GET ${MAILCHIMP}/campaigns/mc-campaign-1`);
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "failed",
       state: {
         kind: "failed",
         mailchimpCampaignId: "mc-campaign-1",
@@ -422,7 +415,6 @@ describe("stuck campaigns", () => {
     const t = setup();
     mockFetch();
     const campaignId = await insertCampaign(t, {
-      status: "creating_campaign",
       state: { kind: "creatingCampaign", mailchimpCampaignId: "mc-1" },
     });
     await t.mutation(internal.mailchimp.internal.migrations.armPostEmailTimers, {});
@@ -442,7 +434,6 @@ describe("stuck campaigns", () => {
     const t = setup();
     const calls = mockFetch({ mailchimpStatus: "sent" });
     const campaignId = await insertCampaign(t, {
-      status: "sending",
       state: { kind: "sending", mailchimpCampaignId: "mc-1" },
     });
     await t.mutation(internal.mailchimp.internal.migrations.armPostEmailTimers, {});
@@ -457,7 +448,6 @@ describe("stuck campaigns", () => {
     const t = setup();
     vi.spyOn(globalThis, "fetch").mockRejectedValue(new TypeError("fetch failed"));
     const campaignId = await insertCampaign(t, {
-      status: "sending",
       state: { kind: "sending", mailchimpCampaignId: "mc-1" },
     });
     await t.mutation(internal.mailchimp.internal.migrations.armPostEmailTimers, {});
@@ -483,7 +473,7 @@ describe("a renamed post", () => {
   ) =>
     insertCampaign(
       t,
-      { slug: "my-old-slug", title, status: "sent", postDate: NOW - 2 * HOUR, state },
+      { slug: "my-old-slug", title, postDate: NOW - 2 * HOUR, state },
       { postExists: postStillExists },
     );
 
@@ -501,7 +491,6 @@ describe("a renamed post", () => {
 
     expect(mailchimpCalls(calls)).toEqual([]);
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "skipped",
       attempts: 0,
       state: { kind: "alreadyEmailed", earlierCampaignId: earlierId, earlierSlug: "my-old-slug" },
     });
@@ -866,7 +855,6 @@ describe("retryFailedPostEmailCampaign", () => {
     const t = setup();
     const calls = mockFetch();
     const campaignId = await insertCampaign(t, {
-      status: "failed",
       state: { kind: "failed", error: "boom" },
     });
 
@@ -891,7 +879,7 @@ describe("retryFailedPostEmailCampaign", () => {
   test("can skip the live check when asked to", async () => {
     const t = setup();
     const calls = mockFetch({ postStatus: 404 });
-    await insertCampaign(t, { status: "skipped", state: { kind: "skipped", reason: "cap" } });
+    await insertCampaign(t, { state: { kind: "skipped", reason: "cap" } });
 
     await retry(t, "my-new-post", { skipLiveCheck: true });
     await advance(t, 0);
@@ -902,7 +890,7 @@ describe("retryFailedPostEmailCampaign", () => {
 
   test("leaves a sent campaign alone", async () => {
     const t = setup();
-    await insertCampaign(t, { status: "sent", state: { kind: "sent", sentAt: NOW } });
+    await insertCampaign(t, { state: { kind: "sent", sentAt: NOW } });
     expect(await retry(t, "my-new-post")).toEqual({
       slug: "my-new-post",
       status: "sent",
@@ -913,7 +901,6 @@ describe("retryFailedPostEmailCampaign", () => {
   test("refuses campaigns that are queued or in progress", async () => {
     const t = setup();
     await insertCampaign(t, {
-      status: "sending",
       state: { kind: "sending", mailchimpCampaignId: "mc-1" },
     });
     await expect(retry(t, "my-new-post")).rejects.toThrow();
@@ -921,7 +908,7 @@ describe("retryFailedPostEmailCampaign", () => {
 
   test("validates the admin token", async () => {
     const t = setup();
-    await insertCampaign(t, { status: "failed", state: { kind: "failed", error: "boom" } });
+    await insertCampaign(t, { state: { kind: "failed", error: "boom" } });
     await expect(
       t.mutation(api.mailchimp.admin.mutations.retryFailedPostEmailCampaign, {
         token: "wrong",
@@ -942,14 +929,12 @@ describe("markPostEmailCampaignSent", () => {
   test("marks the campaign sent when the Mailchimp id matches", async () => {
     const t = setup();
     const campaignId = await insertCampaign(t, {
-      status: "failed",
       state: { kind: "failed", error: "boom", mailchimpCampaignId: "mc-1" },
     });
 
     await mark(t, "mc-1");
 
     expect(await getCampaign(t, campaignId)).toMatchObject({
-      status: "sent",
       state: { kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-1" },
     });
   });
@@ -957,7 +942,6 @@ describe("markPostEmailCampaignSent", () => {
   test("refuses a different Mailchimp campaign", async () => {
     const t = setup();
     await insertCampaign(t, {
-      status: "failed",
       state: { kind: "failed", error: "boom", mailchimpCampaignId: "mc-1" },
     });
     await expect(mark(t, "other")).rejects.toThrow("isn't this email's Mailchimp campaign");
@@ -996,7 +980,7 @@ describe("the switch", () => {
         allowEarlierEmail: false,
       },
     });
-    await insertCampaign(t, { slug: "sent", status: "sent", state: { kind: "sent", sentAt: NOW } });
+    await insertCampaign(t, { slug: "sent", state: { kind: "sent", sentAt: NOW } });
 
     const armed = await t.mutation(internal.mailchimp.internal.migrations.armPostEmailTimers, {});
     expect(armed).toEqual([{ campaignId: queued, events: ["SEND_DUE"] }]);
@@ -1004,8 +988,36 @@ describe("the switch", () => {
       [],
     );
     expect(await t.query(internal.mailchimp.internal.migrations.postEmailStateCounts, {})).toEqual({
-      "queued -> queued": 1,
-      "sent -> sent": 1,
+      queued: 1,
+      sent: 1,
     });
+  });
+});
+
+describe("narrowing", () => {
+  test("clears the fields from before the machine, and changes nothing the second time", async () => {
+    const t = setup();
+    const old = await insertCampaign(t, {
+      status: "sent",
+      sentAt: NOW,
+      mailchimpCampaignId: "mc-1",
+      error: "Unexpected end of JSON input",
+      scheduledFunctionId: undefined,
+      state: { kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-1" },
+    });
+    const fresh = await insertCampaign(t, { slug: "fresh" });
+
+    expect(
+      await t.mutation(internal.mailchimp.internal.migrations.unsetLegacyCampaignFields, {}),
+    ).toEqual({ cleared: 1, isDone: true });
+
+    const campaign = await getCampaign(t, old);
+    for (const field of ["status", "sentAt", "mailchimpCampaignId", "error"])
+      expect(campaign).not.toHaveProperty(field);
+    expect(campaign.state).toEqual({ kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-1" });
+    expect((await getCampaign(t, fresh)).state.kind).toBe("checkingLive");
+    expect(
+      await t.mutation(internal.mailchimp.internal.migrations.unsetLegacyCampaignFields, {}),
+    ).toEqual({ cleared: 0, isDone: true });
   });
 });

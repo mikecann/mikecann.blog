@@ -1,6 +1,6 @@
 import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
-import { api } from "../../_generated/api";
+import { api, internal } from "../../_generated/api";
 import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
 import type { Id } from "../../_generated/dataModel";
@@ -100,37 +100,51 @@ describe("listPostEmailCampaignProblems", () => {
         hash: "h",
         ragEntryId: "e" as EntryId,
       });
-      const insert = (
-        slug: string,
-        status:
-          | "queued"
-          | "creating_campaign"
-          | "content_set"
-          | "sending"
-          | "sent"
-          | "failed"
-          | "skipped",
-        updatedAt: number,
-        scheduledFunctionId?: Id<"_scheduled_functions">,
-      ) =>
+      // Any scheduled job stands in for the timer's delivery
+      const job = await ctx.scheduler.runAfter(
+        HOUR,
+        internal.mailchimp.internal.mutations.recordMissingPostDates,
+        { posts: [] },
+      );
+      const queued = (sendAt: number, timers: boolean) => ({
+        state: {
+          kind: "queued" as const,
+          sendAt,
+          liveChecks: 0,
+          skipLiveCheck: false,
+          allowEarlierEmail: false,
+        },
+        stateTimers: timers ? [{ event: "SEND_DUE", dueAt: sendAt, job }] : [],
+      });
+      const states = {
+        failed: (slug: string) => ({ state: { kind: "failed" as const, error: `${slug} error` } }),
+        skipped: (slug: string) => ({
+          state: { kind: "skipped" as const, reason: `${slug} error` },
+        }),
+        sending: () => ({ state: { kind: "sending" as const, mailchimpCampaignId: "mc" } }),
+        sent: () => ({ state: { kind: "sent" as const, sentAt: NOW } }),
+        // A queued email whose timer is armed is waiting, not stuck, however long ago it was made
+        queued: () => queued(NOW + HOUR, true),
+        orphanedQueued: () => queued(NOW - HOUR, false),
+      };
+      const insert = (slug: string, kind: keyof typeof states, updatedAt: number) =>
         insertCampaignRow(ctx, {
           postId,
           slug,
           title: slug,
-          status,
           attempts: 1,
           createdAt: updatedAt,
           updatedAt,
-          error: status === "failed" || status === "skipped" ? `${slug} error` : undefined,
-          scheduledFunctionId,
+          ...states[kind](slug),
         });
       await insert("recent-failure", "failed", NOW - DAY);
       await insert("ancient-failure", "failed", NOW - 60 * DAY);
       await insert("recent-skip", "skipped", NOW - HOUR);
       await insert("stuck-sending", "sending", NOW - 3 * HOUR);
       await insert("busy-sending", "sending", NOW - 5 * 60 * 1000);
-      await insert("stuck-queued", "queued", NOW - 4 * HOUR);
-      await insert("fresh-queued", "queued", NOW - HOUR);
+      await insert("stuck-queued", "orphanedQueued", NOW - 4 * HOUR);
+      await insert("waiting-queued", "queued", NOW - 4 * HOUR);
+      await insert("fresh-queued", "orphanedQueued", NOW - HOUR);
       await insert("sent", "sent", NOW - HOUR);
     });
 

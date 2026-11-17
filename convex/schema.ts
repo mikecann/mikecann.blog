@@ -12,23 +12,22 @@ export const blogPostSchema = v.object({
 });
 
 /**
- * LEGACY until narrowing: the old status, written from the post email machine's state after each
- * step (legacyStatusOf in mailchimp/campaignState.ts) so code from before the switch reads a row it
- * understands. Read `state` instead.
+ * LEGACY, being narrowed away: the old status and the fields beside it, from before the post email
+ * machine. Nothing writes them any more, and mailchimp/internal/migrations:unsetLegacyCampaignFields
+ * clears them from existing rows, so the next deploy can drop them. Read `state` instead.
  */
-export const postEmailCampaignStatusSchema = v.union(
-  v.literal("queued"),
-  v.literal("creating_campaign"),
-  v.literal("content_set"),
-  v.literal("sending"),
-  v.literal("sent"),
-  v.literal("failed"),
-  v.literal("skipped"),
-);
-
-/** LEGACY until narrowing: the old fields beside the post email machine's state. */
 const legacyPostEmailCampaignFields = {
-  status: postEmailCampaignStatusSchema,
+  status: v.optional(
+    v.union(
+      v.literal("queued"),
+      v.literal("creating_campaign"),
+      v.literal("content_set"),
+      v.literal("sending"),
+      v.literal("sent"),
+      v.literal("failed"),
+      v.literal("skipped"),
+    ),
+  ),
   scheduledFunctionId: v.optional(v.id("_scheduled_functions")),
   mailchimpCampaignId: v.optional(v.string()),
   error: v.optional(v.string()),
@@ -59,7 +58,7 @@ export const postEmailCampaignSchema = v.object({
   // timers. Only the machine writes them.
   state: postEmailStateValidator,
   stateTimers: machineTimers,
-  // eslint-disable-next-line machines/no-optional-on-machine-tables -- the old fields, which nothing writes but `status` since the switch; narrowing unsets and drops them
+  // eslint-disable-next-line machines/no-optional-on-machine-tables -- the old fields, which nothing writes; unsetLegacyCampaignFields clears them and the next deploy drops them
   ...legacyPostEmailCampaignFields,
 });
 
@@ -114,7 +113,6 @@ export default defineSchema({
   postEmailCampaigns: defineTable(postEmailCampaignSchema)
     .index("by_slug", ["slug"])
     .index("by_postId", ["postId"])
-    .index("by_status_and_updatedAt", ["status", "updatedAt"])
     .index("by_uploadRunId", ["uploadRunId"])
     .index("by_title", ["title"])
     .index("by_postDate", ["postDate"])
