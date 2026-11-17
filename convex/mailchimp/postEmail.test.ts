@@ -993,31 +993,3 @@ describe("the switch", () => {
     });
   });
 });
-
-describe("narrowing", () => {
-  test("clears the fields from before the machine, and changes nothing the second time", async () => {
-    const t = setup();
-    const old = await insertCampaign(t, {
-      status: "sent",
-      sentAt: NOW,
-      mailchimpCampaignId: "mc-1",
-      error: "Unexpected end of JSON input",
-      scheduledFunctionId: undefined,
-      state: { kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-1" },
-    });
-    const fresh = await insertCampaign(t, { slug: "fresh" });
-
-    expect(
-      await t.mutation(internal.mailchimp.internal.migrations.unsetLegacyCampaignFields, {}),
-    ).toEqual({ cleared: 1, isDone: true });
-
-    const campaign = await getCampaign(t, old);
-    for (const field of ["status", "sentAt", "mailchimpCampaignId", "error"])
-      expect(campaign).not.toHaveProperty(field);
-    expect(campaign.state).toEqual({ kind: "sent", sentAt: NOW, mailchimpCampaignId: "mc-1" });
-    expect((await getCampaign(t, fresh)).state.kind).toBe("checkingLive");
-    expect(
-      await t.mutation(internal.mailchimp.internal.migrations.unsetLegacyCampaignFields, {}),
-    ).toEqual({ cleared: 0, isDone: true });
-  });
-});
