@@ -1,42 +1,50 @@
 import { v } from "convex/values";
-import { internal } from "../../_generated/api";
-import { internalMutation, internalQuery } from "../../_generated/server";
-import { syncCampaignState } from "../campaigns";
+import { machines, postEmail } from "../../machines";
+import { internalQuery } from "../../_generated/server";
 
-// Widen: gives every post email campaign the machine `state` its `status` stands for, and an empty
-// `stateTimers`. Writes keep the two in step since this shipped, so a run only changes rows from
-// before it, and running it again changes nothing. A page at a time, scheduling the next:
-//   npx convex run --prod mailchimp/internal/migrations:backfillPostEmailState
-export const backfillPostEmailState = internalMutation({
-  args: { cursor: v.optional(v.union(v.string(), v.null())) },
-  returns: v.null(),
-  handler: async (ctx, { cursor }) => {
-    const page = await ctx.db
-      .query("postEmailCampaigns")
-      .paginate({ cursor: cursor ?? null, numItems: 100 });
-    for (const campaign of page.page) await syncCampaignState(ctx, campaign._id);
-    if (!page.isDone)
-      await ctx.scheduler.runAfter(
-        0,
-        internal.mailchimp.internal.migrations.backfillPostEmailState,
-        {
-          cursor: page.continueCursor,
-        },
-      );
-    return null;
+// Switch: a campaign the widen step left in a state with a timer (queued, or one stuck mid-send)
+// starts with none, so this arms what its state has, as if it had just entered it. A queued
+// campaign's SEND_DUE fires at its `sendAt` (its old send job's time), at once if that's past; the
+// old job, if it still runs, finds the campaign isn't checkingLive and does nothing. Rows that
+// already have timers are left alone, so running it again changes nothing:
+//   npx convex run --prod mailchimp/internal/migrations:armPostEmailTimers
+export const armPostEmailTimers = machines.internalMutation({
+  args: {},
+  returns: v.array(
+    v.object({ campaignId: v.id("postEmailCampaigns"), events: v.array(v.string()) }),
+  ),
+  handler: async (ctx) => {
+    const armed = [];
+    for (const kind of [
+      "queued",
+      "checkingLive",
+      "creatingCampaign",
+      "contentSet",
+      "sending",
+      "checkingDelivery",
+    ] as const) {
+      const campaigns = await ctx.db
+        .query("postEmailCampaigns")
+        .withIndex("by_state_and_updatedAt", (q) => q.eq("state.kind", kind))
+        .take(100);
+      for (const campaign of campaigns) {
+        if (campaign.stateTimers.length > 0) continue;
+        const timers = await postEmail.armTimers(ctx, campaign._id);
+        armed.push({ campaignId: campaign._id, events: timers.map((timer) => timer.event) });
+      }
+    }
+    return armed;
   },
 });
 
-/** How many campaigns are in each state, and how many have none yet: to check the backfill. */
+/** How many campaigns are in each state (old status -> state), to read a deployment back. */
 export const postEmailStateCounts = internalQuery({
   args: {},
   returns: v.record(v.string(), v.number()),
   handler: async (ctx) => {
     const counts: Record<string, number> = {};
     for await (const campaign of ctx.db.query("postEmailCampaigns")) {
-      const key = campaign.state
-        ? `${campaign.status} -> ${campaign.state.kind}`
-        : `${campaign.status} -> (none)`;
+      const key = `${campaign.status} -> ${campaign.state.kind}`;
       counts[key] = (counts[key] ?? 0) + 1;
     }
     return counts;

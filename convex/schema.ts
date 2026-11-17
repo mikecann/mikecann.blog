@@ -11,6 +11,11 @@ export const blogPostSchema = v.object({
   ragEntryId: vEntryId,
 });
 
+/**
+ * LEGACY until narrowing: the old status, written from the post email machine's state after each
+ * step (legacyStatusOf in mailchimp/campaignState.ts) so code from before the switch reads a row it
+ * understands. Read `state` instead.
+ */
 export const postEmailCampaignStatusSchema = v.union(
   v.literal("queued"),
   v.literal("creating_campaign"),
@@ -18,42 +23,44 @@ export const postEmailCampaignStatusSchema = v.union(
   v.literal("sending"),
   v.literal("sent"),
   v.literal("failed"),
-  // Never attempted, deliberately (e.g. the per-upload-run cap was hit or
-  // MAILCHIMP_API_KEY is missing). Can be sent with retryFailedPostEmailCampaign.
   v.literal("skipped"),
 );
+
+/** LEGACY until narrowing: the old fields beside the post email machine's state. */
+const legacyPostEmailCampaignFields = {
+  status: postEmailCampaignStatusSchema,
+  scheduledFunctionId: v.optional(v.id("_scheduled_functions")),
+  mailchimpCampaignId: v.optional(v.string()),
+  error: v.optional(v.string()),
+  sentAt: v.optional(v.number()),
+  liveCheckAttempts: v.optional(v.number()),
+  skipLiveCheck: v.optional(v.boolean()),
+  allowEarlierEmail: v.optional(v.boolean()),
+};
 
 export const postEmailCampaignSchema = v.object({
   postId: v.id("blogPosts"),
   slug: v.string(),
   title: v.string(),
-  status: postEmailCampaignStatusSchema,
   attempts: v.number(),
   createdAt: v.number(),
   updatedAt: v.number(),
-  scheduledFunctionId: v.optional(v.id("_scheduled_functions")),
-  mailchimpCampaignId: v.optional(v.string()),
-  error: v.optional(v.string()),
-  sentAt: v.optional(v.number()),
-  /** How many times the post URL has been checked and wasn't live yet. */
-  liveCheckAttempts: v.optional(v.number()),
-  /** Set by an admin retry to send without checking the post URL first. */
-  skipLiveCheck: v.optional(v.boolean()),
   /** The uploadPostsToConvex run that created this campaign (for the per-run cap). */
+  // eslint-disable-next-line machines/no-optional-on-machine-tables -- app data in every state, absent on campaigns from before the per-run cap
   uploadRunId: v.optional(v.string()),
   /**
    * The post's frontmatter date, in ms since the epoch. With the title, it's how a renamed post is
-   * recognised as one already emailed: the slug changes on a rename, these usually don't. Absent on
-   * campaigns created before it was recorded.
+   * recognised as one already emailed (mailchimp/earlierEmail.ts): the slug changes on a rename,
+   * these usually don't.
    */
+  // eslint-disable-next-line machines/no-optional-on-machine-tables -- app data in every state, absent on campaigns from before it was recorded (production's were filled in by recordMissingPostDates)
   postDate: v.optional(v.number()),
-  /** Set by an admin retry to send even though an earlier email looks like it was this post. */
-  allowEarlierEmail: v.optional(v.boolean()),
-  // The post email machine's state (mailchimp/campaignState.ts) and its timers, optional until
-  // every row is backfilled (mailchimp/internal/migrations:backfillPostEmailState). Until the
-  // machine takes the table over, every write sets `state` from `status`.
-  state: v.optional(postEmailStateValidator),
-  stateTimers: v.optional(machineTimers),
+  // The post email machine's state (mailchimp/machine.ts, mailchimp/campaignState.ts) and its
+  // timers. Only the machine writes them.
+  state: postEmailStateValidator,
+  stateTimers: machineTimers,
+  // eslint-disable-next-line machines/no-optional-on-machine-tables -- the old fields, which nothing writes but `status` since the switch; narrowing unsets and drops them
+  ...legacyPostEmailCampaignFields,
 });
 
 /** Validators for whole documents (with system fields), for `.returns()`. */
@@ -111,5 +118,7 @@ export default defineSchema({
     .index("by_uploadRunId", ["uploadRunId"])
     .index("by_title", ["title"])
     .index("by_postDate", ["postDate"])
-    .index("by_state_and_updatedAt", ["state.kind", "updatedAt"]),
+    .index("by_state_and_updatedAt", ["state.kind", "updatedAt"])
+    // An alreadyEmailed campaign's earlier email (mailchimp/earlierEmail.ts)
+    .index("by_earlierCampaign", ["state.earlierCampaignId"]),
 });

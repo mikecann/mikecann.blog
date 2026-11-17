@@ -1,22 +1,22 @@
 import { v } from "convex/values";
+import { internal } from "../../_generated/api";
 import { convex } from "../../builder";
 import { validateBlogPostAdminToken } from "../../blogPosts/lib";
-import {
-  patchCampaign,
-  cancelPendingSendJob,
-  findLatestCampaignBySlug,
-  scheduleCampaignSend,
-} from "../campaigns";
 
 // Run these by hand, e.g.
 //   npx convex run --prod mailchimp/admin/mutations:retryFailedPostEmailCampaign \
 //     '{"token":"<BLOG_POST_ADMIN_TOKEN>","slug":"<post-slug>"}'
+//
+// Each checks the admin token, then has internal/mutations.ts move the campaign, as only the
+// state machines catalog's internalMutation may send the post email machine its server events.
 
 /**
- * Re-queues a failed or skipped post email and sends it now, once the post URL
- * returns 200. Pass `skipLiveCheck: true` only if you've confirmed the post is
- * live but the automatic check keeps failing, and `allowEarlierEmail: true` only for a post that
- * was skipped as a rename but really is a different post.
+ * Re-queues a post email that didn't go out (failed, skipped, cancelled, or held back as a rename)
+ * and sends it now, once the post URL returns 200. A retry resumes the campaign's Mailchimp
+ * campaign if it has one, after asking Mailchimp whether it already went out, so it never sends
+ * twice. Pass `skipLiveCheck: true` only if you've confirmed the post is live but the automatic
+ * check keeps failing, and `allowEarlierEmail: true` only for a post that was held back as a rename
+ * but really is a different post.
  */
 export const retryFailedPostEmailCampaign = convex
   .mutation()
@@ -27,33 +27,19 @@ export const retryFailedPostEmailCampaign = convex
     allowEarlierEmail: v.optional(v.boolean()),
   })
   .returns(v.object({ slug: v.string(), status: v.string(), scheduled: v.boolean() }))
-  .handler(async (ctx, { token, slug, skipLiveCheck, allowEarlierEmail }) => {
-    validateBlogPostAdminToken(token);
-
-    const campaign = await findLatestCampaignBySlug(ctx, slug);
-    if (!campaign) throw new Error(`No Mailchimp email campaign found for post '${slug}'`);
-
-    if (campaign.status === "sent") return { slug, status: campaign.status, scheduled: false };
-
-    if (campaign.status !== "failed" && campaign.status !== "skipped")
-      throw new Error(
-        `Mailchimp email campaign for '${slug}' is '${campaign.status}', not failed or skipped`,
-      );
-
-    await cancelPendingSendJob(ctx, campaign);
-    const scheduledFunctionId = await scheduleCampaignSend(ctx, campaign._id, 0);
-    await patchCampaign(ctx, campaign._id, {
-      status: "queued",
-      error: undefined,
-      liveCheckAttempts: 0,
-      skipLiveCheck: skipLiveCheck || undefined,
-      allowEarlierEmail: allowEarlierEmail || undefined,
-      scheduledFunctionId,
-      updatedAt: Date.now(),
-    });
-
-    return { slug, status: "queued", scheduled: true };
-  })
+  .handler(
+    async (
+      ctx,
+      { token, slug, skipLiveCheck, allowEarlierEmail },
+    ): Promise<{ slug: string; status: string; scheduled: boolean }> => {
+      validateBlogPostAdminToken(token);
+      return await ctx.runMutation(internal.mailchimp.internal.mutations.retry, {
+        slug,
+        skipLiveCheck: skipLiveCheck ?? false,
+        allowEarlierEmail: allowEarlierEmail ?? false,
+      });
+    },
+  )
   .public();
 
 /** Records that a campaign was sent (e.g. by hand from the Mailchimp dashboard). */
@@ -69,24 +55,10 @@ export const markPostEmailCampaignSent = convex
   )
   .handler(async (ctx, { token, slug, mailchimpCampaignId }) => {
     validateBlogPostAdminToken(token);
-
-    const campaign = await findLatestCampaignBySlug(ctx, slug);
-    if (!campaign) throw new Error(`No Mailchimp email campaign found for post '${slug}'`);
-
-    if (campaign.mailchimpCampaignId !== mailchimpCampaignId)
-      throw new Error(
-        `Mailchimp campaign id mismatch for '${slug}': expected '${mailchimpCampaignId}'`,
-      );
-
-    await cancelPendingSendJob(ctx, campaign);
-    const now = Date.now();
-    await patchCampaign(ctx, campaign._id, {
-      status: "sent",
-      error: undefined,
-      sentAt: campaign.sentAt ?? now,
-      updatedAt: now,
+    await ctx.runMutation(internal.mailchimp.internal.mutations.markSentByHand, {
+      slug,
+      mailchimpCampaignId,
     });
-
     return { slug, status: "sent" as const, mailchimpCampaignId };
   })
   .public();

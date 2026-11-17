@@ -33,6 +33,9 @@ jobs:
       - name: Typecheck (app and scripts)
         run: bun run typecheck
 
+      - name: Lint (the state machines library's rules)
+        run: bun run lint
+
       - name: Test
         run: bun run test
 

@@ -1,12 +1,18 @@
 import { convexTest } from "convex-test";
 import { expect, test, vi, describe, beforeEach, afterEach } from "vitest";
-import { api, internal } from "../../_generated/api";
+import { api } from "../../_generated/api";
 import schema from "../../schema";
 import { EntryId } from "@convex-dev/rag";
 import { MAX_POSTS_TO_PRUNE_WITHOUT_FORCE } from "../lib";
 import { modules } from "../../test.setup";
+import { register } from "@convex-dev/state-machines/test";
+import { insertCampaignRow } from "../../mailchimp/postEmail.testkit";
 
-const setup = () => convexTest(schema, modules);
+const setup = () => {
+  const t = convexTest(schema, modules);
+  register(t);
+  return t;
+};
 type TestConvex = ReturnType<typeof setup>;
 
 const ragMock = vi.hoisted(() => ({ getNamespace: vi.fn(), deleteByKeyAsync: vi.fn() }));
@@ -110,31 +116,28 @@ describe("pruneRemovedPosts", () => {
     expect(await remainingSlugs(t)).toEqual([]);
   });
 
-  test("cancels a queued email for a pruned post", async () => {
+  test("cancels a queued email for a pruned post, but not one already sending", async () => {
     const t = setup();
-    await insertPosts(t, ["keep", "removed"]);
-    const campaignId = await t.run(async (ctx) => {
-      const post = await ctx.db
-        .query("blogPosts")
-        .withIndex("by_slug", (q) => q.eq("slug", "removed"))
-        .unique();
-      const id = await ctx.db.insert("postEmailCampaigns", {
-        postId: post!._id,
-        slug: "removed",
-        title: "removed",
-        status: "queued",
-        attempts: 0,
-        createdAt: Date.now(),
-        updatedAt: Date.now(),
+    await insertPosts(t, ["keep", "removed", "removed-sending"]);
+    const insertFor = (slug: string, status: "queued" | "sending") =>
+      t.run(async (ctx) => {
+        const post = await ctx.db
+          .query("blogPosts")
+          .withIndex("by_slug", (q) => q.eq("slug", slug))
+          .unique();
+        return await insertCampaignRow(ctx, {
+          postId: post!._id,
+          slug,
+          title: slug,
+          status,
+          attempts: 0,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+          mailchimpCampaignId: status === "sending" ? "mc-1" : undefined,
+        });
       });
-      const scheduledFunctionId = await ctx.scheduler.runAfter(
-        60_000,
-        internal.mailchimp.internal.actions.sendNewPostCampaign,
-        { campaignId: id },
-      );
-      await ctx.db.patch("postEmailCampaigns", id, { scheduledFunctionId });
-      return id;
-    });
+    const queued = await insertFor("removed", "queued");
+    const sending = await insertFor("removed-sending", "sending");
 
     await t.mutation(api.blogPosts.admin.mutations.pruneRemovedPosts, {
       token,
@@ -142,12 +145,12 @@ describe("pruneRemovedPosts", () => {
       force: false,
     });
 
-    const campaign = await t.run((ctx) => ctx.db.get("postEmailCampaigns", campaignId));
-    expect(campaign).toMatchObject({ status: "failed", error: expect.stringContaining("removed") });
-    const job = await t.run((ctx) =>
-      ctx.db.system.get("_scheduled_functions", campaign!.scheduledFunctionId!),
-    );
-    expect(job?.state.kind).toBe("canceled");
+    const get = (id: typeof queued) => t.run((ctx) => ctx.db.get("postEmailCampaigns", id));
+    expect(await get(queued)).toMatchObject({
+      status: "failed",
+      state: { kind: "cancelled", reason: expect.stringContaining("removed") },
+    });
+    expect((await get(sending))?.state.kind).toBe("sending");
   });
 
   test("validates admin token", async () => {

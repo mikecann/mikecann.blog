@@ -7,8 +7,7 @@ import {
   POST_EMAIL_PROBLEM_REPORT_WINDOW_MS,
   POST_EMAIL_QUEUED_STUCK_AFTER_MS,
 } from "../../mailchimp/constants";
-import { IN_PROGRESS_STATUSES } from "../../mailchimp/campaigns";
-import { postEmailCampaignDocSchema } from "../../schema";
+import { findLatestCampaignBySlug } from "../../mailchimp/campaigns";
 
 export type SlugId = string;
 
@@ -45,40 +44,68 @@ export const listPostsThatNeedProcessing = convex
   })
   .public();
 
+/** Where a post email stands, as the upload script reports it. */
+const vPostEmailSummary = v.object({
+  /** The post email machine's state. */
+  kind: v.string(),
+  /** Why it didn't go out, for the states that say. */
+  error: v.optional(v.string()),
+  /** Waiting to send with its timer armed, or already sent: nothing more to do. */
+  scheduledOrSent: v.boolean(),
+  updatedAt: v.number(),
+});
+
+const summarize = (campaign: Doc<"postEmailCampaigns">) => {
+  const { state } = campaign;
+  const error =
+    state.kind === "failed"
+      ? state.error
+      : state.kind === "skipped" || state.kind === "cancelled"
+        ? state.reason
+        : state.kind === "alreadyEmailed"
+          ? `Not sent: subscribers were already emailed about this post as '${state.earlierSlug}', ` +
+            `so it looks like a rename. If it really is a different post, retry with "allowEarlierEmail":true.`
+          : undefined;
+  return {
+    kind: state.kind,
+    error,
+    scheduledOrSent:
+      state.kind === "sent" || (state.kind === "queued" && campaign.stateTimers.length > 0),
+    updatedAt: campaign.updatedAt,
+  };
+};
+
 export const listPostEmailCampaigns = convex
   .query()
   .input({
     token: v.string(),
     slugs: v.array(v.string()),
   })
-  .returns(
-    v.array(
-      v.object({ slug: v.string(), campaign: v.union(v.null(), postEmailCampaignDocSchema) }),
-    ),
-  )
+  .returns(v.array(v.object({ slug: v.string(), campaign: v.union(v.null(), vPostEmailSummary) })))
   .handler(async (ctx, { token, slugs }) => {
     validateBlogPostAdminToken(token);
 
     return await Promise.all(
       slugs.map(async (slug) => {
-        const campaign = await ctx.db
-          .query("postEmailCampaigns")
-          .withIndex("by_slug", (q) => q.eq("slug", slug))
-          .order("desc")
-          .first();
-
-        return {
-          slug,
-          campaign,
-        };
+        const campaign = await findLatestCampaignBySlug(ctx, slug);
+        return { slug, campaign: campaign ? summarize(campaign) : null };
       }),
     );
   })
   .public();
 
+/** States where a campaign is mid-send, which its timers move on from within an hour or so. */
+const IN_PROGRESS_KINDS = [
+  "checkingLive",
+  "creatingCampaign",
+  "contentSet",
+  "sending",
+  "checkingDelivery",
+] as const;
+
 /**
- * Post emails that need a human: recently failed or skipped ones, and ones
- * that look stuck. Printed by the upload script at deploy time.
+ * Post emails that need a human: recently failed, skipped or held back as a rename, and ones that
+ * look stuck (their timer should have moved them on). Printed by the upload script at deploy time.
  */
 export const listPostEmailCampaignProblems = convex
   .query()
@@ -99,35 +126,40 @@ export const listPostEmailCampaignProblems = convex
     validateBlogPostAdminToken(token);
     const now = Date.now();
 
-    const byStatus = (
-      status: Doc<"postEmailCampaigns">["status"],
+    const byState = (
+      kind: Doc<"postEmailCampaigns">["state"]["kind"],
       range: { after?: number; before?: number },
     ) =>
       ctx.db
         .query("postEmailCampaigns")
-        .withIndex("by_status_and_updatedAt", (q) => {
-          const withStatus = q.eq("status", status);
-          if (range.after !== undefined) return withStatus.gte("updatedAt", range.after);
-          if (range.before !== undefined) return withStatus.lt("updatedAt", range.before);
-          return withStatus;
+        .withIndex("by_state_and_updatedAt", (q) => {
+          const inState = q.eq("state.kind", kind);
+          if (range.after !== undefined) return inState.gte("updatedAt", range.after);
+          if (range.before !== undefined) return inState.lt("updatedAt", range.before);
+          return inState;
         })
         .order("desc")
         .take(20);
 
+    const recent = { after: now - POST_EMAIL_PROBLEM_REPORT_WINDOW_MS };
     const groups = await Promise.all([
-      byStatus("failed", { after: now - POST_EMAIL_PROBLEM_REPORT_WINDOW_MS }),
-      byStatus("skipped", { after: now - POST_EMAIL_PROBLEM_REPORT_WINDOW_MS }),
-      ...IN_PROGRESS_STATUSES.map((status) =>
-        byStatus(status, { before: now - POST_EMAIL_IN_PROGRESS_STUCK_AFTER_MS }),
+      byState("failed", recent),
+      byState("skipped", recent),
+      byState("alreadyEmailed", recent),
+      // A stuck campaign's timer should fail it within the hour; still there a while later means
+      // the timer itself failed (npx convex run --prod machines:failedTimers)
+      ...IN_PROGRESS_KINDS.map((kind) =>
+        byState(kind, { before: now - 2 * POST_EMAIL_IN_PROGRESS_STUCK_AFTER_MS }),
       ),
-      byStatus("queued", { before: now - POST_EMAIL_QUEUED_STUCK_AFTER_MS }),
+      byState("queued", { before: now - POST_EMAIL_QUEUED_STUCK_AFTER_MS }),
     ]);
 
-    return groups.flat().map((c) => ({
-      slug: c.slug,
-      status: c.status,
-      error: c.error,
-      updatedAt: c.updatedAt,
-    }));
+    return groups
+      .flat()
+      .filter((c) => c.state.kind !== "queued" || c.stateTimers.length === 0)
+      .map((c) => {
+        const { kind, error } = summarize(c);
+        return { slug: c.slug, status: kind, error, updatedAt: c.updatedAt };
+      });
   })
   .public();
