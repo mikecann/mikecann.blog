@@ -9,6 +9,7 @@ import {
   POST_LIVE_CHECK_RETRY_DELAY_MS,
 } from "../constants";
 import {
+  findEarlierEmailForSamePost,
   hasActiveSendJob,
   hasPendingSendJob,
   IN_PROGRESS_STATUSES,
@@ -30,6 +31,7 @@ export const beginPostEmailCampaign = convex
     v.union(
       v.object({ kind: v.literal("missing") }),
       v.object({ kind: v.literal("not_queued"), status: v.string() }),
+      v.object({ kind: v.literal("already_emailed"), earlierSlug: v.string() }),
       v.object({
         kind: v.literal("claimed"),
         slug: v.string(),
@@ -43,6 +45,27 @@ export const beginPostEmailCampaign = convex
     if (!campaign) return { kind: "missing" as const };
     if (campaign.status !== "queued")
       return { kind: "not_queued" as const, status: campaign.status };
+
+    // A renamed post: subscribers already had an email about it under its old slug. Checked here,
+    // at send time, because the deploy prunes the old slug after it creates the new one. A campaign
+    // that already has a Mailchimp campaign is a retry of its own email, not a new one.
+    const earlier =
+      campaign.allowEarlierEmail || campaign.mailchimpCampaignId
+        ? null
+        : await findEarlierEmailForSamePost(ctx, campaign);
+    if (earlier) {
+      const error =
+        `Not sent: subscribers were already emailed about this post as '${earlier.slug}' ` +
+        `(${earlier.status}), so this looks like a rename. If it really is a different post, retry ` +
+        `with "allowEarlierEmail":true.`;
+      await ctx.db.patch("postEmailCampaigns", campaignId, {
+        status: "skipped",
+        error,
+        updatedAt: Date.now(),
+      });
+      console.warn(`[post email] NOT emailing subscribers about '${campaign.slug}': ${error}`);
+      return { kind: "already_emailed" as const, earlierSlug: earlier.slug };
+    }
 
     await ctx.db.patch("postEmailCampaigns", campaignId, {
       status: "creating_campaign",
@@ -235,10 +258,8 @@ export const failStuckPostEmailCampaigns = convex
           campaign,
           `Stuck in '${status}' since ${new Date(campaign.updatedAt).toISOString()}; the send ` +
             `action probably crashed or timed out.` +
-            (status === "sending"
-              ? " The email MAY have gone out: check Mailchimp before retrying (use " +
-                "markPostEmailCampaignSent if it did)."
-              : " Safe to retry."),
+            " Safe to retry: a retry asks Mailchimp whether the campaign already went out " +
+            "before sending it.",
         );
     }
 

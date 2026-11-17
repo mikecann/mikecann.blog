@@ -16,6 +16,12 @@ import {
 } from "../lib";
 import { notifyIndexNow } from "../../seo/indexNow";
 
+/**
+ * Mailchimp campaign statuses that mean the email has gone out or will without us: sent, being
+ * sent, or scheduled (by hand in Mailchimp). Anything else ("save", "paused") hasn't sent.
+ */
+const MAILCHIMP_DELIVERED_STATUSES: ReadonlySet<string> = new Set(["sent", "sending", "schedule"]);
+
 export const sendNewPostCampaign = convex
   .action()
   .input({
@@ -106,7 +112,18 @@ export const sendNewPostCampaign = convex
         if (!recorded) throw new Error("Campaign status changed while creating it; stopping");
         console.log(`Campaign created: ${mailchimpCampaignId}`);
       } else {
-        console.log(`Reusing Mailchimp campaign: ${mailchimpCampaignId}`);
+        // A retry of a campaign that already exists in Mailchimp. Its last run may have died after
+        // Mailchimp accepted the send, so ask Mailchimp first: sending it again must never happen.
+        const existing = await mailchimpFetch(`/campaigns/${mailchimpCampaignId}`);
+        const mailchimpStatus = String(existing?.status ?? "");
+        if (MAILCHIMP_DELIVERED_STATUSES.has(mailchimpStatus)) {
+          await ctx.runMutation(internal.mailchimp.internal.mutations.markSent, { campaignId });
+          console.log(
+            `Mailchimp campaign ${mailchimpCampaignId} is already '${mailchimpStatus}'; recorded it as sent`,
+          );
+          return null;
+        }
+        console.log(`Reusing Mailchimp campaign: ${mailchimpCampaignId} (${mailchimpStatus})`);
       }
 
       await mailchimpFetch(`/campaigns/${mailchimpCampaignId}/content`, {

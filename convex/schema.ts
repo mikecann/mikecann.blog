@@ -39,6 +39,14 @@ export const postEmailCampaignSchema = v.object({
   skipLiveCheck: v.optional(v.boolean()),
   /** The uploadPostsToConvex run that created this campaign (for the per-run cap). */
   uploadRunId: v.optional(v.string()),
+  /**
+   * The post's frontmatter date, in ms since the epoch. With the title, it's how a renamed post is
+   * recognised as one already emailed: the slug changes on a rename, these usually don't. Absent on
+   * campaigns created before it was recorded.
+   */
+  postDate: v.optional(v.number()),
+  /** Set by an admin retry to send even though an earlier email looks like it was this post. */
+  allowEarlierEmail: v.optional(v.boolean()),
 });
 
 /** Validators for whole documents (with system fields), for `.returns()`. */
@@ -93,5 +101,7 @@ export default defineSchema({
     .index("by_slug", ["slug"])
     .index("by_postId", ["postId"])
     .index("by_status_and_updatedAt", ["status", "updatedAt"])
-    .index("by_uploadRunId", ["uploadRunId"]),
+    .index("by_uploadRunId", ["uploadRunId"])
+    .index("by_title", ["title"])
+    .index("by_postDate", ["postDate"]),
 });

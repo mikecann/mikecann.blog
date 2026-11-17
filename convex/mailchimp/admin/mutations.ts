@@ -10,7 +10,8 @@ import { cancelPendingSendJob, findLatestCampaignBySlug, scheduleCampaignSend } 
 /**
  * Re-queues a failed or skipped post email and sends it now, once the post URL
  * returns 200. Pass `skipLiveCheck: true` only if you've confirmed the post is
- * live but the automatic check keeps failing.
+ * live but the automatic check keeps failing, and `allowEarlierEmail: true` only for a post that
+ * was skipped as a rename but really is a different post.
  */
 export const retryFailedPostEmailCampaign = convex
   .mutation()
@@ -18,9 +19,10 @@ export const retryFailedPostEmailCampaign = convex
     token: v.string(),
     slug: v.string(),
     skipLiveCheck: v.optional(v.boolean()),
+    allowEarlierEmail: v.optional(v.boolean()),
   })
   .returns(v.object({ slug: v.string(), status: v.string(), scheduled: v.boolean() }))
-  .handler(async (ctx, { token, slug, skipLiveCheck }) => {
+  .handler(async (ctx, { token, slug, skipLiveCheck, allowEarlierEmail }) => {
     validateBlogPostAdminToken(token);
 
     const campaign = await findLatestCampaignBySlug(ctx, slug);
@@ -40,6 +42,7 @@ export const retryFailedPostEmailCampaign = convex
       error: undefined,
       liveCheckAttempts: 0,
       skipLiveCheck: skipLiveCheck || undefined,
+      allowEarlierEmail: allowEarlierEmail || undefined,
       scheduledFunctionId,
       updatedAt: Date.now(),
     });

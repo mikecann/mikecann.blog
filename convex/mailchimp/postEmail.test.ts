@@ -51,7 +51,7 @@ const send = (t: TestConvex, campaignId: Id<"postEmailCampaigns">) =>
   t.action(internal.mailchimp.internal.actions.sendNewPostCampaign, { campaignId });
 
 /** Fakes the blog and the Mailchimp API; returns the list of requests made. */
-const mockFetch = ({ postStatus = 200, failSend = false } = {}) => {
+const mockFetch = ({ postStatus = 200, failSend = false, mailchimpStatus = "save" } = {}) => {
   const calls: { url: string; method: string; body?: string }[] = [];
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input, init) => {
     // The live check adds a unique ?live-check= to get past Cloudflare's cache; leave it out so
@@ -60,11 +60,14 @@ const mockFetch = ({ postStatus = 200, failSend = false } = {}) => {
     const method = init?.method ?? "GET";
     calls.push({ url, method, body: init?.body ? String(init.body) : undefined });
 
-    if (url === POST_URL) return new Response("<html/>", { status: postStatus });
+    if (url.startsWith("https://mikecann.blog/posts/"))
+      return new Response("<html/>", { status: postStatus });
     if (url.startsWith("https://api.indexnow.org/")) return new Response(null, { status: 200 });
     if (url.endsWith("/campaigns") && method === "POST")
       return Response.json({ id: "mc-campaign-1" });
     if (url.endsWith("/content") && method === "PUT") return Response.json({});
+    if (/\/campaigns\/[^/]+$/.test(url) && method === "GET")
+      return Response.json({ id: url.split("/").pop(), status: mailchimpStatus });
     if (url.endsWith("/actions/send") && method === "POST")
       return failSend
         ? new Response("Your Campaign is not ready to send", { status: 400 })
@@ -222,9 +225,172 @@ describe("sendNewPostCampaign", () => {
     await vi.runOnlyPendingTimersAsync();
     await t.finishInProgressScheduledFunctions();
 
-    // No second campaign is created in Mailchimp
+    // No second campaign is created in Mailchimp; the retry asks about the first one, then sends it
     expect(calls.some((c) => c.url.endsWith("/campaigns") && c.method === "POST")).toBe(false);
+    expect(calls).toContainEqual(
+      expect.objectContaining({
+        method: "GET",
+        url: "https://us3.api.mailchimp.com/3.0/campaigns/mc-campaign-1",
+      }),
+    );
     expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent", attempts: 2 });
+  });
+
+  test("a retry of a campaign Mailchimp already sent records it as sent, without sending again", async () => {
+    // The run before died after Mailchimp accepted the send but before it was recorded
+    const t = setup();
+    const calls = mockFetch({ mailchimpStatus: "sent" });
+    const campaignId = await insertCampaign(t, { mailchimpCampaignId: "mc-campaign-1" });
+
+    await send(t, campaignId);
+
+    expect(calls.map((c) => `${c.method} ${c.url}`)).toEqual([
+      `GET ${POST_URL}`,
+      "GET https://us3.api.mailchimp.com/3.0/campaigns/mc-campaign-1",
+    ]);
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent", sentAt: NOW });
+  });
+});
+
+describe("a renamed post", () => {
+  const RENAMED_URL = "https://mikecann.blog/posts/my-new-post";
+
+  /** An email that already went out about a post whose slug has since been renamed away. */
+  const insertEarlierEmail = async (
+    t: TestConvex,
+    overrides: Partial<Campaign> = {},
+    { postStillExists = false } = {},
+  ) => {
+    const id = await insertCampaign(t, {
+      slug: "my-old-slug",
+      status: "sent",
+      mailchimpCampaignId: "mc-earlier",
+      sentAt: NOW - HOUR,
+      postDate: NOW - 2 * HOUR,
+      ...overrides,
+    });
+    if (!postStillExists)
+      await t.run(async (ctx) => {
+        const campaign = await ctx.db.get("postEmailCampaigns", id);
+        await ctx.db.delete("blogPosts", campaign!.postId);
+      });
+    return id;
+  };
+
+  const mailchimpCalls = (calls: { url: string }[]) =>
+    calls.filter((c) => c.url.includes("api.mailchimp.com"));
+
+  test("isn't emailed again under its new slug", async () => {
+    const t = setup();
+    const calls = mockFetch();
+    await insertEarlierEmail(t);
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+
+    await send(t, campaignId);
+
+    expect(mailchimpCalls(calls)).toEqual([]);
+    const campaign = await getCampaign(t, campaignId);
+    expect(campaign).toMatchObject({ status: "skipped", attempts: 0 });
+    expect(campaign?.error).toContain("'my-old-slug'");
+    expect(calls.map((c) => c.url)).toEqual([RENAMED_URL]);
+  });
+
+  test("is recognised by its date when the rename changed its title too", async () => {
+    const t = setup();
+    const calls = mockFetch();
+    await insertEarlierEmail(t, { title: "My Old Title" });
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+
+    await send(t, campaignId);
+
+    expect(mailchimpCalls(calls)).toEqual([]);
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "skipped" });
+  });
+
+  test("a different post with the same title, still on the blog, is emailed", async () => {
+    const t = setup();
+    const calls = mockFetch();
+    await insertEarlierEmail(t, {}, { postStillExists: true });
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+
+    await send(t, campaignId);
+
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent" });
+    expect(mailchimpCalls(calls).some((c) => c.url.endsWith("/actions/send"))).toBe(true);
+  });
+
+  test("is emailed if the old slug's email never went out", async () => {
+    const t = setup();
+    mockFetch();
+    await insertEarlierEmail(t, { status: "failed", error: "Not sent: the post was removed" });
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+
+    await send(t, campaignId);
+
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent" });
+  });
+
+  test("an admin can still send it, if it really is a different post", async () => {
+    const t = setup();
+    mockFetch();
+    await insertEarlierEmail(t);
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+    await send(t, campaignId);
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "skipped" });
+
+    await t.mutation(api.mailchimp.admin.mutations.retryFailedPostEmailCampaign, {
+      token,
+      slug: "my-new-post",
+      allowEarlierEmail: true,
+    });
+    await vi.runOnlyPendingTimersAsync();
+    await t.finishInProgressScheduledFunctions();
+
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "sent" });
+  });
+
+  test("end to end: a deploy that renames a sent post's folder sends one email, not two", async () => {
+    const t = setup();
+    const calls = mockFetch();
+    const upsert = (slug: string, uploadRunId: string) =>
+      t.mutation(internal.blogPosts.internal.mutations.upsertBlogPost, {
+        slug,
+        title: "My New Post",
+        hash: "hash",
+        ragEntryId: "entry" as EntryId,
+        date: NOW - HOUR,
+        uploadRunId,
+      });
+    const sends = () => calls.filter((c) => c.url.endsWith("/actions/send")).length;
+    const campaignFor = (slug: string) =>
+      t.run((ctx) =>
+        ctx.db
+          .query("postEmailCampaigns")
+          .withIndex("by_slug", (q) => q.eq("slug", slug))
+          .unique(),
+      );
+
+    // The first deploy publishes the post, and its email goes out
+    expect((await upsert("my-old-slug", "run-1")).email.kind).toBe("queued");
+    await send(t, (await campaignFor("my-old-slug"))!._id);
+    expect(sends()).toBe(1);
+
+    // The next deploy has the folder renamed: the upload creates the new slug, then prunes the old
+    // one (the post row only; pruning's RAG cleanup isn't part of this)
+    expect((await upsert("my-new-post", "run-2")).email.kind).toBe("queued");
+    await t.run(async (ctx) => {
+      const old = await ctx.db
+        .query("blogPosts")
+        .withIndex("by_slug", (q) => q.eq("slug", "my-old-slug"))
+        .unique();
+      await ctx.db.delete("blogPosts", old!._id);
+    });
+
+    // 30 minutes later the new slug's send runs
+    await send(t, (await campaignFor("my-new-post"))!._id);
+
+    expect(sends()).toBe(1);
+    expect(await campaignFor("my-new-post")).toMatchObject({ status: "skipped" });
   });
 });
 
@@ -353,7 +519,7 @@ describe("failStuckPostEmailCampaigns", () => {
     const status = async (id: Id<"postEmailCampaigns">) => (await getCampaign(t, id))?.status;
     expect(await status(ids.stuckCreating)).toBe("failed");
     expect(await status(ids.stuckSending)).toBe("failed");
-    expect((await getCampaign(t, ids.stuckSending))?.error).toContain("MAY have gone out");
+    expect((await getCampaign(t, ids.stuckSending))?.error).toContain("Safe to retry");
     expect(await status(ids.busy)).toBe("content_set");
     expect(await status(ids.orphanedQueued)).toBe("failed");
     expect(await status(ids.scheduledQueued)).toBe("queued");

@@ -71,6 +71,58 @@ export const cancelPendingSendJob = async (
     await ctx.scheduler.cancel(campaign.scheduledFunctionId);
 };
 
+/**
+ * Statuses where an email has gone out, or may have: once a campaign is being created in Mailchimp,
+ * a send can follow. failed / skipped / queued ones haven't sent anything (a retry of a failed one
+ * resumes the same Mailchimp campaign and checks it first).
+ */
+const MAY_HAVE_EMAILED_STATUSES: ReadonlySet<CampaignStatus> = new Set([
+  "creating_campaign",
+  "content_set",
+  "sending",
+  "sent",
+]);
+
+type CampaignStatus = Doc<"postEmailCampaigns">["status"];
+
+/**
+ * The email that already went out (or may have) about this same post under an earlier slug, if
+ * there is one. Renaming a post's folder changes its slug, so the deploy creates a new post (and a
+ * new campaign) and prunes the old one. Campaign rows are keyed by slug, so on its own the new one
+ * would email subscribers a second time.
+ *
+ * A match is an earlier campaign with the same title or the same frontmatter date, that has emailed
+ * or may have, whose post no longer exists. That last part is what makes it a rename rather than a
+ * second post with the same title or date: by the time the send runs (at least 30 minutes after the
+ * deploy, once the post's page is live) the deploy has pruned the old slug.
+ */
+export async function findEarlierEmailForSamePost(
+  ctx: QueryCtx,
+  campaign: Doc<"postEmailCampaigns">,
+): Promise<Doc<"postEmailCampaigns"> | null> {
+  const byTitle = await ctx.db
+    .query("postEmailCampaigns")
+    .withIndex("by_title", (q) => q.eq("title", campaign.title))
+    .take(20);
+  const byDate =
+    campaign.postDate === undefined
+      ? []
+      : await ctx.db
+          .query("postEmailCampaigns")
+          .withIndex("by_postDate", (q) => q.eq("postDate", campaign.postDate))
+          .take(20);
+
+  for (const earlier of [...byTitle, ...byDate]) {
+    if (earlier._id === campaign._id || earlier.postId === campaign.postId) continue;
+    if (earlier._creationTime >= campaign._creationTime) continue;
+    if (!MAY_HAVE_EMAILED_STATUSES.has(earlier.status)) continue;
+    // Its post still exists, so it's a different post that happens to share a title or date.
+    if (await ctx.db.get("blogPosts", earlier.postId)) continue;
+    return earlier;
+  }
+  return null;
+}
+
 const none = (reason: string): PostEmailDecision => ({ kind: "none", reason });
 
 /**
@@ -129,6 +181,7 @@ export async function queueNewPostEmailIfEligible(
     createdAt: now,
     updatedAt: now,
     uploadRunId,
+    postDate: date,
     ...(skipReason ? { error: `Not sent: ${skipReason}` } : {}),
   });
 
