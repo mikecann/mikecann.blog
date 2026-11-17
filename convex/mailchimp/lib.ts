@@ -133,3 +133,22 @@ export async function checkPostIsLive(slug: string): Promise<PostLiveCheck> {
     return { ok: false, detail: `${url} could not be fetched: ${message}` };
   }
 }
+
+/**
+ * Whether the live site has stopped serving a post: a 404, or a redirect (a renamed post whose old
+ * URL now points at the new one). null when it can't tell (a network error or a server error).
+ */
+export async function isPostGoneFromSite(slug: string): Promise<boolean | null> {
+  try {
+    const response = await fetch(`${getPostUrl(slug)}?live-check=${Date.now()}`, {
+      method: "GET",
+      redirect: "manual",
+    });
+    if (response.status === 200) return false;
+    if (response.status === 404 || response.status === 410) return true;
+    if (response.status >= 300 && response.status < 400) return true;
+    return null;
+  } catch {
+    return null;
+  }
+}

@@ -71,54 +71,80 @@ export const cancelPendingSendJob = async (
     await ctx.scheduler.cancel(campaign.scheduledFunctionId);
 };
 
-/**
- * Statuses where an email has gone out, or may have: once a campaign is being created in Mailchimp,
- * a send can follow. failed / skipped / queued ones haven't sent anything (a retry of a failed one
- * resumes the same Mailchimp campaign and checks it first).
- */
-const MAY_HAVE_EMAILED_STATUSES: ReadonlySet<CampaignStatus> = new Set([
-  "creating_campaign",
-  "content_set",
-  "sending",
-  "sent",
-]);
-
 type CampaignStatus = Doc<"postEmailCampaigns">["status"];
 
 /**
- * The email that already went out (or may have) about this same post under an earlier slug, if
- * there is one. Renaming a post's folder changes its slug, so the deploy creates a new post (and a
- * new campaign) and prunes the old one. Campaign rows are keyed by slug, so on its own the new one
- * would email subscribers a second time.
+ * Whether subscribers may have had this campaign's email. Once a campaign is being created in
+ * Mailchimp a send can follow, and a failed one that got as far as a Mailchimp campaign may have
+ * failed after Mailchimp accepted the send (a timed-out response). queued / skipped ones, and
+ * failed ones that never reached Mailchimp, have sent nothing.
+ */
+const mayHaveEmailed = (campaign: Doc<"postEmailCampaigns">) =>
+  (["creating_campaign", "content_set", "sending", "sent"] as CampaignStatus[]).includes(
+    campaign.status,
+  ) ||
+  (campaign.status === "failed" && campaign.mailchimpCampaignId !== undefined);
+
+/** How far back an earlier email can be and still be the same post: a rename comes soon after. */
+export const EARLIER_EMAIL_WINDOW_MS = 30 * 86_400_000;
+
+/**
+ * Earlier campaigns that may be about this same post under another slug: the same title or the same
+ * frontmatter date, created in the 30 days before it, that have emailed subscribers or may have.
  *
- * A match is an earlier campaign with the same title or the same frontmatter date, that has emailed
- * or may have, whose post no longer exists. That last part is what makes it a rename rather than a
- * second post with the same title or date: by the time the send runs (at least 30 minutes after the
- * deploy, once the post's page is live) the deploy has pruned the old slug.
+ * Renaming a post's folder changes its slug, so the deploy creates a new post (and a new campaign)
+ * and prunes the old one, and campaign rows are keyed by slug. What tells a rename from a second
+ * post that shares a title or date is whether the earlier post is gone: see findEarlierEmailForSamePost.
+ */
+export async function listEarlierEmailCandidates(
+  ctx: QueryCtx,
+  campaign: Doc<"postEmailCampaigns">,
+): Promise<Doc<"postEmailCampaigns">[]> {
+  // Every index ends with _creationTime, so each lookup reads only the window, newest first.
+  const after = campaign._creationTime - EARLIER_EMAIL_WINDOW_MS;
+  const before = campaign._creationTime;
+  const byTitle = await ctx.db
+    .query("postEmailCampaigns")
+    .withIndex("by_title", (q) =>
+      q.eq("title", campaign.title).gt("_creationTime", after).lt("_creationTime", before),
+    )
+    .order("desc")
+    .take(50);
+  const postDate = campaign.postDate;
+  const byDate =
+    postDate === undefined
+      ? []
+      : await ctx.db
+          .query("postEmailCampaigns")
+          .withIndex("by_postDate", (q) =>
+            q.eq("postDate", postDate).gt("_creationTime", after).lt("_creationTime", before),
+          )
+          .order("desc")
+          .take(50);
+  const matches = [...byTitle, ...byDate];
+  const seen = new Set<string>();
+  return matches.filter((earlier) => {
+    if (seen.has(earlier._id)) return false;
+    seen.add(earlier._id);
+    return earlier.postId !== campaign.postId && mayHaveEmailed(earlier);
+  });
+}
+
+/**
+ * The email that already went out (or may have) about this same post under an earlier slug, if
+ * there is one. A candidate (listEarlierEmailCandidates) counts when its post is gone: pruned from
+ * Convex, or, in `goneFromSite`, no longer served by the live site. The send action checks the site
+ * itself, because the deploy can serve the new slug without pruning the old one (the prune safety
+ * limit refused it, or the upload failed between the two).
  */
 export async function findEarlierEmailForSamePost(
   ctx: QueryCtx,
   campaign: Doc<"postEmailCampaigns">,
+  goneFromSite: ReadonlySet<string>,
 ): Promise<Doc<"postEmailCampaigns"> | null> {
-  const byTitle = await ctx.db
-    .query("postEmailCampaigns")
-    .withIndex("by_title", (q) => q.eq("title", campaign.title))
-    .take(20);
-  const byDate =
-    campaign.postDate === undefined
-      ? []
-      : await ctx.db
-          .query("postEmailCampaigns")
-          .withIndex("by_postDate", (q) => q.eq("postDate", campaign.postDate))
-          .take(20);
-
-  for (const earlier of [...byTitle, ...byDate]) {
-    if (earlier._id === campaign._id || earlier.postId === campaign.postId) continue;
-    if (earlier._creationTime >= campaign._creationTime) continue;
-    if (!MAY_HAVE_EMAILED_STATUSES.has(earlier.status)) continue;
-    // Its post still exists, so it's a different post that happens to share a title or date.
-    if (await ctx.db.get("blogPosts", earlier.postId)) continue;
-    return earlier;
+  for (const earlier of await listEarlierEmailCandidates(ctx, campaign)) {
+    if (goneFromSite.has(earlier._id)) return earlier;
+    if (!(await ctx.db.get("blogPosts", earlier.postId))) return earlier;
   }
   return null;
 }

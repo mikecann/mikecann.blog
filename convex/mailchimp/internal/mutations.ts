@@ -26,6 +26,8 @@ export const beginPostEmailCampaign = convex
   .mutation()
   .input({
     campaignId: v.id("postEmailCampaigns"),
+    /** Earlier campaigns whose post the send action found the live site no longer serves. */
+    goneFromSite: v.optional(v.array(v.id("postEmailCampaigns"))),
   })
   .returns(
     v.union(
@@ -40,19 +42,20 @@ export const beginPostEmailCampaign = convex
       }),
     ),
   )
-  .handler(async (ctx, { campaignId }) => {
+  .handler(async (ctx, { campaignId, goneFromSite }) => {
     const campaign = await ctx.db.get("postEmailCampaigns", campaignId);
     if (!campaign) return { kind: "missing" as const };
     if (campaign.status !== "queued")
       return { kind: "not_queued" as const, status: campaign.status };
 
     // A renamed post: subscribers already had an email about it under its old slug. Checked here,
-    // at send time, because the deploy prunes the old slug after it creates the new one. A campaign
-    // that already has a Mailchimp campaign is a retry of its own email, not a new one.
+    // at send time, because the deploy prunes the old slug after it creates the new one (and the
+    // send action has just checked the live site for old slugs the prune missed). A campaign that
+    // already has a Mailchimp campaign is a retry of its own email, not a new one.
     const earlier =
       campaign.allowEarlierEmail || campaign.mailchimpCampaignId
         ? null
-        : await findEarlierEmailForSamePost(ctx, campaign);
+        : await findEarlierEmailForSamePost(ctx, campaign, new Set(goneFromSite ?? []));
     if (earlier) {
       const error =
         `Not sent: subscribers were already emailed about this post as '${earlier.slug}' ` +
@@ -279,5 +282,32 @@ export const failStuckPostEmailCampaigns = convex
     }
 
     return failed;
+  })
+  .internal();
+
+/**
+ * Gives campaigns from before `postDate` was recorded their post's frontmatter date, so a rename
+ * that also changes the title is still recognised (findEarlierEmailForSamePost). Only fills it in
+ * where it's missing. Run once per deployment, with the dates from the posts' frontmatter:
+ *   npx convex run --prod mailchimp/internal/mutations:recordMissingPostDates '{"posts":[...]}'
+ */
+export const recordMissingPostDates = convex
+  .mutation()
+  .input({ posts: v.array(v.object({ slug: v.string(), postDate: v.number() })) })
+  .returns(v.array(v.string()))
+  .handler(async (ctx, { posts }) => {
+    const updated: string[] = [];
+    for (const { slug, postDate } of posts) {
+      const campaigns = await ctx.db
+        .query("postEmailCampaigns")
+        .withIndex("by_slug", (q) => q.eq("slug", slug))
+        .take(20);
+      for (const campaign of campaigns) {
+        if (campaign.postDate !== undefined) continue;
+        await ctx.db.patch("postEmailCampaigns", campaign._id, { postDate });
+        updated.push(slug);
+      }
+    }
+    return updated;
   })
   .internal();
