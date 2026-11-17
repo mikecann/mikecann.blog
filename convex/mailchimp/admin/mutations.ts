@@ -1,7 +1,12 @@
 import { v } from "convex/values";
 import { convex } from "../../builder";
 import { validateBlogPostAdminToken } from "../../blogPosts/lib";
-import { cancelPendingSendJob, findLatestCampaignBySlug, scheduleCampaignSend } from "../campaigns";
+import {
+  patchCampaign,
+  cancelPendingSendJob,
+  findLatestCampaignBySlug,
+  scheduleCampaignSend,
+} from "../campaigns";
 
 // Run these by hand, e.g.
 //   npx convex run --prod mailchimp/admin/mutations:retryFailedPostEmailCampaign \
@@ -37,7 +42,7 @@ export const retryFailedPostEmailCampaign = convex
 
     await cancelPendingSendJob(ctx, campaign);
     const scheduledFunctionId = await scheduleCampaignSend(ctx, campaign._id, 0);
-    await ctx.db.patch("postEmailCampaigns", campaign._id, {
+    await patchCampaign(ctx, campaign._id, {
       status: "queued",
       error: undefined,
       liveCheckAttempts: 0,
@@ -75,7 +80,7 @@ export const markPostEmailCampaignSent = convex
 
     await cancelPendingSendJob(ctx, campaign);
     const now = Date.now();
-    await ctx.db.patch("postEmailCampaigns", campaign._id, {
+    await patchCampaign(ctx, campaign._id, {
       status: "sent",
       error: undefined,
       sentAt: campaign.sentAt ?? now,

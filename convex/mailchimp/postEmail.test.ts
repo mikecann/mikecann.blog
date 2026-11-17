@@ -714,3 +714,82 @@ describe("recordMissingPostDates", () => {
     expect((await getCampaign(t, recorded))?.postDate).toBe(5);
   });
 });
+
+describe("the post email machine's state, beside status (widen)", () => {
+  test("a send keeps state in step with status at every step", async () => {
+    const t = setup();
+    mockFetch();
+    const { email } = await t.mutation(internal.blogPosts.internal.mutations.upsertBlogPost, {
+      slug: "my-new-post",
+      title: "My New Post",
+      hash: "hash",
+      ragEntryId: "entry" as EntryId,
+      date: NOW - HOUR,
+      uploadRunId: "run-1",
+    });
+    expect(email.kind).toBe("queued");
+    const [queued] = await t.run((ctx) => ctx.db.query("postEmailCampaigns").collect());
+    expect(queued.state).toEqual({
+      kind: "queued",
+      sendAt: NOW + 30 * 60 * 1000,
+      liveChecks: 0,
+      skipLiveCheck: false,
+      allowEarlierEmail: false,
+    });
+    expect(queued.stateTimers).toEqual([]);
+
+    await send(t, queued._id);
+
+    expect((await getCampaign(t, queued._id))?.state).toEqual({
+      kind: "sent",
+      sentAt: NOW,
+      mailchimpCampaignId: "mc-campaign-1",
+    });
+  });
+
+  test("a failed send and a skipped rename have their reasons in state", async () => {
+    const t = setup();
+    mockFetch({ failSend: true });
+    const failing = await insertCampaign(t);
+    await expect(send(t, failing)).rejects.toThrow();
+    expect((await getCampaign(t, failing))?.state).toMatchObject({
+      kind: "failed",
+      error: expect.stringContaining("not ready to send"),
+      mailchimpCampaignId: "mc-campaign-1",
+    });
+  });
+
+  test("the backfill gives old rows the state their status stands for, and changes nothing twice", async () => {
+    const t = setup();
+    const ids = [
+      await insertCampaign(t, {
+        status: "sent",
+        sentAt: NOW - HOUR,
+        mailchimpCampaignId: "mc-1",
+      }),
+      await insertCampaign(t, { status: "failed", error: "boom" }),
+      await insertCampaign(t, { status: "skipped", error: "Not sent: cap" }),
+      await insertCampaign(t, { status: "sending", mailchimpCampaignId: "mc-2" }),
+    ];
+
+    await t.mutation(internal.mailchimp.internal.migrations.backfillPostEmailState, {});
+    const states = async () =>
+      Promise.all(ids.map(async (id) => (await getCampaign(t, id))?.state));
+    const first = await states();
+    expect(first).toEqual([
+      { kind: "sent", sentAt: NOW - HOUR, mailchimpCampaignId: "mc-1" },
+      { kind: "failed", error: "boom" },
+      { kind: "skipped", reason: "Not sent: cap" },
+      { kind: "sending", mailchimpCampaignId: "mc-2" },
+    ]);
+
+    await t.mutation(internal.mailchimp.internal.migrations.backfillPostEmailState, {});
+    expect(await states()).toEqual(first);
+    expect(await t.query(internal.mailchimp.internal.migrations.postEmailStateCounts, {})).toEqual({
+      "sent -> sent": 1,
+      "failed -> failed": 1,
+      "skipped -> skipped": 1,
+      "sending -> sending": 1,
+    });
+  });
+});

@@ -14,6 +14,7 @@ import {
   hasActiveSendJob,
   hasPendingSendJob,
   IN_PROGRESS_STATUSES,
+  patchCampaign,
   scheduleCampaignSend,
 } from "../campaigns";
 
@@ -54,7 +55,7 @@ export const beginPostEmailCampaign = convex
     // email after the rename. Its link would 404 or redirect to the renamed post, whose own
     // campaign is the one that emails about it.
     if (!(await ctx.db.get("blogPosts", campaign.postId))) {
-      await ctx.db.patch("postEmailCampaigns", campaignId, {
+      await patchCampaign(ctx, campaignId, {
         status: "failed",
         error: "Not sent: the post was removed before its email went out",
         updatedAt: Date.now(),
@@ -75,7 +76,7 @@ export const beginPostEmailCampaign = convex
         `${RENAME_SKIP_PREFIX} as '${earlier.slug}' ` +
         `(${earlier.status}), so this looks like a rename. If it really is a different post, retry ` +
         `with "allowEarlierEmail":true.`;
-      await ctx.db.patch("postEmailCampaigns", campaignId, {
+      await patchCampaign(ctx, campaignId, {
         status: "skipped",
         error,
         updatedAt: Date.now(),
@@ -84,7 +85,7 @@ export const beginPostEmailCampaign = convex
       return { kind: "already_emailed" as const, earlierSlug: earlier.slug };
     }
 
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       status: "creating_campaign",
       attempts: campaign.attempts + 1,
       error: undefined,
@@ -119,7 +120,7 @@ export const recordPostNotLiveYet = convex
     const liveCheckAttempts = (campaign.liveCheckAttempts ?? 0) + 1;
 
     if (liveCheckAttempts >= POST_LIVE_CHECK_MAX_ATTEMPTS) {
-      await ctx.db.patch("postEmailCampaigns", campaignId, {
+      await patchCampaign(ctx, campaignId, {
         status: "failed",
         liveCheckAttempts,
         error: `The post never went live: checked ${liveCheckAttempts} times, last result: ${detail}`,
@@ -133,7 +134,7 @@ export const recordPostNotLiveYet = convex
       ? campaign.scheduledFunctionId
       : await scheduleCampaignSend(ctx, campaignId, POST_LIVE_CHECK_RETRY_DELAY_MS);
 
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       liveCheckAttempts,
       scheduledFunctionId,
       updatedAt: now,
@@ -161,7 +162,7 @@ export const markMailchimpCampaignCreated = convex
   .returns(v.boolean())
   .handler(async (ctx, { campaignId, mailchimpCampaignId }) => {
     if (!(await isInStatus(ctx, campaignId, ["creating_campaign"]))) return false;
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       mailchimpCampaignId,
       updatedAt: Date.now(),
     });
@@ -177,7 +178,7 @@ export const markContentSet = convex
   .returns(v.boolean())
   .handler(async (ctx, { campaignId }) => {
     if (!(await isInStatus(ctx, campaignId, ["creating_campaign"]))) return false;
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       status: "content_set",
       updatedAt: Date.now(),
     });
@@ -194,7 +195,7 @@ export const markSending = convex
   .returns(v.boolean())
   .handler(async (ctx, { campaignId }) => {
     if (!(await isInStatus(ctx, campaignId, ["content_set"]))) return false;
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       status: "sending",
       updatedAt: Date.now(),
     });
@@ -212,7 +213,7 @@ export const markSent = convex
     const campaign = await ctx.db.get("postEmailCampaigns", campaignId);
     if (!campaign || campaign.status === "sent") return null;
     const now = Date.now();
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       status: "sent",
       error: undefined,
       sentAt: now,
@@ -232,7 +233,7 @@ export const markFailed = convex
   .handler(async (ctx, { campaignId, error }) => {
     const campaign = await ctx.db.get("postEmailCampaigns", campaignId);
     if (!campaign || campaign.status === "sent") return null;
-    await ctx.db.patch("postEmailCampaigns", campaignId, {
+    await patchCampaign(ctx, campaignId, {
       status: "failed",
       error,
       updatedAt: Date.now(),
@@ -255,7 +256,7 @@ export const failStuckPostEmailCampaigns = convex
     let failed = 0;
 
     const fail = async (campaign: Doc<"postEmailCampaigns">, error: string) => {
-      await ctx.db.patch("postEmailCampaigns", campaign._id, {
+      await patchCampaign(ctx, campaign._id, {
         status: "failed",
         error,
         updatedAt: now,
