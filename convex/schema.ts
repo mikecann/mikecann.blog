@@ -11,32 +11,6 @@ export const blogPostSchema = v.object({
   ragEntryId: vEntryId,
 });
 
-/**
- * LEGACY, being narrowed away: the old status and the fields beside it, from before the post email
- * machine. Nothing writes them any more, and mailchimp/internal/migrations:unsetLegacyCampaignFields
- * clears them from existing rows, so the next deploy can drop them. Read `state` instead.
- */
-const legacyPostEmailCampaignFields = {
-  status: v.optional(
-    v.union(
-      v.literal("queued"),
-      v.literal("creating_campaign"),
-      v.literal("content_set"),
-      v.literal("sending"),
-      v.literal("sent"),
-      v.literal("failed"),
-      v.literal("skipped"),
-    ),
-  ),
-  scheduledFunctionId: v.optional(v.id("_scheduled_functions")),
-  mailchimpCampaignId: v.optional(v.string()),
-  error: v.optional(v.string()),
-  sentAt: v.optional(v.number()),
-  liveCheckAttempts: v.optional(v.number()),
-  skipLiveCheck: v.optional(v.boolean()),
-  allowEarlierEmail: v.optional(v.boolean()),
-};
-
 export const postEmailCampaignSchema = v.object({
   postId: v.id("blogPosts"),
   slug: v.string(),
@@ -58,8 +32,6 @@ export const postEmailCampaignSchema = v.object({
   // timers. Only the machine writes them.
   state: postEmailStateValidator,
   stateTimers: machineTimers,
-  // eslint-disable-next-line machines/no-optional-on-machine-tables -- the old fields, which nothing writes; unsetLegacyCampaignFields clears them and the next deploy drops them
-  ...legacyPostEmailCampaignFields,
 });
 
 /** Validators for whole documents (with system fields), for `.returns()`. */
