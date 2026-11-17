@@ -1,4 +1,6 @@
 import { vEntryId } from "@convex-dev/rag";
+import { machineTimers } from "@convex-dev/state-machines";
+import { postEmailStateValidator } from "./mailchimp/campaignState";
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
@@ -47,6 +49,11 @@ export const postEmailCampaignSchema = v.object({
   postDate: v.optional(v.number()),
   /** Set by an admin retry to send even though an earlier email looks like it was this post. */
   allowEarlierEmail: v.optional(v.boolean()),
+  // The post email machine's state (mailchimp/campaignState.ts) and its timers, optional until
+  // every row is backfilled (mailchimp/internal/migrations:backfillPostEmailState). Until the
+  // machine takes the table over, every write sets `state` from `status`.
+  state: v.optional(postEmailStateValidator),
+  stateTimers: v.optional(machineTimers),
 });
 
 /** Validators for whole documents (with system fields), for `.returns()`. */
@@ -103,5 +110,6 @@ export default defineSchema({
     .index("by_status_and_updatedAt", ["status", "updatedAt"])
     .index("by_uploadRunId", ["uploadRunId"])
     .index("by_title", ["title"])
-    .index("by_postDate", ["postDate"]),
+    .index("by_postDate", ["postDate"])
+    .index("by_state_and_updatedAt", ["state.kind", "updatedAt"]),
 });

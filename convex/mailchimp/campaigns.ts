@@ -1,4 +1,4 @@
-import { v, type Infer } from "convex/values";
+import { compareValues, v, type Infer } from "convex/values";
 import { internal } from "../_generated/api";
 import type { Doc, Id } from "../_generated/dataModel";
 import type { MutationCtx, QueryCtx } from "../_generated/server";
@@ -8,6 +8,7 @@ import {
   POST_EMAIL_MAX_POST_AGE_MS,
 } from "./constants";
 import { getMailchimpApiKeyBlockReason, getPostEmailDeploymentBlockReason } from "./lib";
+import { stateOfLegacyCampaign } from "./campaignState";
 
 // Helpers for the postEmailCampaigns state machine:
 //
@@ -46,6 +47,39 @@ export const scheduleCampaignSend = (
   ctx.scheduler.runAfter(delayMs, internal.mailchimp.internal.actions.sendNewPostCampaign, {
     campaignId,
   });
+
+/**
+ * Widen: keeps the post email machine's `state` (campaignState.ts) in step with `status`. Every
+ * write to a campaign goes through patchCampaign, or calls this after an insert, until the machine
+ * takes the table over.
+ */
+export async function syncCampaignState(ctx: MutationCtx, campaignId: Id<"postEmailCampaigns">) {
+  const campaign = await ctx.db.get("postEmailCampaigns", campaignId);
+  if (!campaign) return;
+  const job =
+    campaign.status === "queued" && campaign.scheduledFunctionId
+      ? await ctx.db.system.get("_scheduled_functions", campaign.scheduledFunctionId)
+      : null;
+  const sendAt = job?.state.kind === "pending" ? job.scheduledTime : Date.now();
+  const state = stateOfLegacyCampaign(campaign, sendAt);
+  if (campaign.state && compareValues(campaign.state, state) === 0 && campaign.stateTimers) return;
+  await ctx.db.patch("postEmailCampaigns", campaignId, {
+    state,
+    stateTimers: campaign.stateTimers ?? [],
+  });
+}
+
+/** A patch to a campaign's old fields, and the `state` they now stand for. */
+export async function patchCampaign(
+  ctx: MutationCtx,
+  campaignId: Id<"postEmailCampaigns">,
+  patch: Partial<
+    Omit<Doc<"postEmailCampaigns">, "_id" | "_creationTime" | "state" | "stateTimers">
+  >,
+) {
+  await ctx.db.patch("postEmailCampaigns", campaignId, patch);
+  await syncCampaignState(ctx, campaignId);
+}
 
 const getSendJobState = async (ctx: QueryCtx, campaign: Doc<"postEmailCampaigns">) => {
   if (!campaign.scheduledFunctionId) return null;
@@ -217,12 +251,14 @@ export async function queueNewPostEmailIfEligible(
     ...(skipReason ? { error: `Not sent: ${skipReason}` } : {}),
   });
 
+  await syncCampaignState(ctx, campaignId);
+
   if (skipReason) {
     console.error(`[post email] NOT emailing subscribers about '${slug}': ${skipReason}`);
     return { kind: "skipped", reason: skipReason };
   }
 
   const scheduledFunctionId = await scheduleCampaignSend(ctx, campaignId, NEW_POST_EMAIL_DELAY_MS);
-  await ctx.db.patch("postEmailCampaigns", campaignId, { scheduledFunctionId });
+  await patchCampaign(ctx, campaignId, { scheduledFunctionId });
   return { kind: "queued" };
 }
