@@ -84,7 +84,12 @@ const mayHaveEmailed = (campaign: Doc<"postEmailCampaigns">) =>
     campaign.status,
   ) ||
   // A failed one, or one an admin retry has queued again, that got as far as a Mailchimp campaign
-  campaign.mailchimpCampaignId !== undefined;
+  campaign.mailchimpCampaignId !== undefined ||
+  // One held back as a rename stands for a post that was emailed, so a second rename finds it
+  (campaign.status === "skipped" && !!campaign.error?.startsWith(RENAME_SKIP_PREFIX));
+
+/** How a campaign held back as a rename's error starts (see beginPostEmailCampaign). */
+export const RENAME_SKIP_PREFIX = "Not sent: subscribers were already emailed about this post";
 
 /** How far back an earlier email can be and still be the same post: a rename comes soon after. */
 export const EARLIER_EMAIL_WINDOW_MS = 30 * 86_400_000;

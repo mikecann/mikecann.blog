@@ -10,6 +10,7 @@ import {
 } from "../constants";
 import {
   findEarlierEmailForSamePost,
+  RENAME_SKIP_PREFIX,
   hasActiveSendJob,
   hasPendingSendJob,
   IN_PROGRESS_STATUSES,
@@ -71,7 +72,7 @@ export const beginPostEmailCampaign = convex
         : await findEarlierEmailForSamePost(ctx, campaign, new Set(goneFromSite ?? []));
     if (earlier) {
       const error =
-        `Not sent: subscribers were already emailed about this post as '${earlier.slug}' ` +
+        `${RENAME_SKIP_PREFIX} as '${earlier.slug}' ` +
         `(${earlier.status}), so this looks like a rename. If it really is a different post, retry ` +
         `with "allowEarlierEmail":true.`;
       await ctx.db.patch("postEmailCampaigns", campaignId, {

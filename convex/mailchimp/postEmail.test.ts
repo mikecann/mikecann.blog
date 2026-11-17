@@ -465,6 +465,29 @@ describe("a renamed post", () => {
     });
   });
 
+  test("two renames in a row, each changing one of title and date, still send one email", async () => {
+    const t = setup();
+    const calls = mockFetch();
+    // A (title T1, date D1) was emailed, then renamed to B with title T2: B is held back
+    await insertEarlierEmail(t, { title: "T1", postDate: 1 });
+    vi.setSystemTime(NOW + HOUR);
+    const b = await insertCampaign(t, { slug: "b", title: "T2", postDate: 1 });
+    await send(t, b);
+    expect(await getCampaign(t, b)).toMatchObject({ status: "skipped" });
+
+    // Then B is renamed to C with date D2: C only matches B
+    await t.run(async (ctx) => {
+      const campaign = await ctx.db.get("postEmailCampaigns", b);
+      await ctx.db.delete("blogPosts", campaign!.postId);
+    });
+    vi.setSystemTime(NOW + 2 * HOUR);
+    const c = await insertCampaign(t, { slug: "c", title: "T2", postDate: 2 });
+    await send(t, c);
+
+    expect(mailchimpCalls(calls)).toEqual([]);
+    expect(await getCampaign(t, c)).toMatchObject({ status: "skipped" });
+  });
+
   test("an email more than 30 days earlier doesn't count", async () => {
     const t = setup();
     mockFetch();
