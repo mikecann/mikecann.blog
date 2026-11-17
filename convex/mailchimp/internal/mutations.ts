@@ -34,6 +34,7 @@ export const beginPostEmailCampaign = convex
       v.object({ kind: v.literal("missing") }),
       v.object({ kind: v.literal("not_queued"), status: v.string() }),
       v.object({ kind: v.literal("already_emailed"), earlierSlug: v.string() }),
+      v.object({ kind: v.literal("post_removed") }),
       v.object({
         kind: v.literal("claimed"),
         slug: v.string(),
@@ -47,6 +48,18 @@ export const beginPostEmailCampaign = convex
     if (!campaign) return { kind: "missing" as const };
     if (campaign.status !== "queued")
       return { kind: "not_queued" as const, status: campaign.status };
+
+    // Its own post was removed (deleted, or renamed away), e.g. an admin retry of the old slug's
+    // email after the rename. Its link would 404 or redirect to the renamed post, whose own
+    // campaign is the one that emails about it.
+    if (!(await ctx.db.get("blogPosts", campaign.postId))) {
+      await ctx.db.patch("postEmailCampaigns", campaignId, {
+        status: "failed",
+        error: "Not sent: the post was removed before its email went out",
+        updatedAt: Date.now(),
+      });
+      return { kind: "post_removed" as const };
+    }
 
     // A renamed post: subscribers already had an email about it under its old slug. Checked here,
     // at send time, because the deploy prunes the old slug after it creates the new one (and the

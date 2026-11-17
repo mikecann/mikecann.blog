@@ -390,6 +390,49 @@ describe("a renamed post", () => {
     });
   });
 
+  test("isn't emailed again while the old slug's uncertain send is being retried", async () => {
+    // The old slug's send may have gone out, it was renamed, and an admin retried the old one
+    const t = setup();
+    const calls = mockFetch();
+    await insertEarlierEmail(t, { status: "queued", sentAt: undefined });
+    const campaignId = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+
+    await send(t, campaignId);
+
+    expect(mailchimpCalls(calls)).toEqual([]);
+    expect(await getCampaign(t, campaignId)).toMatchObject({ status: "skipped" });
+  });
+
+  test("a retry of the old slug's email, after the renamed post's went out, doesn't send", async () => {
+    // The rename came before the old slug's email went out, so it was cancelled. An admin
+    // retrying it later must not email about the same post again (its URL may redirect to the
+    // new slug, so the live check passes).
+    const t = setup();
+    const calls = mockFetch();
+    const oldEmail = await insertEarlierEmail(t, {
+      status: "failed",
+      error: "Not sent: the post was removed before its email went out",
+      mailchimpCampaignId: undefined,
+      sentAt: undefined,
+    });
+    const newEmail = await insertCampaign(t, { postDate: NOW - 2 * HOUR });
+    await send(t, newEmail);
+    expect(await getCampaign(t, newEmail)).toMatchObject({ status: "sent" });
+
+    await t.mutation(api.mailchimp.admin.mutations.retryFailedPostEmailCampaign, {
+      token,
+      slug: "my-old-slug",
+    });
+    await vi.runOnlyPendingTimersAsync();
+    await t.finishInProgressScheduledFunctions();
+
+    expect(calls.filter((c) => c.url.endsWith("/actions/send"))).toHaveLength(1);
+    expect(await getCampaign(t, oldEmail)).toMatchObject({
+      status: "failed",
+      error: expect.stringContaining("removed"),
+    });
+  });
+
   test("an email more than 30 days earlier doesn't count", async () => {
     const t = setup();
     mockFetch();

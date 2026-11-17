@@ -76,14 +76,15 @@ type CampaignStatus = Doc<"postEmailCampaigns">["status"];
 /**
  * Whether subscribers may have had this campaign's email. Once a campaign is being created in
  * Mailchimp a send can follow, and a failed one that got as far as a Mailchimp campaign may have
- * failed after Mailchimp accepted the send (a timed-out response). queued / skipped ones, and
- * failed ones that never reached Mailchimp, have sent nothing.
+ * failed after Mailchimp accepted the send (a timed-out response), including once a retry has
+ * queued it again. Ones that never reached Mailchimp have sent nothing.
  */
 const mayHaveEmailed = (campaign: Doc<"postEmailCampaigns">) =>
   (["creating_campaign", "content_set", "sending", "sent"] as CampaignStatus[]).includes(
     campaign.status,
   ) ||
-  (campaign.status === "failed" && campaign.mailchimpCampaignId !== undefined);
+  // A failed one, or one an admin retry has queued again, that got as far as a Mailchimp campaign
+  campaign.mailchimpCampaignId !== undefined;
 
 /** How far back an earlier email can be and still be the same post: a rename comes soon after. */
 export const EARLIER_EMAIL_WINDOW_MS = 30 * 86_400_000;
