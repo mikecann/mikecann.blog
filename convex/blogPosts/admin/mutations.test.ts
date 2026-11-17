@@ -129,11 +129,19 @@ describe("pruneRemovedPosts", () => {
           postId: post!._id,
           slug,
           title: slug,
-          status,
           attempts: 0,
           createdAt: Date.now(),
           updatedAt: Date.now(),
-          mailchimpCampaignId: status === "sending" ? "mc-1" : undefined,
+          state:
+            status === "sending"
+              ? { kind: "sending", mailchimpCampaignId: "mc-1" }
+              : {
+                  kind: "queued",
+                  sendAt: Date.now() + 60_000,
+                  liveChecks: 0,
+                  skipLiveCheck: false,
+                  allowEarlierEmail: false,
+                },
         });
       });
     const queued = await insertFor("removed", "queued");
@@ -147,7 +155,6 @@ describe("pruneRemovedPosts", () => {
 
     const get = (id: typeof queued) => t.run((ctx) => ctx.db.get("postEmailCampaigns", id));
     expect(await get(queued)).toMatchObject({
-      status: "failed",
       state: { kind: "cancelled", reason: expect.stringContaining("removed") },
     });
     expect((await get(sending))?.state.kind).toBe("sending");

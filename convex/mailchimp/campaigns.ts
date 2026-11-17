@@ -7,7 +7,6 @@ import {
   POST_EMAIL_MAX_CAMPAIGNS_PER_UPLOAD_RUN,
   POST_EMAIL_MAX_POST_AGE_MS,
 } from "./constants";
-import { legacyStatusOf } from "./campaignState";
 import { getMailchimpApiKeyBlockReason, getPostEmailDeploymentBlockReason } from "./lib";
 
 // Helpers for the post email machine (machine.ts), whose rules say how a campaign moves:
@@ -31,17 +30,9 @@ export const findLatestCampaignBySlug = (ctx: Pick<QueryCtx, "db">, slug: string
     .order("desc")
     .first();
 
-/**
- * Until narrowing, `status` (and `updatedAt`) are written beside the machine's state after each
- * step, so code from before the switch still reads a row it understands.
- */
+/** Each step stamps `updatedAt`, for the deploy-time report of campaigns that look stuck. */
 export async function recordStep(ctx: InternalMachineCtx, campaignId: Id<"postEmailCampaigns">) {
-  const campaign = await ctx.db.get("postEmailCampaigns", campaignId);
-  if (!campaign) return;
-  await ctx.db.patch("postEmailCampaigns", campaignId, {
-    status: legacyStatusOf(campaign.state.kind),
-    updatedAt: Date.now(),
-  });
+  await ctx.db.patch("postEmailCampaigns", campaignId, { updatedAt: Date.now() });
 }
 
 /** Sends a server event, and keeps `status` in step if it was taken. */
@@ -110,7 +101,6 @@ export async function queueNewPostEmailIfEligible(
     postId,
     slug,
     title,
-    status: skipReason ? ("skipped" as const) : ("queued" as const),
     attempts: 0,
     createdAt: now,
     updatedAt: now,

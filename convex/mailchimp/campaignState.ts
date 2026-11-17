@@ -1,12 +1,7 @@
 import { type Infer, v } from "convex/values";
-import type { Doc } from "../_generated/dataModel";
 
 // The post email machine's state (machine.ts). Each member holds only its own data, so a campaign
 // can't be `sent` without when, or `sending` without the Mailchimp campaign it's sending.
-//
-// Until narrowing, `status` stays on the row beside `state`: the widen step derives `state` from
-// `status` (stateOfLegacyCampaign), and from the switch on `status` is written from `state`
-// (legacyStatusOf), so code on either side of a deploy reads a row it understands.
 
 /** The Mailchimp campaign, once one has been created for this email (a retry resumes it). */
 const mailchimpCampaignId = v.optional(v.string());
@@ -47,66 +42,3 @@ export const postEmailStateValidator = v.union(
 
 export type PostEmailState = Infer<typeof postEmailStateValidator>;
 export type PostEmailStateKind = PostEmailState["kind"];
-export type LegacyCampaignStatus = Doc<"postEmailCampaigns">["status"];
-
-/**
- * The state an old-style row stands for, from its `status` and the optional fields beside it.
- * `sendAt` is when its pending send job runs (or now, if it has none).
- */
-export function stateOfLegacyCampaign(
-  campaign: Doc<"postEmailCampaigns">,
-  sendAt: number,
-): PostEmailState {
-  const id = campaign.mailchimpCampaignId;
-  switch (campaign.status) {
-    case "queued":
-      return {
-        kind: "queued",
-        sendAt,
-        liveChecks: campaign.liveCheckAttempts ?? 0,
-        skipLiveCheck: campaign.skipLiveCheck ?? false,
-        allowEarlierEmail: campaign.allowEarlierEmail ?? false,
-        mailchimpCampaignId: id,
-      };
-    case "creating_campaign":
-      return { kind: "creatingCampaign", mailchimpCampaignId: id };
-    case "content_set":
-      return { kind: "contentSet", mailchimpCampaignId: id ?? "" };
-    case "sending":
-      return { kind: "sending", mailchimpCampaignId: id ?? "" };
-    case "sent":
-      return {
-        kind: "sent",
-        sentAt: campaign.sentAt ?? campaign.updatedAt,
-        mailchimpCampaignId: id,
-      };
-    case "failed":
-      return { kind: "failed", error: campaign.error ?? "", mailchimpCampaignId: id };
-    case "skipped":
-      return { kind: "skipped", reason: campaign.error ?? "" };
-  }
-}
-
-/** The old `status` a state stands for, written beside it until narrowing. */
-export function legacyStatusOf(kind: PostEmailStateKind): LegacyCampaignStatus {
-  switch (kind) {
-    case "queued":
-    case "checkingLive":
-      return "queued";
-    case "creatingCampaign":
-      return "creating_campaign";
-    case "contentSet":
-      return "content_set";
-    case "sending":
-    case "checkingDelivery":
-      return "sending";
-    case "sent":
-      return "sent";
-    case "failed":
-    case "cancelled":
-      return "failed";
-    case "skipped":
-    case "alreadyEmailed":
-      return "skipped";
-  }
-}

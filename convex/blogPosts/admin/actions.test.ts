@@ -121,7 +121,6 @@ describe("upsert action", () => {
       postId: blogPost?._id,
       slug: "test-blog-post",
       title: "Test Blog Post",
-      status: "queued",
       attempts: 0,
       uploadRunId: "run-1",
       postDate: NOW - DAY,
@@ -189,7 +188,6 @@ describe("upsert action", () => {
     expect(result.email).toEqual({ kind: "skipped", reason: "MAILCHIMP_API_KEY is not set" });
     const [campaign] = await getCampaigns(t);
     expect(campaign).toMatchObject({
-      status: "skipped",
       state: { kind: "skipped", reason: expect.stringContaining("API_KEY") },
     });
     expect(campaign.stateTimers).toEqual([]);
