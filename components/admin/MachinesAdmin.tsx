@@ -1,115 +1,114 @@
-import { useMemo, useRef, useState, type CSSProperties, type FormEvent } from "react";
-import { ConvexReactClient } from "convex/react";
+import { useState, type CSSProperties, type ReactNode } from "react";
+import { ConvexReactClient, useConvexAuth, useQuery } from "convex/react";
+import { ConvexAuthProvider, useAuthActions } from "@convex-dev/auth/react";
+import { useOauth, useSignInWithGoogle } from "@convex-dev/auth/methods/google/react";
 import { MachinesViewer } from "@convex-dev/state-machines/viewer";
 import "@convex-dev/state-machines/viewer.css";
 import { api } from "../../convex/_generated/api";
-import { CONVEX_SITE_URL, CONVEX_URL } from "../../utils/convex";
+import { CONVEX_URL } from "../../utils/convex";
 
-// The admin Machines page (/admin/machines): every state machine the blog runs, drawn from its
-// rules, with the rows in each state and their history, through the state machines library's own
-// viewer. It reads through convex/viewer.ts, which answers only the signed-in admin and can't move
-// anything.
-//
-// Signing in trades the admin token (BLOG_POST_ADMIN_TOKEN) for an hour's admin JWT at the
-// deployment's /admin/session (convex/admin/session.ts). The token stays in this page's memory, so
-// the Convex client can get a fresh JWT when the old one runs out, and is gone when the tab closes.
-// A password manager can fill it in.
+// The admin Machines page (/admin/machines): sign in with Google, then, for the blog's admins
+// only, the state machines library's own viewer on the deployment's live data: every machine
+// drawn from its rules, the rows in each state and their history. convex/viewer.ts decides who's
+// an admin (convex/admin/auth.ts) and answers null to everyone else, so nothing here is the gate;
+// it only shows the answer. Read-only: nothing on the page can move a row.
 
-type Session = { token: string; expiresAt: number };
+const PAGE = "/admin/machines";
 
-const requestSession = async (adminToken: string): Promise<Session> => {
-  const response = await fetch(`${CONVEX_SITE_URL}/admin/session`, {
-    method: "POST",
-    // text/plain, so the browser skips the CORS preflight
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify({ token: adminToken }),
-  });
-  const body = (await response.json().catch(() => ({}))) as Partial<Session> & { error?: string };
-  if (!response.ok || !body.token || !body.expiresAt)
-    throw new Error(body.error ?? `Signing in failed (HTTP ${response.status}).`);
-  return { token: body.token, expiresAt: body.expiresAt };
-};
+let client: ConvexReactClient | undefined;
+const getClient = () => (client ??= new ConvexReactClient(CONVEX_URL));
 
-/** A Convex client signed in as the admin, renewing its JWT a minute before it runs out. */
-const signedInClient = (adminToken: string, first: Session) => {
-  let session = first;
-  const client = new ConvexReactClient(CONVEX_URL);
-  client.setAuth(async ({ forceRefreshToken }) => {
-    if (forceRefreshToken || Date.now() > session.expiresAt - 60_000)
-      session = await requestSession(adminToken).catch(() => session);
-    return session.token;
-  });
-  return client;
-};
+function Spinner() {
+  return <span style={styles.spinner} aria-hidden="true" />;
+}
 
-export default function MachinesAdmin() {
-  const [client, setClient] = useState<ConvexReactClient | null>(null);
-  const [signingIn, setSigningIn] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const tokenInput = useRef<HTMLInputElement>(null);
+function Card({ children }: { children: ReactNode }) {
+  return (
+    <main style={styles.screen}>
+      <div style={styles.card}>{children}</div>
+    </main>
+  );
+}
 
-  const signIn = async (event: FormEvent) => {
-    event.preventDefault();
-    const adminToken = tokenInput.current?.value.trim() ?? "";
-    if (!adminToken || signingIn) return;
-    setSigningIn(true);
-    setError(null);
-    try {
-      setClient(signedInClient(adminToken, await requestSession(adminToken)));
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setSigningIn(false);
+function SignIn() {
+  const { signIn } = useSignInWithGoogle(api.admin.auth);
+  const { flowError } = useOauth();
+  // Spins, and stays off, until the page leaves for Google, or comes back if starting failed
+  const [pending, setPending] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  const start = async () => {
+    setPending(true);
+    setFailed(false);
+    // Back to this page, keeping the viewer's place (its #/ route)
+    const redirectTo = `${window.location.origin}${PAGE}${window.location.hash}`;
+    const result = await signIn({ redirectTo });
+    if (result.status === "error") {
+      setPending(false);
+      setFailed(true);
     }
   };
 
-  const signOut = () => {
-    void client?.close();
-    setClient(null);
-  };
+  const problem = failed || (flowError !== null && flowError.error !== "ACCESS_DENIED");
+  return (
+    <Card>
+      <h1 style={{ margin: 0 }}>Machines</h1>
+      <p style={{ margin: 0 }}>The blog's state machines, live, for its admin.</p>
+      <button type="button" style={styles.button} disabled={pending} onClick={() => void start()}>
+        {pending ? <Spinner /> : <GoogleLogo />}
+        Continue with Google
+      </button>
+      {problem && (
+        <p role="alert" style={styles.problem}>
+          That didn't work, or that Google account isn't one of the blog's admins.
+        </p>
+      )}
+    </Card>
+  );
+}
 
-  const functions = useMemo(() => api.viewer, []);
+function SignOutButton() {
+  const { signOut } = useAuthActions();
+  const [pending, setPending] = useState(false);
+  return (
+    <button
+      type="button"
+      style={styles.quiet}
+      disabled={pending}
+      onClick={() => {
+        setPending(true);
+        // Signed out, the page swaps to the sign-in; if it fails, the button comes back
+        void signOut().catch(() => setPending(false));
+      }}
+    >
+      {pending && <Spinner />}
+      Sign out
+    </button>
+  );
+}
 
-  if (!client)
+function Admin() {
+  const me = useQuery(api.viewer.me, {});
+  // The same query the viewer opens first, so it's one subscription: null means not an admin
+  const overview = useQuery(api.viewer.overview, {});
+  if (me === undefined || overview === undefined) return <Loading />;
+  if (me === null || overview === null)
     return (
-      <form onSubmit={signIn} style={styles.form}>
-        <h1 style={{ margin: 0 }}>Machines</h1>
-        <p style={{ margin: 0 }}>The blog's state machines, live. Sign in with the admin token.</p>
-        {/* The username is for password managers, so they save the token as this site's admin */}
-        <input type="text" name="username" value="admin" autoComplete="username" readOnly hidden />
-        <input
-          ref={tokenInput}
-          type="password"
-          name="password"
-          autoComplete="current-password"
-          placeholder="BLOG_POST_ADMIN_TOKEN"
-          aria-label="Admin token"
-          disabled={signingIn}
-          style={styles.input}
-          autoFocus
-        />
-        <button type="submit" disabled={signingIn} style={styles.button}>
-          {signingIn ? "Signing in…" : "Sign in"}
-        </button>
-        {error && (
-          <p role="alert" style={{ margin: 0, color: "#b42318" }}>
-            {error}
-          </p>
-        )}
-      </form>
+      <Card>
+        <h1 style={{ margin: 0 }}>Not an admin</h1>
+        <p style={{ margin: 0 }}>That Google account can't see the blog's machines.</p>
+        <SignOutButton />
+      </Card>
     );
-
   return (
     <div style={{ "--mv-top": "0px" } as CSSProperties}>
-      <div style={styles.bar}>
+      <header style={styles.bar}>
         <a href="/">mikecann.blog</a>
-        <button type="button" onClick={signOut} style={styles.signOut}>
-          Sign out
-        </button>
-      </div>
+        <span style={{ marginLeft: "auto" }}>{me.email}</span>
+        <SignOutButton />
+      </header>
       <MachinesViewer
-        client={client}
-        functions={functions}
+        functions={api.viewer}
         config={{
           settings: { theme: "light" },
           tables: { postEmailCampaigns: { name: "Post emails", label: "slug" } },
@@ -119,33 +118,101 @@ export default function MachinesAdmin() {
   );
 }
 
+function Loading() {
+  return (
+    <main style={styles.screen}>
+      <Spinner />
+    </main>
+  );
+}
+
+function App() {
+  const { isLoading, isAuthenticated } = useConvexAuth();
+  if (isLoading) return <Loading />;
+  return isAuthenticated ? <Admin /> : <SignIn />;
+}
+
+export default function MachinesAdmin() {
+  return (
+    <ConvexAuthProvider
+      client={getClient()}
+      api={{ refreshSession: api.admin.auth.refreshSession, signOut: api.admin.auth.signOut }}
+    >
+      <style>{"@keyframes admin-spin { to { transform: rotate(360deg) } }"}</style>
+      <App />
+    </ConvexAuthProvider>
+  );
+}
+
+function GoogleLogo() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="#4285F4"
+        d="M23.5 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.45a5.5 5.5 0 0 1-2.4 3.62v3h3.88c2.27-2.1 3.57-5.18 3.57-8.81Z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.96-1.07 7.94-2.92l-3.88-3c-1.07.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.72-4.95H1.27v3.1A12 12 0 0 0 12 24Z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.28 14.28a7.2 7.2 0 0 1 0-4.56v-3.1H1.27a12 12 0 0 0 0 10.76l4.01-3.1Z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.77c1.76 0 3.34.6 4.59 1.8l3.44-3.44A11.97 11.97 0 0 0 1.27 6.62l4.01 3.1C6.22 6.88 8.87 4.77 12 4.77Z"
+      />
+    </svg>
+  );
+}
+
 const styles = {
-  form: {
+  screen: {
     display: "flex",
-    flexDirection: "column",
-    gap: 12,
-    maxWidth: 420,
-    margin: "80px auto",
-    padding: 20,
+    justifyContent: "center",
+    padding: "80px 20px",
     fontFamily: "system-ui, sans-serif",
   },
-  input: { padding: "10px 12px", fontSize: 16, border: "1px solid #ccc", borderRadius: 6 },
+  card: { display: "flex", flexDirection: "column", gap: 14, width: "100%", maxWidth: 380 },
   button: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
     padding: "10px 12px",
     fontSize: 16,
-    border: "none",
+    border: "1px solid #ccc",
     borderRadius: 6,
-    background: "#222",
-    color: "white",
+    background: "white",
     cursor: "pointer",
   },
+  quiet: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 6,
+    background: "none",
+    border: "1px solid #ccc",
+    borderRadius: 6,
+    padding: "4px 10px",
+    cursor: "pointer",
+  },
+  problem: { margin: 0, color: "#b42318" },
   bar: {
     display: "flex",
-    justifyContent: "space-between",
     alignItems: "center",
+    gap: 12,
     padding: "8px 16px",
     fontFamily: "system-ui, sans-serif",
     fontSize: 14,
   },
-  signOut: { background: "none", border: "1px solid #ccc", borderRadius: 6, padding: "4px 10px" },
+  spinner: {
+    width: 16,
+    height: 16,
+    border: "2px solid #ccc",
+    borderTopColor: "#333",
+    borderRadius: "50%",
+    animation: "admin-spin 0.8s linear infinite",
+    display: "inline-block",
+  },
 } satisfies Record<string, CSSProperties>;

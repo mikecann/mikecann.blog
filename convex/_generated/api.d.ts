@@ -8,7 +8,7 @@
  * @module
  */
 
-import type * as admin_session from "../admin/session.js";
+import type * as admin_auth from "../admin/auth.js";
 import type * as blogPosts_admin_actions from "../blogPosts/admin/actions.js";
 import type * as blogPosts_admin_mutations from "../blogPosts/admin/mutations.js";
 import type * as blogPosts_admin_queries from "../blogPosts/admin/queries.js";
@@ -54,7 +54,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
-  "admin/session": typeof admin_session;
+  "admin/auth": typeof admin_auth;
   "blogPosts/admin/actions": typeof blogPosts_admin_actions;
   "blogPosts/admin/mutations": typeof blogPosts_admin_mutations;
   "blogPosts/admin/queries": typeof blogPosts_admin_queries;
@@ -125,4 +125,6 @@ export declare const components: {
   rag: import("@convex-dev/rag/_generated/component.js").ComponentApi<"rag">;
   rateLimiter: import("@convex-dev/rate-limiter/_generated/component.js").ComponentApi<"rateLimiter">;
   stateMachines: import("@convex-dev/state-machines/_generated/component.js").ComponentApi<"stateMachines">;
+  auth: import("@convex-dev/auth/_generated/component.js").ComponentApi<"auth">;
+  authGoogle: import("@convex-dev/auth/components/google/_generated/component.js").ComponentApi<"authGoogle">;
 };

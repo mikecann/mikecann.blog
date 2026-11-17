@@ -81,6 +81,13 @@ export default defineSchema({
     scheduledFunctionId: v.id("_scheduled_functions"),
     threadId: v.string(),
   }).index("by_threadId", ["threadId"]),
+  // The blog's admins, one row per Google account that has signed in to the admin pages
+  // (admin/auth.ts). Only addresses on BLOG_ADMIN_EMAILS get one.
+  admins: defineTable({
+    email: v.string(),
+    name: v.optional(v.string()),
+    picture: v.optional(v.string()),
+  }),
   blogPosts: defineTable(blogPostSchema).index("by_slug", ["slug"]),
   postEmailCampaigns: defineTable(postEmailCampaignSchema)
     .index("by_slug", ["slug"])
