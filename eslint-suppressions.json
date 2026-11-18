@@ -1,0 +1,142 @@
+{
+  "components/NotFound.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/activity/ActivityCards.tsx": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 2
+    },
+    "@next/next/no-img-element": {
+      "count": 2
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/activity/SinceThisPost.tsx": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    },
+    "@next/next/no-img-element": {
+      "count": 1
+    }
+  },
+  "components/items/Items.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    }
+  },
+  "components/mikebot/MessageEntryBox.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/mikebot/Mikebot.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "react-hooks/static-components": {
+      "count": 1
+    }
+  },
+  "components/mikebot/MikebotConversation.tsx": {
+    "@typescript-eslint/ban-ts-comment": {
+      "count": 1
+    }
+  },
+  "components/mikebot/MikebotMeProvider.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/mikebot/MikebotWidgetView.tsx": {
+    "mikecann-lint/no-render-wait-timer": {
+      "count": 1
+    }
+  },
+  "components/mikebot/messages/BubbleMessageContent.tsx": {
+    "@typescript-eslint/ban-ts-comment": {
+      "count": 1
+    }
+  },
+  "components/mikebot/useMikebotThread.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/newsletter/SubscribeForm.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/searchModal/SearchModalContent.tsx": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    },
+    "@next/next/no-img-element": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/searchModal/SearchResult.tsx": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    },
+    "@next/next/no-img-element": {
+      "count": 1
+    }
+  },
+  "convex/admin/auth.ts": {
+    "@convex-dev/no-process-env": {
+      "count": 1
+    }
+  },
+  "convex/blogPosts/lib.ts": {
+    "@convex-dev/no-process-env": {
+      "count": 1
+    }
+  },
+  "convex/mailchimp/lib.ts": {
+    "@convex-dev/no-process-env": {
+      "count": 4
+    }
+  },
+  "convex/mikebot/config.ts": {
+    "@convex-dev/no-process-env": {
+      "count": 1
+    }
+  },
+  "convex/mikebot/guards.ts": {
+    "@convex-dev/no-process-env": {
+      "count": 1
+    }
+  },
+  "essentials/misc/misc.ts": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    },
+    "@typescript-eslint/ban-types": {
+      "count": 1
+    }
+  },
+  "essentials/misc/object.ts": {
+    "@eslint-community/eslint-comments/no-unlimited-disable": {
+      "count": 1
+    },
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    }
+  },
+  "utils/useScript.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  }
+}
