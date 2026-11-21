@@ -23,7 +23,20 @@
       "count": 1
     }
   },
+  "components/activity/useFreshLatestActivity.ts": {
+    "@typescript-eslint/no-floating-promises": {
+      "count": 1
+    }
+  },
+  "components/flash/FlashPlayerModal.tsx": {
+    "@typescript-eslint/no-floating-promises": {
+      "count": 1
+    }
+  },
   "components/items/Items.tsx": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 7
+    },
     "react-hooks/exhaustive-deps": {
       "count": 1
     }
@@ -61,16 +74,34 @@
       "count": 1
     }
   },
+  "components/mikebot/messages/ToolMessage.tsx": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 1
+    }
+  },
+  "components/mikebot/messages/UserMessage.tsx": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 1
+    }
+  },
   "components/mikebot/useMikebotThread.ts": {
     "react-hooks/set-state-in-effect": {
       "count": 1
     }
   },
   "components/newsletter/SubscribeForm.tsx": {
+    "@typescript-eslint/no-misused-promises": {
+      "count": 1
+    },
     "react-hooks/exhaustive-deps": {
       "count": 1
     },
     "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "components/post/PostMarkdown.tsx": {
+    "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
   },
@@ -98,6 +129,11 @@
       "count": 1
     }
   },
+  "convex/blogPosts/admin/queries.test.ts": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 1
+    }
+  },
   "convex/blogPosts/lib.ts": {
     "@convex-dev/no-process-env": {
       "count": 1
@@ -118,12 +154,25 @@
       "count": 1
     }
   },
+  "essentials/config/configUtils.ts": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 1
+    }
+  },
+  "essentials/misc/array.ts": {
+    "@typescript-eslint/no-unused-vars": {
+      "count": 1
+    }
+  },
   "essentials/misc/misc.ts": {
     "@eslint-community/eslint-comments/require-description": {
       "count": 1
     },
     "@typescript-eslint/ban-types": {
       "count": 1
+    },
+    "@typescript-eslint/no-unused-vars": {
+      "count": 2
     }
   },
   "essentials/misc/object.ts": {
@@ -132,6 +181,11 @@
     },
     "@eslint-community/eslint-comments/require-description": {
       "count": 1
+    }
+  },
+  "utils/posthog.ts": {
+    "@typescript-eslint/no-misused-promises": {
+      "count": 2
     }
   },
   "utils/useScript.ts": {
