@@ -82,7 +82,7 @@
     "convex-test": "^0.0.56",
     "dotenv": "^17.4.2",
     "eslint": "^10.15.0",
-    "mikecann-lint": "^0.1.1",
+    "mikecann-lint": "^0.2.0",
     "prettier": "^3.9.6",
     "sharp": "^0.35.4",
     "typescript": "^7.0.2",
